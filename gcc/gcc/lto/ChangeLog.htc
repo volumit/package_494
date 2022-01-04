@@ -1,0 +1,11 @@
+2016-05-24  Robert Agoston
+
+	[HDP-585]
+	* HDP-v4.9.0.0-tricore released.
+
+2015-05-11  Peter Gal
+
+	[HDP-870]
+	* Make-lang.in (lto1-checksum.c): New target.
+	($(LTO_EXE): Added lto1-checksum.o as dependency
+	and object to link with.

@@ -1,0 +1,70 @@
+#
+# this is the Makefile part for the common HTC functions.
+#
+
+BUILD_DATE := $(shell echo `date +%Y-%m-%d`)
+BUGURL_s := "\" This build will maybe be supported via https://community.infineon.com/t5/AURIX/bd-p/AURIX \""
+
+# GCC-161 wants to represent --version output a special way.
+
+# Transform "(xxx) " to "xxx" here so that configure.ac can stay as is.
+
+paren1:= (
+paren2:= )
+
+PKGVERSION := $(subst $(paren1),,$(PKGVERSION))
+PKGVERSION := $(subst $(paren2),,$(PKGVERSION))
+PKGVERSION := $(strip $(PKGVERSION))
+
+# configure is called with, e.g. --with-pkgversion='v4.6.2.0'.
+# The "HighTec Release " part is hard coded in the tools because it is easier
+# in Binutils to pass around strings that don't contain spaces.
+# Thus, we don't --with-pkgversion='HighTec Release v4.6.2.0' in GCC either.
+
+PKGVERSION_s := "\"(cosmocomp Release $(PKGVERSION)) \""
+DATESTAMP_s := "\" build on $(BUILD_DATE)\""
+
+htc-common.o:	$(srcdir)/config/htc-common.c \
+		$(srcdir)/config/htc-common.h \
+		$(CONFIG_H) $(SYSTEM_H) $(TREE_H) \
+		$(CPPLIB_H) $(C_PRAGMA_H) \
+		$(TM_P_H) errors.h coretypes.h $(TM_H) \
+		gt-htc-common.h
+	$(COMPILER) -c $(ALL_COMPILERFLAGS) $(ALL_CPPFLAGS) $(INCLUDES) \
+		$(srcdir)/config/htc-common.c
+
+htc-common-c.o:	$(srcdir)/config/htc-common-c.c \
+		$(srcdir)/config/htc-common-c.h \
+		$(CONFIG_H) $(SYSTEM_H) $(CPPLIB_H) \
+		$(TREE_H) $(TM_P_H) errors.h \
+		coretypes.h $(TM_H)
+	$(COMPILER) -c $(ALL_COMPILERFLAGS) $(ALL_CPPFLAGS) $(INCLUDES) \
+		$(srcdir)/config/htc-common-c.c
+
+htc-common-sections.o: $(srcdir)/config/htc-common-sections.c \
+	$(CONFIG_H) $(SYSTEM_H) $(TREE_H) $(CPPLIB_H) \
+	$(TM_P_H) errors.h coretypes.h $(TM_H)
+	$(COMPILER) -c $(ALL_COMPILERFLAGS) $(ALL_CPPFLAGS) $(INCLUDES) \
+		$(srcdir)/config/htc-common-sections.c
+
+htc-targhooks.o:	$(srcdir)/config/htc-targhooks.c \
+			$(srcdir)/config/htc-targhooks.h \
+			$(CONFIG_H) $(SYSTEM_H) $(TREE_H) \
+			coretypes.h
+	$(COMPILER) -c $(ALL_COMPILERFLAGS) $(ALL_CPPFLAGS) $(INCLUDES) \
+		$(srcdir)/config/htc-targhooks.c
+
+htc-target-log.o:	$(srcdir)/config/htc-target-log.c \
+			$(srcdir)/config/htc-target-log.h \
+			$(srcdir)/config/htc-target-log.def \
+			$(CONFIG_H) $(SYSTEM_H) $(TREE_H) \
+			coretypes.h
+	$(COMPILER) -c $(ALL_COMPILERFLAGS) $(ALL_CPPFLAGS) $(INCLUDES) \
+		$(srcdir)/config/htc-target-log.c
+
+htc-target-common.o: $(srcdir)/config/htc-target-common.c \
+		     $(srcdir)/config/htc-target-common.h
+	$(COMPILE) $<
+	$(POSTCOMPILE)
+
+OBJS-libcommon-target += htc-target-common.o

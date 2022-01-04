@@ -1,0 +1,977 @@
+2016-10-03  Zoltan Ver
+
+	[HDP-1444]
+	Port of HDP-1439 to v4.9.1.0:
+	Eliminate the use of mkstemp system call from Binutils.
+	* binutils/configure.in (AC_CHECK_FUNC([mkstemp]..)): Commented out.
+	* binutils/configure: Re-generated.
+	* binutils/config.in: Re-generated.
+
+2016-08-08  Robert Agoston, Horst Lehser
+
+	[HDP-1194]
+	* bfd/elf32-tricore.c (tricore_elf32_relocate_section):
+	Don't remove undefined symbols on relocatable link.
+
+2016-07-27  Horst Lehser
+
+	[HDP-1194]
+	* bfd/elf32-tricore.c (tricore_elf32_relocate_section):
+	For relocs against symbols from removed linkonce sections,
+	or sections discarded by a linker script, we just want the
+	section contents zeroed.  Avoid any special processing.
+
+2016-05-24  Robert Agoston
+
+	[HDP-585]
+	* HDP-v4.9.0.0-tricore released.
+
+2016-05-17  Gabor Palfi
+
+	[HDP-1316]
+	* opcodes/tricore-dis.c (decoded_insn): Changed type of cexp[] to
+	unsigned long long.
+
+2016-03-15  Robert Agoston
+
+	[HDP-1209]
+	Deprecated --mcpu= option values:
+	tc16e, tc16p, tc27xx, tc2d5d, aurix in the linker
+	* ld/emultempl/tricoreelf.em (PARSE_AND_LIST_OPTIONS): marked option
+	  values as deprecated on the help screen.
+	  (parse_arch_args): add warning when deprecated mcpu values are used.
+
+2016-01-28  Horst Lehser
+
+	[HDP-1122]
+	* bfd/elf32-ppc.c (ppc_elf_howto_raw[R_PPC_VLE_REL15]): Set size to 2, to
+	read complete 4-byte instruction to manipulate lower 16 bit.
+	* opcodes/ppc-opc.c (iUI16A, iUI16L): Set 16-bit mask.
+	  (ELEV): New operand description.
+	  (OVLE32_ESC, OPCODEFORMAT_ESC): New Opcode format ESC-form.
+	  (powerpc_opcodes): PPCVLE: enable popcntb, lwsync, add operand to sync,
+	  disable dnh.
+	* opcodes/ppcvle-opc.h (ppcvle_opcodes): New insn e_sc.
+
+2016-01-20  Gabor Palfi
+
+	[HDP-1091]
+	* gas/config/tc-ppc.c (ppc_elf_check_section_name): Handled section
+	names starting with ".text." in vle mode.
+
+2015-12-07  Horst Lehser
+
+	[HDP-1112]
+	* gas/config/tc-mcs.c (md_apply_fix): Removed seting fix value to 0 for
+	weak symbols.
+
+2015-12-07  Horst Lehser
+
+	[HDP-1118]
+	* opcodes/tricore-opc.c (tricore-opcodes): Add insn cachei.i.
+							(tricore-sfrs) : Added SFRS for TC1.6, TC1.6.1, TC1.6.2.	
+
+2015-12-07  Horst Lehser, Robert Agoston
+
+	[HDP-1111]
+	* bfd/carray.c: Move collection of labels from carray_set_section_contents
+	to carray_write_object_contents.
+	(macroname): Eliminated TOUPPER.
+
+2015-12-07  Horst Lehser
+
+	[HDP-1088]
+	* binutils/dwarf.c (byte_get_signed): Handle 24-bit values.
+	* binutils/readelf.c (is_32bit_abs_reloc): Correct comment for EM_GTM_MCS.
+					   (is_24bit_abs_reloc): Handle R_MCS_24 absolute reloc.
+	* config/mt-mcs: Add HTC version representation.
+	* gas/cgen.c (gas_cgen_md_apply_fix): Handle BFD_RELOC_24 absolute reloc.
+	* gas/config/tc-mcs.h: Define DWARF values.
+	* gas/config/tc-mcs.c: Define directive 'ulit24' to handle unaligned 24bit
+	values.
+	* gas/read.c: New function s_ulit24 handling 24bit unaligned values.
+
+2015-11-18  Szabolcs Bognar
+
+	[HDP-1095]
+	* binutils/ar.c (main: #ifdef HTC_SUPPORT): Add argc check to avoid segfault.
+	Replace the copying of the program name into the first argument
+	with setting the pointer.
+
+2015-11-17  Lorant Gosztola
+
+	[HDP-1094]
+	* ld/scripttempl/elf.sc: Remove LIB_SEARCH_DIRS
+
+2015-11-05  Robert Agoston
+
+	[HDP-1104]
+	* config/mt-mcs: Do pass -DHTC_SUPPORT_XML to CFLAGS and CXXFLAGS only if
+	BUILD_FREE_ENTRY_TOOLCHAIN variable is not set.
+	* config/mt-ppcvle: Ditto.
+	* config/mt-tricore: Ditto.
+
+2015-09-23  Horst Lehser
+
+	[HDP-1050]
+	* bfd/bfd.c (_bfd_default_error_handler): Don't abort, print '<unknown>'.
+
+2015-08-31  Robert Agoston
+
+	[HDP-898][BIN-44]
+	* config/mt-mcs: Add revision information to CFLAGS
+
+2015-08-27	Robert Agoston
+
+	[HDP-934]
+	* bfd/carray.c (carray_add_comments): New back-end API function to
+	enable comments in C array.
+	(carray_write_object_contents): Write comments only if enabled.
+	(carray_find_csection_by_index): Helper function to look up known csections.
+	(carray_set_section_contents): Handle known csections.
+	(carray_vec): Removed EXEC_P flag from output object file.
+	* binutils/objcopy.c (comments): New option.
+
+2015-08-18	Horst Lehser
+
+	[HDP-877]
+	* bfd/elf32-mcs.c: Correct HOWTO for R_MCS_4.
+	* opcodes/mcs-desc.c: Regenerated.
+
+2015-08-12	Gabor Palfi
+
+	[HDP-891]
+	* gas/config/tc-ppc.c (ppc_section_flags): Added parenthesis.
+
+2015-08-07	Horst Lehser
+
+	[HDP-818]
+	* include/bfdlink.h: (struct bfd_link_info): Add bit warn_discard_section.
+	                    (strcrt bfd_link_callbacks): Add warn_fix_symbols.
+	* bfd/linker.c: (fix_syms): Call warn_fix_symbols, if a symbol is moved.
+	* ld/ld.h: (args_type): Add warn_discard_section.
+	* ld/ldcref.c: (check_cref): New function.
+	* ld/ldmain.c: (link_callbacks): Add warn_fix_symbol.
+	              (notice): Extend condition to call add_cref.
+				  (warn_fix_symbol): New function.
+	* ld/ldsup.c: New option -warn-discard-section.
+	* ld/testsuite/ld-fixsym/fixsym.exp:
+	* ld/testsuite/ld-fixsym/fixsym.d:
+	* ld/testsuite/ld-fixsym/fixsym.s:
+	* ld/testsuite/ld-fixsym/fixsym.ld: New testcase.
+
+2015-08-05	Robert Agoston
+
+	[HDP-934]
+	* bfd/carray.c: New BFD back-end for C-array output.
+	* bfd/Makefile.am: (BFD32_LIBS, BFD32_LIBS_CFILES): Added carray.c to build.
+	* bfd/Makefile.in: Regenerated.
+	* bfd/targets.c: (_bfd_target_vector): Registered new target back-end: carray.
+	* bfd/po/SRC-POTFILES.in: Added carray.c to list of files.
+	* binutils/objcopy.c: (otyp, olbl, odef, hinc, xtern): New options.
+						  (copy_main): Handles new options.
+						  (copy_object): Initializes bfd of optional definition file.
+
+2015-08-03	Horst Lehser
+
+	[HDP-877]
+	* opcodes/mcs-asm.c: Generated from cgen/cpu/mcs.*.
+	* opcodes/mcs-desc.c: Ditto.
+	* opcodes/mcs-desc.h: Ditto.
+	* opcodes/mcs-dis.c: Ditto.
+	* opcodes/mcs-ibld.c: Ditto.
+	* opcodes/mcs-opc.h: Ditto.
+	* opcodes/mcs-opc.c: Ditto.
+	* includes/elf/mcs.h: New reloc R_MCS_WXLB.
+	* bfd/reloc.c:	New reloc BFD_RELOC_MCS_WXLB.
+	* bfd/bfd-in2.h: Newly generatedi because of reloc.c.
+	* bfd/libbfd.h: Ditto.
+	* bfd/elf32-mcs.c: Handle new reloc R_MCS_WXLB.
+	* gas/config/tc-mcs.c: Handle new options -mV*
+	(md_cgen_lookup_reloc): Handle new operands.
+
+2015-08-01	Gabor Palfi
+
+	[HDP-997]
+	* include/opcode/ppc.h: (PPC_OPCODE_SPRNAMES): New opcode flag.
+	* gas/config/tc-ppc.c: (pre_z42x_defined_registers, Z42X_REG_NAME_CNT):
+	Renamed to e200zx_pre_defined_registers and E200ZX_REG_NAME_CNT.
+	(register_name): Search through extra names relying on PPC_OPCODE_SPRNAMES.
+	* opcodes/ppc-dis.c: (ppc_opts): Added PPC_OPCODE_SPRNAMES flag to
+	supported CPUs.
+
+2015-07-29	Gabor Palfi
+
+	[HDP-935]
+	* binutils/dwarf.c: (xml_debug_displays): Merged with debug_displays.
+	* binutils/dwarf.h: (dwarf_section_display): Added new field for
+	xml_display function.
+	* binutils/objdump.c: (xml_dwarf_section): Use debug_displays instead of
+	xml_debug_displays.
+
+2015-07-17	Gabor Palfi
+
+	[HDP-935]
+	* binutils/dwarf.h (dwarf_section_display_enum): Added control_flow to
+	enumeration.
+
+2015-07-06	Szabolcs Bognar
+
+	[HDP-871]
+	* gas/config/tc-ppc.c: Add line for -mz225n3 to show it on the help screen.
+	* opcodes/ppc-dis.c: Add the z225n3 processor to the supported processors' list.
+
+2015-06-19	Gabor Palfi
+
+	[HDP-891]
+	* gas/config/tc-ppc.c (ppc_section_flags): Also set PPC_OPCODE_BOOKE and
+	clear PPC_OPCODE_CLASSIC for new cpu, when a vle section was found.
+	* opcodes/ppc-opc.c (powerpc_opcodes): Updated description, formatted
+	second sync opcode.
+	* gas/testsuite/gas/ppc/hdp-891.s: New testcase
+	* gas/testsuite/gas/ppc/hdp-891.d: New testcase
+	* gas/testsuite/gas/ppc/ppc.exp: Execute new testcase
+
+2015-06-09	Gabor Palfi
+
+	[HDP-848]
+	* gas/config/tc-tricore.c (md_apply_fix): Subtract the symbol's value
+	from fx_addnumber.
+
+2015-05-14	Gabor Palfi
+
+	[HDP-825]
+	* binutils/objdump.c (disassemble_section): Return if the section is a
+	debug section or named as .version_info or .comment.
+
+2015-04-16	Horst Lehser
+
+	[HDP-880]
+	* bfd/reloc.c:	New reloc BFD_RELOC_TRICORE_18ABS_14.
+	* bfd/libbfd.h: Regenrated.
+	* bfd/bfd-in2.h: Regenrated.
+	* bfd/elf32-tricore.c: Handle new reloc R_TRICORE_18_ABS_14.
+						   Handle new arch EF_EABI_TRICORE_V1_6_2.
+	* bfd/cpu-tricore.c: Handle new arch V1.6.2.
+	* binutils/readelf.c: Handle new arch V1.6.2.
+	* gas/config/tc-trciore.c: Handle new arch V1_6_2.
+	New reloc R_TRICORE_18ABS_14. New pseudo code 'V' for 18ABS_14.
+	* include/elf/tricore.h: New architecture EF_EABI_TRICORE_V1_6_2.
+	* include/opcode/tricore.h: New ISA TRICORE_V1_6_2.
+	New ABS format field FMT_ABS_OFF18_14.
+	* opcodes/tricore-opc.c: Add new tc1.6.2 instructions.
+	* opcodes/tricore-dis.c: Handle new format field FMT_ABS_OFF18_14 and new
+	absolute constant.
+	* ld/emultempl/tricoreelf.em: Add new arch tc162 to option -mcpu=.
+
+2015-03-25	Gabor Palfi
+
+	[HDP-608]
+	* ld/emultempl/ppc32elf-vle.em (PARSE_AND_LIST_ARGS_CASES): Handle
+	option --mcpu.
+	(PARSE_AND_LIST_OPTIONS): Fixed formatting, added description for --mcpu.
+	(parse_core_arch, ppcvle_set_core_properties): New functions.
+	(processor_target_table): New struct.
+	* ld/ld.h (ld_config_type): Added new member.
+	* ld/ldlang.c (check_saturation_information): New function.
+	(lang_check): Call check_saturation_information.
+	* ld/ldmain.c (main): Initialize config.max_sat_version.
+	* ld/ppc-htc-cores.def: New file.
+
+2014-12-01	Horst Lehser
+
+	[HDP-776]
+	* ld/ldmain.c: XML support depends on HTC_SUPPORT_XML.
+	* ld/lexsup.c: Ditto.
+	* binutils/objdump.c: Ditto.
+
+2014-09-02	Horst Lehser
+
+	[HDP-594]
+	* opcode/ppc-dis.c (ppc_opts[]): Add z425Bn3.
+
+2014-08-27	Peter Gal
+
+	[HDP-598]
+	Apply PR gas/12519.
+	https://sourceware.org/ml/binutils/2011-02/msg00311.html
+
+	* gas/config/obj-elf.c (elf_frob_symbol): Properly handle size expression.
+	* ld/testsuite/ld-mn10300/i135409-3.s: Correct .size label reference.
+	* ld/testsuite/ld-sh/sh64/stolib.s: Likewise.
+
+2014-08-13	Horst Lehser
+
+	[HDP-336]
+	* ld/ldlang.c (lang_memory_region_lookup): Initialize member mirror.
+
+2014-08-04	Horst Lehser
+
+	[HDP-517]
+	* bfd/relocs.c: Add internally used PCP relocs from tc-tricore.c.
+	* gas/config/tc-tricore.c: Delete internally used reloc definitions.
+	* bfd/bfd-ins.h: Regenerated.
+	* bfd/libbfd.h: Regenerated.
+
+2014-07-31	Tamas Szirbucz
+
+	[HDP-517]
+	* bfd/coff-rs6000.c (xcoff_complain_overview_bitfield_func): Remove unused
+	addrmask.
+	* bfd/coffcode.h (coff_write_object_contents): hasdebug used conditinally.
+	* bfd/compress.c (bfd_uncompress_section_contents): Add ATTRIBUTE_UNUSED.
+	* elf32-htc.c (htc_elf32_get_flag_core_number): Ditto.
+	* binutils/readelf.c (dump_section_as_strings, process_archive): Remove
+	unused local vars.
+	  (uncompress_section_contents): Add ATTRIBUTE_UNUSED.
+	* binutils/version.c (print_version): Use HTC_PRINT_TOOLVERSION if
+	defined.
+	* gas/config/tc-mcs.c (mcs_cons_align): Remove unsused local var p.
+	* gas/config/tc-ppc.c (md_assemble,vle_mavro): Remove unused local
+	variable.
+	* gas/cgen.c (gas_cgen_md_apply_fix): Use locals conditionally. 
+	* opcodes/cgen-asm.in (parse_insn_normal): Remove unused past_opcode_p.
+	* opcodes/mcs-asm.c: Regenerated.
+	* vared/vared.c (check_relocs): Use itsym ans elfsym conditionally.
+
+2014-04-25	Horst Lehser
+
+	[HDP-339]
+	* gas/po/nr.po: Regenerate because of a new warning message.
+
+2014-04-25	Horst Lehser
+
+	[HDP-339]
+	* bfd/po/nr.po: Regenrated to get the same numbers as in former versions.
+	* binutils/po/nr.po: Ditto
+	* gas/po/nr.po: Ditto
+	* ld/po/nr.po: Ditto
+	* opcodes/po/nr.po: Ditto
+
+2014-04-03	Tamas Szirbucz
+
+	[HDP-339]
+	* gas/config/tc-ppc.c: Add gettext call to warning message
+
+2014-07-30	Horst Lehser
+
+	[HDP-420]
+	* bfd/elf32-ppc.c (ppc_elf_relax_section): Correct max_branch_offset of
+	R_PPC_VLE_REL24.
+
+2014-07-31	Horst Lehser
+	[HDP-336]
+	* ld/po/nr.po: Update error numbering.
+	* ld/po/nr.gmo: Regenerated.
+
+2014-07-14	Tamas Szirbucz
+
+	[HDP-481]
+	* gas/config/tc-ppc.c: Add APU info for saturation.
+
+2014-07-22	Tamas Szirbucz
+
+	[HDP-433]
+	* opcodes/ppc-opc.c: Add new opcode mask and operand type
+	* opcodes/ppc-zen-425-opc.h: Add new zxtrw insn
+	* include/opcode/ppc.h: Add new operand flag PPC_OPERAND_MINPLUS1.
+	* gas/config/tc-ppc.c: Add handling of new operand flag PPC_OPERAND_MINPLUS1.
+	* gas/testsuite/gas/ppc/opcode_tests/zxtrw.s: Added
+	* gas/testsuite/gas/ppc/opcode_tests/zxtrw.d: Added
+
+2014-04-07	Tamas Szirbucz
+
+	[HDP-347]
+	* ld/deffilep.c: Add "error:"/"warning:" to einfo messages.
+	* ld/deffilep.y: Ditto.
+	* ld/emultempl/elf-generic.em: Ditto.
+	* ld/emultempl/elf32.em: Ditto.
+	* ld/emultempl/ppc32elf.em: Ditto.
+	* ld/emultempl/ppc64elf.em: Ditto.
+	* ld/ldcref.c: Ditto.
+	* ld/ldctor.c: Ditto.
+	* ld/ldemul.c: Ditto.
+	* ld/ldexp.c: Ditto.
+	* ld/ldfile.c: Ditto.
+	* ld/ldgram.c: Ditto.
+	* ld/ldgram.y: Ditto.
+	* ld/ldlang.c: Ditto.
+	* ld/ldlex.c: Ditto.
+	* ld/ldlex.l: Ditto.
+	* ld/ldmain.c: Ditto.
+	* ld/ldmisc.c: Ditto.
+	* ld/ldwrite.c: Ditto.
+	* ld/lexsup.c: Ditto.
+	* ld/mri.c: Ditto.
+	* numgettext.sh: Escape \` characters to `.
+
+
+2014-05-23	Tamas Szirbucz
+
+	[HDP-42]
+	* binutils/Makefile.am: Copy dtd file to the installdir.
+	* binutils/Makefile.in: Regenerated
+	* binutils/objdump.c: Add xml output format to objdump.
+	* binutils/dwarf.c: Ditto.
+	* binutils/dwarf.h: Ditto.
+	* binutils/bucomm.c: Ditto.
+	* binutils/bucomm.h: Ditto.
+	* bfd/elf.c: Ditto.
+	* bfd/bfd-in.h: Ditto.
+	* bfd/bfd-in2.h: Regenerated.
+	* libiberty/Makefile.in: Add xml.c
+	* libiberty/xml.c: Functions and data types for xml.
+	* include/xml.h: Ditto.
+	* include/xml_defines.h: String constants for XML.
+
+2014-06-13	Horst Lehser
+	[HDP-336]
+	* ld/ldlang.c (lang_map): Add printing of region mirrors.
+	* ld/ldlang.c (lang_add_to_region_mirror): Add correct warning message.
+	* ld/ldlang.c (lang_size_section_1): Handle LMA for region mirrors.
+	* ld/po/nr.po: Update error numbering.
+	* ld/po/nr.gmo: Regenerated.
+
+2014-03-20	Horst Lehser
+
+	[HDP-336]
+	* ld/ldlex.l: REGION_MIRROR new token.
+	* ld/ldgram.y: REGION_MIRROR new rule.
+	* ld/ldlang.c: lang_enter_region_mirror, lang_leave_region_mirror,
+	lang_add_to_region_mirror, lang_memory_set_current new functions.
+	* ld/ldlang.h: lang_memory_region_mirror, lang_memory_region_mirror_list
+	new structures.
+	* ld/ldgram.c: Regenerated.
+	* ld/ldgram.h: Ditto.
+	* ld/ldlex.c: Ditto.
+
+
+2014-03-19	Tamas Szirbucz
+
+	[HDP-41]
+	* include/xml_defines.h: Add string literals of the XML.
+	* include/xml.h: Add data types and function headers for XML data handling.
+	* libiberty/xml.c: Add functions for XML data handling.
+	* libiberty/Makefile.in: xml.c added
+	* bfd/elf32-htc.c (xml_region_maps): Create XML node from region maps. 
+	* bfd/elf32-extmap.c: Definition of symbol_t type moved to the header file.
+			      elf32_do_extmap cuted to 4 parts: elf32_collect_extmap_info, 
+				elf32_print_extmap_header, elf32_print_extmap_info, elf32_print_extmap_footer
+			      XML node generation added for symbol list and linker informations.
+	* bfd/elf32-extmap.h: Add data types for store extmap informations.
+			      Function headers updated.
+	* ld/ldcref.c: Add function for generating cross references table XML node.
+	* ld/ldexp.c: Add function that print an expression tree to string.
+	* ld/ldexp.h: Ditto.
+	* ld/lexsup.c: Add -XML-Map option.
+	* ld/ld.h: Add XML mapfile informations to the config stucture.
+		   Add header for cross reference XML generator function.
+	* ld/ldlang.c: Add functions of XML map generation.
+	* ld/ldmain.c: Add XML map generation.
+	* ld/ldver.c: Add function that generate linker version information to XML.
+	* ld/ldver.h: Ditto.
+	* ld/Makefile.am: Copy dtd files to the install dir.
+	* ld/Makefile.in: Regenerated.
+	* ld/map.dtd: New file.
+
+2014-03-07	Tamas Szirbucz
+	[HDP-311]
+	* ld/ldlang.h: Add not_cores to lang_memory_region_type.
+	* ld/ldlang.c: Store negative core flags in not_cores.
+
+2014-01-23	Tamas Szirbucz
+
+	[HDP-253]
+	* opcodes/ppc-dis.c: Move lsp and sat flags to sticky bytes. 
+
+2014-01-08	Tamas Szirbucz
+
+	[HDP-134]
+	* numgettext.sh: Filter messages which uses %I sequences.
+
+2014-01-08	Tamas Szirbucz
+
+	[HDP-134]
+	* libiberty/numbering.c: Fix Windows path handling for .mo files.
+
+2013-12-06	Horst Lehser
+
+	[HDP-215]
+	* gas/config/tc-tricore.c: Change help message for crc32 operand order.
+
+2013-12-04	Horst Lehser
+
+	[HDP-215]
+	* gas/config/tc-tricore.c: Change message for crc32 operand order.
+
+2013-12-02	Horst Lehser
+
+	[HDP-215]
+	* opcodes/tricore-opc.c: Adapt crc32 operand order.
+	* gas/config/tc-tricore.c: Add new warning for crc32 operand order.
+	* gas/testsuite/gas/tricore/opcode_tests/misc.d: Adapt crc32 encoding.
+
+2013-12-06 Lorant Gosztola
+	* Regenerate the "*.pot" ,"*.po" and "*.gmo" files in binutils 2.20/ld
+
+2013-12-06 Lorant Gosztola
+	* ld/ldwrite.c : Fix warning message
+	
+2013-12-04 Lorant Gosztola
+	* Regenerate the "*.pot" ,"*.po" and "*.gmo" files in binutils 2.20
+
+2013-12-02 Lorant Gosztola
+	* gas/config/tc-m68k.c: Changed "error," to "error:"
+
+2013-12-02 Lorant Gosztola
+	* gas/config/tc-i370.c: Changed error/warning messages 
+	* gas/config/tc-m68k.c: Ditto
+	* gas/config/tc-maxq.c: Ditto
+	* gas/testsuite/gas/all/itbl-test.c: Ditto
+	* gas/testsuite/gas/i386/intelbad.l: Ditto
+	* gas/testsuite/gas/m68hc11/m68hc11.exp: Ditto
+
+2013-11-29 Lorant Gosztola
+	[HDP-147]
+	* bfd/peXXigen.c: Changed "error," to "error:"
+	* binutils/dlltool.c: Ditto 
+
+2013-11-29 Lorant Gosztola
+	[HDP-147]
+	* bfd/peXXigen.c: Changed Error/Warning messages 
+	* binutils/dlltool.c: Ditto
+	* gas/testsuite/gas/ia64/reloc-bad.l: Ditto
+	* gas/testsuite/gas/ia64/reg-err.l: Ditto
+
+2013-11-28 Lorant Gosztola
+	[HDP-147]
+	* /ld/testsuite/*: Changed Error/Warning messages in the expected files in testsuite
+	* /gas/testsuite/*: Ditto
+	
+2013-11-28 Lorant Gosztola
+	[HDP-147]
+	* bfd/archive.c Changed "Error:" to "error:" and "Warning:" to "warning:"
+	* bfd/binary.c: Ditto
+	* bfd/coff-arm.c: Ditto
+	* bfd/coff-mcore.c: Ditto
+	* bfd/coff-ppc.c: Ditto
+	* bfd/coff-sh.c: Ditto
+	* bfd/coffcode.h: Ditto
+	* bfd/cofflink.c: Ditto
+	* bfd/dwarf2.c: Ditto
+	* bfd/elf32-arm.c: Ditto
+	* bfd/elf32-dlx.c: Ditto
+	* bfd/elf32-ppc.c: Ditto
+	* bfd/elf64-mmix.c: Ditto
+	* bfd/elfcore.h: Ditto
+	* bfd/elflink.c: Ditto
+	* bfd/elfxx-mips.c: Ditto
+	* bfd/i386linux.c: Ditto
+	* bfd/m68klinux.c: Ditto
+	* bfd/sparclinux.c: Ditto
+	* binutils/arparse.c: Ditto
+	* binutils/bucomm.c: Ditto
+	* binutils/debug.c: Ditto
+	* binutils/defparse.c: Ditto
+	* binutils/dwarf.c: Ditto
+	* binutils/mcparse.c: Ditto
+	* binutils/nlmheader.c: Ditto
+	* binutils/objcopy.c: Ditto
+	* binutils/rcparse.c: Ditto
+	* binutils/stabs.c: Ditto
+	* binutils/strings.c: Ditto
+	* binutils/sysinfo.c: Ditto
+	* binutils/windmc.c: Ditto
+	* gas/bfin-parse.c: Ditto
+	* gas/config/obj-coff.c: Ditto
+	* gas/config/tc-arm.c: Ditto
+	* gas/config/tc-bfin.c: Ditto
+	* gas/config/tc-m32c.c: Ditto
+	* gas/config/tc-mep.c: Ditto
+	* gas/itbl-parse.c: Ditto
+	* gas/listing.c: Ditto
+	* gas/m68k-parse.c: Ditto
+	* gas/messages.c: Ditto
+	* intl/plural.c: Ditto
+	* ld/deffilep.c: Ditto
+	* ld/deffilep.y: Ditto
+	* ld/emultempl/pe.em: Ditto
+	* ld/emultempl/pep.em: Ditto
+	* ld/emultempl/sh64elf.em: Ditto
+	* ld/emultempl/xtensaelf.em: Ditto
+	* ld/ldgram.c: Ditto
+	* ld/pe-dll.c: Ditto
+	* opcodes/i386-gen.c: Ditto
+	* opcodes/ia64-gen.c: Ditto
+
+2013-11-14	Horst Lehser
+
+	[HDP-123]
+	* ld/ldwrite.c: Typo and format.
+	* ld/ldlang.c: Typo and format.
+	
+2013-11-06	Tamas Szirbucz
+
+	[HDP-134]
+	* Makefile.in: Add numbering target that generates and installs 
+			all the po and gmo files.
+
+2013-11-06	Tamas Szirbucz
+
+	[HDP-134]
+	* binutils/Makefile.am: Regenerated.
+	* binutils/Makefile.in: Ditto.
+	* binutils/aclocal.m4: Ditto.
+	* binutils/doc/Makefile.in: Ditto
+	* binutils/config.in: Ditto.
+	* binutils/configure: Ditto.
+	* binutils/configure.in: Add check of setlocale and LC_MESSAGES.
+	* binutils/addr2line.c: Add check of --error-numbers option.
+				Modify language domain settings.
+	* binutils/ar.c: Ditto.
+	* binutils/coffdump.c: Ditto.
+	* binutils/dlltool.c: Ditto.
+	* binutils/dllwrap.c: Ditto.
+	* binutils/nlmconv.c: Ditto.
+	* binutils/nm.c: Ditto.
+	* binutils/objcopy.c: Ditto.
+	* binutils/objdump.c: Ditto.
+	* binutils/readelf.c: Ditto.
+	* binutils/size.c: Ditto.
+	* binutils/srconv.c: Ditto.
+	* binutils/strings.c: Ditto.
+	* binutils/sysdump.c: Ditto.
+	* binutils/windmc.c: Ditto.
+	* binutils/windres.c: Ditto.
+	* binutils/po/Make-in: Add build of nr.po and nr.gmo.
+	* binutils/po/nr.gmo: New binary language file for numbering.
+	* binutils/po/nr.po: New language file for numbering.
+
+2013-11-06	Tamas Szirbucz
+
+	[HDP-134]
+	* ld/Makefile.in: Regenerated.
+	* ld/aclocal.m4: Ditto.
+	* ld/config.in: Ditto.
+	* ld/configure: Ditto.
+	* ld/configure.in: Add check of setlocale and LC_MESSAGES.
+	* ld/ldmain.c: Modify language domain settings.
+	* ld/lexsup.c: Add check of --error-numbers option.
+	* ld/po/Make-in: Add build of nr.po and nr.gmo.
+	* ld/po/nr.gmo: New binary language file for numbering.
+	* ld/po/nr.po: New language file for numbering.
+
+2013-11-06	Tamas Szirbucz
+
+	[HDP-134]
+	* gas/Makefile.am: Regenerated.
+	* gas/Makefile.in: Ditto.
+	* gas/aclocal.m4: Ditto.
+	* gas/config.in: Ditto.
+	* gas/configure: Ditto.
+	* gas/doc/Makefile.in: Ditto.
+	* gas/as.c: Add check of --error-numbers option.
+		    Modify language domain settings.
+	* gas/configure.in: Add check of setlocale and LC_MESSAGES.
+	* gas/po/Make-in: Add build of nr.po and nr.gmo.
+	* gas/po/POTFILES.in: Add config/tc-tricore.*.
+	* gas/po/dictionary: New file for messages that can not be found by numgettext.
+	* gas/po/nr.po: New language file for numbering.
+	* gas/po/nr.gmo: New binary language file for numbering.
+
+2013-11-06	Tamas Szirbucz
+
+	[HDP-134]
+	* bfd/po/Make-in: Add build of nr.po and nr.gmo.
+	* opcodes/po/Make-in: Ditto.
+	* bfd/po/nr.po: New language file for numbering.
+	* opcodes/po/nr.po: Ditto.
+	* bfd/po/nr.gmo: New language binary file for numbering.
+	* opcodes/po/nr.gmo: Ditto.
+	* bfd/sysdep.h: _() macro modified to check numbering.
+	* opcodes/opintl.h: Ditto.
+
+2013-11-06	Tamas Szirbucz
+
+	[HDP-134]
+	* ernie.jar: Tool that adds numbers to the po file.
+	* generate_nr_po.sh: Script that generates the nr.po files.
+	* include/numbering.h: Add headers of numbering related functions.
+	* libiberty/Makefile.in: Add numbering.c
+	* libiberty/numbering.c: Add interface to set and get status of numbering.
+				 Add get_localedir function.
+				 Add set_language_domain function.
+	* numgettext.sh: Script for collect all error and warning messages.
+	* pot2xml.jar: Tool that generates XML from pot files.
+	* swap_error_numbers.sh: Script that corrects warning messages of the following type: [NUM] Warning:
+
+2013-10-29	Horst Lehser
+
+	[HDP-124]
+	* binutils/readelf.c: Substitute all calls to abort with error message and
+	call of exit (1).
+
+2013-10-29	Horst Lehser
+
+	[HDP-123]
+	* ld/ldwrite.c (build_link_order): Handle noload sections like .bss
+	sections.
+	* ld/ldlang.c
+	(lang_add_section,map_input_to_output_sections,lang_size_sections_1):
+	For ELF handle noload section like .bss sections.
+
+2013-09-24	Horst Lehser
+
+	[BIN-12] [BIN-81]
+	* gas/config/tc-tricore.c (md_convert_frag): For a symbol set operand type to 'U'.
+
+2013-08-07	Horst Lehser
+
+	[BIN-79]
+	* ld/scripttempl/elftricore.sc: Add .sdata2 statement to .sdata2.
+
+2013-07-11	Horst Lehser
+
+	[BIN-76]
+	* gas/config/tc-tricore.h: Define EXTERN_FORCE_RELOC to 1.
+	Define tc_fix_adjustable to handle the EXTERN_FORCE_RELOC.
+	* gas/config/tc-ppc.h: Define EXTERN_FORCE_RELOC to 1.
+
+2013-05-16	Horst Lehser
+
+	[BIN-71]
+	* ld/ldexp.c: Set lineno before emit script relative error messages.
+	* ld/ldlang.c: Dito.
+
+2013-04-30	Horst Lehser
+
+	[BIN-74]
+	* binutils/readelf.c (process_note_section): Add special hanlding for
+												 .version_info
+
+2013-04-22	Horst Lehser
+
+	[BIN-64]
+	* gas/config/tc-pcc.c (ppc_setup_opcodes): Delete unused variable retval.
+
+2013-04-18  Horst Lehser
+
+	[BIN-71]
+	* ld/ldexp.c (exp_fold_tree_1): Add section name to error message.
+
+2013-04-18  Horst Lehser
+
+	[BIN-69]
+	* ld/ldlang.c (lang_size_section_1): Only calculate LMA if lma_region and
+	vma regison differ.
+
+2013-04-11  Peter Gal
+
+	[BIN-66]
+	* ld/emulparams/elf32mcs.sh: Added .version_info to the ${OTHER_SECTIONS}.
+	* ld/emulparams/elf32ppc.sh: Ditto
+	* ld/emulparams/elf32ppc_vle.sh: Ditto
+	* ld/emulparams/elf32ppcsim.sh: Ditto
+	* ld/scripttempl/elf32mcs.sc: Include ${OTHER_SECTIONS} in file.
+
+2013-04-05	Tamás Szirbucz
+
+	[BIN-64]
+	* gas/testsuite/gas/ppc/saturation.s: Add new testcase for saturation
+	* gas/testsuite/gas/ppc/saturation.d: Add new testcase for saturation
+	* gas/testsuite/gas/ppc/ppc.exp: Add new testcase for saturation
+
+2013-04-04	Tamás Szirbucz
+
+	[BIN-64]
+	* gas/config/tc-ppc.c: New opcode table connected and reading of various
+	 opcode tables made more simple.
+	* include/opcode/ppc.h: Saturation opcode table, and opcode table list are
+	 added.
+	* opcodes/ppc-dis.c: New architectures (z410n3, z710n3, sat), new opcode
+	table and opcode table list are added.
+	PPC_OPCODE_VLE flag added to lsp.
+	* opcodes/ppc-zen-sat-opc.h: Saturation opcodes added.
+	* opcodes/ppc-opc.c: Macros and operand types for the sat instruction
+	added. New opcode table included.
+
+2013-04-04	Tamás Szirbucz
+
+	[BIN-58]
+	* gas/testsuite/gas/ppc/opcode_tests/3nops.d: Correct machine flag.
+	* gas/testsuite/gas/ppc/opcode_tests/addition.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/branch.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/compare.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/condition.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/count.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/dataCache.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/divide.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/extend.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/externalControl.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/floating.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/floatingdp.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/instruction.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/load.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/mbar.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/misc.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/moveFrom.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/moveTo.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/multiply.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/negate.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/or.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/return1.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/return2.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/return3.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/return4.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/rotate.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/shift.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/store.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/sub.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/sync.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/translation.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/trap.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/xor.d: Dito.
+	* gas/testsuite/gas/ppc/opcode_tests/vle_madd_msub.d: Dito.
+
+2013-04-02	Horst Lehser
+
+	[BIN-63]
+	*bfd/elflink.c (elf_link_add_object_symbols): take isym size != 1
+
+2013-01-11	Horst Lehser
+
+	[BIN-54]
+	* gas/testsuite/gas/ppc/ppcvle-1.s: Correct testcase.
+	* gas/testsuite/gas/ppc/ppcvle-1.d: Correct testcase.
+
+2013-01-11	Horst Lehser
+
+	[BIN-55]
+	* ld/ldlang.c (lang_add_section): Set expld.phase to lang_mark_phase_enum
+	before calling lang_size_sections becasue otherwise symbols are not
+	evaluated.
+
+2013-01-11	Horst Lehser
+
+	[BIN-56]
+	* binutils/doc/binutils.texi: Extend description of the disassemble option
+	-M for PPC
+	* opcodes/ppc-dis.c (powerpc_init_dialect): Handle new option -Mradix16.
+	(check_insn_powerpc): Remove unused variable tabel_op, handle radix16
+	(print_ppc_disassembler_options): Add radix16.
+
+2013-01-11	Horst Lehser
+
+	[BIN-57]
+	* gas/config/tc-ppc.c (ppc_handle_align): Only use e_ori 0,0,0 in VLE mode
+	as fill instruction.
+
+2013-01-11	Horst Lehser
+
+	[BIN-54]
+	* gas/config/tc-ppcvle.c (cmp): only accept 0 as 2. operand.
+	(cmpl): Dito.
+	(cmpi): Dito.
+	(cmpli): Dito.
+	(cmplw): Added.
+	(is_val_sci8): Remove unused local variable mask and return immediately.
+	* gas/testsuite/gas/ppc/ppcvle-1.s: Added testcase.
+	* gas/testsuite/gas/ppc/ppcvle-1.d: Added testcase.
+	* gas/testsuite/gas/ppc/ppc.exp: Add test ppcvle-1.
+
+2012-12-06	Horst Lehser
+
+	[BIN-47]
+	* bfd/elf32-ppc.c (apuinfo_list_element): Change return type.
+	(ppc_elf_final_write_processing): Write apuinfo as to 16-bit values.
+
+2012-11-29  Horst Lehser
+
+	[BIN-53]
+	* opcodes/ppc-opc.c: Mark lwsync as invalid in VLE-mode.
+	* gas/config/tc-ppc.c (md_assemble): Test the deprecated field for
+	standard PPC-instructions.
+
+	[BIN-52]
+	* opcodes/ppc-zen-425-opc.h: Correct the opcode for zvmhsih and zvmhsuih.
+
+2012-11-05  Horst Lehser
+
+	[BIN-46]
+	* bfd/elf32-tricore.c: Set elf_backend_rela_normal to 1. Now all section
+	relative relocs are handled in elflink.c 
+	(tricore_elf32_relocate_section): Return for relocatable link.
+
+2012-10-29  Peter Gal
+	* ld/scripttempl/elf32ppc_vle.sc: Fix section flag.
+
+2012-10-16  Gabor Palfi
+    * binutils/htc/htc_support.h: Define HTC_PRINT_TOOLVERSION macro to
+    print tool version information (if required information is reachable).
+    * binutils/version.c: Use HTC_PRINT_TOOLVERSION macro if available.
+    * gas/as.c: Likewise
+    * gas/config/htc-elf.c: Likerwise
+    * ld/ldver.c: Likewise
+    
+
+2012-09-28  Horst
+
+	* ld/ldlang.c: change return type of lang_add_section to boolean
+	return FALSE if the section cannot be added
+	* ld/lang.h: Likewise
+	* ld/emultempl/elf32-em: 
+	(gld${EMULATION_NAME}_place_orphan): test return value of lang_add_section
+	and emit error message
+
+
+2012-09-27  Horst
+	* bfd/elf32-tricore.c: tricore_elf32_relax_section: also relax
+	R_TRICORE_24REL for section symbols
+
+2012-08-02	Horst
+
+	* bfd/elf32-ppc.c: correct type of apuinfo_list
+
+2012-08-02	Horst
+
+	* htc/tricore-version.h: increment version of linker
+	* bfd/elf32-tricore.c: implement callee/caller checks
+	(tricore_elf32_final_link): New functions to initiate callee/caller checks
+	(tricore_elf32_link_hash_table_create): add call to 
+	tricore_elf32_call_symbol_hash_create
+
+	* bfd/elf32-htc.c: htc_elf32_link_hash_table_create: only create the
+	additional hash table and return
+
+2012-07-20  Horst Lehser
+
+	* bfd/elf32-ppc.c: ppc_elf_final_link: new to call ppc_final_fixed_reg_check
+	ppc_final_fixed_reg_check: returns boolean
+	ppc_elf_final_write_processing: delete call to ppc_final_fixed_reg_check
+
+2012-07-18  Horst Lehser
+
+	* gas/config/tc-ppc.c: ppc_cleanup: emit APUINFO_FIXED_REGS if fixed regs
+	are passed to th assmebler even if no code is emitted
+	* bfd/elf32-ppc.c: ppc_elf_begin_write_processing : initialize
+	apu_fixed_found
+
+2012-07-12  Horst Lehser
+
+	* bfd/elf32-ppc.c: add new functions to handle fixed registers for additonal 
+	SDA sections
+	* ld/scripttempl/elf32ppc_vle.sc: include input sections .srodata into
+	.sdata2
+
+2012-06-18  Horst Lehser
+
+	* bfd/elflink.c: elf_link_output_extsym: emit error message in case of
+	bfd_link_hash_new,bfd_link_hash_warning instead of abort.
+	* bfd/bfd.c: _bfd_default_error_handler, _bfd_abort: call xexit instead of
+	_exit to flush all outstanding output.
+	
+2010-01-13  Horst Lehser  <Horst.Lehser@hightec-rt.com>
+
+	* gas/config/tc-arm.c: add cortex-rf4 to arm_cpus
+				make_mapping_symbol: add braces in if-statement
+

@@ -1,0 +1,79 @@
+/* Devices for GNU compiler collection for Infineon TriCore
+
+   Copyright (C) 2012-2014 Free Software Foundation, Inc.
+
+   This file is part of GCC.
+
+   GCC is free software; you can redistribute it and/or modify it under the
+   terms of the GNU General Public License as published by the Free Software
+   Foundation; either version 3, or (at your option) any later version.
+
+   GCC is distributed in the hope that it will be useful, but WITHOUT
+   ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+   or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
+   License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with GCC; see the file COPYING3.  If not see
+   <http://www.gnu.org/licenses/>.  */
+
+/* This file describes TriCore derivatives known to the toolchain.
+   Before including this file, define a macro
+
+   DEF_DEVICE(NAME, TARGET_NAME, CORE, LD_MCPU)
+
+   Name:         Name of the device as specified with -mcpu=<Name>.
+                 Used to built-in define __<NAME>__ (allcaps).
+
+   TARGET_NAME:  String to be used in built-in macro __TARGET_NAME__.
+
+   Core:         The core architecture as string according to -mtc<Core>.
+                 This will pick the multilib variant and be used for
+                 the assembler by means of -mtc<Core>.
+
+   ld_mcpu:      The core as for tricore-ld --mcpu=<ld_mcpu>.
+                 The linker supports cores like 'tc16p'.  This is for
+                 future use and currently we have <ld_mcpu> = tc<Core>.
+*/
+
+/* First entry specifies the default device if neither -mcpu=
+   nor -mtc is specified.  */
+DEF_DEVICE ("tc1796", "0x1796", "13", "tc13")
+
+DEF_DEVICE ("tc1130", "0x1130", "13", "tc13")
+DEF_DEVICE ("tc116x", "0x116f", "13", "tc13")
+DEF_DEVICE ("tc1161", "0x1161", "13", "tc13")
+DEF_DEVICE ("tc1162", "0x1162", "13", "tc13")
+DEF_DEVICE ("tc1762", "0x1762", "13", "tc13")
+DEF_DEVICE ("tc1764", "0x1764", "13", "tc13")
+DEF_DEVICE ("tc1766", "0x1766", "13", "tc13")
+DEF_DEVICE ("tc1792", "0x1792", "13", "tc13")
+DEF_DEVICE ("tc1920", "0x1920", "13", "tc13")
+
+DEF_DEVICE ("tc1167", "0x1167", "131", "tc131")
+DEF_DEVICE ("tc1197", "0x1197", "131", "tc131")
+DEF_DEVICE ("tc1337", "0x1337", "131", "tc131")
+DEF_DEVICE ("tc1367", "0x1367", "131", "tc131")
+DEF_DEVICE ("tc1387", "0x1387", "131", "tc131")
+DEF_DEVICE ("tc1724", "0x1724", "131", "tc131")
+DEF_DEVICE ("tc1728", "0x1728", "131", "tc131")
+DEF_DEVICE ("tc1736", "0x1736", "131", "tc131")
+DEF_DEVICE ("tc1767", "0x1767", "131", "tc131")
+DEF_DEVICE ("tc1782", "0x1782", "131", "tc131")
+DEF_DEVICE ("tc1783", "0x1783", "131", "tc131")
+DEF_DEVICE ("tc1784", "0x1784", "131", "tc131")
+DEF_DEVICE ("tc1797", "0x1797", "131", "tc131")
+
+DEF_DEVICE ("tc1791", "0x1791", "16", "tc16")
+DEF_DEVICE ("tc1793", "0x1793", "16", "tc16")
+DEF_DEVICE ("tc1798", "0x1798", "16", "tc16")
+
+DEF_DEVICE ("tc22xx", "0x2200", "161", "tc161") /* since v4.6.5.0 */
+DEF_DEVICE ("tc23xx", "0x2300", "161", "tc161") /* since v4.6.5.0 */
+DEF_DEVICE ("tc26xx", "0x2600", "161", "tc161")
+DEF_DEVICE ("tc27xx", "0x2700", "161", "tc161")
+DEF_DEVICE ("tc29xx", "0x2900", "161", "tc161")
+DEF_DEVICE ("tc2d5d", "0x2d5d", "161", "tc161")
+
+DEF_DEVICE ("tc38xx", "0x3800", "162", "tc162") /* since v4.9.1.0-infineon-2.0 */
+DEF_DEVICE ("tc39xx", "0x3900", "162", "tc162") /* since v4.6.6.0 */

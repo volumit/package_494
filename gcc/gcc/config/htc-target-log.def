@@ -1,0 +1,52 @@
+/* This file is part of GCC.
+
+   GCC is free software; you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation; either version 3, or (at your option)
+   any later version.
+
+   GCC is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   Under Section 7 of GPL version 3, you are granted additional
+   permissions described in the GCC Runtime Library Exception, version
+   3.1, as published by the Free Software Foundation.
+
+   You should have received a copy of the GNU General Public License and
+   a copy of the GCC Runtime Library Exception along with this program;
+   see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+   <http://www.gnu.org/licenses/>.  */
+
+/* This files contains the valid arguments to -mlog=TEXT.  TEXT is a
+   comma (,) separated list of keywords like "address_cost".  Special
+   to -mlog are "all" (enables all available logs) and "?" (report all
+   the known key from the list below.
+
+   Before including this file, define a macro
+
+   DEF_HTC_LOG(KEY)
+
+   FIELD: A recognized keyword in TEXT.
+   
+   This list is in ASCII collating order.  Please keep it that way.  */
+
+DEF_HTC_LOG (address_cost)
+DEF_HTC_LOG (canonicalize_comparison)
+DEF_HTC_LOG (clone)
+DEF_HTC_LOG (dam)
+#ifdef HTC_DEBUG
+DEF_HTC_LOG (debug)
+#endif
+DEF_HTC_LOG (eabi)
+DEF_HTC_LOG (function_arg)
+DEF_HTC_LOG (legitimate_address_p)
+DEF_HTC_LOG (legitimize_address)
+DEF_HTC_LOG (mov_input_operand)
+DEF_HTC_LOG (must_load_indirect_p)
+DEF_HTC_LOG (pic)
+DEF_HTC_LOG (rtx_costs)
+DEF_HTC_LOG (secspec)
+DEF_HTC_LOG (section)
+DEF_HTC_LOG (stat)

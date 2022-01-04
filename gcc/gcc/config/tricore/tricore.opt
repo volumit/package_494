@@ -1,0 +1,195 @@
+; Options for the Infineon TriCore port of the compiler
+;
+; Copyright (C) 2005-2014 Free Software Foundation, Inc.
+;
+; This file is part of GCC.
+;
+; GCC is free software; you can redistribute it and/or modify it under
+; the terms of the GNU General Public License as published by the Free
+; Software Foundation; either version 3, or (at your option) any later
+; version.
+;
+; GCC is distributed in the hope that it will be useful, but WITHOUT
+; ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+; or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
+; License for more details.
+;
+; You should have received a copy of the GNU General Public License
+; along with GCC; see the file COPYING3.  If not see
+; <http://www.gnu.org/licenses/>.
+
+meabi
+Target RejectNegative
+This option has no effect and serves only for command-line compatibility with older versions.
+
+;; The foolowing option is for use in the GCC test suite:
+;; - Porting the testsuite will be easier because bunch of test cases
+;;   need not to be adjusted to the EABI limitation of bitfield width.
+;; - Test coverage will be better if test cases width bitfields > 32
+;;   are included in the testsuite compared to if they were disabled.
+meabi-bitfield-limit
+Target Uinteger Var(tric_opt_eabi_bitfield_limit) Init(1)
+Limits the size of bitfields to 32-bit (required by EABI). The option -mno-eabi-bitfield-limit allows bitfields greater than 32-bit.
+
+mstar=
+Target RejectNegative Report Joined Undocumented UInteger Var(tric_star) Init(0)
+
+mtest=
+Target RejectNegative Report Joined Undocumented UInteger Var(tric_test) Init(0)
+
+mabs=
+Target Report Joined RejectNegative UInteger Var(tric_opt_mabs) Init(0)
+-mabs=<N>	Allocate data smaller than or equal to <N> bytes in the absolute data section .zbss resp. .zdata. If <N> is zero all data will be allocated in the absolute section.
+
+mabs-const=
+Target Report Joined RejectNegative UInteger Var(tric_opt_mabs_const) Init(0)
+-mabs-const=<N>	Allocate constant data smaller than or equal to <N> bytes n the absolute data section. If <N> is zero all data qualified 'const' will be allocated in the absolute section.
+
+mabs-data=
+Target Report Joined RejectNegative UInteger Var(tric_opt_mabs_data) Init(0)
+-mabs-data=<N>	Allocate non-constant data smaller than or equal to <N> bytes in the absolute data section .zdata. If <N> is zero all data not qualified 'const' will be allocated in the absolute section.
+
+msmall=
+Target Report Joined RejectNegative UInteger Var(tric_opt_msmall) Init(0)
+-msmall=<N>	Allocate data smaller than or equal to <N> bytes in the small data section .sbss resp. .sdata. If <N> is zero all data will be allocated in the small data section.
+
+msmall-const=
+Target Report Joined RejectNegative UInteger Var(tric_opt_msmall_const) Init(0)
+-msmall-const=<N>	Allocate constant data smaller than or equal to <N> bytes in the small data section. If <N> is zero all data qualified 'const' will be allocated in the small data section.
+
+msmall-data=
+Target Report Joined RejectNegative UInteger Var(tric_opt_msmall_data) Init(0)
+-msmall-data=<N>	Allocate non-constant data smaller than or equal to <N> bytes in the small data section. If <N> is zero all data not qualified 'const' will be allocated in the small data section.
+
+msmall-pid
+Target Report UInteger Var(tric_opt_msmall_pid) Init(0)
+Use base relative address computation. Sets -Winitialize-pid and -msmall=0.
+
+Winitialize-pid
+C C++ Var(tric_warn_initialize_pid) Warning Init(1)
+Warn if an initializer computes the address of a register-relative addressable variable at load time.
+
+msplit-insns
+Target Report Undocumented Var(tric_opt_split_insns) Init(1)
+Internal use only. Enable patterns that split insns. Default in ON.
+
+mbranch-use-setcompare
+Target Report Var(tric_opt_branch_use_setcompare) Init(1)
+Internal use only. Branches use set-compare insns if constant does not fit. With this switch disabled the constant is loaded into a reg. Default in ON.
+
+mextract-to-subreg
+Target report UInteger Var(tric_opt_extract_to_subreg) Init(1)
+Internal use only. Destination of zero_extract may be SUBREG. See bittester-1.c for effects. Default is ON.
+
+mbranch-cost=
+Target Report Joined UInteger Var(tric_opt_branch_cost) Init(0)
+-mbranch-cost=<N>	Internal use only. Set Branch costs to <N>.
+
+mloop
+Target Report UInteger Var(tric_opt_loop) Init(1)
+Internal use only. Use JNED, JNZD.A et al. Default is ON.
+
+mextend-load
+Target Report UInteger Var(tric_opt_extend_load) Init(1)
+Internal use only. Try better zero/signed extension by allowing ZERO_EXTEND resp. SIGN_EXTEND of memory loads in word loads. Default is ON.
+
+msegment-trap=
+Target Report Joined RejectNegative Var(tric_opt_segment_trap)
+Internal use only. Specify features to enable which may generate code causing segment trap. Default is 'default'.
+
+mmap-combine
+Target Report UInteger Var(tric_opt_map_combine) Init(1)
+Internal use only. Map patterns during insn combination.  Default is ON.
+
+mconst-anchor
+Target Report UInteger Var(tric_opt_const_anchor) Init(1)
+Internal use only. Try to find anchors for loading compile time constants.  Default is ON.
+
+mstrict-alignment
+Target Report UInteger Var(tric_opt_strict_alignment) Init(1)
+Internal use only. Move instructions will fail to work when given unaligned data. Default is ON.
+
+mcpu=
+Target Report Joined RejectNegative Var(tric_opt_cpu) Init(0) Enum(tric_mcpu)
+-mcpu=<CPU>	Specify derivative as <CPU>.
+
+mtc
+Target Report Joined RejectNegative Var(tric_opt_tc) Init(0) Enum(tric_mtc)
+-mtc<CORE>	Generate code for specific TriCore <CORE> architecture:  V1.3 (default), V1.3.1, V1.6, V1.6.1 or V1.6.2.  This option will be set by -mcpu=<CPU>.
+
+mfast-math
+Target Report Mask(FAST_MATH)
+Internal use only.
+
+mfast-div
+Target Report UInteger Var(tric_opt_fast_div) Init(1)
+With this option turned on, gcc will emit code for 32-bit integer division inline.  With this option turned off, gcc will emit a library call to perform such divisions.  This option is off per default if code is optimized for size and on, otherwise.  It has only an effect if the machine has no DIV resp. DIV.U divide instruction and divisions must be performed by means of DVSTEP.
+
+mlicense-dir=
+Target RejectNegative Joined Var(htc_license_dir)
+Path to the license file directory.
+
+mvolatile-const-in-rodata
+Target Report UInteger Var(tric_opt_volatile_const_in_rodata) Init(1)
+Put volatile constants into read-only data section. Default is ON.
+
+maligned-data-sections
+Target Report UInteger Var(tric_opt_aligned_data_sections) Init(0)
+Put data that would otherwise be put into an unnamed section in respective aligned section.
+
+mcode-pic
+Target Report UInteger Var(tric_opt_code_pic) Init(0)
+Generate position-independent code. Notice that this is not -fpic.
+
+Winitialize-pic
+C C++ Var(tric_warn_initialize_pic) Init(1) Warning
+Warn if an initializer computes the address of a function at compile time. This warning has only effect if -mcode-pic is set and on per default then.
+
+mdynamic-address-calc-with-code-pic
+Target Report UInteger Var(tric_opt_dynamic_code_pic) Init(1)
+Generate dynamic address calculation with -mcode-pic. This option is on per default.
+
+merrata=
+Target Report RejectNegative Joined Var(tric_opt_errata) Init(0) Enum(tric_merrata)
+-merrata=<BUG>	Turn on work around for silicon bug BUG.
+
+;; Needed for technical reasons because we cannot -mno- an enum option.
+mno-errata=
+Target Undocumented RejectNegative Joined Var(tric_opt_no_errata) Init(0) Enum(tric_mnoerrata)
+
+nocrt0
+Driver Report RejectNegative
+Do not link against default startup code.
+
+mpipeline=
+Target Report Joined RejectNegative Var(tric_opt_pipevariant) Init(0) Enum(tric_pipevariant)
+-mpipeline=<PIPEVARIANT>	Use the specified pipeline variant (requires scheduling).
+
+Enum
+Name(tric_mtc) Type(int)
+Known CORE architectures:
+
+EnumValue
+Enum(tric_mtc) String(13)  Value(0)
+
+EnumValue
+Enum(tric_mtc) String(131) Value(1)
+
+EnumValue
+Enum(tric_mtc) String(16)  Value(2)
+
+EnumValue
+Enum(tric_mtc) String(161) Value(3)
+
+EnumValue
+Enum(tric_mtc) String(162) Value(4)
+
+Enum
+Name(tric_pipevariant) Type(int)
+Known PIPEVARIANT values:
+
+EnumValue
+Enum(tric_pipevariant) String(standard)  Value(0)
+
+EnumValue
+Enum(tric_pipevariant) String(tc16x)  Value(1)

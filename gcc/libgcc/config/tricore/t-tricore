@@ -1,0 +1,43 @@
+LIB1ASMSRC = tricore/lib1funcs.S
+LIB1ASMFUNCS = \
+	_divmodsi4 \
+	_udivmodsi4 \
+	_rstcntxt \
+	_bswapsi2 \
+	_fixsfsi \
+	_fixunssfsi \
+	_paritysi2 \
+	_ashldi3 \
+	_ashrdi3 \
+	_lshrdi3 \
+	memcpy \
+	memset \
+	memcmp
+
+HOST_LIBGCC2_CFLAGS +=	-I$(srcdir)/config/htc-libgcc -mfast-div -fno-common \
+			-mno-eabi-bitfield-limit
+
+LIB2ADD += \
+    $(srcdir)/config/htc-libgcc/udiv6432.c \
+    $(srcdir)/config/htc-libgcc/divdi3.c \
+    $(srcdir)/config/htc-libgcc/moddi3.c \
+    $(srcdir)/config/htc-libgcc/divmoddi4.c \
+    $(srcdir)/config/htc-libgcc/udivdi3.c \
+    $(srcdir)/config/htc-libgcc/umoddi3.c \
+    $(srcdir)/config/htc-libgcc/udivmoddi4.c \
+    $(srcdir)/config/htc-libgcc/memmove.c 
+
+LIB2FUNCS_EXCLUDE = \
+	_divdi3 _moddi3 _divmoddi4 \
+	_udivdi3 _umoddi3 _udivmoddi4 _clzsi2 _clz \
+	_sf_to_si _sf_to_usi
+
+$(srcdir)/config/htc-libgcc/udiv6432.c:   $(srcdir)/config/htc-libgcc/div64.h
+$(srcdir)/config/htc-libgcc/divdi3.c:     $(srcdir)/config/htc-libgcc/div64.h
+$(srcdir)/config/htc-libgcc/moddi3.c:     $(srcdir)/config/htc-libgcc/div64.h
+$(srcdir)/config/htc-libgcc/divmoddi4.c:  $(srcdir)/config/htc-libgcc/div64.h
+$(srcdir)/config/htc-libgcc/udivdi3.c:    $(srcdir)/config/htc-libgcc/div64.h
+$(srcdir)/config/htc-libgcc/umoddi3.c:    $(srcdir)/config/htc-libgcc/div64.h
+$(srcdir)/config/htc-libgcc/udivmoddi4.c: $(srcdir)/config/htc-libgcc/div64.h
+
+EXTRA_PARTS = crtbegin.o crtend.o crti.o crtn.o

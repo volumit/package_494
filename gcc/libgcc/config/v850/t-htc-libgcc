@@ -1,0 +1,1 @@
+HOST_LIBGCC2_CFLAGS += -I$(srcdir)/config/htc-libgcc

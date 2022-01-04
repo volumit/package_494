@@ -1,0 +1,47 @@
+HOST_LIBGCC2_CFLAGS += -I$(srcdir)/config/htc-libgcc
+
+LIB2ADD += \
+    $(srcdir)/config/htc-libgcc/udiv6432.c \
+    $(srcdir)/config/htc-libgcc/divdi3.c \
+    $(srcdir)/config/htc-libgcc/moddi3.c \
+    $(srcdir)/config/htc-libgcc/divmoddi4.c \
+    $(srcdir)/config/htc-libgcc/udivdi3.c \
+    $(srcdir)/config/htc-libgcc/umoddi3.c \
+    $(srcdir)/config/htc-libgcc/udivmoddi4.c \
+    $(srcdir)/config/htc-libgcc/memcpy.c \
+    $(srcdir)/config/htc-libgcc/memcmp.c \
+    $(srcdir)/config/htc-libgcc/memset.c \
+    $(srcdir)/config/htc-libgcc/memmove.c 
+
+LIB2ADD_ST += \
+           $(srcdir)/config/rs6000/crtsavgpr.S \
+           $(srcdir)/config/rs6000/crtresgpr.S \
+           $(srcdir)/config/rs6000/crtresxfpr.S \
+           $(srcdir)/config/rs6000/crtresxgpr.S \
+           $(srcdir)/config/rs6000/e500crtres32gpr.S \
+           $(srcdir)/config/rs6000/e500crtrest32gpr.S \
+           $(srcdir)/config/rs6000/e500crtresx32gpr.S \
+           $(srcdir)/config/rs6000/e500crtsav32gpr.S \
+           $(srcdir)/config/rs6000/e500crtsavg32gpr.S
+
+
+
+LIB2FUNCS_EXCLUDE = \
+	_divdi3 _moddi3 _divmoddi4 \
+	_udivdi3 _umoddi3 _udivmoddi4 _clzsi2 _clz
+
+$(srcdir)/config/htc-libgcc/udiv6432.c: $(srcdir)/config/htc-libgcc/div64.h
+
+$(srcdir)/config/htc-libgcc/divdi3.c: $(srcdir)/config/htc-libgcc/div64.h
+
+$(srcdir)/config/htc-libgcc/moddi3.c: $(srcdir)/config/htc-libgcc/div64.h
+
+$(srcdir)/config/htc-libgcc/divmoddi4.c: $(srcdir)/config/htc-libgcc/div64.h
+
+$(srcdir)/config/htc-libgcc/udivdi3.c: $(srcdir)/config/htc-libgcc/div64.h
+
+$(srcdir)/config/htc-libgcc/udivdi3.c: $(srcdir)/config/htc-libgcc/div64.h
+
+$(srcdir)/config/htc-libgcc/umoddi3.c: $(srcdir)/config/htc-libgcc/div64.h
+
+$(srcdir)/config/htc-libgcc/udivmoddi4.c: $(srcdir)/config/htc-libgcc/div64.h

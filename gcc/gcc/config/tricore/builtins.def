@@ -1,0 +1,78 @@
+/* Copyright (C) 2012-2014 Free Software Foundation, Inc.
+
+   This file is part of GCC.
+
+   GCC is free software; you can redistribute it and/or modify it under
+   the terms of the GNU General Public License as published by the Free
+   Software Foundation; either version 3, or (at your option) any later
+   version.
+
+   GCC is distributed in the hope that it will be useful, but WITHOUT ANY
+   WARRANTY; without even the implied warranty of MERCHANTABILITY or
+   FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+   for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with GCC; see the file COPYING3.  If not see
+   <http://www.gnu.org/licenses/>.  */
+
+/* This file contains the definitions and documentation for the
+   builtins defined in the TriCore part of the GNU compiler.
+   Befor including this file, define a macro
+
+   DEF_BUILTIN(NAME, N_ARGS, ID, TYPE, INSN, TCODE)
+
+   NAME:   The name as visible to the user, without the leading
+           "__builtin_tricore_".
+
+   N_ARGS: Number of input arguments.  If special treatment is needed,
+           set to -1 and handle it by hand, see `tric_expand_builtin'.
+
+   ID:     An identifier for the built-in, used as TRIC_BUILTIN_<ID>.
+
+   TYPE:   A tree node describing the prototype of the built-in.
+
+   INSN:   Insn name attached to the built-in, used as CODE_FOR_<INSN>.
+           If special treatment is needed to expand the built-in, set this
+           to `nothing' and treat the case in `tric_expand_builtin' or earlier.
+
+   TCODE:  Tree code if the operation can be folded away to vanilla
+           expression or:
+           `NOP_EXPR'    : Folding is not needed or wanted.
+           `CONVERT_EXPR': Folding depends on operands.
+           `ERROR_MARK'  : Folding is mandatory and must be performed by hand,
+                           for example in `tric_fold_builtin'.
+*/
+
+/* Mapped to respective instruction.  */
+
+DEF_BUILTIN ("nop",      0, NOP, void_ftype_void, nopv, NOP_EXPR)
+
+DEF_BUILTIN ("lrotate",  2, LROTATE, uint_ftype_2uint, rotlsi3, LROTATE_EXPR)
+DEF_BUILTIN ("rrotate",  2, RROTATE, uint_ftype_2uint, nothing, ERROR_MARK)
+
+DEF_BUILTIN ("insert", 4, INSERT, uint_ftype_4uint, insert, CONVERT_EXPR)
+DEF_BUILTIN ("imask", 3, IMASK, uint64_ftype_3uint, imask, NOP_EXPR)
+
+DEF_BUILTIN ("swapw", 2, SWAPW, uint_ftype_v_voidptr_uint, swap_w, NOP_EXPR)
+DEF_BUILTIN ("swapmskw", 3, SWAPMSKW, uint_ftype_v_voidptr_2uint, swapmsk_w, NOP_EXPR)
+DEF_BUILTIN ("cmpswapw", 3, CMPSWAPW, uint_ftype_v_voidptr_2uint, cmpswap_w, NOP_EXPR)
+
+DEF_BUILTIN ("satb",  1, SATB, int_ftype_int,  nothing, ERROR_MARK)
+DEF_BUILTIN ("sath",  1, SATH, int_ftype_int,  nothing, ERROR_MARK)
+
+DEF_BUILTIN ("satbu", 1, SATBU, uint_ftype_uint, nothing, ERROR_MARK)
+DEF_BUILTIN ("sathu", 1, SATHU, uint_ftype_uint, nothing, ERROR_MARK)
+
+/* Overloaded in `tric_resolve_overloaded_builtin' */
+
+DEF_BUILTIN ("ldmst", -1, LDMST, void_ftype_void, nothing, ERROR_MARK)
+
+/* Following _ builtins are only used internally, e.g. to map overloaded
+   builtins or as internal helpers.  */
+
+DEF_BUILTIN ("_2ldmst", 2, LDMST2, void_ftype_v_voidptr_uint64, ldmst, CONVERT_EXPR)
+DEF_BUILTIN ("_3ldmst", 3, LDMST3, void_ftype_v_voidptr_2uint,  nothing, ERROR_MARK)
+DEF_BUILTIN ("_4ldmst", 4, LDMST4, void_ftype_v_voidptr_3uint,  nothing, ERROR_MARK)
+
+DEF_BUILTIN ("_2imask", 2, IMASK2, uint64_ftype_2uint, imask2, NOP_EXPR)

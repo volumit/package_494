@@ -1,0 +1,2773 @@
+msgid ""
+msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Message-Numbers-Known: 454\n"
+"Pool-Offset: 60000\n"
+"Message-Numbers-New: 0\n"
+"Language: en\n"
+"Last-Translator: Automatically generated\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Pool-Max-Number: 60531\n"
+"Pool-Name: bin\n"
+"Language-Team: none\n"
+"Content-Type: text/plain; charset=ASCII\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: cannot get addresses from archive"
+msgstr "%s: [60457] cannot get addresses from archive"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: cannot find section %s"
+msgstr "%s: [60456] cannot find section %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unknown demangling style `%s'"
+msgstr "[60392] unknown demangling style `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "two different operation options specified"
+msgstr "[60332] two different operation options specified"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "illegal option -- %c"
+msgstr "[60132] illegal option -- %c"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "no operation specified"
+msgstr "[60186] no operation specified"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "`u' is only meaningful with the `r' option."
+msgstr "[60335] `u' is only meaningful with the `r' option."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "`u' is not meaningful with the `D' option."
+msgstr "[60334] `u' is not meaningful with the `D' option."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "`N' is only meaningful with the `x' and `d' options."
+msgstr "[60177] `N' is only meaningful with the `x' and `d' options."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Value for `N' must be positive."
+msgstr "[60425] Value for `N' must be positive."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "`x' cannot be used on thin archives."
+msgstr "[60449] `x' cannot be used on thin archives."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "internal error -- this option not implemented"
+msgstr "[60141] internal error -- this option not implemented"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "creating %s"
+msgstr "[60066] creating %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "internal stat error on %s"
+msgstr "[60145] internal stat error on %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s is not a valid archive"
+msgstr "%s [60256] is not a valid archive"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "no entry %s in archive %s!"
+msgstr "[60180] no entry %s in archive %s!"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: no archive map to update"
+msgstr "%s: [60483] no archive map to update"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: could not locate '%s'.  reason: %s"
+msgstr "warning: [60523] could not locate '%s'.  reason: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: '%s' is not an ordinary file"
+msgstr "warning: [60529] '%s' is not an ordinary file"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "can't set BFD default target to `%s': %s"
+msgstr "[60055] can't set BFD default target to `%s': %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: bad number: %s"
+msgstr "%s: [60454] bad number: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "'%s': No such file"
+msgstr "[60262] '%s': No such file"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "no input file specified"
+msgstr "[60183] no input file specified"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "debug_add_to_current_namespace: no current file"
+msgstr "[60073] debug_add_to_current_namespace: no current file"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "debug_start_source: no debug_set_filename call"
+msgstr "[60090] debug_start_source: no debug_set_filename call"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "debug_record_function: no debug_set_filename call"
+msgstr "[60083] debug_record_function: no debug_set_filename call"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "debug_record_parameter: no current function"
+msgstr "[60086] debug_record_parameter: no current function"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "debug_end_function: no current function"
+msgstr "[60077] debug_end_function: no current function"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "debug_end_function: some blocks were not closed"
+msgstr "[60078] debug_end_function: some blocks were not closed"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "debug_start_block: no current block"
+msgstr "[60088] debug_start_block: no current block"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "debug_end_block: no current block"
+msgstr "[60075] debug_end_block: no current block"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "debug_end_block: attempt to close top level block"
+msgstr "[60074] debug_end_block: attempt to close top level block"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "debug_record_line: no current unit"
+msgstr "[60085] debug_record_line: no current unit"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "debug_start_common_block: not implemented"
+msgstr "[60089] debug_start_common_block: not implemented"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "debug_end_common_block: not implemented"
+msgstr "[60076] debug_end_common_block: not implemented"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "debug_record_label: not implemented"
+msgstr "[60084] debug_record_label: not implemented"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "debug_record_variable: no current file"
+msgstr "[60087] debug_record_variable: no current file"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "debug_make_undefined_type: unsupported kind"
+msgstr "[60081] debug_make_undefined_type: unsupported kind"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "debug_name_type: no current file"
+msgstr "[60082] debug_name_type: no current file"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "debug_tag_type: no current file"
+msgstr "[60092] debug_tag_type: no current file"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "debug_tag_type: extra tag attempted"
+msgstr "[60091] debug_tag_type: extra tag attempted"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "debug_find_named_type: no current compilation unit"
+msgstr "[60079] debug_find_named_type: no current compilation unit"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "debug_write_type: illegal type encountered"
+msgstr "[60093] debug_write_type: illegal type encountered"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: changing type size from %d to %d\n"
+msgstr "warning: [60522] changing type size from %d to %d\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: ignoring duplicate EXPORT %s %d,%d"
+msgstr "warning: [60524] ignoring duplicate EXPORT %s %d,%d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: duplicate EXPORT with ordinals: %s"
+msgstr "error: [60521] duplicate EXPORT with ordinals: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: machine type (%d) not supported for "
+msgstr "warning: [60527] machine type (%d) not supported for "
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Internal error: Unknown machine type: %d"
+msgstr "[60144] Internal error: Unknown machine type: %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Can't open def file: %s"
+msgstr "[60048] Can't open def file: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Syntax error in def file %s:%d"
+msgstr "[60322] Syntax error in def file %s:%d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: Path components stripped from image name, '%s'."
+msgstr "%s: [60489] Path components stripped from image name, '%s'."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Can't have LIBRARY and NAME"
+msgstr "[60047] Can't have LIBRARY and NAME"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "wait: %s"
+msgstr "[60428] wait: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "subprocess got fatal signal %d"
+msgstr "[60319] subprocess got fatal signal %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s exited with status %d"
+msgstr "%s [60233] exited with status %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: no symbols"
+msgstr "%s: [60486] no symbols"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unable to open object file: %s"
+msgstr "[60347] Unable to open object file: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unable to open temporary assembler file: %s"
+msgstr "[60349] Unable to open temporary assembler file: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "failed to read the number of entries from base file"
+msgstr "[60120] failed to read the number of entries from base file"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "bfd_open failed open stub file: %s"
+msgstr "[60015] bfd_open failed open stub file: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "failed to open temporary head file: %s"
+msgstr "[60116] failed to open temporary head file: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "failed to open temporary tail file: %s"
+msgstr "[60117] failed to open temporary tail file: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Can't open .lib file: %s"
+msgstr "[60049] Can't open .lib file: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "cannot delete %s: %s"
+msgstr "[60031] cannot delete %s: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s is not a library"
+msgstr "%s [60255] is not a library"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Import library `%s' specifies two or more dlls"
+msgstr "[60135] Import library `%s' specifies two or more dlls"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unable to determine dll name for `%s' (not an import library?)"
+msgstr "[60339] Unable to determine dll name for `%s' (not an import library?)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Path components stripped from dllname, '%s'."
+msgstr "[60213] Path components stripped from dllname, '%s'."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unable to open base-file: %s"
+msgstr "[60345] Unable to open base-file: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Machine '%s' not supported"
+msgstr "[60164] Machine '%s' not supported"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Keeping temporary base file %s"
+msgstr "[60156] Keeping temporary base file %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Deleting temporary base file %s"
+msgstr "[60094] Deleting temporary base file %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Keeping temporary exp file %s"
+msgstr "[60158] Keeping temporary exp file %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Deleting temporary exp file %s"
+msgstr "[60096] Deleting temporary exp file %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Keeping temporary def file %s"
+msgstr "[60157] Keeping temporary def file %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Deleting temporary def file %s"
+msgstr "[60095] Deleting temporary def file %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Must provide at least one of -o or --dllname options"
+msgstr "[60176] Must provide at least one of -o or --dllname options"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unhandled data length: %d\n"
+msgstr "[60385] Unhandled data length: %d\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Internal error: DWARF version is not 2 or 3.\n"
+msgstr "[60142] Internal error: DWARF version is not 2 or 3.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "DW_FORM_data8 is unsupported when sizeof (unsigned long) != 8\n"
+msgstr "[60101] DW_FORM_data8 is unsupported when sizeof (unsigned long) != 8\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "No comp units in %s section ?"
+msgstr "[60178] No comp units in %s section ?"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Not enough memory for a debug info array of %u entries"
+msgstr "[60191] Not enough memory for a debug info array of %u entries"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Location lists in .debug_info section aren't in ascending order!\n"
+msgstr "[60162] Location lists in .debug_info section aren't in ascending order!\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "No location lists in .debug_info section!\n"
+msgstr "[60184] No location lists in .debug_info section!\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "No range lists in .debug_info section!\n"
+msgstr "[60187] No range lists in .debug_info section!\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "badly formed extended line op encountered!\n"
+msgstr "[60011] badly formed extended line op encountered!\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "DW_FORM_strp offset too big: %lx\n"
+msgstr "[60102] DW_FORM_strp offset too big: %lx\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unrecognized form: %lu\n"
+msgstr "[60414] Unrecognized form: %lu\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"Offset %lx used as value for DW_AT_import attribute of DIE at offset %lx is "
+"too big.\n"
+msgstr "[60196] Offset %lx used as value for DW_AT_import attribute of DIE at offset %lx is "
+"too big.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Reserved length value (%lx) found in section %s\n"
+msgstr "[60221] Reserved length value (%lx) found in section %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Corrupt unit length (%lx) found in section %s\n"
+msgstr "[60062] Corrupt unit length (%lx) found in section %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unable to locate %s section!\n"
+msgstr "[60344] Unable to locate %s section!\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"Debug info is corrupted, length of CU at %lx extends beyond end of section "
+"(length = %lx)\n"
+msgstr "[60072] Debug info is corrupted, length of CU at %lx extends beyond end of section "
+"(length = %lx)\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "CU at offset %lx contains corrupt or unsupported version number: %d.\n"
+msgstr "[60067] CU at offset %lx contains corrupt or unsupported version number: %d.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"Debug info is corrupted, abbrev offset (%lx) is larger than abbrev section "
+"size (%lx)\n"
+msgstr "[60071] Debug info is corrupted, abbrev offset (%lx) is larger than abbrev section "
+"size (%lx)\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"Bogus end-of-siblings marker detected at offset %lx in .debug_info section\n"
+msgstr "[60017] Bogus end-of-siblings marker detected at offset %lx in .debug_info section\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Further warnings about bogus end-of-sibling markers suppressed\n"
+msgstr "[60127] Further warnings about bogus end-of-sibling markers suppressed\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"DIE at offset %lx refers to abbreviation number %lu which does not exist\n"
+msgstr "[60097] DIE at offset %lx refers to abbreviation number %lu which does not exist\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"The information in section %s appears to be corrupt - the section is too "
+"small\n"
+msgstr "[60323] The information in section %s appears to be corrupt - the section is too "
+"small\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Only DWARF version 2 and 3 line info is currently supported.\n"
+msgstr "[60200] Only DWARF version 2 and 3 line info is currently supported.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"Unable to load/parse the .debug_info section, so cannot interpret the %s "
+"section.\n"
+msgstr "[60343] Unable to load/parse the .debug_info section, so cannot interpret the %s "
+"section.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+".debug_info offset of 0x%lx in %s section does not point to a CU header.\n"
+msgstr "[60080] .debug_info offset of 0x%lx in %s section does not point to a CU header.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Only DWARF 2 and 3 pubnames are currently supported\n"
+msgstr "[60199] Only DWARF 2 and 3 pubnames are currently supported\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Location lists in %s section start at 0x%lx\n"
+msgstr "[60163] Location lists in %s section start at 0x%lx\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "There is a hole [0x%lx - 0x%lx] in .debug_loc section.\n"
+msgstr "[60325] There is a hole [0x%lx - 0x%lx] in .debug_loc section.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "There is an overlap [0x%lx - 0x%lx] in .debug_loc section.\n"
+msgstr "[60327] There is an overlap [0x%lx - 0x%lx] in .debug_loc section.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Offset 0x%lx is bigger than .debug_loc section size.\n"
+msgstr "[60197] Offset 0x%lx is bigger than .debug_loc section size.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Location list starting at offset 0x%lx is not terminated.\n"
+msgstr "[60161] Location list starting at offset 0x%lx is not terminated.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "There are %ld unused bytes at the end of section %s\n"
+msgstr "[60324] There are %ld unused bytes at the end of section %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Only DWARF 2 and 3 aranges are currently supported.\n"
+msgstr "[60198] Only DWARF 2 and 3 aranges are currently supported.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Pointer size + Segment size is not a power of two.\n"
+msgstr "[60214] Pointer size + Segment size is not a power of two.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Range lists in %s section start at 0x%lx\n"
+msgstr "[60217] Range lists in %s section start at 0x%lx\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "There is a hole [0x%lx - 0x%lx] in %s section.\n"
+msgstr "[60326] There is a hole [0x%lx - 0x%lx] in %s section.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "There is an overlap [0x%lx - 0x%lx] in %s section.\n"
+msgstr "[60328] There is an overlap [0x%lx - 0x%lx] in %s section.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unsupported or unknown Dwarf Call Frame Instruction number: %#x\n"
+msgstr "[60422] unsupported or unknown Dwarf Call Frame Instruction number: %#x\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unrecognized debug option '%s'\n"
+msgstr "[60411] Unrecognized debug option '%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unexpected end of debugging information"
+msgstr "[60368] unexpected end of debugging information"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "invalid number"
+msgstr "[60150] invalid number"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "invalid string length"
+msgstr "[60154] invalid string length"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "expression stack overflow"
+msgstr "[60113] expression stack overflow"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unsupported IEEE expression operator"
+msgstr "[60420] unsupported IEEE expression operator"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unknown section"
+msgstr "[60398] unknown section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "expression stack underflow"
+msgstr "[60114] expression stack underflow"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "expression stack mismatch"
+msgstr "[60112] expression stack mismatch"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unknown builtin type"
+msgstr "[60389] unknown builtin type"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "BCD float type not supported"
+msgstr "[60012] BCD float type not supported"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unexpected number"
+msgstr "[60374] unexpected number"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unexpected record type"
+msgstr "[60375] unexpected record type"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "blocks left on stack at end"
+msgstr "[60016] blocks left on stack at end"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unknown BB type"
+msgstr "[60388] unknown BB type"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "stack overflow"
+msgstr "[60311] stack overflow"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "stack underflow"
+msgstr "[60312] stack underflow"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "illegal variable index"
+msgstr "[60134] illegal variable index"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "illegal type index"
+msgstr "[60133] illegal type index"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unknown TY code"
+msgstr "[60399] unknown TY code"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "undefined variable in TY"
+msgstr "[60366] undefined variable in TY"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Pascal file name not supported"
+msgstr "[60212] Pascal file name not supported"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unsupported qualifier"
+msgstr "[60423] unsupported qualifier"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "undefined variable in ATN"
+msgstr "[60365] undefined variable in ATN"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unknown ATN type"
+msgstr "[60387] unknown ATN type"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unsupported ATN11"
+msgstr "[60417] unsupported ATN11"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unsupported ATN12"
+msgstr "[60418] unsupported ATN12"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unexpected string in C++ misc"
+msgstr "[60376] unexpected string in C++ misc"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "bad misc record"
+msgstr "[60007] bad misc record"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unrecognized C++ misc record"
+msgstr "[60406] unrecognized C++ misc record"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "undefined C++ object"
+msgstr "[60362] undefined C++ object"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unrecognized C++ object spec"
+msgstr "[60408] unrecognized C++ object spec"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unsupported C++ object type"
+msgstr "[60419] unsupported C++ object type"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "C++ base class not defined"
+msgstr "[60020] C++ base class not defined"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "C++ object has no fields"
+msgstr "[60024] C++ object has no fields"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "C++ base class not found in container"
+msgstr "[60021] C++ base class not found in container"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "C++ data member not found in container"
+msgstr "[60022] C++ data member not found in container"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unknown C++ visibility"
+msgstr "[60391] unknown C++ visibility"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "bad C++ field bit pos or size"
+msgstr "[60004] bad C++ field bit pos or size"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "bad type for C++ method function"
+msgstr "[60010] bad type for C++ method function"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "no type information for C++ method function"
+msgstr "[60189] no type information for C++ method function"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "C++ static virtual method"
+msgstr "[60027] C++ static virtual method"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unrecognized C++ object overhead spec"
+msgstr "[60407] unrecognized C++ object overhead spec"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "undefined C++ vtable"
+msgstr "[60363] undefined C++ vtable"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "C++ default values not in a function"
+msgstr "[60023] C++ default values not in a function"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unrecognized C++ default type"
+msgstr "[60405] unrecognized C++ default type"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "reference parameter is not a pointer"
+msgstr "[60219] reference parameter is not a pointer"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unrecognized C++ reference type"
+msgstr "[60409] unrecognized C++ reference type"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "C++ reference not found"
+msgstr "[60026] C++ reference not found"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "C++ reference is not pointer"
+msgstr "[60025] C++ reference is not pointer"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "missing required ASN"
+msgstr "[60171] missing required ASN"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "missing required ATN65"
+msgstr "[60172] missing required ATN65"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "bad ATN65 record"
+msgstr "[60003] bad ATN65 record"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Duplicate symbol entered into keyword list."
+msgstr "[60100] Duplicate symbol entered into keyword list."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: input and output formats are not compatible"
+msgstr "warning: [60512] input and output formats are not compatible"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: symbol %s imported but not in import list"
+msgstr "warning: [60519] symbol %s imported but not in import list"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: START procedure %s not defined"
+msgstr "warning: [60518] START procedure %s not defined"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: EXIT procedure %s not defined"
+msgstr "warning: [60508] EXIT procedure %s not defined"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: CHECK procedure %s not defined"
+msgstr "warning: [60504] CHECK procedure %s not defined"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: warning: shared libraries can not have uninitialized data"
+msgstr "%s: warning: [60501] shared libraries can not have uninitialized data"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: No version number given"
+msgstr "warning: [60514] No version number given"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: FULLMAP is not supported; try ld -M"
+msgstr "warning: [60510] FULLMAP is not supported; try ld -M"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "input and output files must be different"
+msgstr "[60136] input and output files must be different"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "input file named both on command line and with INPUT"
+msgstr "[60138] input file named both on command line and with INPUT"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "no input file"
+msgstr "[60182] no input file"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "no name for output file"
+msgstr "[60185] no name for output file"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "make .bss section"
+msgstr "[60165] make .bss section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "make .nlmsections section"
+msgstr "[60166] make .nlmsections section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "set .bss vma"
+msgstr "[60297] set .bss vma"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "set .data size"
+msgstr "[60298] set .data size"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "set start address"
+msgstr "[60304] set start address"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "custom section"
+msgstr "[60069] custom section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "help section"
+msgstr "[60129] help section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "message section"
+msgstr "[60168] message section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "module section"
+msgstr "[60173] module section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "rpc section"
+msgstr "[60223] rpc section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "shared section"
+msgstr "[60305] shared section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: read: %s"
+msgstr "%s: [60492] read: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "support not compiled in for %s"
+msgstr "[60320] support not compiled in for %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "make section"
+msgstr "[60167] make section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "set section size"
+msgstr "[60303] set section size"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "set section alignment"
+msgstr "[60301] set section alignment"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "set section flags"
+msgstr "[60302] set section flags"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "set .nlmsections size"
+msgstr "[60300] set .nlmsections size"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "set .nlmsection contents"
+msgstr "[60299] set .nlmsection contents"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "stub section sizes"
+msgstr "[60318] stub section sizes"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "writing stub"
+msgstr "[60448] writing stub"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unresolved PC relative reloc against %s"
+msgstr "[60416] unresolved PC relative reloc against %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "overflow when adjusting relocation against %s"
+msgstr "[60210] overflow when adjusting relocation against %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Execution of %s failed"
+msgstr "[60111] Execution of %s failed"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: invalid radix"
+msgstr "%s: [60479] invalid radix"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: invalid output format"
+msgstr "%s: [60478] invalid output format"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Print width has not been initialized (%d)"
+msgstr "[60216] Print width has not been initialized (%d)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Only -X 32_64 is supported"
+msgstr "[60201] Only -X 32_64 is supported"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "sorry - this program has been built without plugin support\n"
+msgstr "[60309] sorry - this program has been built without plugin support\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Using the --size-sort and --undefined-only options together"
+msgstr "[60424] Using the --size-sort and --undefined-only options together"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "will produce no output, since undefined symbols have no size."
+msgstr "[60447] will produce no output, since undefined symbols have no size."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "data size %ld"
+msgstr "[60070] data size %ld"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: fread failed"
+msgstr "%s: [60474] fread failed"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: Output file cannot represent architecture `%s'"
+msgstr "warning: [60528] Output file cannot represent architecture `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: file alignment (0x%s) > section alignment (0x%s)"
+msgstr "warning: [60509] file alignment (0x%s) > section alignment (0x%s)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: the input file '%s' is empty"
+msgstr "error: [60108] the input file '%s' is empty"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: truncating gap-fill from 0x%s to 0x%x"
+msgstr "warning: [60531] truncating gap-fill from 0x%s to 0x%x"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: ignoring previous --reverse-bytes value of %d"
+msgstr "warning: [60525] ignoring previous --reverse-bytes value of %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"warning: input target 'binary' required for binary architecture parameter."
+msgstr "warning: [60526] input target 'binary' required for binary architecture parameter."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: could not locate '%s'.  System error message: %s"
+msgstr "warning: [60507] could not locate '%s'.  System error message: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"warning: could not create temporary file whilst copying '%s', (error: %s)"
+msgstr "warning: [60505] could not create temporary file whilst copying '%s', (error: %s)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unrecognized section flag `%s'"
+msgstr "[60415] unrecognized section flag `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "supported flags: %s"
+msgstr "[60321] supported flags: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "cannot open '%s': %s"
+msgstr "[60035] cannot open '%s': %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s:%d: Ignoring rubbish found on this line"
+msgstr "%s:%d: [60285] Ignoring rubbish found on this line"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "not stripping symbol `%s' because it is named in a relocation"
+msgstr "[60192] not stripping symbol `%s' because it is named in a relocation"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: Multiple redefinition of symbol \"%s\""
+msgstr "%s: [60482] Multiple redefinition of symbol \"%s\""
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: Symbol \"%s\" is target of more than one redefinition"
+msgstr "%s: [60494] Symbol \"%s\" is target of more than one redefinition"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "couldn't open symbol redefinition file %s (error: %s)"
+msgstr "[60065] couldn't open symbol redefinition file %s (error: %s)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s:%d: garbage found at end of line"
+msgstr "%s:%d: [60284] garbage found at end of line"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s:%d: missing new symbol name"
+msgstr "%s:%d: [60286] missing new symbol name"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s:%d: premature end of file"
+msgstr "%s:%d: [60287] premature end of file"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "stat returns negative size for `%s'"
+msgstr "[60316] stat returns negative size for `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unable to change endianness of input file(s)"
+msgstr "[60337] Unable to change endianness of input file(s)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unable to recognise the format of the input file `%s'"
+msgstr "[60356] Unable to recognise the format of the input file `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "can't add section '%s'"
+msgstr "[60039] can't add section '%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "can't create section `%s'"
+msgstr "[60042] can't create section `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "cannot create debug link section `%s'"
+msgstr "[60029] cannot create debug link section `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Can't fill gap after section"
+msgstr "[60045] Can't fill gap after section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "can't add padding"
+msgstr "[60038] can't add padding"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "cannot fill debug link section `%s'"
+msgstr "[60032] cannot fill debug link section `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error copying private BFD data"
+msgstr "[60103] error copying private BFD data"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "this target does not support %lu alternative machine codes"
+msgstr "[60329] this target does not support %lu alternative machine codes"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "treating that number as an absolute e_machine value instead"
+msgstr "[60330] treating that number as an absolute e_machine value instead"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "ignoring the alternative value"
+msgstr "[60131] ignoring the alternative value"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "cannot create tempdir for archive copying (error: %s)"
+msgstr "[60030] cannot create tempdir for archive copying (error: %s)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unable to recognise the format of file"
+msgstr "[60355] Unable to recognise the format of file"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Multiple renames of section %s"
+msgstr "[60175] Multiple renames of section %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error in private header data"
+msgstr "[60105] error in private header data"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "relocation count is negative"
+msgstr "[60220] relocation count is negative"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"cannot reverse bytes: length of section %s must be evenly divisible by %d"
+msgstr "[60037] cannot reverse bytes: length of section %s must be evenly divisible by %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "can't create debugging section"
+msgstr "[60040] can't create debugging section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "can't set debugging section contents"
+msgstr "[60056] can't set debugging section contents"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "don't know how to write debugging information for %s"
+msgstr "[60099] don't know how to write debugging information for %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "could not create temporary file to hold stripped copy"
+msgstr "[60063] could not create temporary file to hold stripped copy"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: bad version in PE subsystem"
+msgstr "%s: [60455] bad version in PE subsystem"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unknown PE subsystem: %s"
+msgstr "[60397] unknown PE subsystem: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "byte number must be non-negative"
+msgstr "[60019] byte number must be non-negative"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "interleave must be positive"
+msgstr "[60140] interleave must be positive"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s both copied and removed"
+msgstr "%s [60227] both copied and removed"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "bad format for %s"
+msgstr "[60006] bad format for %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "cannot open: %s: %s"
+msgstr "[60036] cannot open: %s: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unknown long section names option '%s'"
+msgstr "[60395] unknown long section names option '%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unable to parse alternative machine code"
+msgstr "[60350] unable to parse alternative machine code"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "number of bytes to reverse must be positive and even"
+msgstr "[60194] number of bytes to reverse must be positive and even"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: invalid reserve value for --heap"
+msgstr "%s: [60480] invalid reserve value for --heap"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: invalid commit value for --heap"
+msgstr "%s: [60476] invalid commit value for --heap"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: invalid reserve value for --stack"
+msgstr "%s: [60481] invalid reserve value for --stack"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: invalid commit value for --stack"
+msgstr "%s: [60477] invalid commit value for --stack"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "byte number must be less than interleave"
+msgstr "[60018] byte number must be less than interleave"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unknown input EFI target: %s"
+msgstr "[60394] unknown input EFI target: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unknown output EFI target: %s"
+msgstr "[60396] unknown output EFI target: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "architecture %s unknown"
+msgstr "[60001] architecture %s unknown"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid " Argument %s ignored"
+msgstr "[60002]  Argument %s ignored"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s %s%c0x%s never used"
+msgstr "%s [60274] %s%c0x%s never used"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: the start address should be before the end address"
+msgstr "error: [60109] the start address should be before the end address"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: the stop address should be after the start address"
+msgstr "error: [60110] the stop address should be after the start address"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: prefix strip must be non-negative"
+msgstr "error: [60107] prefix strip must be non-negative"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: instruction width must be positive"
+msgstr "error: [60106] instruction width must be positive"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: not a dynamic object"
+msgstr "%s: [60487] not a dynamic object"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Can't use supplied machine %s"
+msgstr "[60057] Can't use supplied machine %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Can't disassemble for architecture %s\n"
+msgstr "[60043] Can't disassemble for architecture %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Reading %s section of %s failed: %s"
+msgstr "[60218] Reading %s section of %s failed: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: printing debugging information failed"
+msgstr "%s: [60490] printing debugging information failed"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unrecognized -E option"
+msgstr "[60412] unrecognized -E option"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unrecognized --endian type `%s'"
+msgstr "[60413] unrecognized --endian type `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "invalid value specified for pragma code_page.\n"
+msgstr "[60155] invalid value specified for pragma code_page.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "parse_coff_type: Bad type code 0x%x"
+msgstr "[60211] parse_coff_type: Bad type code 0x%x"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "bfd_coff_get_syment failed: %s"
+msgstr "[60014] bfd_coff_get_syment failed: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "bfd_coff_get_auxent failed: %s"
+msgstr "[60013] bfd_coff_get_auxent failed: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%ld: .bf without preceding function"
+msgstr "[60159] %ld: .bf without preceding function"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%ld: unexpected .ef\n"
+msgstr "[60160] %ld: unexpected .ef\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: no recognized debugging information"
+msgstr "%s: [60484] no recognized debugging information"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unable to seek to 0x%lx for %s\n"
+msgstr "[60361] Unable to seek to 0x%lx for %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Out of memory allocating 0x%lx bytes for %s\n"
+msgstr "[60203] Out of memory allocating 0x%lx bytes for %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unable to read in 0x%lx bytes of %s\n"
+msgstr "[60353] Unable to read in 0x%lx bytes of %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "out of memory parsing relocs\n"
+msgstr "[60204] out of memory parsing relocs\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Out of memory allocating dump request table.\n"
+msgstr "[60202] Out of memory allocating dump request table.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Invalid option '-%c'\n"
+msgstr "[60151] Invalid option '-%c'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Not an ELF file - it has the wrong magic bytes at the start\n"
+msgstr "[60190] Not an ELF file - it has the wrong magic bytes at the start\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Out of memory\n"
+msgstr "[60209] Out of memory\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "more than one dynamic segment\n"
+msgstr "[60174] more than one dynamic segment\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "no .dynamic section in the dynamic segment\n"
+msgstr "[60179] no .dynamic section in the dynamic segment\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unable to find program interpreter name\n"
+msgstr "[60342] Unable to find program interpreter name\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"Internal error: failed to create format string to display program "
+"interpreter\n"
+msgstr "[60143] Internal error: failed to create format string to display program "
+"interpreter\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unable to read program interpreter name\n"
+msgstr "[60354] Unable to read program interpreter name\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Internal buffer overflow\n"
+msgstr "[60452] Internal buffer overflow\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Section %d has invalid sh_entsize %lx (expected %lx)\n"
+msgstr "[60290] Section %d has invalid sh_entsize %lx (expected %lx)\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "File contains multiple dynamic symbol tables\n"
+msgstr "[60122] File contains multiple dynamic symbol tables\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "File contains multiple dynamic string tables\n"
+msgstr "[60121] File contains multiple dynamic string tables\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "File contains multiple symtab shndx tables\n"
+msgstr "[60123] File contains multiple symtab shndx tables\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Section headers are not available!\n"
+msgstr "[60292] Section headers are not available!\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Bad sh_link in group section `%s'\n"
+msgstr "[60009] Bad sh_link in group section `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Bad sh_info in group section `%s'\n"
+msgstr "[60008] Bad sh_info in group section `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "section [%5u] in group section [%5u] > maximum section [%5u]\n"
+msgstr "[60294] section [%5u] in group section [%5u] > maximum section [%5u]\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "section [%5u] in group section [%5u] already in group section [%5u]\n"
+msgstr "[60295] section [%5u] in group section [%5u] already in group section [%5u]\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "section 0 in group section [%5u]\n"
+msgstr "[60289] section 0 in group section [%5u]\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unable to seek to end of file!\n"
+msgstr "[60358] Unable to seek to end of file!\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unable to determine the number of symbols to load\n"
+msgstr "[60341] Unable to determine the number of symbols to load\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unable to seek to end of file\n"
+msgstr "[60359] Unable to seek to end of file\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unable to determine the length of the dynamic string table\n"
+msgstr "[60340] Unable to determine the length of the dynamic string table\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Illegal visibility attribute %d\n"
+msgstr "[60451] Illegal visibility attribute %d\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unable to read in dynamic data\n"
+msgstr "[60352] Unable to read in dynamic data\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unable to seek to start of dynamic information\n"
+msgstr "[60360] Unable to seek to start of dynamic information\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Failed to read in number of buckets\n"
+msgstr "[60118] Failed to read in number of buckets\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Failed to read in number of chains\n"
+msgstr "[60119] Failed to read in number of chains\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Failed to determine last chain length\n"
+msgstr "[60115] Failed to determine last chain length\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "bad dynamic symbol\n"
+msgstr "[60005] bad dynamic symbol\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unhandled MN10300 reloc type found after SYM_DIFF reloc"
+msgstr "[60386] Unhandled MN10300 reloc type found after SYM_DIFF reloc"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"Missing knowledge of 32-bit reloc types used in DWARF sections of machine "
+"number %d\n"
+msgstr "[60170] Missing knowledge of 32-bit reloc types used in DWARF sections of machine "
+"number %d\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Illegal tag %d for %s\n"
+msgstr "[60450] Illegal tag %d for %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "conflict list found without a dynamic symbol table\n"
+msgstr "[60058] conflict list found without a dynamic symbol table\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: Failed to read file header\n"
+msgstr "%s: [60465] Failed to read file header\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: failed to seek to first archive header\n"
+msgstr "%s: [60470] failed to seek to first archive header\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: failed to read archive header\n"
+msgstr "%s: [60462] failed to read archive header\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: the archive index is empty\n"
+msgstr "%s: [60497] the archive index is empty\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: failed to read archive index\n"
+msgstr "%s: [60464] failed to read archive index\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%s: the archive index is supposed to have %ld entries, but the size in the "
+"header is too small\n"
+msgstr "%s: [60498] the archive index is supposed to have %ld entries, but the size in the "
+"header is too small\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Out of memory whilst trying to read archive symbol index\n"
+msgstr "[60208] Out of memory whilst trying to read archive symbol index\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Out of memory whilst trying to convert the archive symbol index\n"
+msgstr "[60206] Out of memory whilst trying to convert the archive symbol index\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: the archive has an index but no symbols\n"
+msgstr "%s: [60496] the archive has an index but no symbols\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Out of memory whilst trying to read archive index symbol table\n"
+msgstr "[60207] Out of memory whilst trying to read archive index symbol table\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: failed to read archive index symbol table\n"
+msgstr "%s: [60463] failed to read archive index symbol table\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: failed to skip archive symbol table\n"
+msgstr "%s: [60473] failed to skip archive symbol table\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: failed to read archive header following archive index\n"
+msgstr "%s: [60461] failed to read archive header following archive index\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Out of memory reading long symbol names in archive\n"
+msgstr "[60205] Out of memory reading long symbol names in archive\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: failed to read long symbol name string table\n"
+msgstr "%s: [60467] failed to read long symbol name string table\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: failed to seek to next file name\n"
+msgstr "%s: [60472] failed to seek to next file name\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: did not find a valid archive header\n"
+msgstr "%s: [60459] did not find a valid archive header\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: unable to dump the index as none was found\n"
+msgstr "%s: [60499] unable to dump the index as none was found\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: end of the symbol table reached before the end of the index\n"
+msgstr "%s: [60460] end of the symbol table reached before the end of the index\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%s: symbols remain in the index symbol table, but without corresponding "
+"entries in the index table\n"
+msgstr "%s: [60495] symbols remain in the index symbol table, but without corresponding "
+"entries in the index table\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: failed to seek back to start of object files in the archive\n"
+msgstr "%s: [60468] failed to seek back to start of object files in the archive\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: failed to seek to next archive header\n"
+msgstr "%s: [60471] failed to seek to next archive header\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: bad archive file name\n"
+msgstr "%s: [60453] bad archive file name\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Input file '%s' is not readable.\n"
+msgstr "[60139] Input file '%s' is not readable.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: failed to seek to archive member.\n"
+msgstr "%s: [60469] failed to seek to archive member.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "'%s': No such file\n"
+msgstr "[60263] '%s': No such file\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Could not locate '%s'.  System error message: %s\n"
+msgstr "[60064] Could not locate '%s'.  System error message: %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "'%s' is not an ordinary file\n"
+msgstr "[60257] '%s' is not an ordinary file\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: Failed to read file's magic number\n"
+msgstr "%s: [60466] Failed to read file's magic number\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "File %s is not an archive so its index cannot be displayed.\n"
+msgstr "[60124] File %s is not an archive so its index cannot be displayed.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Don't know about relocations on this machine architecture\n"
+msgstr "[60098] Don't know about relocations on this machine architecture\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Nothing to do.\n"
+msgstr "[60193] Nothing to do.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Cannot interpret virtual addresses without program headers.\n"
+msgstr "[60033] Cannot interpret virtual addresses without program headers.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Virtual address 0x%lx not located in any PT_LOAD segment.\n"
+msgstr "[60427] Virtual address 0x%lx not located in any PT_LOAD segment.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "section %u: sh_link value of %u is larger than the number of sections\n"
+msgstr "[60296] section %u: sh_link value of %u is larger than the number of sections\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Skipping unexpected relocation type %s\n"
+msgstr "[60307] Skipping unexpected relocation type %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unable to apply unsupported reloc type %d to section %s\n"
+msgstr "[60336] unable to apply unsupported reloc type %d to section %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "skipping invalid relocation offset 0x%lx in section %s\n"
+msgstr "[60306] skipping invalid relocation offset 0x%lx in section %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "skipping unexpected symbol type %s in %ld'th relocation in section %s\n"
+msgstr "[60308] skipping unexpected symbol type %s in %ld'th relocation in section %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Section '%s' was not dumped because it does not exist!\n"
+msgstr "[60293] Section '%s' was not dumped because it does not exist!\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Section %d was not dumped because it does not exist!\n"
+msgstr "[60291] Section %d was not dumped because it does not exist!\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "corrupt note found at offset %lx into core notes\n"
+msgstr "[60061] corrupt note found at offset %lx into core notes\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid " type: %lx, namesize: %08lx, descsize: %08lx\n"
+msgstr "[60333]  type: %lx, namesize: %08lx, descsize: %08lx\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "'%s' NOTE name not properly null terminated\n"
+msgstr "[60267] '%s' NOTE name not properly null terminated\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: cannot set time: %s"
+msgstr "%s: [60458] cannot set time: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unable to rename '%s'; reason: %s"
+msgstr "[60357] unable to rename '%s'; reason: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unable to copy file '%s'; reason: %s"
+msgstr "[60338] unable to copy file '%s'; reason: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: not enough binary data"
+msgstr "%s: [60488] not enough binary data"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unsupported menu version %d"
+msgstr "[60421] unsupported menu version %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unexpected DIALOGEX version %d"
+msgstr "[60367] unexpected DIALOGEX version %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unexpected group cursor type %d"
+msgstr "[60372] unexpected group cursor type %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unexpected group icon type %d"
+msgstr "[60373] unexpected group icon type %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unexpected version string"
+msgstr "[60379] unexpected version string"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "version length %d does not match resource length %lu"
+msgstr "[60426] version length %d does not match resource length %lu"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unexpected version type %d"
+msgstr "[60383] unexpected version type %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unexpected fixed version information length %ld"
+msgstr "[60370] unexpected fixed version information length %ld"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unexpected fixed version signature %lu"
+msgstr "[60371] unexpected fixed version signature %lu"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unexpected fixed version info version %lu"
+msgstr "[60369] unexpected fixed version info version %lu"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unexpected stringfileinfo value length %ld"
+msgstr "[60377] unexpected stringfileinfo value length %ld"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unexpected version stringtable value length %ld"
+msgstr "[60382] unexpected version stringtable value length %ld"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unexpected version string length %ld != %ld + %ld"
+msgstr "[60381] unexpected version string length %ld != %ld + %ld"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unexpected version string length %ld < %ld"
+msgstr "[60380] unexpected version string length %ld < %ld"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unexpected varfileinfo value length %ld"
+msgstr "[60378] unexpected varfileinfo value length %ld"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unexpected version value length %ld"
+msgstr "[60384] unexpected version value length %ld"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "filename required for COFF input"
+msgstr "[60125] filename required for COFF input"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: no resource section"
+msgstr "%s: [60485] no resource section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: %s: address out of bounds"
+msgstr "%s: [60493] %s: address out of bounds"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "resource type unknown"
+msgstr "[60222] resource type unknown"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "filename required for COFF output"
+msgstr "[60126] filename required for COFF output"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "can't get BFD_RELOC_RVA relocation type"
+msgstr "[60046] can't get BFD_RELOC_RVA relocation type"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s:%d: %s\n"
+msgstr "%s:%d: [60288] %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "help ID requires DIALOGEX"
+msgstr "[60128] help ID requires DIALOGEX"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "control data requires DIALOGEX"
+msgstr "[60060] control data requires DIALOGEX"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "can't open temporary file `%s': %s"
+msgstr "[60052] can't open temporary file `%s': %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "can't redirect stdout: `%s': %s"
+msgstr "[60054] can't redirect stdout: `%s': %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s %s: %s"
+msgstr "%s [60273] %s: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "can't execute `%s': %s"
+msgstr "[60044] can't execute `%s': %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "can't popen `%s': %s"
+msgstr "[60053] can't popen `%s': %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "preprocessing failed."
+msgstr "[60215] preprocessing failed."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: unexpected EOF"
+msgstr "%s: [60500] unexpected EOF"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: read of %lu returned %lu"
+msgstr "%s: [60491] read of %lu returned %lu"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "stat failed on bitmap file `%s': %s"
+msgstr "[60313] stat failed on bitmap file `%s': %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "cursor file `%s' does not contain cursor data"
+msgstr "[60068] cursor file `%s' does not contain cursor data"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: fseek to %lu failed: %s"
+msgstr "%s: [60475] fseek to %lu failed: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "stat failed on font file `%s': %s"
+msgstr "[60315] stat failed on font file `%s': %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "icon file `%s' does not contain icon data"
+msgstr "[60130] icon file `%s' does not contain icon data"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "stat failed on file `%s': %s"
+msgstr "[60314] stat failed on file `%s': %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "can't open `%s' for output: %s"
+msgstr "[60050] can't open `%s' for output: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "invalid argument to --format: %s"
+msgstr "[60146] invalid argument to --format: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Invalid radix: %s\n"
+msgstr "[60153] Invalid radix: %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unable to open output file %s"
+msgstr "[60348] unable to open output file %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "numeric overflow"
+msgstr "[60195] numeric overflow"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: %s: %s\n"
+msgstr "warning: [60530] %s: %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unknown C++ encoded name"
+msgstr "[60390] unknown C++ encoded name"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unrecognized cross reference type"
+msgstr "[60410] unrecognized cross reference type"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "missing index type"
+msgstr "[60169] missing index type"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unknown virtual character for baseclass"
+msgstr "[60400] unknown virtual character for baseclass"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unknown visibility character for baseclass"
+msgstr "[60401] unknown visibility character for baseclass"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unnamed $vb type"
+msgstr "[60403] unnamed $vb type"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unrecognized C++ abbreviation"
+msgstr "[60404] unrecognized C++ abbreviation"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unknown visibility character for field"
+msgstr "[60402] unknown visibility character for field"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "const/volatile indicator missing"
+msgstr "[60059] const/volatile indicator missing"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Undefined N_EXCL"
+msgstr "[60364] Undefined N_EXCL"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "invalid integer argument %s"
+msgstr "[60148] invalid integer argument %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "invalid minimum string length %d"
+msgstr "[60149] invalid minimum string length %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "cannot open input file %s"
+msgstr "[60034] cannot open input file %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "can't create %s file ,%s' for output.\n"
+msgstr "[60041] can't create %s file ,%s' for output.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "try to add a ill language."
+msgstr "[60331] try to add a ill language."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unable to open file ,%s' for input.\n"
+msgstr "[60346] unable to open file ,%s' for input.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unable to read contents of %s"
+msgstr "[60351] unable to read contents of %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "input file does not seems to be UFT16.\n"
+msgstr "[60137] input file does not seems to be UFT16.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unknown format type `%s'"
+msgstr "[60393] unknown format type `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "can't open %s `%s': %s"
+msgstr "[60051] can't open %s `%s': %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "can not determine type of file `%s'; use the -J option"
+msgstr "[60028] can not determine type of file `%s'; use the -J option"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "invalid codepage specified.\n"
+msgstr "[60147] invalid codepage specified.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "invalid option -f\n"
+msgstr "[60152] invalid option -f\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "No filename following the -fo option.\n"
+msgstr "[60181] No filename following the -fo option.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "no resources"
+msgstr "[60188] no resources"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: warning: unknown size for field `%s' in struct"
+msgstr "%s: warning: [60502] unknown size for field `%s' in struct"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "string_hash_lookup failed: %s"
+msgstr "[60317] string_hash_lookup failed: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "stab_int_type: bad size %u"
+msgstr "[60310] stab_int_type: bad size %u"
+

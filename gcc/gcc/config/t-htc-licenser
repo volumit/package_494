@@ -1,0 +1,14 @@
+#
+# this is an interface for licenser processes.
+#
+
+ifneq (${BUILD_FREE_ENTRY_TOOLCHAIN},)
+LICENSER_DEFS = -DBUILD_FREE_ENTRY_TOOLCHAIN
+endif
+
+htc-licenser.o: $(srcdir)/config/htc-licenser.c $(CONFIG_H) $(SYSTEM_H) $(TM_H)
+	$(CXX) -c $(ALL_CFLAGS) $(ALL_CPPFLAGS) $(INCLUDES) -DBASEVER=$(BASEVER_s) $(LICENSER_DEFS) $<
+
+BUILD_VERSION := $(shell echo `date +%Y.%m`)
+
+T_CFLAGS += -DLICENSE_VERSION=\"$(BUILD_VERSION)\"

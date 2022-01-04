@@ -1,0 +1,304 @@
+%s after #line is not a positive integer
+alignment must be a small power of two, not %d
+assuming pointer wraparound does not occur when comparing P +- C1 with P +- C2
+assuming signed overflow does not occur when assuming that (X + c) >= X is always true
+assuming signed overflow does not occur when assuming that (X - c) <= X is always true
+assuming signed overflow does not occur when assuming that (X - c) > X is always false
+assuming signed overflow does not occur when assuming that (X + c) < X is always false
+assuming signed overflow does not occur when simplifying comparison of absolute value and zero
+assuming signed overflow does not occur when simplifying division
+attempt to use poisoned %s
+%s is not in NFC
+both %<long long%> and %<double%> in declaration specifiers
+both %<long%> and %<short%> in declaration specifiers
+both %<long%> and %<void%> in declaration specifiers
+both %<long%> and %<_Bool%> in declaration specifiers
+both %<long%> and %<char%> in declaration specifiers
+both %<long%> and %<float%> in declaration specifiers
+both %<long%> and %<_Decimal32%> in declaration specifiers
+both %<long%> and %<_Decimal64%> in declaration specifiers
+both %<long%> and %<_Decimal128%> in declaration specifiers
+both %<short%> and %<void%> in declaration specifiers
+both %<short%> and %<_Bool%> in declaration specifiers
+both %<short%> and %<char%> in declaration specifiers
+both %<short%> and %<float%> in declaration specifiers
+both %<short%> and %<double%> in declaration specifiers
+both %<short%> and %<_Decimal32%> in declaration specifiers
+both %<short%> and %<_Decimal64%> in declaration specifiers
+both %<short%> and %<_Decimal128%> in declaration specifiers
+both %<signed%> and %<unsigned%> in declaration specifiers
+both %<signed%> and %<void%> in declaration specifiers
+both %<signed%> and %<_Bool%> in declaration specifiers
+both %<signed%> and %<float%> in declaration specifiers
+both %<signed%> and %<double%> in declaration specifiers
+both %<signed%> and %<_Decimal32%> in declaration specifiers
+both %<signed%> and %<_Decimal64%> in declaration specifiers
+both %<signed%> and %<_Decimal128%> in declaration specifiers
+both %<unsigned%> and %<void%> in declaration specifiers
+both %<unsigned%> and %<_Bool%> in declaration specifiers
+both %<unsigned%> and %<float%> in declaration specifiers
+both %<unsigned%> and %<double%> in declaration specifiers
+both %<unsigned%> and %<_Decimal32%> in declaration specifiers
+both %<unsigned%> and %<_Decimal64%> in declaration specifiers
+both %<unsigned%> and %<_Decimal128%> in declaration specifiers
+both %<complex%> and %<void%> in declaration specifiers
+both %<complex%> and %<_Bool%> in declaration specifiers
+both %<complex%> and %<_Decimal32%> in declaration specifiers
+both %<complex%> and %<_Decimal64%> in declaration specifiers
+both %<complex%> and %<_Decimal128%> in declaration specifiers
+both %<complex%> and %<_Fract%> in declaration specifiers
+both %<complex%> and %<_Accum%> in declaration specifiers
+both %<complex%> and %<_Sat%> in declaration specifiers
+both %<_Sat%> and %<void%> in declaration specifiers
+both %<_Sat%> and %<_Bool%> in declaration specifiers
+both %<_Sat%> and %<char%> in declaration specifiers
+both %<_Sat%> and %<int%> in declaration specifiers
+both %<_Sat%> and %<float%> in declaration specifiers
+both %<_Sat%> and %<double%> in declaration specifiers
+both %<_Sat%> and %<_Decimal32%> in declaration specifiers
+both %<_Sat%> and %<_Decimal64%> in declaration specifiers
+both %<_Sat%> and %<_Decimal128%> in declaration specifiers
+both %<_Sat%> and %<complex%> in declaration specifiers
+both %<long long%> and %<%s%> in declaration specifiers
+both %<long%> and %<%s%> in declaration specifiers
+both %<short%> and %<%s%> in declaration specifiers
+both %<signed%> and %<%s%> in declaration specifiers
+both %<unsigned%> and %<%s%> in declaration specifiers
+both %<complex%> and %<%s%> in declaration specifiers
+both %<_Sat%> and %<%s%> in declaration specifiers
+'##' cannot appear at either end of a macro expansion
+%s cannot be used as a macro name
+collapsed loops not perfectly nested before %qE
+collapsed loops not perfectly nested before %qs token
+conflicting types for '%s'
+%s not used because `%s' is invalid
+%s No such file or directory
+%s expanded inside directive with -fdirectives-only
+decimal floating point not supported for this target
+detected recursion whilst expanding macro %s
+different enum types in conditional is invalid in C++: %qT vs %qT
+duplicate declaration of %qD is invalid in C++
+duplicate macro parameter %s
+empty filename in #include
+enum constant defined in struct or union is not visible in C++
+enum type defined in struct or union is not visible in C++
+expected %s
+expected a string after %<#pragma message%>
+expected %<;%> at end of input
+expected %<;%> before %qE
+expected %<;%> before %qs token
+expected %<;%> before numeric constant
+expected %<;%> before string constant
+expected %<:%> before %qE
+expected %<:%> before %qs token
+expected %<:%> before numeric constant
+expected %<:%> before string constant
+expected %<(%> at end of input
+expected %<(%> before %qE
+expected %<(%> before %qs token
+expected %<(%> before numeric constant
+expected %<(%> before string constant
+expected %<(%> before end of line
+expected %<(%> or end of line before %qE
+expected %<(%> or end of line before %qs token
+expected %<)%> at end of input
+expected %<)%> before %qE
+expected %<)%> before %qs token
+expected %<)%> before numeric constant
+expected %<)%> before string constant
+expected %<)%> before end of line
+expected %<{%> at end of input
+expected %<{%> before %qE
+expected %<{%> before %qs token
+expected %<{%> before numeric constant
+expected %<{%> before string constant
+expected %<}%> at end of input
+expected %<}%> before %qE
+expected %<}%> before %qs token
+expected %<}%> before numeric constant
+expected %<}%> before string constant
+expected %<]%> at end of input
+expected %<]%> before %qE
+expected %<]%> before %qs token
+expected %<]%> before numeric constant
+expected %<]%> before string constant
+expected %<=%> before %qE
+expected %<=%> before %qs token
+expected %<=%> before numeric constant
+expected %<=%> before string constant
+expected %<,%> or %<}%> before %qE
+expected %<,%> or %<}%> before %qs token
+expected %<,%> or %<}%> before numeric constant
+expected %<,%> or %<}%> before string constant
+expected %<,%> or %<)%> before %qE
+expected %<,%> or %<)%> before %qs token
+expected %<,%> or %<)%> before numeric constant
+expected %<,%> or %<)%> before string constant
+expected %<,%> or %<)%> before end of line
+expected %<,%> or %<;%> before %qE
+expected %<,%> or %<;%> before %s'%c'
+expected %<,%> or %<;%> before %qs token
+expected %<,%> or %<;%> before numeric constant
+expected %<,%> or %<;%> before string constant
+expected %<;%>, %<,%> or %<)%> before %qE
+expected %<;%>, %<,%> or %<)%> before %qs token
+expected %<;%>, %<,%> or %<)%> before numeric constant
+expected %<;%>, %<,%> or %<)%> before string constant
+expected %<;%>, identifier or %<(%> at end of input
+expected %<;%>, identifier or %<(%> before %qE
+expected %<;%>, identifier or %<(%> before %qs token
+expected %<;%>, identifier or %<(%> before numeric constant
+expected %<;%>, identifier or %<(%> before string constant
+expected %<=%>, %<,%>, %<;%>, %<asm%> or %<__attribute__%> at end of input
+expected %<=%>, %<,%>, %<;%>, %<asm%> or %<__attribute__%> before %qE
+expected %<=%>, %<,%>, %<;%>, %<asm%> or %<__attribute__%> before %qs token
+expected %<=%>, %<,%>, %<;%>, %<asm%> or %<__attribute__%> before numeric constant
+expected %<=%>, %<,%>, %<;%>, %<asm%> or %<__attribute__%> before string constant
+expected declaration or statement at end of input
+expected declaration specifiers before %qE
+expected declaration specifiers before %qs token
+expected declaration specifiers or %qs
+expected declaration specifiers or %<...%> before %qE
+expected declaration specifiers or %<...%> before %qs token
+expected declaration specifiers or %<...%> before numeric constant
+expected declaration specifiers or %<...%> before string constant
+expected declaration specifiers or %qs token
+expected end of line before %qE
+expected expression at end of input
+expected expression before %qE
+expected expression before %qs token
+expected expression before %<#pragma%>
+expected identifier before %qE
+expected identifier before %qs token
+expected identifier before numeric constant
+expected identifier before string constant
+expected identifier before end of line
+expected identifier or %qE
+expected identifier or %<(%> before %qE
+expected identifier or %<(%> before %qs token
+expected identifier or %qs token
+expected integer expression before %qE
+expected integer expression before %qs token
+expected integer expression before numeric constant
+expected integer expression before string constant
+expected integer expression before end of line
+expected iteration declaration or initialization before %qE
+expected iteration declaration or initialization before %qs token
+expected statement before %qs token
+expected string literal at end of input
+expected string literal before %qE
+expected string literal before %qs token
+expected string literal before numeric constant
+expected %qs token
+expected %<#pragma omp%> clause before %qE
+expected %<#pragma omp%> clause before %qs token
+expected %<#pragma omp%> clause before end of line
+expected %<#pragma omp%> clause before numeric constant
+expected %<#pragma omp%> clause before string constant
+extra tokens at end of %s directive
+for statement expected before %qE
+for statement expected before %qs token
+for statement expected before numeric constant
+for statement expected before string constant
+form feed in preprocessing directive
+function-like macro %s must be used with arguments in traditional C
+function might be candidate for attribute %<%s%>
+function might be candidate for attribute %<%s%> if it is known to return normally
+identifier %s is a special operator name in C++
+implicit conversion from %qT to %qT to match other operand of binary expression
+implicit conversion from %qT to %qT to match other result of conditional
+impossible constraint in '%s'
+#include expects %s or %s
+incomplete universal character name %s
+initializer-string for array chars is too long for C++
+invalid character %<%c%> in raw string delimiter
+invalid constant in %<#pragma pack%> - ignored
+invalid constant in %<#pragma push_macro%> - ignored
+invalid constant in %<#pragma pop_macro%> - ignored
+invalid digit \\\"%c\\\" in binary constant
+invalid digit \\\"%c\\\" in octal constant
+invalid operator for %<#pragma omp atomic%> before %qs token
+invalid schedule kind before %qE
+invalid schedule kind before %qs token
+invalid schedule kind before numeric constant
+invalid schedule kind before string constant
+invalid schedule kind before end of line
+invalid string literal, ignoring final %s
+invalid suffix %s on floating constant
+invalid suffix %s on integer constant
+invoking macro f2 argument %d: empty macro arguments are undefined in ISO C90 and ISO C++98
+is experimental
+%s is not a valid filename
+%s is not defined
+%s is not followed by a macro parameter
+macro argument %s would be stringified in traditional C
+macro %s is not used
+macro %s passed %d arguments, but takes just %d
+macro %s requires %d arguments, but only %d given
+malformed %<#pragma message%>, ignored
+malformed #pragma redefine_extname, ignored
+malformed %<#pragma pack%> - ignored
+malformed %<#pragma pack(push[, id][, <n>])%> - ignored
+malformed %<#pragma pack(pop[, id])%> - ignored
+malformed #pragma weak, ignored
+malformed #pragma extern_prefix, ignored
+malformed #pragma GCC visibility push
+%s may not appear in macro parameter list
+missing %<;%> after predicate
+missing binary operator before token \\\"%s\\\"
+missing expression between %s
+missing %<;%> in expression
+missing %<,%> in macro parameter list
+non-ISO-standard escape sequence, %s
+non-local variable %qD with anonymous type is questionable in C++
+not enough perfectly nested loops before %qE
+not enough perfectly nested loops before %qs token
+open called with more than %d arguments
+open with O_CREAT needs %d arguments, only %d were given
+operator '%s' has no left operand
+operator '%s' has no right operand
+pasting %s does not give a valid preprocessing token
+poisoning existing macro %s
+raw string delimiter longer than %d characters
+%s redefined
+signed and unsigned type in conditional expression
+struct defined in struct or union is not visible in C++
+suggest hiding %s from traditional C with an indented #
+suggest not using %s in traditional C
+switch jumps into scope of identifier with variably modified type
+the left operand of %s changes sign when promoted
+the meaning of %s is different in traditional C
+the right operand of %s changes sign when promoted
+this use of %s may not be portable
+token \\\"%s\\\" is not valid in preprocessor expressions
+traditional C ignores %s with the # indented
+traditional C rejects the %s suffix
+trigraph %s converted to %s 
+trigraph %s ignored, use -trigraphs to enable
+%s is not in NFKC
+undefining %s
+unexpected end of file after %s
+union defined in struct or union is not visible in C++
+universal character %s is not valid in an identifier
+universal character %s is not valid at the start of an identifier
+unknown action %qE for %<#pragma pack%> - ignored
+unknown escape sequence: %s
+unterminated argument list invoking macro %s
+unterminated #elif
+unterminated #else
+unterminated #if
+use of C99 long long integer constant
+using %qD as both a typedef and a tag is invalid in C++
+using %qD as both field and typedef name is invalid in C++
+%s can only appear in the expansion of a C99 variadic macro
+%s created with -gnone, but used with -gdwarf-2
+%s settings for -fexceptions do not match
+vertical tab in preprocessing directive
+%s not used because %s is defined
+%s within comment
+%s with no expression
+#pragma pack (pop) encountered without matching #pragma pack (push)
+%<#pragma omp barrier%> may only be used in compound statements before %<#pragma%>
+%<#pragma omp flush%> may only be used in compound statements before %<#pragma%>
+binary constants are a GCC extension
+<unnamed-signed:

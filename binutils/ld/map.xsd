@@ -1,0 +1,375 @@
+<xs:schema
+    xmlns:xs='http://www.w3.org/2001/XMLSchema'
+  targetNamespace='http://www.hightec-rt.com/map/'
+  xmlns:t='http://www.hightec-rt.com/map/'>
+
+ <xs:element name='Map'>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref='t:ArchiveList'/>
+    <xs:sequence>
+     <xs:element ref='t:CoreID' minOccurs='0' maxOccurs='1'/>
+    </xs:sequence>
+    <xs:sequence>
+     <xs:element ref='t:DiscardedInputSections' minOccurs='0' maxOccurs='1'/>
+    </xs:sequence>
+    <xs:sequence>
+     <xs:element ref='t:LinkerInformation' minOccurs='0' maxOccurs='1'/>
+    </xs:sequence>
+    <xs:sequence>
+     <xs:element ref='t:ExportedSymbols' minOccurs='0' maxOccurs='1'/>
+    </xs:sequence>
+    <xs:sequence>
+     <xs:element ref='t:SymbolList' minOccurs='0' maxOccurs='1'/>
+    </xs:sequence>
+    <xs:element ref='t:MemoryConfiguration'/>
+    <xs:element ref='t:SectionList'/>
+    <xs:sequence>
+     <xs:element ref='t:CrossReferenceTable' minOccurs='0' maxOccurs='1'/>
+    </xs:sequence>
+   </xs:sequence>
+   <xs:attribute name='target' type='xs:string' use='required'/>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='ArchiveList'>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref='t:Library' minOccurs='0' maxOccurs='unbounded'/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='Library'>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref='t:Object' minOccurs='0' maxOccurs='unbounded'/>
+   </xs:sequence>
+   <xs:attribute name='name' type='xs:string' use='required'/>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='Object'>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref='t:Call' minOccurs='0' maxOccurs='unbounded'/>
+   </xs:sequence>
+   <xs:attribute name='name' type='xs:string' use='required'/>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='Call'>
+  <xs:complexType>
+   <xs:attribute name='caller_lib' type='xs:string' use='optional'/>
+   <xs:attribute name='caller_object' type='xs:string' use='required'/>
+   <xs:attribute name='called_function' type='xs:string' use='required'/>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='DiscardedInputSections'>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref='t:Section' minOccurs='0' maxOccurs='unbounded'/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='Section'>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:choice>
+     <xs:element ref='t:Object'/>
+     <xs:element ref='t:Library'/>
+    </xs:choice>
+    <xs:sequence minOccurs='0' maxOccurs='unbounded'>
+     <xs:element ref='t:SectionSymbol'/>
+    </xs:sequence>
+   </xs:sequence>
+   <xs:attribute name='name' type='xs:string' use='required'/>
+   <xs:attribute name='addr' type='xs:hexBinary' use='required'/>
+   <xs:attribute name='size' type='xs:integer' use='required'/>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='SectionSymbol'>
+  <xs:complexType>
+   <xs:attribute name='addr' type='xs:hexBinary' use='required'/>
+   <xs:attribute name='name' type='xs:string' use='required'/>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='CoreID'>
+  <xs:complexType mixed='true'>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='LinkerInformation'>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref='t:LinkerVersion'/>
+   </xs:sequence>
+   <xs:attribute name='name_of_linker' type='xs:string' use='required'/>
+   <xs:attribute name='date_of_run' type='xs:string' use='required'/>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='LinkerVersion'>
+  <xs:complexType>
+   <xs:attribute name='version_string' type='xs:string' use='required'/>
+   <xs:attribute name='architecture_name' type='xs:string' use='required'/>
+   <xs:attribute name='build_string' type='xs:string' use='required'/>
+   <xs:attribute name='tool_version' type='xs:string' use='required'/>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='SymbolList'>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref='t:Symbol' maxOccurs='unbounded'/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='Symbol'>
+  <xs:complexType>
+   <xs:attribute name='name' type='xs:string' use='required'/>
+   <xs:attribute name='start' type='xs:hexBinary' use='required'/>
+   <xs:attribute name='end' type='xs:hexBinary' use='required'/>
+   <xs:attribute name='size' type='xs:integer' use='required'/>
+   <xs:attribute name='visibility' type='xs:string' use='required'/>
+   <xs:attribute name='scope' type='xs:string' use='required'/>
+   <xs:attribute name='memory' type='xs:string' use='required'/>
+   <xs:attribute name='output_section' type='xs:string' use='required'/>
+   <xs:attribute name='input_section' type='xs:string' use='required'/>
+   <xs:attribute name='input_object' type='xs:string' use='required'/>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='ExportedSymbols'>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref='t:Core' minOccurs='0' maxOccurs='unbounded'/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='Core'>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref='t:ExportedSymbol' maxOccurs='unbounded'/>
+   </xs:sequence>
+   <xs:attribute name='name' type="xs:string" use="required"/>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='ExportedSymbol'>
+  <xs:complexType>
+   <xs:attribute name='name' type='xs:string' use='required'/>
+   <xs:attribute name='type' type='xs:string' use='required'/>
+   <xs:attribute name='export_name' type='xs:string' use='optional'/>
+   <xs:attribute name='size' type='xs:integer' use='required'/>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='MemoryConfiguration'>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref='t:MemoryRegion' maxOccurs='unbounded'/>
+    <xs:element ref='t:MemoryAliasList' minOccurs='0' maxOccurs='1'/>
+    <xs:element ref='t:MemoryRegionMaps' minOccurs='0' maxOccurs='1'/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='MemoryRegion'>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref='t:Flags' minOccurs='0'/>
+   </xs:sequence>
+   <xs:attribute name='name' type='xs:string' use='required'/>
+   <xs:attribute name='origin' type='xs:hexBinary' use='required'/>
+   <xs:attribute name='length' type='xs:hexBinary' use='required'/>
+   <xs:attribute name='used' type='xs:hexBinary' use='required'/>
+   <xs:attribute name='free' type='xs:hexBinary' use='required'/>
+   <xs:attribute name='type' type='xs:string' use='optional'/>
+   <xs:attribute name='core' type='xs:string' use='optional'/>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='Flags'>
+  <xs:complexType>
+   <xs:sequence maxOccurs="unbounded">
+    <xs:element ref='t:Flag' minOccurs='0'/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='Flag'>
+  <xs:complexType mixed='true'>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='MemoryAliasList'>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref='t:Aliases' minOccurs='0' maxOccurs='unbounded'/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='Aliases'>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref='t:Alias' maxOccurs='unbounded'/>
+   </xs:sequence>
+   <xs:attribute name='name' type='xs:string' use='required'/>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='Alias'>
+  <xs:complexType mixed='true'>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='MemoryRegionMaps'>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref='t:RegionMap' maxOccurs='unbounded'/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='RegionMap'>
+  <xs:complexType>
+   <xs:attribute name='core' type='xs:string' use='required'/>
+   <xs:attribute name='local_region' type='xs:hexBinary' use='required'/>
+   <xs:attribute name='global_region' type='xs:hexBinary' use='required'/>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='SectionList'>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref='t:Loads'/>
+    <xs:choice maxOccurs='unbounded'>
+     <xs:element ref='t:Assignment'/>
+     <xs:element ref='t:OutputSection'/>
+    </xs:choice>
+    <xs:element ref='t:Output'/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='Loads'>
+  <xs:complexType>
+   <xs:sequence minOccurs='0' maxOccurs='unbounded'>
+    <xs:element ref='t:File'/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='File'>
+     <xs:complexType mixed='true'>
+         <xs:attribute name='archive' type='xs:string' use='optional'/>
+         <xs:attribute name='reference' type='xs:string' use='optional'/>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='Assignment'>
+  <xs:complexType>
+   <xs:attribute name='name' type='xs:string' use='required'/>
+   <xs:attribute name='addr' type='xs:hexBinary' use='required'/>
+   <xs:attribute name='expression' type='xs:string' use='required'/>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='OutputSection'>
+  <xs:complexType>
+   <xs:choice minOccurs='0' maxOccurs='unbounded'>
+    <xs:element ref='t:Flags'/>
+    <xs:element ref='t:Wildcard'/>
+    <xs:element ref='t:Assignment'/>
+    <xs:element ref='t:Data'/>
+    <xs:element ref='t:Padding'/>
+   </xs:choice>
+   <xs:attribute name='name' type='xs:string' use='required'/>
+   <xs:attribute name='memory_region' type='xs:string' use='optional'/>
+   <xs:attribute name='start' type='xs:hexBinary' use='optional'/>
+   <xs:attribute name='size' type='xs:integer' use='optional'/>
+   <xs:attribute name='load_address' type='xs:hexBinary' use='optional'/>
+   <xs:attribute name='core' type='xs:string' use='optional'/>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='Wildcard'>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref='t:Pattern'/>
+    <xs:choice minOccurs='0' maxOccurs='unbounded'>
+     <xs:element ref='t:Section'/>
+     <xs:element ref='t:Padding'/>
+    </xs:choice>
+   </xs:sequence>
+   <xs:attribute name='filename' type='xs:string' use='required'/>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='Pattern'>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref='t:ExcludeFiles' minOccurs='0' maxOccurs='1'/>
+   </xs:sequence>
+   <xs:attribute name='value' type='xs:string' use='required'/>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='ExcludeFiles'>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref='t:File' maxOccurs='unbounded'/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='Data'>
+  <xs:complexType>
+   <xs:attribute name='addr' type='xs:hexBinary' use='required'/>
+   <xs:attribute name='size' type='xs:integer' use='required'/>
+   <xs:attribute name='type' type='xs:string' use='required'/>
+   <xs:attribute name='value' type='xs:hexBinary' use='required'/>
+   <xs:attribute name='expression' type='xs:string' use='optional'/>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='Padding'>
+  <xs:complexType>
+   <xs:attribute name='addr' type='xs:hexBinary' use='required'/>
+   <xs:attribute name='size' type='xs:integer' use='required'/>
+   <xs:attribute name='fill' type='xs:string' use='required'/>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='Output'>
+  <xs:complexType>
+   <xs:attribute name='name' type='xs:string' use='required'/>
+   <xs:attribute name='format' type='xs:string' use='required'/>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='CrossReferenceTable'>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref='t:CrossReference' minOccurs='0' maxOccurs='unbounded'/>
+   </xs:sequence>
+  </xs:complexType>
+ </xs:element>
+
+ <xs:element name='CrossReference'>
+  <xs:complexType>
+   <xs:sequence>
+    <xs:element ref='t:File' maxOccurs='unbounded'/>
+   </xs:sequence>
+   <xs:attribute name='symbol' type='xs:string' use='required'/>
+  </xs:complexType>
+ </xs:element>
+</xs:schema>

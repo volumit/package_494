@@ -1,0 +1,45 @@
+2017-01-17  Robert Agoston
+
+	[HDP-v4.9.1.0-tricore]
+	Re-generated nr.po.
+
+Changed Messages (0):
+
+Possibly Changed Messages (1):
+	[12457] minimum alignment for a code section is 2  ==>  [16346] minimum alignment for a code section is %u
+
+Removed Messages (0):
+
+New Messages (1):
+	[16347] read-only variable %q+D put into writable section %qs
+
+Invalid Messages (0):
+
+Duplicated Messages (0):
+
+Unknown Problems (0):
+
+
+Parser Stats:
+	Message    Reference     New    
+	------------------------------
+	Skipped        1          1     
+	Invalid        0          0     
+	Duplicate     0(0)       0(0)   
+	Valid         5173       5174   
+	------------------------------
+	Total         5174       5175   
+
+
+Summary:
+	Message               Count
+	------------------------------
+	Match                  5172
+	Change                    0
+	Possible Change           1
+	New                       1
+	Duplicate                 0
+	Invalid                   0
+	Problem                   0
+	------------------------------
+	Total                  5174

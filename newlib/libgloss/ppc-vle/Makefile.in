@@ -1,0 +1,168 @@
+# Copyright (c) 1995, 1996 Cygnus Support
+#
+# The authors hereby grant permission to use, copy, modify, distribute,
+# and license this software and its documentation for any purpose, provided
+# that existing copyright notices are retained in all copies and that this
+# notice is included verbatim in any distributions. No written agreement,
+# license, or royalty fee is required for any of the authorized uses.
+# Modifications to this software may be copyrighted by their authors
+# and need not follow the licensing terms described here, provided that
+# the new terms are clearly indicated on the first page of each file where
+# they apply.
+#
+
+#
+# This currently works with the TriCore Virtual IO
+#
+
+VPATH = @srcdir@ @srcdir@/..
+srcdir = @srcdir@
+objdir = .
+srcroot = $(srcdir)/../..
+objroot = $(objdir)/../..
+
+prefix = @prefix@
+exec_prefix = @exec_prefix@
+
+host_alias = @host_alias@
+target_alias = @target_alias@
+
+bindir = @bindir@
+libdir = @libdir@
+tooldir = $(exec_prefix)/$(target_alias)
+
+# Multilib support variables.
+# TOP is used instead of MULTI{BUILD,SRC}TOP.
+MULTIDIRS =
+MULTISUBDIR =
+MULTIDO = true
+MULTICLEAN = true
+
+INSTALL = @INSTALL@
+INSTALL_PROGRAM = @INSTALL_PROGRAM@
+INSTALL_DATA = @INSTALL_DATA@
+
+SHELL =	/bin/sh
+
+CC = @CC@
+
+AS = @AS@
+AR = @AR@
+LD = @LD@
+RANLIB = @RANLIB@
+
+OBJDUMP = `if [ -f ${objroot}/../binutils/objdump ] ; \
+	then echo ${objroot}/../binutils/objdump ; \
+	else t='$(program_transform_name)'; echo objdump | sed -e $$t ; fi`
+OBJCOPY = `if [ -f ${objroot}/../binutils/objcopy ] ; \
+	then echo ${objroot}/../binutils/objcopy ; \
+	else t='$(program_transform_name)'; echo objcopy | sed -e $$t ; fi`
+
+OBJS		= 
+CFLAGS		= -g -O2 
+SCRIPTS		= 
+
+#Here the stuff for virtual IO
+VIO_SCRIPTS	=
+VIO_LDFLAGS	=
+VIO_BSP		= libos.a
+VIO_CRT0	= vle-crt0.o crt0.o
+VIO_OBJS	= libos.o \
+						vio_close.o vio_creat.o vio_lseek.o vio_open.o vio_read.o vio_unlink.o\
+	vio_virtio.o vio_write.o \
+	libos_sbrk.o libos_exit.o libos_abort.o libos_errno.o \
+	vio_remove.o vio_rmdir.o vio_system.o vio_rename.o
+
+VIO_HEADERS	= 
+VIO_SRC		= crt0.S vle-crt0.c libos.c vio_close.c \
+		  vio_creat.c vio_lseek.c vio_open.c vio_read.c vio_unlink.c \
+		  vio_virtio.c vio_write.c \
+		  libos_sbrk.c  libos_exit.c libos_abort.c libos_errno.c \
+		  vio-syscalls.h  setjmp.S \
+		  vio_remove.c vio_rmdir.c vio_system.c vio_rename.c
+
+VIO_TEST	= 
+VIO_INSTALL	= install-vio
+
+VLE_CRT0=vle-crt0.o
+CRT0=crt0.o
+SETJMP_OBJ = setjmp.o
+SETJMP_H = setjmp.h
+
+HEADERS = ${SETJMP_H} unistd.h fcntl.h
+
+
+# Host specific makefile fragment comes in here.
+@host_makefile_frag@
+
+#
+# build a test program for each target board. Just trying to get
+# it to link is a good test, so we ignore all the errors for now.
+#
+all: \
+	${VIO_BSP} 
+
+#
+# here's where we build the board support packages for each target
+#
+${VIO_BSP}: ${OBJS} ${VIO_OBJS} ${SETJMP_OBJ} ${VIO_CRT0}
+	${AR} ${ARFLAGS} $@ ${VIO_OBJS} ${OBJS} ${SETJMP_OBJ}
+	${RANLIB} $@
+
+setjmp.o: $(srcdir)/setjmp.S
+	$(CC) $(CFLAGS_FOR_TARGET) -O2 $(INCLUDES) -c $(CFLAGS) -o $@ $<
+libos.o: $(srcdir)/libos.c
+	$(CC) $(CFLAGS_FOR_TARGET) -O2 $(INCLUDES) -c $(CFLAGS) -o $@ $<
+libos_sbrk.o: $(srcdir)/libos_sbrk.c
+	$(CC) $(CFLAGS_FOR_TARGET) -O2 $(INCLUDES) -c $(CFLAGS) -o $@ $<
+vio_close.o: $(srcdir)/vio_close.c $(srcdir)/vio-syscalls.h
+	$(CC) $(CFLAGS_FOR_TARGET) -O2 $(INCLUDES) -c $(CFLAGS) -o $@ $<
+vio_creat.o: $(srcdir)/vio_creat.c $(srcdir)/vio-syscalls.h
+	$(CC) $(CFLAGS_FOR_TARGET) -O2 $(INCLUDES) -c $(CFLAGS) -o $@ $<
+vio_lseek.o: $(srcdir)/vio_lseek.c $(srcdir)/vio-syscalls.h
+	$(CC) $(CFLAGS_FOR_TARGET) -O2 $(INCLUDES) -c $(CFLAGS) -o $@ $<
+vio_open.o: $(srcdir)/vio_open.c $(srcdir)/vio-syscalls.h
+	$(CC) $(CFLAGS_FOR_TARGET) -O2 $(INCLUDES) -c $(CFLAGS) -o $@ $<
+vio_read.o: $(srcdir)/vio_read.c $(srcdir)/vio-syscalls.h
+	$(CC) $(CFLAGS_FOR_TARGET) -O2 $(INCLUDES) -c $(CFLAGS) -o $@ $<
+vio_unlink.o: $(srcdir)/vio_unlink.c $(srcdir)/vio-syscalls.h
+	$(CC) $(CFLAGS_FOR_TARGET) -O2 $(INCLUDES) -c $(CFLAGS) -o $@ $<
+vio_virtio.o: $(srcdir)/vio_virtio.c $(srcdir)/vio-syscalls.h
+	$(CC) $(CFLAGS_FOR_TARGET) -O2 $(INCLUDES) -c $(CFLAGS) -o $@ $<
+vio_write.o: $(srcdir)/vio_write.c $(srcdir)/vio-syscalls.h
+	$(CC) $(CFLAGS_FOR_TARGET) -O2 $(INCLUDES) -c $(CFLAGS) -o $@ $<
+vio_ftruncate.o: $(srcdir)/vio_ftruncate.c $(srcdir)/vio-syscalls.h
+	$(CC) $(CFLAGS_FOR_TARGET) -O2 $(INCLUDES) -c $(CFLAGS) -o $@ $<
+
+clean mostlyclean:
+	rm -f a.out core *.i *.o *-test *.srec *.dis *.x
+
+distclean maintainer-clean realclean: clean
+	rm -f Makefile config.status *~
+
+.PHONY: install info install-info clean-info
+install: ${SIM_INSTALL} ${MVME_INSTALL} ${EVM_INSTALL} ${SOLARIS_INSTALL} ${LINUX_INSTALL} ${VIO_INSTALL}
+
+.PHONY: install-vio-dir
+
+install-vio-dir:
+	mkdir -p ${tooldir}/libos.src
+
+install-vio: install-vio-dir ${VIO_BSP} ${VIO_CRT0}
+	mkdir -p ${tooldir}/lib${MULTISUBDIR}
+	mkdir -p ${tooldir}/include/machine
+	set -e; for x in ${VIO_CRT0} ${VIO_BSP} ${VIO_SCRIPTS}; do ${INSTALL_DATA} $$x ${tooldir}/lib${MULTISUBDIR}/$$x; done
+	# set -e; for x in ${VIO_HEADERS}; do ${INSTALL_DATA} ${srcdir}/$$x ${tooldir}/include/machine/$$x; done
+	set -e; for x in ${VIO_SRC}; do ${INSTALL_DATA} ${srcdir}/$$x ${tooldir}/libos.src/$$x; done
+	set -e; for x in ${HEADERS}; do ${INSTALL_DATA} ${srcdir}/$$x ${tooldir}/include/$$x; done
+
+doc:
+info:
+install-info:
+clean-info:
+
+Makefile: $(srcdir)/Makefile.in config.status @host_makefile_frag_path@
+	$(SHELL) config.status
+
+config.status: $(srcdir)/configure
+	$(SHELL) config.status --recheck

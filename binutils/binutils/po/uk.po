@@ -1,0 +1,6988 @@
+# Translation of binutils to Ukrainian
+# Copyright (C) 2007 Free Software Foundation, Inc.
+# This file is distributed under the same license as the binutils package.
+#
+# Maxim V. Dziumanenko <dziumanenko@gmail.com>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: binutils 2.17.90\n"
+"Report-Msgid-Bugs-To: bug-binutils@gnu.org\n"
+"POT-Creation-Date: 2013-12-04 10:50+0100\n"
+"PO-Revision-Date: 2007-07-13 14:32+0300\n"
+"Last-Translator: Maxim V. Dziumanenko <dziumanenko@gmail.com>\n"
+"Language-Team: Ukrainian <translation-team-uk@lists.sourceforge.net>\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: addr2line.c:76
+#, c-format
+msgid "Usage: %s [option(s)] [addr(s)]\n"
+msgstr "Використання: %s [ключі] [адреси]\n"
+
+#: addr2line.c:77
+#, c-format
+msgid " Convert addresses into line number/file name pairs.\n"
+msgstr " Перетворює адреси на пари номер_рядка/назва_файлу.\n"
+
+#: addr2line.c:78
+#, c-format
+msgid ""
+" If no addresses are specified on the command line, they will be read from "
+"stdin\n"
+msgstr ""
+" Якщо адреси не вказані у командному рядку, вони читатимуться з stdin\n"
+
+#: addr2line.c:79
+#, c-format
+msgid ""
+" The options are:\n"
+"  @<file>                Read options from <file>\n"
+"  -b --target=<bfdname>  Set the binary file format\n"
+"  -e --exe=<executable>  Set the input file name (default is a.out)\n"
+"  -i --inlines           Unwind inlined functions\n"
+"  -j --section=<name>    Read section-relative offsets instead of addresses\n"
+"  -s --basenames         Strip directory names\n"
+"  -f --functions         Show function names\n"
+"  -C --demangle[=style]  Demangle function names\n"
+"  -h --help              Display this information\n"
+"  -v --version           Display the program's version\n"
+"\n"
+msgstr ""
+" Ключі:\n"
+"  @<файл>                Читати параметри з <файлу>\n"
+"  -b --target=<bfd-назва> Встановити формат двійкового файлу\n"
+"  -e --exe=<виконуваний> Встановити назву вхідного файлу (типово "
+"використовується a.out)\n"
+"  -i --inlines           Розкрутити inline-функції\n"
+"  -j --section=<name>    Читати відносні до розділу зсуви замість адрес\n"
+"  -s --basenames         Виділити назви каталогів\n"
+"  -f --functions         Показати назви функцій\n"
+"  -C --demangle[=стиль]  Декодувати назви функцій\n"
+"  -h --help              Показати цю інформацію\n"
+"  -v --version           Показати версію програми\n"
+"\n"
+
+#: addr2line.c:94 ar.c:295 coffdump.c:469 dlltool.c:3832 dllwrap.c:510
+#: nlmconv.c:1113 objcopy.c:563 objcopy.c:598 readelf.c:2995 size.c:99
+#: srconv.c:1741 strings.c:676 sysdump.c:653 windmc.c:233 windres.c:698
+#, c-format
+msgid "Report bugs to %s\n"
+msgstr "Звіти про помилки надсилайте на %s\n"
+
+#: addr2line.c:292
+#, c-format
+msgid "%s: cannot get addresses from archive"
+msgstr "%s: неможливо отримати адреси з архіву"
+
+#: addr2line.c:309
+#, c-format
+msgid "%s: cannot find section %s"
+msgstr "%s: неможливо знайти розділ: %s"
+
+#: addr2line.c:375 nm.c:1554 objdump.c:3250
+#, c-format
+msgid "unknown demangling style `%s'"
+msgstr "невідомий стиль декодування `%s'"
+
+#: ar.c:218
+#, c-format
+msgid "no entry %s in archive\n"
+msgstr "в архіві відсутній запис %s\n"
+
+#: ar.c:236
+#, fuzzy, c-format
+msgid ""
+"Usage: %s [emulation options] [--plugin <name>] [-]{dmpqrstx}"
+"[abcfilNoPsSuvV] [member-name] [count] archive-file file...\n"
+msgstr ""
+"Використання: %s [параметри емуляції] [-]{dmpqrstx}[abcfilNoPsSuvV] "
+"[назва_члену] [відлік] файл-архіву файл...\n"
+
+#: ar.c:238
+#, c-format
+msgid ""
+"Usage: %s [emulation options] [-]{dmpqrstx}[abcfilNoPsSuvV] [member-name] "
+"[count] archive-file file...\n"
+msgstr ""
+"Використання: %s [параметри емуляції] [-]{dmpqrstx}[abcfilNoPsSuvV] "
+"[назва_члену] [відлік] файл-архіву файл...\n"
+
+#: ar.c:243
+#, c-format
+msgid "       %s -M [<mri-script]\n"
+msgstr "       %s -M [<сценарій mri]\n"
+
+#: ar.c:244
+#, c-format
+msgid " commands:\n"
+msgstr " команди:\n"
+
+#: ar.c:245
+#, c-format
+msgid "  d            - delete file(s) from the archive\n"
+msgstr "  d            - видалення файлів з архіву\n"
+
+#: ar.c:246
+#, c-format
+msgid "  m[ab]        - move file(s) in the archive\n"
+msgstr "  m[ab]        - переміщення файлів у архів\n"
+
+#: ar.c:247
+#, c-format
+msgid "  p            - print file(s) found in the archive\n"
+msgstr "  p            - вивід файлів, знайдених у архіві\n"
+
+#: ar.c:248
+#, c-format
+msgid "  q[f]         - quick append file(s) to the archive\n"
+msgstr "  q[f]         - швидке додавання файлів до архіву\n"
+
+#: ar.c:249
+#, c-format
+msgid ""
+"  r[ab][f][u]  - replace existing or insert new file(s) into the archive\n"
+msgstr ""
+"  r[ab][f][u]  - заміна існуючих або додавання нових файлів до архіву\n"
+
+#: ar.c:250
+#, c-format
+msgid "  t            - display contents of archive\n"
+msgstr "  t            - відображення змісту архіву\n"
+
+#: ar.c:251
+#, c-format
+msgid "  x[o]         - extract file(s) from the archive\n"
+msgstr "  x[o]         - отримання файлів з архіву\n"
+
+#: ar.c:252
+#, c-format
+msgid " command specific modifiers:\n"
+msgstr " особливі модифікатори для команд:\n"
+
+#: ar.c:253
+#, c-format
+msgid "  [a]          - put file(s) after [member-name]\n"
+msgstr "  [a]          - розміщення файлів після [назви_члену]\n"
+
+#: ar.c:254
+#, c-format
+msgid "  [b]          - put file(s) before [member-name] (same as [i])\n"
+msgstr ""
+"  [b]          - розміщення файлів до [назви_члена] (те ж саме, що й [i])\n"
+
+#: ar.c:255
+#, fuzzy, c-format
+msgid "  [D]          - use zero for timestamps and uids/gids\n"
+msgstr "  [P]          - використання повних назв шляхів при порівнянні\n"
+
+#: ar.c:256
+#, c-format
+msgid "  [N]          - use instance [count] of name\n"
+msgstr "  [N]          - використання [відліку], як варіанту назви\n"
+
+#: ar.c:257
+#, c-format
+msgid "  [f]          - truncate inserted file names\n"
+msgstr "  [f]          - обрізання назв вставлених файлів\n"
+
+#: ar.c:258
+#, c-format
+msgid "  [P]          - use full path names when matching\n"
+msgstr "  [P]          - використання повних назв шляхів при порівнянні\n"
+
+#: ar.c:259
+#, c-format
+msgid "  [o]          - preserve original dates\n"
+msgstr "  [o]          - збереження початкових дат\n"
+
+#: ar.c:260
+#, c-format
+msgid ""
+"  [u]          - only replace files that are newer than current archive "
+"contents\n"
+msgstr ""
+"  [u]          - заміна лише новіших файлів, ніж поточний зміст архіву\n"
+
+#: ar.c:261
+#, c-format
+msgid " generic modifiers:\n"
+msgstr " звичайні модифікатори:\n"
+
+#: ar.c:262
+#, c-format
+msgid "  [c]          - do not warn if the library had to be created\n"
+msgstr "  [c]          - не попереджувати, якщо має бути створена бібліотека\n"
+
+#: ar.c:263
+#, c-format
+msgid "  [s]          - create an archive index (cf. ranlib)\n"
+msgstr "  [s]          - створення індексу архіву (cf. ranlib)\n"
+
+#: ar.c:264
+#, c-format
+msgid "  [S]          - do not build a symbol table\n"
+msgstr "  [S]          - не створювати таблицю символів\n"
+
+#: ar.c:265
+#, fuzzy, c-format
+msgid "  [T]          - make a thin archive\n"
+msgstr "  m[ab]        - переміщення файлів у архів\n"
+
+#: ar.c:266
+#, c-format
+msgid "  [v]          - be verbose\n"
+msgstr "  [v]          - докладний режим\n"
+
+#: ar.c:267
+#, c-format
+msgid "  [V]          - display the version number\n"
+msgstr "  [V]          - вивід номера версії\n"
+
+#: ar.c:268
+#, c-format
+msgid "  @<file>      - read options from <file>\n"
+msgstr "  @<файл>      - читати ключі з <файлу>\n"
+
+#: ar.c:270
+#, fuzzy, c-format
+msgid " optional:\n"
+msgstr " Ключі:\n"
+
+#: ar.c:271
+#, c-format
+msgid "  --plugin <p> - load the specified plugin\n"
+msgstr ""
+
+#: ar.c:278
+#, c-format
+msgid "Usage: %s [options] archive\n"
+msgstr "Використання: %s [ключі] архів\n"
+
+#: ar.c:279
+#, c-format
+msgid " Generate an index to speed access to archives\n"
+msgstr " Створює індекс для збільшення швидкості доступу до архівів\n"
+
+#: ar.c:280
+#, fuzzy, c-format
+msgid ""
+" The options are:\n"
+"  @<file>                      Read options from <file>\n"
+msgstr "   @<файл>                   Читати ключі з <файлу>.\n"
+
+#: ar.c:283
+#, fuzzy, c-format
+msgid "  --plugin <name>              Load the specified plugin\n"
+msgstr ""
+"   -L --linker <назва>       Використання <назви> у якості компонувальника.\n"
+
+#: ar.c:286
+#, fuzzy, c-format
+msgid ""
+"  -t                           Update the archive's symbol map timestamp\n"
+"  -h --help                    Print this help message\n"
+"  -v --version                 Print version information\n"
+msgstr ""
+" Ключі:\n"
+"  @<файл>                      Читати ключі з <файлу>\n"
+"  -h --help                    Вивід довідки\n"
+"  -V --version                 Вивід інформації про версію\n"
+
+#: ar.c:512 nm.c:1626
+#, c-format
+msgid "sorry - this program has been built without plugin support\n"
+msgstr ""
+
+#: ar.c:539
+msgid "two different operation options specified"
+msgstr "вказані ключі для двох різних операцій"
+
+#: ar.c:620
+#, c-format
+msgid "illegal option -- %c"
+msgstr "неправильний ключ -- %c"
+
+#: ar.c:663
+msgid "no operation specified"
+msgstr "операція не вказана"
+
+#: ar.c:666
+msgid "`u' is only meaningful with the `r' option."
+msgstr "`u' має значення лише з ключем `r'."
+
+#: ar.c:669
+#, fuzzy
+msgid "`u' is not meaningful with the `D' option."
+msgstr "`u' має значення лише з ключем `r'."
+
+#: ar.c:677
+msgid "`N' is only meaningful with the `x' and `d' options."
+msgstr "`u' має значення лише з ключами `x' та `d'."
+
+#: ar.c:680
+msgid "Value for `N' must be positive."
+msgstr "Значення для `N' має бути додатнім."
+
+#: ar.c:692
+#, fuzzy
+msgid "`x' cannot be used on thin archives."
+msgstr "%s: неможливо отримати адреси з архіву"
+
+#: ar.c:733
+#, c-format
+msgid "internal error -- this option not implemented"
+msgstr "внутрішня помилка -- цей ключ не реалізований"
+
+#: ar.c:802
+#, c-format
+msgid "creating %s"
+msgstr "створюється %s"
+
+#: ar.c:851 ar.c:906 ar.c:1234 objcopy.c:2027
+#, c-format
+msgid "internal stat error on %s"
+msgstr "внутрішня помилка stat на %s"
+
+#: ar.c:855
+#, c-format
+msgid ""
+"\n"
+"<%s>\n"
+"\n"
+msgstr ""
+"\n"
+"<%s>\n"
+"\n"
+
+#: ar.c:871 ar.c:939
+#, c-format
+msgid "%s is not a valid archive"
+msgstr "%s не є правильним архівом"
+
+#: ar.c:1139
+#, c-format
+msgid "No member named `%s'\n"
+msgstr "Немає члену з назвою `%s'\n"
+
+#: ar.c:1189
+#, c-format
+msgid "no entry %s in archive %s!"
+msgstr "пункт %s відсутній у архіві %s!"
+
+#: ar.c:1328
+#, c-format
+msgid "%s: no archive map to update"
+msgstr "%s: немає карти архіву для оновлення"
+
+#: arsup.c:90
+#, c-format
+msgid "No entry %s in archive.\n"
+msgstr "пункт %s відсутній у архіві.\n"
+
+#: arsup.c:115
+#, c-format
+msgid "Can't open file %s\n"
+msgstr "Неможливо відкрити файл %s\n"
+
+#: arsup.c:165
+#, c-format
+msgid "%s: Can't open output archive %s\n"
+msgstr "%s: Неможливо відкрити архів для виводу %s\n"
+
+#: arsup.c:186
+#, c-format
+msgid "%s: Can't open input archive %s\n"
+msgstr "%s: Неможливо відкрити вхідний архів %s\n"
+
+#: arsup.c:195
+#, c-format
+msgid "%s: file %s is not an archive\n"
+msgstr "%s: файл %s не є архівом\n"
+
+#: arsup.c:235
+#, c-format
+msgid "%s: no output archive specified yet\n"
+msgstr "%s: архів для виводу ще не вказаний\n"
+
+#: arsup.c:255 arsup.c:293 arsup.c:335 arsup.c:365 arsup.c:431
+#, c-format
+msgid "%s: no open output archive\n"
+msgstr "%s: немає відкритого архіву для виводу\n"
+
+#: arsup.c:266 arsup.c:386 arsup.c:412
+#, c-format
+msgid "%s: can't open file %s\n"
+msgstr "%s: неможливо відкрити файл %s\n"
+
+#: arsup.c:320 arsup.c:408 arsup.c:489
+#, c-format
+msgid "%s: can't find module file %s\n"
+msgstr "%s: неможливо знайти файл модуля %s\n"
+
+#: arsup.c:440
+#, c-format
+msgid "Current open archive is %s\n"
+msgstr "Поточний відкритий архів - %s\n"
+
+#: arsup.c:464
+#, c-format
+msgid "%s: no open archive\n"
+msgstr "%s: немає відкритого архіву\n"
+
+#: bin2c.c:59
+#, c-format
+msgid "Usage: %s < input_file > output_file\n"
+msgstr "Використання: %s < вхідний_файл > файл_виводу\n"
+
+#: bin2c.c:60
+#, c-format
+msgid "Prints bytes from stdin in hex format.\n"
+msgstr "Виводити байти з stdin у шістнадцятковому форматі.\n"
+
+#: binemul.c:38
+#, c-format
+msgid "  No emulation specific options\n"
+msgstr "  Не вказані специфічні для емуляції параметри\n"
+
+#. Macros for common output.
+#: binemul.h:43
+#, c-format
+msgid " emulation options: \n"
+msgstr " ключі емуляції: \n"
+
+#: bucomm.c:157
+#, c-format
+msgid "can't set BFD default target to `%s': %s"
+msgstr "неможливо встановити типову ціль BFD на `%s': %s"
+
+#: bucomm.c:168
+#, c-format
+msgid "%s: Matching formats:"
+msgstr "%s: Формати відповідності:"
+
+#: bucomm.c:183
+#, c-format
+msgid "Supported targets:"
+msgstr "Підтримувані цілі:"
+
+#: bucomm.c:185
+#, c-format
+msgid "%s: supported targets:"
+msgstr "%s: підтримувані цілі:"
+
+#: bucomm.c:202
+#, c-format
+msgid "Supported architectures:"
+msgstr "Підтримувані архітектури:"
+
+#: bucomm.c:204
+#, c-format
+msgid "%s: supported architectures:"
+msgstr "%s: підтримувані архітектури:"
+
+#: bucomm.c:399
+#, c-format
+msgid "BFD header file version %s\n"
+msgstr "Файл заголовку BFD версії %s\n"
+
+#: bucomm.c:548
+#, c-format
+msgid "%s: bad number: %s"
+msgstr "%s: некоректне число: %s"
+
+#: bucomm.c:565 strings.c:422
+#, c-format
+msgid "'%s': No such file"
+msgstr "'%s': Такий файл відсутній"
+
+#: bucomm.c:567 strings.c:424
+#, fuzzy, c-format
+msgid "warning: could not locate '%s'.  reason: %s"
+msgstr "Попередження: неможливо знайти '%s'. Причина: %s"
+
+#: bucomm.c:571
+#, fuzzy, c-format
+msgid "warning: '%s' is not an ordinary file"
+msgstr "Попередження: '%s' не є звичайним файлом"
+
+#: coffdump.c:106
+#, c-format
+msgid "#lines %d "
+msgstr "#рядки %d "
+
+#: coffdump.c:460 sysdump.c:646
+#, c-format
+msgid "Usage: %s [option(s)] in-file\n"
+msgstr "Використання: %s [ключі] вх-файл\n"
+
+#: coffdump.c:461
+#, c-format
+msgid " Print a human readable interpretation of a SYSROFF object file\n"
+msgstr ""
+" Виводить інтерпретацію об'єктного файлу SYSROFF у зрозумілій людині формі\n"
+
+#: coffdump.c:462
+#, c-format
+msgid ""
+" The options are:\n"
+"  @<file>                Read options from <file>\n"
+"  -h --help              Display this information\n"
+"  -v --version           Display the program's version\n"
+"\n"
+msgstr ""
+" Ключі:\n"
+"  @<файл>                Читати ключі з <файлу>\n"
+"  -h --help              Вивід цієї інформації\n"
+"  -v --version           Вивід версії програми\n"
+"\n"
+
+#: coffdump.c:531 srconv.c:1831 sysdump.c:710
+msgid "no input file specified"
+msgstr "не вказаний вхідний файл"
+
+#: cxxfilt.c:119 nm.c:264 objdump.c:251
+#, c-format
+msgid "Report bugs to %s.\n"
+msgstr "Звіти про помилки надсилайте у %s\n"
+
+#: debug.c:647
+msgid "debug_add_to_current_namespace: no current file"
+msgstr "debug_add_to_current_namespace: немає поточного файлу"
+
+#: debug.c:726
+msgid "debug_start_source: no debug_set_filename call"
+msgstr "debug_start_source: немає виклику debug_set_filename"
+
+#: debug.c:782
+msgid "debug_record_function: no debug_set_filename call"
+msgstr "debug_record_function: немає виклику debug_set_filename"
+
+#: debug.c:834
+msgid "debug_record_parameter: no current function"
+msgstr "debug_record_parameter: немає поточної функції"
+
+#: debug.c:866
+msgid "debug_end_function: no current function"
+msgstr "debug_end_function: немає поточної функції"
+
+#: debug.c:872
+msgid "debug_end_function: some blocks were not closed"
+msgstr "debug_end_function: деякі блоки не були закриті"
+
+#: debug.c:900
+msgid "debug_start_block: no current block"
+msgstr "debug_start_block: немає поточного блоку"
+
+#: debug.c:936
+msgid "debug_end_block: no current block"
+msgstr "debug_end_block: немає поточного блоку"
+
+#: debug.c:943
+msgid "debug_end_block: attempt to close top level block"
+msgstr "debug_end_block: спроба закрити блок верхнього рівня"
+
+#: debug.c:966
+msgid "debug_record_line: no current unit"
+msgstr "debug_record_line: немає поточного модуля"
+
+#. FIXME
+#: debug.c:1019
+msgid "debug_start_common_block: not implemented"
+msgstr "debug_start_common_block: не виконаний"
+
+#. FIXME
+#: debug.c:1030
+msgid "debug_end_common_block: not implemented"
+msgstr "debug_end_common_block: не виконаний"
+
+#. FIXME.
+#: debug.c:1114
+msgid "debug_record_label: not implemented"
+msgstr "debug_record_label: не виконаний"
+
+#: debug.c:1136
+msgid "debug_record_variable: no current file"
+msgstr "debug_record_variable: немає поточного файлу"
+
+#: debug.c:1664
+msgid "debug_make_undefined_type: unsupported kind"
+msgstr "debug_make_undefined_type: непідтримуваний тип"
+
+#: debug.c:1841
+msgid "debug_name_type: no current file"
+msgstr "debug_name_type: немає поточного файлу"
+
+#: debug.c:1886
+msgid "debug_tag_type: no current file"
+msgstr "debug_tag_type: немає поточного файлу"
+
+#: debug.c:1894
+msgid "debug_tag_type: extra tag attempted"
+msgstr "debug_tag_type: випробуваний додатковий тег"
+
+#: debug.c:1931
+#, fuzzy, c-format
+msgid "warning: changing type size from %d to %d\n"
+msgstr "Попередження: змінюється розмір типу з %d на %d\n"
+
+#: debug.c:1953
+msgid "debug_find_named_type: no current compilation unit"
+msgstr "debug_find_named_type: немає поточного модуля компіляції"
+
+#: debug.c:2056
+#, c-format
+msgid "debug_get_real_type: circular debug information for %s\n"
+msgstr "debug_get_real_type: циркулярна налагоджувальна інформація для %s\n"
+
+#: debug.c:2483
+msgid "debug_write_type: illegal type encountered"
+msgstr "debug_write_type: виявлено некоректний тип"
+
+#: dlltool.c:884 dlltool.c:910 dlltool.c:941
+#, c-format
+msgid "Internal error: Unknown machine type: %d"
+msgstr "Внутрішня помилка: невідомий тип машини: %d"
+
+#: dlltool.c:982
+#, c-format
+msgid "Can't open def file: %s"
+msgstr "Неможливо відкрити файл def: %s"
+
+#: dlltool.c:987
+#, c-format
+msgid "Processing def file: %s"
+msgstr "Оброблюється файл def: %s"
+
+#: dlltool.c:991
+msgid "Processed def file"
+msgstr "Оброблено файл def"
+
+#: dlltool.c:1015
+#, c-format
+msgid "Syntax error in def file %s:%d"
+msgstr "Помилка синтаксису у файлі def %s:%d"
+
+#: dlltool.c:1050
+#, c-format
+msgid "%s: Path components stripped from image name, '%s'."
+msgstr "%s: Компоненти шляху, що отримані з назви зображення, '%s'."
+
+#: dlltool.c:1068
+#, c-format
+msgid "NAME: %s base: %x"
+msgstr "NAME: %s base: %x"
+
+#: dlltool.c:1071 dlltool.c:1087
+msgid "Can't have LIBRARY and NAME"
+msgstr "LIBRARY та NAME не можуть використовуватись одночасно"
+
+#: dlltool.c:1084
+#, c-format
+msgid "LIBRARY: %s base: %x"
+msgstr "LIBRARY: %s база: %x"
+
+#: dlltool.c:1320 resrc.c:293
+#, c-format
+msgid "wait: %s"
+msgstr "очікування: %s"
+
+#: dlltool.c:1325 dllwrap.c:410 resrc.c:298
+#, c-format
+msgid "subprocess got fatal signal %d"
+msgstr "підпроцес отримав критичний сигнал %d"
+
+#: dlltool.c:1331 dllwrap.c:417 resrc.c:305
+#, c-format
+msgid "%s exited with status %d"
+msgstr "%s завершений зі статусом %d"
+
+#: dlltool.c:1362
+#, c-format
+msgid "Sucking in info from %s section in %s"
+msgstr "Отримується інформація з розділу %s в %s"
+
+#: dlltool.c:1487
+#, c-format
+msgid "Excluding symbol: %s"
+msgstr "Символ виключення: %s"
+
+#: dlltool.c:1576 dlltool.c:1587 nm.c:1001 nm.c:1012
+#, c-format
+msgid "%s: no symbols"
+msgstr "%s: немає символів"
+
+#. FIXME: we ought to read in and block out the base relocations.
+#: dlltool.c:1613
+#, c-format
+msgid "Done reading %s"
+msgstr "Читання виконано %s"
+
+#: dlltool.c:1623
+#, c-format
+msgid "Unable to open object file: %s"
+msgstr "Неможливо відкрити об'єктний файл: %s"
+
+#: dlltool.c:1626
+#, c-format
+msgid "Scanning object file %s"
+msgstr "Сканується об'єктний файл %s"
+
+#: dlltool.c:1641
+#, c-format
+msgid "Cannot produce mcore-elf dll from archive file: %s"
+msgstr "Неможливо сформувати mcore-elf dll з файлу архіву: %s"
+
+#: dlltool.c:1741
+msgid "Adding exports to output file"
+msgstr "Експортні дані додаються у файл для виводу"
+
+#: dlltool.c:1789
+msgid "Added exports to output file"
+msgstr "Експортні дані додані у файл для виводу"
+
+#: dlltool.c:1930
+#, c-format
+msgid "Generating export file: %s"
+msgstr "Створюється файл експорту: %s"
+
+#: dlltool.c:1935
+#, c-format
+msgid "Unable to open temporary assembler file: %s"
+msgstr "Неможливо відкрити тимчасовий файл асемблера: %s"
+
+#: dlltool.c:1938
+#, c-format
+msgid "Opened temporary file: %s"
+msgstr "Відкритий тимчасовий файл: %s"
+
+#: dlltool.c:2113
+#, fuzzy
+msgid "failed to read the number of entries from base file"
+msgstr "Помилка при читанні кількості областей пам'яті\n"
+
+#: dlltool.c:2161
+msgid "Generated exports file"
+msgstr "Створено файл експорту"
+
+#: dlltool.c:2370
+#, c-format
+msgid "bfd_open failed open stub file: %s"
+msgstr "bfd_open не вдається відкрити файл stub: %s"
+
+#: dlltool.c:2373
+#, c-format
+msgid "Creating stub file: %s"
+msgstr "Створюється файл stub: %s"
+
+#: dlltool.c:2837 dlltool.c:2906
+#, c-format
+msgid "failed to open temporary head file: %s"
+msgstr "помилка при відкриванні тимчасового головного файлу: %s"
+
+#: dlltool.c:2979
+#, c-format
+msgid "failed to open temporary tail file: %s"
+msgstr "помилка при відкриванні тимчасового кінцевого файлу: %s"
+
+#: dlltool.c:3052
+#, c-format
+msgid "Can't open .lib file: %s"
+msgstr "Неможливо відкрити файл .lib: %s"
+
+#: dlltool.c:3055
+#, c-format
+msgid "Creating library file: %s"
+msgstr "Створюється файл бібліотеки: %s"
+
+#: dlltool.c:3146 dlltool.c:3152
+#, c-format
+msgid "cannot delete %s: %s"
+msgstr "неможливо видалити %s: %s"
+
+#: dlltool.c:3157
+msgid "Created lib file"
+msgstr "Створено lib-файл"
+
+#: dlltool.c:3369 dlltool.c:3391
+#, fuzzy, c-format
+msgid "%s is not a library"
+msgstr "%s не є правильним архівом"
+
+#: dlltool.c:3409
+#, c-format
+msgid "Import library `%s' specifies two or more dlls"
+msgstr ""
+
+#: dlltool.c:3420
+#, fuzzy, c-format
+msgid "Unable to determine dll name for `%s' (not an import library?)"
+msgstr "Неможливо визначити число завантажених символів\n"
+
+#: dlltool.c:3641
+#, fuzzy, c-format
+msgid "warning: ignoring duplicate EXPORT %s %d,%d"
+msgstr "Попередження, пропускається дублікат EXPORT %s %d,%d"
+
+#: dlltool.c:3647
+#, fuzzy, c-format
+msgid "error: duplicate EXPORT with ordinals: %s"
+msgstr "Помилка, EXPORT повторюється з порядковими чисельниками: %s"
+
+#: dlltool.c:3752
+msgid "Processing definitions"
+msgstr "Оброблюються описи"
+
+#: dlltool.c:3784
+msgid "Processed definitions"
+msgstr "Описи оброблені"
+
+#. xgetext:c-format
+#: dlltool.c:3791 dllwrap.c:471
+#, c-format
+msgid "Usage %s <option(s)> <object-file(s)>\n"
+msgstr "Використання %s <ключі> <об'єктні_файли>\n"
+
+#. xgetext:c-format
+#: dlltool.c:3793
+#, c-format
+msgid ""
+"   -m --machine <machine>    Create as DLL for <machine>.  [default: %s]\n"
+msgstr ""
+"   -m --machine <машина>     Створення як DLL для <машини>.  [типово: %s]\n"
+
+#: dlltool.c:3794
+#, c-format
+msgid ""
+"        possible <machine>: arm[_interwork], i386, mcore[-elf]{-le|-be}, "
+"ppc, thumb\n"
+msgstr ""
+"        можливо <машина>: arm[_interwork], i386, mcore[-elf]{-le|-be}, ppc, "
+"thumb\n"
+
+#: dlltool.c:3795
+#, c-format
+msgid "   -e --output-exp <outname> Generate an export file.\n"
+msgstr "   -e --output-exp <вих_назва> Створення файла експорту.\n"
+
+#: dlltool.c:3796
+#, c-format
+msgid "   -l --output-lib <outname> Generate an interface library.\n"
+msgstr "   -l --output-lib <вих_назва> Створення бібліотеки інтерфейсу.\n"
+
+#: dlltool.c:3797
+#, fuzzy, c-format
+msgid "   -y --output-delaylib <outname> Create a delay-import library.\n"
+msgstr "   --output-lib <вых_назва> Створення вхідної бібліотеки.\n"
+
+#: dlltool.c:3798
+#, c-format
+msgid "   -a --add-indirect         Add dll indirects to export file.\n"
+msgstr "   -a --add-indirect         Додавання непрямих dll у файл експорту.\n"
+
+#: dlltool.c:3799
+#, c-format
+msgid ""
+"   -D --dllname <name>       Name of input dll to put into interface lib.\n"
+msgstr ""
+"   -D --dllname <назва>       Назва вхідної dll для розміщення у бібліотеці "
+"інтерфейсу.\n"
+
+#: dlltool.c:3800
+#, c-format
+msgid "   -d --input-def <deffile>  Name of .def file to be read in.\n"
+msgstr "   -d --input-def <def-файл> Назва файлу .def для зчитування.\n"
+
+#: dlltool.c:3801
+#, c-format
+msgid "   -z --output-def <deffile> Name of .def file to be created.\n"
+msgstr "   -z --output-def <def-файл> Назва файлу .def, що створюється.\n"
+
+#: dlltool.c:3802
+#, c-format
+msgid "      --export-all-symbols   Export all symbols to .def\n"
+msgstr "      --export-all-symbols   Експорт всіх символів у .def\n"
+
+#: dlltool.c:3803
+#, c-format
+msgid "      --no-export-all-symbols  Only export listed symbols\n"
+msgstr "      --no-export-all-symbols  Експорт лише перелічених символів\n"
+
+#: dlltool.c:3804
+#, c-format
+msgid "      --exclude-symbols <list> Don't export <list>\n"
+msgstr "      --exclude-symbols <список> Не експортувати <список>\n"
+
+#: dlltool.c:3805
+#, c-format
+msgid "      --no-default-excludes  Clear default exclude symbols\n"
+msgstr "      --no-default-excludes  Очищення типових символів виключення\n"
+
+#: dlltool.c:3806
+#, c-format
+msgid "   -b --base-file <basefile> Read linker generated base file.\n"
+msgstr ""
+"   -b --base-file <base-файл> Читання створеного компонувальником base-"
+"файлу.\n"
+
+#: dlltool.c:3807
+#, c-format
+msgid "   -x --no-idata4            Don't generate idata$4 section.\n"
+msgstr "   -x --no-idata4            Не створювати розділ idata$4.\n"
+
+#: dlltool.c:3808
+#, c-format
+msgid "   -c --no-idata5            Don't generate idata$5 section.\n"
+msgstr "   -c --no-idata5            Не створювати розділ idata$5.\n"
+
+#: dlltool.c:3809
+#, c-format
+msgid ""
+"      --use-nul-prefixed-import-tables Use zero prefixed idata$4 and idata"
+"$5.\n"
+msgstr ""
+
+#: dlltool.c:3810
+#, c-format
+msgid ""
+"   -U --add-underscore       Add underscores to all symbols in interface "
+"library.\n"
+msgstr ""
+"   -U --add-underscore       Додавання символів підкреслення до усіх "
+"символів у бібліотеці інтерфейсу.\n"
+
+#: dlltool.c:3811
+#, c-format
+msgid ""
+"      --add-stdcall-underscore Add underscores to stdcall symbols in "
+"interface library.\n"
+msgstr ""
+"      --add-stdcall-underscore Додавання символів підкреслення stdcall-"
+"символів у бібліотеці інтерфейсу.\n"
+
+#: dlltool.c:3812
+#, c-format
+msgid "   -k --kill-at              Kill @<n> from exported names.\n"
+msgstr "   -k --kill-at              Видалення @<n> з експортованих назв.\n"
+
+#: dlltool.c:3813
+#, c-format
+msgid "   -A --add-stdcall-alias    Add aliases without @<n>.\n"
+msgstr "   -A --add-stdcall-alias    Додавання псевдонімів без @<n>.\n"
+
+#: dlltool.c:3814
+#, c-format
+msgid "   -p --ext-prefix-alias <prefix> Add aliases with <prefix>.\n"
+msgstr ""
+"   -p --ext-prefix-alias <префікс> Додавання псевдонімів з <префіксом>.\n"
+
+#: dlltool.c:3815
+#, c-format
+msgid "   -S --as <name>            Use <name> for assembler.\n"
+msgstr "   -S --as <назва>           Використання <назви> для асемблера.\n"
+
+#: dlltool.c:3816
+#, c-format
+msgid "   -f --as-flags <flags>     Pass <flags> to the assembler.\n"
+msgstr "   -f --as-flags <ключі>     Передача <ключів> в асемблер.\n"
+
+#: dlltool.c:3817
+#, c-format
+msgid ""
+"   -C --compat-implib        Create backward compatible import library.\n"
+msgstr ""
+"   -C --compat-implib        Створення бібліотеки імпорту із зворотною "
+"сумісністю.\n"
+
+#: dlltool.c:3818
+#, c-format
+msgid ""
+"   -n --no-delete            Keep temp files (repeat for extra "
+"preservation).\n"
+msgstr ""
+"   -n --no-delete            Залишати тимчасові файли (повтор для "
+"додаткового захисту).\n"
+
+#: dlltool.c:3819
+#, c-format
+msgid ""
+"   -t --temp-prefix <prefix> Use <prefix> to construct temp file names.\n"
+msgstr ""
+"   -t --temp-prefix <префікс> Використання <префіксу> для створення назв "
+"часових файлів.\n"
+
+#: dlltool.c:3820
+#, c-format
+msgid ""
+"   -I --identify <implib>    Report the name of the DLL associated with "
+"<implib>.\n"
+msgstr ""
+
+#: dlltool.c:3821
+#, c-format
+msgid ""
+"      --identify-strict      Causes --identify to report error when multiple "
+"DLLs.\n"
+msgstr ""
+
+#: dlltool.c:3822
+#, c-format
+msgid "   -v --verbose              Be verbose.\n"
+msgstr "   -v --verbose              Режим з докладним виводом.\n"
+
+#: dlltool.c:3823
+#, c-format
+msgid "   -V --version              Display the program version.\n"
+msgstr "   -V --version              Виведення версії програми.\n"
+
+#: dlltool.c:3824
+#, c-format
+msgid "   -h --help                 Display this information.\n"
+msgstr "   -h --help                 Виведення цієї інформації.\n"
+
+#: dlltool.c:3825
+#, c-format
+msgid "   @<file>                   Read options from <file>.\n"
+msgstr "   @<файл>                   Читати ключі з <файлу>.\n"
+
+#: dlltool.c:3827
+#, c-format
+msgid ""
+"   -M --mcore-elf <outname>  Process mcore-elf object files into <outname>.\n"
+msgstr ""
+"   -M --mcore-elf <вих_назва> Обробка об'єктного файлу mcore-elf у "
+"<вих_назва>.\n"
+
+#: dlltool.c:3828
+#, c-format
+msgid "   -L --linker <name>        Use <name> as the linker.\n"
+msgstr ""
+"   -L --linker <назва>       Використання <назви> у якості компонувальника.\n"
+
+#: dlltool.c:3829
+#, c-format
+msgid "   -F --linker-flags <flags> Pass <flags> to the linker.\n"
+msgstr "   -F --linker-flags <ознаки> Передача <ознак> компонувальнику.\n"
+
+#: dlltool.c:3966
+#, c-format
+msgid "Path components stripped from dllname, '%s'."
+msgstr "Компоненти шляху, що отримані з назви dll, '%s'."
+
+#: dlltool.c:4014
+#, c-format
+msgid "Unable to open base-file: %s"
+msgstr "Неможливо відкрити base-файл: %s"
+
+#: dlltool.c:4049
+#, c-format
+msgid "Machine '%s' not supported"
+msgstr "Машина '%s' не підтримується"
+
+#: dlltool.c:4118
+#, c-format
+msgid "warning: machine type (%d) not supported for delayimport."
+msgstr ""
+
+#: dlltool.c:4186 dllwrap.c:201
+#, c-format
+msgid "Tried file: %s"
+msgstr "Випробуваний файл: %s"
+
+#: dlltool.c:4193 dllwrap.c:208
+#, c-format
+msgid "Using file: %s"
+msgstr "Використовується файл: %s"
+
+#: dllwrap.c:291
+#, c-format
+msgid "Keeping temporary base file %s"
+msgstr "Вставляється тимчасовий base-файл %s"
+
+#: dllwrap.c:293
+#, c-format
+msgid "Deleting temporary base file %s"
+msgstr "Видаляється тимчасовий base-файл %s"
+
+#: dllwrap.c:307
+#, c-format
+msgid "Keeping temporary exp file %s"
+msgstr "Залишається тимчасовий exp-файл %s"
+
+#: dllwrap.c:309
+#, c-format
+msgid "Deleting temporary exp file %s"
+msgstr "Видаляється тимчасовий exp-файл %s"
+
+#: dllwrap.c:322
+#, c-format
+msgid "Keeping temporary def file %s"
+msgstr "Залишається тимчасовий def-файл %s"
+
+#: dllwrap.c:324
+#, c-format
+msgid "Deleting temporary def file %s"
+msgstr "Видаляється тимчасовий def-файл %s"
+
+#: dllwrap.c:472
+#, c-format
+msgid "  Generic options:\n"
+msgstr "  Загальні ключі:\n"
+
+#: dllwrap.c:473
+#, c-format
+msgid "   @<file>                Read options from <file>\n"
+msgstr "   @<файл>                Читати ключі з <файла>\n"
+
+#: dllwrap.c:474
+#, c-format
+msgid "   --quiet, -q            Work quietly\n"
+msgstr "   --quiet, -q            Мовчазний режим\n"
+
+#: dllwrap.c:475
+#, c-format
+msgid "   --verbose, -v          Verbose\n"
+msgstr "   --verbose, -v          Докладний режим\n"
+
+#: dllwrap.c:476
+#, c-format
+msgid "   --version              Print dllwrap version\n"
+msgstr "   --version              Виведення версії dllwrap\n"
+
+#: dllwrap.c:477
+#, c-format
+msgid "   --implib <outname>     Synonym for --output-lib\n"
+msgstr "   --implib <вых_назва>     Синонім для --output-lib\n"
+
+#: dllwrap.c:478
+#, c-format
+msgid "  Options for %s:\n"
+msgstr "  Ключі для %s:\n"
+
+#: dllwrap.c:479
+#, c-format
+msgid "   --driver-name <driver> Defaults to \"gcc\"\n"
+msgstr "   --driver-name <драйвер> Типові значення для \"gcc\"\n"
+
+#: dllwrap.c:480
+#, c-format
+msgid "   --driver-flags <flags> Override default ld flags\n"
+msgstr "   --driver-flags <ознаки> Типові перевизначення ключів ld\n"
+
+#: dllwrap.c:481
+#, c-format
+msgid "   --dlltool-name <dlltool> Defaults to \"dlltool\"\n"
+msgstr "   --dlltool-name <dlltool> Типові значення для \"dlltool\"\n"
+
+#: dllwrap.c:482
+#, c-format
+msgid "   --entry <entry>        Specify alternate DLL entry point\n"
+msgstr "   --entry <пункт>        Визначення альтернативної точки входу DLL\n"
+
+#: dllwrap.c:483
+#, c-format
+msgid "   --image-base <base>    Specify image base address\n"
+msgstr "   --image-base <base>    Визначення базового адреса образа\n"
+
+#: dllwrap.c:484
+#, c-format
+msgid "   --target <machine>     i386-cygwin32 or i386-mingw32\n"
+msgstr "   --target <машина>      i386-cygwin32 або i386-mingw32\n"
+
+#: dllwrap.c:485
+#, c-format
+msgid "   --dry-run              Show what needs to be run\n"
+msgstr "   --dry-run              Показати, що повинно бути запущено\n"
+
+#: dllwrap.c:486
+#, c-format
+msgid "   --mno-cygwin           Create Mingw DLL\n"
+msgstr "   --mno-cygwin           Створення Mingw DLL\n"
+
+#: dllwrap.c:487
+#, c-format
+msgid "  Options passed to DLLTOOL:\n"
+msgstr "  Ключі, що передаються у DLLTOOL:\n"
+
+#: dllwrap.c:488
+#, c-format
+msgid "   --machine <machine>\n"
+msgstr "   --machine <машина>\n"
+
+#: dllwrap.c:489
+#, c-format
+msgid "   --output-exp <outname> Generate export file.\n"
+msgstr "   --output-exp <вих_назва> Створення файлу експорту.\n"
+
+#: dllwrap.c:490
+#, c-format
+msgid "   --output-lib <outname> Generate input library.\n"
+msgstr "   --output-lib <вых_назва> Створення вхідної бібліотеки.\n"
+
+#: dllwrap.c:491
+#, c-format
+msgid "   --add-indirect         Add dll indirects to export file.\n"
+msgstr "   --add-indirect         Додавання непрямих dll у файл експорту.\n"
+
+#: dllwrap.c:492
+#, c-format
+msgid "   --dllname <name>       Name of input dll to put into output lib.\n"
+msgstr ""
+"   --dllname <назва>        Назва вхідної dll для вставляння у бібліотеку "
+"для виводу.\n"
+
+#: dllwrap.c:493
+#, c-format
+msgid "   --def <deffile>        Name input .def file\n"
+msgstr "   --def <def-файл>       Назва вхідного файлу .def\n"
+
+#: dllwrap.c:494
+#, c-format
+msgid "   --output-def <deffile> Name output .def file\n"
+msgstr "   --output-def <def-файл> Назва файлу виводу .def\n"
+
+#: dllwrap.c:495
+#, c-format
+msgid "   --export-all-symbols     Export all symbols to .def\n"
+msgstr "   --export-all-symbols     Експорт всіх символів у .def\n"
+
+#: dllwrap.c:496
+#, c-format
+msgid "   --no-export-all-symbols  Only export .drectve symbols\n"
+msgstr "   --no-export-all-symbols  Експорт лише символів .drectve\n"
+
+#: dllwrap.c:497
+#, c-format
+msgid "   --exclude-symbols <list> Exclude <list> from .def\n"
+msgstr "   --exclude-symbols <список> Виключити <список> з .def\n"
+
+#: dllwrap.c:498
+#, c-format
+msgid "   --no-default-excludes    Zap default exclude symbols\n"
+msgstr "   --no-default-excludes    Видалення типових символів виключення\n"
+
+#: dllwrap.c:499
+#, c-format
+msgid "   --base-file <basefile> Read linker generated base file\n"
+msgstr ""
+"   --base-file <base-файл> Читання створеного компонувальником base-файла.\n"
+
+#: dllwrap.c:500
+#, c-format
+msgid "   --no-idata4           Don't generate idata$4 section\n"
+msgstr "   --no-idata4           Не створювати розділ idata$4.\n"
+
+#: dllwrap.c:501
+#, c-format
+msgid "   --no-idata5           Don't generate idata$5 section\n"
+msgstr "   --no-idata5           Не створювати розділ idata$5.\n"
+
+#: dllwrap.c:502
+#, c-format
+msgid "   -U                     Add underscores to .lib\n"
+msgstr "   -U                     Додавання символів підкреслення в .lib\n"
+
+#: dllwrap.c:503
+#, c-format
+msgid "   -k                     Kill @<n> from exported names\n"
+msgstr "   -k                     Видалення @<n> з експортованих назв.\n"
+
+#: dllwrap.c:504
+#, c-format
+msgid "   --add-stdcall-alias    Add aliases without @<n>\n"
+msgstr "   --add-stdcall-alias    Додавання псевдонімів без @<n>\n"
+
+#: dllwrap.c:505
+#, c-format
+msgid "   --as <name>            Use <name> for assembler\n"
+msgstr "   --as <назва>             Використання <назви> для асемблера\n"
+
+#: dllwrap.c:506
+#, c-format
+msgid "   --nodelete             Keep temp files.\n"
+msgstr "   --nodelete             Залишати тимчасові файли.\n"
+
+#: dllwrap.c:507
+#, c-format
+msgid "  Rest are passed unmodified to the language driver\n"
+msgstr "  Решта без змін передано драйверу мови\n"
+
+#: dllwrap.c:781
+msgid "Must provide at least one of -o or --dllname options"
+msgstr "Потрібно надати принаймні один з параметрів -o або --dllname"
+
+#: dllwrap.c:810
+msgid ""
+"no export definition file provided.\n"
+"Creating one, but that may not be what you want"
+msgstr ""
+"не наданий файл опису експорту.\n"
+"Він створюється, але це може бути не те, що вам потрібно"
+
+#: dllwrap.c:969
+#, c-format
+msgid "DLLTOOL name    : %s\n"
+msgstr "DLLTOOL назва     : %s\n"
+
+#: dllwrap.c:970
+#, c-format
+msgid "DLLTOOL options : %s\n"
+msgstr "DLLTOOL ключі   : %s\n"
+
+#: dllwrap.c:971
+#, c-format
+msgid "DRIVER name     : %s\n"
+msgstr "DRIVER назва      : %s\n"
+
+#: dllwrap.c:972
+#, c-format
+msgid "DRIVER options  : %s\n"
+msgstr "DRIVER ключі    : %s\n"
+
+#: dwarf.c:106 dwarf.c:155 readelf.c:363 readelf.c:531
+#, c-format
+msgid "Unhandled data length: %d\n"
+msgstr "Довжина даних, що не обробляються: %d\n"
+
+#: dwarf.c:304 dwarf.c:2649
+msgid "badly formed extended line op encountered!\n"
+msgstr "виявлено неправильно сформований розширений line-up!\n"
+
+#: dwarf.c:311
+#, c-format
+msgid "  Extended opcode %d: "
+msgstr "  Розширений код операції %d: "
+
+#: dwarf.c:316
+#, c-format
+msgid ""
+"End of Sequence\n"
+"\n"
+msgstr ""
+"Кінець послідовності\n"
+"\n"
+
+#: dwarf.c:322
+#, c-format
+msgid "set Address to 0x%lx\n"
+msgstr "встановлення адреси у 0x%lx\n"
+
+#: dwarf.c:327
+#, c-format
+msgid "  define new File Table entry\n"
+msgstr "  визначення нового пункту таблиці файлів\n"
+
+#: dwarf.c:328 dwarf.c:2263
+#, c-format
+msgid "  Entry\tDir\tTime\tSize\tName\n"
+msgstr "  Пункт\tКаталог\tЧас\tРозмір\tНазва\n"
+
+#: dwarf.c:330
+#, c-format
+msgid "   %d\t"
+msgstr "   %d\t"
+
+#: dwarf.c:333 dwarf.c:335 dwarf.c:337 dwarf.c:2275 dwarf.c:2277 dwarf.c:2279
+#, c-format
+msgid "%lu\t"
+msgstr "%lu\t"
+
+#: dwarf.c:338
+#, c-format
+msgid ""
+"%s\n"
+"\n"
+msgstr ""
+"%s\n"
+"\n"
+
+#: dwarf.c:342
+#, fuzzy, c-format
+msgid "set Discriminator to %lu\n"
+msgstr "  Встановлення стовпчика в %lu\n"
+
+#. The test against DW_LNW_hi_user is redundant due to
+#. the limited range of the unsigned char data type used
+#. for op_code.
+#. && op_code <= DW_LNE_hi_user
+#: dwarf.c:384
+#, fuzzy, c-format
+msgid "user defined: length %d\n"
+msgstr "(Визначене користувачем розміщення операції)"
+
+#: dwarf.c:386 dwarf.c:2680
+#, c-format
+msgid "UNKNOWN: length %d\n"
+msgstr "НЕВІДОМИЙ: довжина %d\n"
+
+#: dwarf.c:399
+msgid "<no .debug_str section>"
+msgstr "<немає розділу .debug_str>"
+
+#: dwarf.c:405
+#, c-format
+msgid "DW_FORM_strp offset too big: %lx\n"
+msgstr "Надто великий зсув DW_FORM_strp: %lx\n"
+
+#: dwarf.c:406
+msgid "<offset is too big>"
+msgstr "<надто великий зсув>"
+
+#: dwarf.c:639
+#, c-format
+msgid "Unknown TAG value: %lx"
+msgstr "Невідоме значення TAG: %lx"
+
+#: dwarf.c:675
+#, c-format
+msgid "Unknown FORM value: %lx"
+msgstr "Невідоме значення FORM: %lx"
+
+#: dwarf.c:684
+#, c-format
+msgid " %lu byte block: "
+msgstr " %lu-байтовий блок: "
+
+#: dwarf.c:1102
+#, c-format
+msgid "(User defined location op)"
+msgstr "(Визначене користувачем розміщення операції)"
+
+#: dwarf.c:1104
+#, c-format
+msgid "(Unknown location op)"
+msgstr "(Невідоме розміщення операції)"
+
+#: dwarf.c:1152
+msgid "Internal error: DWARF version is not 2 or 3.\n"
+msgstr "Внутрішня помилка: номер версії DWARF не є 2 або 3.\n"
+
+#: dwarf.c:1251
+msgid "DW_FORM_data8 is unsupported when sizeof (unsigned long) != 8\n"
+msgstr ""
+"DW_FORM_data8 не підтримується, коли sizeof (довге ціле число без знака) != "
+"8\n"
+
+#: dwarf.c:1300
+#, c-format
+msgid " (indirect string, offset: 0x%lx): %s"
+msgstr " (непрямий рядок, зсув: 0x%lx): %s"
+
+#: dwarf.c:1309
+#, c-format
+msgid "Unrecognized form: %lu\n"
+msgstr "Невідома форма: %lu\n"
+
+#: dwarf.c:1393
+#, c-format
+msgid "(not inlined)"
+msgstr "(не всередині рядка)"
+
+#: dwarf.c:1396
+#, c-format
+msgid "(inlined)"
+msgstr "(всередині рядка)"
+
+#: dwarf.c:1399
+#, c-format
+msgid "(declared as inline but ignored)"
+msgstr "(оголошений як inline, але пропущений)"
+
+#: dwarf.c:1402
+#, c-format
+msgid "(declared as inline and inlined)"
+msgstr "(оголошений як inline, так і є)"
+
+#: dwarf.c:1405
+#, c-format
+msgid "  (Unknown inline attribute value: %lx)"
+msgstr "  (Невідоме значення атрибута inline: %lx)"
+
+#: dwarf.c:1566
+#, c-format
+msgid "(location list)"
+msgstr "(список розташування)"
+
+#: dwarf.c:1585 dwarf.c:3281
+#, c-format
+msgid " [without DW_AT_frame_base]"
+msgstr " [без DW_AT_frame_base]"
+
+#: dwarf.c:1597
+#, c-format
+msgid ""
+"Offset %lx used as value for DW_AT_import attribute of DIE at offset %lx is "
+"too big.\n"
+msgstr ""
+
+#: dwarf.c:1771
+#, c-format
+msgid "Unknown AT value: %lx"
+msgstr "Невідоме значення AT: %lx "
+
+#: dwarf.c:1838
+#, c-format
+msgid "Reserved length value (%lx) found in section %s\n"
+msgstr ""
+
+#: dwarf.c:1849
+#, fuzzy, c-format
+msgid "Corrupt unit length (%lx) found in section %s\n"
+msgstr "Зміст розділу %s:\n"
+
+#: dwarf.c:1856
+#, c-format
+msgid "No comp units in %s section ?"
+msgstr "У розділі %s відсутні елементів comp?"
+
+#: dwarf.c:1865
+#, c-format
+msgid "Not enough memory for a debug info array of %u entries"
+msgstr ""
+"Недостатньо пам'яті для масиву з налагоджувальною інформацією з %u елементів"
+
+#: dwarf.c:1873 dwarf.c:2882 dwarf.c:2976 dwarf.c:3050 dwarf.c:3167
+#: dwarf.c:3316 dwarf.c:3374 dwarf.c:3571
+#, c-format
+msgid ""
+"Contents of the %s section:\n"
+"\n"
+msgstr ""
+"Зміст розділу %s:\n"
+"\n"
+
+#: dwarf.c:1881
+#, c-format
+msgid "Unable to locate %s section!\n"
+msgstr "Неможливо визначити розміщення розділу %s!\n"
+
+#: dwarf.c:1944
+#, c-format
+msgid "  Compilation Unit @ offset 0x%lx:\n"
+msgstr "  Одиниця компіляції @ зсув 0x%lx:\n"
+
+#: dwarf.c:1945
+#, fuzzy, c-format
+msgid "   Length:        0x%lx (%s)\n"
+msgstr "   Довжина:       %ld\n"
+
+#: dwarf.c:1947
+#, c-format
+msgid "   Version:       %d\n"
+msgstr "   Версія:        %d\n"
+
+#: dwarf.c:1948
+#, c-format
+msgid "   Abbrev Offset: %ld\n"
+msgstr "   Зсув скороч:  %ld\n"
+
+#: dwarf.c:1949
+#, c-format
+msgid "   Pointer Size:  %d\n"
+msgstr "   Розмір вказів: %d\n"
+
+#: dwarf.c:1955
+#, fuzzy, c-format
+msgid ""
+"Debug info is corrupted, length of CU at %lx extends beyond end of section "
+"(length = %lx)\n"
+msgstr ""
+"Налагоджувальна інформація пошкоджена, неправильна довжина (розділ %lu "
+"байтів)\n"
+
+#: dwarf.c:1964
+#, fuzzy, c-format
+msgid "CU at offset %lx contains corrupt or unsupported version number: %d.\n"
+msgstr " зі зсувом 0x%lx містить %lu пунктів:\n"
+
+#: dwarf.c:1974
+#, fuzzy, c-format
+msgid ""
+"Debug info is corrupted, abbrev offset (%lx) is larger than abbrev section "
+"size (%lx)\n"
+msgstr ""
+"Налагоджувальна інформація пошкоджена, некоректний зсув abbrev (розділ %lu "
+"байтів)\n"
+
+#: dwarf.c:2021
+#, c-format
+msgid ""
+"Bogus end-of-siblings marker detected at offset %lx in .debug_info section\n"
+msgstr ""
+
+#: dwarf.c:2025
+msgid "Further warnings about bogus end-of-sibling markers suppressed\n"
+msgstr ""
+
+#: dwarf.c:2032
+#, c-format
+msgid " <%d><%lx>: Abbrev Number: %lu"
+msgstr " <%d><%lx>: Номер абревіатури: %lu"
+
+#: dwarf.c:2049
+#, c-format
+msgid ""
+"DIE at offset %lx refers to abbreviation number %lu which does not exist\n"
+msgstr ""
+
+#: dwarf.c:2055
+#, c-format
+msgid " (%s)\n"
+msgstr " (%s)\n"
+
+#: dwarf.c:2146
+#, fuzzy, c-format
+msgid ""
+"Raw dump of debug contents of section %s:\n"
+"\n"
+msgstr ""
+"\n"
+"Дамп для налагодження змісту розділу %s:\n"
+"\n"
+
+#: dwarf.c:2184
+#, fuzzy, c-format
+msgid ""
+"The information in section %s appears to be corrupt - the section is too "
+"small\n"
+msgstr "Схоже, що рядок info пошкоджений - розділ надто малий\n"
+
+#: dwarf.c:2194 dwarf.c:2482
+msgid "Only DWARF version 2 and 3 line info is currently supported.\n"
+msgstr "Наразі підтримуються рядки info лише для DWARF версії 2 і 3.\n"
+
+#: dwarf.c:2215
+#, fuzzy, c-format
+msgid "  Offset:                      0x%lx\n"
+msgstr "  Довжина:                       %ld\n"
+
+#: dwarf.c:2216
+#, c-format
+msgid "  Length:                      %ld\n"
+msgstr "  Довжина:                       %ld\n"
+
+#: dwarf.c:2217
+#, c-format
+msgid "  DWARF Version:               %d\n"
+msgstr "  DWARF версія:                %d\n"
+
+#: dwarf.c:2218
+#, c-format
+msgid "  Prologue Length:             %d\n"
+msgstr "  Довжина прологу:               %d\n"
+
+#: dwarf.c:2219
+#, c-format
+msgid "  Minimum Instruction Length:  %d\n"
+msgstr "  Мінім. довжина інструкції:   %d\n"
+
+#: dwarf.c:2220
+#, c-format
+msgid "  Initial value of 'is_stmt':  %d\n"
+msgstr "  Поч. значення 'is_stmt':     %d\n"
+
+#: dwarf.c:2221
+#, c-format
+msgid "  Line Base:                   %d\n"
+msgstr "  Основа рядка:                %d\n"
+
+#: dwarf.c:2222
+#, c-format
+msgid "  Line Range:                  %d\n"
+msgstr "  Діапазон рядка :             %d\n"
+
+#: dwarf.c:2223
+#, c-format
+msgid "  Opcode Base:                 %d\n"
+msgstr "  Основа коду операції:        %d\n"
+
+#: dwarf.c:2232
+#, c-format
+msgid ""
+"\n"
+" Opcodes:\n"
+msgstr ""
+"\n"
+" Коди операцій:\n"
+
+#: dwarf.c:2235
+#, c-format
+msgid "  Opcode %d has %d args\n"
+msgstr "  Код операції %d містить %d аргументів\n"
+
+#: dwarf.c:2241
+#, c-format
+msgid ""
+"\n"
+" The Directory Table is empty.\n"
+msgstr ""
+"\n"
+" Таблиця каталогів порожня.\n"
+
+#: dwarf.c:2244
+#, c-format
+msgid ""
+"\n"
+" The Directory Table:\n"
+msgstr ""
+"\n"
+" Таблиця каталогів:\n"
+
+#: dwarf.c:2248
+#, c-format
+msgid "  %s\n"
+msgstr "  %s\n"
+
+#: dwarf.c:2259
+#, c-format
+msgid ""
+"\n"
+" The File Name Table is empty.\n"
+msgstr ""
+"\n"
+" Таблиця назв файлів порожня.\n"
+
+#: dwarf.c:2262
+#, c-format
+msgid ""
+"\n"
+" The File Name Table:\n"
+msgstr ""
+"\n"
+" Таблиця назв файлів:\n"
+
+#: dwarf.c:2270
+#, c-format
+msgid "  %d\t"
+msgstr "  %d\t"
+
+#: dwarf.c:2281
+#, c-format
+msgid "%s\n"
+msgstr "%s\n"
+
+#. Now display the statements.
+#: dwarf.c:2289
+#, c-format
+msgid ""
+"\n"
+" Line Number Statements:\n"
+msgstr ""
+"\n"
+" Оператори номера рядка:\n"
+
+#: dwarf.c:2305
+#, c-format
+msgid "  Special opcode %d: advance Address by %lu to 0x%lx"
+msgstr "  Спеціальний код операції %d: просування адреси на %lu в 0x%lx"
+
+#: dwarf.c:2309
+#, c-format
+msgid " and Line by %d to %d\n"
+msgstr " та рядка на %d в %d\n"
+
+#: dwarf.c:2319
+#, c-format
+msgid "  Copy\n"
+msgstr "  Копія\n"
+
+#: dwarf.c:2327
+#, c-format
+msgid "  Advance PC by %lu to 0x%lx\n"
+msgstr "  Просування лічильника команд на %lu у 0x%lx\n"
+
+#: dwarf.c:2335
+#, c-format
+msgid "  Advance Line by %d to %d\n"
+msgstr "  Просування рядка на %d у %d\n"
+
+#: dwarf.c:2342
+#, c-format
+msgid "  Set File Name to entry %d in the File Name Table\n"
+msgstr "  Встановлення назви файлу у пункт %d у таблиці назв файлів\n"
+
+#: dwarf.c:2350
+#, c-format
+msgid "  Set column to %lu\n"
+msgstr "  Встановлення стовпчика в %lu\n"
+
+#: dwarf.c:2357
+#, c-format
+msgid "  Set is_stmt to %d\n"
+msgstr "  Встановлення is_stmt в %d\n"
+
+#: dwarf.c:2362
+#, c-format
+msgid "  Set basic block\n"
+msgstr "  Встановлення базового блоку\n"
+
+#: dwarf.c:2370
+#, c-format
+msgid "  Advance PC by constant %lu to 0x%lx\n"
+msgstr "  Просування лічильника команд на константу %lu у 0x%lx\n"
+
+#: dwarf.c:2378
+#, c-format
+msgid "  Advance PC by fixed size amount %lu to 0x%lx\n"
+msgstr ""
+"  Просування лічильника команд на величину фіксованого розміру %lu в 0x%lx\n"
+
+#: dwarf.c:2383
+#, c-format
+msgid "  Set prologue_end to true\n"
+msgstr "  Встановлення prologue_end в `істина'\n"
+
+#: dwarf.c:2387
+#, c-format
+msgid "  Set epilogue_begin to true\n"
+msgstr "  Встановлення epilogue_begin в `істина'\n"
+
+#: dwarf.c:2393 dwarf.c:2758
+#, c-format
+msgid "  Set ISA to %lu\n"
+msgstr "  Встановлення ISA в %lu\n"
+
+#: dwarf.c:2397 dwarf.c:2762
+#, c-format
+msgid "  Unknown opcode %d with operands: "
+msgstr "  Невідомий код операції %d с операндами: "
+
+#: dwarf.c:2430
+#, fuzzy, c-format
+msgid ""
+"Decoded dump of debug contents of section %s:\n"
+"\n"
+msgstr ""
+"\n"
+"Дамп для налагодження змісту розділу %s:\n"
+"\n"
+
+#: dwarf.c:2472
+msgid "The line info appears to be corrupt - the section is too small\n"
+msgstr "Схоже, що рядок info пошкоджений - розділ надто малий\n"
+
+#: dwarf.c:2592
+#, c-format
+msgid "CU: %s:\n"
+msgstr ""
+
+#: dwarf.c:2593 dwarf.c:2606
+#, fuzzy, c-format
+msgid "File name                            Line number    Starting address\n"
+msgstr " Чис: Назва                          Межа        Ознаки\n"
+
+#: dwarf.c:2599
+#, c-format
+msgid "CU: %s/%s:\n"
+msgstr ""
+
+#: dwarf.c:2604 dwarf.c:2676
+#, c-format
+msgid "%s:\n"
+msgstr ""
+
+#. If directory index is 0, that means current directory.
+#: dwarf.c:2709
+#, c-format
+msgid ""
+"\n"
+"./%s:[++]\n"
+msgstr ""
+
+#. The directory index starts counting at 1.
+#: dwarf.c:2715
+#, c-format
+msgid ""
+"\n"
+"%s/%s:\n"
+msgstr ""
+
+#: dwarf.c:2800
+#, c-format
+msgid "%-35s  %11d  %#18lx\n"
+msgstr ""
+
+#: dwarf.c:2805
+#, c-format
+msgid "%s  %11d  %#18lx\n"
+msgstr ""
+
+#: dwarf.c:2835 dwarf.c:3112 dwarf.c:3534
+#, c-format
+msgid ""
+"Unable to load/parse the .debug_info section, so cannot interpret the %s "
+"section.\n"
+msgstr ""
+
+#: dwarf.c:2916 dwarf.c:3419
+#, c-format
+msgid ""
+".debug_info offset of 0x%lx in %s section does not point to a CU header.\n"
+msgstr ""
+
+#: dwarf.c:2930
+msgid "Only DWARF 2 and 3 pubnames are currently supported\n"
+msgstr "Наразі підтримуються pubname лише для DWARF версії 2 і 3\n"
+
+#: dwarf.c:2937
+#, c-format
+msgid "  Length:                              %ld\n"
+msgstr "  Довжина:                               %ld\n"
+
+#: dwarf.c:2939
+#, c-format
+msgid "  Version:                             %d\n"
+msgstr "  Версія:                              %d\n"
+
+#: dwarf.c:2941
+#, fuzzy, c-format
+msgid "  Offset into .debug_info section:     0x%lx\n"
+msgstr "  Зсув у розділ .debug_info:           %ld\n"
+
+#: dwarf.c:2943
+#, c-format
+msgid "  Size of area in .debug_info section: %ld\n"
+msgstr "  Розм. області у розділі .debug_info: %ld\n"
+
+#: dwarf.c:2946
+#, c-format
+msgid ""
+"\n"
+"    Offset\tName\n"
+msgstr ""
+"\n"
+"    Зсув\tНазва\n"
+
+#: dwarf.c:2997
+#, c-format
+msgid " DW_MACINFO_start_file - lineno: %d filenum: %d\n"
+msgstr " DW_MACINFO_start_file - номер_рядка: %d номер_файлу: %d\n"
+
+#: dwarf.c:3003
+#, c-format
+msgid " DW_MACINFO_end_file\n"
+msgstr " DW_MACINFO_end_file\n"
+
+#: dwarf.c:3011
+#, c-format
+msgid " DW_MACINFO_define - lineno : %d macro : %s\n"
+msgstr " DW_MACINFO_define - номер_рядка : %d макрос : %s\n"
+
+#: dwarf.c:3020
+#, c-format
+msgid " DW_MACINFO_undef - lineno : %d macro : %s\n"
+msgstr " DW_MACINFO_undef - номер_рядка : %d макрос : %s\n"
+
+#: dwarf.c:3032
+#, c-format
+msgid " DW_MACINFO_vendor_ext - constant : %d string : %s\n"
+msgstr " DW_MACINFO_vendor_ext - константа : %d рядок : %s\n"
+
+#: dwarf.c:3061
+#, c-format
+msgid "  Number TAG\n"
+msgstr "  Число TAG\n"
+
+#: dwarf.c:3067
+#, c-format
+msgid "   %ld      %s    [%s]\n"
+msgstr "   %ld      %s    [%s]\n"
+
+#: dwarf.c:3070
+msgid "has children"
+msgstr "має нащадків"
+
+#: dwarf.c:3070
+msgid "no children"
+msgstr "немає нащадків"
+
+#: dwarf.c:3073
+#, c-format
+msgid "    %-18s %s\n"
+msgstr "    %-18s %s\n"
+
+#: dwarf.c:3106 dwarf.c:3312 dwarf.c:3528
+#, c-format
+msgid ""
+"\n"
+"The %s section is empty.\n"
+msgstr ""
+"\n"
+"Розділ %s порожній.\n"
+
+#. FIXME: Should we handle this case?
+#: dwarf.c:3156
+msgid "Location lists in .debug_info section aren't in ascending order!\n"
+msgstr ""
+"Списки розташування у розділі .debug_info не впорядковані за зростанням!\n"
+
+#: dwarf.c:3159
+msgid "No location lists in .debug_info section!\n"
+msgstr "У розділі .debug_info немає списків розташування!\n"
+
+#: dwarf.c:3164
+#, c-format
+msgid "Location lists in %s section start at 0x%lx\n"
+msgstr "Списки розташування у розділі %s починаються с 0x%lx\n"
+
+#: dwarf.c:3168
+#, c-format
+msgid "    Offset   Begin    End      Expression\n"
+msgstr "    Зсув     Початок  Кінець   Розширення\n"
+
+#: dwarf.c:3199
+#, c-format
+msgid "There is a hole [0x%lx - 0x%lx] in .debug_loc section.\n"
+msgstr "В розділі .debug_loc існує дірка [0x%lx - 0x%lx].\n"
+
+#: dwarf.c:3203
+#, c-format
+msgid "There is an overlap [0x%lx - 0x%lx] in .debug_loc section.\n"
+msgstr "В розділі .debug_loc існує перекриття [0x%lx - 0x%lx].\n"
+
+#: dwarf.c:3211
+#, c-format
+msgid "Offset 0x%lx is bigger than .debug_loc section size.\n"
+msgstr "Зсув 0x%lx більш, ніж розмір розділу .debug_loc.\n"
+
+#: dwarf.c:3220 dwarf.c:3255 dwarf.c:3265
+#, c-format
+msgid "Location list starting at offset 0x%lx is not terminated.\n"
+msgstr "Список розташувань, починаючи із зсуву 0x%lx, не завершений.\n"
+
+#: dwarf.c:3239 dwarf.c:3622
+#, fuzzy, c-format
+msgid "<End of list>\n"
+msgstr "    %8.8lx <Кінець списку>\n"
+
+#: dwarf.c:3249
+#, fuzzy, c-format
+msgid "(base address)\n"
+msgstr "встановлення початкової адреси"
+
+#: dwarf.c:3284
+msgid " (start == end)"
+msgstr " (початок == кінець)"
+
+#: dwarf.c:3286
+msgid " (start > end)"
+msgstr " (початок > кінець)"
+
+#: dwarf.c:3296
+#, c-format
+msgid "There are %ld unused bytes at the end of section %s\n"
+msgstr ""
+
+#: dwarf.c:3430
+msgid "Only DWARF 2 and 3 aranges are currently supported.\n"
+msgstr "Наразі підтримуються вирівнювання лише для DWARF версії 2 та 3.\n"
+
+#: dwarf.c:3434
+#, c-format
+msgid "  Length:                   %ld\n"
+msgstr "  Довжина:                    %ld\n"
+
+#: dwarf.c:3435
+#, c-format
+msgid "  Version:                  %d\n"
+msgstr "  Версія:                   %d\n"
+
+#: dwarf.c:3436
+#, fuzzy, c-format
+msgid "  Offset into .debug_info:  0x%lx\n"
+msgstr "  Зсув у .debug_info:   %lx\n"
+
+#: dwarf.c:3437
+#, c-format
+msgid "  Pointer Size:             %d\n"
+msgstr "  Розмір вказівника:        %d\n"
+
+#: dwarf.c:3438
+#, c-format
+msgid "  Segment Size:             %d\n"
+msgstr "  Розмір сегменту:          %d\n"
+
+#: dwarf.c:3447
+msgid "Pointer size + Segment size is not a power of two.\n"
+msgstr "Розмір вказівника + розмір сегменту не є ступенем двійки.\n"
+
+#: dwarf.c:3452
+#, c-format
+msgid ""
+"\n"
+"    Address            Length\n"
+msgstr ""
+"\n"
+"    Адреса            Довжина\n"
+
+#: dwarf.c:3454
+#, c-format
+msgid ""
+"\n"
+"    Address    Length\n"
+msgstr ""
+"\n"
+"    Адреса    Довжина\n"
+
+#: dwarf.c:3544
+msgid "No range lists in .debug_info section!\n"
+msgstr "У розділі .debug_info немає списків діапазонів!\n"
+
+#: dwarf.c:3568
+#, c-format
+msgid "Range lists in %s section start at 0x%lx\n"
+msgstr "Списки діапазонів в розділі %s починаються с 0x%lx\n"
+
+#: dwarf.c:3572
+#, c-format
+msgid "    Offset   Begin    End\n"
+msgstr "    Зсув     Початок  Кінець\n"
+
+#: dwarf.c:3593
+#, c-format
+msgid "There is a hole [0x%lx - 0x%lx] in %s section.\n"
+msgstr "Дірка [0x%lx - 0x%lx] у розділі %s.\n"
+
+#: dwarf.c:3597
+#, c-format
+msgid "There is an overlap [0x%lx - 0x%lx] in %s section.\n"
+msgstr "Перекриття [0x%lx - 0x%lx] у розділі %s.\n"
+
+#: dwarf.c:3640
+#, fuzzy
+msgid "(start == end)"
+msgstr " (початок == кінець)"
+
+#: dwarf.c:3642
+#, fuzzy
+msgid "(start > end)"
+msgstr " (початок > кінець)"
+
+#: dwarf.c:3879
+msgid "bad register: "
+msgstr ""
+
+#: dwarf.c:3881
+#, fuzzy, c-format
+msgid "Contents of the %s section:\n"
+msgstr ""
+"Зміст розділу %s:\n"
+"\n"
+
+#: dwarf.c:4646
+#, c-format
+msgid "  DW_CFA_??? (User defined call frame op: %#x)\n"
+msgstr "  DW_CFA_??? (Визначена користувачем операція фрейму викликів: %#x)\n"
+
+#: dwarf.c:4648
+#, c-format
+msgid "unsupported or unknown Dwarf Call Frame Instruction number: %#x\n"
+msgstr ""
+"непідтримуваний або невідомий номер інструкції фрейму викликів Dwarf: %#x\n"
+
+#: dwarf.c:4672
+#, c-format
+msgid "Displaying the debug contents of section %s is not yet supported.\n"
+msgstr ""
+"Відображення налагоджувальної інформації розділу %s ще не підтримується.\n"
+
+#: dwarf.c:4714
+#, fuzzy, c-format
+msgid "%s: error: "
+msgstr "%s: Помилка: "
+
+#: dwarf.c:4725 windmc.c:296 windres.c:415
+#, c-format
+msgid "%s: warning: "
+msgstr "%s: попередження: "
+
+#: dwarf.c:4823 dwarf.c:4889
+#, c-format
+msgid "Unrecognized debug option '%s'\n"
+msgstr "Нерозпізнаний налагоджувальний ключ '%s'\n"
+
+#: emul_aix.c:43
+#, c-format
+msgid "  [-g]         - 32 bit small archive\n"
+msgstr "  [-g]         - 32-бітний маленький архів\n"
+
+#: emul_aix.c:44
+#, c-format
+msgid "  [-X32]       - ignores 64 bit objects\n"
+msgstr "  [-X32]       - пропускає 64-бітні об'єкти\n"
+
+#: emul_aix.c:45
+#, c-format
+msgid "  [-X64]       - ignores 32 bit objects\n"
+msgstr "  [-X64]       - пропускає 32-бітні об'єкти\n"
+
+#: emul_aix.c:46
+#, c-format
+msgid "  [-X32_64]    - accepts 32 and 64 bit objects\n"
+msgstr "  [-X32_64]    - допускає 32- і 64-бітні об'єкти\n"
+
+#: ieee.c:311
+msgid "unexpected end of debugging information"
+msgstr "раптове закінчення налагоджувальною інформації"
+
+#: ieee.c:398
+msgid "invalid number"
+msgstr "неправильний номер"
+
+#: ieee.c:451
+msgid "invalid string length"
+msgstr "неправильна довжина строки"
+
+#: ieee.c:506 ieee.c:547
+msgid "expression stack overflow"
+msgstr "переповнення стеку виразу"
+
+#: ieee.c:526
+msgid "unsupported IEEE expression operator"
+msgstr "непідтримуваний оператор виразу IEEE"
+
+#: ieee.c:541
+msgid "unknown section"
+msgstr "невідомий розділ"
+
+#: ieee.c:562
+msgid "expression stack underflow"
+msgstr "спустошення стеку виразу"
+
+#: ieee.c:576
+msgid "expression stack mismatch"
+msgstr "невідповідність стеку виразу"
+
+#: ieee.c:613
+msgid "unknown builtin type"
+msgstr "невідомий вбудований тип"
+
+#: ieee.c:758
+msgid "BCD float type not supported"
+msgstr "Двійково-кодований десятковий тип з плаваючою комою не підтримується"
+
+#: ieee.c:895
+msgid "unexpected number"
+msgstr "неочікуване число"
+
+#: ieee.c:902
+msgid "unexpected record type"
+msgstr "несподіваний комбінований тип"
+
+#: ieee.c:935
+msgid "blocks left on stack at end"
+msgstr "наприкінці стеку залишились блоки"
+
+#: ieee.c:1208
+msgid "unknown BB type"
+msgstr "невідомий тип BB"
+
+#: ieee.c:1217
+msgid "stack overflow"
+msgstr "переповнення стеку"
+
+#: ieee.c:1240
+msgid "stack underflow"
+msgstr "спустошення стеку"
+
+#: ieee.c:1352 ieee.c:1422 ieee.c:2120
+msgid "illegal variable index"
+msgstr "неправильний індекс змінної"
+
+#: ieee.c:1400
+msgid "illegal type index"
+msgstr "неправильний індекс типу"
+
+#: ieee.c:1410 ieee.c:1447
+msgid "unknown TY code"
+msgstr "невідомий код TY"
+
+#: ieee.c:1429
+msgid "undefined variable in TY"
+msgstr "невизначена змінна в TY"
+
+#. Pascal file name.  FIXME.
+#: ieee.c:1841
+msgid "Pascal file name not supported"
+msgstr "Назви файлу у стилі Pascal не підтримується"
+
+#: ieee.c:1889
+msgid "unsupported qualifier"
+msgstr "непідтримуваний класифікатор"
+
+#: ieee.c:2158
+msgid "undefined variable in ATN"
+msgstr "невизначена змінна в ATN"
+
+#: ieee.c:2201
+msgid "unknown ATN type"
+msgstr "невідомий тип ATN"
+
+#. Reserved for FORTRAN common.
+#: ieee.c:2323
+msgid "unsupported ATN11"
+msgstr "непідтримуваний ATN11"
+
+#. We have no way to record this information.  FIXME.
+#: ieee.c:2350
+msgid "unsupported ATN12"
+msgstr "непідтримуваний ATN12"
+
+#: ieee.c:2410
+msgid "unexpected string in C++ misc"
+msgstr "неочікуваний рядок у C++ misc"
+
+#: ieee.c:2423
+msgid "bad misc record"
+msgstr "некоректний запис misc"
+
+#: ieee.c:2464
+msgid "unrecognized C++ misc record"
+msgstr "нерозпізнаний запис C++ misc"
+
+#: ieee.c:2579
+msgid "undefined C++ object"
+msgstr "невизначений об'єкт C++"
+
+#: ieee.c:2613
+msgid "unrecognized C++ object spec"
+msgstr "нерозпізнана специфікація об'єкту C++"
+
+#: ieee.c:2649
+msgid "unsupported C++ object type"
+msgstr "нерозпізнаний тип об'єкту C++"
+
+#: ieee.c:2659
+msgid "C++ base class not defined"
+msgstr "базовий клас C++ не визначений"
+
+#: ieee.c:2671 ieee.c:2776
+msgid "C++ object has no fields"
+msgstr "об'єкт C++ не має полів"
+
+#: ieee.c:2690
+msgid "C++ base class not found in container"
+msgstr "базовий клас C++ не знайдений у контейнері"
+
+#: ieee.c:2797
+msgid "C++ data member not found in container"
+msgstr "елемент класу C++ не знайдений в контейнері"
+
+#: ieee.c:2838 ieee.c:2988
+msgid "unknown C++ visibility"
+msgstr "невідома видимість C++"
+
+#: ieee.c:2872
+msgid "bad C++ field bit pos or size"
+msgstr "неправильний двійковий розряд або розмір поля C++"
+
+#: ieee.c:2964
+msgid "bad type for C++ method function"
+msgstr "неправильний тип функції методу C++"
+
+#: ieee.c:2974
+msgid "no type information for C++ method function"
+msgstr "немає інформації про тип для функції методу C++"
+
+#: ieee.c:3013
+msgid "C++ static virtual method"
+msgstr "статичний віртуальний метод C++"
+
+#: ieee.c:3108
+msgid "unrecognized C++ object overhead spec"
+msgstr "нерозпізнана службова специфікація об'єкту C++"
+
+#: ieee.c:3147
+msgid "undefined C++ vtable"
+msgstr "невизначена віртуальна таблиця C++"
+
+#: ieee.c:3216
+msgid "C++ default values not in a function"
+msgstr "типові значення C++ не у функції"
+
+#: ieee.c:3256
+msgid "unrecognized C++ default type"
+msgstr "нерозпізнаний типовий тип C++"
+
+#: ieee.c:3287
+msgid "reference parameter is not a pointer"
+msgstr "параметр-посилання не є вказівником"
+
+#: ieee.c:3370
+msgid "unrecognized C++ reference type"
+msgstr "нерозпізнаний тип посилання C++"
+
+#: ieee.c:3452
+msgid "C++ reference not found"
+msgstr "посилання C++ не знайдено"
+
+#: ieee.c:3460
+msgid "C++ reference is not pointer"
+msgstr "посилання C++ не є вказівником"
+
+#: ieee.c:3486 ieee.c:3494
+msgid "missing required ASN"
+msgstr "відсутній необхідний ASN"
+
+#: ieee.c:3521 ieee.c:3529
+msgid "missing required ATN65"
+msgstr "відсутній необхідний ATN65"
+
+#: ieee.c:3543
+msgid "bad ATN65 record"
+msgstr "некоректний запис ATN65"
+
+#: ieee.c:4171
+#, c-format
+msgid "IEEE numeric overflow: 0x"
+msgstr "числове переповнення IEEE: 0x"
+
+#: ieee.c:4215
+#, c-format
+msgid "IEEE string length overflow: %u\n"
+msgstr "переповнення довжини рядка IEEE: %u\n"
+
+#: ieee.c:5212
+#, c-format
+msgid "IEEE unsupported integer type size %u\n"
+msgstr "непідтримуваний розмір цілого типу IEEE %u\n"
+
+#: ieee.c:5246
+#, c-format
+msgid "IEEE unsupported float type size %u\n"
+msgstr "непідтримуваний розмір типу з плаваючою комою IEEE %u\n"
+
+#: ieee.c:5280
+#, c-format
+msgid "IEEE unsupported complex type size %u\n"
+msgstr "непідтримуваний розмір комплексного типу IEEE%u\n"
+
+#: mclex.c:241
+msgid "Duplicate symbol entered into keyword list."
+msgstr "У списку ключових слів введено дублікат символу."
+
+#: nlmconv.c:273 srconv.c:1822
+msgid "input and output files must be different"
+msgstr "вхідний файл та файл виводу мають бути різними"
+
+#: nlmconv.c:320
+msgid "input file named both on command line and with INPUT"
+msgstr "вхідний файл вказаний як у командному рядку так і в INPUT"
+
+#: nlmconv.c:329
+msgid "no input file"
+msgstr "вхідний файл відсутній"
+
+#: nlmconv.c:359
+msgid "no name for output file"
+msgstr "не вказано назву файлу виводу"
+
+#: nlmconv.c:373
+msgid "warning: input and output formats are not compatible"
+msgstr "попередження: вхідний формат та формат виводу несумісні"
+
+#: nlmconv.c:403
+msgid "make .bss section"
+msgstr "створення розділу .bss"
+
+#: nlmconv.c:413
+msgid "make .nlmsections section"
+msgstr "створення розділу .nlmsections"
+
+#: nlmconv.c:441
+msgid "set .bss vma"
+msgstr "встановлення .bss vma"
+
+#: nlmconv.c:448
+msgid "set .data size"
+msgstr "встановлення розміру .data"
+
+#: nlmconv.c:628
+#, c-format
+msgid "warning: symbol %s imported but not in import list"
+msgstr ""
+"попередження: символ %s імпортований, але він відсутній у списку імпорту"
+
+#: nlmconv.c:648
+msgid "set start address"
+msgstr "встановлення початкової адреси"
+
+#: nlmconv.c:697
+#, c-format
+msgid "warning: START procedure %s not defined"
+msgstr "попередження: START-процедура %s не визначена"
+
+#: nlmconv.c:699
+#, c-format
+msgid "warning: EXIT procedure %s not defined"
+msgstr "попередження: EXIT-процедура %s не визначена"
+
+#: nlmconv.c:701
+#, c-format
+msgid "warning: CHECK procedure %s not defined"
+msgstr "попередження: CHECK-процедура %s не визначена"
+
+#: nlmconv.c:721 nlmconv.c:907
+msgid "custom section"
+msgstr "розділ custom"
+
+#: nlmconv.c:741 nlmconv.c:936
+msgid "help section"
+msgstr "розділ help"
+
+#: nlmconv.c:763 nlmconv.c:954
+msgid "message section"
+msgstr "розділ message"
+
+#: nlmconv.c:778 nlmconv.c:987
+msgid "module section"
+msgstr "розділ module"
+
+#: nlmconv.c:797 nlmconv.c:1003
+msgid "rpc section"
+msgstr "розділ rpc"
+
+#. There is no place to record this information.
+#: nlmconv.c:833
+#, c-format
+msgid "%s: warning: shared libraries can not have uninitialized data"
+msgstr ""
+"%s: попередження: бібліотеки спільного використання не можуть мати "
+"неініціалізовані дані"
+
+#: nlmconv.c:854 nlmconv.c:1022
+msgid "shared section"
+msgstr "розділ shared"
+
+#: nlmconv.c:862
+msgid "warning: No version number given"
+msgstr "попередження: Не вказаний номер версії"
+
+#: nlmconv.c:902 nlmconv.c:931 nlmconv.c:949 nlmconv.c:998 nlmconv.c:1017
+#, c-format
+msgid "%s: read: %s"
+msgstr "%s: читання: %s"
+
+#: nlmconv.c:924
+msgid "warning: FULLMAP is not supported; try ld -M"
+msgstr "попередження: FULLMAP не підтримується; спробуйте ld -M"
+
+#: nlmconv.c:1100
+#, c-format
+msgid "Usage: %s [option(s)] [in-file [out-file]]\n"
+msgstr "Використання: %s [ключі] [in-файл [out-файл]]\n"
+
+#: nlmconv.c:1101
+#, c-format
+msgid " Convert an object file into a NetWare Loadable Module\n"
+msgstr ""
+" Перетворює об'єктний файл на завантажувальний модуль системи NetWare\n"
+
+#: nlmconv.c:1102
+#, c-format
+msgid ""
+" The options are:\n"
+"  -I --input-target=<bfdname>   Set the input binary file format\n"
+"  -O --output-target=<bfdname>  Set the output binary file format\n"
+"  -T --header-file=<file>       Read <file> for NLM header information\n"
+"  -l --linker=<linker>          Use <linker> for any linking\n"
+"  -d --debug                    Display on stderr the linker command line\n"
+"  @<file>                       Read options from <file>.\n"
+"  -h --help                     Display this information\n"
+"  -v --version                  Display the program's version\n"
+msgstr ""
+" Ключі:\n"
+"  -I --input-target=<bfd-назва> Встановлення формату вхідного двійкового "
+"файлу\n"
+"  -O --output-target=<bfd-назва> Встановлення формату виводу двійкового "
+"файлу\n"
+"  -T --header-file=<файл>       Читання <файла> с інформацією заголовку NLM\n"
+"  -l --linker=<компонувальник>  Використання <компонувальника> для будь-"
+"якого типу зв'язування\n"
+"  -d --debug                    Виведення на stderr командного рядка "
+"компонувальника\n"
+"  @<файл>                       Читати ключі з <файла>\n"
+"  -h --help                     Виведення цієї інформації\n"
+"  -v --version                  Виведення версії програми\n"
+
+#: nlmconv.c:1143
+#, c-format
+msgid "support not compiled in for %s"
+msgstr "скомпільовано без підтримки %s"
+
+#: nlmconv.c:1180
+msgid "make section"
+msgstr "розділ make"
+
+#: nlmconv.c:1194
+msgid "set section size"
+msgstr "встановлення розміру розділу"
+
+#: nlmconv.c:1200
+msgid "set section alignment"
+msgstr "встановлення орієнтації розділу"
+
+#: nlmconv.c:1204
+msgid "set section flags"
+msgstr "встановлення ознак розділу"
+
+#: nlmconv.c:1215
+msgid "set .nlmsections size"
+msgstr "встановлення розміру .nlmsections"
+
+#: nlmconv.c:1296 nlmconv.c:1304 nlmconv.c:1313 nlmconv.c:1318
+msgid "set .nlmsection contents"
+msgstr "встановлення змісту .nlmsections"
+
+#: nlmconv.c:1795
+msgid "stub section sizes"
+msgstr "розміри розділу заглушки"
+
+#: nlmconv.c:1842
+msgid "writing stub"
+msgstr "записується заглушка"
+
+#: nlmconv.c:1926
+#, c-format
+msgid "unresolved PC relative reloc against %s"
+msgstr "нерозпізнане відносне переміщення у лічильнику команд в %s"
+
+#: nlmconv.c:1990
+#, c-format
+msgid "overflow when adjusting relocation against %s"
+msgstr "переповнення при регулюванні переміщення в %s"
+
+#: nlmconv.c:2117
+#, c-format
+msgid "%s: execution of %s failed: "
+msgstr "%s: виконання %s завершилось невдало: "
+
+#: nlmconv.c:2132
+#, c-format
+msgid "Execution of %s failed"
+msgstr "Виконання %s завершилось невдало"
+
+#: nm.c:220 size.c:78 strings.c:659
+#, c-format
+msgid "Usage: %s [option(s)] [file(s)]\n"
+msgstr "Використання: %s [ключі] [файл(и)]\n"
+
+#: nm.c:221
+#, c-format
+msgid " List symbols in [file(s)] (a.out by default).\n"
+msgstr " Виведення списку символів у [файл(и)] (типово в a.out).\n"
+
+#: nm.c:222
+#, fuzzy, c-format
+msgid ""
+" The options are:\n"
+"  -a, --debug-syms       Display debugger-only symbols\n"
+"  -A, --print-file-name  Print name of the input file before every symbol\n"
+"  -B                     Same as --format=bsd\n"
+"  -C, --demangle[=STYLE] Decode low-level symbol names into user-level "
+"names\n"
+"                          The STYLE, if specified, can be `auto' (the "
+"default),\n"
+"                          `gnu', `lucid', `arm', `hp', `edg', `gnu-v3', "
+"`java'\n"
+"                          or `gnat'\n"
+"      --no-demangle      Do not demangle low-level symbol names\n"
+"  -D, --dynamic          Display dynamic symbols instead of normal symbols\n"
+"      --defined-only     Display only defined symbols\n"
+"  -e                     (ignored)\n"
+"  -f, --format=FORMAT    Use the output format FORMAT.  FORMAT can be "
+"`bsd',\n"
+"                           `sysv' or `posix'.  The default is `bsd'\n"
+"  -g, --extern-only      Display only external symbols\n"
+"  -l, --line-numbers     Use debugging information to find a filename and\n"
+"                           line number for each symbol\n"
+"  -n, --numeric-sort     Sort symbols numerically by address\n"
+"  -o                     Same as -A\n"
+"  -p, --no-sort          Do not sort the symbols\n"
+"  -P, --portability      Same as --format=posix\n"
+"  -r, --reverse-sort     Reverse the sense of the sort\n"
+msgstr ""
+" Ключі:\n"
+"  -a, --debug-syms       Виведення лише налагоджувальних символів\n"
+"  -A, --print-file-name  Виведення назви вхідної файлу перед кожним "
+"символом\n"
+"  -B                     То же, що і  --format=bsd\n"
+"  -C, --demangle[=СТИЛЬ] Декодування низькорівневих назв символів у назви\n"
+"                         рівня користувача\n"
+"                          СТИЛЬ, якщо вказаний, може бути `auto' (типово),\n"
+"                          `gnu', `lucid', `arm', `hp', `edg', `gnu-v3', "
+"`java'\n"
+"                          або `gnat'\n"
+"      --no-demangle      Не декодувати низькорівневі назви символів\n"
+"  -D, --dynamic          Виведення динамічних символів замість звичайних "
+"символів\n"
+"      --defined-only     Виведення лише визначених символів\n"
+"  -e                     (ігнорується)\n"
+"  -f, --format=ФОРМАТ    Використання ФОРМАТ у якості формату виводу.\n"
+"                         ФОРМАТ може бути `bsd', `sysv' або `posix'.\n"
+"                         Типово використовується `bsd'.\n"
+"  -g, --extern-only      Виведення лише зовнішніх символів\n"
+"  -l, --line-numbers     Використання налагоджувальної інформації для "
+"пошуку\n"
+"                         назви файлу і номеру рядка для кожного символу\n"
+"  -n, --numeric-sort     Сортування символів за адресою\n"
+"  -o                     То же, що і -A\n"
+"  -p, --no-sort          Без сортування символів\n"
+"  -P, --portability      Те ж, що й --format=posix\n"
+"  -r, --reverse-sort     Сортування у зворотному порядку\n"
+"  -S, --print-size       Виведення розміру визначених символів\n"
+"  -s, --print-armap      Включення індексу для символів з членів архіву\n"
+"      --size-sort        Сортування символів за розміром\n"
+"      --special-syms     Включення спеціальних символів у дані, що "
+"виводяться\n"
+"      --synthetic        Виведення також синтетичних символів\n"
+"  -t, --radix=RADIX      Використання RADIX для виводу значень символів\n"
+"      --target=BFD-НАЗВА Вказування цільового формату об'єкту як BFD-НАЗВА\n"
+"  -u, --undefined-only   Виведення лише не визначених символів\n"
+"  -X 32_64               (ігнорується)\n"
+"  @ФАЙЛ                  Читати ключі з ФАЙЛУ\n"
+"  -h, --help             Виведення цієї інформації\n"
+"  -V, --version          Виведення номера версії програми\n"
+"\n"
+
+#: nm.c:245
+#, c-format
+msgid "      --plugin NAME      Load the specified plugin\n"
+msgstr ""
+
+#: nm.c:248
+#, c-format
+msgid ""
+"  -S, --print-size       Print size of defined symbols\n"
+"\t\t  -s, --print-armap      Include index for symbols from archive members\n"
+"      --size-sort        Sort symbols by size\n"
+"      --special-syms     Include special symbols in the output\n"
+"      --synthetic        Display synthetic symbols as well\n"
+"  -t, --radix=RADIX      Use RADIX for printing symbol values\n"
+"      --target=BFDNAME   Specify the target object format as BFDNAME\n"
+"  -u, --undefined-only   Display only undefined symbols\n"
+"  -X 32_64               (ignored)\n"
+"  @FILE                  Read options from FILE\n"
+"  -h, --help             Display this information\n"
+"  -V, --version          Display this program's version number\n"
+"\n"
+msgstr ""
+
+#: nm.c:292
+#, c-format
+msgid "%s: invalid radix"
+msgstr "%s: неправильний radix"
+
+#: nm.c:316
+#, c-format
+msgid "%s: invalid output format"
+msgstr "%s: неправильний формат виводу"
+
+#: nm.c:337 readelf.c:7159 readelf.c:7204
+#, c-format
+msgid "<processor specific>: %d"
+msgstr "<специфічний для процесору>: %d"
+
+#: nm.c:339 readelf.c:7168 readelf.c:7222
+#, c-format
+msgid "<OS specific>: %d"
+msgstr "<специфічний для ОС>: %d"
+
+#: nm.c:341 readelf.c:7171 readelf.c:7225
+#, c-format
+msgid "<unknown>: %d"
+msgstr "<невідомий>: %d"
+
+#: nm.c:381
+#, c-format
+msgid ""
+"\n"
+"Archive index:\n"
+msgstr ""
+"\n"
+"Індекс архіву:\n"
+
+#: nm.c:1242
+#, c-format
+msgid ""
+"\n"
+"\n"
+"Undefined symbols from %s:\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"Невизначені символи з %s:\n"
+"\n"
+
+#: nm.c:1244
+#, c-format
+msgid ""
+"\n"
+"\n"
+"Symbols from %s:\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"Символи з %s:\n"
+"\n"
+
+#: nm.c:1246 nm.c:1297
+#, c-format
+msgid ""
+"Name                  Value   Class        Type         Size     Line  "
+"Section\n"
+"\n"
+msgstr ""
+"Назва                 Значення Клас        Тип          Розмір   Рядок "
+"Розділ\n"
+"\n"
+
+#: nm.c:1249 nm.c:1300
+#, c-format
+msgid ""
+"Name                  Value           Class        Type         "
+"Size             Line  Section\n"
+"\n"
+msgstr ""
+"Назва                 Значення        Клас         Тип          "
+"Розмір           Рядок Розділ\n"
+"\n"
+
+#: nm.c:1293
+#, c-format
+msgid ""
+"\n"
+"\n"
+"Undefined symbols from %s[%s]:\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"Невизначені символи з %s[%s]:\n"
+"\n"
+
+#: nm.c:1295
+#, c-format
+msgid ""
+"\n"
+"\n"
+"Symbols from %s[%s]:\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"Символи з %s[%s]:\n"
+"\n"
+
+#: nm.c:1387
+#, c-format
+msgid "Print width has not been initialized (%d)"
+msgstr "Ширина друку не була ініціалізована (%d)"
+
+#: nm.c:1615
+msgid "Only -X 32_64 is supported"
+msgstr "Підтримуються лише -X 32_64"
+
+#: nm.c:1643
+msgid "Using the --size-sort and --undefined-only options together"
+msgstr "Використання разом ключів --size-sort та --undefined-only"
+
+#: nm.c:1644
+msgid "will produce no output, since undefined symbols have no size."
+msgstr "не дає даних на вивід, оскільки невизначені символи не мають розмір."
+
+#: nm.c:1672
+#, c-format
+msgid "data size %ld"
+msgstr "розмір даних %ld"
+
+#: objcopy.c:463 srconv.c:1730
+#, c-format
+msgid "Usage: %s [option(s)] in-file [out-file]\n"
+msgstr "Використання: %s [ключі] in-файл [out-файл]\n"
+
+#: objcopy.c:464
+#, c-format
+msgid " Copies a binary file, possibly transforming it in the process\n"
+msgstr " Копіює двійковий файл, можливо, перетворюючи його у процесі\n"
+
+#: objcopy.c:465 objcopy.c:572
+#, c-format
+msgid " The options are:\n"
+msgstr " Ключі:\n"
+
+#: objcopy.c:466
+#, fuzzy, c-format
+msgid ""
+"  -I --input-target <bfdname>      Assume input file is in format <bfdname>\n"
+"  -O --output-target <bfdname>     Create an output file in format "
+"<bfdname>\n"
+"  -B --binary-architecture <arch>  Set arch of output file, when input is "
+"binary\n"
+"  -F --target <bfdname>            Set both input and output format to "
+"<bfdname>\n"
+"     --debugging                   Convert debugging information, if "
+"possible\n"
+"  -p --preserve-dates              Copy modified/access timestamps to the "
+"output\n"
+"  -j --only-section <name>         Only copy section <name> into the output\n"
+"     --add-gnu-debuglink=<file>    Add section .gnu_debuglink linking to "
+"<file>\n"
+"  -R --remove-section <name>       Remove section <name> from the output\n"
+"  -S --strip-all                   Remove all symbol and relocation "
+"information\n"
+"  -g --strip-debug                 Remove all debugging symbols & sections\n"
+"     --strip-unneeded              Remove all symbols not needed by "
+"relocations\n"
+"  -N --strip-symbol <name>         Do not copy symbol <name>\n"
+"     --strip-unneeded-symbol <name>\n"
+"                                   Do not copy symbol <name> unless needed "
+"by\n"
+"                                     relocations\n"
+"     --only-keep-debug             Strip everything but the debug "
+"information\n"
+"     --extract-symbol              Remove section contents but keep symbols\n"
+"  -K --keep-symbol <name>          Do not strip symbol <name>\n"
+"     --keep-file-symbols           Do not strip file symbol(s)\n"
+"     --localize-hidden             Turn all ELF hidden symbols into locals\n"
+"  -L --localize-symbol <name>      Force symbol <name> to be marked as a "
+"local\n"
+"     --globalize-symbol <name>     Force symbol <name> to be marked as a "
+"global\n"
+"  -G --keep-global-symbol <name>   Localize all symbols except <name>\n"
+"  -W --weaken-symbol <name>        Force symbol <name> to be marked as a "
+"weak\n"
+"     --weaken                      Force all global symbols to be marked as "
+"weak\n"
+"  -w --wildcard                    Permit wildcard in symbol comparison\n"
+"  -x --discard-all                 Remove all non-global symbols\n"
+"  -X --discard-locals              Remove any compiler-generated symbols\n"
+"  -i --interleave <number>         Only copy one out of every <number> "
+"bytes\n"
+"  -b --byte <num>                  Select byte <num> in every interleaved "
+"block\n"
+"     --gap-fill <val>              Fill gaps between sections with <val>\n"
+"     --pad-to <addr>               Pad the last section up to address "
+"<addr>\n"
+"     --set-start <addr>            Set the start address to <addr>\n"
+"    {--change-start|--adjust-start} <incr>\n"
+"                                   Add <incr> to the start address\n"
+"    {--change-addresses|--adjust-vma} <incr>\n"
+"                                   Add <incr> to LMA, VMA and start "
+"addresses\n"
+"    {--change-section-address|--adjust-section-vma} <name>{=|+|-}<val>\n"
+"                                   Change LMA and VMA of section <name> by "
+"<val>\n"
+"     --change-section-lma <name>{=|+|-}<val>\n"
+"                                   Change the LMA of section <name> by "
+"<val>\n"
+"     --change-section-vma <name>{=|+|-}<val>\n"
+"                                   Change the VMA of section <name> by "
+"<val>\n"
+"    {--[no-]change-warnings|--[no-]adjust-warnings}\n"
+"                                   Warn if a named section does not exist\n"
+"     --set-section-flags <name>=<flags>\n"
+"                                   Set section <name>'s properties to "
+"<flags>\n"
+"     --add-section <name>=<file>   Add section <name> found in <file> to "
+"output\n"
+"     --rename-section <old>=<new>[,<flags>] Rename section <old> to <new>\n"
+"     --long-section-names {enable|disable|keep}\n"
+"                                   Handle long section names in Coff "
+"objects.\n"
+"     --change-leading-char         Force output format's leading character "
+"style\n"
+"     --remove-leading-char         Remove leading character from global "
+"symbols\n"
+"     --reverse-bytes=<num>         Reverse <num> bytes at a time, in output "
+"sections with content\n"
+"     --redefine-sym <old>=<new>    Redefine symbol name <old> to <new>\n"
+"     --redefine-syms <file>        --redefine-sym for all symbol pairs \n"
+"                                     listed in <file>\n"
+"     --srec-len <number>           Restrict the length of generated "
+"Srecords\n"
+"     --srec-forceS3                Restrict the type of generated Srecords "
+"to S3\n"
+"     --strip-symbols <file>        -N for all symbols listed in <file>\n"
+"     --strip-unneeded-symbols <file>\n"
+"                                   --strip-unneeded-symbol for all symbols "
+"listed\n"
+"                                     in <file>\n"
+"     --keep-symbols <file>         -K for all symbols listed in <file>\n"
+"     --localize-symbols <file>     -L for all symbols listed in <file>\n"
+"     --globalize-symbols <file>    --globalize-symbol for all in <file>\n"
+"     --keep-global-symbols <file>  -G for all symbols listed in <file>\n"
+"     --weaken-symbols <file>       -W for all symbols listed in <file>\n"
+"     --alt-machine-code <index>    Use the target's <index>'th alternative "
+"machine\n"
+"     --writable-text               Mark the output text as writable\n"
+"     --readonly-text               Make the output text write protected\n"
+"     --pure                        Mark the output file as demand paged\n"
+"     --impure                      Mark the output file as impure\n"
+"     --prefix-symbols <prefix>     Add <prefix> to start of every symbol "
+"name\n"
+"     --prefix-sections <prefix>    Add <prefix> to start of every section "
+"name\n"
+"     --prefix-alloc-sections <prefix>\n"
+"                                   Add <prefix> to start of every "
+"allocatable\n"
+"                                     section name\n"
+"     --file-alignment <num>        Set PE file alignment to <num>\n"
+"     --heap <reserve>[,<commit>]   Set PE reserve/commit heap to <reserve>/\n"
+"                                   <commit>\n"
+"     --image-base <address>        Set PE image base to <address>\n"
+"     --section-alignment <num>     Set PE section alignment to <num>\n"
+"     --stack <reserve>[,<commit>]  Set PE reserve/commit stack to "
+"<reserve>/\n"
+"                                   <commit>\n"
+"     --subsystem <name>[:<version>]\n"
+"                                   Set PE subsystem to <name> [& <version>]\n"
+"]  -v --verbose                     List all object files modified\n"
+"  @<file>                          Read options from <file>\n"
+"  -V --version                     Display this program's version number\n"
+"  -h --help                        Display this output\n"
+"     --info                        List object formats & architectures "
+"supported\n"
+msgstr ""
+"  -I --input-target <bfd-назва>    Вважається вхідний файл у форматі <bfd-"
+"назва>\n"
+"  -O --output-target <bfd-назва>   Створити файл для виводу у форматі <bfd-"
+"назва>\n"
+"  -B --binary-architecture <арх>   Встановити архітектуру для файлу виводу, "
+"коли вхідний файл двійковий\n"
+"  -F --target <bfd-назва>          Встановити вхідний формат та формат "
+"виводу у <bfd-назва>\n"
+"     --debugging                   Перетворити налагоджувальну інформацію, "
+"при можливості\n"
+"  -p --preserve-dates              Копіювати час зміни/доступу у вивід\n"
+"  -j --only-section <назва>        Копіювати розділ <назва> у вивід\n"
+"     --add-gnu-debuglink=<файл>    Додавання зв'язування розділу ."
+"gnu_debuglink в <файл>\n"
+"  -R --remove-section <назва>      Видалити розділ <назва> з виводу\n"
+"  -S --strip-all                   Видалити все символи та інформацію про "
+"переміщення\n"
+"  -g --strip-debug                 Видалити все налагоджувальні символи та "
+"розділи\n"
+"     --strip-unneeded              Видалити всі символи, що не потрібні для "
+"переміщення\n"
+"  -N --strip-symbol <назва>        Не копіювати символ <назва>\n"
+"     --strip-unneeded-symbol <назва>\n"
+"                                   Не копіювати символ <назва>, якщо він не "
+"потрібен\n"
+"                                   для переміщень\n"
+"     --only-keep-debug             Залишити лише налагоджувальну інформацію\n"
+"     --extract-symbol              Видалити зміст розділу, але зберегти "
+"символи\n"
+"  -K --keep-symbol <назва>         Копіювати лише символ <назва>\n"
+"     --keep-file-symbols           Не обрізати файлові символи\n"
+"     --localize-hidden             Увімкнути усі приховані символи ELF у "
+"locals\n"
+"  -L --localize-symbol <назва>     Примусово позначати символ <назва> як "
+"локальний\n"
+"     --globalize-symbol <назва>    Примусово позначати символ <назва> як "
+"глобальний\n"
+"  -G --keep-global-symbol <назва>  Локалізувати всі символи окрім <назва>\n"
+"  -W --weaken-symbol <назва>       Примусово позначити символ <назва> як "
+"слабкий\n"
+"     --weaken                      Примусово позначити глобальні символи як "
+"слабкі\n"
+"  -w --wildcard                    Дозволити маску при порівнянні символів\n"
+"  -x --discard-all                 Видалити все не глобальні символи\n"
+"  -X --discard-locals              Видалити усі символи, згенеровані "
+"компілятором\n"
+"  -i --interleave <число>          Копіювати лише один байт через кожне "
+"<число> байт\n"
+"  -b --byte <номер>                Вибрати байт <номер> у кожному блоці, що "
+"чергується\n"
+"     --gap-fill <значення>         Заповнити проміжки між розділами "
+"<значенням>\n"
+"     --pad-to <адрес>              Заповнити останній розділ до адреси "
+"<адрес>\n"
+"     --set-start <адреса>          Встановити початкову адресу в <адреса>\n"
+"    {--change-start|--adjust-start} <приріст>\n"
+"                                   Додати <приріст> до початкової адреси\n"
+"    {--change-addresses|--adjust-vma} <приріст>\n"
+"                                   Додати <приріст> до LMA, VMA та "
+"початкової адрес\n"
+"    {--change-section-address|--adjust-section-vma} <назва>{=|+|-}"
+"<значення>\n"
+"                                   Змінити LMA та VMA розділу <назва> на "
+"<значення>\n"
+"     --change-section-lma <назва>{=|+|-}<значення>\n"
+"                                   Змінити LMA розділу <назва> на "
+"<значення>\n"
+"     --change-section-vma <назва>{=|+|-}<значення>\n"
+"                                   Змінити VMA розділу <назва> на "
+"<значення>\n"
+"    {--[no-]change-warnings|--[no-]adjust-warnings}\n"
+"                                   Попередити, якщо вказаний розділ не "
+"існує\n"
+"     --set-section-flags <назва>=<ознаки>\n"
+"                                   Встановити властивості розділу <назва> у "
+"<ознаки>\n"
+"     --add-section <назва>=<файл>    Додати розділ <назва>, знайдений у "
+"<файлі>, на вивід\n"
+"     --rename-section <стар>=<нов>[,<ознаки>] Перейменувати розділ <стар> на "
+"<нов>\n"
+"     --change-leading-char         Примусово використовувати стиль великої "
+"літери для формату виводу\n"
+"     --remove-leading-char         Видалити велику літеру з глобальних "
+"символів\n"
+"     --reverse-bytes=<число>       Зворотний порядок <число> байтів за раз, "
+"у розділі виводу зі змістом\n"
+"     --redefine-sym <стар>=<нов>   Перевизначити назву символу <стар> на "
+"<нов>\n"
+"     --redefine-syms <файл>        --redefine-sym для всіх пар символів,\n"
+"                                     перелічених у <файлі>\n"
+"     --srec-len <число>            Обмежити довжину S-записів, що "
+"створюються\n"
+"     --srec-forceS3                Обмежити тип створених S-записів до S3\n"
+"     --strip-symbols <файл>        -N для всіх символів, що перелічені у "
+"<файлі>\n"
+"     --strip-unneeded-symbols <файл>\n"
+"                                   --strip-unneeded-symbol для всіх "
+"символів, перелічених\n"
+"                                     в <файлі>\n"
+"     --keep-symbols <файл>         -K для всіх символів, перелічених у "
+"<файлі>\n"
+"     --localize-symbols <файл>     -L для всіх символів, перелічених у "
+"<файлі>\n"
+"     --globalize-symbols <файл>    --globalize-symbol для всього змісту у "
+"<файлі>\n"
+"     --keep-global-symbols <файл>  -G для всіх символів, перелічених у "
+"<файлі>\n"
+"     --weaken-symbols <файл>       -W для всіх символів, перелічених у "
+"<файлі>\n"
+"     --alt-machine-code <індекс>   Використовувати альтернативний код машини "
+"для виводу\n"
+"     --writable-text               Позначити текст виводу як "
+"перезаписуваний\n"
+"     --readonly-text               Позначити текст виводу як захищений від "
+"запису\n"
+"     --pure                        Позначити файл виводу з розбиттям на "
+"сторінки за викликом\n"
+"     --impure                      Позначити файл виводу як змішаний\n"
+"     --prefix-symbols <префікс>    Додати <префікс> на початок назви кожного "
+"символу\n"
+"     --prefix-sections <префікс>   Додати <префікс> на початок назви кожного "
+"розділу\n"
+"     --prefix-alloc-sections <префікс>\n"
+"                                   Додати <префікс> на початок назви "
+"кожного\n"
+"                                     розділу, що призначається\n"
+"  -v --verbose                     Перелічити всі змінені об'єктні файли\n"
+"  @<файл>                          Читати ключі з <файлу>\n"
+"  -V --version                     Вивести номер версії цієї програми\n"
+"  -h --help                        Вивести цю довідку\n"
+"     --info                        Перелічити підтримувані формати об'єктів "
+"та архітектури\n"
+
+#: objcopy.c:570
+#, c-format
+msgid "Usage: %s <option(s)> in-file(s)\n"
+msgstr "Використання: %s <ключі> in-файл(и)\n"
+
+#: objcopy.c:571
+#, c-format
+msgid " Removes symbols and sections from files\n"
+msgstr " Видаляє символи та розділи з файлів\n"
+
+#: objcopy.c:573
+#, c-format
+msgid ""
+"  -I --input-target=<bfdname>      Assume input file is in format <bfdname>\n"
+"  -O --output-target=<bfdname>     Create an output file in format "
+"<bfdname>\n"
+"  -F --target=<bfdname>            Set both input and output format to "
+"<bfdname>\n"
+"  -p --preserve-dates              Copy modified/access timestamps to the "
+"output\n"
+"  -R --remove-section=<name>       Remove section <name> from the output\n"
+"  -s --strip-all                   Remove all symbol and relocation "
+"information\n"
+"  -g -S -d --strip-debug           Remove all debugging symbols & sections\n"
+"     --strip-unneeded              Remove all symbols not needed by "
+"relocations\n"
+"     --only-keep-debug             Strip everything but the debug "
+"information\n"
+"  -N --strip-symbol=<name>         Do not copy symbol <name>\n"
+"  -K --keep-symbol=<name>          Do not strip symbol <name>\n"
+"     --keep-file-symbols           Do not strip file symbol(s)\n"
+"  -w --wildcard                    Permit wildcard in symbol comparison\n"
+"  -x --discard-all                 Remove all non-global symbols\n"
+"  -X --discard-locals              Remove any compiler-generated symbols\n"
+"  -v --verbose                     List all object files modified\n"
+"  -V --version                     Display this program's version number\n"
+"  -h --help                        Display this output\n"
+"     --info                        List object formats & architectures "
+"supported\n"
+"  -o <file>                        Place stripped output into <file>\n"
+msgstr ""
+"  -I --input-target=<bfd-назва>    Вважається вхідний файл у форматі <bfd-"
+"назва>\n"
+"  -O --output-target=<bfd-назва>   Створити файл для виводу в форматі <bfd-"
+"назва>\n"
+"  -F --target=<bfd-назва>          Встановити вхідний формати та формат "
+"виводу в <bfd-назва>\n"
+"  -p --preserve-dates              Копіювати час зміни/доступу у вивід\n"
+"  -R --remove-section <назва>      Видалити розділ <назва> з виводу\n"
+"  -s --strip-all                   Видалити всі символи та інформацію про "
+"переміщення\n"
+"  -g -S -d --strip-debug           Видалити всі налагоджувальні символи та "
+"розділи\n"
+"     --strip-unneeded              Видалити всі символи, не потрібні для "
+"переміщень\n"
+"     --only-keep-debug             Видалити все, за винятком "
+"налагоджувальною інформації\n"
+"  -N --strip-symbol=<назва>        Не копіювати символ <назва>\n"
+"  -K --keep-symbol=<назва>         Копіювати лише символ <назва>\n"
+"     --keep-file-symbols           Не обрізати символи у файлі\n"
+"  -w --wildcard                    Дозволити маску при порівнянні символів\n"
+"  -x --discard-all                 Видалити всі не глобальні символи\n"
+"  -X --discard-locals              Видалити всі символи, згенеровані "
+"компілятором\n"
+"  -v --verbose                     Перелічити всі змінені об'єктні файли\n"
+"  -V --version                     Вивести номер версії цієї програми\n"
+"  -h --help                        Вивести цю довідку\n"
+"     --info                        Перелічити підтримувані формати об'єктів "
+"та архітектури\n"
+"  -o <файл>                        Помістити оброблені вихідні дані у "
+"<файл>\n"
+
+#: objcopy.c:646
+#, c-format
+msgid "unrecognized section flag `%s'"
+msgstr "нерозпізнана ознака розділу `%s'"
+
+#: objcopy.c:647
+#, c-format
+msgid "supported flags: %s"
+msgstr "непідтримувані ознаки: %s"
+
+#: objcopy.c:748
+#, c-format
+msgid "cannot open '%s': %s"
+msgstr "неможливо відкрити '%s': %s"
+
+#: objcopy.c:751 objcopy.c:3336
+#, c-format
+msgid "%s: fread failed"
+msgstr "%s: помилка при fread"
+
+#: objcopy.c:824
+#, c-format
+msgid "%s:%d: Ignoring rubbish found on this line"
+msgstr "%s:%d: Пропускається сміття, що знайдене у цьому рядку"
+
+#: objcopy.c:1121
+#, c-format
+msgid "not stripping symbol `%s' because it is named in a relocation"
+msgstr ""
+"символ `%s' не обрізується, оскільки його назва перелічена при переміщенні"
+
+#: objcopy.c:1204
+#, c-format
+msgid "%s: Multiple redefinition of symbol \"%s\""
+msgstr "%s: Багатократне перевизначення символу \"%s\""
+
+#: objcopy.c:1208
+#, c-format
+msgid "%s: Symbol \"%s\" is target of more than one redefinition"
+msgstr "%s: Символ \"%s\" є ціллю більш, ніж одного перевизначення"
+
+#: objcopy.c:1236
+#, c-format
+msgid "couldn't open symbol redefinition file %s (error: %s)"
+msgstr "неможливо відкрити файл перевизначення символу %s (помилка: %s)"
+
+#: objcopy.c:1314
+#, c-format
+msgid "%s:%d: garbage found at end of line"
+msgstr "%s:%d: наприкінці рядка знайдено сміття"
+
+#: objcopy.c:1317
+#, c-format
+msgid "%s:%d: missing new symbol name"
+msgstr "%s:%d: відсутня назва нового символу"
+
+#: objcopy.c:1327
+#, c-format
+msgid "%s:%d: premature end of file"
+msgstr "%s:%d: передчасний кінець файлу"
+
+#: objcopy.c:1353
+#, c-format
+msgid "stat returns negative size for `%s'"
+msgstr "stat повернув від'ємний розмір для `%s'"
+
+#: objcopy.c:1365
+#, c-format
+msgid "copy from `%s' [unknown] to `%s' [unknown]\n"
+msgstr "копіювання з `%s' [невідомо] у `%s' [невідомо]\n"
+
+#: objcopy.c:1420
+msgid "Unable to change endianness of input file(s)"
+msgstr "Неможливо змінити endianness вхідного файлу"
+
+#: objcopy.c:1429
+#, c-format
+msgid "copy from `%s' [%s] to `%s' [%s]\n"
+msgstr "копіювання з `%s' [%s] у `%s' [%s]\n"
+
+#: objcopy.c:1474
+#, c-format
+msgid "Unable to recognise the format of the input file `%s'"
+msgstr "Неможливо визначити формат вхідного файлу `%s'"
+
+#: objcopy.c:1477
+#, fuzzy, c-format
+msgid "warning: Output file cannot represent architecture `%s'"
+msgstr "Попередження: Файл виводу не може представити архітектуру `%s'"
+
+#: objcopy.c:1540
+#, c-format
+msgid "warning: file alignment (0x%s) > section alignment (0x%s)"
+msgstr ""
+
+#: objcopy.c:1599
+#, fuzzy, c-format
+msgid "can't add section '%s'"
+msgstr "неможливо створити розділ `%s': %s"
+
+#: objcopy.c:1608
+#, fuzzy, c-format
+msgid "can't create section `%s'"
+msgstr "неможливо створити розділ `%s': %s"
+
+#: objcopy.c:1654
+#, fuzzy, c-format
+msgid "cannot create debug link section `%s'"
+msgstr "%s: неможливо створити налагоджувальний розділ: %s"
+
+#: objcopy.c:1747
+#, fuzzy
+msgid "Can't fill gap after section"
+msgstr "Неможливо заповнити проміжок після %s: %s"
+
+#: objcopy.c:1771
+#, fuzzy
+msgid "can't add padding"
+msgstr "Неможливо додати заповнення до %s: %s"
+
+#: objcopy.c:1862
+#, fuzzy, c-format
+msgid "cannot fill debug link section `%s'"
+msgstr "%s: неможливо знайти розділ: %s"
+
+#: objcopy.c:1925
+#, fuzzy
+msgid "error copying private BFD data"
+msgstr "%s: помилка копіювання приватних даних BFD: %s"
+
+#: objcopy.c:1936
+#, c-format
+msgid "this target does not support %lu alternative machine codes"
+msgstr "ця ціль не підтримує %lu альтернативних машинних кодів"
+
+#: objcopy.c:1940
+msgid "treating that number as an absolute e_machine value instead"
+msgstr "натомість це число вважається абсолютним значенням e_machine"
+
+#: objcopy.c:1944
+msgid "ignoring the alternative value"
+msgstr "ігнорується альтернативне значення"
+
+#: objcopy.c:1975 objcopy.c:2010
+#, c-format
+msgid "cannot create tempdir for archive copying (error: %s)"
+msgstr ""
+"неможливо створити тимчасовий каталог для копіювання архіву (помилка: %s)"
+
+#: objcopy.c:2071
+#, fuzzy
+msgid "Unable to recognise the format of file"
+msgstr "Неможливо визначити формат вхідного файлу `%s'"
+
+#: objcopy.c:2168
+#, c-format
+msgid "error: the input file '%s' is empty"
+msgstr "помилка: вхідний файл '%s' порожній"
+
+#: objcopy.c:2300
+#, c-format
+msgid "Multiple renames of section %s"
+msgstr "Багатократні перейменування розділу %s"
+
+#: objcopy.c:2351
+#, fuzzy
+msgid "error in private header data"
+msgstr "приватні дані заголовку"
+
+#: objcopy.c:2429
+#, fuzzy
+msgid "failed to create output section"
+msgstr "Неможливо визначити розміщення розділу %s!\n"
+
+#: objcopy.c:2443
+#, fuzzy
+msgid "failed to set size"
+msgstr "встановлення розміру розділу"
+
+#: objcopy.c:2457
+msgid "failed to set vma"
+msgstr ""
+
+#: objcopy.c:2482
+#, fuzzy
+msgid "failed to set alignment"
+msgstr "встановлення орієнтації розділу"
+
+#: objcopy.c:2516
+#, fuzzy
+msgid "failed to copy private data"
+msgstr "%s: помилка копіювання приватних даних BFD: %s"
+
+#: objcopy.c:2598
+msgid "relocation count is negative"
+msgstr ""
+
+#. User must pad the section up in order to do this.
+#: objcopy.c:2659
+#, c-format
+msgid ""
+"cannot reverse bytes: length of section %s must be evenly divisible by %d"
+msgstr ""
+"не вдається переставити байти у зворотному порядку: довжина розділу %s має "
+"ділитися без залишку на %d"
+
+#: objcopy.c:2843
+#, fuzzy
+msgid "can't create debugging section"
+msgstr "%s: неможливо створити налагоджувальний розділ: %s"
+
+#: objcopy.c:2856
+#, fuzzy
+msgid "can't set debugging section contents"
+msgstr "%s: неможливо встановити зміст налагоджувального розділу: %s"
+
+#: objcopy.c:2864
+#, fuzzy, c-format
+msgid "don't know how to write debugging information for %s"
+msgstr "%s: невідомо, як записувати налагоджувальну інформацію для %s"
+
+#: objcopy.c:3006
+#, fuzzy
+msgid "could not create temporary file to hold stripped copy"
+msgstr ""
+"не вдається створити тимчасовий файл для зберігання обрізаної копії '%s'"
+
+#: objcopy.c:3078
+#, c-format
+msgid "%s: bad version in PE subsystem"
+msgstr ""
+
+#: objcopy.c:3108
+#, c-format
+msgid "unknown PE subsystem: %s"
+msgstr ""
+
+#: objcopy.c:3168
+msgid "byte number must be non-negative"
+msgstr "номер байту має бути не від'ємним"
+
+#: objcopy.c:3178
+msgid "interleave must be positive"
+msgstr "чергування має бути додатнім"
+
+#: objcopy.c:3198 objcopy.c:3206
+#, c-format
+msgid "%s both copied and removed"
+msgstr "обидва %s скопійовані та видалені"
+
+#: objcopy.c:3307 objcopy.c:3381 objcopy.c:3481 objcopy.c:3512 objcopy.c:3536
+#: objcopy.c:3540 objcopy.c:3560
+#, c-format
+msgid "bad format for %s"
+msgstr "некоректний формат для %s"
+
+#: objcopy.c:3331
+#, c-format
+msgid "cannot open: %s: %s"
+msgstr "неможливо відкрити: %s: %s"
+
+#: objcopy.c:3450
+#, fuzzy, c-format
+msgid "warning: truncating gap-fill from 0x%s to 0x%x"
+msgstr "Попередження: обрізується заповнення проміжку от 0x%s до 0x%x"
+
+#: objcopy.c:3611
+#, c-format
+msgid "unknown long section names option '%s'"
+msgstr ""
+
+#: objcopy.c:3629
+msgid "unable to parse alternative machine code"
+msgstr "не вдається розібрати альтернативний машинний код"
+
+#: objcopy.c:3674
+msgid "number of bytes to reverse must be positive and even"
+msgstr ""
+"число байтів, порядок яких має змінитися на зворотній повинно бути додатнім "
+"та парним"
+
+#: objcopy.c:3677
+#, fuzzy, c-format
+msgid "warning: ignoring previous --reverse-bytes value of %d"
+msgstr ""
+"Попередження: попереднє значення --reverse-bytes, що дорівнює %d буде "
+"проігнороване"
+
+#: objcopy.c:3692
+#, c-format
+msgid "%s: invalid reserve value for --heap"
+msgstr ""
+
+#: objcopy.c:3698
+#, fuzzy, c-format
+msgid "%s: invalid commit value for --heap"
+msgstr "%s: неправильний формат виводу"
+
+#: objcopy.c:3723
+#, c-format
+msgid "%s: invalid reserve value for --stack"
+msgstr ""
+
+#: objcopy.c:3729
+#, fuzzy, c-format
+msgid "%s: invalid commit value for --stack"
+msgstr "%s: неправильний формат виводу"
+
+#: objcopy.c:3758
+msgid "byte number must be less than interleave"
+msgstr "номер байту має бути меншим чергування"
+
+#: objcopy.c:3785
+#, c-format
+msgid "unknown input EFI target: %s"
+msgstr ""
+
+#: objcopy.c:3816
+#, fuzzy, c-format
+msgid "unknown output EFI target: %s"
+msgstr "невідомий тип формату `%s'"
+
+#: objcopy.c:3841
+#, c-format
+msgid "architecture %s unknown"
+msgstr "архітектура %s невідома"
+
+#: objcopy.c:3845
+#, fuzzy
+msgid ""
+"warning: input target 'binary' required for binary architecture parameter."
+msgstr ""
+"Попередження: 'двійковий' цільовий вхідний файл потрібен для параметру "
+"двійкової архітектури."
+
+#: objcopy.c:3846
+#, c-format
+msgid " Argument %s ignored"
+msgstr " Аргумент %s пропущений"
+
+#: objcopy.c:3852
+#, c-format
+msgid "warning: could not locate '%s'.  System error message: %s"
+msgstr ""
+"попередження: неможливо знайти '%s'. Системне повідомлення про помилку: %s"
+
+#: objcopy.c:3863
+#, c-format
+msgid ""
+"warning: could not create temporary file whilst copying '%s', (error: %s)"
+msgstr ""
+"попередження: не вдається створити тимчасовий файл доки копіюється '%s', "
+"(помилка: %s)"
+
+#: objcopy.c:3891 objcopy.c:3905
+#, c-format
+msgid "%s %s%c0x%s never used"
+msgstr "%s %s%c0x%s ніколи не використовується"
+
+#: objdump.c:187
+#, c-format
+msgid "Usage: %s <option(s)> <file(s)>\n"
+msgstr "Використання: %s <ключі> <файл(и)>\n"
+
+#: objdump.c:188
+#, c-format
+msgid " Display information from object <file(s)>.\n"
+msgstr " Відображає інформацію з об'єкту <файл(и)>.\n"
+
+#: objdump.c:189
+#, c-format
+msgid " At least one of the following switches must be given:\n"
+msgstr " Має бути вказаний принаймні один з наступних ключів:\n"
+
+#: objdump.c:190
+#, fuzzy, c-format
+msgid ""
+"  -a, --archive-headers    Display archive header information\n"
+"  -f, --file-headers       Display the contents of the overall file header\n"
+"  -p, --private-headers    Display object format specific file header "
+"contents\n"
+"  -h, --[section-]headers  Display the contents of the section headers\n"
+"  -x, --all-headers        Display the contents of all headers\n"
+"  -d, --disassemble        Display assembler contents of executable "
+"sections\n"
+"  -D, --disassemble-all    Display assembler contents of all sections\n"
+"  -S, --source             Intermix source code with disassembly\n"
+"  -s, --full-contents      Display the full contents of all sections "
+"requested\n"
+"  -g, --debugging          Display debug information in object file\n"
+"  -e, --debugging-tags     Display debug information using ctags style\n"
+"  -G, --stabs              Display (in raw form) any STABS info in the file\n"
+"  -W[lLiaprmfFsoR] or\n"
+"  --dwarf[=rawline,=decodedline,=info,=abbrev,=pubnames,=aranges,=macro,"
+"=frames,=str,=loc,=Ranges]\n"
+"                           Display DWARF info in the file\n"
+"  -t, --syms               Display the contents of the symbol table(s)\n"
+"  -T, --dynamic-syms       Display the contents of the dynamic symbol table\n"
+"  -r, --reloc              Display the relocation entries in the file\n"
+"  -R, --dynamic-reloc      Display the dynamic relocation entries in the "
+"file\n"
+"  @<file>                  Read options from <file>\n"
+"  -v, --version            Display this program's version number\n"
+"  -i, --info               List object formats and architectures supported\n"
+"  -H, --help               Display this information\n"
+msgstr ""
+"  -a, --archive-headers    Вивести інформацію заголовка архіву\n"
+"  -f, --file-headers       Вивести зміст заголовку всього файлу\n"
+"  -p, --private-headers    Вивести зміст заголовку файлу, специфічного для "
+"формату об'єкту\n"
+"  -h, --[section-]headers  Вивести зміст заголовків розділів\n"
+"  -x, --all-headers        Вивести зміст всіх заголовків\n"
+"  -d, --disassemble        Вивести зміст асемблера виконуваних розділів\n"
+"  -D, --disassemble-all    Вивести зміст асемблера всіх розділів\n"
+"  -S, --source             Перемішати первинний код с дизасемблюванням\n"
+"  -s, --full-contents      Вивести повний зміст всіх запитаних розділів\n"
+"  -g, --debugging          Вивести налагоджувальну інформацію у об'єктному "
+"файлі\n"
+"  -e, --debugging-tags     Вивести налагоджувальну інформацію в стилі ctags\n"
+"  -G, --stabs              Вивести (в сирій формі) будь-яку інформацію STABS "
+"у файлі\n"
+"  -t, --syms               Вивести зміст таблиць символів\n"
+"  -T, --dynamic-syms       Вивести зміст таблиці динамічних символів\n"
+"  -r, --reloc              Вивести пункти переміщення у файлі\n"
+"  -R, --dynamic-reloc      Вивести пункти динамічного переміщення у файлі\n"
+"  @<файл>                  Читати ключі з <файлу>\n"
+"  -v, --version            Вивести номер версії цієї програми\n"
+"  -i, --info               Вивести список підтримуваних форматів об'єктів та "
+"архітектур\n"
+"  -H, --help               Вивести цю інформацію\n"
+
+#: objdump.c:217
+#, c-format
+msgid ""
+"\n"
+" The following switches are optional:\n"
+msgstr ""
+"\n"
+" Наступні ключі є необов'язковими:\n"
+
+#: objdump.c:218
+#, fuzzy, c-format
+msgid ""
+"  -b, --target=BFDNAME           Specify the target object format as "
+"BFDNAME\n"
+"  -m, --architecture=MACHINE     Specify the target architecture as MACHINE\n"
+"  -j, --section=NAME             Only display information for section NAME\n"
+"  -M, --disassembler-options=OPT Pass text OPT on to the disassembler\n"
+"  -EB --endian=big               Assume big endian format when "
+"disassembling\n"
+"  -EL --endian=little            Assume little endian format when "
+"disassembling\n"
+"      --file-start-context       Include context from start of file (with -"
+"S)\n"
+"  -I, --include=DIR              Add DIR to search list for source files\n"
+"  -l, --line-numbers             Include line numbers and filenames in "
+"output\n"
+"  -F, --file-offsets             Include file offsets when displaying "
+"information\n"
+"  -C, --demangle[=STYLE]         Decode mangled/processed symbol names\n"
+"                                  The STYLE, if specified, can be `auto', "
+"`gnu',\n"
+"                                  `lucid', `arm', `hp', `edg', `gnu-v3', "
+"`java'\n"
+"                                  or `gnat'\n"
+"  -w, --wide                     Format output for more than 80 columns\n"
+"  -z, --disassemble-zeroes       Do not skip blocks of zeroes when "
+"disassembling\n"
+"      --start-address=ADDR       Only process data whose address is >= ADDR\n"
+"      --stop-address=ADDR        Only process data whose address is <= ADDR\n"
+"      --prefix-addresses         Print complete address alongside "
+"disassembly\n"
+"      --[no-]show-raw-insn       Display hex alongside symbolic disassembly\n"
+"      --insn-width=WIDTH         Display WIDTH bytes on a signle line for -"
+"d\n"
+"      --adjust-vma=OFFSET        Add OFFSET to all displayed section "
+"addresses\n"
+"      --special-syms             Include special symbols in symbol dumps\n"
+"      --prefix=PREFIX            Add PREFIX to absolute paths for -S\n"
+"      --prefix-strip=LEVEL       Strip initial directory names for -S\n"
+"\n"
+msgstr ""
+"  -b, --target=BFD-НАЗВА         Вказати цільовий формат об'єкту як BFD-"
+"НАЗВУ\n"
+"  -m, --architecture=МАШИНА      Вказати цільову архітектуру як МАШИНА\n"
+"  -j, --section=НАЗВА            Вивести інформацію лише для розділу НАЗВУ\n"
+"  -M, --disassembler-options=OPT Передати текст OPT у дизасемблер\n"
+"  -EB --endian=big               Вважати формат big endian при "
+"дизасемблюванні\n"
+"  -EL --endian=little            Вважати формат little endian при "
+"дизасемблюванні\n"
+"      --file-start-context       Включить контекст з початку файла (с -S)\n"
+"  -I, --include=КАТАЛОГ          Додати КАТАЛОГ до списку пошуку первинних "
+"файлів\n"
+"  -l, --line-numbers             Включить номера рядків та назви файлів на "
+"виводі\n"
+"  -C, --demangle[=СТИЛЬ]         Декодувати скоректовані/оброблені назви "
+"символів\n"
+"                                  СТИЛЬ, якщо вказаний, може бути `auto', "
+"`gnu',\n"
+"                                  `lucid', `arm', `hp', `edg', `gnu-v3', "
+"`java'\n"
+"                                  або `gnat'\n"
+"  -w, --wide                     Форматувати вивід для більш, ніж 80 "
+"колонок\n"
+"  -z, --disassemble-zeroes       Не пропускати блоки нулів при "
+"дизасемблюванні\n"
+"      --start-address=АДРЕС      Обробити лише дані, адрес яких >= АДРЕС\n"
+"      --stop-address=АДРЕС       Обробити лише дані, адрес яких <= АДРЕС\n"
+"      --prefix-addresses         Вивести повну адресу при дизасемблюванні\n"
+"      --[no-]show-raw-insn       Вивести hex при символічному "
+"дизасемблюванні\n"
+"      --adjust-vma=СМЕЩЕНИЕ      Додати ЗСУВ до всіх адрес розділів, що "
+"виводяться\n"
+"      --special-syms             Включити спеціальні символи у дампи "
+"символів\n"
+"\n"
+
+#: objdump.c:450
+#, c-format
+msgid "Sections:\n"
+msgstr "Розділи:\n"
+
+#: objdump.c:453 objdump.c:457
+#, c-format
+msgid "Idx Name          Size      VMA       LMA       File off  Algn"
+msgstr "Інд Назва         Розмір    VMA       LMA       Файл      Вирівн"
+
+#: objdump.c:459
+#, c-format
+msgid ""
+"Idx Name          Size      VMA               LMA               File off  "
+"Algn"
+msgstr ""
+"Инд Назва         Розмір    VMA               LMA               Файл      "
+"Вирівн"
+
+#: objdump.c:463
+#, c-format
+msgid "  Flags"
+msgstr "  Ознаки"
+
+#: objdump.c:465
+#, c-format
+msgid "  Pg"
+msgstr "  Стор"
+
+#: objdump.c:508
+#, c-format
+msgid "%s: not a dynamic object"
+msgstr "%s: не динамічний об'єкт"
+
+#: objdump.c:933 objdump.c:957
+#, fuzzy, c-format
+msgid " (File Offset: 0x%lx)"
+msgstr "  Файл: %lx"
+
+#: objdump.c:1902
+#, fuzzy, c-format
+msgid ""
+"\n"
+"Disassembly of section %s:\n"
+msgstr "Дизасемблювання розділу %s:\n"
+
+#: objdump.c:2078
+#, c-format
+msgid "Can't use supplied machine %s"
+msgstr "Неможливо використовувати представлену машину %s"
+
+#: objdump.c:2097
+#, c-format
+msgid "Can't disassemble for architecture %s\n"
+msgstr "Дизасемблювання неможливе для архітектури %s\n"
+
+#: objdump.c:2188
+#, c-format
+msgid ""
+"\n"
+"Can't get contents for section '%s'.\n"
+msgstr ""
+"\n"
+"Неможливо отримати зміст розділу '%s'.\n"
+
+#: objdump.c:2199
+#, fuzzy, c-format
+msgid ""
+"\n"
+"Can't uncompress section '%s'.\n"
+msgstr ""
+"\n"
+"Неможливо отримати зміст розділу '%s'.\n"
+
+#: objdump.c:2328
+#, c-format
+msgid ""
+"No %s section present\n"
+"\n"
+msgstr ""
+"Розділ %s відсутній\n"
+"\n"
+
+#: objdump.c:2337
+#, c-format
+msgid "Reading %s section of %s failed: %s"
+msgstr "Читання %s розділу %s завершилось помилкою: %s"
+
+#: objdump.c:2381
+#, c-format
+msgid ""
+"Contents of %s section:\n"
+"\n"
+msgstr ""
+"Зміст розділу %s:\n"
+"\n"
+
+#: objdump.c:2512
+#, c-format
+msgid "architecture: %s, "
+msgstr "архітектура: %s, "
+
+#: objdump.c:2515
+#, c-format
+msgid "flags 0x%08x:\n"
+msgstr "ознаки 0x%08x:\n"
+
+#: objdump.c:2529
+#, c-format
+msgid ""
+"\n"
+"start address 0x"
+msgstr ""
+"\n"
+"початкова адреса 0x"
+
+#: objdump.c:2592
+#, fuzzy, c-format
+msgid "Contents of section %s:"
+msgstr "Зміст розділу %s:\n"
+
+#: objdump.c:2594
+#, fuzzy, c-format
+msgid "  (Starting at file offset: 0x%lx)"
+msgstr "  Одиниця компіляції @ зсув 0x%lx:\n"
+
+#: objdump.c:2701
+#, c-format
+msgid "no symbols\n"
+msgstr "немає символів\n"
+
+#: objdump.c:2708
+#, c-format
+msgid "no information for symbol number %ld\n"
+msgstr "немає інформації про символ номер %ld\n"
+
+#: objdump.c:2711
+#, c-format
+msgid "could not determine the type of symbol number %ld\n"
+msgstr "неможливо визначити тип символу номер %ld\n"
+
+#: objdump.c:2991
+#, c-format
+msgid ""
+"\n"
+"%s:     file format %s\n"
+msgstr ""
+"\n"
+"%s:     формат файлу %s\n"
+
+#: objdump.c:3049
+#, c-format
+msgid "%s: printing debugging information failed"
+msgstr "%s: вивід налагоджувальної інформації завершився помилкою"
+
+#: objdump.c:3149
+#, c-format
+msgid "In archive %s:\n"
+msgstr "В архіві %s:\n"
+
+#: objdump.c:3265
+msgid "error: the start address should be before the end address"
+msgstr ""
+
+#: objdump.c:3270
+msgid "error: the stop address should be after the start address"
+msgstr ""
+
+#: objdump.c:3282
+#, fuzzy
+msgid "error: prefix strip must be non-negative"
+msgstr "номер байту має бути не від'ємним"
+
+#: objdump.c:3287
+#, fuzzy
+msgid "error: instruction width must be positive"
+msgstr "індекс альтернативного коду машини має бути додатнім"
+
+#: objdump.c:3296
+msgid "unrecognized -E option"
+msgstr "нерозпізнаний ключ -E"
+
+#: objdump.c:3307
+#, c-format
+msgid "unrecognized --endian type `%s'"
+msgstr "нерозпізнаний --endian тип `%s'"
+
+#: rclex.c:197
+msgid "invalid value specified for pragma code_page.\n"
+msgstr "вказано неправильне значення для прагми code_page.\n"
+
+#: rdcoff.c:198
+#, c-format
+msgid "parse_coff_type: Bad type code 0x%x"
+msgstr "parse_coff_type: Некоректний код типу 0x%x"
+
+#: rdcoff.c:406 rdcoff.c:511 rdcoff.c:699
+#, c-format
+msgid "bfd_coff_get_syment failed: %s"
+msgstr "bfd_coff_get_syment завершився помилкою: %s"
+
+#: rdcoff.c:422 rdcoff.c:719
+#, c-format
+msgid "bfd_coff_get_auxent failed: %s"
+msgstr "bfd_coff_get_auxent завершився помилкою: %s"
+
+#: rdcoff.c:786
+#, c-format
+msgid "%ld: .bf without preceding function"
+msgstr "%ld: .bf без попередньої функції"
+
+#: rdcoff.c:836
+#, c-format
+msgid "%ld: unexpected .ef\n"
+msgstr "%ld: неочікуваний .ef\n"
+
+#: rddbg.c:88
+#, c-format
+msgid "%s: no recognized debugging information"
+msgstr "%s: немає розпізнаної налагоджувальною інформації"
+
+#: rddbg.c:402
+#, c-format
+msgid "Last stabs entries before error:\n"
+msgstr "Останні пункти stabs перед помилкою:\n"
+
+#: readelf.c:303
+#, c-format
+msgid "Unable to seek to 0x%lx for %s\n"
+msgstr "Неможливо знайти 0x%lx для %s\n"
+
+#: readelf.c:318
+#, c-format
+msgid "Out of memory allocating 0x%lx bytes for %s\n"
+msgstr "Бракує пам'яті при розподілі 0x%lx байт для %s\n"
+
+#: readelf.c:328
+#, c-format
+msgid "Unable to read in 0x%lx bytes of %s\n"
+msgstr "Неможливо прочитати 0x%lx байт з %s\n"
+
+#: readelf.c:651
+msgid "Don't know about relocations on this machine architecture\n"
+msgstr "Невідомо про переміщення для цієї архітектури машини\n"
+
+#: readelf.c:672 readelf.c:702 readelf.c:770 readelf.c:799
+msgid "relocs"
+msgstr "переміщення"
+
+#: readelf.c:684 readelf.c:714 readelf.c:781 readelf.c:810
+msgid "out of memory parsing relocs\n"
+msgstr "бракує пам'яті при розборі relocs\n"
+
+#: readelf.c:915
+#, c-format
+msgid ""
+" Offset     Info    Type                Sym. Value  Symbol's Name + Addend\n"
+msgstr ""
+" Зсув       Інфо    Тип                 Знач.симв.  Назва символу + Addend\n"
+
+#: readelf.c:917
+#, c-format
+msgid " Offset     Info    Type            Sym.Value  Sym. Name + Addend\n"
+msgstr " Зсув       Інфо    Тип             Знач.симв  Назва симв. + Addend\n"
+
+#: readelf.c:922
+#, c-format
+msgid " Offset     Info    Type                Sym. Value  Symbol's Name\n"
+msgstr " Зсув       Інфо    Тип                 Знач.симв   Назва символу\n"
+
+#: readelf.c:924
+#, c-format
+msgid " Offset     Info    Type            Sym.Value  Sym. Name\n"
+msgstr " Зсув       Інфо    Тип             Знач.симв  Назва симв.\n"
+
+#: readelf.c:932
+#, c-format
+msgid ""
+"    Offset             Info             Type               Symbol's Value  "
+"Symbol's Name + Addend\n"
+msgstr ""
+"    Зсув               Інфо             Тип                Значення симв.  "
+"Назва символу + Addend\n"
+
+#: readelf.c:934
+#, c-format
+msgid ""
+"  Offset          Info           Type           Sym. Value    Sym. Name + "
+"Addend\n"
+msgstr ""
+"  Зсув            Інфо           Тип            Знач.симв.    Назва симв. + "
+"Addend\n"
+
+#: readelf.c:939
+#, c-format
+msgid ""
+"    Offset             Info             Type               Symbol's Value  "
+"Symbol's Name\n"
+msgstr ""
+"    Зсув               Інфо             Тип                Значення симв.  "
+"Назва символу\n"
+
+#: readelf.c:941
+#, c-format
+msgid ""
+"  Offset          Info           Type           Sym. Value    Sym. Name\n"
+msgstr ""
+"  Зсув            Інфо           Тип            Знач.симв.    Назва симв.\n"
+
+#: readelf.c:1231 readelf.c:1390 readelf.c:1398
+#, c-format
+msgid "unrecognized: %-7lx"
+msgstr "нерозпізнаний: %-7lx"
+
+#: readelf.c:1256
+#, c-format
+msgid "<unknown addend: %lx>"
+msgstr "<невідомий addend: %lx>"
+
+#: readelf.c:1348
+#, c-format
+msgid "<string table index: %3ld>"
+msgstr "<індекс таблиці рядків: %3ld>"
+
+#: readelf.c:1350
+#, c-format
+msgid "<corrupt string table index: %3ld>"
+msgstr "<пошкоджений індекс таблиці рядків: %3ld>"
+
+#: readelf.c:1725
+#, c-format
+msgid "Processor Specific: %lx"
+msgstr "Специфічний для процесору: %lx"
+
+#: readelf.c:1749
+#, c-format
+msgid "Operating System specific: %lx"
+msgstr "Специфічний для операційної системи: %lx"
+
+#: readelf.c:1753 readelf.c:2686
+#, c-format
+msgid "<unknown>: %lx"
+msgstr "<невідомий>: %lx"
+
+#: readelf.c:1766
+msgid "NONE (None)"
+msgstr "НЕМАЄ (Немає)"
+
+#: readelf.c:1767
+msgid "REL (Relocatable file)"
+msgstr "REL (Переміщуваний файл)"
+
+#: readelf.c:1768
+msgid "EXEC (Executable file)"
+msgstr "EXEC (Виконуваний файл)"
+
+#: readelf.c:1769
+msgid "DYN (Shared object file)"
+msgstr "DYN (Спільний об'єктний файл)"
+
+#: readelf.c:1770
+msgid "CORE (Core file)"
+msgstr "CORE (Основний файл)"
+
+#: readelf.c:1774
+#, c-format
+msgid "Processor Specific: (%x)"
+msgstr "Специфічний для процесору: (%x)"
+
+#: readelf.c:1776
+#, c-format
+msgid "OS Specific: (%x)"
+msgstr "Специфічний для ОС: (%x)"
+
+#: readelf.c:1778 readelf.c:2903
+#, c-format
+msgid "<unknown>: %x"
+msgstr "<невідомий>: %x"
+
+#: readelf.c:1790
+msgid "None"
+msgstr "Немає"
+
+#: readelf.c:1902
+#, c-format
+msgid "<unknown>: 0x%x"
+msgstr "<невідомий>: 0x%x"
+
+#: readelf.c:2209
+msgid "unknown"
+msgstr "невідомий"
+
+#: readelf.c:2210
+msgid "unknown mac"
+msgstr "невідомий mac"
+
+#: readelf.c:2523
+msgid "Standalone App"
+msgstr "Ізольована програма"
+
+#: readelf.c:2526 readelf.c:3234 readelf.c:3250
+#, c-format
+msgid "<unknown: %x>"
+msgstr "<невідомий: %x>"
+
+#: readelf.c:2951
+#, c-format
+msgid "Usage: readelf <option(s)> elf-file(s)\n"
+msgstr "Використання: readelf <ключі> elf-файл(и)\n"
+
+#: readelf.c:2952
+#, c-format
+msgid " Display information about the contents of ELF format files\n"
+msgstr " Відображає інформацію про зміст файлів у форматі ELF\n"
+
+#: readelf.c:2953
+#, fuzzy, c-format
+msgid ""
+" Options are:\n"
+"  -a --all               Equivalent to: -h -l -S -s -r -d -V -A -I\n"
+"  -h --file-header       Display the ELF file header\n"
+"  -l --program-headers   Display the program headers\n"
+"     --segments          An alias for --program-headers\n"
+"  -S --section-headers   Display the sections' header\n"
+"     --sections          An alias for --section-headers\n"
+"  -g --section-groups    Display the section groups\n"
+"  -t --section-details   Display the section details\n"
+"  -e --headers           Equivalent to: -h -l -S\n"
+"  -s --syms              Display the symbol table\n"
+"      --symbols          An alias for --syms\n"
+"  -n --notes             Display the core notes (if present)\n"
+"  -r --relocs            Display the relocations (if present)\n"
+"  -u --unwind            Display the unwind info (if present)\n"
+"  -d --dynamic           Display the dynamic section (if present)\n"
+"  -V --version-info      Display the version sections (if present)\n"
+"  -A --arch-specific     Display architecture specific information (if "
+"any).\n"
+"  -c --archive-index     Display the symbol/file index in an archive\n"
+"  -D --use-dynamic       Use the dynamic section info when displaying "
+"symbols\n"
+"  -x --hex-dump=<number|name>\n"
+"                         Dump the contents of section <number|name> as "
+"bytes\n"
+"  -p --string-dump=<number|name>\n"
+"                         Dump the contents of section <number|name> as "
+"strings\n"
+"  -R --relocated-dump=<number|name>\n"
+"                         Dump the contents of section <number|name> as "
+"relocated bytes\n"
+"  -w[lLiaprmfFsoR] or\n"
+"  --debug-dump[=rawline,=decodedline,=info,=abbrev,=pubnames,=aranges,=macro,"
+"=frames,=str,=loc,=Ranges]\n"
+"                         Display the contents of DWARF2 debug sections\n"
+msgstr ""
+" Ключі:\n"
+"  -a --all               Еквівалентна: -h -l -S -s -r -d -V -A -I\n"
+"  -h --file-header       Виведення заголовку файлу ELF\n"
+"  -l --program-headers   Виведення заголовків програми\n"
+"     --segments          Алиас для --program-headers\n"
+"  -S --section-headers   Виведення заголовків розділів\n"
+"     --sections          Алиас для --section-headers\n"
+"  -g --section-groups    Виведення груп розділів\n"
+"  -t --section-details   Виведення інформації про розділи\n"
+"  -e --headers           Еквівалентна: -h -l -S\n"
+"  -s --syms              Виведення таблиці символів\n"
+"     --symbols           Псевдонім для --syms\n"
+"  -n --notes             Виведення основних записів (якщо є)\n"
+"  -r --relocs            Виведення переміщень (якщо є)\n"
+"  -u --unwind            Виведення інформації про розклад (якщо є)\n"
+"  -d --dynamic           Виведення динамічного сегменту (якщо є)\n"
+"  -V --version-info      Виведення розділів с версією (якщо є)\n"
+"  -A --arch-specific     Виведення інформації, специфічної для архітектури "
+"(якщо є).\n"
+"  -D --use-dynamic       Використання динамічної інформації розділу при "
+"виводі символів\n"
+"  -x --hex-dump=<номер>  Дамп змісту розділу <номер>\n"
+"  -w[liaprmfFsoR] або\n"
+"  --debug-dump[=line,=info,=abbrev,=pubnames,=ranges,=macro,=frames,=str,"
+"=loc,=Ranges]\n"
+"                         Виведення змісту налагоджувальних розділів DWARF2\n"
+
+#: readelf.c:2983
+#, fuzzy, c-format
+msgid ""
+"  -i --instruction-dump=<number|name>\n"
+"                         Disassemble the contents of section <number|name>\n"
+msgstr ""
+"  -i --instruction-dump=<номер>\n"
+"                         Дизасемблювання змісту розділу <номер>\n"
+
+#: readelf.c:2987
+#, c-format
+msgid ""
+"  -I --histogram         Display histogram of bucket list lengths\n"
+"  -W --wide              Allow output width to exceed 80 characters\n"
+"  @<file>                Read options from <file>\n"
+"  -H --help              Display this information\n"
+"  -v --version           Display the version number of readelf\n"
+msgstr ""
+"  -I --histogram         Виведення гістограми довжин списку ділянки пам'яті\n"
+"  -W --wide              Дозвіл ширини виводу більш 80 символів\n"
+"  @<файл>                Читати ключі з <файла>\n"
+"  -H --help              Виведення цієї інформації\n"
+"  -v --version           Виведення номеру версії readelf\n"
+
+#: readelf.c:3016 readelf.c:3045 readelf.c:3049 readelf.c:11799
+msgid "Out of memory allocating dump request table.\n"
+msgstr "Бракує пам'яті при розміщенні дампу таблиці запиту.\n"
+
+#: readelf.c:3204
+#, c-format
+msgid "Invalid option '-%c'\n"
+msgstr "Неправильний ключ '-%c'\n"
+
+#: readelf.c:3218
+msgid "Nothing to do.\n"
+msgstr "Немає що виконувати.\n"
+
+#: readelf.c:3230 readelf.c:3246 readelf.c:6679
+msgid "none"
+msgstr "немає"
+
+#: readelf.c:3247
+msgid "2's complement, little endian"
+msgstr "доповнення до 2, little endian"
+
+#: readelf.c:3248
+msgid "2's complement, big endian"
+msgstr "доповнення до 2, big endian"
+
+#: readelf.c:3266
+msgid "Not an ELF file - it has the wrong magic bytes at the start\n"
+msgstr "Не ELF-файл - він містить неправильні magic-байти на початку\n"
+
+#: readelf.c:3276
+#, c-format
+msgid "ELF Header:\n"
+msgstr "Заголовок ELF:\n"
+
+#: readelf.c:3277
+#, c-format
+msgid "  Magic:   "
+msgstr "  Magic:   "
+
+#: readelf.c:3281
+#, c-format
+msgid "  Class:                             %s\n"
+msgstr "  Клас:                             %s\n"
+
+#: readelf.c:3283
+#, c-format
+msgid "  Data:                              %s\n"
+msgstr "  Дані:                            %s\n"
+
+#: readelf.c:3285
+#, c-format
+msgid "  Version:                           %d %s\n"
+msgstr "  Версія:                            %d %s\n"
+
+#: readelf.c:3292
+#, c-format
+msgid "  OS/ABI:                            %s\n"
+msgstr "  OS/ABI:                            %s\n"
+
+#: readelf.c:3294
+#, c-format
+msgid "  ABI Version:                       %d\n"
+msgstr "  Версія ABI:                        %d\n"
+
+#: readelf.c:3296
+#, c-format
+msgid "  Type:                              %s\n"
+msgstr "  Тип:                               %s\n"
+
+#: readelf.c:3298
+#, c-format
+msgid "  Machine:                           %s\n"
+msgstr "  Машина:                            %s\n"
+
+#: readelf.c:3300
+#, c-format
+msgid "  Version:                           0x%lx\n"
+msgstr "  Версія:                            0x%lx\n"
+
+#: readelf.c:3303
+#, c-format
+msgid "  Entry point address:               "
+msgstr "  Адрес точки входу:                 "
+
+#: readelf.c:3305
+#, c-format
+msgid ""
+"\n"
+"  Start of program headers:          "
+msgstr ""
+"\n"
+"  Початок заголовків програми:       "
+
+#: readelf.c:3307
+#, c-format
+msgid ""
+" (bytes into file)\n"
+"  Start of section headers:          "
+msgstr ""
+" (байт в файлі)\n"
+"  Початок заголовків програми:       "
+
+#: readelf.c:3309
+#, c-format
+msgid " (bytes into file)\n"
+msgstr " (байт в файлі)\n"
+
+#: readelf.c:3311
+#, c-format
+msgid "  Flags:                             0x%lx%s\n"
+msgstr "  Ознаки:                             0x%lx%s\n"
+
+#: readelf.c:3314
+#, c-format
+msgid "  Size of this header:               %ld (bytes)\n"
+msgstr "  Розмір цього заголовку:            %ld (байт)\n"
+
+#: readelf.c:3316
+#, c-format
+msgid "  Size of program headers:           %ld (bytes)\n"
+msgstr "  Розмір заголовків програми:       %ld (байт)\n"
+
+#: readelf.c:3318
+#, c-format
+msgid "  Number of program headers:         %ld\n"
+msgstr "  Число заголовків програми:        %ld\n"
+
+#: readelf.c:3320
+#, c-format
+msgid "  Size of section headers:           %ld (bytes)\n"
+msgstr "  Розмір заголовків розділу:         %ld (байт)\n"
+
+#: readelf.c:3322
+#, c-format
+msgid "  Number of section headers:         %ld"
+msgstr "  Число заголовків розділу:          %ld"
+
+#: readelf.c:3327
+#, c-format
+msgid "  Section header string table index: %ld"
+msgstr "  Індекс таблиці рядків заголовку розділу: %ld"
+
+#: readelf.c:3365 readelf.c:3399
+msgid "program headers"
+msgstr "заголовки програми"
+
+#: readelf.c:3438 readelf.c:3738 readelf.c:3781 readelf.c:3842 readelf.c:3909
+#: readelf.c:4718 readelf.c:4742 readelf.c:6006 readelf.c:6052 readelf.c:6253
+#: readelf.c:7345 readelf.c:7359 readelf.c:7870 readelf.c:7886 readelf.c:7929
+#: readelf.c:7954 readelf.c:9944 readelf.c:10136 readelf.c:10699
+#: readelf.c:11089 readelf.c:11103 readelf.c:11464
+msgid "Out of memory\n"
+msgstr "Бракує пам'яті\n"
+
+#: readelf.c:3465
+#, c-format
+msgid ""
+"\n"
+"There are no program headers in this file.\n"
+msgstr ""
+"\n"
+"У цьому файлі немає заголовків програми.\n"
+
+#: readelf.c:3471
+#, c-format
+msgid ""
+"\n"
+"Elf file type is %s\n"
+msgstr ""
+"\n"
+"Тип elf-файлу - %s\n"
+
+#: readelf.c:3472
+#, c-format
+msgid "Entry point "
+msgstr "Точка входу "
+
+#: readelf.c:3474
+#, c-format
+msgid ""
+"\n"
+"There are %d program headers, starting at offset "
+msgstr ""
+"\n"
+"Виявлено %d заголовків програми, починаючи зі зсуву "
+
+#: readelf.c:3486 readelf.c:3488
+#, c-format
+msgid ""
+"\n"
+"Program Headers:\n"
+msgstr ""
+"\n"
+"Заголовки програми:\n"
+
+#: readelf.c:3492
+#, c-format
+msgid ""
+"  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align\n"
+msgstr ""
+"  Тип            Зсув    Вірт.адр   Фіз.адр    Рзм.фйл Рзм.пм  Озн Вирівн\n"
+
+#: readelf.c:3495
+#, c-format
+msgid ""
+"  Type           Offset   VirtAddr           PhysAddr           FileSiz  "
+"MemSiz   Flg Align\n"
+msgstr ""
+"  Тип            Зсув    Віртуальна адреса   Фізична адреса     Рзм.фйл  Рзм."
+"пм   Озн Вирівн\n"
+
+#: readelf.c:3499
+#, c-format
+msgid "  Type           Offset             VirtAddr           PhysAddr\n"
+msgstr ""
+"  Тип            Зсув              Віртуальна адреса   Фізична адреса\n"
+
+#: readelf.c:3501
+#, c-format
+msgid "                 FileSiz            MemSiz              Flags  Align\n"
+msgstr "                 Розмір файлу       Розмір пам'яті      Вирівнювання\n"
+
+#: readelf.c:3594
+msgid "more than one dynamic segment\n"
+msgstr "більш ніж один динамічний сегмент\n"
+
+#: readelf.c:3610
+msgid "no .dynamic section in the dynamic segment\n"
+msgstr "у динамічному сегменті немає розділу .dynamic\n"
+
+#: readelf.c:3625
+msgid "the .dynamic section is not contained within the dynamic segment\n"
+msgstr "в динамічному сегменті не міститься розділ .dynamic\n"
+
+#: readelf.c:3628
+msgid "the .dynamic section is not the first section in the dynamic segment.\n"
+msgstr "розділ .dynamic не є першим розділом динамічного сегменту.\n"
+
+#: readelf.c:3636
+msgid "Unable to find program interpreter name\n"
+msgstr "Неможливо знайти назву інтерпретатора програми\n"
+
+#: readelf.c:3643
+msgid ""
+"Internal error: failed to create format string to display program "
+"interpreter\n"
+msgstr ""
+"Внутрішня помилка: не вдається створити рядок формату для відображення "
+"інтерпретатора програми\n"
+
+#: readelf.c:3647
+msgid "Unable to read program interpreter name\n"
+msgstr "Неможливо прочитати назву інтерпретатора програми\n"
+
+#: readelf.c:3650
+#, c-format
+msgid ""
+"\n"
+"      [Requesting program interpreter: %s]"
+msgstr ""
+"\n"
+"      [Запитаний інтерпретатор програми: %s]"
+
+#: readelf.c:3662
+#, c-format
+msgid ""
+"\n"
+" Section to Segment mapping:\n"
+msgstr ""
+"\n"
+" Відповідність розділ-сегмент:\n"
+
+#: readelf.c:3663
+#, c-format
+msgid "  Segment Sections...\n"
+msgstr "  Сегмент Розділи...\n"
+
+#: readelf.c:3698
+msgid "Cannot interpret virtual addresses without program headers.\n"
+msgstr "Неможливо інтерпретувати віртуальні адреси без заголовків програми.\n"
+
+#: readelf.c:3714
+#, c-format
+msgid "Virtual address 0x%lx not located in any PT_LOAD segment.\n"
+msgstr "Віртуальна адреса 0x%lx не розміщена у жодному сегменті PT_LOAD.\n"
+
+#: readelf.c:3729 readelf.c:3772
+msgid "section headers"
+msgstr "заголовки розділів"
+
+#: readelf.c:3817 readelf.c:3884
+msgid "symbols"
+msgstr "символи"
+
+#: readelf.c:3829 readelf.c:3896
+msgid "symtab shndx"
+msgstr "symtab shndx"
+
+#: readelf.c:4076 readelf.c:4157 readelf.c:4178 readelf.c:4200 readelf.c:4218
+#, fuzzy
+msgid "Internal buffer overflow\n"
+msgstr "числове переповнення"
+
+#: readelf.c:4246 readelf.c:4702
+#, c-format
+msgid ""
+"\n"
+"There are no sections in this file.\n"
+msgstr ""
+"\n"
+"У цьому файлі немає розділів.\n"
+
+#: readelf.c:4252
+#, c-format
+msgid "There are %d section headers, starting at offset 0x%lx:\n"
+msgstr "Виявлено %d заголовків розділу, починаючи зі зсуву 0x%lx:\n"
+
+#: readelf.c:4273 readelf.c:4819 readelf.c:5046 readelf.c:5346 readelf.c:5759
+#: readelf.c:7680
+msgid "string table"
+msgstr "таблиця рядків"
+
+#: readelf.c:4340
+#, c-format
+msgid "Section %d has invalid sh_entsize %lx (expected %lx)\n"
+msgstr "Розділ %d містить неправильний sh_entsize %lx (очікувалось %lx)\n"
+
+#: readelf.c:4360
+msgid "File contains multiple dynamic symbol tables\n"
+msgstr "Файл містить декілька таблиць динамічних символів\n"
+
+#: readelf.c:4373
+msgid "File contains multiple dynamic string tables\n"
+msgstr "Файл містить декілька таблиць динамічних рядків\n"
+
+#: readelf.c:4379
+msgid "dynamic strings"
+msgstr "динамічні рядки"
+
+#: readelf.c:4386
+msgid "File contains multiple symtab shndx tables\n"
+msgstr "Файл містить декілька таблиць symtab shndx\n"
+
+#: readelf.c:4437
+#, c-format
+msgid ""
+"\n"
+"Section Headers:\n"
+msgstr ""
+"\n"
+"Заголовки розділів:\n"
+
+#: readelf.c:4439
+#, c-format
+msgid ""
+"\n"
+"Section Header:\n"
+msgstr ""
+"\n"
+"Заголовок розділу:\n"
+
+#: readelf.c:4445 readelf.c:4456 readelf.c:4467
+#, c-format
+msgid "  [Nr] Name\n"
+msgstr "  [Nr] Назва\n"
+
+#: readelf.c:4446
+#, c-format
+msgid "       Type            Addr     Off    Size   ES   Lk Inf Al\n"
+msgstr "       Тип             Адреса   Зсув   Розм   ES   Сс Інф Al\n"
+
+#: readelf.c:4450
+#, c-format
+msgid ""
+"  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk "
+"Inf Al\n"
+msgstr ""
+"  [Нм] Назва             Тип             Адреса   Зсув   Розм   ES Флг Сс "
+"Інф Al\n"
+
+#: readelf.c:4457
+#, c-format
+msgid "       Type            Address          Off    Size   ES   Lk Inf Al\n"
+msgstr "       Тип             Адрес            Зсув   Розм   ES   Сс Інф Al\n"
+
+#: readelf.c:4461
+#, c-format
+msgid ""
+"  [Nr] Name              Type            Address          Off    Size   ES "
+"Flg Lk Inf Al\n"
+msgstr ""
+"  [Нм] Назва             Тип             Адреса           Зсув   Розм   ES "
+"Озн Лк Інф Al\n"
+
+#: readelf.c:4468
+#, c-format
+msgid "       Type              Address          Offset            Link\n"
+msgstr ""
+"       Тип               Адреса           Зсув              Посилання\n"
+
+#: readelf.c:4469
+#, c-format
+msgid "       Size              EntSize          Info              Align\n"
+msgstr "       Розмір            Розм.Ent         Інфо              Вирівн\n"
+
+#: readelf.c:4473
+#, c-format
+msgid "  [Nr] Name              Type             Address           Offset\n"
+msgstr "  [Нм] Назва             Тип              Адреса            Зсув\n"
+
+#: readelf.c:4474
+#, c-format
+msgid "       Size              EntSize          Flags  Link  Info  Align\n"
+msgstr "       Розмір            Розм.Ent         Ознаки Посил Інфо  Вирівн\n"
+
+#: readelf.c:4479
+#, c-format
+msgid "       Flags\n"
+msgstr "       Ознаки\n"
+
+#: readelf.c:4554
+#, c-format
+msgid "section %u: sh_link value of %u is larger than the number of sections\n"
+msgstr ""
+
+#: readelf.c:4651
+#, fuzzy, c-format
+msgid ""
+"Key to Flags:\n"
+"  W (write), A (alloc), X (execute), V (VLE section), M (merge), S "
+"(strings)\n"
+"  I (info), L (link order), G (group), O (extra OS processing required) P "
+"(PCP section)\n"
+"  o (OS specific), p (processor specific) x (unknown)\n"
+"  s (small data), z (absolute data), # (core number)\n"
+msgstr ""
+"Позначення ознак:\n"
+"  W (запис), A (назнач), X (виконуваний), M (злиття), S (строки)\n"
+"  I (інфо), L (порядок посилань), G (група), x (невідомий.)\n"
+"  O (потрібна додаткова обробка ОС) o (специфічний для ОС), p (специфічний "
+"для процесору)\n"
+
+#: readelf.c:4658
+#, c-format
+msgid ""
+"Key to Flags:\n"
+"  W (write), A (alloc), X (execute), M (merge), S (strings)\n"
+"  I (info), L (link order), G (group), x (unknown)\n"
+"  O (extra OS processing required) o (OS specific), p (processor specific)\n"
+msgstr ""
+"Позначення ознак:\n"
+"  W (запис), A (назнач), X (виконуваний), M (злиття), S (строки)\n"
+"  I (інфо), L (порядок посилань), G (група), x (невідомий.)\n"
+"  O (потрібна додаткова обробка ОС) o (специфічний для ОС), p (специфічний "
+"для процесору)\n"
+
+#: readelf.c:4677
+#, c-format
+msgid "[<unknown>: 0x%x]"
+msgstr "[<невідомий>: 0x%x]"
+
+#: readelf.c:4709
+msgid "Section headers are not available!\n"
+msgstr "Недоступні заголовки розділу!\n"
+
+#: readelf.c:4733
+#, c-format
+msgid ""
+"\n"
+"There are no section groups in this file.\n"
+msgstr ""
+"\n"
+"В цьому файлі немає груп розділів.\n"
+
+#: readelf.c:4770
+#, c-format
+msgid "Bad sh_link in group section `%s'\n"
+msgstr "Неправильний sh_link у розділі груп `%s'\n"
+
+#: readelf.c:4789
+#, c-format
+msgid "Bad sh_info in group section `%s'\n"
+msgstr "Неправильний sh_info у розділі груп `%s'\n"
+
+#: readelf.c:4828
+msgid "section data"
+msgstr "дані розділу"
+
+#: readelf.c:4840
+#, c-format
+msgid "   [Index]    Name\n"
+msgstr "   [Індекс]   Назва\n"
+
+#: readelf.c:4854
+#, c-format
+msgid "section [%5u] in group section [%5u] > maximum section [%5u]\n"
+msgstr ""
+"розділ [%5u] вже знаходиться у розділі груп [%5u] > максимальний розділ "
+"[%5u]\n"
+
+#: readelf.c:4863
+#, c-format
+msgid "section [%5u] in group section [%5u] already in group section [%5u]\n"
+msgstr ""
+"розділ [%5u] з розділу груп [%5u] вже знаходиться у розділі груп [%5u]\n"
+
+#: readelf.c:4876
+#, c-format
+msgid "section 0 in group section [%5u]\n"
+msgstr "розділ 0 у розділі груп [%5u]\n"
+
+#: readelf.c:4971
+#, c-format
+msgid ""
+"\n"
+"'%s' relocation section at offset 0x%lx contains %ld bytes:\n"
+msgstr ""
+"\n"
+"'%s' розділ переміщення зі зсувом 0x%lx містить %ld байт:\n"
+
+#: readelf.c:4983
+#, c-format
+msgid ""
+"\n"
+"There are no dynamic relocations in this file.\n"
+msgstr ""
+"\n"
+"В цьому файлі немає динамічних переміщень .\n"
+
+#: readelf.c:5007
+#, c-format
+msgid ""
+"\n"
+"Relocation section "
+msgstr ""
+"\n"
+"Розділ переміщення "
+
+#: readelf.c:5012 readelf.c:5422 readelf.c:5437 readelf.c:5774
+#, c-format
+msgid "'%s'"
+msgstr "'%s'"
+
+#: readelf.c:5014 readelf.c:5439 readelf.c:5776
+#, c-format
+msgid " at offset 0x%lx contains %lu entries:\n"
+msgstr " зі зсувом 0x%lx містить %lu пунктів:\n"
+
+#: readelf.c:5065
+#, c-format
+msgid ""
+"\n"
+"There are no relocations in this file.\n"
+msgstr ""
+"\n"
+"В цьому файлі немає переміщень.\n"
+
+#: readelf.c:5250 readelf.c:5623
+msgid "unwind table"
+msgstr "розгорнута таблиця"
+
+#: readelf.c:5292 readelf.c:5705
+#, c-format
+msgid "Skipping unexpected relocation type %s\n"
+msgstr "Пропускається неочікуваний тип переміщення %s\n"
+
+#: readelf.c:5354 readelf.c:5767 readelf.c:5820
+#, c-format
+msgid ""
+"\n"
+"There are no unwind sections in this file.\n"
+msgstr ""
+"\n"
+"В цьому файлі немає розгорнутих розділів.\n"
+
+#: readelf.c:5417
+#, c-format
+msgid ""
+"\n"
+"Could not find unwind info section for "
+msgstr ""
+"\n"
+"Не вдається знайти розділ з розгорнутою інформацією для"
+
+#: readelf.c:5430
+msgid "unwind info"
+msgstr "розгорнута інформація"
+
+#: readelf.c:5432 readelf.c:5773
+#, c-format
+msgid ""
+"\n"
+"Unwind section "
+msgstr ""
+"\n"
+"Розгорнутий розділ "
+
+#: readelf.c:5986 readelf.c:6032
+msgid "dynamic section"
+msgstr "динамічний розділ"
+
+#: readelf.c:6110
+#, c-format
+msgid ""
+"\n"
+"There is no dynamic section in this file.\n"
+msgstr ""
+"\n"
+"В цьому файлі немає динамічного розділу.\n"
+
+#: readelf.c:6148
+msgid "Unable to seek to end of file!\n"
+msgstr "Не вдається перейти до кінця файлу!\n"
+
+#: readelf.c:6161
+msgid "Unable to determine the number of symbols to load\n"
+msgstr "Неможливо визначити число завантажених символів\n"
+
+#: readelf.c:6196
+msgid "Unable to seek to end of file\n"
+msgstr "Неможливо виконати пошук до кінця файлу\n"
+
+#: readelf.c:6203
+msgid "Unable to determine the length of the dynamic string table\n"
+msgstr "Неможливо визначити довжину таблиці динамічних рядків\n"
+
+#: readelf.c:6209
+msgid "dynamic string table"
+msgstr "таблиця динамічних рядків"
+
+#: readelf.c:6246
+msgid "symbol information"
+msgstr "інформація про символ"
+
+#: readelf.c:6271
+#, c-format
+msgid ""
+"\n"
+"Dynamic section at offset 0x%lx contains %u entries:\n"
+msgstr ""
+"\n"
+"Динамічний розділ із зсувом 0x%lx містить %u пунктів:\n"
+
+#: readelf.c:6274
+#, c-format
+msgid "  Tag        Type                         Name/Value\n"
+msgstr "  Тег        Тип                          Назва/Значення\n"
+
+#: readelf.c:6310
+#, c-format
+msgid "Auxiliary library"
+msgstr "Допоміжна бібліотека"
+
+#: readelf.c:6314
+#, c-format
+msgid "Filter library"
+msgstr "Бібліотека фільтрів"
+
+#: readelf.c:6318
+#, c-format
+msgid "Configuration file"
+msgstr "Файл налаштовування"
+
+#: readelf.c:6322
+#, c-format
+msgid "Dependency audit library"
+msgstr "Бібліотека аудиту залежностей"
+
+#: readelf.c:6326
+#, c-format
+msgid "Audit library"
+msgstr "Бібліотека аудиту"
+
+#: readelf.c:6344 readelf.c:6372 readelf.c:6400
+#, c-format
+msgid "Flags:"
+msgstr "Ознаки:"
+
+#: readelf.c:6347 readelf.c:6375 readelf.c:6402
+#, c-format
+msgid " None\n"
+msgstr " Немає\n"
+
+#: readelf.c:6523
+#, c-format
+msgid "Shared library: [%s]"
+msgstr "Спільна бібліотека: [%s]"
+
+#: readelf.c:6526
+#, c-format
+msgid " program interpreter"
+msgstr " інтерпретатор програми"
+
+#: readelf.c:6530
+#, c-format
+msgid "Library soname: [%s]"
+msgstr "Бібліотека soname: [%s]"
+
+#: readelf.c:6534
+#, c-format
+msgid "Library rpath: [%s]"
+msgstr "Бібліотека rpath: [%s]"
+
+#: readelf.c:6538
+#, c-format
+msgid "Library runpath: [%s]"
+msgstr "Бібліотека runpath: [%s]"
+
+#: readelf.c:6601
+#, c-format
+msgid "Not needed object: [%s]\n"
+msgstr "Непотрібний об'єкт: [%s]\n"
+
+#: readelf.c:6726
+#, fuzzy, c-format
+msgid ""
+"\n"
+"Version definition section '%s' contains %u entries:\n"
+msgstr ""
+"\n"
+"Розділ опису версії '%s' містить %ld пунктів:\n"
+
+#: readelf.c:6729
+#, c-format
+msgid "  Addr: 0x"
+msgstr "  Адреса: 0x"
+
+#: readelf.c:6731 readelf.c:6833 readelf.c:6956
+#, fuzzy, c-format
+msgid "  Offset: %#08lx  Link: %u (%s)\n"
+msgstr "  Зсув: %#08lx  Посилання: %lx (%s)\n"
+
+#: readelf.c:6739
+msgid "version definition section"
+msgstr "розділ опису версії"
+
+#: readelf.c:6768
+#, c-format
+msgid "  %#06x: Rev: %d  Flags: %s"
+msgstr "  %#06x: Випуск: %d  Ознаки: %s"
+
+#: readelf.c:6771
+#, c-format
+msgid "  Index: %d  Cnt: %d  "
+msgstr "  Індекс: %d  Лічильник: %d  "
+
+#: readelf.c:6782
+#, c-format
+msgid "Name: %s\n"
+msgstr "Назва: %s\n"
+
+#: readelf.c:6784
+#, c-format
+msgid "Name index: %ld\n"
+msgstr "Індекс назви: %ld\n"
+
+#: readelf.c:6801
+#, c-format
+msgid "  %#06x: Parent %d: %s\n"
+msgstr "  %#06x: Батько %d: %s\n"
+
+#: readelf.c:6804
+#, c-format
+msgid "  %#06x: Parent %d, name index: %ld\n"
+msgstr "  %#06x: Батько %d, індекс назви: %ld\n"
+
+#: readelf.c:6808
+#, fuzzy, c-format
+msgid "  Version def aux past end of section\n"
+msgstr "розділ опису версії"
+
+#: readelf.c:6813
+#, fuzzy, c-format
+msgid "  Version definition past end of section\n"
+msgstr "розділ опису версії"
+
+#: readelf.c:6828
+#, fuzzy, c-format
+msgid ""
+"\n"
+"Version needs section '%s' contains %u entries:\n"
+msgstr ""
+"\n"
+"Розділ залежностей версії '%s' містить %ld пунктів:\n"
+
+#: readelf.c:6831
+#, c-format
+msgid " Addr: 0x"
+msgstr " Адреса: 0x"
+
+#: readelf.c:6842
+msgid "version need section"
+msgstr "розділ залежностей версії"
+
+#: readelf.c:6867
+#, c-format
+msgid "  %#06x: Version: %d"
+msgstr "  %#06x: Версія: %d"
+
+#: readelf.c:6870
+#, c-format
+msgid "  File: %s"
+msgstr "  Файл: %s"
+
+#: readelf.c:6872
+#, c-format
+msgid "  File: %lx"
+msgstr "  Файл: %lx"
+
+#: readelf.c:6874
+#, c-format
+msgid "  Cnt: %d\n"
+msgstr "  Лічильник: %d\n"
+
+#: readelf.c:6894
+#, c-format
+msgid "  %#06x:   Name: %s"
+msgstr "  %#06x:   Назва: %s"
+
+#: readelf.c:6897
+#, c-format
+msgid "  %#06x:   Name index: %lx"
+msgstr "  %#06x:   Індекс назви: %lx"
+
+#: readelf.c:6900
+#, c-format
+msgid "  Flags: %s  Version: %d\n"
+msgstr "  Ознаки: %s  Версія: %d\n"
+
+#: readelf.c:6907
+#, fuzzy, c-format
+msgid "  Version need aux past end of section\n"
+msgstr "Для розділу %s потрібен заповнений розділ .debug_info\n"
+
+#: readelf.c:6912
+#, fuzzy, c-format
+msgid "  Version need past end of section\n"
+msgstr "розділ залежностей версії"
+
+#: readelf.c:6947
+msgid "version string table"
+msgstr "таблиця рядків версії"
+
+#: readelf.c:6951
+#, c-format
+msgid ""
+"\n"
+"Version symbols section '%s' contains %d entries:\n"
+msgstr ""
+"\n"
+"Розділ символів версії '%s' містить %d пунктів:\n"
+
+#: readelf.c:6954
+#, c-format
+msgid " Addr: "
+msgstr " Адреса: "
+
+#: readelf.c:6965
+msgid "version symbol data"
+msgstr "дані символу версії"
+
+#: readelf.c:6992
+msgid "   0 (*local*)    "
+msgstr "   0 (*локальна*)    "
+
+#: readelf.c:6996
+msgid "   1 (*global*)   "
+msgstr "   1 (*глобальна*)   "
+
+#: readelf.c:7033 readelf.c:7747
+msgid "version need"
+msgstr "залежність версії"
+
+#: readelf.c:7043
+msgid "version need aux (2)"
+msgstr "залежність версії aux (2)"
+
+#: readelf.c:7058 readelf.c:7113
+#, fuzzy
+msgid "*invalid*"
+msgstr "неправильний номер"
+
+#: readelf.c:7088 readelf.c:7812
+msgid "version def"
+msgstr "опис версії"
+
+#: readelf.c:7108 readelf.c:7827
+msgid "version def aux"
+msgstr "опис версії aux"
+
+#: readelf.c:7142
+#, c-format
+msgid ""
+"\n"
+"No version information found in this file.\n"
+msgstr ""
+"\n"
+"В цьому файлі не знайдено інформацію про версії.\n"
+
+#: readelf.c:7240
+#, c-format
+msgid "Illegal visibility attribute %d\n"
+msgstr ""
+
+#: readelf.c:7292
+#, c-format
+msgid "<other>: %x"
+msgstr "<інше>: %x"
+
+#: readelf.c:7351
+msgid "Unable to read in dynamic data\n"
+msgstr "Неможливо прочитати динамічні дані\n"
+
+#: readelf.c:7442 readelf.c:7492 readelf.c:7516 readelf.c:7546 readelf.c:7570
+msgid "Unable to seek to start of dynamic information\n"
+msgstr "Неможливо перейти до початку динамічної інформації\n"
+
+#: readelf.c:7448 readelf.c:7498
+msgid "Failed to read in number of buckets\n"
+msgstr "Помилка при читанні кількості областей пам'яті\n"
+
+#: readelf.c:7454
+msgid "Failed to read in number of chains\n"
+msgstr "Помилка при читанні кількості ланцюжків\n"
+
+#: readelf.c:7554
+msgid "Failed to determine last chain length\n"
+msgstr "Помилка при читанні кількості ланцюжків\n"
+
+#: readelf.c:7598
+#, c-format
+msgid ""
+"\n"
+"Symbol table for image:\n"
+msgstr ""
+"\n"
+"Таблиця символів для зображення:\n"
+
+#: readelf.c:7600 readelf.c:7618
+#, c-format
+msgid "  Num Buc:    Value  Size   Type   Bind Vis      Ndx Name\n"
+msgstr "  Області:    Знач   Розмір Тип    Зв'яз Vis     Індекс назви\n"
+
+#: readelf.c:7602 readelf.c:7620
+#, c-format
+msgid "  Num Buc:    Value          Size   Type   Bind Vis      Ndx Name\n"
+msgstr ""
+"  Області:    Значення       Розмір Тип    Зв'яз Vis     Індекс назви\n"
+
+#: readelf.c:7616
+#, fuzzy, c-format
+msgid ""
+"\n"
+"Symbol table of `.gnu.hash' for image:\n"
+msgstr ""
+"\n"
+"Таблиця символів для зображення:\n"
+
+#: readelf.c:7655
+#, c-format
+msgid ""
+"\n"
+"Symbol table '%s' contains %lu entries:\n"
+msgstr ""
+"\n"
+"Таблиця символів '%s' містить %lu пунктів:\n"
+
+#: readelf.c:7659
+#, c-format
+msgid "   Num:    Value  Size Type    Bind   Vis      Ndx Name\n"
+msgstr "   Чис:    Знач   Розм Тип     Зв'яз  Vis      Індекс назви\n"
+
+#: readelf.c:7661
+#, c-format
+msgid "   Num:    Value          Size Type    Bind   Vis      Ndx Name\n"
+msgstr "   Чис:    Знач           Розм Тип     Зв'яз  Vis      Індекс назви\n"
+
+#: readelf.c:7718
+msgid "version data"
+msgstr "дані версії"
+
+#: readelf.c:7760
+msgid "version need aux (3)"
+msgstr "залежність версії aux (3)"
+
+#: readelf.c:7787
+msgid "bad dynamic symbol\n"
+msgstr "неправильний динамічний символ\n"
+
+#: readelf.c:7851
+#, c-format
+msgid ""
+"\n"
+"Dynamic symbol information is not available for displaying symbols.\n"
+msgstr ""
+"\n"
+"Інформація динамічного символу не доступна для відображення символів.\n"
+
+#: readelf.c:7863
+#, c-format
+msgid ""
+"\n"
+"Histogram for bucket list length (total of %lu buckets):\n"
+msgstr ""
+"\n"
+"Гістограма довжини списку областей пам'яті (всього %lu областей):\n"
+
+#: readelf.c:7865 readelf.c:7935
+#, c-format
+msgid " Length  Number     %% of total  Coverage\n"
+msgstr " Довжина Число        %% від усіх Охоплення\n"
+
+#: readelf.c:7933
+#, c-format
+msgid ""
+"\n"
+"Histogram for `.gnu.hash' bucket list length (total of %lu buckets):\n"
+msgstr ""
+"\n"
+"Гістограма довжини списку областей `.gnu.hash' (всього %lu областей):\n"
+
+#: readelf.c:7999
+#, c-format
+msgid ""
+"\n"
+"Dynamic info segment at offset 0x%lx contains %d entries:\n"
+msgstr ""
+"\n"
+"Сегмент динамічної інформації із зсувом 0x%lx містить %d пунктів:\n"
+
+#: readelf.c:8002
+#, c-format
+msgid " Num: Name                           BoundTo     Flags\n"
+msgstr " Чис: Назва                          Межа        Ознаки\n"
+
+#: readelf.c:8093
+msgid "Unhandled MN10300 reloc type found after SYM_DIFF reloc"
+msgstr ""
+
+#: readelf.c:8245
+#, c-format
+msgid ""
+"Missing knowledge of 32-bit reloc types used in DWARF sections of machine "
+"number %d\n"
+msgstr ""
+
+#: readelf.c:8538
+#, c-format
+msgid "unable to apply unsupported reloc type %d to section %s\n"
+msgstr ""
+
+#: readelf.c:8546
+#, c-format
+msgid "skipping invalid relocation offset 0x%lx in section %s\n"
+msgstr "пропускається некоректний зсув переміщення 0x%lx у розділі %s\n"
+
+#: readelf.c:8570
+#, fuzzy, c-format
+msgid "skipping unexpected symbol type %s in %ld'th relocation in section %s\n"
+msgstr ""
+"пропускається неочікуваний тип символу %s у переміщенні в розділі .rela%s\n"
+
+#: readelf.c:8612
+#, c-format
+msgid ""
+"\n"
+"Assembly dump of section %s\n"
+msgstr ""
+"\n"
+"Зібраний дамп розділу %s\n"
+
+#: readelf.c:8633
+#, c-format
+msgid ""
+"\n"
+"Section '%s' has no data to dump.\n"
+msgstr ""
+"\n"
+"Розділ '%s' не містить даних для дампу.\n"
+
+#: readelf.c:8639
+#, fuzzy
+msgid "section contents"
+msgstr "встановлення змісту .nlmsections"
+
+#: readelf.c:8659
+#, fuzzy, c-format
+msgid ""
+"\n"
+"String dump of section '%s':\n"
+msgstr ""
+"\n"
+"Hex-дамп розділу '%s':\n"
+
+#: readelf.c:8677
+#, fuzzy, c-format
+msgid ""
+"  Note: This section has relocations against it, but these have NOT been "
+"applied to this dump.\n"
+msgstr ""
+" ПРИМІТКА: Цей розділ містить переміщувані символи на самого себе, але вони "
+"НЕ були застосовані до цього дампу.\n"
+
+#: readelf.c:8706
+#, fuzzy, c-format
+msgid "  No strings found in this section."
+msgstr ""
+"\n"
+"В цьому файлі не знайдено інформацію про версії.\n"
+
+#: readelf.c:8728
+#, c-format
+msgid ""
+"\n"
+"Hex dump of section '%s':\n"
+msgstr ""
+"\n"
+"Hex-дамп розділу '%s':\n"
+
+#: readelf.c:8752
+#, c-format
+msgid ""
+" NOTE: This section has relocations against it, but these have NOT been "
+"applied to this dump.\n"
+msgstr ""
+" ПРИМІТКА: Цей розділ містить переміщувані символи на самого себе, але вони "
+"НЕ були застосовані до цього дампу.\n"
+
+#: readelf.c:8890
+#, c-format
+msgid "%s section data"
+msgstr "дані розділу %s"
+
+#: readelf.c:8956
+#, c-format
+msgid ""
+"\n"
+"Section '%s' has no debugging data.\n"
+msgstr ""
+"\n"
+"Розділ '%s' не містить налагоджувальних даних.\n"
+
+#. There is no point in dumping the contents of a debugging section
+#. which has the NOBITS type - the bits in the file will be random.
+#. This can happen when a file containing a .eh_frame section is
+#. stripped with the --only-keep-debug command line option.
+#: readelf.c:8965
+#, c-format
+msgid "section '%s' has the NOBITS type - its contents are unreliable.\n"
+msgstr ""
+
+#: readelf.c:9001
+#, c-format
+msgid "Unrecognized debug section: %s\n"
+msgstr "Нерозпізнаний розділ налагодження: %s\n"
+
+#: readelf.c:9029
+#, c-format
+msgid "Section '%s' was not dumped because it does not exist!\n"
+msgstr "Для розділу '%s' дамп не був виконаний, оскільки він не існує!\n"
+
+#: readelf.c:9070
+#, c-format
+msgid "Section %d was not dumped because it does not exist!\n"
+msgstr "Для розділу %d дамп не був виконаний, оскільки він не існує!\n"
+
+#: readelf.c:9306
+#, c-format
+msgid "Illegal tag %d for %s\n"
+msgstr ""
+
+#: readelf.c:9585
+msgid "attributes"
+msgstr "атрибути"
+
+#: readelf.c:9606
+#, c-format
+msgid "ERROR: Bad section length (%d > %d)\n"
+msgstr "ПОМИЛКА: Неправильна довжина розділу (%d > %d)\n"
+
+#: readelf.c:9637
+#, c-format
+msgid "ERROR: Bad subsection length (%d > %d)\n"
+msgstr "ПОМИЛКА: Неправильна довжина підрозділу (%d > %d)\n"
+
+#: readelf.c:9696
+#, c-format
+msgid "Unknown format '%c'\n"
+msgstr "Невідомий формат '%c'\n"
+
+#: readelf.c:9850 readelf.c:10372
+msgid "liblist"
+msgstr "liblist"
+
+#: readelf.c:9937
+msgid "options"
+msgstr "ключі"
+
+#: readelf.c:9968
+#, c-format
+msgid ""
+"\n"
+"Section '%s' contains %d entries:\n"
+msgstr ""
+"\n"
+"Розділ '%s' містить %d пунктів:\n"
+
+#: readelf.c:10129
+msgid "conflict list found without a dynamic symbol table\n"
+msgstr "знайдено список конфліктів без таблиці динамічних символів\n"
+
+#: readelf.c:10146 readelf.c:10161
+msgid "conflict"
+msgstr "конфлікт"
+
+#: readelf.c:10171
+#, c-format
+msgid ""
+"\n"
+"Section '.conflict' contains %lu entries:\n"
+msgstr ""
+"\n"
+"Розділ '.conflict' містить %lu пунктів:\n"
+
+#: readelf.c:10173
+msgid "  Num:    Index       Value  Name"
+msgstr "  Ном:    Індекс     Значення Назва"
+
+#: readelf.c:10206
+msgid "GOT"
+msgstr ""
+
+#: readelf.c:10207
+#, c-format
+msgid ""
+"\n"
+"Primary GOT:\n"
+msgstr ""
+
+#: readelf.c:10208
+#, c-format
+msgid " Canonical gp value: "
+msgstr ""
+
+#: readelf.c:10212 readelf.c:10304
+#, c-format
+msgid " Reserved entries:\n"
+msgstr ""
+
+#: readelf.c:10213
+#, c-format
+msgid "  %*s %10s %*s Purpose\n"
+msgstr ""
+
+#: readelf.c:10229
+#, c-format
+msgid " Local entries:\n"
+msgstr ""
+
+#: readelf.c:10230
+#, c-format
+msgid "  %*s %10s %*s\n"
+msgstr ""
+
+#: readelf.c:10245
+#, c-format
+msgid " Global entries:\n"
+msgstr ""
+
+#: readelf.c:10246
+#, c-format
+msgid "  %*s %10s %*s %*s %-7s %3s %s\n"
+msgstr ""
+
+#: readelf.c:10302
+msgid "PLT GOT"
+msgstr ""
+
+#: readelf.c:10303
+#, c-format
+msgid ""
+"\n"
+"PLT GOT:\n"
+"\n"
+msgstr ""
+
+#: readelf.c:10305
+#, c-format
+msgid "  %*s %*s Purpose\n"
+msgstr ""
+
+#: readelf.c:10313
+#, c-format
+msgid " Entries:\n"
+msgstr ""
+
+#: readelf.c:10314
+#, c-format
+msgid "  %*s %*s %*s %-7s %3s %s\n"
+msgstr ""
+
+#: readelf.c:10380
+msgid "liblist string table"
+msgstr "таблиця рядків liblist"
+
+#: readelf.c:10390
+#, c-format
+msgid ""
+"\n"
+"Library list section '%s' contains %lu entries:\n"
+msgstr ""
+"\n"
+"Розділ списку бібліотек '%s' містить %lu пунктів:\n"
+
+#: readelf.c:10443
+msgid "NT_AUXV (auxiliary vector)"
+msgstr "NT_AUXV (допоміжний вектор)"
+
+#: readelf.c:10445
+msgid "NT_PRSTATUS (prstatus structure)"
+msgstr "NT_PRSTATUS (структура prstatus)"
+
+#: readelf.c:10447
+msgid "NT_FPREGSET (floating point registers)"
+msgstr "NT_FPREGSET (регістри з плаваючою комою)"
+
+#: readelf.c:10449
+msgid "NT_PRPSINFO (prpsinfo structure)"
+msgstr "NT_PRPSINFO (структура prpsinfo)"
+
+#: readelf.c:10451
+msgid "NT_TASKSTRUCT (task structure)"
+msgstr "NT_TASKSTRUCT (структура task)"
+
+#: readelf.c:10453
+msgid "NT_PRXFPREG (user_xfpregs structure)"
+msgstr "NT_PRXFPREG (структура user_xfpregs)"
+
+#: readelf.c:10455
+msgid "NT_PPC_VMX (ppc Altivec registers)"
+msgstr ""
+
+#: readelf.c:10457
+msgid "NT_PPC_VSX (ppc VSX registers)"
+msgstr ""
+
+#: readelf.c:10459
+msgid "NT_PSTATUS (pstatus structure)"
+msgstr "NT_PSTATUS (структура pstatus)"
+
+#: readelf.c:10461
+msgid "NT_FPREGS (floating point registers)"
+msgstr "NT_FPREGS (регістри з плаваючою комою)"
+
+#: readelf.c:10463
+msgid "NT_PSINFO (psinfo structure)"
+msgstr "NT_PSINFO (структура psinfo)"
+
+#: readelf.c:10465
+msgid "NT_LWPSTATUS (lwpstatus_t structure)"
+msgstr "NT_LWPSTATUS (структура lwpstatus_t)"
+
+#: readelf.c:10467
+msgid "NT_LWPSINFO (lwpsinfo_t structure)"
+msgstr "NT_LWPSINFO (структура lwpsinfo_t)"
+
+#: readelf.c:10469
+msgid "NT_WIN32PSTATUS (win32_pstatus structure)"
+msgstr "NT_WIN32PSTATUS (структура win32_pstatus)"
+
+#: readelf.c:10477
+msgid "NT_VERSION (version)"
+msgstr "NT_VERSION (версія)"
+
+#: readelf.c:10479
+msgid "NT_ARCH (architecture)"
+msgstr "NT_ARCH (архітектура)"
+
+#: readelf.c:10484 readelf.c:10507 readelf.c:10529
+#, c-format
+msgid "Unknown note type: (0x%08x)"
+msgstr "Невідомий тип коментаря: (0x%08x)"
+
+#: readelf.c:10496
+msgid "NT_GNU_ABI_TAG (ABI version tag)"
+msgstr ""
+
+#: readelf.c:10498
+msgid "NT_GNU_HWCAP (DSO-supplied software HWCAP info)"
+msgstr ""
+
+#: readelf.c:10500
+msgid "NT_GNU_BUILD_ID (unique build ID bitstring)"
+msgstr ""
+
+#: readelf.c:10502
+#, fuzzy
+msgid "NT_GNU_GOLD_VERSION (gold version)"
+msgstr "NT_VERSION (версія)"
+
+#. NetBSD core "procinfo" structure.
+#: readelf.c:10519
+msgid "NetBSD procinfo structure"
+msgstr "Структура procinfo NetBSD"
+
+#: readelf.c:10546 readelf.c:10560
+msgid "PT_GETREGS (reg structure)"
+msgstr "PT_GETREGS (структура reg)"
+
+#: readelf.c:10548 readelf.c:10562
+msgid "PT_GETFPREGS (fpreg structure)"
+msgstr "PT_GETFPREGS (структура fpreg)"
+
+#: readelf.c:10568
+#, c-format
+msgid "PT_FIRSTMACH+%d"
+msgstr "PT_FIRSTMACH+%d"
+
+#: readelf.c:10653
+msgid "notes"
+msgstr "коментар"
+
+#: readelf.c:10659
+#, c-format
+msgid ""
+"\n"
+"Notes at offset 0x%08lx with length 0x%08lx:\n"
+msgstr ""
+"\n"
+"Коментар із зсувом 0x%08lx довжиною 0x%08lx:\n"
+
+#: readelf.c:10661
+#, c-format
+msgid "  Owner\t\tData size\tDescription\n"
+msgstr "  Власник\t\tРозмір даних\tОпис\n"
+
+#: readelf.c:10680
+#, c-format
+msgid "corrupt note found at offset %lx into core notes\n"
+msgstr "знайдено пошкоджений коментар зі зсувом %lx у сховищі коментарів\n"
+
+#: readelf.c:10682
+#, c-format
+msgid " type: %lx, namesize: %08lx, descsize: %08lx\n"
+msgstr " тип: %lx, розм_назви: %08lx, розм_опис: %08lx\n"
+
+#: readelf.c:10796
+#, c-format
+msgid "No note segments present in the core file.\n"
+msgstr "В файлі змісту відсутні сегменти коментарів.\n"
+
+#: readelf.c:10880
+msgid ""
+"This instance of readelf has been built without support for a\n"
+"64 bit data type and so it cannot read 64 bit ELF files.\n"
+msgstr ""
+"Ця копія readelf була створена без підтримки 64-бітного типу\n"
+"даних, і тому вона не може читати 64-бітні файли ELF.\n"
+
+#: readelf.c:10927
+#, c-format
+msgid "%s: Failed to read file header\n"
+msgstr "%s: Помилка при читанні заголовку файлу\n"
+
+#: readelf.c:10940
+#, c-format
+msgid ""
+"\n"
+"File: %s\n"
+msgstr ""
+"\n"
+"Файл: %s\n"
+
+#: readelf.c:11155
+#, fuzzy, c-format
+msgid "%s: failed to seek to first archive header\n"
+msgstr "%s: помилка при пошуку наступного заголовку архіву\n"
+
+#: readelf.c:11164 readelf.c:11431 readelf.c:11601
+#, c-format
+msgid "%s: failed to read archive header\n"
+msgstr "%s: помилка при читанні заголовку архіву\n"
+
+#: readelf.c:11189
+#, fuzzy, c-format
+msgid "%s: the archive index is empty\n"
+msgstr "%s: неправильна назва файлу архіву\n"
+
+#: readelf.c:11197 readelf.c:11221
+#, fuzzy, c-format
+msgid "%s: failed to read archive index\n"
+msgstr "%s: помилка при читанні заголовку архіву\n"
+
+#: readelf.c:11206
+#, c-format
+msgid ""
+"%s: the archive index is supposed to have %ld entries, but the size in the "
+"header is too small\n"
+msgstr ""
+
+#: readelf.c:11214
+msgid "Out of memory whilst trying to read archive symbol index\n"
+msgstr ""
+
+#: readelf.c:11232
+msgid "Out of memory whilst trying to convert the archive symbol index\n"
+msgstr ""
+
+#: readelf.c:11244
+#, c-format
+msgid "%s: the archive has an index but no symbols\n"
+msgstr ""
+
+#: readelf.c:11251
+#, fuzzy
+msgid "Out of memory whilst trying to read archive index symbol table\n"
+msgstr "Бракує пам'яті при розміщенні дампу таблиці запиту.\n"
+
+#: readelf.c:11257
+#, fuzzy, c-format
+msgid "%s: failed to read archive index symbol table\n"
+msgstr "%s: помилка при пропуску таблиці символів архіву\n"
+
+#: readelf.c:11265
+#, c-format
+msgid "%s: failed to skip archive symbol table\n"
+msgstr "%s: помилка при пропуску таблиці символів архіву\n"
+
+#: readelf.c:11276
+#, fuzzy, c-format
+msgid "%s: failed to read archive header following archive index\n"
+msgstr "%s: помилка при читанні заголовку архіву\n"
+
+#: readelf.c:11281
+#, fuzzy, c-format
+msgid "%s has no archive index\n"
+msgstr "%s: неправильна назва файлу архіву\n"
+
+#: readelf.c:11292
+msgid "Out of memory reading long symbol names in archive\n"
+msgstr ""
+
+#: readelf.c:11300
+#, fuzzy, c-format
+msgid "%s: failed to read long symbol name string table\n"
+msgstr "%s: помилка при читанні таблиці рядків\n"
+
+#: readelf.c:11425
+#, fuzzy, c-format
+msgid "%s: failed to seek to next file name\n"
+msgstr "%s: помилка при пошуку наступного заголовку архіву\n"
+
+#: readelf.c:11436 readelf.c:11607
+#, fuzzy, c-format
+msgid "%s: did not find a valid archive header\n"
+msgstr "%s не є правильним архівом"
+
+#: readelf.c:11517
+#, c-format
+msgid "%s: unable to dump the index as none was found\n"
+msgstr ""
+
+#: readelf.c:11523
+#, c-format
+msgid "Index of archive %s: (%ld entries, 0x%lx bytes in the symbol table)\n"
+msgstr ""
+
+#: readelf.c:11541
+#, fuzzy, c-format
+msgid "Binary %s contains:\n"
+msgstr "Розділ %s містить:\n"
+
+#: readelf.c:11549
+#, c-format
+msgid "%s: end of the symbol table reached before the end of the index\n"
+msgstr ""
+
+#: readelf.c:11560
+#, c-format
+msgid ""
+"%s: symbols remain in the index symbol table, but without corresponding "
+"entries in the index table\n"
+msgstr ""
+
+#: readelf.c:11565
+#, fuzzy, c-format
+msgid "%s: failed to seek back to start of object files in the archive\n"
+msgstr "%s: помилка при пошуку наступного заголовку архіву\n"
+
+#: readelf.c:11593
+#, c-format
+msgid "%s: failed to seek to next archive header\n"
+msgstr "%s: помилка при пошуку наступного заголовку архіву\n"
+
+#: readelf.c:11621 readelf.c:11630
+#, c-format
+msgid "%s: bad archive file name\n"
+msgstr "%s: неправильна назва файлу архіву\n"
+
+#: readelf.c:11649 readelf.c:11725
+#, c-format
+msgid "Input file '%s' is not readable.\n"
+msgstr "Вхідний файл '%s' є неможливим для читання.\n"
+
+#: readelf.c:11671
+#, fuzzy, c-format
+msgid "%s: failed to seek to archive member.\n"
+msgstr "%s: помилка при пошуку наступного заголовку архіву\n"
+
+#: readelf.c:11709
+#, c-format
+msgid "'%s': No such file\n"
+msgstr "'%s': Немає такого файлу\n"
+
+#: readelf.c:11711
+#, c-format
+msgid "Could not locate '%s'.  System error message: %s\n"
+msgstr "Неможливо найти '%s'. Системне повідомлення про помилку: %s\n"
+
+#: readelf.c:11718
+#, c-format
+msgid "'%s' is not an ordinary file\n"
+msgstr "%s не є звичайним файлом\n"
+
+#: readelf.c:11731
+#, fuzzy, c-format
+msgid "%s: Failed to read file's magic number\n"
+msgstr "%s: Помилка при читанні заголовку файлу\n"
+
+#: readelf.c:11743
+#, c-format
+msgid "File %s is not an archive so its index cannot be displayed.\n"
+msgstr ""
+
+#: rename.c:124
+#, c-format
+msgid "%s: cannot set time: %s"
+msgstr "%s: неможливо встановити час: %s"
+
+#. We have to clean up here.
+#: rename.c:159 rename.c:197
+#, fuzzy, c-format
+msgid "unable to rename '%s'; reason: %s"
+msgstr "неможливо перейменувати '%s' причина: %s"
+
+#: rename.c:205
+#, fuzzy, c-format
+msgid "unable to copy file '%s'; reason: %s"
+msgstr "неможливо скопіювати файл '%s' причина: %s"
+
+#: resbin.c:120
+#, c-format
+msgid "%s: not enough binary data"
+msgstr "%s: недостатньо двійкових даних"
+
+#: resbin.c:136
+msgid "null terminated unicode string"
+msgstr "рядок unicode, завершений `0'"
+
+#: resbin.c:163 resbin.c:169
+msgid "resource ID"
+msgstr "ID ресурсу"
+
+#: resbin.c:208
+msgid "cursor"
+msgstr "вказівник"
+
+#: resbin.c:239 resbin.c:246
+msgid "menu header"
+msgstr "заголовок menu"
+
+#: resbin.c:255
+msgid "menuex header"
+msgstr "заголовок menuex"
+
+#: resbin.c:259
+msgid "menuex offset"
+msgstr "зсув menuex"
+
+#: resbin.c:264
+#, c-format
+msgid "unsupported menu version %d"
+msgstr "непідтримувана версія menu %d"
+
+#: resbin.c:289 resbin.c:304 resbin.c:366
+msgid "menuitem header"
+msgstr "заголовок menuitem"
+
+#: resbin.c:396
+msgid "menuitem"
+msgstr "menuitem"
+
+#: resbin.c:433 resbin.c:461
+msgid "dialog header"
+msgstr "заголовок діалогу"
+
+#: resbin.c:451
+#, c-format
+msgid "unexpected DIALOGEX version %d"
+msgstr "непередбачена версія DIALOGEX %d"
+
+#: resbin.c:496
+msgid "dialog font point size"
+msgstr "розмір в пунктах шрифту діалогу"
+
+#: resbin.c:504
+msgid "dialogex font information"
+msgstr "інформація про шрифт dialogex"
+
+#: resbin.c:530 resbin.c:548
+msgid "dialog control"
+msgstr "керування діалогом"
+
+#: resbin.c:540
+msgid "dialogex control"
+msgstr "керування dialogex"
+
+#: resbin.c:569
+msgid "dialog control end"
+msgstr "кінець керування діалогом"
+
+#: resbin.c:581
+msgid "dialog control data"
+msgstr "дані керування діалогом"
+
+#: resbin.c:621
+msgid "stringtable string length"
+msgstr "довжина строки stringtable"
+
+#: resbin.c:631
+msgid "stringtable string"
+msgstr "рядок stringtable"
+
+#: resbin.c:661
+msgid "fontdir header"
+msgstr "заголовок fontdir"
+
+#: resbin.c:675
+msgid "fontdir"
+msgstr "fontdir"
+
+#: resbin.c:692
+msgid "fontdir device name"
+msgstr "назва пристрою fontdir"
+
+#: resbin.c:698
+msgid "fontdir face name"
+msgstr "назва гарнітури fontdir"
+
+#: resbin.c:738
+msgid "accelerator"
+msgstr "акселератор"
+
+#: resbin.c:797
+msgid "group cursor header"
+msgstr "заголовок вказівника групи"
+
+#: resbin.c:801 resrc.c:1355
+#, c-format
+msgid "unexpected group cursor type %d"
+msgstr "неочікуваний тип вказівника групи %d"
+
+#: resbin.c:816
+msgid "group cursor"
+msgstr "вказівник групи"
+
+#: resbin.c:852
+msgid "group icon header"
+msgstr "заголовок значка групи"
+
+#: resbin.c:856 resrc.c:1302
+#, c-format
+msgid "unexpected group icon type %d"
+msgstr "неочікуваний тип значка групи %d"
+
+#: resbin.c:871
+msgid "group icon"
+msgstr "значок групи"
+
+#: resbin.c:935 resbin.c:1151
+msgid "unexpected version string"
+msgstr "неочікуваний рядок версії"
+
+#: resbin.c:966
+#, c-format
+msgid "version length %d does not match resource length %lu"
+msgstr "довжина версії %d не відповідає довжині ресурсу %lu"
+
+#: resbin.c:970
+#, c-format
+msgid "unexpected version type %d"
+msgstr "неочікуваний тип версії %d"
+
+#: resbin.c:982
+#, c-format
+msgid "unexpected fixed version information length %ld"
+msgstr "неочікувана довжина інформації про фіксовану версію %ld"
+
+#: resbin.c:985
+msgid "fixed version info"
+msgstr "інформація про фіксовану версії"
+
+#: resbin.c:989
+#, c-format
+msgid "unexpected fixed version signature %lu"
+msgstr "неочікуваний сигнатура фіксованої версії %lu"
+
+#: resbin.c:993
+#, c-format
+msgid "unexpected fixed version info version %lu"
+msgstr "неочікувана версія інформації про фіксовану версію %lu"
+
+#: resbin.c:1022
+msgid "version var info"
+msgstr "інформація про змінної версії"
+
+#: resbin.c:1039
+#, c-format
+msgid "unexpected stringfileinfo value length %ld"
+msgstr "неочікувана довжина значення stringfileinfo %ld"
+
+#: resbin.c:1049
+#, c-format
+msgid "unexpected version stringtable value length %ld"
+msgstr "неочікувана довжина значення версії stringtable %ld"
+
+#: resbin.c:1083
+#, c-format
+msgid "unexpected version string length %ld != %ld + %ld"
+msgstr "неочікувана довжина строки версії %ld != %ld + %ld"
+
+#: resbin.c:1094
+#, c-format
+msgid "unexpected version string length %ld < %ld"
+msgstr "неочікувана довжина строки версії %ld < %ld"
+
+#: resbin.c:1111
+#, c-format
+msgid "unexpected varfileinfo value length %ld"
+msgstr "неочікувана довжина значення varfileinfo %ld"
+
+#: resbin.c:1130
+msgid "version varfileinfo"
+msgstr "версія varfileinfo"
+
+#: resbin.c:1145
+#, c-format
+msgid "unexpected version value length %ld"
+msgstr "неочікувана довжина значення версії %ld"
+
+#: rescoff.c:124
+msgid "filename required for COFF input"
+msgstr "потрібна назва для вхідної COFF"
+
+#: rescoff.c:141
+#, c-format
+msgid "%s: no resource section"
+msgstr "%s: немає розділу ресурсів"
+
+#: rescoff.c:173
+#, c-format
+msgid "%s: %s: address out of bounds"
+msgstr "%s: %s: адрес за допустимими межами"
+
+#: rescoff.c:190
+msgid "directory"
+msgstr "каталог"
+
+#: rescoff.c:218
+msgid "named directory entry"
+msgstr "іменований елемент каталогу"
+
+#: rescoff.c:227
+msgid "directory entry name"
+msgstr "назва елементу каталогу"
+
+#: rescoff.c:247
+msgid "named subdirectory"
+msgstr "іменований підкаталог"
+
+#: rescoff.c:255
+msgid "named resource"
+msgstr "іменований ресурс"
+
+#: rescoff.c:270
+msgid "ID directory entry"
+msgstr "ID елемента каталогу"
+
+#: rescoff.c:287
+msgid "ID subdirectory"
+msgstr "ID підкаталогу"
+
+#: rescoff.c:295
+msgid "ID resource"
+msgstr "ID ресурсу"
+
+#: rescoff.c:320
+msgid "resource type unknown"
+msgstr "невідомий тип ресурсу"
+
+#: rescoff.c:323
+msgid "data entry"
+msgstr "елемент даних"
+
+#: rescoff.c:331
+msgid "resource data"
+msgstr "дані ресурсу"
+
+#: rescoff.c:336
+msgid "resource data size"
+msgstr "розмір даних ресурсу"
+
+#: rescoff.c:431
+msgid "filename required for COFF output"
+msgstr "вимагається назва файла для вихідного COFF"
+
+#: rescoff.c:715
+msgid "can't get BFD_RELOC_RVA relocation type"
+msgstr "неможливо отримати тип переміщення BFD_RELOC_RVA"
+
+#: resrc.c:262 resrc.c:333
+#, c-format
+msgid "can't open temporary file `%s': %s"
+msgstr "неможливо відкрити тимчасовий файл `%s': %s"
+
+#: resrc.c:268
+#, c-format
+msgid "can't redirect stdout: `%s': %s"
+msgstr "неможливо перенаправити stdout: `%s': %s"
+
+#: resrc.c:284
+#, c-format
+msgid "%s %s: %s"
+msgstr "%s %s: %s"
+
+#: resrc.c:329
+#, c-format
+msgid "can't execute `%s': %s"
+msgstr "неможливо виконати `%s': %s"
+
+#: resrc.c:338
+#, c-format
+msgid "Using temporary file `%s' to read preprocessor output\n"
+msgstr ""
+"Використовується тимчасовий файл `%s' для читання вихідних даних "
+"препроцесора\n"
+
+#: resrc.c:345
+#, c-format
+msgid "can't popen `%s': %s"
+msgstr "неможливо popen `%s': %s"
+
+#: resrc.c:347
+#, c-format
+msgid "Using popen to read preprocessor output\n"
+msgstr "Використовується popen для читання даних виводу препроцесора\n"
+
+#: resrc.c:413
+#, c-format
+msgid "Tried `%s'\n"
+msgstr "Випробуваний `%s'\n"
+
+#: resrc.c:424
+#, c-format
+msgid "Using `%s'\n"
+msgstr "Використовується `%s'\n"
+
+#: resrc.c:608
+#, fuzzy
+msgid "preprocessing failed."
+msgstr "Оброблюється файл def: %s"
+
+#: resrc.c:631
+#, c-format
+msgid "%s:%d: %s\n"
+msgstr "%s:%d: %s\n"
+
+#: resrc.c:639
+#, c-format
+msgid "%s: unexpected EOF"
+msgstr "%s: неочікуваний кінець файлу"
+
+#: resrc.c:688
+#, c-format
+msgid "%s: read of %lu returned %lu"
+msgstr "%s: при читанні %lu було повернено %lu"
+
+#: resrc.c:727 resrc.c:1502
+#, c-format
+msgid "stat failed on bitmap file `%s': %s"
+msgstr "помилка stat для файлу бітового образу `%s': %s"
+
+#: resrc.c:778
+#, c-format
+msgid "cursor file `%s' does not contain cursor data"
+msgstr "файл курсору `%s' не містить даних курсора"
+
+#: resrc.c:810 resrc.c:1210
+#, c-format
+msgid "%s: fseek to %lu failed: %s"
+msgstr "%s: fseek для %lu завершився помилкою: %s"
+
+#: resrc.c:936
+msgid "help ID requires DIALOGEX"
+msgstr "для ID довідки вимагається DIALOGEX"
+
+#: resrc.c:938
+msgid "control data requires DIALOGEX"
+msgstr "для керування даними вимагається DIALOGEX"
+
+#: resrc.c:966
+#, c-format
+msgid "stat failed on font file `%s': %s"
+msgstr "помилка stat на файлі шрифту `%s': %s"
+
+#: resrc.c:1179
+#, c-format
+msgid "icon file `%s' does not contain icon data"
+msgstr "файл значка `%s' не містить даних значка"
+
+#: resrc.c:1724 resrc.c:1759
+#, c-format
+msgid "stat failed on file `%s': %s"
+msgstr "помилка stat на файлі `%s': %s"
+
+#: resrc.c:1940
+#, c-format
+msgid "can't open `%s' for output: %s"
+msgstr "неможливо відкрити `%s' для виводу даних: %s"
+
+#: size.c:79
+#, c-format
+msgid " Displays the sizes of sections inside binary files\n"
+msgstr " Відображає розміри розділів всередині двійкових файлів\n"
+
+#: size.c:80
+#, c-format
+msgid " If no input file(s) are specified, a.out is assumed\n"
+msgstr " Якщо вхідні файли не вказані, вважається файл a.out\n"
+
+#: size.c:81
+#, fuzzy, c-format
+msgid ""
+" The options are:\n"
+"  -A|-B     --format={sysv|berkeley}  Select output style (default is %s)\n"
+"  -o|-d|-x  --radix={8|10|16}         Display numbers in octal, decimal or "
+"hex\n"
+"  -t        --totals                  Display the total sizes (Berkeley "
+"only)\n"
+"            --common                  Display total size for *COM* syms\n"
+"            --target=<bfdname>        Set the binary file format\n"
+"            @<file>                   Read options from <file>\n"
+"  -h        --help                    Display this information\n"
+"  -v        --version                 Display the program's version\n"
+"\n"
+msgstr ""
+" Ключі:\n"
+"  -A|-B     --format={sysv|berkeley}  Вибір стилю виводу даних (типово %s)\n"
+"  -o|-d|-x  --radix={8|10|16}         Виведення чисел в вісімковому, "
+"десятковому\n"
+"                                      або шістнадцятковому форматі\n"
+"  -t        --totals                  Виведення сумарних розмірів (лише "
+"Berkeley)\n"
+"            --target=<bfd-назва>      Встановлення формату двійкового файла\n"
+"            @<файл>                   Читати ключі з <файла>\n"
+"  -h        --help                    Виведення цієї інформації\n"
+"  -v        --version                 Виведення версії програми\n"
+"\n"
+
+#: size.c:160
+#, c-format
+msgid "invalid argument to --format: %s"
+msgstr "неправильний аргумент --format: %s"
+
+#: size.c:187
+#, c-format
+msgid "Invalid radix: %s\n"
+msgstr "Некоректний radix: %s\n"
+
+#: srconv.c:1731
+#, c-format
+msgid "Convert a COFF object file into a SYSROFF object file\n"
+msgstr "Перетворює об'єктний файл COFF на об'єктний файл SYSROFF\n"
+
+#: srconv.c:1732
+#, c-format
+msgid ""
+" The options are:\n"
+"  -q --quick       (Obsolete - ignored)\n"
+"  -n --noprescan   Do not perform a scan to convert commons into defs\n"
+"  -d --debug       Display information about what is being done\n"
+"  @<file>          Read options from <file>\n"
+"  -h --help        Display this information\n"
+"  -v --version     Print the program's version number\n"
+msgstr ""
+" Ключі:\n"
+"  -q --quick       (застаріла - ігнорується)\n"
+"  -n --noprescan   Не виконувати сканування для перетворення commons у defs\n"
+"  -d --debug       Виведення інформації про те, що виконується\n"
+"  @<файл>          Читати ключі з <файла>\n"
+"  -h --help        Виведення цієї інформації\n"
+"  -v --version     Виведення номера версії програми\n"
+
+#: srconv.c:1878
+#, c-format
+msgid "unable to open output file %s"
+msgstr "неможливо відкрити файл для виводу %s"
+
+#: stabs.c:328 stabs.c:1726
+msgid "numeric overflow"
+msgstr "числове переповнення"
+
+#: stabs.c:338
+#, c-format
+msgid "Bad stab: %s\n"
+msgstr "Некоректний stab: %s\n"
+
+#: stabs.c:346
+#, fuzzy, c-format
+msgid "warning: %s: %s\n"
+msgstr "Попередження: %s: %s\n"
+
+#: stabs.c:456
+#, c-format
+msgid "N_LBRAC not within function\n"
+msgstr "N_LBRAC поза функцією\n"
+
+#: stabs.c:495
+#, c-format
+msgid "Too many N_RBRACs\n"
+msgstr "Надто багато N_RBRACs\n"
+
+#: stabs.c:736
+msgid "unknown C++ encoded name"
+msgstr "невідома кодована назва C++"
+
+#. Complain and keep going, so compilers can invent new
+#. cross-reference types.
+#: stabs.c:1271
+msgid "unrecognized cross reference type"
+msgstr "нерозпізнаний тип перехресного посилання"
+
+#. Does this actually ever happen?  Is that why we are worrying
+#. about dealing with it rather than just calling error_type?
+#: stabs.c:1818
+msgid "missing index type"
+msgstr "відсутній індексний тип"
+
+#: stabs.c:2133
+msgid "unknown virtual character for baseclass"
+msgstr "невідомий віртуальний символ для baseclass"
+
+#: stabs.c:2151
+msgid "unknown visibility character for baseclass"
+msgstr "невідомий символ видимості для baseclass"
+
+#: stabs.c:2337
+msgid "unnamed $vb type"
+msgstr "тип без назви $vb"
+
+#: stabs.c:2343
+msgid "unrecognized C++ abbreviation"
+msgstr "нерозпізнана абревіатура C++"
+
+#: stabs.c:2419
+msgid "unknown visibility character for field"
+msgstr "невідомий символ видимості для field"
+
+#: stabs.c:2671
+msgid "const/volatile indicator missing"
+msgstr "відсутній індикатор постійної/змінної"
+
+#: stabs.c:2907
+#, c-format
+msgid "No mangling for \"%s\"\n"
+msgstr "Немає кодування для \"%s\"\n"
+
+#: stabs.c:3207
+msgid "Undefined N_EXCL"
+msgstr "Невизначений N_EXCL"
+
+#: stabs.c:3287
+#, c-format
+msgid "Type file number %d out of range\n"
+msgstr "Номер файлу типу %d за межами діапазону\n"
+
+#: stabs.c:3292
+#, c-format
+msgid "Type index number %d out of range\n"
+msgstr "Номер індексу типу %d за межами діапазону\n"
+
+#: stabs.c:3371
+#, c-format
+msgid "Unrecognized XCOFF type %d\n"
+msgstr "Нерозпізнаний тип XCOFF %d\n"
+
+#: stabs.c:3663
+#, c-format
+msgid "bad mangled name `%s'\n"
+msgstr "некоректна скорегована назва `%s'\n"
+
+#: stabs.c:3758
+#, c-format
+msgid "no argument types in mangled string\n"
+msgstr "немає типів аргументів у скорегованому рядку\n"
+
+#: stabs.c:5112
+#, c-format
+msgid "Demangled name is not a function\n"
+msgstr "Декодована назва не є функцією\n"
+
+#: stabs.c:5154
+#, c-format
+msgid "Unexpected type in v3 arglist demangling\n"
+msgstr "Неочікуваний тип при декодуванні v3 arglist\n"
+
+#: stabs.c:5221
+#, c-format
+msgid "Unrecognized demangle component %d\n"
+msgstr "Нерозпізнаний компонент декодування %d\n"
+
+#: stabs.c:5273
+#, c-format
+msgid "Failed to print demangled template\n"
+msgstr "Помилка при виводі декодованого шаблону\n"
+
+#: stabs.c:5353
+#, c-format
+msgid "Couldn't get demangled builtin type\n"
+msgstr "Неможливо отримати декодований вбудований тип\n"
+
+#: stabs.c:5402
+#, c-format
+msgid "Unexpected demangled varargs\n"
+msgstr "Неочікуваний декодований varargs\n"
+
+#: stabs.c:5409
+#, c-format
+msgid "Unrecognized demangled builtin type\n"
+msgstr "Неочікуваний декодований вбудований тип\n"
+
+#: strings.c:201 strings.c:260
+#, c-format
+msgid "invalid integer argument %s"
+msgstr "неправильний ціле число у аргументі %s"
+
+#: strings.c:263
+#, fuzzy, c-format
+msgid "invalid minimum string length %d"
+msgstr "неправильна довжина строки"
+
+#: strings.c:660
+#, c-format
+msgid " Display printable strings in [file(s)] (stdin by default)\n"
+msgstr " Виведення придатних для друку рядків у [файл(ах)] (типово stdin)\n"
+
+#: strings.c:661
+#, fuzzy, c-format
+msgid ""
+" The options are:\n"
+"  -a - --all                Scan the entire file, not just the data section\n"
+"  -f --print-file-name      Print the name of the file before each string\n"
+"  -n --bytes=[number]       Locate & print any NUL-terminated sequence of "
+"at\n"
+"  -<number>                   least [number] characters (default 4).\n"
+"  -t --radix={o,d,x}        Print the location of the string in base 8, 10 "
+"or 16\n"
+"  -o                        An alias for --radix=o\n"
+"  -T --target=<BFDNAME>     Specify the binary file format\n"
+"  -e --encoding={s,S,b,l,B,L} Select character size and endianness:\n"
+"                            s = 7-bit, S = 8-bit, {b,l} = 16-bit, {B,L} = 32-"
+"bit\n"
+"  @<file>                   Read options from <file>\n"
+"  -h --help                 Display this information\n"
+"  -v -V --version           Print the program's version number\n"
+msgstr ""
+" Ключі:\n"
+"  -a - --all                Сканування всього файлу, а не лише розділу "
+"даних\n"
+"  -f --print-file-name      Виведення назви файлу перед кожним рядком\n"
+"  -n --bytes=[число]        Виявлення та вивід будь-яких послідовностей із "
+"завершальним\n"
+"  -<число>                  нулем довжиною у [число] символів (типово 4).\n"
+"  -t --radix={o,x,d}        Виведення розташування рядка по основі 8, 10 або "
+"16\n"
+"  -o                        Псевдонім для --radix=o\n"
+"  -T --target=<BFD-НАЗВА>   Вказування формату двійкового файла\n"
+"  -e --encoding={s,S,b,l,B,L} Вибір розміру символу та endianness:\n"
+"                            s = 7-біт, S = 8-біт, {b,l} = 16-біт, {B,L} = 32-"
+"біт\n"
+"  @<файл>                   Читати ключі з <файла>\n"
+"  -h --help                 Виведення цієї інформації\n"
+"  -v --version              Виведення номера версії програми\n"
+
+#: sysdump.c:647
+#, c-format
+msgid "Print a human readable interpretation of a SYSROFF object file\n"
+msgstr ""
+"Виведення інтерпретації об'єктного файлу SYSROFF у зрозумілій людині формі\n"
+
+#: sysdump.c:648
+#, c-format
+msgid ""
+" The options are:\n"
+"  -h --help        Display this information\n"
+"  -v --version     Print the program's version number\n"
+msgstr ""
+" Ключі:\n"
+"  -h --help        Виведення цієї інформації\n"
+"  -v --version     Виведення номера версії програми\n"
+
+#: sysdump.c:715
+#, c-format
+msgid "cannot open input file %s"
+msgstr "неможливо відкрити вхідний файл %s"
+
+#: version.c:36
+#, c-format
+msgid "Copyright 2007 Free Software Foundation, Inc.\n"
+msgstr "Copyright 2007 Free Software Foundation, Inc.\n"
+
+#: version.c:37
+#, fuzzy, c-format
+msgid ""
+"This program is free software; you may redistribute it under the terms of\n"
+"the GNU General Public License version 3 or (at your option) any later "
+"version.\n"
+"This program has absolutely no warranty.\n"
+msgstr ""
+"Ця програма вільною; ви можете розповсюджувати\n"
+"її на умовах GNU General Public License.\n"
+"Ця програма не надає будь-яких гарантій.\n"
+
+#: version.c:83
+#, fuzzy, c-format
+msgid "GNU %s %s (%s)"
+msgstr "%s %s: %s"
+
+#: version.c:86
+#, fuzzy, c-format
+msgid " using BFD version %s\n"
+msgstr "Файл заголовку BFD версії %s\n"
+
+#: windmc.c:195
+#, c-format
+msgid "can't create %s file ,%s' for output.\n"
+msgstr "неможливо створити файл `%s' для виводу даних: %s\n"
+
+#: windmc.c:203
+#, c-format
+msgid "Usage: %s [option(s)] [input-file]\n"
+msgstr "Використання: %s [ключі] [вх-файл]\n"
+
+#: windmc.c:205
+#, c-format
+msgid ""
+" The options are:\n"
+"  -a --ascii_in                Read input file as ASCII file\n"
+"  -A --ascii_out               Write binary messages as ASCII\n"
+"  -b --binprefix               .bin filename is prefixed by .mc filename_ "
+"for uniqueness.\n"
+"  -c --customflag              Set custom flags for messages\n"
+"  -C --codepage_in=<val>       Set codepage when reading mc text file\n"
+"  -d --decimal_values          Print values to text files decimal\n"
+"  -e --extension=<extension>   Set header extension used on export header "
+"file\n"
+"  -F --target <target>         Specify output target for endianess.\n"
+"  -h --headerdir=<directory>   Set the export directory for headers\n"
+"  -u --unicode_in              Read input file as UTF16 file\n"
+"  -U --unicode_out             Write binary messages as UFT16\n"
+"  -m --maxlength=<val>         Set the maximal allowed message length\n"
+"  -n --nullterminate           Automatic add a zero termination to strings\n"
+"  -o --hresult_use             Use HRESULT definition instead of status code "
+"definition\n"
+"  -O --codepage_out=<val>      Set codepage used for writing text file\n"
+"  -r --rcdir=<directory>       Set the export directory for rc files\n"
+"  -x --xdbg=<directory>        Where to create the .dbg C include file\n"
+"                               that maps message ID's to their symbolic "
+"name.\n"
+msgstr ""
+" Параметри:\n"
+"  -a --ascii_in                Читати вхідний файл використовуючи ASCII\n"
+"  -A --ascii_out               Записати двійкові повідомлення у форматі "
+"ASCII\n"
+"  -b --binprefix               до назви .bin-файлу додається префікс .mc "
+"filename_ для унікальності.\n"
+"  -c --customflag              Встановити інші ознаки для повідомлень\n"
+"  -C --codepage_in=<значення>  Встановити кодову сторінку при читанні "
+"текстового файлу mc\n"
+"  -d --decimal_values          Виводити значення у текстовий файл у "
+"десятковому форматі\n"
+"  -e --extension=<розширення>  Встановити розширення заголовку, що "
+"використовувалось при експорті файлу заголовку\n"
+"  -F --target <target>         Вказує ціль виводу для endianess.\n"
+"  -h --headerdir=<каталог>     Встановити каталог експорту для заголовків\n"
+"  -u --unicode_in              Кодування вхідного файлу UTF16\n"
+"  -U --unicode_out             Кодування файлу виводу UFT16\n"
+"  -m --maxlength=<значення>    Максимальна припустима довжина повідомлення\n"
+"  -n --nullterminate           Автоматично додавати завершення рядків нулем\n"
+"  -o --hresult_use             Використати визначення HRESULT замість "
+"визначення коду статусу\n"
+"  -O --codepage_out=<значення> Встановити кодову сторінку, що "
+"використовується для запису текстового файлу\n"
+"  -r --rcdir=<каталог>         Встановити каталог експорту для файлів rc\n"
+"  -x --xdbg=<каталог>          Куди записувати include-файл .dbg C\n"
+"                               який містить відповідності ідентифікаторів "
+"повідомлень до їх назв.\n"
+
+#: windmc.c:225
+#, c-format
+msgid ""
+"  -H --help                    Print this help message\n"
+"  -v --verbose                 Verbose - tells you what it's doing\n"
+"  -V --version                 Print version information\n"
+msgstr ""
+"  -H --help                    Вивід довідки\n"
+"  -v --verbose                 Докладний вивід про виконувані дії\n"
+"  -V --version                 Вивід інформації про версію\n"
+
+#: windmc.c:297
+#, c-format
+msgid "A codepage was specified switch ,%s' and UTF16.\n"
+msgstr "Вказана кодова сторінка була змінена, %s' та UTF16.\n"
+
+#: windmc.c:298
+#, c-format
+msgid "\tcodepage settings are ignored.\n"
+msgstr "\tпараметри кодової сторінки ігноруються.\n"
+
+#: windmc.c:342
+msgid "try to add a ill language."
+msgstr "спроба додати некоректну мову."
+
+#: windmc.c:1151
+#, c-format
+msgid "unable to open file ,%s' for input.\n"
+msgstr "неможливо відкрити файл '%s' для вводу\n"
+
+#: windmc.c:1159
+#, fuzzy, c-format
+msgid "unable to read contents of %s"
+msgstr "Неможливо прочитати 0x%lx байт з %s\n"
+
+#: windmc.c:1171
+msgid "input file does not seems to be UFT16.\n"
+msgstr "вхідний файл не у кодуванні UFT16.\n"
+
+#: windres.c:220
+#, c-format
+msgid "can't open %s `%s': %s"
+msgstr "неможливо відкрити %s `%s': %s "
+
+#: windres.c:394
+#, c-format
+msgid ": expected to be a directory\n"
+msgstr ": очікувалось, що це каталог\n"
+
+#: windres.c:406
+#, c-format
+msgid ": expected to be a leaf\n"
+msgstr ": очікувалось, що це leaf\n"
+
+#: windres.c:417
+#, c-format
+msgid ": duplicate value\n"
+msgstr ": дублікати значення\n"
+
+#: windres.c:567
+#, c-format
+msgid "unknown format type `%s'"
+msgstr "невідомий тип формату `%s'"
+
+#: windres.c:568
+#, c-format
+msgid "%s: supported formats:"
+msgstr "%s: підтримувані формати:"
+
+#. Otherwise, we give up.
+#: windres.c:651
+#, c-format
+msgid "can not determine type of file `%s'; use the -J option"
+msgstr "неможливо визначити тип файла `%s'; використовуйте ключ -J"
+
+#: windres.c:663
+#, c-format
+msgid "Usage: %s [option(s)] [input-file] [output-file]\n"
+msgstr "Використання: %s [ключі] [вхідний_файл] [файл_виводу]\n"
+
+#: windres.c:665
+#, c-format
+msgid ""
+" The options are:\n"
+"  -i --input=<file>            Name input file\n"
+"  -o --output=<file>           Name output file\n"
+"  -J --input-format=<format>   Specify input format\n"
+"  -O --output-format=<format>  Specify output format\n"
+"  -F --target=<target>         Specify COFF target\n"
+"     --preprocessor=<program>  Program to use to preprocess rc file\n"
+"  -I --include-dir=<dir>       Include directory when preprocessing rc file\n"
+"  -D --define <sym>[=<val>]    Define SYM when preprocessing rc file\n"
+"  -U --undefine <sym>          Undefine SYM when preprocessing rc file\n"
+"  -v --verbose                 Verbose - tells you what it's doing\n"
+"  -c --codepage=<codepage>     Specify default codepage\n"
+"  -l --language=<val>          Set language when reading rc file\n"
+"     --use-temp-file           Use a temporary file instead of popen to "
+"read\n"
+"                               the preprocessor output\n"
+"     --no-use-temp-file        Use popen (default)\n"
+msgstr ""
+" Ключі:\n"
+"  -i --input=<файл>            Назва вхідного файла\n"
+"  -o --output=<файл>           Назва файлу виводу\n"
+"  -J --input-format=<формат>   Вказування вхідної формату\n"
+"  -O --output-format=<формат>  Вказування формату виводу\n"
+"  -F --target=<цель>           Вказування цілі COFF\n"
+"     --preprocessor=<програма> Програма для попередньої обробки файлу rc\n"
+"  -I --include-dir=<каталог>   Каталог, що включається при попередній "
+"обробці файлу rc\n"
+"  -D --define <sym>[=<знач>]   Визначення SYM при попередній обробці файла "
+"rc\n"
+"  -U --undefine <sym>          Скасування визначення SYM при попередній "
+"обробці файла rc\n"
+"  -v --verbose                 Докладно - повідомляє про всі свої дії\n"
+"  -c --codepage=<кодування>    Вказати типове кодування символів\n"
+"  -l --language=<знач>         Встановлення мови при читанні файлу rc\n"
+"     --use-temp-file           Використання тимчасового файла замість popen\n"
+"                               для читання даних виводу препроцесора\n"
+"     --no-use-temp-file        Використання popen (типово)\n"
+
+#: windres.c:682
+#, c-format
+msgid "     --yydebug                 Turn on parser debugging\n"
+msgstr "     --yydebug                 Вмикання налагодження при розборі\n"
+
+#: windres.c:685
+#, c-format
+msgid ""
+"  -r                           Ignored for compatibility with rc\n"
+"  @<file>                      Read options from <file>\n"
+"  -h --help                    Print this help message\n"
+"  -V --version                 Print version information\n"
+msgstr ""
+"  -r                           Пропущено для сумісності з rc\n"
+"  @<файл>                      Читати ключі з <файлу>\n"
+"  -h --help                    Виведення цієї довідки\n"
+"  -V --version                 Виведення інформації про версії\n"
+
+#: windres.c:690
+#, c-format
+msgid ""
+"FORMAT is one of rc, res, or coff, and is deduced from the file name\n"
+"extension if not specified.  A single file name is an input file.\n"
+"No input-file is stdin, default rc.  No output-file is stdout, default rc.\n"
+msgstr ""
+"FORMAT є одним з rc, res або coff, та визначається за розширенням\n"
+"назви файлу, якщо не був вказаний. Одиночна назва файлу є вхідним файлом.\n"
+"Якщо вхідний файл не вказаний використовується stdin, типово rc. Якщо не\n"
+"вказаний файл виводу використовується stdout, типово rc.\n"
+
+#: windres.c:848
+msgid "invalid codepage specified.\n"
+msgstr "вказано некоректне кодування символів.\n"
+
+#: windres.c:863
+msgid "invalid option -f\n"
+msgstr "некоректний ключ -f\n"
+
+#: windres.c:868
+msgid "No filename following the -fo option.\n"
+msgstr "Немає назви файла після ключі -fo.\n"
+
+#: windres.c:927
+#, c-format
+msgid ""
+"Option -I is deprecated for setting the input format, please use -J "
+"instead.\n"
+msgstr ""
+"Ключ -I не рекомендується для встановлення вхідного формату, натомість "
+"використовуйте -J.\n"
+
+#: windres.c:1037
+msgid "no resources"
+msgstr "немає ресурсів"
+
+#: wrstabs.c:353 wrstabs.c:1916
+#, c-format
+msgid "string_hash_lookup failed: %s"
+msgstr "string_hash_lookup завершився помилкою: %s"
+
+#: wrstabs.c:636
+#, c-format
+msgid "stab_int_type: bad size %u"
+msgstr "stab_int_type: неправильний розмір %u"
+
+#: wrstabs.c:1394
+#, c-format
+msgid "%s: warning: unknown size for field `%s' in struct"
+msgstr "%s: попередження: невідомий розмір поля `%s' в struct"
+
+#~ msgid ""
+#~ "The section %s contains:\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Розділ %s містить:\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "Only version 2 and 3 DWARF debug information is currently supported.\n"
+#~ msgstr ""
+#~ "Наразі підтримується налагоджувальна інформація лише для DWARF версії 2 і "
+#~ "3.\n"
+
+#~ msgid "Unable to locate entry %lu in the abbreviation table\n"
+#~ msgstr "Неможливо визначити розміщення пункту %lu у таблиці абревіації\n"
+
+#~ msgid "    %8.8lx %8.8lx %8.8lx (base address)\n"
+#~ msgstr "    %8.8lx %8.8lx %8.8lx (базова адреса)\n"
+
+#~ msgid "Range lists in .debug_info section aren't in ascending order!\n"
+#~ msgstr ""
+#~ "Списки діапазонів у розділі .debug_info не впорядковані за зростанням!\n"
+
+#~ msgid "%s: Warning: "
+#~ msgstr "%s: Попередження: "
+
+#~ msgid "set .nlmsections flags"
+#~ msgstr "встановлення ознак .nlmsections"
+
+#~ msgid "can't add section '%s' - it already exists!"
+#~ msgstr "не вдається додати розділ '%s' - він вже існує!"
+
+#~ msgid "%s: error in %s: %s"
+#~ msgstr "%s: помилка у %s: %s"
+
+#~ msgid "making"
+#~ msgstr "створюється"
+
+#~ msgid "size"
+#~ msgstr "розмір"
+
+#~ msgid "vma"
+#~ msgstr "vma"
+
+#~ msgid "alignment"
+#~ msgstr "орієнтація"
+
+#~ msgid "private data"
+#~ msgstr "приватні дані"
+
+#~ msgid "%s: section `%s': error in %s: %s"
+#~ msgstr "%s: розділ `%s': помилка у %s: %s"
+
+#~ msgid "invalid section [%5u] in group section [%5u]\n"
+#~ msgstr "неправильний розділ [%5u] у розділі груп [%5u]\n"
+
+#~ msgid "  Offset: %#08lx  Link to section: %ld (%s)\n"
+#~ msgstr "  Зсув: %#08lx  Посилання на розділ: %ld (%s)\n"
+
+#~ msgid ""
+#~ "skipping relocation of unknown size against offset 0x%lx in section %s\n"
+#~ msgstr ""
+#~ "пропускається переміщення невідомого розміру відносно зсуву 0x%lx у "
+#~ "розділі %s\n"
+
+#~ msgid ""
+#~ "skipping unexpected symbol type %s in relocation in section .rela.%s\n"
+#~ msgstr ""
+#~ "пропускається неочікуваний тип символу %s у переміщенні в розділі .rela."
+#~ "%s\n"
+
+#~ msgid "%s: invalid archive string table offset %lu\n"
+#~ msgstr "%s: неправильний зсув таблиці рядків архіву %lu\n"
+
+#~ msgid "invalid number %s"
+#~ msgstr "некоректне число %s"
+
+#~ msgid "stat returns negative size for %s"
+#~ msgstr "stat повернув від'ємний розмір для %s"
+
+#~ msgid "%s section has more comp units than .debug_info section\n"
+#~ msgstr "Розділ %s містить більше елементів comp, ніж розділ .debug_info\n"
+
+#~ msgid ""
+#~ "assuming that the pointer size is %d, from the last comp unit in ."
+#~ "debug_info\n"
+#~ "\n"
+#~ msgstr ""
+#~ "вважається, що розмір вказівника - %d, від останнього елементу comp у ."
+#~ "debug_info\n"
+#~ "\n"
+
+#~ msgid "  (Pointer size:               %u)%s\n"
+#~ msgstr "  (Розмір вказівника:          %u)%s\n"
+
+#~ msgid "Extend line ops need a valid pointer size, guessing at 4\n"
+#~ msgstr ""
+#~ "Для розширених кодів операцій потрібне правильний розмір вказівника; "
+#~ "вважається 4\n"
+
+#~ msgid "unsupported or unknown DW_CFA_%d\n"
+#~ msgstr "непідтримуваний або невідомий DW_CFA_%d\n"
+
+#~ msgid "there are no sections to be copied!"
+#~ msgstr "немає розділів для копіювання!"
+
+#~ msgid "Out of memory"
+#~ msgstr "Бракує пам'яті"
+
+#~ msgid "can't read resource section"
+#~ msgstr "неможливо прочитати розділ ресурсів"

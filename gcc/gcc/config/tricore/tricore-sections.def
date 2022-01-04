@@ -1,0 +1,98 @@
+/* Core target definitions for GNU compiler collection
+   for Infineon TriCore support
+
+   Copyright (C) 2012-2014 Free Software Foundation, Inc.
+   Contributed by Georg Lay (Georg.Lay@hightec-rt.com).
+
+   This file is part of GCC.
+
+   GCC is free software; you can redistribute it and/or modify it under the
+   terms of the GNU General Public License as published by the Free Software
+   Foundation; either version 3, or (at your option) any later version.
+
+   GCC is distributed in the hope that it will be useful, but WITHOUT
+   ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+   or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
+   License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with GCC; see the file COPYING3.  If not see
+   <http://www.gnu.org/licenses/>.  */
+
+/* This file contains the definitions for extra default sections
+   defined in the TriCore port of the GNU compiler.
+   Before including this file, define a macro
+
+   DEF_SECTION(NAME, FLAGS, ALIGN, ASM_OP, INIT_LOOKUP, DSEC)
+
+   NAME:    The name of the section.
+   FLAGS:   The flag string of the section.  Notice that @nobits section need
+            flag 'B' to indicate SECTION_BSS.
+   ALIGN:   The alignment in bytes or 0 for default alignment.
+   INIT_LOOKUP:
+            The created section will get an entry in the tric_data_section[]
+            lookup array iff this field is non-zero.
+   PSEC:    Address of a default section object that will be replaced by
+            the newly created section, or NULL for no replacement.
+*/
+
+/* Data Sections */
+
+DEF_SECTION (".zdata",    "awz", 0, true, NULL)
+DEF_SECTION (".zdata.a1", "awz", 1, true, NULL)
+DEF_SECTION (".zdata.a2", "awz", 2, true, NULL)
+DEF_SECTION (".zdata.a4", "awz", 4, true, NULL)
+DEF_SECTION (".zdata.a8", "awz", 8, true, NULL)
+
+DEF_SECTION (".zrodata",    "az", 0, true, NULL)
+DEF_SECTION (".zrodata.a1", "az", 1, true, NULL)
+DEF_SECTION (".zrodata.a2", "az", 2, true, NULL)
+DEF_SECTION (".zrodata.a4", "az", 4, true, NULL)
+DEF_SECTION (".zrodata.a8", "az", 8, true, NULL)
+
+DEF_SECTION (".zbss",    "awzB", 0, true, NULL)
+DEF_SECTION (".zbss.a1", "awzB", 1, true, NULL)
+DEF_SECTION (".zbss.a2", "awzB", 2, true, NULL)
+DEF_SECTION (".zbss.a4", "awzB", 4, true, NULL)
+DEF_SECTION (".zbss.a8", "awzB", 8, true, NULL)
+
+DEF_SECTION (".sdata",    "aws", 0, true, &sdata_section)
+DEF_SECTION (".sdata.a1", "aws", 1, true, NULL)
+DEF_SECTION (".sdata.a2", "aws", 2, true, NULL)
+DEF_SECTION (".sdata.a4", "aws", 4, true, NULL)
+DEF_SECTION (".sdata.a8", "aws", 8, true, NULL)
+
+DEF_SECTION (".srodata",    "as", 0, true, NULL)
+DEF_SECTION (".srodata.a1", "as", 1, true, NULL)
+DEF_SECTION (".srodata.a2", "as", 2, true, NULL)
+DEF_SECTION (".srodata.a4", "as", 4, true, NULL)
+DEF_SECTION (".srodata.a8", "as", 8, true, NULL)
+
+DEF_SECTION (".sbss",    "awsB", 0, true, &sbss_section)
+DEF_SECTION (".sbss.a1", "awsB", 1, true, NULL)
+DEF_SECTION (".sbss.a2", "awsB", 2, true, NULL)
+DEF_SECTION (".sbss.a4", "awsB", 4, true, NULL)
+DEF_SECTION (".sbss.a8", "awsB", 8, true, NULL)
+
+DEF_SECTION (".data",    "aw", 0, true, &data_section)
+DEF_SECTION (".data.a1", "aw", 1, true, NULL)
+DEF_SECTION (".data.a2", "aw", 2, true, NULL)
+DEF_SECTION (".data.a4", "aw", 4, true, NULL)
+DEF_SECTION (".data.a8", "aw", 8, true, NULL)
+
+DEF_SECTION (".rodata",    "a", 0, true, &readonly_data_section)
+DEF_SECTION (".rodata.a1", "a", 1, true, NULL)
+DEF_SECTION (".rodata.a2", "a", 2, true, NULL)
+DEF_SECTION (".rodata.a4", "a", 4, true, NULL)
+DEF_SECTION (".rodata.a8", "a", 8, true, NULL)
+
+DEF_SECTION (".bss",    "awB", 0, true, &bss_section)
+DEF_SECTION (".bss.a1", "awB", 1, true, NULL)
+DEF_SECTION (".bss.a2", "awB", 2, true, NULL)
+DEF_SECTION (".bss.a4", "awB", 4, true, NULL)
+DEF_SECTION (".bss.a8", "awB", 8, true, NULL)
+
+/* Code Sections */
+
+DEF_SECTION (".pictext", "ax", 2, 0, NULL)
+DEF_SECTION (".text",    "ax", 2, 0, NULL)

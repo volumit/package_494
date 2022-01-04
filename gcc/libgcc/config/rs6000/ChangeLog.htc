@@ -1,0 +1,30 @@
+2016-05-24  Robert Agoston
+
+	[HDP-585]
+	* HDP-v4.9.0.0-tricore released.
+
+2014-11-17  Peter Gal
+
+	[HPD-772]
+	* eabi-cn.S (.fini): Fix .fini section naming in VLE mode.
+
+2014-06-26  Gabor Palfi
+
+	[HDP-569]
+	* eabi.S: Use VLE sections when needed, and use relocatable code only if
+	needed.
+	* crtresxfpr.S: Skip functions when VLE is enabled.
+	* crtsavfpr.S: Ditto.
+	* crtresgpr.S: Use .text_vle section instead of .text, when VLE is enabled.
+	* tramp.S: Ditto.
+	* crtresxgpr.S: Ditto.
+	* crtsavgpr.S: Ditto.
+	* e500crtres32gpr.S: Ditto.
+	* e500crtrest32gpr.S: Ditto.
+	* e500crtresx32gpr.S: Ditto.
+	* e500crtsav32gpr.S: Ditto.
+	* e500crtsavg32gpr.S: Ditto.
+	* eabi-ci.S: For the ZEN architecture we define only the .init and .fini
+	section
+	* eabi-cn.S: Ditto.
+	* t-htc-libgcc: New file.

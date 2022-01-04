@@ -1,0 +1,13 @@
+2015-08-21  Georg Lay
+
+	Support -mtc162 and -mcpu=tc39xx.
+
+	[HDP-940]
+	* libc/machine/tricore/setjmp.S (longjmp): Handle __TC162__.
+
+2014-06-12  Georg Lay
+
+	[HDP-469]
+	* libc/machine/tricore/setjmp.S (longjmp) [tc13, tc131, tc16]:
+	Use bit 22 as PCXI.UL.
+	[tc161]: Use bit 20 as PCXI.UL.

@@ -1,0 +1,3378 @@
+msgid ""
+msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Message-Numbers-Known: 542\n"
+"Pool-Offset: 40000\n"
+"Message-Numbers-New: 0\n"
+"Language: en\n"
+"Last-Translator: Automatically generated\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Pool-Max-Number: 40598\n"
+"Pool-Name: bfd\n"
+"Language-Team: none\n"
+"Content-Type: text/plain; charset=ASCII\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: Unknown section type in a.out.adobe file: %x\n"
+msgstr "%B: [40148] Unknown section type in a.out.adobe file: %x\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: Invalid relocation type exported: %d"
+msgstr "%s: [40392] Invalid relocation type exported: %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: Invalid relocation type imported: %d"
+msgstr "%B: [40056] Invalid relocation type imported: %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: Bad relocation record imported: %d"
+msgstr "%B: [40017] Bad relocation record imported: %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: can not represent section `%s' in a.out object file format"
+msgstr "%s: [40364] can not represent section `%s' in a.out object file format"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%s: can not represent section for symbol `%s' in a.out object file format"
+msgstr "%s: [40363] can not represent section for symbol `%s' in a.out object file format"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "*unknown*"
+msgstr "[40459] *unknown*"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: relocatable link from %s to %s not supported"
+msgstr "%s: [40406] relocatable link from %s to %s not supported"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: writing archive was slow: rewriting timestamp\n"
+msgstr "warning: [40584] writing archive was slow: rewriting timestamp\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Reading archive file mod timestamp"
+msgstr "[40336] Reading archive file mod timestamp"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Writing updated armap timestamp"
+msgstr "[40519] Writing updated armap timestamp"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "BFD %s assertion fail %s:%d"
+msgstr "[40224] BFD %s assertion fail %s:%d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "BFD %s internal error, aborting at %s line %d in %s\n"
+msgstr "[40225] BFD %s internal error, aborting at %s line %d in %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "BFD %s internal error, aborting at %s line %d\n"
+msgstr "[40226] BFD %s internal error, aborting at %s line %d\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Please report this bug.\n"
+msgstr "[40333] Please report this bug.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: Writing section `%s' to huge (ie negative) file offset 0x%lx."
+msgstr "warning: [40585] Writing section `%s' to huge (ie negative) file offset 0x%lx."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "reopening %B: %s\n"
+msgstr "[40343] reopening %B: %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: unknown/unsupported relocation type %d"
+msgstr "%B: [40149] unknown/unsupported relocation type %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: unsupported relocation: ALPHA_R_GPRELHIGH"
+msgstr "%B: [40155] unsupported relocation: ALPHA_R_GPRELHIGH"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: unsupported relocation: ALPHA_R_GPRELLOW"
+msgstr "%B: [40156] unsupported relocation: ALPHA_R_GPRELLOW"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: unknown relocation type %d"
+msgstr "%B: [40145] unknown relocation type %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "using multiple gp values"
+msgstr "[40475] using multiple gp values"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: unable to find THUMB glue '%s' for `%s'"
+msgstr "%B: [40131] unable to find THUMB glue '%s' for `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: unable to find ARM glue '%s' for `%s'"
+msgstr "%B: [40130] unable to find ARM glue '%s' for `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: bad reloc address 0x%lx in section `%A'"
+msgstr "%B: [40016] bad reloc address 0x%lx in section `%A'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: illegal symbol index in reloc: %d"
+msgstr "%B: [40048] illegal symbol index in reloc: %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"warning: Not setting interworking flag of %B since it has already been "
+"specified as non-interworking"
+msgstr "warning: [40581] Not setting interworking flag of %B since it has already been "
+"specified as non-interworking"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: Clearing the interworking flag of %B due to outside request"
+msgstr "warning: [40578] Clearing the interworking flag of %B due to outside request"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: %B is compiled for APCS-%d, whereas %B is compiled for APCS-%d"
+msgstr "error: [40592] %B is compiled for APCS-%d, whereas %B is compiled for APCS-%d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"error: %B passes floats in float registers, whereas %B passes them in "
+"integer registers"
+msgstr "error: [40277] %B passes floats in float registers, whereas %B passes them in "
+"integer registers"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"error: %B passes floats in integer registers, whereas %B passes them in "
+"float registers"
+msgstr "error: [40278] %B passes floats in integer registers, whereas %B passes them in "
+"float registers"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"error: %B is compiled as position independent code, whereas target %B is "
+"absolute position"
+msgstr "error: [40591] %B is compiled as position independent code, whereas target %B is "
+"absolute position"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"error: %B is compiled as absolute position code, whereas target %B is "
+"position independent"
+msgstr "error: [40590] %B is compiled as absolute position code, whereas target %B is "
+"position independent"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: %B supports interworking, whereas %B does not"
+msgstr "warning: [40564] %B supports interworking, whereas %B does not"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: %B does not support interworking, whereas %B does"
+msgstr "warning: [40562] %B does not support interworking, whereas %B does"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "cannot handle R_MEM_INDIRECT reloc when using %s output"
+msgstr "[40241] cannot handle R_MEM_INDIRECT reloc when using %s output"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: illegal symbol index %ld in relocs"
+msgstr "%B: warning: [40176] illegal symbol index %ld in relocs"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "uncertain calling convention for non-COFF symbol"
+msgstr "[40455] uncertain calling convention for non-COFF symbol"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Can't Make it a Short Jump"
+msgstr "[40244] Can't Make it a Short Jump"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Exceeds Long Jump Range"
+msgstr "[40293] Exceeds Long Jump Range"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Absolute address Exceeds 16 bit Range"
+msgstr "[40003] Absolute address Exceeds 16 bit Range"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Absolute address Exceeds 8 bit Range"
+msgstr "[40004] Absolute address Exceeds 8 bit Range"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unrecognized Reloc Type"
+msgstr "[40469] Unrecognized Reloc Type"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "GP relative relocation when _gp not defined"
+msgstr "[40302] GP relative relocation when _gp not defined"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unrecognized reloc"
+msgstr "[40468] Unrecognized reloc"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: unsupported relocation type 0x%02x"
+msgstr "%s: [40419] unsupported relocation type 0x%02x"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: TOC reloc at 0x%x to symbol `%s' with no TOC entry"
+msgstr "%s: [40414] TOC reloc at 0x%x to symbol `%s' with no TOC entry"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: symbol `%s' has unrecognized smclas %d"
+msgstr "%B: [40122] symbol `%s' has unrecognized smclas %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unrecognized reloc type 0x%x"
+msgstr "[40470] Unrecognized reloc type 0x%x"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: warning: illegal symbol index %ld in relocs"
+msgstr "%s: warning: [40424] illegal symbol index %ld in relocs"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: COMDAT symbol '%s' does not match section name '%s'"
+msgstr "%B: warning: [40167] COMDAT symbol '%s' does not match section name '%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%B: warning: Ignoring section flag IMAGE_SCN_MEM_NOT_PAGED in section %s"
+msgstr "%B: warning: [40546] Ignoring section flag IMAGE_SCN_MEM_NOT_PAGED in section %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B (%s): Section flag %s (0x%x) ignored"
+msgstr "%B [40103] (%s): Section flag %s (0x%x) ignored"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unrecognized TI COFF target id '0x%x'"
+msgstr "[40471] Unrecognized TI COFF target id '0x%x'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: reloc against a non-existant symbol index: %ld"
+msgstr "%B: [40081] reloc against a non-existant symbol index: %ld"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: section %s: string table overflow at offset %ld"
+msgstr "%B: [40115] section %s: string table overflow at offset %ld"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: line number table read failed"
+msgstr "%B: warning: [40177] line number table read failed"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: illegal symbol index %ld in line numbers"
+msgstr "%B: warning: [40175] illegal symbol index %ld in line numbers"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: duplicate line number information for `%s'"
+msgstr "%B: warning: [40169] duplicate line number information for `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: Unrecognized storage class %d for %s symbol `%s'"
+msgstr "%B: [40154] Unrecognized storage class %d for %s symbol `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: %B: local symbol `%s' has no section"
+msgstr "warning: [40482] %B: local symbol `%s' has no section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: illegal relocation type %d at address 0x%lx"
+msgstr "%B: [40047] illegal relocation type %d at address 0x%lx"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: bad string table size %lu"
+msgstr "%B: [40020] bad string table size %lu"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: type of symbol `%s' changed from %d to %d in %B"
+msgstr "warning: [40583] type of symbol `%s' changed from %d to %d in %B"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: relocs in section `%A', but it has no contents"
+msgstr "%B: [40096] relocs in section `%A', but it has no contents"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: %s: reloc overflow: 0x%lx > 0xffff"
+msgstr "%s: [40407] %s: reloc overflow: 0x%lx > 0xffff"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: warning: %s: line number overflow: 0x%lx > 0xffff"
+msgstr "%s: warning: [40426] %s: line number overflow: 0x%lx > 0xffff"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: unable to update contents of %s section in %s"
+msgstr "warning: [40515] unable to update contents of %s section in %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "dwarf error: Can't find %s section."
+msgstr "[40549] dwarf error: Can't find %s section."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "dwarf error: unable to decompress %s section."
+msgstr "[40557] dwarf error: unable to decompress %s section."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "dwarf error: Offset (%lu) greater than or equal to %s size (%lu)."
+msgstr "[40556] dwarf error: Offset (%lu) greater than or equal to %s size (%lu)."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "dwarf error: Invalid or unhandled FORM value: %u."
+msgstr "[40553] dwarf error: Invalid or unhandled FORM value: %u."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "dwarf error: mangled line number section (bad file number)."
+msgstr "[40555] dwarf error: mangled line number section (bad file number)."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "dwarf error: mangled line number section."
+msgstr "[40554] dwarf error: mangled line number section."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "dwarf error: Could not find abbrev number %u."
+msgstr "[40550] dwarf error: Could not find abbrev number %u."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"dwarf error: found dwarf version '%u', this reader only handles version 2 "
+"and 3 information."
+msgstr "[40552] dwarf error: found dwarf version '%u', this reader only handles version 2 "
+"and 3 information."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"dwarf error: found address size '%u', this reader can not handle sizes "
+"greater than '%u'."
+msgstr "[40551] dwarf error: found address size '%u', this reader can not handle sizes "
+"greater than '%u'."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "dwarf error: Bad abbrev number: %u."
+msgstr "[40548] dwarf error: Bad abbrev number: %u."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: %B: Must be processed by '%s' toolchain"
+msgstr "error: [40276] %B: Must be processed by '%s' toolchain"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: %B: Object tag '%d, %s' is incompatible with tag '%d, %s'"
+msgstr "error: [40593] %B: Object tag '%d, %s' is incompatible with tag '%d, %s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B(%A+0x%lx): unresolvable %s relocation against symbol `%s'"
+msgstr "[40219] %B(%A+0x%lx): unresolvable %s relocation against symbol `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "dynamic variable `%s' is zero size"
+msgstr "[40267] dynamic variable `%s' is zero size"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"error: inappropriate relocation type for shared library (did you forget -"
+"fpic?)"
+msgstr "error: [40594] inappropriate relocation type for shared library (did you forget -"
+"fpic?)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: invalid string offset %u >= %lu for section `%s'"
+msgstr "%B: [40058] invalid string offset %u >= %lu for section `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: Corrupt size field in group section header: 0x%lx"
+msgstr "%B: [40031] Corrupt size field in group section header: 0x%lx"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: invalid SHT_GROUP entry"
+msgstr "%B: [40057] invalid SHT_GROUP entry"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: no group info for section %A"
+msgstr "%B: [40072] no group info for section %A"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: sh_link not set for section `%A'"
+msgstr "%B: warning: [40181] sh_link not set for section `%A'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: sh_link [%d] in section `%A' is incorrect"
+msgstr "%B: [40116] sh_link [%d] in section `%A' is incorrect"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: unknown [%d] section `%s' in group [%s]"
+msgstr "%B: [40143] unknown [%d] section `%s' in group [%s]"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: invalid link %lu for reloc section %s (index %u)"
+msgstr "%B: [40054] invalid link %lu for reloc section %s (index %u)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: don't know how to handle section `%s' [0x%8x]"
+msgstr "%B: [40035] don't know how to handle section `%s' [0x%8x]"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: section `%A' type changed to PROGBITS"
+msgstr "warning: [40510] section `%A' type changed to PROGBITS"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: sh_link of section `%A' points to discarded section `%A' of `%B'"
+msgstr "%B: [40117] sh_link of section `%A' points to discarded section `%A' of `%B'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: sh_link of section `%A' points to removed section `%A' of `%B'"
+msgstr "%B: [40118] sh_link of section `%A' points to removed section `%A' of `%B'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%B: The first section in the PT_DYNAMIC segment is not the .dynamic section"
+msgstr "%B: [40125] The first section in the PT_DYNAMIC segment is not the .dynamic section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: Not enough room for program headers, try linking with -N"
+msgstr "%B: [40074] Not enough room for program headers, try linking with -N"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: section %A vma 0x%lx overlaps previous sections"
+msgstr "%B: [40114] section %A vma 0x%lx overlaps previous sections"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: section `%A' can't be allocated in segment %d"
+msgstr "%B: [40107] section `%A' can't be allocated in segment %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: allocated section `%s' not in segment"
+msgstr "%B: warning: [40163] allocated section `%s' not in segment"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: symbol `%s' required but not present"
+msgstr "%B: [40124] symbol `%s' required but not present"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: unsupported relocation type %s"
+msgstr "%B: [40158] unsupported relocation type %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: Empty loadable segment detected, is this intentional ?\n"
+msgstr "%B: warning: [40172] Empty loadable segment detected, is this intentional ?\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: cannot create stub entry %s"
+msgstr "%s: [40367] cannot create stub entry %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unable to find THUMB glue '%s' for '%s'"
+msgstr "[40453] unable to find THUMB glue '%s' for '%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unable to find ARM glue '%s' for '%s'"
+msgstr "[40452] unable to find ARM glue '%s' for '%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: BE8 images only valid in big-endian mode."
+msgstr "%B: [40023] BE8 images only valid in big-endian mode."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Invalid TARGET2 relocation type '%s'."
+msgstr "[40309] Invalid TARGET2 relocation type '%s'."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "\\%B: warning: Arm BLX instruction targets Arm function '%s'."
+msgstr "[40543] \\%B: warning: Arm BLX instruction targets Arm function '%s'."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: Thumb BLX instruction targets thumb function '%s'."
+msgstr "%B: warning: [40547] Thumb BLX instruction targets thumb function '%s'."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B(%A+0x%lx): R_ARM_TLS_LE32 relocation not permitted in shared object"
+msgstr "[40207] %B(%A+0x%lx): R_ARM_TLS_LE32 relocation not permitted in shared object"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%B(%A+0x%lx): Only ADD or SUB instructions are allowed for ALU group "
+"relocations"
+msgstr "[40205] %B(%A+0x%lx): Only ADD or SUB instructions are allowed for ALU group "
+"relocations"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B(%A+0x%lx): Overflow whilst splitting 0x%lx for group relocation %s"
+msgstr "[40206] %B(%A+0x%lx): Overflow whilst splitting 0x%lx for group relocation %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B(%A+0x%lx): %s relocation against SEC_MERGE section"
+msgstr "[40213] %B(%A+0x%lx): %s relocation against SEC_MERGE section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B(%A+0x%lx): %s used with TLS symbol %s"
+msgstr "[40215] %B(%A+0x%lx): %s used with TLS symbol %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B(%A+0x%lx): %s used with non-TLS symbol %s"
+msgstr "[40214] %B(%A+0x%lx): %s used with non-TLS symbol %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "out of range"
+msgstr "[40326] out of range"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unsupported relocation"
+msgstr "[40472] unsupported relocation"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unknown error"
+msgstr "[40460] unknown error"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"warning: Clearing the interworking flag of %B because non-interworking code "
+"in %B has been linked with it"
+msgstr "warning: [40577] Clearing the interworking flag of %B because non-interworking code "
+"in %B has been linked with it"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: %B: Unknown CPU architecture"
+msgstr "error: [40281] %B: Unknown CPU architecture"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: %B: Conflicting CPU architectures %d/%d"
+msgstr "error: [40271] %B: Conflicting CPU architectures %d/%d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: %B uses VFP register arguments, %B does not"
+msgstr "error: [40288] %B uses VFP register arguments, %B does not"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: %B: 8-byte data alignment conflicts with %B"
+msgstr "error: [40269] %B: 8-byte data alignment conflicts with %B"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: %B: Conflicting architecture profiles %c/%c"
+msgstr "error: [40270] %B: Conflicting architecture profiles %c/%c"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: %B: Conflicting platform configuration"
+msgstr "warning: [40561] %B: Conflicting platform configuration"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: %B: Conflicting use of R9"
+msgstr "error: [40272] %B: Conflicting use of R9"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: %B: SB relative addressing conflicts with use of R9"
+msgstr "error: [40280] %B: SB relative addressing conflicts with use of R9"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"warning: %B uses %u-byte wchar_t yet the output is to use %u-byte wchar_t; "
+"use of wchar_t values across objects may fail"
+msgstr "warning: [40493] %B uses %u-byte wchar_t yet the output is to use %u-byte wchar_t; "
+"use of wchar_t values across objects may fail"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"warning: %B uses %s enums yet the output is to use %s enums; use of enum "
+"values across objects may fail"
+msgstr "warning: [40491] %B uses %s enums yet the output is to use %s enums; use of enum "
+"values across objects may fail"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: %B uses iWMMXt register arguments, %B does not"
+msgstr "error: [40284] %B uses iWMMXt register arguments, %B does not"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: fp16 format mismatch between %B and %B"
+msgstr "error: [40289] fp16 format mismatch between %B and %B"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: Unknown mandatory EABI object attribute %d"
+msgstr "%B: [40144] Unknown mandatory EABI object attribute %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: %B: Unknown EABI object attribute %d"
+msgstr "warning: [40565] %B: Unknown EABI object attribute %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: %B is already in final BE8 format"
+msgstr "error: [40274] %B is already in final BE8 format"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"error: Source object %B has EABI version %d, but target %B has EABI version "
+"%d"
+msgstr "error: [40290] Source object %B has EABI version %d, but target %B has EABI version "
+"%d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: %B is compiled for APCS-%d, whereas target %B uses APCS-%d"
+msgstr "error: [40275] %B is compiled for APCS-%d, whereas target %B uses APCS-%d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: %B uses VFP instructions, whereas %B does not"
+msgstr "error: [40287] %B uses VFP instructions, whereas %B does not"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: %B uses FPA instructions, whereas %B does not"
+msgstr "error: [40282] %B uses FPA instructions, whereas %B does not"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: %B uses Maverick instructions, whereas %B does not"
+msgstr "error: [40285] %B uses Maverick instructions, whereas %B does not"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: %B does not use Maverick instructions, whereas %B does"
+msgstr "error: [40273] %B does not use Maverick instructions, whereas %B does"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: %B uses software FP, whereas %B uses hardware FP"
+msgstr "error: [40286] %B uses software FP, whereas %B uses hardware FP"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: %B uses hardware FP, whereas %B uses software FP"
+msgstr "error: [40283] %B uses hardware FP, whereas %B uses software FP"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: bad symbol index: %d"
+msgstr "%B: [40021] bad symbol index: %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%B: relocation %s against `%s' can not be used when making a shared object; "
+"recompile with -fPIC"
+msgstr "%B: [40087] relocation %s against `%s' can not be used when making a shared object; "
+"recompile with -fPIC"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Errors encountered processing file %s"
+msgstr "[40292] Errors encountered processing file %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%B: warning: selected VFP11 erratum workaround is not necessary for target "
+"architecture"
+msgstr "%B: warning: [40180] selected VFP11 erratum workaround is not necessary for target "
+"architecture"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: error: Cortex-A8 erratum stub is allocated in unsafe location"
+msgstr "%B: error: [40586] Cortex-A8 erratum stub is allocated in unsafe location"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: error: Cortex-A8 erratum stub out of range (input file too large)"
+msgstr "%B: error: [40587] Cortex-A8 erratum stub out of range (input file too large)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: error: VFP11 veneer out of range"
+msgstr "%B: error: [40588] VFP11 veneer out of range"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: cannot create stub entry %s"
+msgstr "%B: [40026] cannot create stub entry %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B(%A+0x%lx): unresolvable relocation against symbol `%s'"
+msgstr "[40218] %B(%A+0x%lx): unresolvable relocation against symbol `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B(%A+0x%lx): reloc against `%s': error %d"
+msgstr "[40208] %B(%A+0x%lx): reloc against `%s': error %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: relocation at `%A+0x%x' references symbol `%s' with nonzero addend"
+msgstr "%B: [40083] relocation at `%A+0x%x' references symbol `%s' with nonzero addend"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: unsupported relocation type %i"
+msgstr "%B: [40157] unsupported relocation type %i"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: cannot link non-fdpic object file into fdpic executable"
+msgstr "%s: [40369] cannot link non-fdpic object file into fdpic executable"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: cannot link fdpic object file into non-fdpic executable"
+msgstr "%s: [40368] cannot link fdpic object file into non-fdpic executable"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "relocation references symbol not defined in the module"
+msgstr "[40340] relocation references symbol not defined in the module"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "R_BFIN_FUNCDESC references dynamic symbol with nonzero addend"
+msgstr "[40334] R_BFIN_FUNCDESC references dynamic symbol with nonzero addend"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "cannot emit fixups in read-only section"
+msgstr "[40240] cannot emit fixups in read-only section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "cannot emit dynamic relocations in read-only section"
+msgstr "[40239] cannot emit dynamic relocations in read-only section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "R_BFIN_FUNCDESC_VALUE references dynamic symbol with nonzero addend"
+msgstr "[40335] R_BFIN_FUNCDESC_VALUE references dynamic symbol with nonzero addend"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "relocations between different segments are not supported"
+msgstr "[40341] relocations between different segments are not supported"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: relocation references a different segment"
+msgstr "warning: [40505] relocation references a different segment"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B, section %A: unresolvable relocation %s against symbol `%s'"
+msgstr "[40113] %B, section %A: unresolvable relocation %s against symbol `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B, section %A: No PLT nor GOT for relocation %s against symbol `%s'"
+msgstr "[40110] %B, section %A: No PLT nor GOT for relocation %s against symbol `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B, section %A: No PLT for relocation %s against symbol `%s'"
+msgstr "[40109] %B, section %A: No PLT for relocation %s against symbol `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "[whose name is lost]"
+msgstr "[40518] [whose name is lost]"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%B, section %A: relocation %s with non-zero addend %d against symbol `%s'"
+msgstr "[40112] %B, section %A: relocation %s with non-zero addend %d against symbol `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B, section %A: relocation %s with no GOT created"
+msgstr "[40111] %B, section %A: relocation %s with no GOT created"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: uses _-prefixed symbols, but writing file with non-prefixed symbols"
+msgstr "%B: [40161] uses _-prefixed symbols, but writing file with non-prefixed symbols"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: uses non-prefixed symbols, but writing file with _-prefixed symbols"
+msgstr "%B: [40160] uses non-prefixed symbols, but writing file with _-prefixed symbols"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B(%A+0x%x): relocation to `%s+%x' may have caused the error above"
+msgstr "[40220] %B(%A+0x%x): relocation to `%s+%x' may have caused the error above"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B(%A+0x%lx): reloc against `%s': %s"
+msgstr "[40209] %B(%A+0x%lx): reloc against `%s': %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "relocation references a different segment"
+msgstr "[40339] relocation references a different segment"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%s: compiled with %s and linked with modules that use non-pic relocations"
+msgstr "%s: [40371] compiled with %s and linked with modules that use non-pic relocations"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: compiled with %s and linked with modules compiled with %s"
+msgstr "%s: [40370] compiled with %s and linked with modules compiled with %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%s: uses different unknown e_flags (0x%lx) fields than previous modules (0x"
+"%lx)"
+msgstr "%s: [40421] uses different unknown e_flags (0x%lx) fields than previous modules (0x"
+"%lx)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "R_FRV_GETTLSOFF not applied to a call instruction"
+msgstr "[40351] R_FRV_GETTLSOFF not applied to a call instruction"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "R_FRV_GOTTLSDESC12 not applied to an lddi instruction"
+msgstr "[40352] R_FRV_GOTTLSDESC12 not applied to an lddi instruction"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "R_FRV_GOTTLSDESCHI not applied to a sethi instruction"
+msgstr "[40353] R_FRV_GOTTLSDESCHI not applied to a sethi instruction"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "R_FRV_TLSDESC_RELAX not applied to an ldd instruction"
+msgstr "[40356] R_FRV_TLSDESC_RELAX not applied to an ldd instruction"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "R_FRV_GOTTLSOFF12 not applied to an ldi instruction"
+msgstr "[40354] R_FRV_GOTTLSOFF12 not applied to an ldi instruction"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "R_FRV_GOTTLSOFFHI not applied to a sethi instruction"
+msgstr "[40355] R_FRV_GOTTLSOFFHI not applied to a sethi instruction"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "R_FRV_TLSOFF_RELAX not applied to an ld instruction"
+msgstr "[40358] R_FRV_TLSOFF_RELAX not applied to an ld instruction"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "R_FRV_TLSMOFFHI not applied to a sethi instruction"
+msgstr "[40357] R_FRV_TLSMOFFHI not applied to a sethi instruction"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "R_FRV_FUNCDESC references dynamic symbol with nonzero addend"
+msgstr "[40349] R_FRV_FUNCDESC references dynamic symbol with nonzero addend"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "R_FRV_FUNCDESC_VALUE references dynamic symbol with nonzero addend"
+msgstr "[40350] R_FRV_FUNCDESC_VALUE references dynamic symbol with nonzero addend"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: Relocations in generic ELF (EM: %d)"
+msgstr "%B: [40095] Relocations in generic ELF (EM: %d)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B(%A+0x%lx): cannot reach %s, recompile with -ffunction-sections"
+msgstr "[40200] %B(%A+0x%lx): cannot reach %s, recompile with -ffunction-sections"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%B: relocation %s can not be used when making a shared object; recompile "
+"with -fPIC"
+msgstr "%B: [40088] relocation %s can not be used when making a shared object; recompile "
+"with -fPIC"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: duplicate export stub %s"
+msgstr "%B: [40037] duplicate export stub %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%B(%A+0x%lx): %s fixup for insn 0x%x is not supported in a non-shared link"
+msgstr "[40211] %B(%A+0x%lx): %s fixup for insn 0x%x is not supported in a non-shared link"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B(%A+0x%lx): cannot handle %s for %s"
+msgstr "[40198] %B(%A+0x%lx): cannot handle %s for %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ".got section not immediately after .plt section"
+msgstr "[40301] .got section not immediately after .plt section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: invalid relocation type %d"
+msgstr "%B: [40055] invalid relocation type %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: unrecognized relocation (0x%x) in section `%A'"
+msgstr "%B: [40153] unrecognized relocation (0x%x) in section `%A'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%B: relocation R_386_GOTOFF against undefined %s `%s' can not be used when "
+"making a shared object"
+msgstr "%B: [40085] relocation R_386_GOTOFF against undefined %s `%s' can not be used when "
+"making a shared object"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%B: relocation R_386_GOTOFF against protected function `%s' can not be used "
+"when making a shared object"
+msgstr "%B: [40084] relocation R_386_GOTOFF against protected function `%s' can not be used "
+"when making a shared object"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"ip2k relaxer: switch table without complete matching relocation information."
+msgstr "[40313] ip2k relaxer: switch table without complete matching relocation information."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "ip2k relaxer: switch table header corrupt."
+msgstr "[40312] ip2k relaxer: switch table header corrupt."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "ip2k linker: missing page instruction at 0x%08lx (dest = 0x%08lx)."
+msgstr "[40310] ip2k linker: missing page instruction at 0x%08lx (dest = 0x%08lx)."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "ip2k linker: redundant page instruction at 0x%08lx (dest = 0x%08lx)."
+msgstr "[40311] ip2k linker: redundant page instruction at 0x%08lx (dest = 0x%08lx)."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: uses different e_flags (0x%lx) fields than previous modules (0x%lx)"
+msgstr "%s: [40420] uses different e_flags (0x%lx) fields than previous modules (0x%lx)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "global pointer relative relocation when _gp not defined"
+msgstr "[40300] global pointer relative relocation when _gp not defined"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "internal error: addend should be zero for R_LM32_16_GOT"
+msgstr "[40303] internal error: addend should be zero for R_LM32_16_GOT"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "SDA relocation when _SDA_BASE_ not defined"
+msgstr "[40431] SDA relocation when _SDA_BASE_ not defined"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: The target (%s) of an %s relocation is in the wrong section (%A)"
+msgstr "%B: [40126] The target (%s) of an %s relocation is in the wrong section (%A)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: Instruction set mismatch with previous modules"
+msgstr "%B: [40052] Instruction set mismatch with previous modules"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: uses different e_flags (0x%lx) fields than previous modules (0x%lx)"
+msgstr "%B: [40159] uses different e_flags (0x%lx) fields than previous modules (0x%lx)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: Relocation %s (%d) is not currently supported.\n"
+msgstr "%B: [40090] Relocation %s (%d) is not currently supported.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: Unknown relocation type %d\n"
+msgstr "%B: [40147] Unknown relocation type %d\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B and %B are for different cores"
+msgstr "%B [40012] and %B are for different cores"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B and %B are for different configurations"
+msgstr "%B [40011] and %B are for different configurations"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: unknown relocation type %d"
+msgstr "%s: [40417] unknown relocation type %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: The target (%s) of an %s relocation is in the wrong section (%s)"
+msgstr "%s: [40409] The target (%s) of an %s relocation is in the wrong section (%s)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: probably compiled without -fPIC?"
+msgstr "%B: [40080] probably compiled without -fPIC?"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: bad relocation section name `%s\\'"
+msgstr "%B: [40018] bad relocation section name `%s\\'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "literal relocation occurs for an external symbol"
+msgstr "[40315] literal relocation occurs for an external symbol"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "32bits gp relative relocation occurs for an external symbol"
+msgstr "[40231] 32bits gp relative relocation occurs for an external symbol"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "corrupt or empty %s section in %B"
+msgstr "[40245] corrupt or empty %s section in %B"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unable to read in %s section from %B"
+msgstr "[40454] unable to read in %s section from %B"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "corrupt %s section in %B"
+msgstr "[40246] corrupt %s section in %B"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: no APUINFO for fixed registers defined. Fixed registers are '%s'"
+msgstr "%B: [40070] no APUINFO for fixed registers defined. Fixed registers are '%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: unable to set size of %s section in %B"
+msgstr "warning: [40514] unable to set size of %s section in %B"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "failed to allocate space for new APUinfo section."
+msgstr "[40294] failed to allocate space for new APUinfo section."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "failed to compute new APUinfo section."
+msgstr "[40295] failed to compute new APUinfo section."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "failed to install new APUinfo section."
+msgstr "[40297] failed to install new APUinfo section."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "no APUINFO for fixed registers defined"
+msgstr "[40318] no APUINFO for fixed registers defined"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: no fixed registers set, need '%s'"
+msgstr "%B: [40071] no fixed registers set, need '%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: relocation %s cannot be used when making a shared object"
+msgstr "%B: [40089] relocation %s cannot be used when making a shared object"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: %B uses hard float, %B uses soft float"
+msgstr "warning: [40567] %B uses hard float, %B uses soft float"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"warning: %B uses double-precision hard float, %B uses single-precision hard "
+"float"
+msgstr "warning: [40566] %B uses double-precision hard float, %B uses single-precision hard "
+"float"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: %B uses soft float, %B uses single-precision hard float"
+msgstr "warning: [40572] %B uses soft float, %B uses single-precision hard float"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: %B uses unknown floating point ABI %d"
+msgstr "warning: [40573] %B uses unknown floating point ABI %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: %B uses unknown vector ABI %d"
+msgstr "warning: [40575] %B uses unknown vector ABI %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: %B uses vector ABI \"%s\", %B uses \"%s\""
+msgstr "warning: [40576] %B uses vector ABI \"%s\", %B uses \"%s\""
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: %B uses r3/r4 for small structure returns, %B uses memory"
+msgstr "warning: [40571] %B uses r3/r4 for small structure returns, %B uses memory"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: %B uses unknown small structure return convention %d"
+msgstr "warning: [40574] %B uses unknown small structure return convention %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: unknown relocation type %d for symbol %s"
+msgstr "%B: [40146] unknown relocation type %d for symbol %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B(%A+0x%lx): non-zero addend on %s reloc against `%s'"
+msgstr "[40204] %B(%A+0x%lx): non-zero addend on %s reloc against `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: %B 'r%d' is not a fixed register in all objects"
+msgstr "error: [40279] %B 'r%d' is not a fixed register in all objects"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: relocation %s is only supported for \"e_add16i\" yet."
+msgstr "%B: [40093] relocation %s is only supported for \"e_add16i\" yet."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: relocation %s is not yet supported for symbol %s."
+msgstr "%B: [40092] relocation %s is not yet supported for symbol %s."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B(%A+0x%lx): %s reloc against `%s': error %d"
+msgstr "[40212] %B(%A+0x%lx): %s reloc against `%s': error %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s not defined in linker created %s"
+msgstr "%s [40400] not defined in linker created %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: `%s' accessed both as normal and thread local symbol"
+msgstr "%B: [40098] `%s' accessed both as normal and thread local symbol"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B(%A+0x%lx): invalid instruction for TLS relocation %s"
+msgstr "[40203] %B(%A+0x%lx): invalid instruction for TLS relocation %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "not enough GOT space for local GOT entries"
+msgstr "[40322] not enough GOT space for local GOT entries"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: Malformed reloc detected for section %s"
+msgstr "%s: [40395] Malformed reloc detected for section %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: CALL15 reloc at 0x%lx not against global symbol"
+msgstr "%B: [40024] CALL15 reloc at 0x%lx not against global symbol"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: linking PIC files with non-PIC files"
+msgstr "%B: warning: [40179] linking PIC files with non-PIC files"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: IMPORT AS directive for %s conceals previous IMPORT AS"
+msgstr "%B: [40049] IMPORT AS directive for %s conceals previous IMPORT AS"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: Unrecognised .directive command: %s"
+msgstr "%B: [40150] Unrecognised .directive command: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: Failed to add renamed symbol %s"
+msgstr "%B: [40042] Failed to add renamed symbol %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: 0x%lx: warning: bad R_SH_USES offset"
+msgstr "%B: [40190] 0x%lx: warning: bad R_SH_USES offset"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: 0x%lx: warning: R_SH_USES points to unrecognized insn 0x%x"
+msgstr "%B: [40193] 0x%lx: warning: R_SH_USES points to unrecognized insn 0x%x"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: 0x%lx: warning: bad R_SH_USES load offset"
+msgstr "%B: [40189] 0x%lx: warning: bad R_SH_USES load offset"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: 0x%lx: warning: could not find expected reloc"
+msgstr "%B: [40192] 0x%lx: warning: could not find expected reloc"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: 0x%lx: warning: symbol in unexpected section"
+msgstr "%B: [40194] 0x%lx: warning: symbol in unexpected section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: 0x%lx: warning: could not find expected COUNT reloc"
+msgstr "%B: [40191] 0x%lx: warning: could not find expected COUNT reloc"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: 0x%lx: warning: bad count"
+msgstr "%B: [40188] 0x%lx: warning: bad count"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: 0x%lx: fatal: reloc overflow while relaxing"
+msgstr "%B: [40183] 0x%lx: fatal: reloc overflow while relaxing"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: 0x%lx: fatal: unaligned branch target for relax-support relocation"
+msgstr "%B: [40186] 0x%lx: fatal: unaligned branch target for relax-support relocation"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: 0x%lx: fatal: unaligned %s relocation 0x%lx"
+msgstr "%B: [40187] 0x%lx: fatal: unaligned %s relocation 0x%lx"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: 0x%lx: fatal: R_SH_PSHA relocation %d not in range -32..32"
+msgstr "%B: [40184] 0x%lx: fatal: R_SH_PSHA relocation %d not in range -32..32"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: 0x%lx: fatal: R_SH_PSHL relocation %d not in range -32..32"
+msgstr "%B: [40185] 0x%lx: fatal: R_SH_PSHL relocation %d not in range -32..32"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: TLS local exec code cannot be linked into shared objects"
+msgstr "%B: [40127] TLS local exec code cannot be linked into shared objects"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: encountered datalabel symbol in input"
+msgstr "%s: [40377] encountered datalabel symbol in input"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: GAS error: unexpected PTB insn with R_SH_PT_16"
+msgstr "%s: [40380] GAS error: unexpected PTB insn with R_SH_PT_16"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: error: unaligned relocation type %d at %08x reloc %p\n"
+msgstr "%B: error: [40041] unaligned relocation type %d at %08x reloc %p\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: could not write out added .cranges entries"
+msgstr "%s: [40372] could not write out added .cranges entries"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: could not write out sorted .cranges entries"
+msgstr "%s: [40373] could not write out sorted .cranges entries"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: compiled for a 64 bit system and target is 32 bit"
+msgstr "%B: [40030] compiled for a 64 bit system and target is 32 bit"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: linking little endian files with big endian files"
+msgstr "%B: [40063] linking little endian files with big endian files"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B is not allowed to define %s"
+msgstr "%B [40059] is not allowed to define %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "you are not allowed to define %s in a script"
+msgstr "[40520] you are not allowed to define %s in a script"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s in overlay section"
+msgstr "%s [40382] in overlay section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "overlay stub relocation overflow"
+msgstr "[40329] overlay stub relocation overflow"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "stubs don't match calculated size"
+msgstr "[40446] stubs don't match calculated size"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "fatal error while creating .fixup"
+msgstr "[40298] fatal error while creating .fixup"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B(%s+0x%lx): unresolvable %s relocation against symbol `%s'"
+msgstr "[40232] %B(%s+0x%lx): unresolvable %s relocation against symbol `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: call to non-function symbol %s defined in %B"
+msgstr "warning: [40498] call to non-function symbol %s defined in %B"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: %s overlaps %s\n"
+msgstr "warning: [40508] %s overlaps %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: %s exceeds section size\n"
+msgstr "warning: [40506] %s exceeds section size\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: Too many SDA entries (%ld bytes)"
+msgstr "%s: [40533] Too many SDA entries (%ld bytes)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: SDA entries, but _SMALL_DATA_ undefined"
+msgstr "%s: [40531] SDA entries, but _SMALL_DATA_ undefined"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "fatal: virtual memory exhausted"
+msgstr "[40522] fatal: virtual memory exhausted"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: Section %s is already defined as small data section"
+msgstr "warning: [40541] Section %s is already defined as small data section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: definition sda sections not yet supported"
+msgstr "warning: [40539] definition sda sections not yet supported"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "wrong .sdata section name %s"
+msgstr "[40542] wrong .sdata section name %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s and/or %s don't use the TriCore architecture."
+msgstr "%s [40523] and/or %s don't use the TriCore architecture."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s uses an incompatible TriCore core architecture %s (should be %s)."
+msgstr "%s [40535] uses an incompatible TriCore core architecture %s (should be %s)."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s doesn't use the TriCore architecture."
+msgstr "%s [40527] doesn't use the TriCore architecture."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: missing section \".boffs\""
+msgstr "%s: [40530] missing section \".boffs\""
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: section \".boffs\" has non-zero size"
+msgstr "%s: [40532] section \".boffs\" has non-zero size"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s(%s+%ld): symbol \"%s\" doesn't represent a bit object"
+msgstr "[40537] %s(%s+%ld): symbol \"%s\" doesn't represent a bit object"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: bit symbol \"%s\" has size != 1 (%ld)"
+msgstr "%s: [40524] bit symbol \"%s\" has size != 1 (%ld)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: missing or invalid bit position symbol \"%s\""
+msgstr "%s: [40528] missing or invalid bit position symbol \"%s\""
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: Unknown call/jump insn at offset %ld"
+msgstr "%s: [40534] Unknown call/jump insn at offset %ld"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: callee symbol %s for %s not found"
+msgstr "warning: [40538] callee symbol %s for %s not found"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: callee %s.%s.%s.%s and caller %s use a different model"
+msgstr "error: [40521] callee %s.%s.%s.%s and caller %s use a different model"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: callee %s.%s.%s.%s and caller %s have different return types"
+msgstr "%s: [40526] callee %s.%s.%s.%s and caller %s have different return types"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: callee %s.%s.%s.%s and caller %s have different parameter types"
+msgstr "%s: [40525] callee %s.%s.%s.%s and caller %s have different parameter types"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: non-small data access to small data variable \"%s\""
+msgstr "warning: [40540] non-small data access to small data variable \"%s\""
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%s: warning: missing or invalid local bit position symbol \"%s.pos\" in "
+"section \".boffs\""
+msgstr "%s: warning: [40597] missing or invalid local bit position symbol \"%s.pos\" in "
+"section \".boffs\""
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%s: missing or invalid local bit position symbol \"%s.pos\" in section \"."
+"boffs\""
+msgstr "%s: [40595] missing or invalid local bit position symbol \"%s.pos\" in section \"."
+"boffs\""
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: Architecture mismatch with previous modules"
+msgstr "%B: [40013] Architecture mismatch with previous modules"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: warning: PLT addend of %d to `%s' from %s section ignored"
+msgstr "%s: warning: [40425] PLT addend of %d to `%s' from %s section ignored"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: warning: %s relocation against symbol `%s' from %s section"
+msgstr "%s: warning: [40427] %s relocation against symbol `%s' from %s section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: warning: %s relocation to 0x%x from %s section"
+msgstr "%s: warning: [40428] %s relocation to 0x%x from %s section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%s: warning: GOT addend of %ld to `%s' does not match previous GOT addend of "
+"%ld"
+msgstr "%s: warning: [40596] GOT addend of %ld to `%s' does not match previous GOT addend of "
+"%ld"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "non-zero addend in @fptr reloc"
+msgstr "[40321] non-zero addend in @fptr reloc"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B(%A): invalid property table"
+msgstr "[40196] %B(%A): invalid property table"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B(%A+0x%lx): relocation offset out of range (size=0x%x)"
+msgstr "[40210] %B(%A+0x%lx): relocation offset out of range (size=0x%x)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "dynamic relocation in read-only section"
+msgstr "[40266] dynamic relocation in read-only section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "TLS relocation invalid without dynamic sections"
+msgstr "[40451] TLS relocation invalid without dynamic sections"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "internal inconsistency in size of .got.loc section"
+msgstr "[40304] internal inconsistency in size of .got.loc section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: incompatible machine type. Output is 0x%x. Input is 0x%x"
+msgstr "%B: [40050] incompatible machine type. Output is 0x%x. Input is 0x%x"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Attempt to convert L32R/CALLX to CALL failed"
+msgstr "[40007] Attempt to convert L32R/CALLX to CALL failed"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%B(%A+0x%lx): could not decode instruction; possible configuration mismatch"
+msgstr "[40202] %B(%A+0x%lx): could not decode instruction; possible configuration mismatch"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%B(%A+0x%lx): could not decode instruction for XTENSA_ASM_SIMPLIFY "
+"relocation; possible configuration mismatch"
+msgstr "[40201] %B(%A+0x%lx): could not decode instruction for XTENSA_ASM_SIMPLIFY "
+"relocation; possible configuration mismatch"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B(%A+0x%lx): unexpected fix for %s relocation"
+msgstr "[40217] %B(%A+0x%lx): unexpected fix for %s relocation"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: .got subsegment exceeds 64K (size %d)"
+msgstr "%B: [40044] .got subsegment exceeds 64K (size %d)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: gp-relative relocation against dynamic symbol %s"
+msgstr "%B: [40045] gp-relative relocation against dynamic symbol %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: pc-relative relocation against dynamic symbol %s"
+msgstr "%B: [40077] pc-relative relocation against dynamic symbol %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: change in gp: BRSGP %s"
+msgstr "%B: [40028] change in gp: BRSGP %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: !samegp reloc against symbol without .prologue: %s"
+msgstr "%B: [40106] !samegp reloc against symbol without .prologue: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: unhandled dynamic relocation against %s"
+msgstr "%B: [40139] unhandled dynamic relocation against %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: pc-relative relocation against undefined weak symbol %s"
+msgstr "%B: [40078] pc-relative relocation against undefined weak symbol %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: dtp-relative relocation against dynamic symbol %s"
+msgstr "%B: [40036] dtp-relative relocation against dynamic symbol %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: tp-relative relocation against dynamic symbol %s"
+msgstr "%B: [40129] tp-relative relocation against dynamic symbol %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "stub entry for %s cannot load .plt, dp offset = %ld"
+msgstr "[40445] stub entry for %s cannot load .plt, dp offset = %ld"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B(%A+0x%lx): cannot reach %s"
+msgstr "[40199] %B(%A+0x%lx): cannot reach %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%s: base-plus-offset relocation against register symbol: (unknown) in %s"
+msgstr "%s: [40362] base-plus-offset relocation against register symbol: (unknown) in %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: base-plus-offset relocation against register symbol: %s in %s"
+msgstr "%s: [40361] base-plus-offset relocation against register symbol: %s in %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: register relocation against non-register symbol: (unknown) in %s"
+msgstr "%s: [40405] register relocation against non-register symbol: (unknown) in %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: register relocation against non-register symbol: %s in %s"
+msgstr "%s: [40404] register relocation against non-register symbol: %s in %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: directive LOCAL valid only with a register or absolute value"
+msgstr "%s: [40375] directive LOCAL valid only with a register or absolute value"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%s: LOCAL directive: Register $%ld is not a local register.  First global "
+"register is $%ld."
+msgstr "%s: [40394] LOCAL directive: Register $%ld is not a local register.  First global "
+"register is $%ld."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%s: error: multiple definition of `%s'; start of %s is set in a earlier "
+"linked file\n"
+msgstr "%s: error: [40558] multiple definition of `%s'; start of %s is set in a earlier "
+"linked file\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "dynreloc miscount for %B, section %A"
+msgstr "[40268] dynreloc miscount for %B, section %A"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: .opd is not a regular array of opd entries"
+msgstr "%B: [40076] .opd is not a regular array of opd entries"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: unexpected reloc type %u in .opd section"
+msgstr "%B: [40137] unexpected reloc type %u in .opd section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: undefined sym `%s' in .opd section"
+msgstr "%B: [40134] undefined sym `%s' in .opd section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s defined in removed toc entry"
+msgstr "%s [40374] defined in removed toc entry"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "long branch stub `%s' offset overflow"
+msgstr "[40316] long branch stub `%s' offset overflow"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "can't find branch stub `%s'"
+msgstr "[40243] can't find branch stub `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "linkage table error against `%s'"
+msgstr "[40314] linkage table error against `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "can't build branch stub `%s'"
+msgstr "[40242] can't build branch stub `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B section %A exceeds stub group size"
+msgstr "%B [40108] section %A exceeds stub group size"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: relocation %s is not supported for symbol %s."
+msgstr "%B: [40091] relocation %s is not supported for symbol %s."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: error: relocation %s not a multiple of %d"
+msgstr "%B: error: [40040] relocation %s not a multiple of %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: error: unaligned relocation type %d at %08x reloc %08x\n"
+msgstr "%s: error: [40379] unaligned relocation type %d at %08x reloc %08x\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: Only registers %%g[2367] can be declared using STT_REGISTER"
+msgstr "%B: [40075] Only registers %%g[2367] can be declared using STT_REGISTER"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Register %%g%d used incompatibly: %s in %B, previously %s in %B"
+msgstr "[40337] Register %%g%d used incompatibly: %s in %B, previously %s in %B"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Symbol `%s' has differing types: REGISTER in %B, previously %s in %B"
+msgstr "[40447] Symbol `%s' has differing types: REGISTER in %B, previously %s in %B"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Symbol `%s' has differing types: %s in %B, previously REGISTER in %B"
+msgstr "[40448] Symbol `%s' has differing types: %s in %B, previously REGISTER in %B"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: linking UltraSPARC specific with HAL specific code"
+msgstr "%B: [40065] linking UltraSPARC specific with HAL specific code"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: '%s' accessed both as normal and thread local symbol"
+msgstr "%B: [40097] '%s' accessed both as normal and thread local symbol"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%B: relocation R_X86_64_GOTOFF64 against protected function `%s' can not be "
+"used when making a shared object"
+msgstr "%B: [40086] relocation R_X86_64_GOTOFF64 against protected function `%s' can not be "
+"used when making a shared object"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: %s has a corrupt string table index - ignoring"
+msgstr "warning: [40507] %s has a corrupt string table index - ignoring"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: version count (%ld) does not match symbol count (%ld)"
+msgstr "%s: [40422] version count (%ld) does not match symbol count (%ld)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s(%s): relocation %d has invalid symbol index %ld"
+msgstr "[40437] %s(%s): relocation %d has invalid symbol index %ld"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: %B is truncated: expected core file size >= %lu, found: %lu."
+msgstr "warning: [40563] %B is truncated: expected core file size >= %lu, found: %lu."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%s: TLS definition in %B section %A mismatches non-TLS definition in %B "
+"section %A"
+msgstr "%s: [40410] TLS definition in %B section %A mismatches non-TLS definition in %B "
+"section %A"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: TLS reference in %B mismatches non-TLS reference in %B"
+msgstr "%s: [40413] TLS reference in %B mismatches non-TLS reference in %B"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: TLS definition in %B section %A mismatches non-TLS reference in %B"
+msgstr "%s: [40411] TLS definition in %B section %A mismatches non-TLS reference in %B"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: TLS reference in %B mismatches non-TLS definition in %B section %A"
+msgstr "%s: [40412] TLS reference in %B mismatches non-TLS definition in %B section %A"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: unexpected redefinition of indirect versioned symbol `%s'"
+msgstr "%B: [40136] unexpected redefinition of indirect versioned symbol `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: version node not found for symbol %s"
+msgstr "%B: [40162] version node not found for symbol %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: relocation size mismatch in %B section %A"
+msgstr "%B: [40094] relocation size mismatch in %B section %A"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: type and size of dynamic symbol `%s' are not defined"
+msgstr "warning: [40512] type and size of dynamic symbol `%s' are not defined"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: %s: invalid version %u (max %d)"
+msgstr "%B: [40102] %s: invalid version %u (max %d)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: %s: invalid needed version %d"
+msgstr "%B: [40101] %s: invalid needed version %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: invalid DSO for symbol `%s' definition"
+msgstr "%s: [40383] invalid DSO for symbol `%s' definition"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: undefined version: %s"
+msgstr "%s: [40416] undefined version: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: .preinit_array section is not allowed in DSO"
+msgstr "%B: [40079] .preinit_array section is not allowed in DSO"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "undefined %s reference in complex symbol: %s"
+msgstr "[40456] undefined %s reference in complex symbol: %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unknown operator '%c' in complex symbol"
+msgstr "[40464] unknown operator '%c' in complex symbol"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: Unable to sort relocs - they are in more than one size"
+msgstr "%B: [40132] Unable to sort relocs - they are in more than one size"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: Unable to sort relocs - they are of an unknown size"
+msgstr "%B: [40133] Unable to sort relocs - they are of an unknown size"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: Too many sections: %d (>= %d)"
+msgstr "%B: [40128] Too many sections: %d (>= %d)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: %s symbol `%s' in %B is referenced by DSO"
+msgstr "%B: [40104] %s symbol `%s' in %B is referenced by DSO"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: symbol '%s' is not defined"
+msgstr "%B: [40123] symbol '%s' is not defined"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: could not find output section %A for input section %A"
+msgstr "%B: [40032] could not find output section %A for input section %A"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: %s symbol `%s' isn't defined"
+msgstr "%B: [40105] %s symbol `%s' isn't defined"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: no output section assigned to %B(%A)"
+msgstr "%B: [40073] no output section assigned to %B(%A)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%A has both ordered [`%A' in %B] and unordered [`%A' in %B] sections"
+msgstr "%A [40001] has both ordered [`%A' in %B] and unordered [`%A' in %B] sections"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%A has both ordered and unordered sections"
+msgstr "%A [40002] has both ordered and unordered sections"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: could not find output section %s"
+msgstr "%B: [40033] could not find output section %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: %s section has zero size"
+msgstr "warning: [40509] %s section has zero size"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Removing unused section '%s' in file '%B'"
+msgstr "[40342] Removing unused section '%s' in file '%B'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: gc-sections option ignored"
+msgstr "warning: [40580] gc-sections option ignored"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: ignoring duplicate section `%A'"
+msgstr "%B: [40046] ignoring duplicate section `%A'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: duplicate section `%A' has different size"
+msgstr "%B: [40038] duplicate section `%A' has different size"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: could not read contents of section `%A'"
+msgstr "%B: warning: [40168] could not read contents of section `%A'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: duplicate section `%A' has different contents"
+msgstr "%B: warning: [40170] duplicate section `%A' has different contents"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P: alternate ELF machine code found (%d) in %B, expecting %d\n"
+msgstr "%P: [40330] alternate ELF machine code found (%d) in %B, expecting %d\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Not enough memory to sort relocations"
+msgstr "[40323] Not enough memory to sort relocations"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"warning: alignment %u of common symbol `%s' in %B is greater than the "
+"alignment (%u) of its section %A"
+msgstr "warning: [40559] alignment %u of common symbol `%s' in %B is greater than the "
+"alignment (%u) of its section %A"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: alignment %u of symbol `%s' in %B is smaller than %u in %B"
+msgstr "warning: [40560] alignment %u of symbol `%s' in %B is smaller than %u in %B"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: size of symbol `%s' changed from %lu in %B to %lu in %B"
+msgstr "warning: [40582] size of symbol `%s' changed from %lu in %B to %lu in %B"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"error: %B contains a reloc (0x%s) for section %A that references a non-"
+"existent global symbol"
+msgstr "error: [40589] %B contains a reloc (0x%s) for section %A that references a non-"
+"existent global symbol"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P: warning: creating a DT_TEXTREL in a shared object.\n"
+msgstr "%P: warning: [40331] creating a DT_TEXTREL in a shared object.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: %A+0x%lx: jump to stub routine which is not jal"
+msgstr "%B: [40014] %A+0x%lx: jump to stub routine which is not jal"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: bad `%s' option size %u smaller than its header"
+msgstr "%B: warning: [40544] bad `%s' option size %u smaller than its header"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: Malformed reloc detected for section %s"
+msgstr "%B: [40068] Malformed reloc detected for section %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: GOT reloc at 0x%lx not expected in executables"
+msgstr "%B: [40043] GOT reloc at 0x%lx not expected in executables"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: CALL16 reloc at 0x%lx not against global symbol"
+msgstr "%B: [40025] CALL16 reloc at 0x%lx not against global symbol"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%B: Can't find matching LO16 reloc against `%s' for %s at 0x%lx in section `"
+"%A'"
+msgstr "%B: [40027] Can't find matching LO16 reloc against `%s' for %s at 0x%lx in section `"
+"%A'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: illegal section name `%s'"
+msgstr "%s: [40381] illegal section name `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: %B uses -msingle-float, %B uses -mdouble-float"
+msgstr "warning: [40569] %B uses -msingle-float, %B uses -mdouble-float"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: %B uses -msingle-float, %B uses -mips32r2 -mfp64"
+msgstr "warning: [40570] %B uses -msingle-float, %B uses -mips32r2 -mfp64"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: %B uses -mdouble-float, %B uses -mips32r2 -mfp64"
+msgstr "warning: [40568] %B uses -mdouble-float, %B uses -mips32r2 -mfp64"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: endianness incompatible with that of the selected emulation"
+msgstr "%B: [40039] endianness incompatible with that of the selected emulation"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: ABI is incompatible with that of the selected emulation"
+msgstr "%B: [40009] ABI is incompatible with that of the selected emulation"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: linking abicalls files with non-abicalls files"
+msgstr "%B: warning: [40178] linking abicalls files with non-abicalls files"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: linking 32-bit code with 64-bit code"
+msgstr "%B: [40062] linking 32-bit code with 64-bit code"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: linking %s module with previous %s modules"
+msgstr "%B: [40064] linking %s module with previous %s modules"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: ABI mismatch: linking %s module with previous %s modules"
+msgstr "%B: [40010] ABI mismatch: linking %s module with previous %s modules"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: cannot determine the target function for stub section `%s'"
+msgstr "%B: warning: [40545] cannot determine the target function for stub section `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "invalid relocation type %d"
+msgstr "[40308] invalid relocation type %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Output file requires shared library `%s'\n"
+msgstr "[40327] Output file requires shared library `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Output file requires shared library `%s.so.%s'\n"
+msgstr "[40328] Output file requires shared library `%s.so.%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Symbol %s not defined for fixups\n"
+msgstr "[40449] Symbol %s not defined for fixups\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: fixup count mismatch\n"
+msgstr "warning: [40579] fixup count mismatch\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: string too long (%d chars, max 65535)"
+msgstr "%s: [40408] string too long (%d chars, max 65535)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: unrecognized symbol `%s' flags 0x%x"
+msgstr "%s: [40418] unrecognized symbol `%s' flags 0x%x"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: unimplemented ATI record %u for symbol %u"
+msgstr "%B: [40141] unimplemented ATI record %u for symbol %u"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: unexpected ATN type %d in external part"
+msgstr "%B: [40135] unexpected ATN type %d in external part"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: unexpected type after ATN"
+msgstr "%B: [40138] unexpected type after ATN"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B:%d: unexpected character `%s' in Intel Hex file"
+msgstr "%B:%d: [40222] unexpected character `%s' in Intel Hex file"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B:%u: bad checksum in Intel Hex file (expected %u, found %u)"
+msgstr "%B:%u: [40233] bad checksum in Intel Hex file (expected %u, found %u)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B:%u: bad extended address record length in Intel Hex file"
+msgstr "%B:%u: [40234] bad extended address record length in Intel Hex file"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B:%u: bad extended start address length in Intel Hex file"
+msgstr "%B:%u: [40237] bad extended start address length in Intel Hex file"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B:%u: bad extended linear address record length in Intel Hex file"
+msgstr "%B:%u: [40235] bad extended linear address record length in Intel Hex file"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B:%u: bad extended linear start address length in Intel Hex file"
+msgstr "%B:%u: [40236] bad extended linear start address length in Intel Hex file"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B:%u: unrecognized ihex type %u in Intel Hex file"
+msgstr "%B:%u: [40238] unrecognized ihex type %u in Intel Hex file"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: internal error in ihex_read_section"
+msgstr "%B: [40053] internal error in ihex_read_section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: bad section length in ihex_read_section"
+msgstr "%B: [40019] bad section length in ihex_read_section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: address 0x%s out of range for Intel Hex file"
+msgstr "%s: [40360] address 0x%s out of range for Intel Hex file"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: indirect symbol `%s' to `%s' is a loop"
+msgstr "%B: [40051] indirect symbol `%s' to `%s' is a loop"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Attempt to do relocatable link with %s input and %s output"
+msgstr "[40008] Attempt to do relocatable link with %s input and %s output"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: ignoring duplicate section `%A'\n"
+msgstr "%B: warning: [40173] ignoring duplicate section `%A'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: duplicate section `%A' has different size\n"
+msgstr "%B: warning: [40171] duplicate section `%A' has different size\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: access beyond end of merged section (%ld)"
+msgstr "%s: [40359] access beyond end of merged section (%ld)"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: No core to allocate section name %s\n"
+msgstr "%s: [40397] No core to allocate section name %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: No core to allocate a symbol %d bytes long\n"
+msgstr "%s: [40396] No core to allocate a symbol %d bytes long\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: invalid mmo file: initialization value for $255 is not `Main'\n"
+msgstr "%s: [40389] invalid mmo file: initialization value for $255 is not `Main'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: invalid mmo file: unsupported lopcode `%d'\n"
+msgstr "%s: [40391] invalid mmo file: unsupported lopcode `%d'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: invalid mmo file: expected YZ = 1 got YZ = %d for lop_quote\n"
+msgstr "%s: [40385] invalid mmo file: expected YZ = 1 got YZ = %d for lop_quote\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: invalid mmo file: expected z = 1 or z = 2, got z = %d for lop_loc\n"
+msgstr "%s: [40388] invalid mmo file: expected z = 1 or z = 2, got z = %d for lop_loc\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%s: invalid mmo file: expected z = 1 or z = 2, got z = %d for lop_fixo\n"
+msgstr "%s: [40386] invalid mmo file: expected z = 1 or z = 2, got z = %d for lop_fixo\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: invalid mmo file: expected y = 0, got y = %d for lop_fixrx\n"
+msgstr "%s: [40384] invalid mmo file: expected y = 0, got y = %d for lop_fixrx\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%s: invalid mmo file: expected z = 16 or z = 24, got z = %d for lop_fixrx\n"
+msgstr "%s: [40387] invalid mmo file: expected z = 16 or z = 24, got z = %d for lop_fixrx\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%s: invalid mmo file: leading byte of operand word must be 0 or 1, got %d "
+"for lop_fixrx\n"
+msgstr "%s: [40390] invalid mmo file: leading byte of operand word must be 0 or 1, got %d "
+"for lop_fixrx\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: cannot allocate file name for file number %d, %d bytes\n"
+msgstr "%s: [40366] cannot allocate file name for file number %d, %d bytes\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: invalid symbol table: duplicate symbol `%s'\n"
+msgstr "%s: [40393] invalid symbol table: duplicate symbol `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: no initialized registers; section length 0\n"
+msgstr "%s: [40398] no initialized registers; section length 0\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: too many initialized registers; section length %ld\n"
+msgstr "%s: [40415] too many initialized registers; section length %ld\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%s: warning: symbol table too large for mmo, larger than 65535 32-bit words: "
+"%d.  Only `Main' will be emitted.\n"
+msgstr "%s: warning: [40598] symbol table too large for mmo, larger than 65535 32-bit words: "
+"%d.  Only `Main' will be emitted.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: can not represent section `%s' in oasys"
+msgstr "%s: [40365] can not represent section `%s' in oasys"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unhandled OSF/1 core file section type %d\n"
+msgstr "[40457] Unhandled OSF/1 core file section type %d\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: `ld -r' not supported with PE MIPS objects\n"
+msgstr "%B: [40061] `ld -r' not supported with PE MIPS objects\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: unimplemented %s\n"
+msgstr "%B: [40142] unimplemented %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: jump too far away\n"
+msgstr "%B: [40060] jump too far away\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: bad pair/reflo after refhi\n"
+msgstr "%B: [40015] bad pair/reflo after refhi\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: .pdata section size (%ld) is not a multiple of %d\n"
+msgstr "warning: [40504] .pdata section size (%ld) is not a multiple of %d\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: Unhandled import type; %x"
+msgstr "%B: [40140] Unhandled import type; %x"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: Unrecognised import type; %x"
+msgstr "%B: [40152] Unrecognised import type; %x"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: Unrecognised import name type; %x"
+msgstr "%B: [40151] Unrecognised import name type; %x"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: size field is zero in Import Library Format header"
+msgstr "%B: [40119] size field is zero in Import Library Format header"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: string not null terminated in ILF object file."
+msgstr "%B: [40120] string not null terminated in ILF object file."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "som_sizeof_headers unimplemented"
+msgstr "[40435] som_sizeof_headers unimplemented"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B:%d: Unexpected character `%s' in S-record file\n"
+msgstr "%B:%d: [40223] Unexpected character `%s' in S-record file\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B:%d: Bad checksum in S-record file\n"
+msgstr "%B:%d: [40221] Bad checksum in S-record file\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B(%A+0x%lx): Stabs entry has invalid string index."
+msgstr "[40216] %B(%A+0x%lx): Stabs entry has invalid string index."
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unsupported .stab relocation"
+msgstr "[40474] Unsupported .stab relocation"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "bfd_make_section (%s) failed"
+msgstr "[40227] bfd_make_section (%s) failed"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "bfd_set_section_flags (%s, %x) failed"
+msgstr "[40228] bfd_set_section_flags (%s, %x) failed"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Size mismatch section %s=%lx, %s=%lx"
+msgstr "[40434] Size mismatch section %s=%lx, %s=%lx"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unknown GSD/EGSD subtype %d"
+msgstr "[40462] Unknown GSD/EGSD subtype %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Object module NOT error-free !\n"
+msgstr "[40325] Object module NOT error-free !\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unknown source command %d"
+msgstr "[40466] unknown source command %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "DST_S_C_SET_LINUM_INCR not implemented"
+msgstr "[40250] DST_S_C_SET_LINUM_INCR not implemented"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "DST_S_C_SET_LINUM_INCR_W not implemented"
+msgstr "[40251] DST_S_C_SET_LINUM_INCR_W not implemented"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "DST_S_C_RESET_LINUM_INCR not implemented"
+msgstr "[40249] DST_S_C_RESET_LINUM_INCR not implemented"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "DST_S_C_BEG_STMT_MODE not implemented"
+msgstr "[40247] DST_S_C_BEG_STMT_MODE not implemented"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "DST_S_C_END_STMT_MODE not implemented"
+msgstr "[40248] DST_S_C_END_STMT_MODE not implemented"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "DST_S_C_SET_PC not implemented"
+msgstr "[40252] DST_S_C_SET_PC not implemented"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "DST_S_C_SET_PC_W not implemented"
+msgstr "[40254] DST_S_C_SET_PC_W not implemented"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "DST_S_C_SET_PC_L not implemented"
+msgstr "[40253] DST_S_C_SET_PC_L not implemented"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "DST_S_C_SET_STMTNUM not implemented"
+msgstr "[40255] DST_S_C_SET_STMTNUM not implemented"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unknown line command %d"
+msgstr "[40463] unknown line command %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Stack overflow (%d) in _bfd_vms_push"
+msgstr "[40438] Stack overflow (%d) in _bfd_vms_push"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Stack underflow in _bfd_vms_pop"
+msgstr "[40439] Stack underflow in _bfd_vms_pop"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "_bfd_vms_output_counted called with zero bytes"
+msgstr "[40230] _bfd_vms_output_counted called with zero bytes"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "_bfd_vms_output_counted called with too many bytes"
+msgstr "[40229] _bfd_vms_output_counted called with too many bytes"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "failed to enter %s"
+msgstr "[40296] failed to enter %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "No Mem !"
+msgstr "[40319] No Mem !"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unknown ETIR command %d"
+msgstr "[40461] unknown ETIR command %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "bad section index in %s"
+msgstr "[40197] bad section index in %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "unsupported STA cmd %s"
+msgstr "[40473] unsupported STA cmd %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "reserved STA cmd %d"
+msgstr "[40346] reserved STA cmd %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: not supported"
+msgstr "%s: [40403] not supported"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: not implemented"
+msgstr "%s: [40402] not implemented"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "reserved STO cmd %d"
+msgstr "[40348] reserved STO cmd %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "reserved OPR cmd %d"
+msgstr "[40345] reserved OPR cmd %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "reserved CTL cmd %d"
+msgstr "[40344] reserved CTL cmd %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "reserved STC cmd %d"
+msgstr "[40347] reserved STC cmd %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "stack-from-image not implemented"
+msgstr "[40441] stack-from-image not implemented"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "stack-entry-mask not fully implemented"
+msgstr "[40440] stack-entry-mask not fully implemented"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "PASSMECH not fully implemented"
+msgstr "[40332] PASSMECH not fully implemented"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "stack-local-symbol not fully implemented"
+msgstr "[40443] stack-local-symbol not fully implemented"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "stack-literal not fully implemented"
+msgstr "[40442] stack-literal not fully implemented"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "stack-local-symbol-entry-point-mask not fully implemented"
+msgstr "[40444] stack-local-symbol-entry-point-mask not fully implemented"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: not fully implemented"
+msgstr "%s: [40401] not fully implemented"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "obj code %d not found"
+msgstr "[40324] obj code %d not found"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Reloc size error in section %s"
+msgstr "[40338] Reloc size error in section %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unknown reloc %s + %s"
+msgstr "[40465] Unknown reloc %s + %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unknown symbol %s in command %s"
+msgstr "[40467] Unknown symbol %s in command %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "SEC_RELOC with no relocs in section %s"
+msgstr "[40432] SEC_RELOC with no relocs in section %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Size error in section %s"
+msgstr "[40433] Size error in section %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Spurious ALPHA_R_BSR reloc"
+msgstr "[40436] Spurious ALPHA_R_BSR reloc"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Unhandled relocation %s"
+msgstr "[40458] Unhandled relocation %s"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: XCOFF shared object when not producing XCOFF output"
+msgstr "%s: [40430] XCOFF shared object when not producing XCOFF output"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: dynamic object with no .loader section"
+msgstr "%s: [40376] dynamic object with no .loader section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: `%s' has line numbers but no enclosing section"
+msgstr "%B: [40099] `%s' has line numbers but no enclosing section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: class %d symbol `%s' has no aux entries"
+msgstr "%B: [40029] class %d symbol `%s' has no aux entries"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: symbol `%s' has unrecognized csect type %d"
+msgstr "%B: [40121] symbol `%s' has unrecognized csect type %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: bad XTY_ER symbol `%s': class %d scnum %d scnlen %d"
+msgstr "%B: [40022] bad XTY_ER symbol `%s': class %d scnum %d scnlen %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: XMC_TC0 symbol `%s' is class %d scnlen %d"
+msgstr "%B: [40195] XMC_TC0 symbol `%s' is class %d scnlen %d"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: csect `%s' not in enclosing section"
+msgstr "%B: [40034] csect `%s' not in enclosing section"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: misplaced XTY_LD `%s'"
+msgstr "%B: [40069] misplaced XTY_LD `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: reloc %s:%d not in csect"
+msgstr "%B: [40082] reloc %s:%d not in csect"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%s: no such symbol"
+msgstr "%s: [40399] no such symbol"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: attempt to export undefined symbol `%s'"
+msgstr "warning: [40478] attempt to export undefined symbol `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: undefined symbol __rtinit"
+msgstr "error: [40291] undefined symbol __rtinit"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: loader reloc in unrecognized section `%s'"
+msgstr "%B: [40067] loader reloc in unrecognized section `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: `%s' in loader reloc but not loader sym"
+msgstr "%B: [40100] `%s' in loader reloc but not loader sym"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: loader reloc in read-only section %A"
+msgstr "%B: [40066] loader reloc in read-only section %A"
+

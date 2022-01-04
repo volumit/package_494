@@ -1,0 +1,84 @@
+/* Core target definitions for GNU compiler collection
+   for PowerPC embedded systems e200zx support
+
+   Copyright (C) 2012
+   Free Software Foundation, Inc.
+   Contributed by Georg Lay (Georg.Lay@hightec-rt.com).
+
+   This file is part of GCC.
+
+   GCC is free software; you can redistribute it and/or modify it under the
+   terms of the GNU General Public License as published by the Free Software
+   Foundation; either version 3, or (at your option) any later version.
+
+   GCC is distributed in the hope that it will be useful, but WITHOUT
+   ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+   or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
+   License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with GCC; see the file COPYING3.  If not see
+   <http://www.gnu.org/licenses/>.  */
+
+/* This file contains the definitions for extra default sections
+   defined in the PowerPC port of the GNU compiler.
+   Before including this file, define a macro
+
+   DEF_SECTION(NAME, FLAGS, ALIGN, ASM_OP, INIT_LOOKUP, DSEC)
+
+   NAME:    The name of the section.
+   FLAGS:   The flag string of the section.  Notice that @nobits section need
+            flag 'B' to indicate SECTION_BSS.
+   ALIGN:   The alignment in bytes.
+   INIT_LOOKUP:
+            The created section will get an entry in he ppc_data_sections[]
+            lookup array iff this field is non-zero.
+   DSEC:    Address of a default section object that will be replaced by
+            the newly created section, or NULL.
+*/
+
+
+DEF_SECTION (".sdata2",         "as",   0, 0, &sdata2_section)
+DEF_SECTION (".sbss2",          "asB",  0, 0, &sbss2_section)
+DEF_SECTION (".PPC.EMB.sdata0", "aws",  0, 0, &sdata0_section)
+DEF_SECTION (".PPC.EMB.sbss0",  "awsB", 0, 0, &sbss0_section)
+
+DEF_SECTION (".sdata",    "aws", 0, 1, &sdata_section)
+DEF_SECTION (".sdata.a1", "aws", 1, 1, NULL)
+DEF_SECTION (".sdata.a2", "aws", 2, 1, NULL)
+DEF_SECTION (".sdata.a4", "aws", 4, 1, NULL)
+DEF_SECTION (".sdata.a8", "aws", 8, 1, NULL)
+
+DEF_SECTION (".srodata",    "as", 0, 1, &srodata_section)
+DEF_SECTION (".srodata.a1", "as", 1, 1, NULL)
+DEF_SECTION (".srodata.a2", "as", 2, 1, NULL)
+DEF_SECTION (".srodata.a4", "as", 4, 1, NULL)
+DEF_SECTION (".srodata.a8", "as", 8, 1, NULL)
+
+DEF_SECTION (".sbss",    "awsB", 0, 1, &sbss_section)
+DEF_SECTION (".sbss.a1", "awsB", 1, 1, NULL)
+DEF_SECTION (".sbss.a2", "awsB", 2, 1, NULL)
+DEF_SECTION (".sbss.a4", "awsB", 4, 1, NULL)
+DEF_SECTION (".sbss.a8", "awsB", 8, 1, NULL)
+
+DEF_SECTION (".data",    "aw", 0, 1, &data_section)
+DEF_SECTION (".data.a1", "aw", 1, 1, NULL)
+DEF_SECTION (".data.a2", "aw", 2, 1, NULL)
+DEF_SECTION (".data.a4", "aw", 4, 1, NULL)
+DEF_SECTION (".data.a8", "aw", 8, 1, NULL)
+
+DEF_SECTION (".rodata",    "a", 0, 1, &readonly_data_section)
+DEF_SECTION (".rodata.a1", "a", 1, 1, NULL)
+DEF_SECTION (".rodata.a2", "a", 2, 1, NULL)
+DEF_SECTION (".rodata.a4", "a", 4, 1, NULL)
+DEF_SECTION (".rodata.a8", "a", 8, 1, NULL)
+
+DEF_SECTION (".bss",    "awB", 0, 1, &bss_section)
+DEF_SECTION (".bss.a1", "awB", 1, 1, NULL)
+DEF_SECTION (".bss.a2", "awB", 2, 1, NULL)
+DEF_SECTION (".bss.a4", "awB", 4, 1, NULL)
+DEF_SECTION (".bss.a8", "awB", 8, 1, NULL)
+
+DEF_SECTION (".text",        "ax",  2, 0, &text_non_vle_section)
+DEF_SECTION (".text_vle",    "axv", 2, 0, &text_vle_section)
+DEF_SECTION (".pictext_vle", "axv", 2, 0, &text_vle_pic_section)

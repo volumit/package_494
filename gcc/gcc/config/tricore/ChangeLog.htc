@@ -1,0 +1,685 @@
+2018-04-17  Szabolcs Bognar
+
+	[HDP-1845]
+	* devices.def: New core family added: tc38xx
+	* memory.x: New memory configuration added for core family tc38xx
+	* tricore-mcpu.opt: Generated to contain new core family tc38xx
+	* t-multilib: Ditto
+
+2017-01-26  Georg Lay
+
+	[HDP-1568]
+	* tricore.md (*movmemsi.<mode>): Handle REGNO($0) == REGNO($1)
+	corner case.
+
+2017-01-16  Georg Lay
+	    Robert Agoston
+
+	[HDP-1333]
+	* tricore.opt (-mivopt-iv-cost, tric_opt_ivopt_iv_cost): Remove.
+	(-msegment-trap=, tric_opt_segment_trap): New switch and var.
+	* tricore-protos.h (tric_segment_trap): Declare.
+	(tric_decode_msegment_trap): Declare.
+	* tricore.h (struct tric_segment_trap): New struct.
+	(PUSH_ROUNDING): Explain why we don't define it.
+	(HAVE_PRE_INCREMENT): Depend on tric_segment_trap.
+	(HAVE_PRE_DECREMENT): Similar.
+	(HAVE_PRE_MODIFY_DISP): Similar.
+	(TARGET_HTC_IVOPT_IV_COST): Remove macro define.
+	(TARGET_HTC_LOOP_OPTIMIZE_WITH_PRE_INCREMENT): Remove macro define.
+	* tricore.c (tric_segment_trap): Declare GTY.
+	(tric_option_override) [!tric_opt_segment_trap]: Set to "default".
+	[!tric_segment_trap.do_ivopts]: Disable -fivopts.
+	(tric_legitimate_address_p) [PRE_INC]: Depend on HAVE_PRE_INCREMENT.
+	[PRE_DEC]: Depend on HAVE_PRE_DECREMENT.
+	[PRE_MODIFY]: Depend on HAVE_PRE_INCREMENT, HAVE_PRE_DECREMENT
+	and signedness of addend.
+	(tric_address_cost): Use default of 4.
+	[PRE_INC, PRE_DEC]: Make expensive.
+	(TARGET_HTC_IVOPT_BASE_COSTS_P)
+	(TARGET_HTC_IVOPT_USE_ADDRESSES_P)
+	(TARGET_HTC_SCHED_MAY_CHANGE_ADDRESS_P): Define new hook macros and...
+	(tric_sched_may_change_address_p)
+	(tric_ivopt_base_costs_p)
+	(tric_ivopt_use_addresses_p): ...and respective implementations.
+
+2017-01-03  Willi Theiss, Richard Fulop, Robert Agoston
+
+	[HDP-1490]
+	* crt0-tc1x.S (.traptab): Removed writable section flag.
+	(.startup_code): Ditto.
+	* crt0-tc2x.S (.traptab): Ditto.
+	(.startup_code): Ditto.
+	(.startup_code)[__TRICORE_CORE__ == 0x161]: Added guard for BMI header.
+
+2016-10-14  Zoltan Ver
+
+	[HDP-1393]
+	* tricore-combine.md (*insn.t.3.ic): Correct the pattern to
+	passing the parameter of shift instead of constant 3.
+
+2016-10-14  Zoltan Ver
+
+	[HDP-1392]
+	* iterators.md (tric_demorgan_bitop_op): Correct an assignment in iterator list.
+
+2016-09-26  Georg Lay
+
+	Add 4 saturation built-ins.
+
+	[HDP-1367]
+	* builtins.def (SATB, SATBU, SATH, SATHU): New.
+	* tricore.c (tric_init_builtins) [int_ftype_int, uint_ftype_uint]:
+	New local variables.
+	(tric_fold_sat): New static function.
+	(tric_fold_builtin) [TRIC_BUILTIN_SATB, TRIC_BUILTIN_SATBU]
+	[TRIC_BUILTIN_SATH, TRIC_BUILTIN_SATHU]: Fold them.
+
+2016-09-01  Bence Gobolos
+	[HDP-1390]
+	* iterators.md (tric_bitop_andor): Add new entry.
+	* tricore-combine.md (*or.bitopsi3{<code>}.bit31.ic): Modified pattern
+	to be more strict to match.
+
+2016-08-29  Zoltan Ver
+
+	[HDP-1391]
+	* tricore-combine.md (*insv.mem): Fix a typo to use the parameter 1
+	instead of constant 1 as bit width (const-int -> match-dup).
+
+2016-08-12  Georg Lay
+
+	Hotfix: Fix "format not a string literal and no format arguments"
+	build warning.
+
+	* tricore.c (tric_print_operand) [CONST_STRING]: Use fprintf
+	with "%s" format string.
+
+2016-07-20  Robert Agoston
+
+	[HDP-563]
+	Factor out section handling to htc-common.
+	* tricore-c.c (tric_pragma_scan_section_name): Moved to htc-common-c.c
+	as htc_pragma_scan_section_name.
+	(tric_pragma_section): Ditto, as htc_handle_pragma_section.
+	(tric_register_pragmas): Register htc_handle_pragma_section for
+	"section" pragma.
+	* tricore-protos.h (tric_pragma_section_code, tric_pragma_section_data):
+	Removed declarations.
+	* tricore.c (tric_pragma_section_code, tric_pragma_section_data): Moved to
+	htc-commmon-sections.c as htc_pragma_section_code and htc_pragma_section_data
+	respectively.
+	(tric_insert_attributes): Removed.
+	(tric_insert_section_to_htab):  Moved to htc-common-sections.c
+	as htc_insert_section_to_htab.
+	(tric_insert_section): Moved to htc-common-sections.c as htc_insert_section.
+	(TARGET_INSERT_ATTRIBUTES): Use htc_insert_htc_attributes.
+	(TARGET_HTC_INSERT_HTC_SECTION): Removed hook, use htc_insert_section directly.
+	* tricore.opt (Wdeprecated-pragma-section-name): Moved to htc-common.opt.
+	(Wsection-feature, Wsection-multiple-data, Waddressing-mode): Ditto.
+
+2016-07-14  Georg Lay
+
+	Implement tricore-specific htc_dump print-modifier %I forgotten
+	in the premature commit of HDP-1028.
+
+	[HDP-1355]
+	[HDP-1028-coldfix]
+	* tricore.c (tric_log_neat_hwi): New static function.
+	(tric_dump_valist): Use it to implement "%I".
+	(range_t): Don't derive from tric_range_t.  Adjust comment.
+	Add properties .lower and .upper formerly held in tric_range_t.
+	* tricore-protos.h (tric_range_t): Remove dead class.
+
+2016-07-13  Georg Lay
+	    Robert Agoston
+
+	Hotfix^2: Revert Hotfix 690a1edd.  Instead of replacing SIVOID
+	iterator by plain SI (which changes behavior of <MODE> attribute
+	and skips the intended optimization) use explicit mode with the
+	MODE mode attribute.
+
+	[HDP-231]
+	* tricore-map.md ("casted minmax":414): Use <QIHI:MODE> instead of
+	<MODE> to refer to desired mode iterator.
+
+2016-07-13  Georg Lay
+	    Robert Agoston
+
+	Hotfix: As we removed secondary reload's handling for
+	A-regs + const_int, now all move insns must be able to consume all
+	constants.
+
+	[HDP-1105]
+	* tricore.md (*movqi_insn): Add "a,i" constraint alternative.
+
+2016-07-12  Robert Agoston
+
+	Hotfix of broken minmax optimization.
+
+	[HDP-231]
+	* tricore-map.md (UMIN): Replaced greater:SIVOID by greater:SI.
+	This removes the affected part until we found a better fix.
+	* tricore-protos.h (tric_max_for_mode): Split gcc_asser conditions
+	into two gcc_assert calls.
+
+2016-07-08  Gabor Palfi, Georg Lay
+
+	Implement half-precision float as __float16 and HFmode.
+
+	[HDP-1105]
+	* tricore-modes.h (HFmode): New 16-bit machine mode.
+	* tricore-devices.h (TRIC_HAVE_HP_CONVERT): New macro depending on
+	TRIC_162UP.
+	* tricore-c.c (__TRICORE_HAVE_FTOHP__, __TRICORE_HAVE_HPTOF__)
+	[TRIC_HAVE_HP_CONVERT]: Add user level macros.
+	(__TRICORE_HAVE_FLOAT16__): Add user level macro.
+	* constraints.md (GSa, Gu4): New constraints.
+	* pricore-protos.h (tric_output_movhf_ai): New prototype.
+	(extra_constraint_Gu4, extra_constraint_GSa): New prototypes.
+	* tricore.c (intl.h): Include it.
+	(tric_const_double_value) <HFmode>: Handle it.
+	(tric_secondary_reload): Add handling of HFmode.
+	<QImode, HImode>: No more handle loading constants to A-regs.
+	(TARGET_INVALID_PARAMETER_TYPE, TARGET_INVALID_RETURN_TYPE)
+	(TARGET_PROMOTED_TYPE, TARGET_CONVERT_TO_TYPE, TARGET_MANGLE_TYPE)
+	(TARGET_SCALAR_MODE_SUPPORTED_P)
+	(TARGET_INIT_LIBFUNCS): New hook defines...
+	(tric_invalid_parameter_type, tric_invalid_return_type)
+	(tric_promoted_type, tric_convert_to_type, tric_mangle_type)
+	(tric_scalar_mode_supported_p)
+	(tric_init_libfuncs): ...and respective implementations.
+	(tric_init_builtin__float16) [__float16]: New function to register
+	this new built-in type.
+	(tric_init_builtins): Call it.
+	(extra_constraint_Gu4, extra_constraint_GSa): New constraint helpers.
+	(tric_len_mov): Handle D15 + uconst8.
+	(tric_len_load_store): If loading from memory, use the machine
+	mode of the MEM when calling tric_len_load_store.
+	* tricore.md (*movhf_insn, truncsfhf2, extendhfsf2): New insns.
+	(movhf, floatsihf2, floatdihf2, fix_trunchfsi2, fix_trunchfdi2)
+	(truncdfhf2, extendhfdf2): New expanders.
+
+2016-05-24  Robert Agoston
+
+	[HDP-585]
+	* HDP-v4.9.0.0-tricore released.
+
+2016-04-08  Robert Agoston
+
+	[HDP-298]
+	Remove support of syscall attribute.
+	* tricore.c (TRIC_ATTR_SYSCALL): Removed macro.
+	(tric_syscall_function_p): Removed function.
+	(tric_syscall_arg): Ditto.
+	(tric_attribute_table): Removed entry for TRIC_ATTR_SYSCALL.
+	(tric_function_ok_for_sibcall): Removed syscall attribute from
+	condition.
+	(tric_asm_function_begin_epilogue): Removed syscall attribute handling.
+	(tric_init_cumulative_args): Ditto.
+	(tric_function_arg1): Ditto.
+	(tric_output_call): Ditto.
+	* tricore.h (CALLCOOKIE_SYSCALL_MASK): Removed macro.
+	(CALLCOOKIE_SYSCALL_ARG_MASK): Ditto.
+	* tricore-protos.h (tric_syscall_function_p): Removed prototype.
+	* tricore.md (define_expand "call"): Removed handling of
+	CALLCOOKIE_SYSCALL_MASK.
+	(define_expand "call_value"): Ditto.
+	(define_insn "*call_syscall_insn"): Removed insn.
+	(define_insn "*call_value_syscall_insn"): Ditto.
+
+2016-03-22  Bence Gobolos
+
+	[HDP-1234]
+	Forward port HDP-1152 from commit c743d8782e9
+
+	2016-02-09  Horst Lehser, Robert Agoston
+
+	[HDP-1152]
+	* tricore.opt (-mivopt-iv-cost): New option to enable use of default
+	cost calculation of invariant variable candidates in ivopts pass.
+	* tricore.h (TARGET_HTC_IVOPT_IV_COST): Owerride default value
+	from defaults.h to use the option variable tric_opt_ivopt_iv_cost.
+
+2016-03-14  Robert Agoston
+
+	[HDP-940]
+	* tricore.md (*movhi_insn): add missing ISA attribute "tc162up"
+	to "lha" instruction alternative.
+
+2016-03-14  Robert Agoston
+
+	[HDP-1208]
+	Add trap table to startup code
+	* crt0-tc1x.S: Style fix, eliminated dead code.
+	* crt0-tc2x.S: Style fix, eliminated dead code, add and initialized trap
+	table.
+
+2016-03-11  Horst Lehser, Robert Agoston, Gabor Palfi
+
+	[HDP-1147] Ported HDP-1144
+
+	Function prologue and epilogue are protected by memory access barriers,
+	so the instruction scheduler cannot schedule memory accessing
+	instructions accross these barriers.
+	* tricore.md (UNSPEC_FRAME_BLOCKAGE): Add new enumeration value to
+	enum unspec for frame blockage.
+	(frame_blockage): New expand. Set operands rtx MEM as volatile, and
+	stack_pointer_rtx.
+	(*frame_blockage): New insn.
+	* tricore.c: (tric_emit_addto_sp): Eliminate frame_size check and add
+	gcc_assert (frame_size != 0). Check must be done by the caller.
+	(tric_emit_prologue): Add frame_size check before calling
+	tric_emit_addto_sp. Emit frame_blockage after stack pointer change
+	in case of frame pointer is needed.
+	(tric_emit_epilogue): Add frame_size check before calling
+	tric_emit_addto_sp. Emit frame_blockage before stack pointer change.
+
+2016-03-02  Robert Agoston
+
+	[HDP-1195]
+	* tricore-combine.md (*insv.4.ic): Add extra condition
+	"(OPVAL(1) == (32 - OPVAL(2)))" to the bug affected pattern.
+
+2016-01-09  Georg Lay, Horst Lehser, Robert Agoston
+
+	[HDP-1028]
+	* t-tricore: Removed tricore-log.o rule.
+	Fixed parallell build: add cc1 as dependency of MEMORY_CPU and CRT0_CPU
+	files.
+	* tricore-c.c: (tric_pragma_section): Replaced
+	tric_section_t to htc_section_t. Adapt to "anyfix".
+	* tricore-log.c: Removed.
+	* tricore-protos.h: Replaced tric_section_t to htc_section_t.
+	(tric_debug_t): Removed.
+	* tricore-sections.def: Removed ASM_OP column.
+	* tricore.c: Adapt "anyfix" changes from HDP-v4.6.6.0.
+	* tricore.h: (tric_section_t): Removed.
+	* tricore.opt: (mdebug): Removed.
+	Replaced "Experimental" to "Internal use only".
+	(Wsection-feature, Wsection-multiple-data, Waddressing-mode): New options.
+
+2015-09-08  Gabor Palfi
+
+	[HDP-1027]
+	* tricore-devices.h (TRIC_PIPE_NONE, TRIC_PIPE_STANDARD,
+	TRIC_PIPE_TC16): Removed.
+	* tricore-dfa.md (attr pipevariant): Use symbol_ref instead of condition,
+	removed variant "none".
+	* tricore.h (TRIC_PIPEVARIANT_VALUE): New macro.
+	* tricore.opt (tric_opt_pipevariant): Changed default value, removed
+	variant "none".
+	(tric_pipevariant): Changed associated values.
+
+2015-08-21  Georg Lay
+	    Willi Theiß
+
+	Support -mtc162 and -mcpu=tc39xx.
+
+	[HDP-940]
+	* tricore.opt (mtc): Add enum for 162.
+	* tricore-devices.c (tric_cores): Add entry for tc162.
+	* tricore-devices.h (TRIC_16X): Remove unused macro.
+	(TRIC_162, TRIC_162UP): New defines.
+	(TRIC_HAVE_CRCN, TRIC_HAVE_LHA, TRIC_HAVE_SHUFFLE, TRIC_HAVE_POPCNT):
+	New defines.
+	* devices.def (DEF_DEVICE): Add entry for tc39xx.
+	* t-multilib: Regenerate.
+	* tricore-mcpu.opt: Regenerate.
+	* crt0.S [0x162]: Include crt0-tc2x.S.
+	* crt0-tc2x.S (CORE_ID): New define, use instead of magic 0xfe1c.
+	(SCU_WDTCPU0CON0, SCU_WDTCPU0CON1, SCU_WDTSCON0, SCU_WDTSCON1):
+	Special casing for __TRICORE_CORE__ = 0x161, 0x162.
+	* memory.x [__TRICORE_NAME__=0x3900]: Add defines as needed.
+	* t-tricore (MULTILIB_OPTIONS): Add mtc162 variant...
+	(MULTILIB_DIRNAMES): ...and respective multi-subdir "tc162".
+	* tricore-c.c (tric_cpu_cpp_builtins) [tc162]: Built-in define:
+	__TRICORE_HAVE_POPCNT__, __TRICORE_HAVE_LHA__, __TRICORE_HAVE_CRCN__,
+	__TRICORE_HAVE_SHUFFLE__.
+	* constraints.md (Khi): New constraint.
+	* tricore.c (tric_split_mov_insn_p): Handle LHA-constants.
+	* tricore.md (isa): Add: tc162, tc162up.  Remove: tc16x.
+	(enabled) [isa]: Remove: tc16x.  Handle: tc162up.
+	(*movsi_insn, *movhi_insn): Handle ($0, $1) in "a" x "Khi".
+	(popcountsi2) [TRIC_HAVE_POPCNT]: New insn.
+	(bswapsi2) [TRIC_HAVE_SHUFFLE]: New insn.
+
+2015-07-30  Georg Lay
+
+	[HDP-906]
+	* tricore.md ("tablejump"): Rename insn from "*tablejump_internal".
+	Remove expander.
+	(UNSPEC_TABLEJUMP): New unspec.
+	* tricore.c (tric_emit_casesi): Don't emit trivial additions.
+	Use multiply-add.
+	(tric_adjust_insn_length): Only show costs if NONDEBUG_INSN_P.
+
+2015-07-30  Gabor Palfi
+
+	[HDP-878]
+	* tricore-devices.h (TRIC_PIPE_NONE, TRIC_PIPE_STANDARD)
+	(TRIC_PIPE_TC16): New macros.
+	* tricore-dfa.md (attr pipe): Added floating point classes.
+	(pipevariant): New attribute.
+	(tricore_pipeline): Renamed to tricore_pipeline_standard, added
+	condition for pipevariant, added description for floating point classes.
+	(tricore_pipeline_16x): New automata.
+	* tricore.md: Updated insn classes for float insns.
+	* tricore.opt (mpipeline): New enumeration option.
+
+2015-07-29  Peter Gal
+	    Szabolcs Bognar
+
+	[HDP-361]
+	* tricore.c (tric_encode_section_info): Use
+	-Wnonzero-initialized-in-bss.
+
+2015-06-02  Georg Lay
+
+	[HDP-231]
+	* tricore.md: Protect all pre-reload splits by !tric_map_combine.
+	* tricore-combine.md: Dito.
+
+2015-04-13  Peter Gal
+
+	[HDP-120]
+	* tricore.c (TARGET_MERGE_DECL_ATTRIBUTES): Use
+	htc_merge_decl_attributes.
+
+2015-03-19  Georg Lay
+
+	64-bit shifts with variable offset.
+
+	[HDP-231]
+	* tricore-protos.h (tric_emit_lshiftrt64, tric_emit_ashift64)
+	(tric_emit_ashiftrt64): New prototypes ...
+	* tricore.c (tric_emit_lshiftrt64, tric_emit_ashift64)
+	(tric_emit_ashiftrt64): ... and functions.
+	(tric_emit_lshiftrt64_const, tric_emit_ashift64_const)
+	(tric_emit_ashiftrt64_const): New static functions.
+	(tric_binary_cost) [DImode: ASHIFT, ASHIFTRT, LSHIFTRT]: Adjust costs.
+	* iterators.md (tric_abelian_compare): Rename to eq_ne.
+	* tricore.md: Same.
+	(ashldi3, ashrdi3, ashldi3): Handle variable offsets.
+	(*ashldi3, *ashrdi3, *ashldi3): Same. And move C-code to tricore.c.
+	(dextr_reg): New insn.
+	(*lshrsi3_unspec): Rename to lshrsi3_unspec.  Don't restrict on
+	strict RTL.
+	(*ashrsi3_unspec): Rename to ashrsi3_unspec.  Don't restrict on
+	strict RTL.  Handle constants -31...0.
+	(*movsicc.eq, *movsicc.ne): Write as one using eq_ne iterator.
+	(*movsfcc.eq, *movsfcc.ne): Write as one using eq_ne iterator.
+	* tricore-combine.md [tric_abelian_compare]: Rename to eq_ne.
+	(*ashlsi2-1.ior-1.ic): New insn-and-split.
+	(*movsicc.eq.2const.ic): New insn-and-split.
+	(*dextr.2.ic, *dextr.3.ic, *dextr-reg.1.ic, *dextr-reg.2.ic): Remove.
+	* tricore-map.md: Add mappings for DEXTR.
+	* constraints.md (Kn5): New.
+
+2015-03-16  Georg Lay
+
+	Adjust msub*4 operand numbering.
+
+	[HDP-231]
+	* tricore-combine.md (msubsi4): Adjust operand numbering.
+	(*msubsi4.ashift.ic): Remove insn-and-split.
+	* tricore-map.md: New mappings for SI multiply-subtract.
+	* tricore.c (tric_emit_umaddsidi4_const): Adjust multiply-sub
+	operand numbers.
+	* tricore.md (umsubsidi4, umsubsidi4, madddi4, msubdi4): Adjust
+	operand numbers of multiply-add and -sub.
+	(*umulsidi3_reg32, *umaddsidi4_reg32, *umsubsidi4_reg32): New
+	insn-and-split.
+
+2015-03-03  Georg Lay
+
+	Optimize min, max at combine time.
+
+	[HDP-231]
+	* iterators.md (minmax, minmax2, ge_geu_lt_ltu, leu_ltu, le_lt)
+	(ge_gt, greater, smaller, minimum, maximum): New code iterators.
+	* tricore-map.md: Add combine-maps for single_set if_then_else
+	patterns which comprise min, max, or a composition thereof.
+	* tricore-combine.md (*minmax.bridge.ic): New insn-and-split.
+	(<minmax:code>_<minmax2:code>si4): New insn-and-split.
+	(*usathi.ic, *usathi.bridge.ic, *usathi.2.ic)
+	(*usat<mode>.zero_extend.ic, *sminmaxsi3.ic, *smaxminsi3.ic)
+	(*ssatqi.1.ic, *ssatqi.2.ic, *ssathi.1.ic, *ssathi.2.ic)
+	(*ssathi.3.i, *ssathi.4.ic, *ssatqi.3.ic, *ssatqi.4.ic)
+	(*smax.-32768.ic, *smin.-32767.ic, *lt-sel.ic, *ge-sel.ic)
+	(*maxmin-1.ic, *maxmin-2.i, *maxmin-3.ic, *maxmin-4.ic)
+	(*maxmin-5.ic, *maxmin-6.ic, *maxmin-7.ic)
+	(*umulsidi2.0x100000001.ic): Remove insns.
+	* tricore-protos.h (tric_range_t): New class.
+	(tric_sat_p, tric_usat_p, tric_codes_same_sign_p, tric_max_code)
+	(tric_min_code, tric_code_signed_p): New protos.
+	(tric_max_for_mode, tric_min_for_mode, USIval, SIval):
+	New inline functions.
+	(TRIC_WRAP_MODULUS, TRIC_UINT_MAX, TRIC_INT_MAX, TRIC_INT_MIN):
+	New macros.
+	* tricore.c (tric_sat_p, tric_usat_p, tric_codes_same_sign_p)
+	(tric_max_code, tric_min_code, tric_code_signed_p): New functions.
+	(range_t): New class and implementation.
+	(tric_is_projection, tric_supported_rtx, tric_optimize_minmax_1)
+	(tric_optimize_minmax, tric_simplify_combined_rtx): New static
+	functions.
+	(tric_const_anchor_bb): Don't use unused regs.
+	(tric_rest_of_const_anchor): Call df_analyze.
+	(tric_set_clobbers_psw): Extend so it can handle scratch_operands.
+	(tric_simplify_combined_rtx):tric_find_match_for_combine):
+	(tric_htc_canonicalize_combined_rtx): Handle single_sets with
+	clobbers of scratch operands. Call tric_simplify_combined_rtx.
+	(tric_option_override): Factor out pass-related code to, and call...
+	(tric_register_passes): ...this new static function.
+	(tric_binary_cost) [UMIN, UMAX, SMIN, SMAX]: Adjust costs.
+	* tricore.md (*movsicc.ne, *s<code>, *b<code>, smaxsi3, sminsi3)
+	(umaxsi3, uminsi3): Relax predicates to allow all const_ints.
+	(*umulsidi3_big_const): Handle if both low and high part of
+	operand 1 equal 1.
+	* tricore-log.c (tric_log_neat_hwi): New static function.
+	(tric_log_vadump): Use it.  Implement "i" for HOST_WIDE_INT.
+	Implement "I" for tric_range_t.
+
+2015-01-08  Georg Lay
+
+	New target pass for const anchors.
+
+	[HDP-231]
+	* tricore.opt (-mconst-anchor, tric_opt_const_anchor): New option
+	and variable.
+	* tricore-protos.h (tric_emit_move_CONST_INT)
+	(tric_anchor_completed): New.
+	* tricore.h (machine_function.anchor_completed): New component.
+	* tricore.c (tric_anchor_completed, tric_maybe_anchor_const32)
+	(tric_gate_const_anchor, tric_print_hard_reg_set, tric_anchor_const64)
+	(tric_const_anchor_bb, tric_rest_of_const_anchor,
+	(hreg_vals_t): New typedef.
+	(tric_pass_data_const_anchor): New object.
+	(tric_pass_const_anchor): New class.
+	(tric_emit_move_CONST_INT): Adjust interface.
+	(tric_arith_CONST_INT): New function.
+	(tric_emit_arith_CONST_INT): Use it.
+	(tric_emit_move): Don't split-emit const_int moves.
+	(tric_option_override): Register tric_const_anchor_pass.
+	(ones_mask, tric_emit_accumulate_setcompare, tric_emit_setcompare_di)
+	(tric_emit_cbranchdi4): Use (u)int32_t when convenient.
+	* tricore.md (imaskdf, imaskpdf): Remove.
+	(zero_extendsidi2): Only split for TC13 or same input / output.
+	(*ashrdi3): Typo: Don't fail.
+	(ashrsi3, *ashrsi3_unspec): Use instruction that won't clobber PSW.
+	(andsi3, iorsi3, xorsi3): Special cases for 0 and -1.
+	(*extv): Use SHAS if applicable.
+	(*movdi_insn, *movdf_insn, *movpdi_insn, *movsi, *movsf_insn) [split]:
+	Tidy up.
+	(split of movsi): Depend on tric_anchor_completed, use
+	tric_emit_move_CONST_INT.
+	* tricore-combine.md (*lt-sel.ic, *ge-sel.ic): Let reload handle
+	large constants.
+	* predicates.md: Adjust comment.
+	* tricore-log.c (tric_vdump): No output if stream = NULL.
+
+2014-12-02  Georg Lay
+
+	Improve DImode operations.
+
+	[HDP-231]
+	* tricore-map.md: New file.
+	* constraints.md (Kn9): New.
+	* iterators.md (any_extend): New code iterator.
+	(tric_op): Sort. Add plus, minus.
+	(signed_suffix, signed_prefix, signed_prefix_su): New code attribs.
+	* predicates.md (s10n_operand, no_s9_operand, no_u9_operand)
+	(no_s10n_operand, any_extend_operand, any_extend_or_reg_operand):
+	(s9_m9_operand): New.
+	* tricore-combine.md: Remove tric_opt_predication from all conditions.
+	(maddsi4): Remove alternatives for D15.
+	(*msubsi4.ic): Rename to msubsi4.
+	* tricore-protos.h (tric_emit_multiply_add, tric_emit_mulsidi)
+	(tric_emit_maddsidi4_cons, tric_emit_umaddsidi4_cons)
+	(tric_emit_arith_CONST_INT): New prototypes.
+	(tric_map_combine): New declaration.
+	* tricore.c (tric_map_combine): New variable.
+	(tric_gate_split1): Fix for current_pass = NULL.
+	(tric_set_clobbers_psw, tric_find_match_for_combine, tric_arith_costs)
+	(tric_emit_arith_CONST_INT, tric_emit_multiply_add, tric_emit_mulsidi)
+	(tric_emit_maddsidi4_const, tric_emit_umaddsidi4_const): New
+	functions.
+	(tric_binary_cost) [SET]: Use tric_arith_costs.
+	[MULT]: Fix costs.
+	(TARGET_HTC_CANONICALIZE_COMBINED_RTX)
+	(tric_htc_canonicalize_combined_rtx): New hook define and
+	implementation).
+	* tricore.md: Remove tric_opt_predication from all conditions.
+	(tricore-map.md): Include it.
+	(unspec): Add UNSPEC_MAP_COMBINE.
+	(extendsidi2): Don't clobber PSW.  Don't special-case for code size.
+	(usum_widendi3, ssum_widendi3): Split them.
+	(*ssub_widendi3, *usub_widendi3): Remove and canonicalize instead.
+	(adddi3, negdi2, ashldi3, lshrdi3, ashrdi3): Split before reload.
+	(mulsi3, mulsidi3, *umulsidi3_const, *mulsidi3_const): Fix costs.
+	(*unegsidi2, *mulsidi3_big_const, *umulsidi3_big_const, muldi3)
+	(maddsidi4, umadddi4, maddsidi4_const, umaddsidi4_const, madddi4)
+	(*maddsidi4_big_const, *umaddsidi4_big_const, umsubsidi4, msubsidi4)
+	(msubdi4): New.
+	* tricore.opt (-mpredication): Remove option.
+	(-mmap-combine): New option.
+
+2014-10-09  Georg Lay
+
+	Add tricore configury.
+	Lift tricore backend from 4.6 to 4.9.
+
+	[HDP-556]
+	* t-tricore (LIB1ASMSRC, LIB1ASMFUNCS, TARGET_LIBGCC2_CFLAGS)
+	(EXTRA_MULTILIB_PARTS, FPBIT, DPBIT, CRT0STUFF_T_CFLAGS)
+	(CRTSTUFF_T_CFLAGS, MCRT0_S): Remove.
+	($(T)crt*.S, $(T)crt*.o, fp-bit.c, dp-bit.c): Remove rules.
+	(libgcc-support): Add install-tricore-headers.
+	(crti.S, crtn.S): Add rule to copy them to builddir.
+	(install-devices): Also install crti.S, crtn.S.
+	(tricore-c.o, driver-tricore.o, tricore-devices.o, tricore-log.o):
+	Fix dependencies.  Use COMPILER instead of CC to compile them.
+	* tricore-c.c (tree.h, toplev.h): Remove includes.
+	(tric_resolve_overloaded_builtin): Adjust to new interface.
+	* tricore-log.c (output.h): Remove include.
+	(print-tree.h): Include it.
+	(tric_log_caller, tric_log_fdump_d, tric_log_fdump_e)
+	(ric_log_fdump_f): Remove them.
+	(tric_vdump): New function.
+	(tric_log_vadump): Use it.  Pass caller as 2nd argument.
+	* tricore.h (LEGITIMATE_CONSTANT_P, IRA_COVER_CLASSES, BITS_PER_UNIT)
+	(GO_IF_MODE_DEPENDENT_ADDRESS, CANONICALIZE_COMPARISON): Remove.
+	(REG_CLASS_CONTENTS): Make shift value unsigned.
+	* tricore.opt (-Winitialize-pid): Set default to 1.
+	(-nocrt0): New driver option.
+	* tricore-modes.def (DI): Adjust to new interface.
+	* tricore-dinkum.h (TARGET_HAS_SINCOS, TARGET_C99_FUNCTIONS): Remove.
+	* tricore.md (zero_extendpdidi2): New expander.
+	(doloop_end): Adjust to new interface.
+	(builtin_setjmp_setup, builtin_longjmp): Adjust plus_constant calls.
+	* constraints.md (Ks4): Typo.
+	* predicates.md (vok_memory_operand): Return instead of valued block.
+	* tricore-protos.h (tric_ira_hard_regno_add_cost_multiplier)
+	(tric_multiple_operation, set_multiple_operation_p)
+	(tric_preferred_reload_class, tric_preferred_output_reload_class)
+	(tric_canonicalize_comparison, ctz, popcount): Remove.
+	(tric_dump tric_edump tric_fdump): Adjust to tric_vdump.
+	(tric_zdata_max, tric_zdata_min, tric_zconst_max, tric_zconst_min)
+	(tric_sdata_max, tric_sdata_min, tric_sconst_max, tric_sconst_min)
+	(tric_vdump): New.
+	* tricore.c (stringpool.h, stor-layout.h, context.h, calls.h)
+	(common/common-target.h): Include.
+	(rtl.h, hard-reg-set.h, real.h, insn-config.h, insn-codes.h)
+	(conditions.h, insn-flags.h, flags.h, except.h, input.h, toplev.h)
+	(integrate.h, cgraph.h, cfglayout.h, timevar.h, options.h)
+	(diagnostic.h): Don't include.
+	(AREGS_MASK): Set bit for A0.
+	(tric_zdata_max, tric_zdata_min, tric_zconst_max, tric_zconst_min)
+	(tric_sdata_max, tric_sdata_min, tric_sconst_max, tric_sconst_min):
+	Make extern.
+	(tric_after_split1_pass_number, tric_pass_data_notice_split1)
+	(tric_pass_notice_split1): New.
+	(tric_gate_split1): Rewrite.
+	(tric_double_int_pop_digit): C++ify double_int.
+	(tric_pic_offset_init): Use ENTRY_BLOCK_PTR_FOR_FN, INSN_LOCATOR
+	instead of ENTRY_BLOCK_PTR_FOR_FUNCTION, INSN_LOCATION.
+	(tric_peep2_setup_sibcall): Use EXIT_BLOCK_PTR_FOR_FN instead of
+	EXIT_BLOCK_PTR.
+	(tric_insert_attributes): Don't change DECL_CONTEX.  Use safe-ctype.h.
+	(tric_attribute_table): Add .affects_type_identity initializers.
+	(tric_asm_file_start, tric_handle_dwarf_frame_unspec, popcount)
+	(ctz, contains_subreg_of_mem_p, hook_bool_rtx_true): Remove.
+	(ones_mask, tric_output_reglist1): Use libiberty for ctz.
+	(tric_option_override): Set tric_after_split1_pass_number.
+	(tric_rtx_costs): Adjust interface.  Use start_sequence / end_sequence
+	to set fake_insn et al.
+	(tric_address_cost): Adjust interface.
+	(tric_strict_argument_naming, tric_function_arg, tric_callee_copies)
+	(tric_function_arg_advance, tric_pass_by_reference): Use
+	cumulative_args_t.
+	(tric_canonicalize_comparison): Hookize.
+	(tric_can_use_doloop_p, tric_libc_has_function
+	(tric_canonicalize_comparison_code): New function.
+	(tric_emit_branch, tric_emit_setcompare): Use it.
+	(tric_asm_function_section): have_named_sections is in common now.
+	(tric_bss_initializer_p): Use return bss_initializer_p.
+	(tric_walk_initializer_r, tric_encode_section_info): Warn for
+	small-data initializers only if -msmall-pid is on.
+	(tric_eabi_adjust_field_align): Resurrect HOST_WIDE_INT.
+	(size_low_cst): New static function.
+	(tric_eabi_round_type_align): Use it.
+	(tric_len_mov): Use satisfies_constraint_Ks4 if possible.
+	(tric_default_expand_builtin): Use expand_normal.
+	(TARGET_ASM_GLOBALIZE_LABEL, TARGET_ASM_FILE_START)
+	(TARGET_DWARF_HANDLE_FRAME_UNSPEC): Remove, use default.
+	(TARGET_CANONICALIZE_COMPARISON, TARGET_CAN_USE_DOLOOP_P)
+	(TARGET_LIBC_HAS_FUNCTION): New hook defines.
+	(tric_opt_error, tric_handle_option, tric_option_init_struct)
+	(tric_option_optimization_table, TARGET_HANDLE_OPTION)
+	(TARGET_HAVE_NAMED_SECTIONS, TARGET_OPTION_OPTIMIZATION_TABLE)
+	(TARGET_OPTION_INIT_STRUCT): Move to tricore-common.c.
+
+2014-09-22  Willi Theiß
+
+	Forward-port from 4.6.
+
+	2014-09-17  Willi Theiß
+
+	[HDP-661]
+	* memory.x (TC1130, TC1920, TC1792, TC1796):
+	Define: __USTACK_SIZE, __ISTACK_SIZE, __HEAP_MIN.
+	[__TC12__, __TRICORE_NAME__ == 0x12]: Remove dead code.
+
+2014-09-10  Georg Lay
+
+	[HDP-601]
+	* devices.def: Copy-paste from v4.6.5.0.
+	* memory.x: Same.
+	* t-multilib: Same.
+	* tricore-mcpu.opt: Same.
+
+2014-08-27  Georg Lay
+
+	[HDP-555]
+	Copy-paste tricore backend from 2014-08-27
+	git master 2bb32d7ae4089e34eba0ed24a2f7fb5ed209411b

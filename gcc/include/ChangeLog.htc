@@ -1,0 +1,9 @@
+2016-05-24  Robert Agoston
+
+	[HDP-585]
+	* HDP-v4.9.0.0-tricore released.
+
+2016-04-08  Gabor Palfi
+
+	[HDP-918] Add control flow support
+	dwarf2.def (DW_AT_control_flow): New attribute.

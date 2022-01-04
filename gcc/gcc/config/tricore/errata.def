@@ -1,0 +1,135 @@
+/* Silicon Errata definitions for GNU compiler collection
+   for Infineon TriCore support
+
+   Copyright (C) 2012-2014 Free Software Foundation, Inc.
+
+   This file is part of GCC.
+
+   GCC is free software; you can redistribute it and/or modify it under the
+   terms of the GNU General Public License as published by the Free Software
+   Foundation; either version 3, or (at your option) any later version.
+
+   GCC is distributed in the hope that it will be useful, but WITHOUT
+   ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+   or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public
+   License for more details.
+
+   Under Section 7 of GPL version 3, you are granted additional permissions
+   described in the GCC Runtime Library Exception, version 3.1, as published
+   by the Free Software Foundation.
+
+   You should have received a copy of the GNU General Public License and
+   a copy of the GCC Runtime Library Exception along with this program;
+   see the files COPYING3 and COPYING.RUNTIME respectively. If not, see
+   <http://www.gnu.org/licenses/>.  */
+
+
+/* This file describes TriCore silicon bugs handled by the toolchain.
+   Before including this file, define a macro
+
+   DEF_ERRATA(ARG, CC1, AS, FLAG, DEFIN, ON)
+
+   ARG:   The command argument as specified with -m[no-]errata=<ARG>.
+          Also used to derive a C identifier tric_errata_index_<ARG>.
+
+   CC1:   The work around (WA) is handled by the compiler proper, i.e.
+          cc1, cc1plus, ...
+           0: The WA is not implemented.  cc1 accepts the option,
+              built-in defines ERRATA_* and adds the option to as's
+              command line provided as supports the WA.
+           1: The WA is implemented.
+          -1: The WA is not yet implemented and future work.
+          -2: The WA is not yet implemented and future work
+              but this is uncritical because the compiler does not
+              generate critical instructions.
+
+   AS:    The WA is performed by the assembler, i.e. tricore-as accepts
+          the respective -mcpu<xxx> option.
+           0: The assembler does not support -m[errata=]cpu<xxx>
+           1: The assembler implements a WA.
+          -1: The assembler sanity-checks code from the compiler and
+              (inline) assembler code.
+
+   DEFIN: Provide a built-in define ERRATA_<DEFIN>.  This is in the namespace
+          of the application for historical reasons.
+
+   ON:    A C expression that is true if the erratum is turned on per default.
+
+   IFX:   Full name of the artifact according to Infineon's errata sheets.
+
+
+   A texi snip can be built by running
+   > make errata.texi
+   in $(BUILD)/gcc and then copy-paste it to doc/extend.texi.
+
+   A LaTeX snip for the usersguide can be built by running
+   > make tricore_errata.tex
+   in $(BUILD)/gcc and then copy-paste it to $usersguide/tables/   */
+
+
+/**********************************************************
+ * TC 1.3.0  Errata
+ **********************************************************/
+
+/* Insert a NOP between LD.[D]A and an immediately
+   following indirect jump or call.  */
+DEF_ERRATA (cpu048,  0,  1, "CPU48", TRIC_13, "CPU_TC.048")
+
+/* Insert a NOP between LD.[D]A and an immediately
+   following LD.{D|W}.  */
+DEF_ERRATA (cpu060,  0,  1, "CPU60", TRIC_13, "CPU_TC.060")
+
+/* Insert a NOP after RSLCX.  */
+DEF_ERRATA (cpu069,  0,  1, "CPU69", TRIC_13, "CPU_TC.069")
+
+/* Insert 1-2 NOPs after a conditional jump if followed by LOOP. */
+DEF_ERRATA (cpu070,  0,  1, "CPU70", TRIC_13, "CPU_TC.070")
+
+/* Insert a NOP between LD.[D]A and an immediately following LOOP.  */
+DEF_ERRATA (cpu072,  0,  1, "CPU72", TRIC_13, "CPU_TC.072")
+
+/* MADD.S and MSUB.F are broken.  */
+DEF_ERRATA (cpu076,  1,  0, "CPU76", TRIC_13, "CPU_TC.076")
+
+/* Must not load %SP (A10) from memory:  Use a secondary reload.
+   The assembler will sanity check the generated code.  */
+DEF_ERRATA (cpu081,  1, -1, "CPU81", TRIC_13, "CPU_TC.081")
+
+/* Insert a NOP between ST{L|U}CX and an immediately
+   following LD.* instruction.  */
+DEF_ERRATA (cpu082,  0,  1, "CPU82", TRIC_13, "CPU_TC.082")
+
+/* Insert a NOP after DISABLE.  */
+DEF_ERRATA (cpu083,  0,  1, "CPU83", TRIC_13, "CPU_TC.083")
+
+/* Insert a NOP between an integer pipeline jump instruction
+   and a CSA instruction.  */
+DEF_ERRATA (cpu094,  0,  1, "CPU94", TRIC_13, "CPU_TC.094")
+
+/* Insert a NOP between a sat instruction a load and store
+   pipeline instruction, e.g. ADDSC, MOV.A, MTCS, ...  */
+DEF_ERRATA (cpu095,  0,  1, "CPU95", TRIC_13, "CPU_TC.095")
+
+DEF_ERRATA (cpu096,  0,  0, "CPU96", TRIC_13, "CPU_TC.096")
+
+/* MSUBS.U fails to saturate: Use emulation sequence instead */
+DEF_ERRATA (cpu101, -2,  0, "CPU101", TRIC_13, "CPU_TC.101")
+
+DEF_ERRATA (cpu116, -1,  0, "CPU116", TRIC_13, "CPU_TC.116")
+
+
+/**********************************************************
+ * TC 1.3.1 Errata
+ **********************************************************/
+
+DEF_ERRATA (cpu114,  0,  0, "CPU114", TRIC_131, "CPU_TC.114")
+
+
+/**********************************************************
+ * TC 1.6.0 Errata
+ **********************************************************/
+
+
+/**********************************************************
+ * TC 1.6.1 Errata
+ **********************************************************/

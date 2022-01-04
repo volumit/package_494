@@ -1,0 +1,2049 @@
+2014-08-04  Georg Lay
+
+	[HDP-522]
+	* tricore.opt (-mpragma-data-sections): Move to ../htc-common.opt.
+	* tricore.c (tric_handle_asection_attribute): Handle
+	htc_opt_asection_data_sections, htc_opt_asection_function_sections.
+	(tric_insert_attributes): Handle htc_opt_pragma_function_sections.
+	Use htc_opt_pragma_data_sections instead of
+	tric_opt_pragma_data_sections.
+
+2014-08-06  Georg Lay
+
+	General code clean-up and dead / unused code removal.
+	Update copyright years.
+
+	[HDP-289]
+	* iterators.md (tric_compare, tric_compare_not_op): Remove dead
+	iterators.
+	* constraints.md (Ws): Remove dead constraint.
+	* tricore.md: Fix some coding rules.
+	(builtin_longjmp): Fix build warning.
+	(prologue_dsync, prologue_nop): Remove unused insns.
+	(unspecv) <UNSPECV_PROLOGUE_DSYNC, UNSPECV_PROLOGUE_NOP>: Remove.
+	(*andsi3_255): Deflate insn condition.
+	* tricore-combine.md: Fix some coding rules.
+	(*insertqi.0.ic, *insv.into-0.a.ic, *insv.into-0.b.ic)
+	("*lshiftsi3-and-ior.ic-bridge, *addsi4_one.ic): Remove dead insns.
+	* tricore-log.c (tric_log_vadump) <m,C,R>: Fix build warnings.
+
+	* tricore.c: Fix some coding rules.
+	(TRIC_SYMBOL_FLAG_TINY): Remove dead define.
+	(TRIC_SYMBOL_FLAG_LONGCALL, TRIC_SYMBOL_FLAG_PIC): Bump.
+	(tric_section_flags_from_string, tric_section_flags_from_flags):
+	Make static. <t,b>: Remove dead section flags.
+	(tric_print_mem_operand): Remove dead code.
+	(tric_eabi_data_alignment): Deflate condition.
+	(tric_print_operand) <mode>: Remove unused variable.
+	(tric_emit_move) <picoff>: Remove unused variables.
+	(tric_reg_ok_for_addr): Fix build warning.
+	(tric_ira_hard_regno_add_cost_multiplier)
+	(tric_preferred_reload_class, tric_preferred_output_reload_class):
+	Remove no-op hooks.
+	(extra_constraint_Ws): Remove dead function.
+	(tric_rtx_costs): Remove dead code.
+	<outer_code>: Fix build warning.
+	<subreg_of_mem_p>: Remove unused variable.
+	(tric_decl_in_smalldata, tric_decl_in_absolute)
+	(tric_encode_section_info): Don't handle dead smalldata10.
+	(tric_fold_builtin) <fcode>: Fix build warning.
+	(tric_function_arg, tric_function_arg_advance): Make static. Hookize.
+	<named>: Fix build warning.
+
+	* tricore.h: Fix some coding rules.
+	(_TRICORE_CONFIG, __TRICORE__, TRIC_SECTION_TINY, FUNCTION_ARG)
+	(FUNCTION_ARG_ADVANCE, TRIC_SECTION_BITDATA): Remove dead macros.
+	(TRIC_SECTOPN_PCP, TRIC_SECTION_CORE): Bump.
+	(PREFERRED_RELOAD_CLASS, PREFERRED_OUPUT_RELOAD_CLASS)
+	(IRA_HARD_REGNO_ADD_COST_MULTIPLIER): Remove no-op hooks.
+
+	* tricore-protos.h (tric_section_flags_from_flags)
+	(tric_section_flags_from_string, extra_constraint_Ws)
+	(tric_const_int_in_libgcc, tric_ifcvt_noce_try)
+	(tric_preferred_reload_class, tric_preferred_output_reload_class)
+	(tric_function_arg, tric_function_arg_advance)
+	(asm_conditional_branch, tric_va_arg): Remove unused prototypes.
+
+2014-07-29  Georg Lay
+
+	[HDP-426]
+	* tricore.h (ASM_SPEC): Don't pass -v.
+
+2014-07-17  Georg Lay
+
+	[HDP-491]
+	* tricore.specs: Remove file.
+	* tricore.h (DRIVER_SELF_SPECS): Don't include tricore.specs.
+	Don't use gcc_self_spec.
+	* t-tricore (install-specs, tricore.specs): Remove rules.
+	(xgcc): Don't depend on tricore.specs.
+	(install-common): Don't depend on install-specs.
+
+2014-06-12  Georg Lay
+
+	[HDP-469]
+	* libgcc1.S (__tric_restore_context_queue) [tc13, tc131, tc16]:
+	Use bit 22 as PCXI.UL.
+	[tc161]: Use bit 20 as PCXI.UL.
+
+2014-04-10  Georg Lay
+
+	[HDP-332]
+	* tricore.md (addsf3, subsf3, divsf3, mulsf3, cmp_f, floatsisf2)
+	(floatunssisf2, fix_truncsfsi2_insn,fixuns_truncsfsi2_insn)
+	(fmasf4, fnmasf4): Add clobber REG_PSW to insns.
+	(smaxsf3, sminsf3, fmssf4, fnmssf4): Same for expanders.
+
+2014-07-11  Georg Lay
+
+	[HDP-371]
+	* tricore.md (peephole2): Remove peep2 that merges two 32-bit
+	memory loads into one 64-bit load.
+
+2014-04-10  Georg Lay
+
+	[HDP-279]
+	* tricore.c (volatile_uint_node, volatile_uintptr_node)
+	(void_ftype_v_uintptr_uint64, void_ftype_v_uintptr_2uint)
+	(void_ftype_v_uintptr_3uint, uint_ftype_v_uintptr_uint)
+	(uint_ftype_v_uintptr_2uint): Remove local variables.
+	(volatile_void_node, volatile_voidptr_node)
+	(void_ftype_v_voidptr_uint64, void_ftype_v_voidptr_2uint)
+	(void_ftype_v_voidptr_3uint, uint_ftype_v_voidptr_uint)
+	(uint_ftype_v_voidptr_2uint): New local variables.
+	* builtins.def (swapmskw, cmpswapw, _3ldmst) <TYPE>: Use
+	uint_ftype_v_voidptr_2uint.
+	(_2ldmst) <TYPE>: Use void_ftype_v_voidptr_uint64.
+	(_ldmst4) <TYPE>: Use void_ftype_v_voidptr_2uint.
+	(swapw) <TYPE>: Use uint_ftype_v_voidptr_uint.
+
+2013-04-08  Georg Lay
+
+	[HDP-258]
+	* tricore.h (SUPPORTS_INIT_PRIORITY): Define to 0.
+
+2013-05-21  Georg Lay
+
+	[HDP-292]
+	* tricore-protos.h (tric_order_regs_for_local_alloc): Remove.
+	* tricore.c (tric_order_regs_for_local_alloc): Remove function.
+	(tric_conditional_register_usage): Don't call it.
+	* tricore.h (ADJUST_REG_ALLOC_ORDER): Remove hook define.
+	(REG_ALLOC_ORDER): Move REG_D0, REG_D1 after REG_D7. Add REG_A7.
+
+2014-03-14  Georg Lay
+
+	[HDP-323]
+	* tricore.c (TARGET_FIXED_POINT_SUPPORTED_P): Remove hook define.
+	(TARGET_SCALAR_MODE_SUPPORTED_P): Remove define.
+	(tric_scalar_mode_supported_p): Remove static function.
+
+2013-12-12  Georg Lay
+
+	[HDP-222]
+	* tricore.md (branch_and_decrement): Use nonimmediate_operand
+	instead of register_operand as predicate for operand 0.
+
+2013-12-17  Horst Lehser
+
+	[HDP-223]
+	* tricore.c (tric_asm_output_aligned_block): Test decl for small or
+	absolute addressing.
+
+2013-12-12  Georg Lay
+
+	[HDP-223]
+	* tricore.c (tric_asm_output_aligned_block): Use section suffix
+	for respective alignment of bss objects if -maligned-data-sections
+	is on.
+
+2013-11-28  Georg Lay
+
+	[HDP-202]
+	* tricore.c (tric_asm_named_section): Move code to warn for
+	non-bss	data in bss-like section from here ...
+	(tric_encode_section_info): ... to here.
+
+2013-10-30  Georg Lay
+
+	[HDP-148]
+	* tricore.h (TARGET_HTC_LOOP_OPTIMIZE_WITH_PRE_INCREMENT):
+	Redefine to 0.
+
+2013-10-30  Georg Lay
+
+	[HDP-172]
+	* tricore.h (REGNO_OK_FOR_BASE_STRICT_P,
+	REGNO_OK_FOR_BASE_NONSTRICT_P): Remove dead macros.
+
+2013-10-30  Georg Lay
+
+	[HDP-172]
+	* tricore.c (tric_reg_ok_for_addr): Don't use REGNO_OK_FOR_BASE_P.
+	* tricore.h (REGNO_OK_FOR_BASE_P): Use reg_renumber only on pseudos.
+	(REGNO_OK_FOR_ADDR): Remove dead macro.
+
+2013-10-08  Georg Lay
+
+	[GCC-242]
+	* tricore.md: Remove dead code in comments.
+
+2013-09-17  Horst Lehser
+
+	* errata.def: Modify license add library exception.
+
+2013-08-20  Horst Lehser
+
+	[GCC-244]
+	* tricore-dinkum.h: Define TARGET_HAS_SINCOS.
+
+2013-08-12  Horst Lehser
+
+	[GCC-243]
+	* devices.def: Add tc26xx and tc29xx description.
+	* t-multilib: Newly generated.
+	* tricore-mcpu.opt: Ditto.
+	* memory.x (TC26xx) : Add memory description for TC26XX and TC29XX.
+	(TC27XX) : Correct data flash size.
+
+2013-08-08  Horst Lehser
+
+	[GCC-242]
+	* tricore.md (peephole2): Delete peephole for load/store -> swap.
+
+2013-08-07  Horst Lehser
+
+	[GCC-241]
+	* tricore.md (peephole2): Test destination reg for 64-bit loads.
+
+2013-05-17  Horst Lehser
+
+	* t-tricore: Set -ffunction-sections, -mversion-info as default
+	target cflags
+
+2013-07-11  Georg Lay
+
+	[GCC-233]
+	* driver-tricore.c (tric_device_to_ld): Return "--mcpu=tc<core>"
+	in absence of -mcpu=<device>.
+
+2013-07-11  Georg Lay
+
+	[GCC-232]
+	* tricore.c (tric_len_sub32): Return length of 4 if operand 1 is
+	not a REG_P.
+
+2013-03-25  Peter Gal
+
+	[GCC-213]
+	* tricore.c (tric_handle_asection_attribute): Added extra check.
+
+2013-03-01  Georg Lay
+
+	Add builtins for: swap.w, cmpswap.w, swapmsk.w.
+
+	[GCC-116]
+	* builtins.def (swapw, swapmskw, cmpswapw): New DEF_BUILTIN.
+	* tricore-c.c (tric_resolve_overloaded_builtin)
+	<TRIC_BUILTIN_CMPSWAPW, TRIC_BUILTIN_SWAPMSKW>: Error if
+	respective instruction is not available.
+	* tricore.c (extra_constraint_Wc): New function.
+	(tric_init_builtins): Add uint_ftype_v_uintptr_uint,
+	uint_ftype_v_uintptr_2uint.
+	* constraints.md (Wc): New constraint.
+	* tricore-protos.h (extra_constraint_Wc): New prototype.
+	* tricore.md (unspecv): Add UNSPECV_CMPSWAP_W, UNSPECV_SWAP_W,
+	UNSPECV_SWAPMSK_W.
+	(swap_w, swapmsk_w, cmpswap_w): New expanders.
+	(swap_w_insn, swapmsk_w_insn, cmpswap_w_insn): New insns.
+	* tricore-devices.h (TRIC_161UP, TRIC_HAVE_CMPSWAP_W)
+	(TRIC_HAVE_SWAPMSK_W): New defines.
+
+2013-03-01  Georg Lay
+
+	[GCC-208]
+	* tricore-combine.md (*insert.uconst.ic): Mask operand 3 with SImode.
+
+2013-02-15  Georg Lay
+
+	* tricore.c (tric_option_optimization_table)
+	<OPT_fira_algorithm_>: Set to IRA_ALGORITHM_PRIORITY for all
+	optimization levels.
+	<OPT_ftree_loop_optimize>: Remove.
+	(tric_rtx_costs) <code>: No premature return for SET.
+	<IOR, AND>: Recornize IOR, AND with MEM as first operand for
+	better LDMST cost.
+	(tric_address_cost): Always return 0.
+
+2013-02-15  Georg Lay
+
+	[GCC-200]
+	* t-tricore (MULTILIB_EXTRA_OPTS): Add mversion-info.
+
+2013-02-15  Georg Lay
+
+	[GCC-199]
+	* tricore.c (peephole2): Remove peep2 that tweaked 64-bit return
+	values.
+
+2012-02-14  Peter Gal
+
+	[GCC-100]
+	* tricore.h (SECTION_TYPE_NOTE): Remove macro.
+
+2012-02-13  Peter Gal
+
+	[GCC-100]
+	* tricore.h (SECTION_TYPE_NOTE): New macro.
+
+2013-02-11  Georg Lay
+
+	[GCC-195]
+	[GCC-CR-204]
+	* tricore-combine.md (*umulsidi2.0x100000001.ic): New insn.
+	(*ldmst.or.ic): Use it to load the LDMST mask instead of
+	subreg:SI(DI).  Allow nonmemory_operand with $1.
+	(*ldmst.or, *ldmst.and): No predicate and constraint X for $1.
+
+2013-01-29  Georg Lay
+
+	[GCC-189]
+	* tricore.md (fmssf4): Rename to fnmasf4.
+	(fmssf4): New expander.
+
+2013-01-28  Georg Lay
+
+	[GCC-193]
+	* tricore-combine.md (*usathi.bridge.ic): Use operand #4 as first
+	operand for ne:SI.
+
+2013-01-22  Georg Lay
+
+	[GCC-189]
+	[GCC-CR-196]
+	* predicates.md (reg_or_0_operand): New.
+	* tricore.c (tric_binary_cost): More reasonable costs for binary
+	SF operations.
+	* tricore.md (unspec): Sort. Add UNSPEC_COPYSIGN.
+	(*maddsf, *msubsf): Remove.
+	(copysignsf3, fnmssf4): New expanders.
+	(negsf2, sminsf3, smaxsf3, fmasf4, fmssf4): New insns.
+	(*movsfcc.eq, *movsfcc.ne, *copysignsf3, *ncopysignsf3.2): New insns.
+	(abssf2): Remove flag_unsafe_math_optimizations from condition.
+
+2013-01-22  Georg Lay
+
+	[GCC-155]
+	[GCC-CR-185]
+	* builtins.def (DEF_BUILTIN): Factor out CODE_FOR_ from 5th
+	argument.
+	(rrotate, ldmst, insert, imask): New builtins.
+	(_2ldmst, _3ldmst, _4ldmst, _2imask): New internal builtins.
+	* tricore-protos.h (tric_emit_insert, tric_emit_insert): New prototypes.
+	* tricore-c.c (tree.h): Include prior to tm_p.h.
+	(target.h): Include it.
+	(tric_cpu_cpp_builtins): Don't provide built-in define for
+	internal built-ins.
+	(enum tric_builtin_id): New.
+	(tric_resolve_overloaded_builtin): New static function.
+	(tric_register_pragmas): Move down.
+	Set targetm.resolve_overloaded_builtin to
+	tric_resolve_overloaded_builtin.
+	* tricore.c (tric_rtx_to_hwi): New static function.
+	(tric_emit_insert, tric_emit_imask, tric_fold_insert)
+	(tric_fold_insert): New functions.
+	(tric_builtin): Prefix 5th argument of DEF_BUILTIN with CODE_FOR_.
+	(tric_init_builtins): New: volatile_uint_node,
+	volatile_uintptr_node, void_ftype_v_uintptr_uint64,
+	void_ftype_v_uintptr_2uint, void_ftype_v_uintptr_3uint,
+	uint64_ftype_2uint, uint64_ftype_3uint, uint_ftype_4uint.
+	Rename uint_ftype_uint_uint to uint_ftype_2uint.
+	(tric_rtx_to_hwi, tric_tree_to_hwi, tric_tree_uint): New static
+	functions.
+	(tric_default_expand_builtin): New parameter void_p.  Bump xop to
+	4 elements.  Handle insns without output operand.
+	(tric_expand_builtin): Pass void_p to tric_default_expand_builtin.
+	(tric_fold_builtin): Skip NOP_EXPR while folding.
+	Handle: TRIC_BUILTIN_INSERT, TRIC_BUILTIN_LDMST4,
+	TRIC_BUILTIN_LDMST3, TRIC_BUILTIN_RROTATE.
+	Mask rotate offset of TRIC_BUILTIN_LROTATE with 31.
+	Assert that ERROR_MARK nodes are folded away.
+	* tricore.md (unspec): Sort alphabetically.
+	Add: UNSPEC_IMASK, UNSPEC_INSERT.
+	(unspecv): Add UNSPECV_LDMST.
+	(imask, imask2, insert, ldmst): New expanders.
+	(insert_const_width, insert_mask, ldmst_insn): New insns.
+	(insert64): New insn and split.
+	(imask<mode>): Allow register in operand 2.
+	* tricore-combine.md (ldmst): Rename insn to *ldmst.
+
+2013-01-09  Georg Lay
+
+	[GCC-84]
+	[GCC-CR-191]
+	* tricore.c (TRIC_ATTR_INDIRECT): New define to "fardata".
+	(tric_attribute_table): Add new decl entry for it.
+	(tric_decl_in_smalldata): Return 0 if "fardata" is seen.
+	Use TRIC_ATTR_ABSOLUTE instead of "absdata".
+	* tric_decl_in_absolute: Same.
+
+2012-12-18  Georg Lay
+
+	[GCC-184]
+	[GCC-CR-190]
+	* predicates.md (absolute_memory_operand): New predicate.
+	(vok_absolute_memory_operand): Remove.
+	* tricore-combine.md (*st.t.1.or, *st.t.0.and, *st.t.1.or-subreg)
+	(*st.t.0.and-subreg, *st.t.insv): Use absolute_memory_operand
+	for operand 0 and don't patch volatile_ok.
+	(*ldmst.or-ones.ic, *ldmst.or.ic, *ldmst.and-zeros.ic)
+	(*ldmst.and.ic, *insv.mem): Use absolute_memory_operand to factor
+	out ST.T in insn conditions.
+
+2012-12-17  Willi Theiß
+
+	[GCC-172]
+	[GCC-CR-188]
+	* crt0-tc2x.S: Tabify.
+	(.startup_code): Add BMI header.  Make watchdog work for all
+	cores, not only core #0.
+
+2012-12-17  Georg Lay
+
+	[GCC-CR-186]
+	* tricore.h (TARGET_C99_FUNCTIONS): Move to...
+	* tricore-dinkum.h: ...here.
+	
+2012-12-05  Georg Lay
+
+	[GCC-184]
+	* predicates.md (ldmst_operand): New predicate.
+	* tricore-combine.md (ldmst, *ldmst.or-ones.ic, *ldmst.or.ic)
+	(*ldmst.and-zeros.ic, *ldmst.and.ic, *insv.mem, *ldmst.or)
+	(*ldmst.and): Use it instead of vok_memory_operand.
+	* tricore.md (insv): Same.  And fail on MEM_VOLATILE_P.
+
+2012-12-05  Georg Lay
+
+	* gendevices.awk (trim): Use /regexp/ instead of "regexp".
+
+2012-12-05  Georg Lay
+
+	* tricore.h (struct machine_function): Add bogus_pxhndcall.
+	* tricore.c (tric_function_arg1): Use error_at when reporting
+	problems with syscall and pxhndcall.
+	(tric_set_current_function): Same.  And handle if DECL_CONTEXT is
+	NULL.  Use bogus_pxhndcall instead of seen_error.
+
+2012-12-05  Georg Lay
+
+	* tricore.c (tric_output_call): Move sanity checking of pxhndcall
+	functions from here to...
+	(tric_set_current_function): ...this new hook implementation.
+	(TARGET_SET_CURRENT_FUNCTION): Define.
+	(tric_count_num_arguments): New static function.
+
+2012-12-05  Georg Lay
+
+	* t-tricore: Typo.
+	* devices.def: Typo.
+	* gendevices.awk: Typo.
+	* errata.def: Typo and better explain DEF_ERRATA.
+
+2012-12-04  Georg Lay
+
+	* t-tricore (tricore_errata.tex): New rule.
+	* gendevices.awk (FORMAT): Handle tricore_errata.tex.
+
+2012-12-03  Georg Lay
+
+	[GCC-85]
+	* intrinsics.h: Untabify.
+	(__MFCR, __MTCR): Remove #ifndef wrapper.
+	(__CLZ, __CTZ, __ABS): Don't #undef.
+	(_disable, _enable, _debug, _isync, _dsync, _rstv, _rslcx)
+	(_svlcx, _nop): Fix missing ;
+
+2012-11-30  Georg Lay
+
+	[GCC-163]
+	* devices.def: Fix comment.
+
+2012-11-30  Georg Lay
+
+	[GCC-163]
+	* tricore.opt (-mcpu): Remove option.
+	(-mcpu=, tric_opt_cpu, tric_mcpu): New option, attached variable,
+	attached enum.
+	(-mtc): Attach ...
+	(tric_opt_tc, tric_mtc): ... new variable, new enum.
+	(-merrata=, tric_opt_errata, tric_merrata): New option, attached
+	variable, attached enum.
+	(-mno-errata=, tric_opt_noerrata, tric_mnoerrata): New option, attached
+	variable, attached enum.
+	* t-tricore (MEMORY_CPU, CRT0_CPU): New variables.
+	(crt0-tc1x.S, memory-%.x, crt0-%.o, t-multilib)
+	(tricore-mcpu.opt, errata.texi): New rules to build them.
+	(install-devices, s-mlib, s-tricore-mlib): New rule.
+	(install-derivatives, s-derivatives): Remove.
+	(TC13_DERIVATIVES, TC131_DERIVATIVES, TC16_DERIVATIVES)
+	(TC2X_DERIVATIVES, TRIC_DERIVATIVES): Remove.
+	(libgcc-support): Depend on MEMORY_CPU, CRT0_CPU.
+	(tricore.o, tricore-devices.o, driver-tricore-c.o): Depend on
+	errata.def.
+	(tricore-devices.o): Depend on devices.def.
+	(MULTILIB_MATCHES): Move to...
+	* t-multilib: ...this new auto-generated file.
+	* tricore.c (tric_handle_option): Remove handling of: OPT_mcpu.
+	Handle: OPT_merrata_, OPT_mno_errata_, OPT_mcpu_.
+	(tric_option_override): Use tric_set_device (NULL) to set default
+	if no device / core was specified.
+	Set tric_errata defaults if not specified on the command line.
+	(tric_core, tric_cores, tric_set_core): Move to... 
+	* tricore-devices.c: ...here.
+	(diagnostic.h): Include it.
+	(STREQ): New macro.
+	(tric_errata, tric_devices): New const objects.
+	(tric_set_core, tric_set_device): New functions.
+	* tricore.h (DRIVER_SELF_SPECS): Call tric_self_specs.
+	(EXTRA_SPEC_FUNCTIONS): Remove spec_warn, device_to_memoryx.
+	Add: device_to_as, device_to_ld, tric_self_specs.	
+	(ASM_SPEC): Call device_to_as.  Remove mtc and mcpu handling.
+	(LINK_SPEC): Call device_to_ld.  Remove mtc handling.
+	(STARTFILE_SPEC): Call device_to_startfile.  Allow nocrt0.
+	Remove crt0.o and memory.x handling.
+	(tric_device_to_memoryx, tric_spec_warn): Remove prototypes.
+	(tric_device_to_ld, tric_device_to_as, tric_self_specs): New
+	prototypes.
+	(DRIVER_SELF_SPECS): Call tric_self_specs
+	(TRIC_13, TRIC_131, TRIC_131UP, TRIC_13X)
+	(TRIC_16, TRIC_161, TRIC_16X, TRIC_16UP)
+	(TRIC_HAVE_DIV, TRIC_HAVE_FTOIZ, TRIC_HAVE_MOV64, TRIC_HAVE_FCALL)
+	(TRIC_ERRATA_081, TRIC_ERRATA_101)
+	(tric_core_t, tric_cores[], tric_core): Move to...
+	* tricore-devices.h: ...this new file.
+	* tricore-c.c (tric_cpu_cpp_builtins): Built-in define ERRATA_CPU*
+	from tric_errata.
+	* memory.x: Handle __TRICORE_NAME__ =  0x1920, 0x1161, 0x1162.
+	* crt0.S: Include crt0-tc1x.S or crt0-tc1x.S depending on
+	__TRICORE_NAME__.
+	* crt0-tc1x.S: Remove TC1.2 parts.
+	* crt0-tc2x.S: Error if __TRICORE_NAME__ is not defined.
+	* tricore.specs: Remove everything except:
+	(gcc_self_spec): Clear.
+	* devices.def: New file.
+	* errata.def: New file.
+	* gendevices.awk: New file.
+	* tricore-mcpu.opt: New auto-generated file.
+
+2012-11-28  Georg Lay
+
+	[GCC-163]
+	* crt0-tc1x.S: Copy from crt0.S.
+
+2012-11-22  Georg Lay
+
+	[GCC-181]
+	* tricore.c (tric_md_asm_clobbers): Error if REG_PIC is clobbered
+	with -mdynamic-address-calc-with-code-pic.
+
+2012-11-21  Georg Lay
+
+	* intrinsics.h: Typo.
+
+2012-11-21  Georg Lay
+
+	[GCC-85]
+	* intrinsics.h: New file.
+	* t-tricore (install-tricore-headers): New rule to install it.
+	(installdirs): Depend on it.
+
+2012-11-19  Georg Lay
+
+	* tricore.c (tric_scalar_mode_supported_p): Don't limit
+	mode size to <= 64 bits.
+
+2012-11-16  Georg Lay
+
+	* tricore.h (TARGET_C99_FUNCTIONS): Define to 1.
+
+2012-11-14  Georg Lay
+
+	* tricore.h (tric_move_ratio, tric_clear_ratio)
+	(tric_set_ratio): New prototypes.
+	* tricore-protos.h
+	* tricore.c
+	(tric_move_ratio, tric_clear_ratio, tric_set_ratio): Change
+	argument to int.
+
+2012-11-14  Georg Lay
+
+	* tricore.h (OVERLAPPING_REGISTER_NAMES): New hook define.
+
+2012-11-14  Georg Lay
+
+	[GCC-180]
+	* tricore.c (tric_asm_function_end_prologue): Use 
+	HOST_WIDE_INT_PRINT_DEC to print HOST_WIDE_INT.
+	(tric_print_mem_operand): Ditto.
+
+2012-11-14  Georg Lay
+
+	[GCC-181]
+	* tricore.md (REG_PIC): Change from A12 to D14.
+
+2012-11-13  Georg Lay
+
+	[GCC-181]
+	* tricore.c (tric_conditional_register_usage): Fix A12 if
+	-mcode-pic with dynamic offset calculation.
+	(tric_pic_offset_init): Adjust call to gen_load_pic_symbol.
+	* tricore.md (REG_PIC): New define_constants.
+	(load_pic_symbol): Change to work past reload and take account for
+	fixed REG_PIC.
+
+2012-11-13  Georg Lay
+
+	[GCC-141]
+	[GCC-180]
+	* constraints.md (Ga9): Remove.
+	(K99): New constraint.
+	* tricore.md (adddi3, *adddi3): Use it.
+	(*mov<mode>_insn): Use CONST0_RTX instead of G00 checker.
+	* predicates.md (add64_noclobber_operand): Switch to const_int.
+
+2012-11-12  Georg Lay
+
+	* tricore.md (divmodsi4, udivmodsi4, *divmodsi4, *udivmodsi4):
+	Zero-extend second operand of IOR to DImode.
+
+2012-11-08  Georg Lay
+
+	* tricore-combine.md (*ior.shiftl.zerox.ic, *ior.shiftl.and.ic)
+	(*ior.shiftl.and.ic, *ior.shiftl.zext<mode>.ic): New insns.
+	(*j<tric_n_op>z_andsi3_extract.ic): Break long line.
+
+2012-10-31  Horst Lehser
+
+	[GCC-90]
+	* libgcc1.S: Add memcpy, memcmp and memset.
+	* t-tricore (LIB1ASMFUNCS): Add memcpy, memcmp and memset.
+
+2012-10-31  Horst Lehser
+
+	[GCC-90]
+	* div64/: Moved to libgcc/config/htc-libgcc.
+	* t-tricore: Delete rules for div64.
+
+2012-10-31  Georg Lay
+
+	[GCC-116]
+	* builtins.def: New file.
+	* t-tricore (tricore.o, tricore-c.o): Depend on it.
+	* tricore.c (tric_builtin_id): New enum.
+	(tric_builtin_t): New typedef.
+	(tric_builtin): New static GTY variable.
+	(tric_builtin_decl, tric_expand_builtin, tric_fold_builtin):
+	New static functions.
+	(tric_init_builtins): Initialize tric_builtin[].fndecl.
+	(TARGET_BUILTIN_DECL): Add hook define.
+	(TARGET_FOLD_BUILTIN): Add hook define.
+	(TARGET_EXPAND_BUILTIN): Add hook define.
+	* tricore-c.c (tric_toupper): New static function.
+	(tric_cpu_cpp_builtins): Built-in define uppercase macro for each
+	tricore builtion available.
+	* tricore.md (unspecv): Add UNSPECV_MEMORY_BARRIER, UNSPECV_NOP.
+	Order alphabetically.
+	(nopv): New expander.
+	(*nopv): New insn.
+
+2012-10-30  Georg Lay
+
+	[GCC-176]
+	* tricore.c (tric_eabi_struct_alignment): Skip fields of type
+	error_mark_node.
+	(tric_eabi_data_alignment): Map error_mark_node to basic_align.
+
+2012-10-27  Georg Lay
+
+	* tricore.opt (-mself-specs): Remove.
+	* tricore.specs (gcc_self_spec): Remove -mself-specs.
+	* tricore.c (tric_asm_record_gcc_self_switches): Remove.
+	(tric_asm_record_gcc_switches): Remove call of
+	tric_asm_record_gcc_self_switches.  Print .version_info.ident.
+	
+2012-10-27  Georg Lay
+
+	* tricore.opt (-msmall=): Add RejectNegative.
+	(-msmall-const=, -msmall-data=): Ditto.
+	(-mabs=, -mabs-const=, -mabs-data=): Ditto.
+
+2012-10-26  Georg Lay
+
+	* tricore.c (tric_asm_file_start): Remove version info handling.
+	* tricore.h (GEN_VERSION_INFO): Remove.
+	* tricore.opt (-mversion-info, tric_opt_version_info): Remove.
+	(-mversion-string=, tric_opt_user_version_string): Remove.
+
+2012-10-25  Georg Lay
+
+	* tricore.c (tric_asm_select_section): Handle STRING_CST and
+	CONSTRUCTOR with -maligned-data-sections.
+
+2012-10-22  Georg Lay
+
+	[GCC-171]
+	* tricore.c (tric_asm_select_section): Use align_variable and
+	DECL_ALIGN only if DECL_P.
+
+2012-10-17  Peter Varga
+
+	[GCC-100]
+	* tricore.c (tric_asm_file_start): Use tric_opt_version_info and
+	tric_opt_user_version_string variables.
+	* tricore.h: Add GEN_VERSION_INFO macro.
+	* tricore.opt (TARGET_GEN_VERSION_INFO): Rename to tric_opt_version_info.
+	(user_version_string): Rename to tric_opt_user_version_string.
+
+2012-10-17  Peter Varga
+
+	[GCC-100]
+	* tricore.c (tric_asm_file_start): Handle TARGET_GEN_VERSION_INFO and
+	user_version_string.
+	* tricore.opt (mversion-info): New option...
+	(TARGET_GEN_VERSION_INFO): ...and attached variable.
+	(mversion-string): New option...
+	(user_version_string): ...and attached variable.
+
+2012-10-11  Peter Varga
+
+	[GCC-99]
+	* tricore.c (tric_asm_file_start): Rename function call.
+
+2012-10-11  Peter Gal
+
+	[GCC-157]
+	* tricore-c.c (tricore_cpu_cpp_builtins): Use the
+	HTC_CPU_CPP_BUILTINS macro if available.
+
+2012-10-11  Peter Varga
+
+	[GCC-99]
+	* tricore.c (tric_file_start): Add print_version_info_section call.
+
+2012-10-11  Georg Lay
+
+	[GCC-161]
+	* htc-version.h: Remove file.
+	* t-tricore (BUILD_VERSION): Move to t-htc-lic.
+	(TOOL_VERSION): Remove.
+	(BUILD_DATE, REVISION_s PKGVERSION_s, DATESTAMP_s, BUGURL_s): Move
+	setting to t-htc-version.
+	(version.o): Remove dependency.
+
+2012-10-10  Georg Lay
+
+	Revert r2413.
+	[GCC-99]
+	* tricore.c (tric_file_start): Remove print_version_info_section call.
+
+2012-10-05  Peter Varga
+
+	[GCC-99]
+	* tricore.c (tric_file_start): Invoke print_version_info_section
+	function.
+
+2012-10-05  Georg Lay
+
+	[GCC-155]
+	* tricore.c (tric_can_inline_p): Use
+	tric_function_attribute_inlinable_p with the function type, not
+	via function_attribute_inlinable_p with the function decl.
+	(tric_function_attribute_inlinable_p): Rename parameter.
+
+2012-10-04  Horst Lehser
+	    Gabor Palfi
+
+	[GCC-161]
+	* t-tricore (TOOL_VERSION): Changed version string parts.
+	(REVISION_s, PKGVERSION_s, DATESTAMP_s): Ditto.
+	(version.o): Depend on ../tool_revision.
+    
+2012-10-04  Georg Lay
+
+	[GCC-81]
+	* tricore.c (tric_emit_prologue): Set
+	current_function_static_stack_size provided -fstack-usage is on.
+	
+2012-10-01  Georg Lay
+
+	[GCC-155]
+	* tricore.c (tric_can_inline_p): Use
+	function_attribute_inlinable_p instead of
+	targetm.function_attribute_inlinable_p.
+
+2012-09-25  Georg Lay
+
+	* tricore.c (tric_set_section_attributes): Fix tippo in diagnose.
+
+2012-09-25  Georg Lay
+
+	[GCC-155]
+	* tricore.c (TARGET_FUNCTION_ATTRIBUTE_INLINABLE_P): New hook
+	define to...
+	(tric_function_attribute_inlinable_p): ...this new static function.
+	(tric_can_inline_p): Use it.
+
+2012-09-05  Georg Lay
+
+	Fix bamboo #201
+	* tricore.c (tric_rtx_costs): Set INSN_CODE directly from recog.
+	Log output even for unrecognized insns.
+
+2012-09-04  Georg Lay
+
+	* tricore.c (tric_rtx_costs): Set INSN_CODE to -1 before calling
+	recog.
+
+2012-09-03  Georg Lay
+
+	* tricore-sections.def: New file.
+	* t-tricore (tricore.o): Depend on it.
+	* tricore.c (tric_asm_init_sections): Include it.
+	(tric_init_data_sections): New static function.
+
+2012-08-10  Georg Lay
+
+	[GCC-149]
+	* tricore.c (tric_handle_option): -mabs is no more mutually
+	exclusive to -mabs-data, -mabs-const.  -msmall is no more mutually
+	exclusive to -msmall-data, -msmall-const.
+
+2012-08-08  Georg Lay
+
+	* tricore.md (call, call_value): Don't emit barrier after call
+	to interrupt_handler function.
+	* tricore.c (tric_peep2_setup_sibcall): Use SIBLING_CALL_P to set
+	jump flag.
+
+2012-08-02  Georg Lay
+
+	[GCC-145]
+	* tricore.c (tric_output_section_asm_op): Remove.
+	(tric_section_name_from_asm_op): New static function.
+	(tric_asm_init_sections): Initialize unnnamed defult sections
+	in such a way that section data point to string literals.
+	Use output_section_asm_op as section callback.
+	(tric_asm_unique_section): Use tric_section_name_from_asm_op to
+	extract the section name from its asm_op.
+
+2012-07-31  Horst
+
+	* crti.S: Delete GPL licence information.
+	* crtn.S: Same.
+
+2012-07-31  Horst
+
+	[GCC-88]
+	* tricore.opt (-meabi-bitfield-limit): Change the help message
+
+2012-07-31  Horst
+
+	* tricore.opt (-msmall-pid): Insert help message.
+	(-mpragma-data-sections): Fix typo.
+
+2012-07-31  Georg Lay
+
+	* constraints.md (Ksl): Remove.
+
+2012-07-30  Georg Lay
+
+	[GCC-140]
+	* tricore.c (tric_rtx_costs): Initialize NEXT_INSN and PREV_INSN
+	of fake_insn and fake_jump_insn with NULL_RTX.
+
+2012-07-30  Georg Lay
+
+	[GCC-92]
+	* tricore.c: Include diagnostic.h, opts.h.
+	(tric_error_on_option): Rename to tric_opt_error.
+	(tric_handle_option): Handle OPT_msmall_pid.  Call tric_opt_error
+	on any option rejected by -msmall-pid.
+
+2012-07-24  Horst
+
+	[GCC-137]
+	* tricore.c (tric_function_ok_for_sibcall): If caller and callee have
+	not the same interrupt/interrupt_handler attribute fail for sibling.
+	(tric_output_call): In case of interrupt function emit j/ja instead 
+	of jl/jla.
+
+2012-07-13  Georg Lay
+
+	[GCC-136]
+	* tricore.c (tric_eabi_struct_alignment): Use TYPE_ALIGN on type.
+
+2012-07-13  Georg Lay
+
+	[GCC-135]
+	* tricore-protos.h (tric_peep2_setup_sibcall): New prototype.
+	* tricore.c (tric_peep2_setup_sibcall): New function.
+	* tricore.md: Use it in all peephole2 patterns that transform
+	call+return to a tail call.
+
+2012-07-12  Georg Lay
+
+	* tricore.c: Add missing quotes in diagnostics.
+
+2012-07-12  Georg Lay
+
+	[GCC-130]
+	* tricore.c (tric_option_optimization_table): Always set
+	OPT_funsigned_bitfields.
+
+2012-07-09  Georg Lay
+
+	[GCC-91]
+	* tricore.opt (-mpragma-data-sections): New option.
+	(tric_opt_pragma_data_sections): New variable.
+	* tricore.c (tric_insert_attributes): Use variable name as section
+	name suffix if -mpragma-data-sections is on.
+
+2012-07-09  Georg Lay
+
+	[GCC-92]
+	* tricore.c (tric_pid_init): New static GTY tree.
+	(tric_asm_select_section): Relaxed condition when CONSTRUCTOR is
+	considered to go to readonly_data_section.
+	(tric_walk_initializer_r): Handle case STRING_CST.
+	Don't inform on the referenced variable for VAR_DECL.  
+	(tric_encode_section_info): Unify handling of VAR_DECL, STRING_CST
+	and CONSTRUCTOR.
+
+2012-07-05  Georg Lay
+
+	[GCC-92]
+	* tricore.opt (Winitialize-pid): New option and...
+	(tric_warn_initialize_pid): ...attached variable.
+	* tricore.c (tric_walk_initializer_r): Scan VAR_DECL if
+	tric_warn_initialize_pid.  Only scan FUNCTION_DECL if
+	tric_opt_code_pic.
+	(tric_encode_section_info): Scan initializer also with
+	tric_warn_initialize_pid.
+	(tric_asm_declare_constant_name): Ditto.
+	
+2012-07-05  Georg Lay
+
+	* tricore.c (tric_handle_absolute_attribute): Rename to
+	tric_handle_decl_attribute.
+	(TRIC_ATTR_SMALL): New macro.
+	(tric_set_decl_from_section): Use it.
+	(tric_decl_in_smalldata): Use it.
+	(tric_decl_in_absolute): Use it.
+	(tric_attribute_table): Add entry for TRIC_ATTR_SMALL.
+
+2012-07-05  Georg Lay
+
+	* htc-version.h: Bump to 2.1 (prerelease)
+
+2012-07-04  Georg Lay
+
+	Partially revert 2012-07-03 r2172.
+	
+	[GCC-127]
+	* tricore.c (tric_eabi_round_type_align): Perform MAX computation
+	as signed.	
+
+2012-07-03  Georg Lay
+
+	[GCC-127]
+	* tricore.c (tric_eabi_struct_alignment): Move handling of packed
+	types from here to...
+	(tric_eabi_round_type_align): ...here.  Perform MAX computations
+	as unsigned.
+
+2012-06-28  Georg Lay
+
+	[GCC-123]
+	* iterators.md (DIPDI): New iterator.
+	* tricore.md (cbranchpdi4, cstorepdi4): New insns.
+	* tricore.c (TARGET_INVALID_UNARY_OP): New define to...
+	(tric_invalid_unary_op): ...this new function.
+	(TARGET_INVALID_BINARY_OP): New define to...
+	(tric_invalid_binary_op): ...this new function.
+	(tric_emit_cbranchdi4): Use mode of first op as subreg inner mode.
+	(tric_emit_setcompare_di): Ditto.
+	
+2012-06-25  Georg Lay
+
+	* tricore.h (TRIC_HAVE_FCALL): New macro.
+	* tricore.md (fcall): Turn into expander if TRIC_HAVE_FCALL.
+	(freturn): Depend on TRIC_HAVE_FCALL	
+	(*fcall): Ditto. And add predicate and proper constraints.
+
+2012-06-22  Georg Lay
+
+	Port from 2012-01-31 Horst v4.5.x/trunk r1883
+
+	* tricore.c (tric_option_init_struct): Don't preset
+	flag_tree_loop_optimize, flag_ira_algorithm.
+	(tric_option_optimization_table): Add:
+	-Os -> -fira-algorithm=priority
+	-Os -> -fno-tree-loop-optimize
+	
+2012-06-22  Georg Lay
+
+	[GCC-86]
+	* tricore.c (tric_option_init_struct): Set flag_short_enums = 1.
+
+2012-06-21  Georg Lay
+
+	[GCC-86]
+	* tricore.c (tric_eabi_struct_alignment): Use TYPE_PACKED instead
+	of DECL_PACKED of individual fields.
+	(tric_eabi_round_type_align): Tidy.
+
+2012-06-20  Georg Lay
+
+	[GCC-86]
+	* tricore.c (tric_pass_by_reference): Same as 3.4.
+	(tric_callee_copies): Same as 3.4.
+	
+2012-06-12  Georg Lay
+
+	* tricore.c: Fix quoting in diagnostic messages.
+	* tricore-c.c: Ditto.
+	
+2012-06-12  Georg Lay
+
+	[GCC-88]
+	* tricore.opt (-meabi-bitfield-limit): Fix glitch from r2130.
+	(tric_opt_eabi_bitfield_limit): New variable.
+
+2012-06-12  Georg Lay
+
+	[GCC-88]
+	* tricore.opt (-meabi-bitfield-limit): New option.
+	* tricore.c (tric_eabi_adjust_field_align): Use it to depend error
+	on it as bitfields exceed 32.
+
+2012-06-11  Georg Lay
+
+	[GCC-87]
+	* tricore.c (tric_init_builtin__circ): Use BUILTINS_LOCATION as
+	locus.
+	
+2012-06-11  Georg Lay
+
+	[GCC-87]
+	* tricore.md (extendpdidi2): New expander.
+
+2012-06-11  Georg Lay
+
+	* tricore.c (tric_asm_declare_constant_name): Use CONST_CAST_TREE
+	instead of CONST_CAST.
+
+2012-06-11  Georg Lay
+
+	[GCC-89]
+	* tricore.h (TRIC_ABI_EABI, TRIC_ABI_GCC): Remove.
+	(ADJUST_FIELD_ALIGN): Change define to tric_eabi_adjust_field_align.
+	(DATA_ALIGNMENT): New define.
+	(ROUND_TYPE_ALIGN): New define.
+	* tricore-protos.h (tric_adjust_field_align): Remove.
+	(tric_eabi_adjust_field_align): New.
+	(tric_eabi_data_alignment): New.
+	(tric_eabi_round_type_align): New.
+	* tricore.c (tric_eabi_adjust_field_align): Make global.
+	(tric_adjust_field_align): Remove.
+	(tric_eabi_struct_alignment): New function.
+	(tric_eabi_round_type_align): New function.
+	(tric_eabi_data_alignment): New function.
+	* tricore.opt (-mabi): Remove.
+	(-meabi): New compatibility option.
+
+2012-06-11  Georg Lay
+
+	[GCC-87]
+	* tricore-modes.def (PDI): Turn to partial int mode.
+
+2012-06-08  Georg Lay
+
+	* tricore.md (rotldi3): Only use if TRIC_HAVE_MOV64.
+	(*rotatedi3_32): Ditto. And turn into non-splitting insn.
+	(*ashrdi3_32): Fix attributes.
+
+2012-06-08  Georg Lay
+
+	* tricore.c (tric_asm_declare_constant_name): Use CONST_CAST
+	instead of making a copy of *expr to get rid of const qualifier.
+	
+2012-06-05  Georg Lay
+
+	[GCC-88]
+	* tricore-protos.h (tric_adjust_field_align): New.
+	(tric_debug_t.eabi): New field.
+	* tricore-log.c (tric_log_init): Initialize it.
+	* tricore.h (ADJUST_FIELD_ALIGN): New define.
+	(TRIC_ABI_EABI, TRIC_ABI_GCC): New enums.
+	* tricore.opt (-mabi=): New option.
+	* tricore.c (tric_adjust_field_align): New function.
+	(tric_eabi_adjust_field_align): New static function.
+	(tric_get_previous_field): New static function.
+	(tric_eabi_error): New static GTYed variable.
+	(tric_node_seen): New static function.
+	
+2012-06-05  Georg Lay
+
+	[GCC-87]
+	* tricore-modes.def (PDI): New int mode.
+	* iterators.md (DIPDIDF): New mode iterator.
+	* tricore.md (movpdi, truncdipdi2, truncpdidi2): New expanders.
+	(*movpdi_insn): New insn-and-split.
+	(imaskpdf) New insn.
+	(insv): FAIL for paradoxical subregs.
+
+	* tricore.c (TARGET_INIT_BUILTINS): New define to...
+	(tric_init_builtins): ...this new static function.
+	(tric_init_builtin__circ): New static function.
+	(tric_function_arg1): Pass PDImode in address regs.
+	(tric_function_value): Return PDImode in address regs.
+
+2012-05-25  Georg Lay
+
+	* tricore-combine.md (*sh.or.extract1): New insn-and-split.
+	
+2012-05-24  Georg Lay
+
+	* tricore.opt (-mfast-div): Init to 1.  Adjust help text.
+	* tricore.c (tric_binary_cost): Take into account
+	tric_opt_fast_div in division cost.
+	(tric_option_optimization_table): Init -mfast-div to 0 with -Os.
+	* tricore.md (divmodsi4): Adjust to documentation, i.e. -mfast-div
+	can be used together with -O2 et al.
+	(udivmodsi4, *divmodsi4_call, *udivmodsi4_call): Ditto.
+	
+2012-05-24  Georg Lay
+
+	* tricore.md: Break long C lines.
+	* tricore-combine.md: Ditto.
+	
+2012-05-24  Georg Lay
+
+	* tricore.c (tric_error_on_option): Quote option in diagnostic.
+
+2012-05-21  Georg Lay
+
+	* tricore.md: Fix indentation.
+
+2012-05-16  Georg Lay
+
+	* tricore.opt (-muse-stpcpy): Remove option.
+
+2012-05-16  Georg Lay
+
+	* tricore.opt (-muse-di): Remove option.
+	* tricore.md (movdi, movdf): Remove TARGET_USE_DI from condition.
+	(*movdi_insn, *movdi_insn): Same.
+	(zero_extendsidi2, usum_widendi3, ssum_widendi3, *ssub_widendi3,
+	*usub_widendi3, adddi3, addx, addc, subx, subc, *adddi3, subdi3,
+	negdi2, ashldi3, _lshrdi3, ashrdi3, dextr_const, rotldi3,
+	*ashrdi3_32, *rotatedi3_32, umulsidi3, *umulsidi3_const, mulsidi3,
+	*mulsidi3_const, cstoredi4): Same.
+
+2012-05-16  Georg Lay
+
+	* tricore.opt (-mallow-di-in-addr): Remove option.
+	* tricore.h (EA_REGNO_P): Adjust macro.
+
+2012-05-16  Georg Lay
+
+	* tricore-opt (-muse-movsf): Remove option.
+	* tricore.md (movsf, *movsf_insn): Adjust conditions.
+
+2012-05-16  Georg Lay
+
+	* tricore.opt (-mallow-negative-absolute-offsets): Remove option.
+	Refactor:
+	(tric_opt_split_insns): Rename from TARGET_SPLIT_INSNS.
+	(tric_opt_branch_use_setcompare): Rename from
+	TARGET_BRANCH_USE_SETCOMPARE.
+	(tric_opt_extract_to_subreg): Rename from TARGET_EXTRACT_TO_SUBREG.
+	(tric_opt_branch_cost): Rename from TARGET_BRANCH_COST.
+	(tric_opt_predication): Rename from TARGET_PREDICATION.
+	(tric_opt_loop): Rename from TARGET_LOOP.
+	(tric_opt_extend_load): Rename from TARGET_EXTEND_LOAD.
+	(tric_opt_strict_alignment): Rename from TARGET_STRICT_ALIGNMENT.
+	(tric_opt_fast_div): Rename from TARGET_FAST_DIV.
+	(tric_opt_volatile_const_in_rodata): Rename from
+	TARGET_VOLATILE_CONST_IN_RODATA.
+	(tric_opt_aligned_data_sections): Rename from
+	TARGET_ALIGNED_DATA_SECTIONS.
+	(tric_opt_code_pic): Rename from TARGET_CODE_PIC.
+	(tric_opt_dynamic_code_pic): Rename from TARGET_DYNAMIC_CODE_PIC.
+
+	Apply these renamings:
+	* tricore.md: ...here
+	* tricore-combine.md: ...here
+	* tricore.c: ...here
+	* tricore.h: ...here
+	* predicates.md: ...here.
+
+2012-05-16  Georg Lay
+
+	* tricore.c (tric_mark_decl_size_unknown): Remove dead function.
+	(tric_decl_excluded_from_section_p): Remove function.
+	(struct tric_decl_list_t, tric_decl_list_t): Remove Types.
+	(tric_decl_size_unknown): Remove variable.
+	(tric_decl_in_smalldata): Don't call tric_decl_excluded_from_section_p.
+	(tric_decl_in_absolute): Ditto.
+
+2012-05-16  Georg Lay
+
+	* tricore.opt (-mcombine-insns): Remove Option.
+	* tricore.md: Remove TARGET_COMBINE_INSNS in (insn) conditions.
+	Fix coding rules.
+	* tricore-combine.md: Ditto.
+	
+2012-05-16  Georg Lay
+
+	* htc-version.h (Tool Version): Set to v2.0 (prerelease)
+
+2012-05-16  Georg Lay
+
+	* tricore.c: Fix coding rules.
+
+2012-05-15  Horst
+
+	[GCC-56]
+	* tricore.c (tric_asm_init_sections): Only assign default section
+	for the unaligned version.
+
+2012-05-14  Georg Lay
+
+	* tricore.c (tric_insert_section): Don't inherit section flags
+	or alignment from default sections.
+	(tric_asm_init_sections): Always built-in define .text and .pictext.
+	
+2012-05-11  Georg Lay
+
+	* tricore.c (STR_PREFIX_P): Remove.
+	(str_prefix_p): New static function.
+	(tric_insert_section): Use it instead of STR_PREFIX_P.
+	(tric_section_type_flags): Ditto.
+	(tric_asm_output_aligned_block: Ditto.
+
+2012-05-11  Georg Lay
+
+	[GCC-57]
+	* tricore.opt (tric_warn_code_pic): Rename to tric_warn_initialize_pic.
+	* tricore.c (tric_walk_initializer_r): Use OPT_Winitialize_pic
+	instead of OPT_Wcode_pic. Remove printing note diagnose for
+	walk_data->decl. Change diagnoses from "load time" to "compiler time".
+	
+2012-05-11  Georg Lay
+
+	Add ChangeLog for 2012-05-11 r2035
+
+	* tricore.opt (-Wcode-pic): Rename to -Winitialize-pic. Adjust
+	help text.
+
+2012-05-10  Georg Lay
+
+	[GCC-57]
+	* tricore.h (struct machine_function): Rename .pc_reg to .reg.
+
+	* tricore.c (tric_pc_reg_labelno): Rename to tric_picoff_labelno.
+	(tric_pic_offset_init): Calculate code offset instead of PC
+	location at cfun->machine->pic_offset.symbol.
+	(tric_emit_move): Adjust offset computation to load_pic_symbol.
+
+	* tricore.md (*add_pic_low): Remove operand $3.
+	(load_pic_symbol): Merge with "load_pic_symbol.nonlocal" to
+	insn-and-split. Remove operand $4.
+	(load_pic_symbol.nonlocal): Remove split.
+	(load_pic_symbol.local): Remove split.
+
+2012-05-10  Georg Lay
+
+	[GCC-57]
+	* tricore.opt (-Wcode-pic): New target warning defining...
+	(tric_warn_code_pic): ...this new variable.
+
+	* tricore.c (TARGET_ASM_DECLARE_CONSTANT_NAME): New define to...
+	(tric_asm_declare_constant_name): ...this new static function.
+	(tric_encode_section_info): Add sanity check for initializers for
+	statics wiht -mcode-pic.  Don't make tagging symbol_refs with
+	TRIC_SYMBOL_FLAG_PIC depend on DECL_SECTION_NAME.
+	(tric_walk_data_t): New typedef.
+	(tric_walk_initializer_r): New static function.
+
+2012-05-09  Horst
+
+	[GCC-65]
+	* tricore-dinkum.h: define MATH_LIBRARY
+	* memory.x: adapt changes from 4.5.x
+
+2012-05-03  Georg Lay
+
+	[GCC-57]
+	* tricore.opt (-mdynamic-code-pic): New option and...
+	(-mdynamic-address-calc-with-code-pic): New option and...
+	(TARGET_DYNAMIC_CODE_PIC): ... new variable.
+
+	* tricore.h (struct machine_function): Add fields:
+	.pic_offset.pc_reg, .pic_offset.symbol.
+	
+	* tricore.c (TRIC_SYMBOL_FLAG_PIC): New define.
+	(tric_pc_reg_labelno): New static variable.
+	(tric_option_override): Hint -mcode-pic in error for flag_pic.
+	(tric_pic_offset_init): New static function.
+	(tric_emit_move): Use it to load SYMBOL_REFs tagged
+	TRIC_SYMBOL_FLAG_PIC and LABEL_REFs.
+	(tric_encode_section_info): Mark FUNCTION_DECL as
+	TRIC_SYMBOL_FLAG_PIC if -mcode-pic is on.
+	(tric_print_operand): Handle (const(minus())) and (high).
+
+	* constraints.md (Sh): New constraint for HIGH.
+	* predicates.md (high_const_int_operand): Rename to...
+	(high_operand): ... this and allow HIGH.
+	(add_input_operand): Use it instead of high_const_int_operand.
+
+	* tricore.md (unspec): Add UNSPEC_CODE_PIC.
+	(*addsi3): Add Sh constraint to respective alternatives.
+	(load_pc, *add_pic_low, load_pic_symbol): New insns.
+	(load_pic_symbol.local): New split1.
+	(load_pic_symbol.nonlocal): New split1.
+	(*tablejump_internal): Fix insn length.
+	
+	* tricore-protos.h (tric_debug_t): Add field pic.
+	* tricore-log.c (tric_log_init): Initialize it.
+
+2012-04-16  Georg Lay
+
+	[GCC-57]
+	* tricore.opt (-mcode-pic): New command line option and...
+	(TARGET_DYNAMIC_CODE_PIC): ...new variable.
+
+	* tricore.c (tric_text_section): New variable.
+	(tric_asm_init_sections): Initialize it. Override text_section
+	if PIC is generatet.
+	(TARGET_ASM_FUNCTION_SECTION): New define.
+	(tric_asm_function_section): New static function.
+	(tric_asm_unique_section): Handle case SECCAT_TEXT.
+
+2012-04-16  Georg Lay
+
+	* htc-version.h: Set tool version: v1.0 (prerelease)
+
+2012-03-21  Georg Lay
+
+	[GCC-67]
+	* tricore.c (tric_emit_move_CONST_INT): Only use -1 >> n to load a
+	const_int if dest is not an address register.
+
+2012-03-21  Georg Lay
+
+	[GCC-68]
+	* tricore.c (tric_section_flags_from_string): Return -1 (illegal)
+	if both flags "s" and "z" are specified.
+	(tric_insert_section): Quote section name in
+	diagnostic.
+
+2012-03-19  Georg Lay
+
+	* tricore.c (tric_section_type_flags): Move up section lookup.
+
+2012-03-13  Georg Lay
+
+	* tricore.c (tric_decl_in_smalldata): Use tric_lookup_section to
+	get right flags for user-defined sections.
+	(tric_decl_in_absolute): Ditto.
+	(tric_section_type_flags): Ditto.
+
+2012-03-08  Georg Lay
+
+	* tricore.c (tric_set_decl_from_section): Warn if non-const data
+	is put into read-only section.
+
+2012-03-08  Georg Lay
+
+	* tricore.c (tric_insert_section): Inherit sections flags if a
+	built-in section name is a prefix.
+	(tric_section_type_flags): Ditto.
+	
+2012-03-05  Georg Lay
+
+	* tricore.c (tric_section_type_flags): Only promote section flags
+	for built-in sections.
+
+2012-02-29  Georg Lay
+
+	* tricore.c (tric_local_alloc_order): Move to...
+	(tric_order_regs_for_local_alloc): ...here.
+	(tric_conditional_register_usage): Call
+	tric_order_regs_for_local_alloc instead of using tric_local_alloc_order.
+
+2012-02-29  Georg Lay
+
+	* tricore.c (STR_PREFIX_P): New makro.
+	(tric_asm_output_aligned_block): Use it to factor out __gnu_lto*
+	symbols instead of only one hard coded variant "__gnu_lto_v1".
+
+2012-02-29  Georg Lay
+
+	* tricore.h (struct tric_section): Wrap into #ifndef IN_LIBGCC2.
+
+2012-02-29  Georg Lay
+
+	[GCC-63]
+	* tricore.md (ashrsi3): Add clobber REG_PSW in splitter.
+
+2012-02-29  Georg Lay
+
+	* tricore-c.c (tric_pragma_section): Fix typo "one" to "once" in
+	diagnose.
+
+2012-02-29  Georg Lay
+
+	* tricore-c.c (tric_pragma_scan_section_name): Clean-up code.
+	Use libiberty's reconcat instead of xmalloc.
+	Always Warn for non-string section name in a non-string token is
+	used to construct a section name.
+	(tric_pragma_section): Remove check for error_mark_node.
+
+2012-02-29  Georg Lay
+
+	* tricore-c.c (tric_pragma_section): Treat CPP_COMMA and
+	CPP_STRING tokens after section name like any other unexpected token.
+	(tric_pragma_section): Quote section name in diagnostic messages.
+
+2012-02-29  Georg Lay
+
+	* tricore-c.c (tric_pragma_scan_section_name): Remove call to
+	tric_valid_section_name_p.
+	(tric_valid_section_name_p): Move function from here...
+	* tricore.c (tric_valid_section_name_p) ...to this new function.
+	(tric_insert_section): Add sanity check for section names so that
+	sections generated by attribute asection are sanity-checked, too.
+
+2012-02-29  Georg Lay
+
+	[GCC-61]
+	* tricore.opt (-Wdeprecated-pragma-section-name): New option.
+	(tric_warn_deprecated_pragma_section_name): New variable.
+	* tricore-c.c (tric_pragma_scan_section_name): Use it.
+	Change warning text to be more comprehensible.
+
+2012-02-29  Georg Lay
+
+	Add GTY markers to user-defined sections.
+	* tricore-protos.h (tric_section_t): Move typedef from here to...
+	* tricore.h (tric_section_t): ...here. Add GTY marker.
+	Change field .location from location_t to unsigned int, see FIXME.
+	Change field .sec from section** to section*.
+	* tricore.c
+	(tric_asm_init_sections): Adapt iniialization to new type section*
+	of tric_section_t.sec.
+	(tric_insert_section): Quote section names in diagnostics.
+	Use ggc_alloc instead of xmalloc for new tric_section_t objects.
+	(tric_sections): Add GTY marker.
+	(tric_pragma_section_code): Add GTY marker.
+	(tric_pragma_section_data): Add GTY marker.
+	
+2012-02-28  Georg Lay
+
+	[GCC-63]
+	* tricore.md (extendsidi2): Clobber REG_PSW.
+	(usum_widendi3, *usub_widendi3): Ditto.
+	(adddi3, *adddi3): Ditto.
+	(negdi2): Ditto.
+	(ashrsi3, *ashrsi3_unspec): Ditto.
+
+2012-02-01  Georg Lay
+
+	Port from v4.5.x/trunk r1893.
+	* tricore.c (tric_set_section_attributes): Remove deprecated %J
+	formatter from diagnostic message(s).
+	(tric_handle_asection_attribute): Ditto.
+	(tric_decl_excluded_from_section_p): Ditto.
+
+2012-01-24  Georg Lay
+
+	* tricore.c (tric_asm_named_section): Use initializer_zerop
+	instead of tric_bss_initializer_p to warn for data clashed with
+	'B' flagged section.
+	
+2012-01-23  Georg Lay
+
+	* tricore.c (tric_asm_named_section): Warning if variable with
+	non-zero initializer is put into 'B' section.
+
+2012-01-20  Georg Lay
+
+	* tricore.c (tric_insert_section, tric_set_section_attributes,
+	tric_output_section_asm_op, tric_asm_output_aligned_var):
+	Format to coding rules.
+
+2012-01-20  Georg Lay
+
+	* tricore.h (TRIC_SECTION_BITDATA): Redefine to new offset.
+	(TRIC_SECTION_CORE, TRIC_SECTION_CORE_MASK): New defines.
+	(TRIC_SECTION_CORE_SET, TRIC_SECTION_CORE_GET): New defines.
+	* tricore.c (tric_section_flags_from_string): Handle c flag.
+	(tric_section_flags_from_flags): Handle TRIC_SECTION_CORE_MASK.
+	(tric_output_section_asm_op): No more filer out s and z flags.
+	(tric_asm_named_section): Ditto.
+	
+2012-01-20  Georg Lay
+
+	* constraints.md (Kp2): Fix to work with 64-bit build platform.
+	
+2012-01-19  Georg Lay
+
+	* tricore.md (*addsi3_0): New split.
+
+2012-01-18  Georg Lay
+
+	* tricore.c (tric_const_int_costs): Use trunc_int_for_mode instead
+	of int16_t.
+	(tric_emit_move_CONST_INT): Use gen_int_mode instead of GEN_INT.
+	(tric_split_const_int): Ditto.
+	(tric_emit_casesi): Ditto.
+	(tric_legitimize_address): Ditto.
+	(tric_address_cost): Ditto.
+	(tric_canonicalize_comparison): Ditto.
+	* tricore.md (*mov<mode>_insn): Ditto.
+	(*movsi_insn +1): Ditto.
+	(ashldi3, _lshrdi3, *lshrdi3, ashrdi3): Ditto.
+	(insv): Ditto.
+	* tricore-combine.md (andsi3_ones_split): Ditto.
+	(*movcc-const.bit_ne0.2.ic, *movcc-const.bit_eq0.2.ic): Ditto.
+	(*ldmst.or-ones.ic): Ditto.
+	(*insert.uconst.ic): Use UOPVAL instead of (unsigned int) OPVAL.
+	
+2012-01-06  Georg Lay
+
+	* tricore.c (tric_handle_asection_attribute): Remove dead code.
+	Obey coding rules.
+	(tric_reg_class_tab): Make local by moving to...
+	(tric_regno_reg_class): ...here.
+	
+2012-01-05  Georg Lay
+
+	* tricore.h (tric_core_t): Remove field .macro.
+	* tricore.c (tric_cores): Remove .macro from initilizer.
+	* tricore-c.c (tric_cpu_cpp_builtins): Use cpp_define_formatted if
+	applicable.
+	
+2012-01-05  Georg Lay
+	
+	* tricore.c (tric_len_mov64): Mark parameter dest as unused.
+        (tric_insert_section): Use ggc_strdup instead of xmalloc.
+        (tric_asm_record_gcc_self_switches): Ditto.
+        (tric_asm_init_sections): Rename default small read-only data
+        section from .sdata.rodata to .srodata.
+        Use ACONCAT instead of concat to build section name.
+
+2012-01-05  Georg Lay
+
+	[GCC-56]
+	* tricore.c (tric_asm_unique_section): Honor
+	TARGET_ALIGNED_DATA_SECTIONS: Read section prefix from
+	tric_data_section[].
+	
+2011-12-23  Georg Lay
+
+	Remove -msubsection of favour of -maligned-data-sections.
+	* tricore.opt (msubsection): Remove target option.
+	* tricore.h (ASM_OUTPUT_SUBSECTION): Remove.
+	* tricore.c (tric_asm_output_subsection): Remove.
+
+2011-12-23  Georg Lay
+
+	* tricore.md (adjust): Add mov64.
+	(*movdi_insn, *movdf_insn): Use it.
+	* tricore.c (tric_adjust_insn_length): Handle ADJUST_MOV64.
+	(tric_len_mov64): New static function.
+
+2011-12-22  Georg Lay
+
+	* tricore-protos.h (UOPVAL): New custom macro.
+	* tricore.md (*mov<mode>_insn): Avoid types from stdint.h.
+	* tricore.c (tric_emit_move_CONST_INT): Ditto.
+	(tric_emit_setcompare_di): Ditto.
+	(tric_emit_cbranchdi4): Ditto.
+	tric_output_reglist, tric_output_reglist1, 
+	(tric_addr_t, tric_decompose_address): Remove.
+
+2011-12-22  Georg Lay
+
+	Add insn attribute "length"
+	* predicates.md (D15_reg_operand): New predicate.
+	* tricore.md (type): New insn attribute.
+	(length): Use it.
+	(*movsicc.eq, *movsicc.ne, *addsicc.<code>, *addsicc.<code>.2,
+	jump, indirect_jump, *b<code>_zero, *b<code>,
+	branch_and_decrement): 	Add length resp. type attribute.
+	* tricore-combine.md (*subsi3_one_cmpl_1bit.ic, *bridge.ic,
+	*branch_zerox1<mode>_<code>0.ic, *j<tric_n_op>z_andsi3_extr): Ditto.
+
+2011-12-22  Georg Lay
+
+	* tricore.h (HONOR_REG_ALLOC_ORDER): Define.
+
+2011-12-21  Georg Lay
+
+	Add insn attribute "length"
+	* tricore.md (adjust): Add bitop, seq.
+	(addsi_low): Avoid types from stdint.h.
+	(*split.movsi.immediate): Ditto and use tric_emit_move.
+	(*andsi3_255, one_cmplsi2): Add attribute length.
+	(*seq, *andsi3, *iorsi3, *xorsi3, negsi2). Ditto and attribute adjust.
+	* tricore.c (tric_len_bitop, tric_len_seq): New static functions.
+	(tric_adjust_insn_length): Use them to handle ADJUST_BITOP,  ADJUST_SEQ.
+
+2011-12-21  Georg Lay
+
+	Add insn attribute "length"
+	* tricore.h (ADJUST_INSN_LENGTH): New define.
+	* tricore-protos.h (tric_adjust_insn_length): New.
+	* tricore.c (tric_adjust_insn_length): New function.
+	(tric_len_load_store): New static function.
+	(tric_len_mov): New static function.
+	(tric_len_add32, tric_len_sub32): New static functions.
+	(tric_adjust_insn_length): New function.
+
+	* tricore.md (length, adjust): New insn attributes.
+	(*movsi_insn, *movsf_insn, *movhi_insn, *movqi_insn): Use them.
+	(*addsi3, subsi3, usum_widendi3, *adddi3): Use them.
+	(*rotatedi3_32, ashlsi3, lshrsi3, ashrsi3): Use them.
+	(*extendqisi2, *zero_extendqisi2): Use them.
+	(*extendhisi2, *zero_extendhisi2): Use them.
+	(return_insn, freturn, prologue_nop): Use them.
+
+	* tricore-combine.md (maddsi4): Use them.
+	(*ssatqi.1.ic, *ssatqi.2.ic, *ssatqi.3.ic, *ssatqi.4.ic): Use them.
+	(*usathi.ic, *ssathi.2.ic, *ssathi.3.ic, *ssathi.4.ic): Use them.
+	(*lt-sel.ic, *ge-sel.ic"): Use them.
+	(*maxmin-1.ic, *maxmin-2.ic, *maxmin-3.ic, *maxmin-4.ic): Use them.
+	(*maxmin-5.ic, *maxmin-6.ic, *maxmin-7.ic): Use them.
+
+2011-12-19  Georg Lay
+	
+	Use double_int instead of stdint.h
+	* tricore-protos.h: Remove #include <stdint.h>
+	(extra_constraint_Gl9): Remove.
+	(extra_constraint_Gh9): Remove.
+	(tric_const_double_value): Remove.
+	(tric_double_int_pop_digit): New prototype.
+	(tric_split_const_rtx): New prototype.
+
+	* predicates.md (add64_const_operand): Remove.
+	(reg_or_add64_const_operand): Remove.
+
+	* tricore-log.c (tric_double_int_pop_digit): Remove.
+	(tric_dump_double_int_hex): Use tric_double_int_pop_digit with
+	base = 0.
+
+	* tricore.c: Remove #include <stdint.h>
+	(tric_can_add64): Remove.
+	(extra_constraint_Gl9): Remove.
+	(extra_constraint_Gh9): Remove.
+	(tric_const_double_value): Rewrite using double_int and make static.
+	(tric_print_operand): Use tric_split_const_rtx for CONST_INT and
+	CONST_DOUBLE.  Remove '%K'.
+	(extra_constraint_Ga9): Use tric_split_const_rtx.
+	(extra_constraint_Gsg): Ditto.
+	(extra_constraint_Ghg): Ditto.
+	(tric_const_double_costs): Ditto.
+	(tric_double_int_pop_digit): New function.
+	(tric_split_const_rtx): New function.
+
+	* tricore.md (adddi3): Use tric_split_const_rtx.
+
+2011-12-19  Georg Lay
+
+	* tricore.c (tric_print_operand): Fix prototype.
+	(contains_subreg_of_mem_p): Ditto.
+	(contains_large_mode_p): Ditto.
+
+2011-12-16  Georg Lay
+
+	* tricore.h (PRINT_OPERAND_PUNCT_VALID_P): Remove.
+	(PRINT_OPERAND, PRINT_OPERAND_ADDRESS): Remove.
+	* tricore-protos.h (tric_print_operand): Remove.
+	(tric_print_operand_address): Remove.
+	* tricore.c (TARGET_PRINT_OPERAND): New hook define.
+	(TARGET_PRINT_OPERAND_ADDRESS): New hook define.
+	(tric_print_operand, tric_print_operand_address): Make static.
+	
+2011-12-16  Georg Lay
+
+	* tricore-combine.md (maddsi4, *maddsi4-2.ic): Use constraind "d"
+	instead of "D" in last alternative .
+	(*maddsicc.mul.cond.ic): New insn.
+	(*addsi4_one.ic): Only split prior to reload. Add FIXME(optimize).
+	
+2011-12-12  Georg Lay
+
+	[GCC-56]
+	* tricore.opt (maligned-data-sections): New Option.
+	* tricore.c (tric_data_section): New section* array.
+	(zbss_section): Turn from variable to macro.
+	(zdata_section, zrodata_section, srodata_section): Remove.
+	(tric_decl_volatile_const_rodata_p): Fix argument list to use
+	const_tree instead of tree.
+	(tric_output_section_asm_op): Rewrite.
+	(tric_asm_init_sections): Initialize tric_data_section[].
+	(tric_asm_select_section): Use tric_data_section[] to lookup.
+
+2011-12-01  Georg Lay
+
+	* tricore-log.c: New file.
+	* t-tricore (tricore-log.o): New rule to build from tricore-log.c.
+	* tricore-protos.h (tric_fdump_f): Remove.
+	(tric_dump): Define to tric_log_set_caller_d.
+	(tric_edump): Define to tric_log_set_caller_e.
+	(tric_fdump): Define to tric_log_set_caller_f.
+	(tric_log_set_caller_d): New prototype.
+	(tric_log_set_caller_e): New prototype.
+	(tric_log_set_caller_f): New prototype.
+	(tric_vadump, tric_fdump_f): Remove
+
+2011-12-01  Georg Lay
+
+	[GCC-37]
+	* tricore.opt (-mvolatile-const-in-rodata): New option.
+	* tricore.c (tric_decl_volatile_const_rodata_p): New static
+	function.
+	(tric_decl_in_smalldata, tric_decl_in_absolute,
+	tric_bss_initializer_p, tric_asm_select_section,
+	tric_asm_unique_section): Use it.
+
+2011-11-28  Georg Lay
+
+	* tricore.md (define_constants): Rewrite UNSPEC_* as define_c_enum
+	"unspec".  Rewrite UNSPECV_* as define_c_enum "unspecv".
+	
+2011-11-17  Georg Lay
+
+	[GCC-55]
+	Merge CFO-111103
+	* tricore.md (UNSPEC_FCALL): New define_constants.
+	(fcall, freturn): New insns.
+
+2011-11-14  Georg Lay
+
+	* tricore.h: Fix coding conventions: Break lin lines, etc.
+	* tricore.c: Ditto.
+
+2011-11-14  Georg Lay
+
+	Port to 4.6 (gcc-4_6-branch)
+	* tricore.h (target_flags): New declaration.
+	(OVERRIDE_OPTIONS): Remove.
+	(OPTIMIZATION_OPTIONS): Remove.
+	(RETURN_POPS_ARGS): Remove.
+	(CONDITIONAL_REGISTER_USAGE): Remove.
+	(SMALL_REGISTER_CLASSE): Remove.
+	(CLASS_LIKELY_SPILLED_P): Remove.
+	(REGISTER_MOVE_COST): Remove.
+	(MEMORY_MOVE_COST): Remove.
+	(ORDER_REGS_FOR_LOCAL_ALLOC): Rename to...
+	(ADJUST_REG_ALLOC_ORDER): ...this new define.
+
+	* tricore-protos.h (tric_class_likely_spilled_p): Remove.
+	(tric_conditional_register_usage): Remove.
+	(tric_override_options, tric_optimization_options): Remove.
+	(tric_register_move_cost, tric_memory_move_cost): Remove.
+	* tricore-c.c (c-pragma.h): Change include to c-family/c-pragma.h.
+	(c-common.h): Change include to c-family/c-common.h.
+
+	* t-tricore (tricore-c.o): Update dependency: c-pragma.h moved to
+	c-family.
+
+	* tricore.c (c-common.h): Change include to c-family/c-common.h.
+	(tric_symbol_ref_small16_p): Takes const_rtx argument (not rtx).
+	(tric_symbol_ref_absolute_p): Ditto.
+	(tric_use_anchors_for_symbol_p): Ditto.
+	(tric_optimization_options): Remove.
+	(tric_option_optimization_table): New static variable.
+	(tric_option_init_struct): New static function.
+	(tric_override_options): Rename to...
+	(tric_option_override): ...this new static function. Set flag_web to 0.
+	(tric_conditional_register_usage): Make static.
+	(tric_class_likely_spilled_p): Ditto.
+	(tric_register_move_cost, tric_memory_move_cost): Ditto.
+	(tric_secondary_reload): Use reg_class_t.
+	(tric_rtx_costs): Guess rtx costs after reload: 4.
+	(tric_return_pops_args): New static function.
+	(tric_init_machine_status): Use ggc_alloc_cleared_machine_function.
+	(TARGET_REGISTER_MOVE_COST): New define.
+	(TARGET_MEMORY_MOVE_COST): New define.
+	(TARGET_CAN_INLINE_P): New define.
+	(TARGET_MD_ASM_CLOBBERS): New define.
+	(TARGET_CONDITIONAL_REGISTER_USAGE): New define.
+	(TARGET_CLASS_LIKELY_SPILLED_P): New define.
+	(TARGET_RETURN_POPS_ARGS): New define.
+	(TARGET_OPTION_OVERRIDE): New define.
+	(TARGET_OPTION_OPTIMIZATION_TABLE): New define.
+	(TARGET_OPTION_INIT_STRUCT): New define.
+	
+2011-11-14 Georg Lay
+
+	* tricore-combine.md (msubsi4.ashift.ic): New insn-and-split.
+
+2011-09-14  Georg Lay
+	
+	* tricore-dinkum.h: New file.
+	* tricore.h (LIB_SPEC): Don't conditionalize on ad-hoc macros.
+	(ASM_OUTPUT_EXTERNAL): Undefine before defining it.
+	gcc/
+	* config.gcc: Add new configuration tricore-*-dinkum.
+
+2011-09-13  Georg Lay
+
+	[bug GCC-53]
+	* tricore-protos.h (tric_absolute_code_address_p): New prototype.
+	* tricore.c (TRIC_ABSOLUTE_CODE_ADDRESS_P): New Macro.
+	(tric_absolute_code_address_p): New global Function.
+	(tric_output_call): Use JLA/CALLA/JA for CONST_INT addresses.
+	* constraints.md (Sc): New constraint.
+	* tricore.md (call_insn, call_value_insn, *call_irq_insn,
+	*call_value_irq_insn): Use constraints "Sc,s" instead of "i".
+	
+2011-09-12  Georg Lay
+
+	testsuite/
+	* gcc.dg/torture/pr37868.c: Add dg-skip-if "unaligned access" for
+	tricore.
+
+2011-09-09  Georg Lay
+
+	testsuite/
+	* lib/target-supports.exp (check_profiling_available): set
+	profiling_available_saved 0 for tricore.
+	
+2011-09-09  Georg Lay
+
+	* tricore.md (movstr_insn): Remove.
+	(movstr): Expand as inline RTL.
+	
+2011-09-08  Georg Lay
+
+	* tricore.md (movstr_insn): Describe effect of movstr on operands.
+	
+2011-09-08  Georg Lay
+
+	testsuite/
+	* gcc.dg/pch/pch.exp: Skip pch-tests for tricore.
+
+2011-09-08  Georg Lay
+
+	* tricore.md (movmemsi,*movmemsi.<mode>): Use match_scratch
+	instead of match_dup.  See, e.g. PR avr/16884.
+	(movstr_insn): Ditto.
+
+2011-09-07  Georg Lay
+
+	* tricore.c (tric_optimization_options): Set
+	flag_tree_loop_optimize to 0.
+
+2011-09-07  Georg Lay
+
+	testsuite/
+	* builtin-apply1.c: Skip for tricore: No __builtin_apply.
+	* builtin-apply2.c: Ditto.
+	* builtin-apply3.c: Ditto.
+	* builtin-apply4.c: Ditto.
+	* builtin-return1.c: Ditto.
+	
+2011-09-07  Georg Lay
+
+	testsuite/
+	* gcc.target (tricore): New directory and files.
+
+2011-09-07  Georg Lay
+
+	testsuite/
+	* lib/gcc-defs.exp (gcc-set-multilib-library-path): Add
+	-B${rootme} to "[exec $compiler --print-multi-lib]" so that
+	tricore.specs will be found.
+
+2011-09-07  Georg Lay
+
+	testsuite/
+	* gcc.dg/20020312-2.c: (PIC_REG): Handle TriCore.
+	* gcc.c-torture/compile/930623-1.c: Skip __builtin_apply for
+	tricore.
+	
+2011-09-07  Georg Lay
+
+	* tricore.md (*movmemsi.<mode>): Use + as constraint modifier for
+	output operands.
+	(movstr_insn): Ditto.  Swap %0 and %1 in output template.
+
+2011-09-07  Georg Lay
+
+	* tricore.md (insv): Fix mask 0xffff0000 -> 0xffff of gen_insv_3a_ic.
+	
+2011-09-06  Georg Lay
+
+	* tricore-protos.h (extra_constraint_Wl): New Prototype.
+
+2011-09-06  Georg Lay
+
+	* tricore.md (setmemsi, *setmemsi.<mode>): Use distinct operand to
+	clobber	address op0.
+
+2011-09-05  Georg Lay
+
+	* tricore.c (extra_constraint_Wl): New global function.
+	* constraints.md (Wl): Use it. New constraint.
+	* tricore-combine.md (*insv.mem, ldmst, *ldmst.or, *ldmst.and):
+	Use it.
+
+2011-09-05  Georg Lay
+	
+	* tricore.md (*movmemsi.<mode>): Use op1 as source register and
+	not op0.
+	
+2011-08-24  Georg Lay
+	
+	* tricore.md (movstr): New movstr_insnexpander.
+	(movstr_insn): New insn.
+	(UNSPEC_MOVSTR): New C enum.
+
+2011-08-24  Georg Lay
+
+	* tricore.md (movmemsi): New expander.
+	(*movmemsi.<mode>): New insns.
+	(UNSPEC_MOVMEM): New C enum.
+	(*setmemsi.<mode>): Unroll loops <= 3.
+	* tricore.h (MOVE_RATIO): Define to tric_move_ratio.
+	(CLEAR_RATIO, SET_RATIO): New Defines.
+	* tricore-protos.h (tric_move_ratio): New prototype.
+	(tric_clear_ratio): New prototype.
+	(tric_set_ratio): New prototype.
+	* tricore.c (tric_move_ratio): New global function.
+	(tric_clear_ratio): New global function.
+	(tric_set_ratio): New global function.
+	
+2011-08-22  Georg Lay
+
+	[bug GCC-53]
+	* tricore.md (call_insn): HImode for mem operand.
+	(call_value_insn): Ditto.
+	
+2011-08-11  Georg Lay
+	
+	* tricore.md (divsi3,*divsi3_call): Remove.
+
+2011-08-11  Georg Lay
+
+	Implement "setmemsi".
+	* tricore-protos.h (tric_mode_for_align): New prototype.
+	* tricore.c (tric_mode_for_align): New function.
+	(tric_rtx_costs): Handle SET BLKmode.
+	* predicates.md (u3_operand): New pedicate.
+	* constraints.md (Kue): New constraint.
+	* iterators.md (QIHISIDI): New mode iterator.
+	* tricore.md (UNSPEC_MEMSET): New constant.
+	(setmemsi): New expander.
+	(*setmemsi.<mode>): New insns.
+	(setmem_clobber): New mode attribute.
+	(load_suffix, store_suffix): New mode attributes.
+
+2011-08-08  Georg Lay
+	
+	* tricore.c (tric_legitimate_address_p): Allow bitsize = 0, i.e.
+	BLKmode for tric_small16_address_p SYMBOL_REFs.
+
+2011-08-08  Georg Lay
+	
+	* tricore.c (tric_emit_move): Use replace_equiv_address instead
+	of gen_rtx_MEM.
+
+2011-08-08  Georg Lay
+	
+	* tricore-protots.h (tric_debug_t): Add field
+	must_load_indirect_p.
+	* tricore.c (tric_override_options): Set it up.
+	(tric_must_load_indirect_p): Use it to print result.
+
+2011-08-08  Georg Lay
+
+	* tricore.c (tric_rtx_costs): Don't override speed.
+
+2011-07-19  Georg Lay
+
+	* tricore-combine.md (*insv.mem): Add attributes.
+	(*ldmst.or): New insn.
+	(*ldmst.and): New insn.
+	(*ldmst.or.ic): New insn-and-split.
+	(*ldmst.and.ic): New insn-and-split.
+
+2011-07-18  Georg Lay
+
+	* tricore-combine.md (*iorsi3_ones.ic): Use ones4_operand
+	for op2.
+	(*andsi3_zeroes.insert.ic): Use zeros_operand for op2.
+	* tricore-protos.h (extend_operand_p): Remove.
+	* tricore.c (extend_operand_p): Remove.
+	* predicates.md: (extend_operand): Implement directly.
+
+2011-07-18  Georg Lay
+	
+	* predicates.md (vok_memory_operand): New.
+	(vok_absolute_memory_operand): New.
+	(vok_nonimmediate_operand): New.
+	
+	* constraints.md (Wz): New.
+
+	* tricore.md (insv): Use vok_nonimmediate_operand for op0.
+	Use gen_int_mode for large CONST_INTs.
+	Restrict MEM operands to SImode.
+
+	* tricore-combine.md
+	(*st.t.1): Rename insn to *st.t.1.or.
+	(*st.t.0): Rename insn to *st.t.0.and.
+	(*st.t.1): Rename insn-and-split to *st.t.1.or-subreg.
+	(*st.t.0): Rename to *st.t.0.and-subreg.
+	(*st.t.1.or): Use vok_absolute_memory_operand for op0.
+	(*st.t.0.and): Ditto.
+	(*st.t.1.or-subreg): Ditto.
+	(*st.t.0.and-subreg): Ditto.
+	(*st.t.insv): New insn.
+	(*ldmst.or-ones.ic): Use vok_memory_operand for op0.
+	Exclude ST.T in condition.
+	(*ldmst.and-zeros.ic): Ditto.
+	(*insv.mem): Ditto.
+	(ldmst): Use vok_memory_operand for op0.
+
+2011-07-14  Georg Lay
+	
+	(*insv.mem): Don't undo ST.T: filter it out.
+	(*ldmst.or-ones.ic): Ditto.
+	(*ldmst.and-zeros.ic): Ditto.
+
+2011-07-14  Georg Lay
+	
+	Support LDMST
+	* tricore.c (tric_gate_split1): New Function.
+	* tricore-protos.h (tric_gate_split1): New Prototype.
+	* tricore.md (insv): Use nonimmediate_operand for
+	operand0.
+	* tricore-combine.md (*iorsi3.ones): New insn-and-split.
+	(*st.t.0,*st.t.1): New insns.
+	(*ldmst.or-ones.ic): New insn-and-split.
+	(*ldmst.and-zeros.ic): New insn-and-split.
+	(*insv.mem): New insn-and-split.
+	(ldmst): New insn.
+	* predicates.md (s21_operand): Remove.
+	(single_one_operand): New.
+	(single_zero_operand): New.
+	(ones_operand): New.
+	(ones4_operand): New.
+	(zeros_operand): New.
+	(absolute_address_operand): New.

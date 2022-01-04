@@ -1,0 +1,223 @@
+2016-05-24  Robert Agoston
+
+	[HDP-585]
+	* HDP-v4.9.0.0-tricore released.
+
+2015-04-13  Peter Gal
+
+	[HDP-120]
+	* v850.c (TARGET_MERGE_DECL_ATTRIBUTES): Use htc_merge_decl_attributes.
+
+2014-11-06  Georg Lay
+
+	[HDP-379]
+	* v850.c (v850_libc_has_function): Make static. Use `LIBC_DINKUM'
+	instead of `DINKUM'.
+	* v850-protos.h (v850_libc_has_function): Remove.
+
+2014-10-10 Zoltán Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-438]
+	* v850.opt (mpragma-data-sections): Removed, it's part of htc-common.opt
+
+2014-09-01 Horst Lehser <Horst.Lehser@hightec-rt.com>
+
+	[HDP-460]
+	* v850.opt (msoft-float, mhard-float): Deleted.
+	(mfloat-gprs=): Allowed values no,single,double.
+	* v850.h: Adapt defines for FPU usage and builtin defines.
+
+2014-08-29  Horst Lehser
+
+	[HDP-460]
+	* t-v850 (MULTILIB_OPTIONS, MULTILIB_DIRNAMES, MULTILIB_EXCEPTIONS):
+	Add multilib for single and double precision float.
+
+2014-08-29 Zoltán Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-495]
+	* v850.h (ASM_SPEC): Removed m8byte-double and m4byte-double.
+
+2014-08-29  Horst Lehser
+
+	[HDP-384]
+	* v850.md (divmodhi4): Deleted. because the desciption is
+	not compatible to divh.
+	* v850.md (udivmodhi4): Ditto.
+
+2014-08-28 Horst Lehser
+
+	[HDP-405]
+	* v850-dinkum.h: Adapt LIB_SPEC.
+
+2014-08-01  Zoltán Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-437]
+	* v850.c (V850_ATTR_ABSOLUTE): New macro.
+	(V850_ATTR_SMALL): Ditto
+	(v850_section_flags_from_string): Added handling of the abs section
+	(v850_section_flags_to_string): Ditto
+	(v850_set_decl_from_section): Ditto + Moved here the handling of 
+	initialized variable checking against BSS section
+	(v850_handle_decl_attribute): New function
+
+2014-07-28 Zoltán Ördög <zoltan.ordog@higtec-rt.com>
+
+	[HDP-405]
+	* v850.c (v850_libc_has_function): Return default_libc_has_function 
+	if no LIBC_DINKUM is defined, instead of false.
+
+2014-07-25 Zoltán Ördög <zoltan.ordog@higtec-rt.com>
+
+	[HDP-405]
+	* v850-dinkum.h (TARGET_LIBC_HAS_FUNCTION): Removed.
+	* v850.c (TARGET_LIBC_HAS_FUNCTION): Added hook.
+	(v850_libc_has_function): Return true if LIBC_DINKUM has defined
+
+2014-07-25 Zoltán Ördög <zoltan.ordog@higtec-rt.com>
+
+	[HDP-405]
+	* v850-dinkum.h (TARGET_LIBC_HAS_FUNCTION): Depends on DEFAULT_LIBC
+	variablie, which is defined in config.gcc
+
+2014-07-23 Zoltán Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-495]
+	* v850.h (ASM_SPEC): Added options which gcc have to send to assembler
+	to set up flags in Renesas_info section.
+	* v850.opt: Added new options.
+
+2014-07-22  Zoltán Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-500]
+	* v850.c (v850_encode_section_info): Warn if user want to put
+	initialized date into BSS section.
+
+2014-07-18  Zoltán Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-437]
+	* v850-c.c (HTC_PRAGMA): Typo fix
+	(used_pragma): Renamed into v850_used_pragma
+	* v850-protos.h (v850_used_pragma): New variable.
+	* v850.c: Include tm.h insted of v850.h, Indentation fix
+	(used_pragma): Renamed into v850_used_pragma
+	* v850.h (HTC_PRAGMA): Typo fix.
+	(used_pragma): Removed.
+
+2014-07-14 Zoltan Ördög <zoltan.ordog@highter-rt.com>
+
+	[HDP-473]
+	* t-v850 (MULTILIB_OPTIONS): Added fshort-double
+	(MULTILIB_DIRNAMES): Added short-double
+
+2014-07-10 Zoltán Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-473]
+	* v850.h (CPP_SPEC): New builtin HAVE_SHORT_DOUBLE
+
+2014-07-10 Zoltán Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-462]
+	* v850.h (ASM_SPEC): Modifying mv into mv8, because the mversion-info is
+	sent to the assembler.
+
+2014-07-10 Zoltán Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-460]
+	* t-v850 (MULTILIB_OPTIONS): Added msoft-float and mfloat-gprs=double
+	(MULTILIB_DIRNAMES): Added single-soft-float double-soft-float
+	* v850.h (TARGET_HARD_FLOAT): New macro
+	(TARGET_USE_FPU): Use TARGET_HARD_FLOAT macro
+	(TARGET_RH850_SINGLE): New macro
+	(TARGET_RH850_DOUBLE): New macro
+	* v850.md: Guarding FPU instructions with TARGET_RH850_SINGLE or
+	TARGET_RH850_DOUBLE
+	* v850.opt: New option mfloat-gprs=
+
+2014-07-07 Zoltán Ördög <zoltan.ordog@higtec-rt.com>
+
+	[HDP-461]
+	* v850.h (TARGET_CPU_CPP_BUILTINS()): Add htc_cpu_cpp_builtins function
+	call.
+	Rename to V850_CPU_CPP_BUILTINS ();
+	(V850_CPU_CPP_BUILTINS ()): New function
+
+2014-07-07 Zoltán Ördög <zoltan.ordog@higtec-rt.com>
+
+	[HDP-405]
+	* v850-dinkum.h: New file
+	* v850.h (LIB_SPEC): Outsourced -ldnk_c -los to v850-dinkum.h
+	(TARGET_LIBC_HAS_FUNCTION): Outsourced to v850-dinkum.h
+
+2014-07-07 Zoltán Ördög <zoltan.ordog@higtec-rt.com>
+
+	[HDP-405]
+	* v850.c (v850_libc_has_function): New function
+	* v850-protos.h (v850_libc_has_function): New function prototype
+	* v850.h: New hook function for TARGET_LIBC_HAS_FUNCTION (this is same
+	as TARGET_HAS_SINCOS and TARGET_C99_FUNCTIONS)
+
+2014-07-02  Zoltán Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-437]
+	* v850.c (v850_insert_attributes): Removed DECL_CONTEXT change part,
+	because it causes error's in c++ build. (HDP-488)
+
+2014-07-02  Zoltán Ördög <zoltan.ordog@hightec-rt.com>
+
+	* v850.c (v850_section_flags_from_string): Return -1UL instead of -1
+	(v850_section_flags_to_string): Handle SECTION_BSS and SECTION_LINKONCE.
+	Close s_flags with '\0' instead of 0.
+	(v850_section_type_flags): New function.
+	(TARGET_SECTION_TYPE_FLAGS): New hook function for
+	v850_section_type_flags.
+
+2014-07-02  Zoltán Ördög <zoltan.ordog@hightec-rt.com>
+
+	Basicly this change does the following things:
+	1) Implement a section handling based on the new section structure.
+	   These are mostly in the v850.c file.
+	2) Implement the handling of the #pragma section.
+	   These are mostly in the v850-c.c file.
+	3) Separate the GHS pragma section implementation from our implemen-
+	   tatation. 
+        
+	The connection between the v850-c.c and v850.c for handling the
+	#pragma section is done by the `v850_pragma_section_code` and
+	the `v850_pragma_section_date` variables.
+
+
+	* v850-c.c (v850_pragma_scan_secion_name): New function
+	(v850_pragma_section_arguments): ditto
+	(v850_pragma_section): ditto
+	* v850.c (v850_lookup_section): ditto
+	(v850_section_flags_from_string): ditto
+	(v850_section_flags_to_string): ditto
+	(v850_section_check_arguments): ditto
+	(v850_set_decl_from_section): ditto
+	(v850_insert_section): ditto
+	(v850_insert_attributes): Determine which pragma is used
+	* v850.h (TARGET_INSERT_ATTRIBUTES): connect to the new function
+	`v850_insert_attributes`
+	(REGISTER_TARGET_PRAGMAS): connect the pragma section handling
+	(v850_section_t): New struct to handle sections
+	(SELECTED_PRAGMA): New enum
+	(used_pragma): New variable
+	* v850-protos.h (v850_pragma_section_code): New extern variable
+	(v850_pragma_section_data): ditto
+	(v850_insert_section): New extern function
+	(v850_pragma_section): ditto
+
+2014-07-02  Zoltán Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-405]
+	* gcc/config/v850/v850.h (TARGET_C99_FUNCTIONS): New define
+	(TARGET_HAS_SINCOS): Ditto
+
+2014-07-01 Zoltán Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-438]
+	* v850.opt (-mpragma-data-sections): New option.
+	(v850_opt_pragma_data_sections): New variable.
+	* v850.c (v850_insert_attributes): Use variable name as setion
+	name suffix if -mpragma-data-sections is turned on

@@ -1,0 +1,23 @@
+/* HTC supported PPC CPU names */
+/* This file describes CPU characteristics  for the linker.
+
+   So far only supported saturation version is implemented.
+
+   Before including this file, define a macro
+
+   DEF_CPU(NAME, SAT_VER)
+
+   NAME:          Name of the cpu as specified with -mcpu=<Name>.
+   SAT_VER:       Highest version of saturation which is supported on the core.
+
+*/
+
+DEF_CPU ("e200zx",      0)
+DEF_CPU ("z225n3",      0)
+DEF_CPU ("z410n3",      1)
+DEF_CPU ("z420n3",      0)
+DEF_CPU ("z425n3",      0)
+DEF_CPU ("z425Bn3",     1)
+DEF_CPU ("z710n3",      1)
+DEF_CPU ("z720n3",      0)
+DEF_CPU ("MCU_JDP_UC1", 0)

@@ -1,0 +1,1409 @@
+msgid ""
+msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Message-Numbers-Known: 222\n"
+"Pool-Offset: 50000\n"
+"Message-Numbers-New: 0\n"
+"Language: en\n"
+"Last-Translator: Automatically generated\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Pool-Max-Number: 50315\n"
+"Pool-Name: ld\n"
+"Language-Team: none\n"
+"Content-Type: text/plain; charset=ASCII\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P: warning: '--thumb-entry %s' is overriding '-e %s'\n"
+msgstr "%P: warning: [50110] '--thumb-entry %s' is overriding '-e %s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P: warning: cannot find thumb start symbol %s\n"
+msgstr "%P: warning: [50102] cannot find thumb start symbol %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P: warning: placing orphan section \"%s(%s)\"\n"
+msgstr "%P: warning: [50127] placing orphan section \"%s(%s)\"\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: --just-symbols may not be used on DSO: %B\n"
+msgstr "%P%F: error: [50235] --just-symbols may not be used on DSO: %B\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P:%B: warning: bfd_stat failed: %E\n"
+msgstr "%P:%B: warning: [50196] bfd_stat failed: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P: warning: %s, needed by %B, may conflict with %s\n"
+msgstr "%P: warning: [50192] %s, needed by %B, may conflict with %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P:%B: error: bfd_elf_get_bfd_needed_list failed: %E\n"
+msgstr "%F%P:%B: error: [50170] bfd_elf_get_bfd_needed_list failed: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P:%B: error: bfd_stat failed: %E\n"
+msgstr "%F%P:%B: error: [50171] bfd_stat failed: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%B: error: could not read symbols: %E\n"
+msgstr "%F%B: error: [50148] could not read symbols: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%P: warning: .note.gnu.build-id section discarded, --build-id ignored.\n"
+msgstr "%P: warning: [50126] .note.gnu.build-id section discarded, --build-id ignored.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P: warning: unrecognized --build-id style ignored.\n"
+msgstr "%P: warning: [50195] unrecognized --build-id style ignored.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%P: warning: Cannot create .note.gnu.build-id section, --build-id ignored.\n"
+msgstr "%P: warning: [50189] Cannot create .note.gnu.build-id section, --build-id ignored.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%P: warning: Cannot create .eh_frame_hdr section, --eh-frame-hdr ignored.\n"
+msgstr "%P: warning: [50188] Cannot create .eh_frame_hdr section, --eh-frame-hdr ignored.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%P: warning: %s, needed by %B, not found (try using -rpath or -rpath-link)\n"
+msgstr "%P: warning: [50193] %s, needed by %B, not found (try using -rpath or -rpath-link)\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: failed to record assignment to %s: %E\n"
+msgstr "%P%F: error: [50219] failed to record assignment to %s: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: failed to set dynamic section sizes: %E\n"
+msgstr "%P%F: error: [50220] failed to set dynamic section sizes: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%B: error: Can't read contents of section .gnu.warning: %E\n"
+msgstr "%F%B: error: [50147] Can't read contents of section .gnu.warning: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%X%P: error: section '%A' of %s will not fit in output section "
+"'%A' (possible memory region overflow enable --warn-section-assignment for "
+"more information or disable --mem-holes)\n"
+msgstr "%X%P: error: [50139] section '%A' of %s will not fit in output section "
+"'%A' (possible memory region overflow enable --warn-section-assignment for "
+"more information or disable --mem-holes)\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: invalid hash style `%s'\n"
+msgstr "%P%F: error: [50228] invalid hash style `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: invalid maxium page size `%s'\n"
+msgstr "%P%F: error: [50230] invalid maxium page size `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: invalid common page size `%s'\n"
+msgstr "%P%F: error: [50226] invalid common page size `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P: warning: bad version number in -subsystem option\n"
+msgstr "%P: warning: [50099] bad version number in -subsystem option\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%P: warning: --export-dynamic is not supported for PE targets, did you mean "
+"--export-all-symbols?\n"
+msgstr "%P: warning: [50106] --export-dynamic is not supported for PE targets, did you mean "
+"--export-all-symbols?\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: resolving %s by linking to %s\n"
+msgstr "warning: [50120] resolving %s by linking to %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%P: warning: auto-importing has been activated without --enable-auto-import "
+"specified on the command line.\n"
+"This should work unless it involves constant data structures referencing "
+"symbols from auto-imported DLLs.\n"
+msgstr "%P: warning: [50098] auto-importing has been activated without --enable-auto-import "
+"specified on the command line.\n"
+"This should work unless it involves constant data structures referencing "
+"symbols from auto-imported DLLs.\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: missing name of export file\n"
+msgstr "%P%F: error: [50134] missing name of export file\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: cannot open export file %s\n"
+msgstr "%P%F: error: [50128] cannot open export file %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: missing core number\n"
+msgstr "%P%F: error: [50133] missing core number\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: invalid core name %s\n"
+msgstr "%P%F: error: [50130] invalid core name %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: missing parameter for option -mcpu\n"
+msgstr "%P%F: error: [50313] missing parameter for option -mcpu\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: invalid core name for option -mcpu\n"
+msgstr "%P%F: error: [50312] invalid core name for option -mcpu\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: missing argument to --mcpu=\n"
+msgstr "%P%F: error: [50132] missing argument to --mcpu=\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: invalid core architecture '%s' for option --mcpu=\n"
+msgstr "%P%F: error: [50129] invalid core architecture '%s' for option --mcpu=\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: invalid type specifier for pcpmap\n"
+msgstr "%P%F: error: [50131] invalid type specifier for pcpmap\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P: warning: ignoring --extmap option due to missing -M/-Map option\n"
+msgstr "%P: warning: [50125] ignoring --extmap option due to missing -M/-Map option\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%P: error: bfd_hash_table_init of cref table failed: %E\n"
+msgstr "%X%P: error: [50276] bfd_hash_table_init of cref table failed: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%P: error: cref_hash_lookup failed: %E\n"
+msgstr "%X%P: error: [50279] cref_hash_lookup failed: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%P: error: cref alloc failed: %E\n"
+msgstr "%X%P: error: [50278] cref alloc failed: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P: warning: symbol `%T' missing from main hash table\n"
+msgstr "%P: warning: [50194] symbol `%T' missing from main hash table\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B%F: error: could not read symbols: %E\n"
+msgstr "%B%F: error: [50142] could not read symbols: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B%F: error: could not read relocs: %E\n"
+msgstr "%B%F: error: [50141] could not read relocs: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%C: error: prohibited cross reference from %s to `%T' in %s\n"
+msgstr "%X%C: error: [50269] prohibited cross reference from %s to `%T' in %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%X: error: Different relocs used in set %s\n"
+msgstr "%P%X: error: [50254] Different relocs used in set %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%X: error: Different object file formats composing set %s\n"
+msgstr "%P%X: error: [50253] Different object file formats composing set %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%X: error: %s does not support reloc %s for set %s\n"
+msgstr "%P%X: error: [50259] %s does not support reloc %s for set %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%X: error: Unsupported size %d for set %s\n"
+msgstr "%P%X: error: [50260] Unsupported size %d for set %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P: error: unrecognised emulation mode: %s\n"
+msgstr "%P: error: [50185] unrecognised emulation mode: %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: Core numbers not supported"
+msgstr "warning: [50261] Core numbers not supported"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: Defining of SDA sections not supported"
+msgstr "warning: [50262] Defining of SDA sections not supported"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: exporting of symbols not supported for this architecture\n"
+msgstr "warning: [50263] exporting of symbols not supported for this architecture\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: Memory mapping not support for this architecture\n"
+msgstr "warning: [50264] Memory mapping not support for this architecture\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%S: error: %% by zero\n"
+msgstr "%F%S: error: [50172] %% by zero\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%S: error: / by zero\n"
+msgstr "%F%S: error: [50173] / by zero\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: bfd_link_hash_lookup failed: %E\n"
+msgstr "%P%F: error: [50205] bfd_link_hash_lookup failed: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%S: error: unresolvable symbol `%s' referenced in expression\n"
+msgstr "%X%S: error: [50293] unresolvable symbol `%s' referenced in expression\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%S: error: undefined symbol `%s' referenced in expression\n"
+msgstr "%F%S: error: [50182] undefined symbol `%s' referenced in expression\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%S: error: undefined section `%s' referenced in expression\n"
+msgstr "%F%S: error: [50181] undefined section `%s' referenced in expression\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%S: error: undefined MEMORY region `%s' referenced in expression\n"
+msgstr "%F%S: error: [50180] undefined MEMORY region `%s' referenced in expression\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%S: error: unknown constant `%s' referenced in expression\n"
+msgstr "%F%S: error: [50183] unknown constant `%s' referenced in expression\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%P: error: %s\n"
+msgstr "%X%P: error: [50287] %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%S: error: can not PROVIDE assignment to location counter\n"
+msgstr "%F%S: error: [50175] can not PROVIDE assignment to location counter\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%S: error: invalid assignment to location counter\n"
+msgstr "%F%S: error: [50177] invalid assignment to location counter\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%F%S: error: assignment to location counter invalid outside of SECTION\n"
+msgstr "%F%S: error: [50174] assignment to location counter invalid outside of SECTION\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%F%S: error: cannot move location counter backwards in %A (from %V to %V)\n"
+msgstr "%F%S: error: [50176] cannot move location counter backwards in %A (from %V to %V)\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%S: error: nonconstant expression for %s\n"
+msgstr "%F%S: error: [50179] nonconstant expression for %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P: error: invalid BFD target `%s'\n"
+msgstr "%F%P: error: [50097] invalid BFD target `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P: error: attempted static link of dynamic object `%s'\n"
+msgstr "%F%P: error: [50152] attempted static link of dynamic object `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P: error: %s (%s): No such file: %E\n"
+msgstr "%F%P: error: [50168] %s (%s): No such file: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P: error: %s: No such file: %E\n"
+msgstr "%F%P: error: [50166] %s: No such file: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P: error: cannot find %s inside %s\n"
+msgstr "%F%P: error: [50157] cannot find %s inside %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P: error: cannot find %s\n"
+msgstr "%F%P: error: [50158] cannot find %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: cannot open linker script file %s: %E\n"
+msgstr "%P%F: error: [50208] cannot open linker script file %s: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: cannot represent machine `%s'\n"
+msgstr "%P%F: error: [50211] cannot represent machine `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "syntax error: cannot back up"
+msgstr "[50306] syntax error: cannot back up"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "syntax error"
+msgstr "[50305] syntax error"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "memory exhausted"
+msgstr "[50299] memory exhausted"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error:%S: %s in %s\n"
+msgstr "%P%F: error: [50308]%S: %s in %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: unrecognised keyword in MRI style script '%s'\n"
+msgstr "%P%F: error: [50300] unrecognised keyword in MRI style script '%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P:%s: warning: file format not recognized; treating as linker script\n"
+msgstr "%P:%s: warning: [50303] file format not recognized; treating as linker script\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%B: error: file not recognized: %E\n"
+msgstr "%F%B: error: [50095] file not recognized: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: target %s not found\n"
+msgstr "%P%F: error: [50111] target %s not found\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: can not create hash table: %E\n"
+msgstr "%P%F: error: [50207] can not create hash table: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P:%S: warning: redeclaration of memory region `%s'\n"
+msgstr "%P:%S: warning: [50055] redeclaration of memory region `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P:%S: warning: memory region `%s' not declared\n"
+msgstr "%P:%S: warning: [50054] memory region `%s' not declared\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P:%S: error: alias for default memory region\n"
+msgstr "%F%P:%S: error: [50122] alias for default memory region\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P:%S: error: redefinition of memory region alias `%s'\n"
+msgstr "%F%P:%S: error: [50124] redefinition of memory region alias `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P:%S: error: memory region `%s' for alias `%s' does not exist\n"
+msgstr "%F%P:%S: error: [50123] memory region `%s' for alias `%s' does not exist\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: failed creating section `%s': %E\n"
+msgstr "%P%F: error: [50217] failed creating section `%s': %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: Illegal use of `%s' section\n"
+msgstr "%P%F: error: [50224] Illegal use of `%s' section\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: output format %s cannot represent section called %s\n"
+msgstr "%P%F: error: [50242] output format %s cannot represent section called %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"warning: 1.incompatible section flags %B:\n"
+" input section'%A' = '%f' \n"
+" output section '%A' ='%f'\n"
+msgstr "warning: [50118] 1.incompatible section flags %B:\n"
+" input section'%A' = '%f' \n"
+" output section '%A' ='%f'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"warning: 2.incompatible section flags %B:\n"
+" input section'%A' = '%f' \n"
+" output section '%A' ='%f'\n"
+msgstr "warning: [50119] 2.incompatible section flags %B:\n"
+" input section'%A' = '%f' \n"
+" output section '%A' ='%f'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: error: file not recognized: %E\n"
+msgstr "%B: error: [50140] file not recognized: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%B: error: member %B in archive is not an object\n"
+msgstr "%F%B: error: [50151] member %B in archive is not an object\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%P: warning: could not find any targets that match endianness requirement\n"
+msgstr "%P: warning: [50104] could not find any targets that match endianness requirement\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: cannot open output file %s: %E\n"
+msgstr "%P%F: error: [50210] cannot open output file %s: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P: warning: %s contains output sections; did you forget -T?\n"
+msgstr "%P: warning: [50109] %s contains output sections; did you forget -T?\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: bfd_hash_lookup failed creating symbol %s\n"
+msgstr "%P%F: error: [50201] bfd_hash_lookup failed creating symbol %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: bfd_hash_allocate failed creating symbol %s\n"
+msgstr "%P%F: error: [50200] bfd_hash_allocate failed creating symbol %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P: error: %s not found for insert\n"
+msgstr "%F%P: error: [50167] %s not found for insert\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%X%P: error: section %s loaded at [%V,%V] overlaps section %s loaded at [%V,"
+"%V]\n"
+msgstr "%X%P: error: [50286] section %s loaded at [%V,%V] overlaps section %s loaded at [%V,"
+"%V]\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%P: error: region `%s' overflowed by %ld bytes\n"
+msgstr "%X%P: error: [50283] region `%s' overflowed by %ld bytes\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%X%P: error: address 0x%v of %B section `%s' is not within region `%s'\n"
+msgstr "%X%P: error: [50273] address 0x%v of %B section `%s' is not within region `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%P: error: %B section `%s' will not fit in region `%s'\n"
+msgstr "%X%P: error: [50275] %B section `%s' will not fit in region `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%F%S: error: non constant or forward reference address expression for "
+"section %s\n"
+msgstr "%F%S: error: [50178] non constant or forward reference address expression for "
+"section %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%X: error: Internal error on COFF shared library section %s\n"
+msgstr "%P%X: error: [50257] Internal error on COFF shared library section %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: no memory region specified for loadable section `%s'\n"
+msgstr "%P%F: error: [50136] no memory region specified for loadable section `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P: warning: no memory region specified for loadable section `%s'\n"
+msgstr "%P: warning: [50108] no memory region specified for loadable section `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P: warning: changing start of section %s by %lu bytes\n"
+msgstr "%P: warning: [50103] changing start of section %s by %lu bytes\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P: warning: dot moved backwards before `%s'\n"
+msgstr "%P: warning: [50105] dot moved backwards before `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: can't relax section: %E\n"
+msgstr "%P%F: error: [50212] can't relax section: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P: error: invalid data statement\n"
+msgstr "%F%P: error: [50163] invalid data statement\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P: error: invalid reloc statement\n"
+msgstr "%F%P: error: [50164] invalid reloc statement\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%P%F: error: gc-sections requires either an entry or an undefined symbol\n"
+msgstr "%P%F: error: [50222] gc-sections requires either an entry or an undefined symbol\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: can't set start address\n"
+msgstr "%P%F: error: [50213] can't set start address\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P: warning: cannot find entry symbol %s; defaulting to %V\n"
+msgstr "%P: warning: [50100] cannot find entry symbol %s; defaulting to %V\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P: warning: cannot find entry symbol %s; not setting start address\n"
+msgstr "%P: warning: [50101] cannot find entry symbol %s; not setting start address\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%P: error: unable to read .PPC.EMB.apuinfo section contents\n"
+msgstr "%X%P: error: [50315] unable to read .PPC.EMB.apuinfo section contents\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%B: error: the selected cpu does not support saturation version %d\n"
+msgstr "%X%B: error: [50314] the selected cpu does not support saturation version %d\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%P%F: error: Relocatable linking with relocations from format %s (%B) to "
+"format %s (%B) is not supported\n"
+msgstr "%P%F: error: [50245] Relocatable linking with relocations from format %s (%B) to "
+"format %s (%B) is not supported\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%P%X: error: %s architecture of input file `%B' is incompatible with %s "
+"output\n"
+msgstr "%P%X: error: [50258] %s architecture of input file `%B' is incompatible with %s "
+"output\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%X: error: failed to merge target specific data of file %B\n"
+msgstr "%P%X: error: [50255] failed to merge target specific data of file %B\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: Could not define common symbol `%T': %E\n"
+msgstr "%P%F: error: [50214] Could not define common symbol `%T': %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: invalid syntax in flags = %s\n"
+msgstr "%P%F: error: [50233] invalid syntax in flags = %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: flags 'v' can only be set together with 'x'\n"
+msgstr "%P%F: error: [50221] flags 'v' can only be set together with 'x'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: invalid syntax in flags %s\n"
+msgstr "%P%F: error: [50234] invalid syntax in flags %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: Failed to create hash table\n"
+msgstr "%P%F: error: [50218] Failed to create hash table\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: multiple STARTUP files\n"
+msgstr "%P%F: error: [50240] multiple STARTUP files\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P: error: no sections assigned to phdrs\n"
+msgstr "%F%P: error: [50165] no sections assigned to phdrs\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P: error: bfd_record_phdr failed: %E\n"
+msgstr "%F%P: error: [50155] bfd_record_phdr failed: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%P: error: section `%s' assigned to non-existent phdr `%s'\n"
+msgstr "%X%P: error: [50285] section `%s' assigned to non-existent phdr `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%P: error: unknown language `%s' in version information\n"
+msgstr "%X%P: error: [50292] unknown language `%s' in version information\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%X%P: error: anonymous version tag cannot be combined with other version "
+"tags\n"
+msgstr "%X%P: error: [50274] anonymous version tag cannot be combined with other version "
+"tags\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%P: error: duplicate version tag `%s'\n"
+msgstr "%X%P: error: [50281] duplicate version tag `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%P: error: duplicate expression `%s' in version information\n"
+msgstr "%X%P: error: [50280] duplicate expression `%s' in version information\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%P: error: unable to find version dependency `%s'\n"
+msgstr "%X%P: error: [50288] unable to find version dependency `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%P: error: unable to read .exports section contents\n"
+msgstr "%X%P: error: [50291] unable to read .exports section contents\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P:%S: warning: illegal MEM_GROUP Statement for '%s'\n"
+msgstr "%P:%S: warning: [50309] illegal MEM_GROUP Statement for '%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P: error: read in flex scanner failed\n"
+msgstr "%F%P: error: [50297] read in flex scanner failed\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F: error: includes nested too deeply\n"
+msgstr "%F: error: [50294] includes nested too deeply\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F: error: macros nested too deeply\n"
+msgstr "%F: error: [50295] macros nested too deeply\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P: error: EOF in comment\n"
+msgstr "%F%P: error: [50296] EOF in comment\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%s: error: file not recognized: %E\n"
+msgstr "%F%s: error: [50298] file not recognized: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P:%S: warning: ignoring invalid character `%s'%s\n"
+msgstr "%P:%S: warning: [50304] ignoring invalid character `%s'%s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%C: error: undefined reference to `%T'\n"
+msgstr "%X%C: error: [50115] undefined reference to `%T'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%D: error: more undefined references to `%T' follow\n"
+msgstr "%X%D: error: [50116] more undefined references to `%T' follow\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%B: error: undefined reference to `%T'\n"
+msgstr "%X%B: error: [50114] undefined reference to `%T'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%B: error: more undefined references to `%T' follow\n"
+msgstr "%X%B: error: [50113] more undefined references to `%T' follow\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P: warning: global constructor %s used\n"
+msgstr "%P: warning: [50107] global constructor %s used\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: this linker was not configured to use sysroots\n"
+msgstr "%P%F: error: [50248] this linker was not configured to use sysroots\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%P: error: can't set BFD default target to `%s': %E\n"
+msgstr "%X%P: error: [50277] can't set BFD default target to `%s': %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: -r and -shared may not be used together\n"
+msgstr "%P%F: error: [50244] -r and -shared may not be used together\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: -F may not be used without -shared\n"
+msgstr "%P%F: error: [50215] -F may not be used without -shared\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: -f may not be used without -shared\n"
+msgstr "%P%F: error: [50216] -f may not be used without -shared\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: no input files\n"
+msgstr "%P%F: error: [50241] no input files\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: cannot open map file %s: %E\n"
+msgstr "%P%F: error: [50209] cannot open map file %s: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%B: error: final close failed: %E\n"
+msgstr "%F%B: error: [50150] final close failed: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%P: error: unable to open for source of copy `%s'\n"
+msgstr "%X%P: error: [50290] unable to open for source of copy `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%P: error: unable to open for destination of copy `%s'\n"
+msgstr "%X%P: error: [50289] unable to open for destination of copy `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P: error: writing file `%s'\n"
+msgstr "%P: error: [50187] writing file `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P: error: closing file `%s'\n"
+msgstr "%P: error: [50184] closing file `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: missing argument to -m\n"
+msgstr "%P%F: error: [50237] missing argument to -m\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: bfd_hash_table_init failed: %E\n"
+msgstr "%P%F: error: [50204] bfd_hash_table_init failed: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: bfd_hash_lookup failed: %E\n"
+msgstr "%P%F: error: [50202] bfd_hash_lookup failed: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%P: error: error: duplicate retain-symbols-file\n"
+msgstr "%X%P: error: [50138] error: duplicate retain-symbols-file\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%P: error: %s: %E\n"
+msgstr "%X%P: error: [50284] %s: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: bfd_hash_lookup for insertion failed: %E\n"
+msgstr "%P%F: error: [50203] bfd_hash_lookup for insertion failed: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P: warning: `-retain-symbols-file' overrides `-s' and `-S'\n"
+msgstr "%P: warning: [50191] `-retain-symbols-file' overrides `-s' and `-S'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%C: error: multiple definition of `%T'\n"
+msgstr "%X%C: error: [50268] multiple definition of `%T'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%P: warning: Disabling relaxation: it will not work with multiple "
+"definitions\n"
+msgstr "%P: warning: [50190] Disabling relaxation: it will not work with multiple "
+"definitions\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: definition of `%T' overriding common\n"
+msgstr "%B: warning: [50086] definition of `%T' overriding common\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: common is here\n"
+msgstr "%B: warning: [50081] common is here\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: common of `%T' overridden by definition\n"
+msgstr "%B: warning: [50082] common of `%T' overridden by definition\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: defined here\n"
+msgstr "%B: warning: [50085] defined here\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: common of `%T' overridden by larger common\n"
+msgstr "%B: warning: [50083] common of `%T' overridden by larger common\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: larger common is here\n"
+msgstr "%B: warning: [50087] larger common is here\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: common of `%T' overriding smaller common\n"
+msgstr "%B: warning: [50084] common of `%T' overriding smaller common\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: smaller common is here\n"
+msgstr "%B: warning: [50091] smaller common is here\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: multiple common of `%T'\n"
+msgstr "%B: warning: [50089] multiple common of `%T'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: previous common is here\n"
+msgstr "%B: warning: [50090] previous common is here\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: BFD backend error: BFD_RELOC_CTOR unsupported\n"
+msgstr "%P%F: error: [50199] BFD backend error: BFD_RELOC_CTOR unsupported\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P: error: bfd_hash_table_init failed: %E\n"
+msgstr "%F%P: error: [50154] bfd_hash_table_init failed: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P: error: bfd_hash_lookup failed: %E\n"
+msgstr "%F%P: error: [50153] bfd_hash_lookup failed: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%C: warning: undefined reference to `%T'\n"
+msgstr "%C: warning: [50093] undefined reference to `%T'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%D: warning: more undefined references to `%T' follow\n"
+msgstr "%D: warning: [50094] more undefined references to `%T' follow\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: undefined reference to `%T'\n"
+msgstr "%B: warning: [50092] undefined reference to `%T'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%B: warning: more undefined references to `%T' follow\n"
+msgstr "%B: warning: [50088] more undefined references to `%T' follow\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: additional relocation overflows omitted from the output\n"
+msgstr "error: [50143] additional relocation overflows omitted from the output\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: relocation truncated to fit: %s against undefined symbol `%T'"
+msgstr "error: [50146] relocation truncated to fit: %s against undefined symbol `%T'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"error: relocation truncated to fit: %s against symbol `%T' defined in %A "
+"section in %B"
+msgstr "error: [50144] relocation truncated to fit: %s against symbol `%T' defined in %A "
+"section in %B"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "error: relocation truncated to fit: %s against `%T'"
+msgstr "error: [50145] relocation truncated to fit: %s against `%T'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%C: error: dangerous relocation: %s\n"
+msgstr "%X%C: error: [50267] dangerous relocation: %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%X%C: error: reloc refers to symbol `%T' which is not being output\n"
+msgstr "%X%C: error: [50270] reloc refers to symbol `%T' which is not being output\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%B: warning: Symbol '%s' of discarded section '%s' is assigned to section "
+"%s, symbol is referenced in '%s'\n"
+msgstr "%B: warning: [50310] Symbol '%s' of discarded section '%s' is assigned to section "
+"%s, symbol is referenced in '%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"%B: warning: Symbol '%s' of discarded section '%s' is assigned to section "
+"%s\n"
+msgstr "%B: warning: [50311] Symbol '%s' of discarded section '%s' is assigned to section "
+"%s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P: error: internal error %s %d\n"
+msgstr "%F%P: error: [50161] internal error %s %d\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P: error: final link failed: %E\n"
+msgstr "%F%P: error: [50096] final link failed: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%S: warning: data statement in NOLOAD section\n"
+msgstr "%S: warning: [50121] data statement in NOLOAD section\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: bfd_new_link_order failed\n"
+msgstr "%P%F: error: [50206] bfd_new_link_order failed\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P: error: cannot create split section name for %s\n"
+msgstr "%F%P: error: [50156] cannot create split section name for %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P: error: clone section failed: %E\n"
+msgstr "%F%P: error: [50159] clone section failed: %E\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P: error: unrecognized option '%s'\n"
+msgstr "%P: error: [50186] unrecognized option '%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: use the --help option for usage information\n"
+msgstr "%P%F: error: [50252] use the --help option for usage information\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: unrecognized -a option `%s'\n"
+msgstr "%P%F: error: [50250] unrecognized -a option `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: unrecognized -assert option `%s'\n"
+msgstr "%P%F: error: [50251] unrecognized -assert option `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%F%P: error: unknown demangling style `%s'"
+msgstr "%F%P: error: [50169] unknown demangling style `%s'"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: invalid number `%s'\n"
+msgstr "%P%F: error: [50231] invalid number `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: bad --unresolved-symbols option: %s\n"
+msgstr "%P%F: error: [50198] bad --unresolved-symbols option: %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: bad -rpath option\n"
+msgstr "%P%F: error: [50197] bad -rpath option\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: -shared not supported\n"
+msgstr "%P%F: error: [50246] -shared not supported\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: -pie not supported\n"
+msgstr "%P%F: error: [50243] -pie not supported\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: invalid common section sorting option: %s\n"
+msgstr "%P%F: error: [50227] invalid common section sorting option: %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: invalid section sorting option: %s\n"
+msgstr "%P%F: error: [50232] invalid section sorting option: %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: invalid argument to option \"--section-start\"\n"
+msgstr "%P%F: error: [50225] invalid argument to option \"--section-start\"\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: missing argument(s) to option \"--section-start\"\n"
+msgstr "%P%F: error: [50238] missing argument(s) to option \"--section-start\"\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: may not nest groups (--help for usage)\n"
+msgstr "%P%F: error: [50236] may not nest groups (--help for usage)\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: group ended before it began (--help for usage)\n"
+msgstr "%P%F: error: [50223] group ended before it began (--help for usage)\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%X: error: --hash-size needs a numeric argument\n"
+msgstr "%P%X: error: [50256] --hash-size needs a numeric argument\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: missing sub-option(s) for extmap\n"
+msgstr "%P%F: error: [50135] missing sub-option(s) for extmap\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: unrecognized extmap sub-option '%s'\n"
+msgstr "%P%F: error: [50137] unrecognized extmap sub-option '%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: invalid hex number `%s'\n"
+msgstr "%P%F: error: [50229] invalid hex number `%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "%P%F: error: unknown format type %s\n"
+msgstr "%P%F: error: [50249] unknown format type %s\n"
+

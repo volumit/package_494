@@ -1,0 +1,456 @@
+2016-08-02  Zoltan Ver
+
+	[HDP-1365]
+	* rs6000.c (rs6000_cannot_force_const_mem): Forbidding the compiler to
+	move variable addresses to constant pools by returning true for HighTec
+	supported CPU's.
+
+2016-07-20  Robert Agoston
+
+	[HDP-563]
+	Factor out section handling to htc-common.
+	* rs6000-c.c (ppc_pragma_scan_section_name): Moved to htc-common-c.c
+	as htc_pragma_scan_section_name.
+	(ppc_pragma_section): Ditto, as htc_handle_pragma_section.
+	* rs6000-protos.h (ppc_pragma_section_code, ppc_pragma_section_data):
+	Removed declarations.
+	(ppc_pragma_section): Ditto.
+	* rs6000.c (ppc_pragma_section_code, ppc_pragma_section_data): Moved to
+	htc-commmon-sections.c as htc_pragma_section_code and htc_pragma_section_data
+	respectively.
+	(ppc_insert_attributes): Removed.
+	(ppc_insert_section_to_htab):  Moved to htc-common-sections.c
+	as htc_insert_section_to_htab.
+	(ppc_insert_section): Moved to htc-common-sections.c as htc_insert_section.
+	(TARGET_INSERT_ATTRIBUTES): Use htc_insert_htc_attributes.
+	(TARGET_HTC_INSERT_HTC_SECTION): Removed hook, use htc_insert_section directly.
+	* rs6000.h (REGISTER_TARGET_PRAGMAS): Register htc_handle_pragma_section for
+	"section" pragma.
+	* rs6000.opt (Wdeprecated-pragma-section-name): Moved to htc-common.opt.
+	(Wsection-feature, Wsection-multiple-data, Waddressing-mode): Ditto.
+
+2016-05-24  Robert Agoston
+
+	[HDP-585]
+	* HDP-v4.9.0.0-tricore released.
+
+2016-01-09  Georg Lay, Horst Lehser, Robert Agoston
+
+	[HDP-1028]
+	* constraints.md: Reordered constraints to match community
+	version. Add comments.
+	* ppc-sections.def: Removed ASM_OP column.
+	* ppcvle.h: (SUBTARGET_ATTRIBUTE_TABLE): asection
+	attribute handler is htc_handle_asection_attribute.
+	(ppc_section_t): Removed.
+	* predcates.md: Moved HighTec added predicates at the end.
+	* rs6000-builtin.def: Removed HTC_PPCVLE guards.
+	* rs6000-cpus.def: Ditto.
+	* rs6000.h: Ditto.
+	* rs6000.md: Ditto.
+	* rs6000-c.c: (rs6000_cpu_cpp_builtins): Removed WITH_HIGHTEC.
+	(ppc_pragma_scan_section_name): Updated documentation.
+	Fixed warning message, add warning option.
+	(ppc_pragma_section): Replaced ppc_section_t to htc_section_t. Add logging.
+	Updated error messages. Adapt to "anyfix".
+	* rs6000-protos.h: Removed HTC_PPCVLE and WITH_HIGHTEC guards.
+	Replaced ppc_section_t to htc_section_t.
+	* rs6000.c: Adapt "anyfix" changes from HDP-v4.6.6.0.
+	Refactored: restored community indentation, moved HighTec changes at the
+	end. Removed WITH_HIGHTEC and PPC_VLE guards.
+	* rs6000.opt:
+	(Wsection-feature, Wsection-multiple-data, Waddressing-mode):
+	( Wdeprecated-pragma-section-name): New options.
+
+2015-11-25  Lorant Gosztola
+
+	[HDP-1093]
+	* rs6000.c (rs6000_option_override_internal): Enable isel and multiple for Hightec supported CPU's
+
+2015-11-10  Robert Agoston
+
+	[HDP-422]
+	* constraints.md: Renamed community added constraints:
+	"wy" to "WY", "wr" to "WR", "wD" to "WD".
+	Renamed HighTec added constraints to their original 4.6.x name:
+	"wA" to "wy", "wB" to "wr", "wC" to "wD".
+	* predicates.md: Corrected use of renamed constraints.
+	* rs6000.c: Ditto.
+	* rs6000.h: Ditto.
+	* rs6000.md: Ditto.
+	* vle.md: Ditto.
+	* vsx.md: Ditto.
+
+2015-08-14  Lorant Gosztola
+
+	[HDP-882]
+	* rs6000.opt (-mstackframe-eabi): Add note.
+
+2015-07-29  Peter Gal, Szabolcs Bognar
+
+	[HDP-361]
+	* rs6000.c (rs6000_elf_encode_section_info): Use -Wnonzero-initialized-in-bss.
+	* rs6000.c (ppcvle_elf_asm_named_section): Remove BSS check.
+
+2015-07-29  Lorant Gosztola
+
+	[HDP-621]
+	* sysv4.h (SUBTARGET_EXTRA_SPECS): Add guard (HTC_PPCVLE macro)
+
+2015-07-28  Szabolcs Bognar, Peter Gal
+
+	[HDP-835]
+	* rs6000.h (FUNCTION_BOUNDARY): Set to 16.
+
+2015-07-27  Horst Lehser
+
+	[HDP-873]
+	* rs6000.c (rs6000_stack_info): Set fixed_size = 0 if no stack frame is
+	allocated
+
+2015-07-27  Horst Lehser
+
+	[HDP-882]
+	* rs6000.opt: Add new option -mstackframe-eabi.
+	* sysv4.h (ABI_STACK_BOUNDARY): Use 128 Bit boundary for eabi stackframe.
+
+2015-07-21  Gabor Palfi
+
+	[HDP-988]
+	* ppcvle.h (CPP_OS_DEFAULT_SPEC): Added -D__PPC_LSP__ for z225n3.
+
+2015-07-17  Lorant Gosztola
+
+	[HDP-516]
+	* rs6000.c (ppc_insert_section): Change wrong print modifiers.
+
+2015-05-04  Peter Gal
+
+	[HDP-895]
+	* sysv4.h (SDATA_DEFAULT_SIZE): Set to 0.
+
+2015-04-13  Peter Gal
+
+	[HDP-120]
+	* rs6000.c (TARGET_MERGE_DECL_ATTRIBUTES): Use htc_merge_decl_attributes.
+
+2015-03-25  Gabor Palfi
+
+	[HDP-608]
+	* ppcvle.h (LINK_SPEC): Defined.
+
+2015-03-19  Peter Gal
+
+	[HDP-856]
+	* rs6000.c (expand_block_move): Call ppcvle_expand_block_move in VLE mode.
+	* rs6000.c (expand_block_clear): Call ppcvle_expand_block_clear in VLE mode.
+	* rs6000.c (ppcvle_expand_block_move): New Function.
+	* rs6000.c (ppcvle_expand_block_clear): New Function.
+	* rs6000-proto.h: Prototype added.
+	* rs6000.md: Include vle.md.
+	* t-rs6000 (MD_INCLUDES): Added vle.md.
+	* vle.md: New file.
+
+2015-03-16  Peter Gal
+
+	[HDP-854]
+	* rs6000.md(*add<mode>3_internal1): Remove leading whitespace from
+	constraint.
+
+2015-03-16  Peter Gal
+
+	[HDP-855]
+	* rs6000.c (rs6000_function_ok_for_sibcall): Allow sibcall to all non
+	longcall functions.
+
+2015-02-25  Lorant Gosztola
+
+	[HDP-604]
+	* ppcvle.h (CPP_OS_DEFAULT_SPEC): Fix typo in define options for z225n3
+
+2015-01-06  Horst Lehser
+
+	[HDP-788]
+	* ppcvle-sat.md: Add Instruction to map min/max to sat instructions.
+	* rs6000.c (ppcvle_sat_operator_match): Added.
+	* rs6000-proto.h (ppcvle_sat_operator_match): Add prototype.
+
+2015-01-29  Peter Gal
+
+	[HDP-803]
+	* rs6000.c (ppc_valid_section_name_p): Add method...
+	(ppc_insert_section): ... and use it here.
+
+2015-01-29  Peter Gal
+
+	[HDP-806]
+	* rs6000.c (rs6000_option_override_internal): Fixed pass struct in register
+	handling.
+	(rs6000_pass_by_reference): Ditto.
+	* rs6000.opt (mpass-struct-in-registers): Added option.
+
+2015-01-19  Peter Gal
+
+	[HDP-804]
+	* ppclve.h (SUBTARGET_ATTRIBUTE_TABLE): Added "naked" attribute handling.
+	* rs6000.c (ppcvle_handle_naked_attribute): New function.
+	(rs6000_emit_prologue): Add naked function check.
+
+2015-01-19  Peter Gal
+
+	[HDP-805]
+	* rs6000.c (rs6000_expand_atomic_op): Remove now obsolote
+	expand.
+	* rs6000.h (TARGET_SYNC_HI_QI): Check TARGET_VLE also.
+	* sync.md (*lwsync): Added VLE specific return.
+
+2015-01-19  Peter Gal
+
+	[HDP-801]
+	* rs6000.opt (msmall-pid): Added -msmall-pid option.
+	(Winitialize-pid): Enabled by default (as in Tricore).
+	* rs6000.c (rs6000_elf_encode_section_info): Use the msmall-pid option.
+	(ppc_walk_initializer_r): Ditto.
+	(ppc_asm_declare_constant_name): Ditto.
+	(ppc_asm_declare_object_name): Added pid check.
+
+2015-01-15  Peter Gal
+
+	[HDP-800]
+	* rs6000.opt: Added -Winitialized-pid option.
+	* rs6000.c (TARGET_WARN_INITIALIZE_PID, OPT_Winitialize_pid): Definition
+	removed.
+	(rs6000_elf_encode_section_info): Added tree check for option.
+	(ppc_walk_initializer_r): Option variable name fix.
+	(ppc_asm_declare_constant_name): Made the tree check match the tricore.
+	(ppc_asm_declare_object_name): Ditto.l
+
+2015-01-13	Peter Gal
+
+	[HDP-799]
+	* ppcvle.h (SUBSUBTARGET_OVERRIDE_OPTIONS): Report error on -fpic and
+	-mvle combination.
+
+2014-12-15  Horst Lehser
+
+	[HDP-791]
+	* constraints.md (y): Use rs6000_constraints indexing.
+	(wA): Use CR_REGS instead of CRALL_REGS.
+	* rs6000.c (rs6000_debug_reg_global): Print y, wA and wB regclasses.
+	(rs6000_init_hard_regno_mode_ok): Update CR regclasses if VLE is enabled.
+	(rs6000_conditional_register_usage): Remove now obsolete CR_REG setup.
+	(rs6000_secondary_reload_class): Check for CRVLE_REGS also.
+	* rs6000.h (reg_class): Rename CRALL_REGS to CRVLE_REGS.
+	(r6000_reg_class_enum): Added y and wA constraints enum.
+
+2014-11-17	Peter Gal
+
+	[HDP-769]
+	* ppcvle.h (CC1_LICENSE_CHECK): Uncomment.
+	(SUBSUBTARGET_EXTRA_SPECS): Uncomment cc1_license spec.
+	* rs6000.c (rs6000_option_override_internal): Add license checker.
+	* rs6000.opt (mlicense-dir): Added option.
+
+2014-11-12	Gabor Palfi
+
+	[HDP-588]
+	* t-ppcvle (MULTILIB_MATCHES): Removed matches z410n3, z425n3 and z710n3
+	with z420n3.
+
+2014-11-12	Gabor Palfi
+
+	[HDP-588]
+	* rs6000.c (rs6000_issue_rate): Add new dualissue processors.
+	* rs6000.md (type attr): Added memcpy, load_n, store_n.
+	(e500mc.md, e500mc64.md): Removed include.
+	(z42Xn3.md, z225n3.md, z410n3.md, z710n3.md): Included.
+	(insns): Updates insn types.
+	* t-ppcvle (MULTILIB_MATCHES): Added new cpus.
+	* z225n3.md: Added.
+	* z410n3.md: Added.
+	* z42Xn3.md: Added.
+	* z710n3.md: Added.
+
+2014-11-06	Peter Gal
+
+	[HDP-764]
+	* t-ppcvle (MULTILIB_OPTIONS): Added mcpu=z425Bn3 and made
+	the mcpu flags mutually exclusive.
+	(MULTILIB_DIRNAMES): Added z425Bn3.
+	(MULTILIB_EXCEPTIONS): Improved exceptions.
+	(MULTILIB_MATCHES): Match z410n3 and z710n3 to z425Bn3.
+
+2014-11-06	Peter Gal
+
+	[HDP-760]
+	* ppcvle.h: Use PPC_ATTR_INDIRECT instead of "fardata" string.
+	* rs6000.c (rs6000_elf_in_small_data_p): Enabled fardata attr
+	check.
+
+2014-10-16	Peter Gal
+
+	[HDP6-688]
+	* rs6000.c (rs6000_file_start): Enable rs6000 option printing
+	when mversion-info is enabled.
+
+2014-10-09	Peter Gal
+
+	[HDP-686]
+	* ppcvle-byte-short.md: Added.
+	* ppcvle-sat.md: Added.
+	* ppcvle.h (ASM_SPEC, CPP_OS_DEFAULT_SPEC): Added -msat for
+	z410n3, z425Bn3 and z710n3.
+	* rs6000-builtin.def: Added list of SAT builtins.
+	* rs6000.c (ppcvle_sat_expand_builtin): New function.
+	(ppcvle_sat_init_builtins): New function.
+	(rs6000_option_override_internal): Report error for unsupported
+	cpus if the -msat is enabled.
+	(rs6000_invalid_builtin): Added SAT check.
+	(rs6000_expand_builtin): Invoke ppcvle_sat_expand_builtin.
+	(rs6000_expand_builtin): Invoke ppcvle_sat_init_builtins.
+	(builtin_function_type): Added SAT entries.
+	(rs6000_builtin_mask_names): Added "sat" builtin.
+	* rs6000.h (RS6000_BTM_VLE_SAT): New define.
+	* rs6000.md (type attr): Added 'satmul'.
+	(ppcvle-sat.md): Include.
+	(ppcvle-byte-short.md): Include.
+	* rs6000.opt (msat): New option.
+
+2014-10-09	Peter Gal
+
+	[HDP-712]
+	* ppcvle.h (SUBTARGET_ATTRIBUTE_TABLE): Set affects_type_identity
+	argument for attributes to false.
+	* rs6000.c (ppcvle_valid_target_attribute_inner_p): The 'mask'
+	variable should be HOST_WIDE_INT.
+	(ppcvle_elf_unique_section): Added default initialier to 'ss2'.
+
+2014-10-09	Peter Gal
+
+	[HDP-711]
+	* rs6000.c (rs6000_init_hard_regno_mode_ok): Specify VLE and
+	NON_VLE reg types.
+	(rs6000_conditional_register_usage): Fix register alloc order.
+
+2014-10-09	Peter Gal
+
+	[HDP-710]
+	* rs6000.c (rs6000_emit_epilogue): Fix mode for plus_constant
+	call.
+
+2014-10-02	Peter Gal
+
+	[HDP-687]
+	* ppcvle.h (ASM_SPEC): Added new mcpu entries:
+	z225n3, z410n3, z425Bn3, z710n3
+	(CPP_OS_DEFAULT_SPEC): Ditto.
+	* rs6000-cpus.def: New cpus: z225n3, z410n3, z425Bn3, z710n3.
+	* rs6000-opts.h (processor_type): Ditto.
+	* rs6000-tables.opt: Regenerated.
+	* rs6000.c (rs6000_option_overrride_internal): Override cpu
+	specific options for: z225n3, z410n3, z425Bn3, z710n3.
+	* rs6000.md (rs6000_cpu_attr): Added the new cpus:
+	z225n3, z410n3, z425Bn3, z710n3.
+
+2014-10-02	Peter Gal
+
+	[HDP-685]
+	* rs6000.opt (mlsp): Added new option.
+	* rs6000.c (TARGET_LSP): Removed global variable, replaced
+	by the mlsp option.
+
+2014-10-01	Peter Gal
+
+	[HDP-681]
+	* rs6000.c (TARGET_VOLATILE_CONST_IN_RODATA): Removed temporaly
+	global variable.
+	* rs6000.opt (mvolatile-const-in-rodata): New option.
+
+2014-10-01	Peter Gal
+
+	[HDP-682]
+	* predicates.md (pic_no_const_operand): Added new predicate.
+	* rs6000.c (machine_function): Added new pic_offset_reg variable.
+	(ppcvle_calculate_pic_offset): New function.
+	(rs6000_savres_strategy): Added GP reg save strategy.
+	(rs6000_emit_move): Enable mcode-pic codeparts.
+	(first_reg_to_save): Ditto.
+	(rs6000_elf_encode_section_info): Ditto.
+	(rs6000_set_current_function): Ditto.
+	(ppc_asm_declare_constant_name, ppc_asm_declare_object_name): Removed
+	double implementation.
+	* rs6000.md (UNSPEC_CODE_PIC_ADDR): New unspec enum value.
+	(movsi_pic): Moved to the end.
+	(load_offset_pic_reg, subsi3_pic): New insns.
+
+2014-09-19	Peter Gal
+
+	[HDP-672]
+	* rs6000-c.c (rs6000_cpu_cpp_builtins): Call htc_cpu_cpp_builtins.
+
+2014-09-19	Peter Gal
+
+	[HDP-673]
+	* rs6000.c (ppc_insert_attributes): Use the new
+	htc_opt_pragma_{function,data}_sections options.
+	* rs6000.opt (mpragma-data-sections): Removed option.
+
+2014-09-19	Peter Gal
+
+	[HDP-670]
+	* rs6000.c (rs6000_option_override_internal): Removed
+	flag_no_common initalization.
+
+2014-09-19	Peter Gal
+
+	[HDP-669]
+	* ppcvle.h (ASM_OUTPUT_ALIGNED_DECL_LOCAL): Redefine to
+	ppcvle_asm_output_aligned_block_local.
+
+2014-09-19	Peter Gal
+
+	[HDP-667]
+	* ppcvle.h (SUBTARGET_ATTRIBUTE_TABLE): Added asection handling.
+	* rs6000.c (ppc_handle_asection_attribute): New function.
+	* (ppc_set_section_attributes): Ditto
+
+2014-09-11	Peter Gal
+
+	[HDP-644]
+	* rs6000-c.c (ppc_pragma_scan_section_name): New function.
+	(ppc_pragma_section): Ditto.
+	* rs6000.h (REGISTER_TARGET_PRAGMAS): Registered "section" pragma.
+	* rs6000.c (TARGET_INSERT_ATTRIBUTES): Set define.
+	(ppc_set_decl_from_section): New function.
+	(ppc_insert_attributes): Ditto.
+	* rs6000.opt (mpragma-data-sections): New option.
+
+2014-09-08	Peter Gal
+
+	[HDP-620]
+	* rs6000.c (rs6000_{sdata,sconst}_max): Moved to rs6000.opt.
+	(rs6000_option_override_internal): Enabled msmall* option checks.
+	(rs6000_file_start): Enabled msmall option printouts.
+	(rs6000_elf_in_small_data_p): Enabled msmall.
+	* rs6000.opt (rs6000_{sdata,sconst}_max): Added.
+	(msmall, msmall-const, msmall-data:) Ditto.
+
+2014-09-02	Peter Gal, Gabor Palfi
+
+	[HDP-422]
+	* constraints.md (wA, wB, wP, wC, wI): Added new constraints.
+	* ppc-asm.h: Defined bnslr.
+	* predicates.md (reg_or{_u_,_}short_vle_operand): Added new predicates.
+	(logical_const_operand) Upaded predicate for VLE.
+	* rs6000-cpus.def (e200zx, z420n3, z425n3, z720n3, MCU_JDP_UC1): Added
+	new CPUS.
+	* rs6000-opts.h: Ditto.
+	* rs6000-protos.h: Added VLE related method prototypes.
+	* rs6000-tables.opt: Ditto.
+	* rs6000.md: Various VLE insn modifications.
+	* spe.md: Ditto.
+	* sync.md: Ditto.
+	* rs6000.opt: Added new options.
+	* rs6000.c: VLE codeparts from older GCC.
+	* rs6000.h: Ditto
+

@@ -1,0 +1,126 @@
+## Target part of the Makefile
+
+install-common: install-devices
+
+.PHONY: install-devices
+
+# TRIC_DEVICES is auto-generated in t-multilib
+
+MEMORY_CPU = $(foreach cpu,$(TRIC_DEVICES),memory-$(cpu).x)
+CRT0_CPU   = $(foreach cpu,$(TRIC_DEVICES),crt0-$(cpu).o)
+CRT0_S     = crt0.S crt0-tc1x.S crt0-tc2x.S
+
+$(MEMORY_CPU): cc1$(exeext) $(GCC_PASSES)
+
+$(CRT0_CPU): cc1$(exeext) $(GCC_PASSES)
+
+
+libgcc-support: $(MEMORY_CPU) $(CRT0_CPU) install-tricore-headers
+
+# Build memory*.x, crt0*.o and copy crt0*.S for later installation
+$(CRT0_S): % : $(srcdir)/config/tricore/%
+	cat $< > $@
+
+# Install crt[in].S from here to avoid dozens of same copies
+crti.S crtn.S: % : $(srcdir)/../libgcc/config/tricore/%
+	cat $< > $@
+
+memory-%.x: $(srcdir)/config/tricore/memory.x
+	$(GCC_FOR_TARGET) -E -P -C -x c $< -o $@ -mcpu=$* 
+
+$(CRT0_CPU): crt0-%.o : $(CRT0_S)
+	$(GCC_FOR_TARGET) -W -Wall -Werror -c $< -o $@ -mcpu=$*
+
+# Install memory*.x, crt0*.o and crt*.S
+install-devices: installdirs $(MEMORY_CPU) $(CRT0_CPU) $(CRT0_S) crti.S crtn.S
+	for f in $(TRIC_DEVICES) ; do \
+		$(INSTALL_DATA) memory-$$f.x $(DESTDIR)$(libsubdir); \
+		$(INSTALL_DATA) crt0-$$f.o   $(DESTDIR)$(libsubdir); \
+	done;
+	$(INSTALL_DATA) crti.S $(DESTDIR)$(libsubdir)
+	$(INSTALL_DATA) crtn.S $(DESTDIR)$(libsubdir)
+	$(INSTALL_DATA) crt0.S $(DESTDIR)$(libsubdir)
+	$(INSTALL_DATA) crt0-tc1x.S $(DESTDIR)$(libsubdir)
+	$(INSTALL_DATA) crt0-tc2x.S $(DESTDIR)$(libsubdir)
+
+MULTILIB_OPTIONS = mtc131/mtc16/mtc161/mtc162 fshort-double
+MULTILIB_DIRNAMES = tc131 tc16 tc161 tc162 short-double
+
+MULTILIB_EXCEPTIONS = 
+MULTILIB_EXTRA_OPTS = ffast-math ffunction-sections mversion-info
+
+# MULTILIB_MATCHES
+# TRIC_DEVICES
+$(srcdir)/config/tricore/t-multilib: s-tricore-mlib; @true
+
+s-mlib: $(srcdir)/config/tricore/t-multilib
+
+s-tricore-mlib: $(srcdir)/config/tricore/gendevices.awk \
+		$(srcdir)/config/tricore/devices.def
+	$(AWK) -v FORMAT=Makefile -f $< $^ > tmp-tricore-mlib
+	$(SHELL) $(srcdir)/../move-if-change \
+		tmp-tricore-mlib $(srcdir)/config/tricore/t-multilib
+	$(STAMP) $@
+
+$(srcdir)/config/tricore/tricore-mcpu.opt: \
+		$(srcdir)/config/tricore/gendevices.awk \
+		$(srcdir)/config/tricore/devices.def \
+		$(srcdir)/config/tricore/errata.def
+	$(AWK) -v FORMAT=opt -f $< $^ > $@
+
+errata.texi tricore_errata.tex: \
+		$(srcdir)/config/tricore/gendevices.awk \
+		$(srcdir)/config/tricore/errata.def
+	cat $(word 2, $^) | $(AWK) -v FORMAT=$@ -f $< > $@
+
+LIBGCC = stmp-multilib
+INSTALL_LIBGCC = install-multilib
+
+INCLUDES += 
+LIBS += 
+CFLAGS_FOR_TARGET = -ffast-math -ffunction-sections -mversion-info
+
+# Compile extra tricore objects.  More individual dependencies follow below.
+
+tricore-c.o driver-tricore.o tricore-devices.o: \
+  %.o : $(srcdir)/config/tricore/%.c \
+  $(TM_H) $(TM_P_H) \
+  $(CONFIG_H) $(SYSTEM_H) coretypes.h $(TREE_H) $(RTL_H) $(GGC_H)
+	$(COMPILER) -c $(ALL_COMPILERFLAGS) $(ALL_CPPFLAGS) $(INCLUDES) $<
+
+# Additional individual dependencies on GCC and front end files
+
+tricore-c.o: \
+	$(C_PRAGMA_H) $(C_COMMON_H) $(TARGET_H) $(INPUT_H) output.h
+
+driver-tricore.o: \
+	$(DIAGNOSTIC_H) $(GCC_H)
+
+tricore-devices.o: \
+	$(DIAGNOSTIC_H)
+
+
+# Additional individual dependencies on respective tricore's DEF files
+
+tricore.o: \
+	$(srcdir)/config/tricore/tricore-sections.def
+
+tricore.o tricore-devices.o driver-tricore.o tricore-c.o: \
+	$(srcdir)/config/tricore/errata.def
+
+tricore-devices.o: \
+	$(srcdir)/config/tricore/devices.def
+
+tricore.o tricore-c.o: $(srcdir)/config/tricore/builtins.def
+
+.PHONY: install-tricore-headers
+
+# Install headers that are needed by library build, e.g. intrinsics.h
+# by wdtcon.c for TC161.
+
+installdirs: install-tricore-headers
+
+install-tricore-headers:
+	$(mkinstalldirs) $(prefix)/$(target_subdir)/include/machine
+	$(INSTALL_DATA)  $(srcdir)/config/tricore/intrinsics.h \
+			 $(prefix)/$(target_subdir)/include/machine

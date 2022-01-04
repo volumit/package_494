@@ -1,0 +1,86 @@
+2016-08-02  Gabor Palfi
+
+	[HDP-1032]
+	* htc-common.opt: (Wreadonly-in-writable): New option.
+	* htc-common-sections.c: (htc_set_htc_section): Added warning for read
+	only variable in writeable section.
+
+2016-07-20  Robert Agoston
+
+	[HDP-563]
+	Factor out section handling to htc-common.
+	* htc-common-c.c (htc_pragma_scan_section_name):
+	Merged here from rs6000/rs6000-c.c: ppc_pragma_scan_section_name and
+	tricore/tricore-c.c: tric_pragma_scan_section_name.
+	(htc_handle_pragma_section): Ditto.
+	* htc-common-c.h (htc_pragma_section): New prototype.
+	* htc-common-sections.c (htc_pragma_section):
+	Merged here from rs6000/rs6000.c: ppc_pragma_section_code,
+	ppc_pragma_section_data and
+	tricore/tricore.c: tric_pragma_section_code, tric_pragma_section_data.
+	(htc_insert_section_to_htab):
+	Merged here from rs6000/rs6000.c: htc_insert_section_to_htab and
+	tricore/tricore.c: tric_insert_section_to_htab.
+	(htc_insert_section):
+	Merged here from rs6000/rs6000.c: ppc_insert_section and
+	tricore/tricore.c: tric_insert_section.
+	(htc_insert_htc_attributes): Removed PRAGMA argument, since it is now
+	handled in the same module.
+	Use as the implementation of `TARGET_INSERT_ATTRIBUTES'.
+	* htc-common-sections.h (htc_insert_htc_attributes): Removed 3rd argument.
+	(htc_insert_section): New prototype.
+	(htc_pragma_section_t): New structure type to move htc_pragma_section_code
+	and htc_pragma_section_data into one GTY root.
+	* htc-common.opt (Wdeprecated-pragma-section-name):
+	Merged here from rs6000/rs6000.opt and tricore/tricore.opt.
+	(Wsection-feature, Wsection-multiple-data, Waddressing-mode): Ditto.
+	* htc-targhooks.c (default_htc_insert_htc_section): Removed.
+	* htc-targhooks.h (default_htc_insert_htc_section): Ditto.
+
+2016-05-24  Robert Agoston
+
+	[HDP-585]
+	* HDP-v4.9.0.0-tricore released.
+
+2016-04-08  Robert Agoston
+
+	[HDP-1261]
+	Remove support of -fcallee-promote-stack-args feature.
+	* htc-common.opt: (-fcallee-promote-stack-args): Removed option.
+
+2016-03-31  Robert Agoston
+
+	[HDP-374]
+	Minor build fix for 64 bit builds.
+	* htc-common-sections.c: (htc_section_asm_name): Fixed
+	  type casting of tree from unsigned to void *.
+
+2016-01-09  Georg Lay, Horst Lehser, Robert Agoston
+
+	[HDP-1028]
+	* htc-common-sections.c: Forward ported from HDP-v4.6.6.0.
+	* htc-common-sections.h: Forward ported from HDP-v4.6.6.0.
+	* htc-common.c: (htc_stat): Add.
+	(htc_init_once): Add.
+	(htc_asm_out_version_info): Broke long code lines.
+	* htc-common.h: (htc_stat_t): Add new structure.
+	* htc-common.opt: (msection-asm-name): New option.
+	(mlog): Ditto.
+	* htc-target-common.c: New.
+	* htc-target-common.h: New.
+	* htc-target-log.c: New.
+	* htc-target-log.h: New.
+	* htc-target-log.def: New.
+	* htc-targhooks.c: New.
+	* htc-targhooks.h: New.
+	* t-htc-common: Add rule to build new extra_objs.
+
+2015-07-29  Peter Gal, Szabolcs Bognar
+
+	[HDP-361]
+	* rs6000.opt: (Wnonzero-initialized-in-bss): New option.
+
+2014-09-05  Peter Gal
+
+	[HDP-612]
+	* htc-common.opt: (nocrt0): Added option.

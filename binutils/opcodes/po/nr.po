@@ -1,0 +1,133 @@
+msgid ""
+msgstr ""
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Message-Numbers-Known: 19\n"
+"Pool-Offset: 30000\n"
+"Message-Numbers-New: 0\n"
+"Language: en\n"
+"Last-Translator: Automatically generated\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Pool-Max-Number: 30023\n"
+"Pool-Name: opc\n"
+"Language-Team: none\n"
+"Content-Type: text/plain; charset=ASCII\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Illegal limm reference in last instruction!\n"
+msgstr "[30008] Illegal limm reference in last instruction!\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "multiple note %s not handled\n"
+msgstr "[30012] multiple note %s not handled\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid ""
+"most recent format '%s'\n"
+"appears more restrictive than '%s'\n"
+msgstr "[30011] most recent format '%s'\n"
+"appears more restrictive than '%s'\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "overlapping field %s->%s\n"
+msgstr "[30016] overlapping field %s->%s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "overwriting note %d with note %d (IC:%s)\n"
+msgstr "[30017] overwriting note %d with note %d (IC:%s)\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "don't know how to specify %% dependency %s\n"
+msgstr "[30003] don't know how to specify %% dependency %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "Don't know how to specify # dependency %s\n"
+msgstr "[30002] Don't know how to specify # dependency %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "IC:%s [%s] has no terminals or sub-classes\n"
+msgstr "[30007] IC:%s [%s] has no terminals or sub-classes\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "IC:%s has no terminals or sub-classes\n"
+msgstr "[30006] IC:%s has no terminals or sub-classes\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "no insns mapped directly to terminal IC %s [%s]"
+msgstr "[30013] no insns mapped directly to terminal IC %s [%s]"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "no insns mapped directly to terminal IC %s\n"
+msgstr "[30014] no insns mapped directly to terminal IC %s\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "class %s is defined but not used\n"
+msgstr "[30001] class %s is defined but not used\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: rsrc %s (%s) has no chks\n"
+msgstr "warning: [30023] rsrc %s (%s) has no chks\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: rsrc %s (%s) has no chks or regs\n"
+msgstr "warning: [30022] rsrc %s (%s) has no chks or regs\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "rsrc %s (%s) has no regs\n"
+msgstr "[30018] rsrc %s (%s) has no regs\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "IC note %d in opcode %s (IC:%s) conflicts with resource %s note %d\n"
+msgstr "[30005] IC note %d in opcode %s (IC:%s) conflicts with resource %s note %d\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "IC note %d for opcode %s (IC:%s) conflicts with resource %s note %d\n"
+msgstr "[30004] IC note %d for opcode %s (IC:%s) conflicts with resource %s note %d\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "opcode %s has no class (ops %d %d %d)\n"
+msgstr "[30015] opcode %s has no class (ops %d %d %d)\n"
+
+#. [[since=experimental]]
+#: translation_for_numbering:1
+#, c-format
+msgid "warning: ignoring unknown -M%s option\n"
+msgstr "warning: [30019] ignoring unknown -M%s option\n"
+

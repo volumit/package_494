@@ -1,0 +1,106 @@
+2016-05-24  Robert Agoston
+
+	[HDP-585]
+	* HDP-v4.9.0.0-tricore released.
+
+2015-08-21  Georg Lay
+
+	Support -mtc162 and -mcpu=tc39xx.
+
+	[HDP-940]
+	* config/tricore/lib1funcs.S (__tric_restore_context_queue)
+	[__TC162__]: Use bit 20 as PCXI.UL.
+
+2015-01-26  Peter Gal
+
+	[HDP-511]
+	Update gcc to 4.9.2.
+
+2014-10-20  Peter Gal
+
+	[HDP-379]
+	* config/v850/t-v850 (HOST_LIBGCC2_CFLAGS): Added htc-libgcc
+	to inlcude path.
+
+2014-10-09  Georg Lay
+
+	Add tricore configury.
+	Lift tricore backend from 4.6 to 4.9.
+
+	[HDP-556]
+	* config.host (cpu_type) [host=tricore]: Set to tricore.
+	* libgcc2.h [__HIGHTEC__]: Include htc-longlong.h instead of
+	longlong.h.
+
+	* config/tricore/t-tricore (LIB1ASMSRC): Set to tricore/lib1funcs.S.
+	(LIB1ASMFUNCS): Moved from GCC backend.
+	(HOST_LIBGCC2_CFLAGS): Add -mfast-div -fno-common
+	-mno-eabi-bitfield-limit
+	(EXTRA_PARTS): Set to crtbegin.o crtend.o crti.o crtn.o.
+
+2014-09-11  Georg Lay
+
+	Copy-paste htc-libgcc from 2011-09-11
+	git master 998c0c684fa945fae633b426c73eb7f8b9ecbc71
+
+	[HDP-365]
+	[HDP-381]
+	* config/htc-libgcc: New directory and files.
+
+2014-08-28  Peter Gal
+
+	[HDP-569]
+	* config.host: Added powerpc-ht-eabi target.
+	* config/htc-libgcc/*: Added files.
+
+2014-08-27  Georg Lay
+
+	Copy-paste tricore backend from 2014-08-27
+	git master 2bb32d7ae4089e34eba0ed24a2f7fb5ed209411b
+	[HDP-555]
+
+	* config/tricore: New directory and files.
+
+2014-07-25  Zoltán Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-512]
+	* crtstuff.c: Undefine caddr_t, because it comes from two
+	different (incompatible) definitions.
+
+2014-07-25  Zoltán Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-405]
+	* config/v850/t-htc-libgcc (LIB2ADD): Removed dead code. 
+
+2014-07-02  Zoltán Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-405]
+	* libgcc/config.host (tmake_file): Remove t-htc-libgcc
+	(extra_parts): Added crt*.o files.
+	* libgcc/config/v850/crti.S: New file
+	* libgcc/config/v850/crtn.S: Ditto
+	* libgcc/config/v850/t-v850 (CUSTOM_CRTIN): New var
+	(CRTSTUFF_T_CFLAGS): Ditto
+	(crti.S): New target
+	(crtn.S): Ditto
+	(crti.o): Ditto
+	(crtn.o): Ditto
+
+2014-07-02  Zoltán Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-405]
+	* libgcc/config.host: Added dinkumware support to v850*-*-* target
+	* libgcc/config/htc-libgcc/div64.h: New file
+	* libgcc/config/htc-libgcc/divdi3.c: Ditto
+	* libgcc/config/htc-libgcc/divmoddi4.c: Ditto
+	* libgcc/config/htc-libgcc/htc-longlong.h: Ditto
+	* libgcc/config/htc-libgcc/memcmp.c: Ditto
+	* libgcc/config/htc-libgcc/memcpy.c: Ditto
+	* libgcc/config/htc-libgcc/memmove.c: Ditto
+	* libgcc/config/htc-libgcc/memset.c: Ditto
+	* libgcc/config/htc-libgcc/moddi3.c: Ditto
+	* libgcc/config/htc-libgcc/udiv6432.c: Ditto
+	* libgcc/config/htc-libgcc/udivdi3.c: Ditto
+	* libgcc/config/htc-libgcc/udivmoddi4.c: Ditto
+	* libgcc/config/htc-libgcc/umoddi3.c: Ditto
+	* libgcc/config/v850/t-htc-libgcc: Ditto

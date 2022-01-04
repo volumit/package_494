@@ -1,0 +1,17 @@
+2016-05-24  Robert Agoston
+
+	[HDP-585]
+	* HDP-v4.9.0.0-tricore released.
+
+2015-01-26  Peter Gal
+
+	[HDP-511]
+	Update gcc to 4.9.2.
+
+2014-09-02  Peter Gal <peter.gal@hightec-rt.com>
+
+	[HDP-597]
+	* configure.ac: Disable AC_LIBTOOL_DLOPEN.
+	* crossconfig.m4: Added powerpc-ht-eabi target.
+	* configure: Regenerated.
+	* include/bits/unique_ptr.h: undef _UP.

@@ -1,0 +1,37 @@
+2017-01-09  Gabor Palfi
+
+	[HDP-1514] Add watchdog for __tc162__ support
+	* tricore/wdtcon.c: add correct watchdog addresses and handling for
+	TC162 (AURIX 2G) devices.
+
+2015-08-21  Georg Lay
+
+	Support -mtc162 and -mcpu=tc39xx.
+
+	[HDP-940]
+	* tricore/setjmp.S (longjmp): Handle __TC162__.
+
+2014-12-01  Horst Lehser
+
+	[HDP-776]
+	* tricore/cinttab.c: Add GPL copyright, remove 'w' from text sections.
+	* tricore/ctraptab.c: Ditto.
+	* tricore/vio-syscalls.h: Add rename.
+	* tricore/vio_rename.h: Enable rename.
+	* tricore/wdtcon.h: Add tc2xxx support.
+	* tricore/wdtcon.c: Ditto.
+
+2014-06-12  Georg Lay
+
+	[HDP-469]
+	* tricore/setjmp.S (longjmp) [tc13, tc131, tc16]: Use bit 22 as
+	PCXI.UL.
+	[tc161]: Use bit 20 as PCXI.UL.
+
+2013-01-11  Horst Lehser
+
+	* tricore/unistd.h: Deleted contributed by newlib.
+	* tricore/fcntl.h: Dito.
+	* tricore/Makeifle.in: Remove unistd.h and fcntl.h from HEADERS.
+	* config/tricore.mh: Add option -mnocallerrors to CFLAGS_FOR_TARGET.
+	* tricore/configure: Use tricore.mh as host_makefile_frag.

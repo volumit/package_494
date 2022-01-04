@@ -1,0 +1,23 @@
+#TODO
+#should be part of host
+CFLAGS += -DHTC_SUPPORT -DHTC_TRICORE
+CXXFLAGS += -DHTC_SUPPORT -DHTC_TRICORE
+
+ifeq (${BUILD_FREE_ENTRY_TOOLCHAIN},)
+CFLAGS += -DHTC_SUPPORT_XML
+CXXFLAGS += -DHTC_SUPPORT_XML
+endif
+
+ifeq ($(HTC_VERSION),)
+
+# --with-htc-version= is not defined
+
+else
+
+# BIN-44 wants to represent --version output a special way.
+
+BUILD_DATE := $(shell echo `date +%Y-%m-%d`)
+VERSION_INFO=-DTOOL_REVISION=$(HTC_VERSION) -DBUILD_DATE=$(BUILD_DATE)
+CFLAGS += $(VERSION_INFO)
+
+endif

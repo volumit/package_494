@@ -1,0 +1,33 @@
+2017-01-17  Robert Agoston
+
+	[HDP-1334]
+	* numbering-validator.py: New script to validate error numbers.
+	* ChangeLog.num: Add log of error number changes produced by
+	numbering validator.py.
+	* gcc.pot: Re-generated.
+	* gcc.xml: Ditto.
+	* nr.po: Ditto.
+
+2016-05-24  Robert Agoston
+
+	[HDP-585]
+	* HDP-v4.9.0.0-tricore released.
+
+2016-05-17  Robert Agoston
+
+	[HDP-943]
+	* nr.po: Re-generated.
+
+2015-12-07  Peter Varga
+
+	[HDP-943]
+	* dictionary: Added.
+	* ernie.jar: Added.
+	* exgettext: Numbering support added.
+	* extend_pot.sh: Added.
+	* gcc.pot: Regenerated.
+	* gcc.xml: Added.
+	* keyword-options: Added.
+	* keyword2-options: Added.
+	* nr.po: Added.
+

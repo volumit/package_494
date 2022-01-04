@@ -1,0 +1,6986 @@
+# Swedish messages for binutils.
+# Copyright (C) 2001, 2002 Free Software Foundation, Inc.
+# Tommy Pettersson <ptp@lysator.liu.se>, 2001, 2002, 2004.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: binutils 2.14rel030712\n"
+"Report-Msgid-Bugs-To: bug-binutils@gnu.org\n"
+"POT-Creation-Date: 2013-12-04 10:50+0100\n"
+"PO-Revision-Date: 2004-10-08 17:18+0200\n"
+"Last-Translator: Tommy Pettersson <ptp@lysator.liu.se>\n"
+"Language-Team: Swedish <sv@li.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: addr2line.c:76
+#, c-format
+msgid "Usage: %s [option(s)] [addr(s)]\n"
+msgstr "Användning: %s [flaggor] [adress(er)]]\n"
+
+#: addr2line.c:77
+#, c-format
+msgid " Convert addresses into line number/file name pairs.\n"
+msgstr " Konvertera adresser till radnummer/filnamn-par.\n"
+
+#: addr2line.c:78
+#, c-format
+msgid ""
+" If no addresses are specified on the command line, they will be read from "
+"stdin\n"
+msgstr ""
+" Om inga adresser är valda på kommandoraden läses de från standard in\n"
+
+#: addr2line.c:79
+#, fuzzy, c-format
+msgid ""
+" The options are:\n"
+"  @<file>                Read options from <file>\n"
+"  -b --target=<bfdname>  Set the binary file format\n"
+"  -e --exe=<executable>  Set the input file name (default is a.out)\n"
+"  -i --inlines           Unwind inlined functions\n"
+"  -j --section=<name>    Read section-relative offsets instead of addresses\n"
+"  -s --basenames         Strip directory names\n"
+"  -f --functions         Show function names\n"
+"  -C --demangle[=style]  Demangle function names\n"
+"  -h --help              Display this information\n"
+"  -v --version           Display the program's version\n"
+"\n"
+msgstr ""
+" Flaggorna är:\n"
+"  -b --target=<bfdnamn>  Välj format på binärfilen\n"
+"  -e --exe=<körfil>      Ange infilens namn (standard är a.out)\n"
+"  -s --basenames         Visa inte katalognamn\n"
+"  -f --functions         Visa funktionsnamn\n"
+"  -C --demangle[=stil]   Avkoda manglade funktionsnamn\n"
+"  -h --help              Visa denna hjälp\n"
+"  -v --version           Visa programmets versionsinformation\n"
+"\n"
+
+#: addr2line.c:94 ar.c:295 coffdump.c:469 dlltool.c:3832 dllwrap.c:510
+#: nlmconv.c:1113 objcopy.c:563 objcopy.c:598 readelf.c:2995 size.c:99
+#: srconv.c:1741 strings.c:676 sysdump.c:653 windmc.c:233 windres.c:698
+#, c-format
+msgid "Report bugs to %s\n"
+msgstr ""
+"Rapportera fel till %s\n"
+"Rapportera synpunkter på översättningen till sv@li.org\n"
+
+#: addr2line.c:292
+#, fuzzy, c-format
+msgid "%s: cannot get addresses from archive"
+msgstr "%s: kommer inte åt adresserna i arkivet"
+
+#: addr2line.c:309
+#, fuzzy, c-format
+msgid "%s: cannot find section %s"
+msgstr "%s: kan inte sätta tiden: %s"
+
+#: addr2line.c:375 nm.c:1554 objdump.c:3250
+#, c-format
+msgid "unknown demangling style `%s'"
+msgstr "okänd avkodningsstil \"%s\""
+
+#: ar.c:218
+#, c-format
+msgid "no entry %s in archive\n"
+msgstr "ingen post %s i arkivet\n"
+
+#: ar.c:236
+#, fuzzy, c-format
+msgid ""
+"Usage: %s [emulation options] [--plugin <name>] [-]{dmpqrstx}"
+"[abcfilNoPsSuvV] [member-name] [count] archive-file file...\n"
+msgstr ""
+"Användning: %s [emuleringsflaggor] [-]{dmpqrstx}[abcfilNoPsSuvV] "
+"[medlemsnamn] [nummer] arkivfil fil...\n"
+
+#: ar.c:238
+#, c-format
+msgid ""
+"Usage: %s [emulation options] [-]{dmpqrstx}[abcfilNoPsSuvV] [member-name] "
+"[count] archive-file file...\n"
+msgstr ""
+"Användning: %s [emuleringsflaggor] [-]{dmpqrstx}[abcfilNoPsSuvV] "
+"[medlemsnamn] [nummer] arkivfil fil...\n"
+
+#: ar.c:243
+#, c-format
+msgid "       %s -M [<mri-script]\n"
+msgstr "       %s -M [<mri-skript]\n"
+
+#: ar.c:244
+#, c-format
+msgid " commands:\n"
+msgstr " kommandon:\n"
+
+#: ar.c:245
+#, c-format
+msgid "  d            - delete file(s) from the archive\n"
+msgstr "  d            - radera fil(er) i arkivet\n"
+
+#: ar.c:246
+#, c-format
+msgid "  m[ab]        - move file(s) in the archive\n"
+msgstr "  m[ab]        - flytta fil(er) i arkivet\n"
+
+#: ar.c:247
+#, c-format
+msgid "  p            - print file(s) found in the archive\n"
+msgstr "  p            - skriv ut fil(er) som påträffas i arkivet\n"
+
+#: ar.c:248
+#, c-format
+msgid "  q[f]         - quick append file(s) to the archive\n"
+msgstr "  q[f]         - snabbfoga fil(er) till slutet av arkivet\n"
+
+#: ar.c:249
+#, c-format
+msgid ""
+"  r[ab][f][u]  - replace existing or insert new file(s) into the archive\n"
+msgstr ""
+"  r[ab][f][u]  - ersätt existerande eller infoga ny(a) fil(er) i arkivet\n"
+
+#: ar.c:250
+#, c-format
+msgid "  t            - display contents of archive\n"
+msgstr "  t            - visa innehållet i arkivet\n"
+
+#: ar.c:251
+#, c-format
+msgid "  x[o]         - extract file(s) from the archive\n"
+msgstr "  x[o]         - hämta fil(er) från arkivet\n"
+
+#: ar.c:252
+#, c-format
+msgid " command specific modifiers:\n"
+msgstr " modifierare specifika för kommandona:\n"
+
+#: ar.c:253
+#, c-format
+msgid "  [a]          - put file(s) after [member-name]\n"
+msgstr "  [a]          - infoga fil(er) efter [medlemsnamn]\n"
+
+#: ar.c:254
+#, c-format
+msgid "  [b]          - put file(s) before [member-name] (same as [i])\n"
+msgstr "  [b]          - infoga fil(er) före [medlemsnamn] (samma som [i])\n"
+
+#: ar.c:255
+#, fuzzy, c-format
+msgid "  [D]          - use zero for timestamps and uids/gids\n"
+msgstr "  [P]          - mönsterpassa mot namnets hela sökväg\n"
+
+#: ar.c:256
+#, c-format
+msgid "  [N]          - use instance [count] of name\n"
+msgstr "  [N]          - använd förekomst [nummer] av namn\n"
+
+#: ar.c:257
+#, c-format
+msgid "  [f]          - truncate inserted file names\n"
+msgstr "  [f]          - korta av infogade filnamn\n"
+
+#: ar.c:258
+#, c-format
+msgid "  [P]          - use full path names when matching\n"
+msgstr "  [P]          - mönsterpassa mot namnets hela sökväg\n"
+
+#: ar.c:259
+#, c-format
+msgid "  [o]          - preserve original dates\n"
+msgstr "  [o]          - bevara ursprungliga datum\n"
+
+#: ar.c:260
+#, c-format
+msgid ""
+"  [u]          - only replace files that are newer than current archive "
+"contents\n"
+msgstr "  [u]          - ersätt bara filer som är nyare än i arkivet\n"
+
+#: ar.c:261
+#, c-format
+msgid " generic modifiers:\n"
+msgstr " generella modifierare:\n"
+
+#: ar.c:262
+#, c-format
+msgid "  [c]          - do not warn if the library had to be created\n"
+msgstr "  [c]          - varna inte om biblioteket måste skapas\n"
+
+#: ar.c:263
+#, c-format
+msgid "  [s]          - create an archive index (cf. ranlib)\n"
+msgstr "  [s]          - skapa ett index över arkivet (jfr. ranlib)\n"
+
+#: ar.c:264
+#, c-format
+msgid "  [S]          - do not build a symbol table\n"
+msgstr "  [S]          - skapa inget index över arkivet\n"
+
+#: ar.c:265
+#, fuzzy, c-format
+msgid "  [T]          - make a thin archive\n"
+msgstr "  m[ab]        - flytta fil(er) i arkivet\n"
+
+#: ar.c:266
+#, c-format
+msgid "  [v]          - be verbose\n"
+msgstr "  [v]          - beskriv utförligt\n"
+
+#: ar.c:267
+#, c-format
+msgid "  [V]          - display the version number\n"
+msgstr "  [V]          - visa versionsinformation\n"
+
+#: ar.c:268
+#, fuzzy, c-format
+msgid "  @<file>      - read options from <file>\n"
+msgstr "   --def <deffil>         Välj .def-infil\n"
+
+#: ar.c:270
+#, fuzzy, c-format
+msgid " optional:\n"
+msgstr " Flaggorna är:\n"
+
+#: ar.c:271
+#, c-format
+msgid "  --plugin <p> - load the specified plugin\n"
+msgstr ""
+
+#: ar.c:278
+#, c-format
+msgid "Usage: %s [options] archive\n"
+msgstr "Användning: %s [flaggor] arkiv\n"
+
+#: ar.c:279
+#, c-format
+msgid " Generate an index to speed access to archives\n"
+msgstr " Generera ett index för att snabba upp uppslagningar i arkivet\n"
+
+#: ar.c:280
+#, c-format
+msgid ""
+" The options are:\n"
+"  @<file>                      Read options from <file>\n"
+msgstr ""
+
+#: ar.c:283
+#, fuzzy, c-format
+msgid "  --plugin <name>              Load the specified plugin\n"
+msgstr "   -L --linker <namn>        Använd <namn> som länkare.\n"
+
+#: ar.c:286
+#, fuzzy, c-format
+msgid ""
+"  -t                           Update the archive's symbol map timestamp\n"
+"  -h --help                    Print this help message\n"
+"  -v --version                 Print version information\n"
+msgstr ""
+"  -r                           Ignorerad, för kompabilitet med rc\n"
+"  -h --help                    Visa denna hjälp\n"
+"  -V --version                 Visa versionsinformation\n"
+
+#: ar.c:512 nm.c:1626
+#, c-format
+msgid "sorry - this program has been built without plugin support\n"
+msgstr ""
+
+#: ar.c:539
+msgid "two different operation options specified"
+msgstr "två olika kommandoflaggor gavs"
+
+#: ar.c:620
+#, c-format
+msgid "illegal option -- %c"
+msgstr "otillåten flagga -- %c"
+
+#: ar.c:663
+msgid "no operation specified"
+msgstr "ingen kommandoflagga gavs"
+
+#: ar.c:666
+msgid "`u' is only meaningful with the `r' option."
+msgstr "\"u\" är bara meningsfull tillsammans med \"r\"."
+
+#: ar.c:669
+#, fuzzy
+msgid "`u' is not meaningful with the `D' option."
+msgstr "\"u\" är bara meningsfull tillsammans med \"r\"."
+
+#: ar.c:677
+msgid "`N' is only meaningful with the `x' and `d' options."
+msgstr "\"N\" är bara meningsfull tillsammans med \"x\" eller \"d\"."
+
+#: ar.c:680
+msgid "Value for `N' must be positive."
+msgstr "Argumentet till \"N\" måste vara positivt."
+
+#: ar.c:692
+msgid "`x' cannot be used on thin archives."
+msgstr ""
+
+#: ar.c:733
+#, c-format
+msgid "internal error -- this option not implemented"
+msgstr "internt fel -- flaggan är inte implementerad"
+
+#: ar.c:802
+#, c-format
+msgid "creating %s"
+msgstr "skapar %s"
+
+#: ar.c:851 ar.c:906 ar.c:1234 objcopy.c:2027
+#, c-format
+msgid "internal stat error on %s"
+msgstr "internt stat-fel för %s"
+
+#: ar.c:855
+#, fuzzy, c-format
+msgid ""
+"\n"
+"<%s>\n"
+"\n"
+msgstr ""
+"\n"
+"<medlem %s>\n"
+"\n"
+
+#: ar.c:871 ar.c:939
+#, c-format
+msgid "%s is not a valid archive"
+msgstr "%s är inte ett giltigt arkiv"
+
+#: ar.c:1139
+#, c-format
+msgid "No member named `%s'\n"
+msgstr "Ingen medlem heter \"%s\"\n"
+
+#: ar.c:1189
+#, c-format
+msgid "no entry %s in archive %s!"
+msgstr "ingen post %s i arkiv %s!"
+
+# archive map verkar vara vad indexet kallas i källkoden
+#: ar.c:1328
+#, c-format
+msgid "%s: no archive map to update"
+msgstr "%s: inget index att uppdatera"
+
+#: arsup.c:90
+#, c-format
+msgid "No entry %s in archive.\n"
+msgstr "Ingen post %s i arkivet.\n"
+
+#: arsup.c:115
+#, c-format
+msgid "Can't open file %s\n"
+msgstr "Kan inte öppna fil %s\n"
+
+#: arsup.c:165
+#, c-format
+msgid "%s: Can't open output archive %s\n"
+msgstr "%s: Kan inte öppna utdataakrivet %s\n"
+
+#: arsup.c:186
+#, c-format
+msgid "%s: Can't open input archive %s\n"
+msgstr "%s: Kan inte öppna indataarkivet %s\n"
+
+#: arsup.c:195
+#, c-format
+msgid "%s: file %s is not an archive\n"
+msgstr "%s: fil %s är inte ett arkiv\n"
+
+#: arsup.c:235
+#, c-format
+msgid "%s: no output archive specified yet\n"
+msgstr "%s: inget utdataarkiv anvisat än\n"
+
+#: arsup.c:255 arsup.c:293 arsup.c:335 arsup.c:365 arsup.c:431
+#, c-format
+msgid "%s: no open output archive\n"
+msgstr "%s: inget öppet utdataarkiv\n"
+
+#: arsup.c:266 arsup.c:386 arsup.c:412
+#, c-format
+msgid "%s: can't open file %s\n"
+msgstr "%s: kan inte öppna fil %s\n"
+
+# module file är detsamma som member
+#: arsup.c:320 arsup.c:408 arsup.c:489
+#, c-format
+msgid "%s: can't find module file %s\n"
+msgstr "%s: hittar inte medlem %s\n"
+
+#: arsup.c:440
+#, c-format
+msgid "Current open archive is %s\n"
+msgstr "Det aktuella öppna arkivet är %s\n"
+
+#: arsup.c:464
+#, c-format
+msgid "%s: no open archive\n"
+msgstr "%s: inget öppet arkiv\n"
+
+#: bin2c.c:59
+#, fuzzy, c-format
+msgid "Usage: %s < input_file > output_file\n"
+msgstr "Användning: %s [flaggor] [infil] [utfil]\n"
+
+#: bin2c.c:60
+#, c-format
+msgid "Prints bytes from stdin in hex format.\n"
+msgstr ""
+
+#: binemul.c:38
+#, c-format
+msgid "  No emulation specific options\n"
+msgstr "  Inga emuleringsspecifika flaggor\n"
+
+#. Macros for common output.
+#: binemul.h:43
+#, c-format
+msgid " emulation options: \n"
+msgstr "  emuleringsflaggor:\n"
+
+#: bucomm.c:157
+#, c-format
+msgid "can't set BFD default target to `%s': %s"
+msgstr "kan inte sätta BFD:s standardmål till \"%s\": %s"
+
+#: bucomm.c:168
+#, c-format
+msgid "%s: Matching formats:"
+msgstr "%s: Passande format:"
+
+#: bucomm.c:183
+#, c-format
+msgid "Supported targets:"
+msgstr "Mål som hanteras:"
+
+#: bucomm.c:185
+#, c-format
+msgid "%s: supported targets:"
+msgstr "%s: mål som hanteras:"
+
+#: bucomm.c:202
+#, c-format
+msgid "Supported architectures:"
+msgstr "Arkitekturer som hanteras:"
+
+#: bucomm.c:204
+#, c-format
+msgid "%s: supported architectures:"
+msgstr "%s: arkitekturer som hanteras:"
+
+#: bucomm.c:399
+#, c-format
+msgid "BFD header file version %s\n"
+msgstr "BFD-huvudfil version %s\n"
+
+#: bucomm.c:548
+#, c-format
+msgid "%s: bad number: %s"
+msgstr "%s: felaktigt tal: %s"
+
+#: bucomm.c:565 strings.c:422
+#, c-format
+msgid "'%s': No such file"
+msgstr ""
+
+#: bucomm.c:567 strings.c:424
+#, c-format
+msgid "warning: could not locate '%s'.  reason: %s"
+msgstr ""
+
+#: bucomm.c:571
+#, c-format
+msgid "warning: '%s' is not an ordinary file"
+msgstr ""
+
+#: coffdump.c:106
+#, c-format
+msgid "#lines %d "
+msgstr "#rader %d "
+
+#: coffdump.c:460 sysdump.c:646
+#, c-format
+msgid "Usage: %s [option(s)] in-file\n"
+msgstr "Användning: %s [flaggor] infil\n"
+
+#: coffdump.c:461
+#, c-format
+msgid " Print a human readable interpretation of a SYSROFF object file\n"
+msgstr " Skriv en mänskligt läsbar tolkning av en SYSROFF-objektfil\n"
+
+#: coffdump.c:462
+#, fuzzy, c-format
+msgid ""
+" The options are:\n"
+"  @<file>                Read options from <file>\n"
+"  -h --help              Display this information\n"
+"  -v --version           Display the program's version\n"
+"\n"
+msgstr ""
+" Flaggorna är:\n"
+"  -h --help              Visa denna hjälp\n"
+"  -v --version           Visa programmets versionsinformation\n"
+"\n"
+
+#: coffdump.c:531 srconv.c:1831 sysdump.c:710
+msgid "no input file specified"
+msgstr "ingen infil valdes"
+
+#: cxxfilt.c:119 nm.c:264 objdump.c:251
+#, c-format
+msgid "Report bugs to %s.\n"
+msgstr ""
+"Rapportera fel till %s.\n"
+"Rapportera synpunkter på översättningen till sv@li.org.\n"
+
+#: debug.c:647
+msgid "debug_add_to_current_namespace: no current file"
+msgstr "debug_add_to_current_namespace: ingen aktuell fil"
+
+#: debug.c:726
+msgid "debug_start_source: no debug_set_filename call"
+msgstr "debug_start_source: inget anrop till debug_set_filename"
+
+#: debug.c:782
+msgid "debug_record_function: no debug_set_filename call"
+msgstr "debug_record_function: inget anrop till debug_set_filename"
+
+#: debug.c:834
+msgid "debug_record_parameter: no current function"
+msgstr "debug_record_parameter: ingen aktuell funktion"
+
+#: debug.c:866
+msgid "debug_end_function: no current function"
+msgstr "debug_end_function: ingen aktuell funktion"
+
+#: debug.c:872
+msgid "debug_end_function: some blocks were not closed"
+msgstr "debug_end_function: några block avslutades inte"
+
+#: debug.c:900
+msgid "debug_start_block: no current block"
+msgstr "debug_start_block: inget aktuellt block"
+
+#: debug.c:936
+msgid "debug_end_block: no current block"
+msgstr "debug_end_block: inget aktuellt block"
+
+#: debug.c:943
+msgid "debug_end_block: attempt to close top level block"
+msgstr "debug_end_block: försök gjordes att avsluta yttersta blocket"
+
+#: debug.c:966
+msgid "debug_record_line: no current unit"
+msgstr "debug_record_line: ingen aktuell kompileringsenhet"
+
+#. FIXME
+#: debug.c:1019
+msgid "debug_start_common_block: not implemented"
+msgstr "debug_start_common_block: inte implementerat"
+
+#. FIXME
+#: debug.c:1030
+msgid "debug_end_common_block: not implemented"
+msgstr "debug_end_common_block: inte implementerat"
+
+#. FIXME.
+#: debug.c:1114
+msgid "debug_record_label: not implemented"
+msgstr "debug_record_label: inte implementerat"
+
+#: debug.c:1136
+msgid "debug_record_variable: no current file"
+msgstr "debug_record_variable: ingen aktuell fil"
+
+#: debug.c:1664
+msgid "debug_make_undefined_type: unsupported kind"
+msgstr "debug_make_undefined_type: sorten hanteras inte"
+
+#: debug.c:1841
+msgid "debug_name_type: no current file"
+msgstr "debug_name_type: ingen aktuell fil"
+
+#: debug.c:1886
+msgid "debug_tag_type: no current file"
+msgstr "debug_tag_type: ingen aktuell fil"
+
+#: debug.c:1894
+msgid "debug_tag_type: extra tag attempted"
+msgstr "debug_tag_type: försök gjordes att sätta en extra tagg"
+
+#: debug.c:1931
+#, fuzzy, c-format
+msgid "warning: changing type size from %d to %d\n"
+msgstr "Varning: ändrar datatypens storlek från %d till %d\n"
+
+#: debug.c:1953
+msgid "debug_find_named_type: no current compilation unit"
+msgstr "debug_find_named_type: ingen aktuell kompileringsenhet"
+
+#: debug.c:2056
+#, c-format
+msgid "debug_get_real_type: circular debug information for %s\n"
+msgstr "debug_get_real_type: %s har cirkulär felsökningsinformation\n"
+
+#: debug.c:2483
+msgid "debug_write_type: illegal type encountered"
+msgstr "debug_write_type: påträffade en ogiltig typ"
+
+#: dlltool.c:884 dlltool.c:910 dlltool.c:941
+#, c-format
+msgid "Internal error: Unknown machine type: %d"
+msgstr "Internt fel: Okänd maskintyp: %d"
+
+#: dlltool.c:982
+#, c-format
+msgid "Can't open def file: %s"
+msgstr "Kan inte öppna def-fil: %s"
+
+#: dlltool.c:987
+#, c-format
+msgid "Processing def file: %s"
+msgstr "Bearbetar def-fil: %s"
+
+#: dlltool.c:991
+msgid "Processed def file"
+msgstr "Def-filen är bearbetad"
+
+#: dlltool.c:1015
+#, c-format
+msgid "Syntax error in def file %s:%d"
+msgstr "Syntaktiskt fel i def-fil %s:%d"
+
+#: dlltool.c:1050
+#, c-format
+msgid "%s: Path components stripped from image name, '%s'."
+msgstr ""
+
+#: dlltool.c:1068
+#, c-format
+msgid "NAME: %s base: %x"
+msgstr "NAME: %s bas: %x"
+
+#: dlltool.c:1071 dlltool.c:1087
+msgid "Can't have LIBRARY and NAME"
+msgstr "Kan inte ha både LIBRARY och NAME"
+
+#: dlltool.c:1084
+#, c-format
+msgid "LIBRARY: %s base: %x"
+msgstr "LIBRARY: %s bas: %x"
+
+#: dlltool.c:1320 resrc.c:293
+#, c-format
+msgid "wait: %s"
+msgstr "wait: %s"
+
+#: dlltool.c:1325 dllwrap.c:410 resrc.c:298
+#, c-format
+msgid "subprocess got fatal signal %d"
+msgstr "subprocessen fick fatal signal %d"
+
+#: dlltool.c:1331 dllwrap.c:417 resrc.c:305
+#, c-format
+msgid "%s exited with status %d"
+msgstr "%s avslutade med status %d"
+
+#: dlltool.c:1362
+#, c-format
+msgid "Sucking in info from %s section in %s"
+msgstr "Suger åt mig info från sektion %s i %s"
+
+#: dlltool.c:1487
+#, c-format
+msgid "Excluding symbol: %s"
+msgstr "Undantar symbol: %s"
+
+#: dlltool.c:1576 dlltool.c:1587 nm.c:1001 nm.c:1012
+#, c-format
+msgid "%s: no symbols"
+msgstr "%s: inga symboler"
+
+#. FIXME: we ought to read in and block out the base relocations.
+#: dlltool.c:1613
+#, c-format
+msgid "Done reading %s"
+msgstr "Klar med att läsa %s"
+
+#: dlltool.c:1623
+#, c-format
+msgid "Unable to open object file: %s"
+msgstr "Kan inte öppna objektfil: %s"
+
+#: dlltool.c:1626
+#, c-format
+msgid "Scanning object file %s"
+msgstr "Avläser objektfil %s"
+
+#: dlltool.c:1641
+#, c-format
+msgid "Cannot produce mcore-elf dll from archive file: %s"
+msgstr "Kan inte producera en mcore-elf-dll från arkivfil: %s"
+
+#: dlltool.c:1741
+msgid "Adding exports to output file"
+msgstr "Lägger till exporter till utfilen"
+
+#: dlltool.c:1789
+msgid "Added exports to output file"
+msgstr "La till exporter till utfilen"
+
+#: dlltool.c:1930
+#, c-format
+msgid "Generating export file: %s"
+msgstr "Genererar exportfil: %s"
+
+#: dlltool.c:1935
+#, c-format
+msgid "Unable to open temporary assembler file: %s"
+msgstr "Kan inte öppna temporär assemblerfil: %s"
+
+#: dlltool.c:1938
+#, c-format
+msgid "Opened temporary file: %s"
+msgstr "Öppnade temporär fil: %s"
+
+#: dlltool.c:2113
+#, fuzzy
+msgid "failed to read the number of entries from base file"
+msgstr "Lyckades inte läsa antal hinkar\n"
+
+#: dlltool.c:2161
+msgid "Generated exports file"
+msgstr "Genererade exportfil"
+
+#: dlltool.c:2370
+#, c-format
+msgid "bfd_open failed open stub file: %s"
+msgstr "bfd_open lyckades inte öppna stubbfil: %s"
+
+#: dlltool.c:2373
+#, c-format
+msgid "Creating stub file: %s"
+msgstr "Skapar stubbfil: %s"
+
+#: dlltool.c:2837 dlltool.c:2906
+#, c-format
+msgid "failed to open temporary head file: %s"
+msgstr "lyckades inte öppna temporär huvudfil: %s"
+
+#: dlltool.c:2979
+#, c-format
+msgid "failed to open temporary tail file: %s"
+msgstr "lyckades inte öppna temporär svansfil: %s"
+
+#: dlltool.c:3052
+#, c-format
+msgid "Can't open .lib file: %s"
+msgstr "Kan inte öppna .lib-fil: %s"
+
+#: dlltool.c:3055
+#, c-format
+msgid "Creating library file: %s"
+msgstr "Skapar biblioteksfil: %s"
+
+#: dlltool.c:3146 dlltool.c:3152
+#, c-format
+msgid "cannot delete %s: %s"
+msgstr "kan inte radera %s: %s"
+
+#: dlltool.c:3157
+msgid "Created lib file"
+msgstr "Skapade biblioteksfilen"
+
+#: dlltool.c:3369 dlltool.c:3391
+#, fuzzy, c-format
+msgid "%s is not a library"
+msgstr "%s är inte ett giltigt arkiv"
+
+#: dlltool.c:3409
+#, c-format
+msgid "Import library `%s' specifies two or more dlls"
+msgstr ""
+
+#: dlltool.c:3420
+#, fuzzy, c-format
+msgid "Unable to determine dll name for `%s' (not an import library?)"
+msgstr "Kan inte fastställa hur många symboler som ska läsas in\n"
+
+#: dlltool.c:3641
+#, fuzzy, c-format
+msgid "warning: ignoring duplicate EXPORT %s %d,%d"
+msgstr "Varning, ignorerar dubbel EXPORT %s %d,%d"
+
+#: dlltool.c:3647
+#, fuzzy, c-format
+msgid "error: duplicate EXPORT with ordinals: %s"
+msgstr "Fel, dubbel EXPORT med ordningstal: %s"
+
+#: dlltool.c:3752
+msgid "Processing definitions"
+msgstr "Bearbetar definitioner"
+
+#: dlltool.c:3784
+msgid "Processed definitions"
+msgstr "Definitionerna är bearbetade"
+
+#. xgetext:c-format
+#: dlltool.c:3791 dllwrap.c:471
+#, c-format
+msgid "Usage %s <option(s)> <object-file(s)>\n"
+msgstr "Användning: %s <flaggor> <objektfil(er)>\n"
+
+#. xgetext:c-format
+#: dlltool.c:3793
+#, c-format
+msgid ""
+"   -m --machine <machine>    Create as DLL for <machine>.  [default: %s]\n"
+msgstr ""
+"   -m --machine <maskin>     Skapa som DLL för <maskin>.  [förval: %s]\n"
+
+#: dlltool.c:3794
+#, c-format
+msgid ""
+"        possible <machine>: arm[_interwork], i386, mcore[-elf]{-le|-be}, "
+"ppc, thumb\n"
+msgstr ""
+"        möjliga <maskin>: arm[_interwork], i386, mcore[-elf]{-le|-be}, ppc, "
+"thumb\n"
+
+#: dlltool.c:3795
+#, c-format
+msgid "   -e --output-exp <outname> Generate an export file.\n"
+msgstr "   -e --output-exp <utnamn> Generera en exportfil.\n"
+
+#: dlltool.c:3796
+#, c-format
+msgid "   -l --output-lib <outname> Generate an interface library.\n"
+msgstr "   -l --output-lib <utnamn> Generera ett gränssnittsbibliotek.\n"
+
+#: dlltool.c:3797
+#, fuzzy, c-format
+msgid "   -y --output-delaylib <outname> Create a delay-import library.\n"
+msgstr "   --output-lib <utnamn>  Generera indatabibliotek.\n"
+
+#: dlltool.c:3798
+#, c-format
+msgid "   -a --add-indirect         Add dll indirects to export file.\n"
+msgstr ""
+"   -a --add-indirect         Lägg till indirekta dll till exportfilen.\n"
+
+#: dlltool.c:3799
+#, c-format
+msgid ""
+"   -D --dllname <name>       Name of input dll to put into interface lib.\n"
+msgstr ""
+"   -D --dllname <namn>       Namn på indata-dll att infoga i "
+"gränssnittsbiblioteket.\n"
+
+#: dlltool.c:3800
+#, c-format
+msgid "   -d --input-def <deffile>  Name of .def file to be read in.\n"
+msgstr "   -d --input-def <def-fil>  Namn på .def-fil att läsa in.\n"
+
+#: dlltool.c:3801
+#, c-format
+msgid "   -z --output-def <deffile> Name of .def file to be created.\n"
+msgstr "   -z --output-def <def-fil> Namn på .def-fil att skapa.\n"
+
+#: dlltool.c:3802
+#, c-format
+msgid "      --export-all-symbols   Export all symbols to .def\n"
+msgstr "      --export-all-symbols   Exportera alla symboler till .def\n"
+
+#  Följande sträng har den beskrivande delen indenterad två tecken
+#  extra i den engelska texten för att två flaggor är för långa. I den
+#  svenska översättningen är de indenterade tre tecken extra för att
+#  den ena flaggan blev ytterligare ett tecken för lång.
+#: dlltool.c:3803
+#, c-format
+msgid "      --no-export-all-symbols  Only export listed symbols\n"
+msgstr "      --no-export-all-symbols   Exportera endast anvisade symboler\n"
+
+#  Följande sträng har den beskrivande delen indenterad två tecken
+#  extra i den engelska texten för att två flaggor är för långa. I den
+#  svenska översättningen är de indenterade tre tecken extra för att
+#  den ena flaggan blev ytterligare ett tecken för lång.
+#: dlltool.c:3804
+#, c-format
+msgid "      --exclude-symbols <list> Don't export <list>\n"
+msgstr "      --exclude-symbols <lista> Exportera inte symboler i <lista>\n"
+
+#: dlltool.c:3805
+#, c-format
+msgid "      --no-default-excludes  Clear default exclude symbols\n"
+msgstr ""
+"      --no-default-excludes  Låt bli att inte exportera vissa "
+"standardsymboler\n"
+
+#: dlltool.c:3806
+#, c-format
+msgid "   -b --base-file <basefile> Read linker generated base file.\n"
+msgstr "   -b --base-file <basfil>   Läs den länkgenererade basfilen.\n"
+
+#: dlltool.c:3807
+#, c-format
+msgid "   -x --no-idata4            Don't generate idata$4 section.\n"
+msgstr "   -x --no-idata4            Generera ingen idata$4-sektion.\n"
+
+#: dlltool.c:3808
+#, c-format
+msgid "   -c --no-idata5            Don't generate idata$5 section.\n"
+msgstr "   -c --no-idata5            Generera ingen idata$5-sektion.\n"
+
+#: dlltool.c:3809
+#, c-format
+msgid ""
+"      --use-nul-prefixed-import-tables Use zero prefixed idata$4 and idata"
+"$5.\n"
+msgstr ""
+
+#: dlltool.c:3810
+#, fuzzy, c-format
+msgid ""
+"   -U --add-underscore       Add underscores to all symbols in interface "
+"library.\n"
+msgstr ""
+"   -U --add-underscore       Sätt dit understreck på symboler i "
+"gränssnittsbiblioteket.\n"
+
+#: dlltool.c:3811
+#, fuzzy, c-format
+msgid ""
+"      --add-stdcall-underscore Add underscores to stdcall symbols in "
+"interface library.\n"
+msgstr ""
+"   -U --add-underscore       Sätt dit understreck på symboler i "
+"gränssnittsbiblioteket.\n"
+
+#: dlltool.c:3812
+#, c-format
+msgid "   -k --kill-at              Kill @<n> from exported names.\n"
+msgstr "   -k --kill-at              Utplåna @<n> från exporterade namn.\n"
+
+#: dlltool.c:3813
+#, c-format
+msgid "   -A --add-stdcall-alias    Add aliases without @<n>.\n"
+msgstr "   -A --add-stdcall-alias    Tillför alias utan @<n>.\n"
+
+#: dlltool.c:3814
+#, fuzzy, c-format
+msgid "   -p --ext-prefix-alias <prefix> Add aliases with <prefix>.\n"
+msgstr "   -A --add-stdcall-alias    Tillför alias utan @<n>.\n"
+
+#: dlltool.c:3815
+#, c-format
+msgid "   -S --as <name>            Use <name> for assembler.\n"
+msgstr "   -S --as <namn>            Använd <namn> som assemblerare.\n"
+
+#: dlltool.c:3816
+#, c-format
+msgid "   -f --as-flags <flags>     Pass <flags> to the assembler.\n"
+msgstr "   -f --as-flags <flaggor>   Skicka <flaggor> till assembleraren.\n"
+
+#: dlltool.c:3817
+#, c-format
+msgid ""
+"   -C --compat-implib        Create backward compatible import library.\n"
+msgstr "   -C --compat-implib        Skapa bakåtkompatibelt importbibliotek.\n"
+
+#: dlltool.c:3818
+#, c-format
+msgid ""
+"   -n --no-delete            Keep temp files (repeat for extra "
+"preservation).\n"
+msgstr ""
+"   -n --no-delete            Behåll temporärfiler (repetera för ökat "
+"antal).\n"
+
+#: dlltool.c:3819
+#, c-format
+msgid ""
+"   -t --temp-prefix <prefix> Use <prefix> to construct temp file names.\n"
+msgstr ""
+
+#: dlltool.c:3820
+#, c-format
+msgid ""
+"   -I --identify <implib>    Report the name of the DLL associated with "
+"<implib>.\n"
+msgstr ""
+
+#: dlltool.c:3821
+#, c-format
+msgid ""
+"      --identify-strict      Causes --identify to report error when multiple "
+"DLLs.\n"
+msgstr ""
+
+#: dlltool.c:3822
+#, c-format
+msgid "   -v --verbose              Be verbose.\n"
+msgstr "   -v --verbose              Beskriv utförligt.\n"
+
+#: dlltool.c:3823
+#, c-format
+msgid "   -V --version              Display the program version.\n"
+msgstr "   -V --version              Visa versionsinformation om programmet.\n"
+
+#: dlltool.c:3824
+#, c-format
+msgid "   -h --help                 Display this information.\n"
+msgstr "   -h --help                 Visa den här informationen.\n"
+
+#: dlltool.c:3825
+#, fuzzy, c-format
+msgid "   @<file>                   Read options from <file>.\n"
+msgstr "   -h --help                 Visa den här informationen.\n"
+
+#: dlltool.c:3827
+#, c-format
+msgid ""
+"   -M --mcore-elf <outname>  Process mcore-elf object files into <outname>.\n"
+msgstr ""
+"   -M --mcore-elf <utnamn>   Behandla mcore-elf-objektfiler till <utnamn>.\n"
+
+#: dlltool.c:3828
+#, c-format
+msgid "   -L --linker <name>        Use <name> as the linker.\n"
+msgstr "   -L --linker <namn>        Använd <namn> som länkare.\n"
+
+#  Indenteringen blir fel här för <flaggor> är för lång.
+#: dlltool.c:3829
+#, c-format
+msgid "   -F --linker-flags <flags> Pass <flags> to the linker.\n"
+msgstr "   -F --linker-flags <flaggor> Skicka <flaggor> till länkaren.\n"
+
+#: dlltool.c:3966
+#, c-format
+msgid "Path components stripped from dllname, '%s'."
+msgstr ""
+
+#: dlltool.c:4014
+#, c-format
+msgid "Unable to open base-file: %s"
+msgstr "Kan inte öppna basfilen: %s"
+
+#: dlltool.c:4049
+#, c-format
+msgid "Machine '%s' not supported"
+msgstr "Maskin \"%s\" hanteras inte"
+
+#: dlltool.c:4118
+#, c-format
+msgid "warning: machine type (%d) not supported for delayimport."
+msgstr ""
+
+#: dlltool.c:4186 dllwrap.c:201
+#, c-format
+msgid "Tried file: %s"
+msgstr "Provade fil: %s"
+
+#: dlltool.c:4193 dllwrap.c:208
+#, c-format
+msgid "Using file: %s"
+msgstr "Använder fil: %s"
+
+#: dllwrap.c:291
+#, c-format
+msgid "Keeping temporary base file %s"
+msgstr "Behåller temporär basfil %s"
+
+#: dllwrap.c:293
+#, c-format
+msgid "Deleting temporary base file %s"
+msgstr "Tar bort temporär basfil %s"
+
+#: dllwrap.c:307
+#, c-format
+msgid "Keeping temporary exp file %s"
+msgstr "Behåller temporär exportfil %s"
+
+#: dllwrap.c:309
+#, c-format
+msgid "Deleting temporary exp file %s"
+msgstr "Tar bort temporär exportfil %s"
+
+#: dllwrap.c:322
+#, c-format
+msgid "Keeping temporary def file %s"
+msgstr "Behåller temporär def-fil %s"
+
+#: dllwrap.c:324
+#, c-format
+msgid "Deleting temporary def file %s"
+msgstr "Tar bort temporär def-fil %s"
+
+#: dllwrap.c:472
+#, c-format
+msgid "  Generic options:\n"
+msgstr "  Generella flaggor:\n"
+
+#: dllwrap.c:473
+#, c-format
+msgid "   @<file>                Read options from <file>\n"
+msgstr ""
+
+#: dllwrap.c:474
+#, c-format
+msgid "   --quiet, -q            Work quietly\n"
+msgstr "   --quiet, -q            Arbeta under tystnad\n"
+
+#: dllwrap.c:475
+#, c-format
+msgid "   --verbose, -v          Verbose\n"
+msgstr "   --verbose, -v          Utförlig\n"
+
+#: dllwrap.c:476
+#, c-format
+msgid "   --version              Print dllwrap version\n"
+msgstr "   --version              Visa versionsinformation för dllwrap\n"
+
+#: dllwrap.c:477
+#, c-format
+msgid "   --implib <outname>     Synonym for --output-lib\n"
+msgstr "   --implib <utnamn>      Synonym för --output-lib\n"
+
+#: dllwrap.c:478
+#, c-format
+msgid "  Options for %s:\n"
+msgstr "  Flaggor för %s:\n"
+
+#: dllwrap.c:479
+#, c-format
+msgid "   --driver-name <driver> Defaults to \"gcc\"\n"
+msgstr "   --driver-name <enhet>  Förvald till \"gcc\"\n"
+
+#: dllwrap.c:480
+#, c-format
+msgid "   --driver-flags <flags> Override default ld flags\n"
+msgstr "   --driver-flags <flaggor> Förbigå förvalda flaggor för ld\n"
+
+#: dllwrap.c:481
+#, c-format
+msgid "   --dlltool-name <dlltool> Defaults to \"dlltool\"\n"
+msgstr "   --dlltool-name <dllverktyg> Förvalt till \"dlltool\"\n"
+
+#: dllwrap.c:482
+#, c-format
+msgid "   --entry <entry>        Specify alternate DLL entry point\n"
+msgstr "   --entry <ingång>       Ge alternativ ingångspunkt i DLL:en\n"
+
+#: dllwrap.c:483
+#, c-format
+msgid "   --image-base <base>    Specify image base address\n"
+msgstr "   --image-base <bas>     Ge avbildens basadress\n"
+
+#: dllwrap.c:484
+#, c-format
+msgid "   --target <machine>     i386-cygwin32 or i386-mingw32\n"
+msgstr "   --target <maskin>      i386-cygwin32 eller i386-mingw32\n"
+
+#: dllwrap.c:485
+#, c-format
+msgid "   --dry-run              Show what needs to be run\n"
+msgstr ""
+"   --dry-run              Visa endast vad som behöver göras, verkställ inte\n"
+
+#: dllwrap.c:486
+#, c-format
+msgid "   --mno-cygwin           Create Mingw DLL\n"
+msgstr "   --mno-cygwin           Skapa Mingw-DLL\n"
+
+#: dllwrap.c:487
+#, c-format
+msgid "  Options passed to DLLTOOL:\n"
+msgstr "  Flaggor som skickas till DLLVERKTYG:\n"
+
+#: dllwrap.c:488
+#, c-format
+msgid "   --machine <machine>\n"
+msgstr "   --machine <maskin>\n"
+
+#: dllwrap.c:489
+#, c-format
+msgid "   --output-exp <outname> Generate export file.\n"
+msgstr "   --output-exp <utnamn>  Generera exportfil.\n"
+
+#: dllwrap.c:490
+#, c-format
+msgid "   --output-lib <outname> Generate input library.\n"
+msgstr "   --output-lib <utnamn>  Generera indatabibliotek.\n"
+
+#: dllwrap.c:491
+#, c-format
+msgid "   --add-indirect         Add dll indirects to export file.\n"
+msgstr "   --add-indirect         Lägg till indirekta dll till exportfilen.\n"
+
+#: dllwrap.c:492
+#, c-format
+msgid "   --dllname <name>       Name of input dll to put into output lib.\n"
+msgstr ""
+"   --dllname <namn>       Namn på indata-dll som ska infogas i "
+"utdatabiblioteket.\n"
+
+#: dllwrap.c:493
+#, c-format
+msgid "   --def <deffile>        Name input .def file\n"
+msgstr "   --def <deffil>         Välj .def-infil\n"
+
+#: dllwrap.c:494
+#, c-format
+msgid "   --output-def <deffile> Name output .def file\n"
+msgstr "   --output-def <deffil>  Välj .def-utfil\n"
+
+#: dllwrap.c:495
+#, c-format
+msgid "   --export-all-symbols     Export all symbols to .def\n"
+msgstr "   --export-all-symbols     Exportera alla symboler till .def\n"
+
+#: dllwrap.c:496
+#, c-format
+msgid "   --no-export-all-symbols  Only export .drectve symbols\n"
+msgstr "   --no-export-all-symbols  Exportera endast .drectve-symboler\n"
+
+#: dllwrap.c:497
+#, c-format
+msgid "   --exclude-symbols <list> Exclude <list> from .def\n"
+msgstr "   --exclude-symbols <lista> Undanta symbolerna i <lista> från .def\n"
+
+#: dllwrap.c:498
+#, c-format
+msgid "   --no-default-excludes    Zap default exclude symbols\n"
+msgstr "   --no-default-excludes    Bortse från förvalt undantagna symboler\n"
+
+#: dllwrap.c:499
+#, c-format
+msgid "   --base-file <basefile> Read linker generated base file\n"
+msgstr "   --base-file <basfil>   Läs den länkgenererad basfil\n"
+
+#: dllwrap.c:500
+#, c-format
+msgid "   --no-idata4           Don't generate idata$4 section\n"
+msgstr "   --no-idata4           Generera ingen idata$4-sektion\n"
+
+#: dllwrap.c:501
+#, c-format
+msgid "   --no-idata5           Don't generate idata$5 section\n"
+msgstr "   --no-idata5           Generera ingen idata$5-sektion\n"
+
+#: dllwrap.c:502
+#, c-format
+msgid "   -U                     Add underscores to .lib\n"
+msgstr "   -U                     Sätt dit understreck i .lib\n"
+
+#: dllwrap.c:503
+#, c-format
+msgid "   -k                     Kill @<n> from exported names\n"
+msgstr "   -k                     Utplåna @<n> från exporterade namn\n"
+
+#: dllwrap.c:504
+#, c-format
+msgid "   --add-stdcall-alias    Add aliases without @<n>\n"
+msgstr "   --add-stdcall-alias    Tillför alias utan @<n>\n"
+
+#: dllwrap.c:505
+#, c-format
+msgid "   --as <name>            Use <name> for assembler\n"
+msgstr "   --as <namn>            Använd <namn> som assemblerare\n"
+
+#: dllwrap.c:506
+#, c-format
+msgid "   --nodelete             Keep temp files.\n"
+msgstr "   --nodelete             Behåll temporära filer.\n"
+
+#: dllwrap.c:507
+#, c-format
+msgid "  Rest are passed unmodified to the language driver\n"
+msgstr "  Övriga flaggor skickas oförändrade till programspråksenheten\n"
+
+#: dllwrap.c:781
+msgid "Must provide at least one of -o or --dllname options"
+msgstr "Du måste ange minst en av flaggorna -o och --dllname"
+
+#: dllwrap.c:810
+msgid ""
+"no export definition file provided.\n"
+"Creating one, but that may not be what you want"
+msgstr ""
+"ingen export-definitionsfil gavs.\n"
+"En sådan skapas, men det är kanske inte vad du vill"
+
+# Indenteringen är ökad för att översättningen ska få plats framför
+# kolonet på alla 4 strängar.
+#: dllwrap.c:969
+#, c-format
+msgid "DLLTOOL name    : %s\n"
+msgstr "DLLVERKTYG namn   : %s\n"
+
+# Indenteringen är ökad för att översättningen ska få plats framför
+# kolonet på alla 4 strängar.
+#: dllwrap.c:970
+#, c-format
+msgid "DLLTOOL options : %s\n"
+msgstr "DLLVERKTYG flaggor: %s\n"
+
+# Indenteringen är ökad för att översättningen ska få plats framför
+# kolonet på alla 4 strängar.
+#: dllwrap.c:971
+#, c-format
+msgid "DRIVER name     : %s\n"
+msgstr "ENHET namn        : %s\n"
+
+# Indenteringen är ökad för att översättningen ska få plats framför
+# kolonet på alla 4 strängar.
+#: dllwrap.c:972
+#, c-format
+msgid "DRIVER options  : %s\n"
+msgstr "ENHET flaggor     : %s\n"
+
+#: dwarf.c:106 dwarf.c:155 readelf.c:363 readelf.c:531
+#, c-format
+msgid "Unhandled data length: %d\n"
+msgstr "Storlek på data som inte kan behandlas: %d\n"
+
+#: dwarf.c:304 dwarf.c:2649
+msgid "badly formed extended line op encountered!\n"
+msgstr "felaktigt utformad utökad rad-op påträffades!\n"
+
+#: dwarf.c:311
+#, c-format
+msgid "  Extended opcode %d: "
+msgstr "  Utökad op-kod %d: "
+
+#: dwarf.c:316
+#, c-format
+msgid ""
+"End of Sequence\n"
+"\n"
+msgstr ""
+"Slut på sekvensen\n"
+"\n"
+
+#: dwarf.c:322
+#, c-format
+msgid "set Address to 0x%lx\n"
+msgstr "sätt Adress till 0x%lx\n"
+
+#: dwarf.c:327
+#, c-format
+msgid "  define new File Table entry\n"
+msgstr "  definiera ny filtabellspost\n"
+
+#: dwarf.c:328 dwarf.c:2263
+#, c-format
+msgid "  Entry\tDir\tTime\tSize\tName\n"
+msgstr "  Post\tKatalog\tTid\tStorl.\tNamn\n"
+
+#: dwarf.c:330
+#, c-format
+msgid "   %d\t"
+msgstr "   %d\t"
+
+#: dwarf.c:333 dwarf.c:335 dwarf.c:337 dwarf.c:2275 dwarf.c:2277 dwarf.c:2279
+#, c-format
+msgid "%lu\t"
+msgstr "%lu\t"
+
+#: dwarf.c:338
+#, c-format
+msgid ""
+"%s\n"
+"\n"
+msgstr ""
+"%s\n"
+"\n"
+
+#: dwarf.c:342
+#, c-format
+msgid "set Discriminator to %lu\n"
+msgstr ""
+
+#. The test against DW_LNW_hi_user is redundant due to
+#. the limited range of the unsigned char data type used
+#. for op_code.
+#. && op_code <= DW_LNE_hi_user
+#: dwarf.c:384
+#, fuzzy, c-format
+msgid "user defined: length %d\n"
+msgstr "(användardefinierad plats-op)"
+
+#: dwarf.c:386 dwarf.c:2680
+#, c-format
+msgid "UNKNOWN: length %d\n"
+msgstr "OKÄND: längd %d\n"
+
+#: dwarf.c:399
+msgid "<no .debug_str section>"
+msgstr "<ingen .debug_str-sektion>"
+
+#: dwarf.c:405
+#, c-format
+msgid "DW_FORM_strp offset too big: %lx\n"
+msgstr ""
+
+#: dwarf.c:406
+msgid "<offset is too big>"
+msgstr "<offseten är för stor>"
+
+#: dwarf.c:639
+#, c-format
+msgid "Unknown TAG value: %lx"
+msgstr "Okänt TAG-värde: %lx"
+
+#: dwarf.c:675
+#, c-format
+msgid "Unknown FORM value: %lx"
+msgstr "Okänt FORM-värde: %lx"
+
+#: dwarf.c:684
+#, c-format
+msgid " %lu byte block: "
+msgstr " %lu byte-block: "
+
+#: dwarf.c:1102
+#, c-format
+msgid "(User defined location op)"
+msgstr "(användardefinierad plats-op)"
+
+#: dwarf.c:1104
+#, c-format
+msgid "(Unknown location op)"
+msgstr "(okänd plats-op)"
+
+#: dwarf.c:1152
+msgid "Internal error: DWARF version is not 2 or 3.\n"
+msgstr "Internt fel: DWARF-version inte 2 eller 3.\n"
+
+#: dwarf.c:1251
+msgid "DW_FORM_data8 is unsupported when sizeof (unsigned long) != 8\n"
+msgstr ""
+
+#: dwarf.c:1300
+#, c-format
+msgid " (indirect string, offset: 0x%lx): %s"
+msgstr " (indirekt sträng, offset: 0x%lx): %s"
+
+#: dwarf.c:1309
+#, fuzzy, c-format
+msgid "Unrecognized form: %lu\n"
+msgstr "Okänd formtyp: %d\n"
+
+#: dwarf.c:1393
+#, c-format
+msgid "(not inlined)"
+msgstr "(inte inlajnad)"
+
+#: dwarf.c:1396
+#, c-format
+msgid "(inlined)"
+msgstr "(inlajnad)"
+
+#: dwarf.c:1399
+#, c-format
+msgid "(declared as inline but ignored)"
+msgstr "(deklarerad som inlajn men ignorerad)"
+
+#: dwarf.c:1402
+#, c-format
+msgid "(declared as inline and inlined)"
+msgstr "(deklarerad som inlajn och inlajnad)"
+
+#: dwarf.c:1405
+#, c-format
+msgid "  (Unknown inline attribute value: %lx)"
+msgstr "  (okänt inlajnattributvärde: %lx)"
+
+#: dwarf.c:1566
+#, fuzzy, c-format
+msgid "(location list)"
+msgstr ""
+"\n"
+"Omrelokeringssektion "
+
+#: dwarf.c:1585 dwarf.c:3281
+#, c-format
+msgid " [without DW_AT_frame_base]"
+msgstr ""
+
+#: dwarf.c:1597
+#, c-format
+msgid ""
+"Offset %lx used as value for DW_AT_import attribute of DIE at offset %lx is "
+"too big.\n"
+msgstr ""
+
+#: dwarf.c:1771
+#, c-format
+msgid "Unknown AT value: %lx"
+msgstr "Okänt AT-värde: %lx"
+
+#: dwarf.c:1838
+#, c-format
+msgid "Reserved length value (%lx) found in section %s\n"
+msgstr ""
+
+#: dwarf.c:1849
+#, fuzzy, c-format
+msgid "Corrupt unit length (%lx) found in section %s\n"
+msgstr "Innehåll i %s-sektionen:\n"
+
+#: dwarf.c:1856
+#, fuzzy, c-format
+msgid "No comp units in %s section ?"
+msgstr "%s har ingen %s-sektion"
+
+#: dwarf.c:1865
+#, c-format
+msgid "Not enough memory for a debug info array of %u entries"
+msgstr ""
+
+#: dwarf.c:1873 dwarf.c:2882 dwarf.c:2976 dwarf.c:3050 dwarf.c:3167
+#: dwarf.c:3316 dwarf.c:3374 dwarf.c:3571
+#, c-format
+msgid ""
+"Contents of the %s section:\n"
+"\n"
+msgstr ""
+"%s-sektionens innehåll:\n"
+"\n"
+
+#: dwarf.c:1881
+#, fuzzy, c-format
+msgid "Unable to locate %s section!\n"
+msgstr "Kan inte hitta någon .debug_abbrev-sektion!\n"
+
+#: dwarf.c:1944
+#, fuzzy, c-format
+msgid "  Compilation Unit @ offset 0x%lx:\n"
+msgstr "  Kompileringsenhet @ %lx:\n"
+
+#: dwarf.c:1945
+#, fuzzy, c-format
+msgid "   Length:        0x%lx (%s)\n"
+msgstr "   längd:         %ld\n"
+
+#: dwarf.c:1947
+#, c-format
+msgid "   Version:       %d\n"
+msgstr "   version:       %d\n"
+
+#: dwarf.c:1948
+#, c-format
+msgid "   Abbrev Offset: %ld\n"
+msgstr "   förk.-offset:  %ld\n"
+
+#: dwarf.c:1949
+#, c-format
+msgid "   Pointer Size:  %d\n"
+msgstr "   pekarstorlek:  %d\n"
+
+#: dwarf.c:1955
+#, c-format
+msgid ""
+"Debug info is corrupted, length of CU at %lx extends beyond end of section "
+"(length = %lx)\n"
+msgstr ""
+
+#: dwarf.c:1964
+#, fuzzy, c-format
+msgid "CU at offset %lx contains corrupt or unsupported version number: %d.\n"
+msgstr " på offset 0x%lx innehåller %lu poster:\n"
+
+#: dwarf.c:1974
+#, c-format
+msgid ""
+"Debug info is corrupted, abbrev offset (%lx) is larger than abbrev section "
+"size (%lx)\n"
+msgstr ""
+
+#: dwarf.c:2021
+#, c-format
+msgid ""
+"Bogus end-of-siblings marker detected at offset %lx in .debug_info section\n"
+msgstr ""
+
+#: dwarf.c:2025
+msgid "Further warnings about bogus end-of-sibling markers suppressed\n"
+msgstr ""
+
+#: dwarf.c:2032
+#, fuzzy, c-format
+msgid " <%d><%lx>: Abbrev Number: %lu"
+msgstr " <%d><%lx>: Förkortningsnummer: %lu (%s)\n"
+
+#: dwarf.c:2049
+#, c-format
+msgid ""
+"DIE at offset %lx refers to abbreviation number %lu which does not exist\n"
+msgstr ""
+
+#: dwarf.c:2055
+#, c-format
+msgid " (%s)\n"
+msgstr ""
+
+#: dwarf.c:2146
+#, fuzzy, c-format
+msgid ""
+"Raw dump of debug contents of section %s:\n"
+"\n"
+msgstr ""
+"\n"
+"Utskrift av felsökningsinnehåll i sektion %s:\n"
+"\n"
+
+#: dwarf.c:2184
+#, fuzzy, c-format
+msgid ""
+"The information in section %s appears to be corrupt - the section is too "
+"small\n"
+msgstr "Radinformationen verkar vara trasig - sektionen är för liten\n"
+
+#: dwarf.c:2194 dwarf.c:2482
+msgid "Only DWARF version 2 and 3 line info is currently supported.\n"
+msgstr "Endast DWARF 2 och 3 radinfo hanteras för närvarande.\n"
+
+#: dwarf.c:2215
+#, fuzzy, c-format
+msgid "  Offset:                      0x%lx\n"
+msgstr "  längd:                       %ld\n"
+
+#: dwarf.c:2216
+#, c-format
+msgid "  Length:                      %ld\n"
+msgstr "  längd:                       %ld\n"
+
+#: dwarf.c:2217
+#, c-format
+msgid "  DWARF Version:               %d\n"
+msgstr "  DWARF version:               %d\n"
+
+#: dwarf.c:2218
+#, c-format
+msgid "  Prologue Length:             %d\n"
+msgstr "  prologlängd:                 %d\n"
+
+#: dwarf.c:2219
+#, c-format
+msgid "  Minimum Instruction Length:  %d\n"
+msgstr "  minsta instruktionslängd:    %d\n"
+
+#  BUGG: Ska det inte vara `' på engelska?
+#: dwarf.c:2220
+#, c-format
+msgid "  Initial value of 'is_stmt':  %d\n"
+msgstr "  initialvärde på \"is_stmt\": %d\n"
+
+#: dwarf.c:2221
+#, c-format
+msgid "  Line Base:                   %d\n"
+msgstr "  radbas:                      %d\n"
+
+#: dwarf.c:2222
+#, c-format
+msgid "  Line Range:                  %d\n"
+msgstr "  radomfång:                   %d\n"
+
+#: dwarf.c:2223
+#, c-format
+msgid "  Opcode Base:                 %d\n"
+msgstr "  op-kodbas:                   %d\n"
+
+#: dwarf.c:2232
+#, c-format
+msgid ""
+"\n"
+" Opcodes:\n"
+msgstr ""
+"\n"
+" Op-koder:\n"
+
+#: dwarf.c:2235
+#, c-format
+msgid "  Opcode %d has %d args\n"
+msgstr "  Op-kod %d har %d argument\n"
+
+#: dwarf.c:2241
+#, c-format
+msgid ""
+"\n"
+" The Directory Table is empty.\n"
+msgstr ""
+"\n"
+" Katalogtabellen är tom.\n"
+
+#: dwarf.c:2244
+#, c-format
+msgid ""
+"\n"
+" The Directory Table:\n"
+msgstr ""
+"\n"
+" Katalogtabellen:\n"
+
+#: dwarf.c:2248
+#, c-format
+msgid "  %s\n"
+msgstr "  %s\n"
+
+#: dwarf.c:2259
+#, c-format
+msgid ""
+"\n"
+" The File Name Table is empty.\n"
+msgstr ""
+"\n"
+" Filnamnstabellen är tom.\n"
+
+#: dwarf.c:2262
+#, c-format
+msgid ""
+"\n"
+" The File Name Table:\n"
+msgstr ""
+"\n"
+" Filnamnstabellen:\n"
+
+#: dwarf.c:2270
+#, c-format
+msgid "  %d\t"
+msgstr "  %d\t"
+
+#: dwarf.c:2281
+#, c-format
+msgid "%s\n"
+msgstr "%s\n"
+
+#. Now display the statements.
+#: dwarf.c:2289
+#, c-format
+msgid ""
+"\n"
+" Line Number Statements:\n"
+msgstr ""
+"\n"
+" Radnummersatser:\n"
+
+#: dwarf.c:2305
+#, fuzzy, c-format
+msgid "  Special opcode %d: advance Address by %lu to 0x%lx"
+msgstr "  Särskild op-kod %d: öka adressen med %d till 0x%lx"
+
+#: dwarf.c:2309
+#, c-format
+msgid " and Line by %d to %d\n"
+msgstr " och radnumret med %d till %d\n"
+
+#: dwarf.c:2319
+#, c-format
+msgid "  Copy\n"
+msgstr "  Kopiera\n"
+
+#: dwarf.c:2327
+#, fuzzy, c-format
+msgid "  Advance PC by %lu to 0x%lx\n"
+msgstr "  Öka programräknaren med %d till %lx\n"
+
+#: dwarf.c:2335
+#, c-format
+msgid "  Advance Line by %d to %d\n"
+msgstr "  Öka radnumret med %d till %d\n"
+
+#: dwarf.c:2342
+#, c-format
+msgid "  Set File Name to entry %d in the File Name Table\n"
+msgstr "  Sätt filnamnet till post %d i filnamnstabellen\n"
+
+#: dwarf.c:2350
+#, fuzzy, c-format
+msgid "  Set column to %lu\n"
+msgstr "  Sätt kolumnen till %d\n"
+
+#: dwarf.c:2357
+#, c-format
+msgid "  Set is_stmt to %d\n"
+msgstr "  Sätt is_stmt till %d\n"
+
+#: dwarf.c:2362
+#, c-format
+msgid "  Set basic block\n"
+msgstr "  Sätt basblocket\n"
+
+#: dwarf.c:2370
+#, fuzzy, c-format
+msgid "  Advance PC by constant %lu to 0x%lx\n"
+msgstr "  Öka programräknaren med konstant %d till 0x%lx\n"
+
+#: dwarf.c:2378
+#, fuzzy, c-format
+msgid "  Advance PC by fixed size amount %lu to 0x%lx\n"
+msgstr "  Öka programräknaren med fastlängdsantal %d till 0x%lx\n"
+
+#: dwarf.c:2383
+#, c-format
+msgid "  Set prologue_end to true\n"
+msgstr "  Sätt prologue_end till sann\n"
+
+#: dwarf.c:2387
+#, c-format
+msgid "  Set epilogue_begin to true\n"
+msgstr "  Sätt epilogue_begin till sann\n"
+
+#: dwarf.c:2393 dwarf.c:2758
+#, fuzzy, c-format
+msgid "  Set ISA to %lu\n"
+msgstr "  Sätt ISA till %d\n"
+
+#: dwarf.c:2397 dwarf.c:2762
+#, c-format
+msgid "  Unknown opcode %d with operands: "
+msgstr "  Okänd op-kod %d med operand: "
+
+#: dwarf.c:2430
+#, fuzzy, c-format
+msgid ""
+"Decoded dump of debug contents of section %s:\n"
+"\n"
+msgstr ""
+"\n"
+"Utskrift av felsökningsinnehåll i sektion %s:\n"
+"\n"
+
+#: dwarf.c:2472
+msgid "The line info appears to be corrupt - the section is too small\n"
+msgstr "Radinformationen verkar vara trasig - sektionen är för liten\n"
+
+#: dwarf.c:2592
+#, c-format
+msgid "CU: %s:\n"
+msgstr ""
+
+#: dwarf.c:2593 dwarf.c:2606
+#, fuzzy, c-format
+msgid "File name                            Line number    Starting address\n"
+msgstr "  Nr: Namn                           Bind till   Flagg\n"
+
+#: dwarf.c:2599
+#, c-format
+msgid "CU: %s/%s:\n"
+msgstr ""
+
+#: dwarf.c:2604 dwarf.c:2676
+#, c-format
+msgid "%s:\n"
+msgstr ""
+
+#. If directory index is 0, that means current directory.
+#: dwarf.c:2709
+#, c-format
+msgid ""
+"\n"
+"./%s:[++]\n"
+msgstr ""
+
+#. The directory index starts counting at 1.
+#: dwarf.c:2715
+#, c-format
+msgid ""
+"\n"
+"%s/%s:\n"
+msgstr ""
+
+#: dwarf.c:2800
+#, c-format
+msgid "%-35s  %11d  %#18lx\n"
+msgstr ""
+
+#: dwarf.c:2805
+#, c-format
+msgid "%s  %11d  %#18lx\n"
+msgstr ""
+
+#: dwarf.c:2835 dwarf.c:3112 dwarf.c:3534
+#, c-format
+msgid ""
+"Unable to load/parse the .debug_info section, so cannot interpret the %s "
+"section.\n"
+msgstr ""
+
+#: dwarf.c:2916 dwarf.c:3419
+#, c-format
+msgid ""
+".debug_info offset of 0x%lx in %s section does not point to a CU header.\n"
+msgstr ""
+
+#: dwarf.c:2930
+msgid "Only DWARF 2 and 3 pubnames are currently supported\n"
+msgstr "Endast DWARF 2 och 3 pub.-namn hanteras för närvarande\n"
+
+#: dwarf.c:2937
+#, c-format
+msgid "  Length:                              %ld\n"
+msgstr "  längd:                               %ld\n"
+
+#: dwarf.c:2939
+#, c-format
+msgid "  Version:                             %d\n"
+msgstr "  version:                             %d\n"
+
+#: dwarf.c:2941
+#, fuzzy, c-format
+msgid "  Offset into .debug_info section:     0x%lx\n"
+msgstr "  offset i .debug_info-sektionen:      %ld\n"
+
+#: dwarf.c:2943
+#, c-format
+msgid "  Size of area in .debug_info section: %ld\n"
+msgstr "  storl. på omr. i .debug_info-sekt.:  %ld\n"
+
+#: dwarf.c:2946
+#, c-format
+msgid ""
+"\n"
+"    Offset\tName\n"
+msgstr ""
+"\n"
+"    Offset\tNamn\n"
+
+#: dwarf.c:2997
+#, c-format
+msgid " DW_MACINFO_start_file - lineno: %d filenum: %d\n"
+msgstr " DW_MACINFO_start_file - rad: %d filnr: %d\n"
+
+#: dwarf.c:3003
+#, c-format
+msgid " DW_MACINFO_end_file\n"
+msgstr " DW_MACINFO_end_file\n"
+
+#: dwarf.c:3011
+#, c-format
+msgid " DW_MACINFO_define - lineno : %d macro : %s\n"
+msgstr " DW_MACINFO_define - rad : %d makro : %s\n"
+
+#: dwarf.c:3020
+#, c-format
+msgid " DW_MACINFO_undef - lineno : %d macro : %s\n"
+msgstr " DW_MACINFO_undef - rad : %d makro : %s\n"
+
+#: dwarf.c:3032
+#, c-format
+msgid " DW_MACINFO_vendor_ext - constant : %d string : %s\n"
+msgstr " DW_MACINFO_vendor_ext - konstant : %d sträng : %s\n"
+
+#: dwarf.c:3061
+#, c-format
+msgid "  Number TAG\n"
+msgstr "  Nummer TAGG\n"
+
+#: dwarf.c:3067
+#, c-format
+msgid "   %ld      %s    [%s]\n"
+msgstr "   %ld      %s    [%s]\n"
+
+#: dwarf.c:3070
+msgid "has children"
+msgstr "har barn"
+
+#: dwarf.c:3070
+msgid "no children"
+msgstr "inga barn"
+
+#: dwarf.c:3073
+#, c-format
+msgid "    %-18s %s\n"
+msgstr "    %-18s %s\n"
+
+#: dwarf.c:3106 dwarf.c:3312 dwarf.c:3528
+#, fuzzy, c-format
+msgid ""
+"\n"
+"The %s section is empty.\n"
+msgstr ""
+"\n"
+".debug_str-sektionen är tom.\n"
+
+#. FIXME: Should we handle this case?
+#: dwarf.c:3156
+msgid "Location lists in .debug_info section aren't in ascending order!\n"
+msgstr ""
+
+#: dwarf.c:3159
+#, fuzzy
+msgid "No location lists in .debug_info section!\n"
+msgstr "  storl. på omr. i .debug_info-sekt.:  %ld\n"
+
+#: dwarf.c:3164
+#, c-format
+msgid "Location lists in %s section start at 0x%lx\n"
+msgstr ""
+
+# Expression är en maskinkodsinstruktion
+#: dwarf.c:3168
+#, fuzzy, c-format
+msgid "    Offset   Begin    End      Expression\n"
+msgstr ""
+"\n"
+"    Offset   Start    Slut     Instruktion\n"
+
+#: dwarf.c:3199
+#, c-format
+msgid "There is a hole [0x%lx - 0x%lx] in .debug_loc section.\n"
+msgstr ""
+
+#: dwarf.c:3203
+#, c-format
+msgid "There is an overlap [0x%lx - 0x%lx] in .debug_loc section.\n"
+msgstr ""
+
+#: dwarf.c:3211
+#, fuzzy, c-format
+msgid "Offset 0x%lx is bigger than .debug_loc section size.\n"
+msgstr ""
+"Innehåll i .debug_loc-sektionen:\n"
+"\n"
+
+#: dwarf.c:3220 dwarf.c:3255 dwarf.c:3265
+#, fuzzy, c-format
+msgid "Location list starting at offset 0x%lx is not terminated.\n"
+msgstr ""
+"\n"
+"\"%s\" relokeringssektion på offset 0x%lx innehåller %ld byte:\n"
+
+#: dwarf.c:3239 dwarf.c:3622
+#, c-format
+msgid "<End of list>\n"
+msgstr ""
+
+#: dwarf.c:3249
+#, fuzzy, c-format
+msgid "(base address)\n"
+msgstr "sätt startadress"
+
+#: dwarf.c:3284
+msgid " (start == end)"
+msgstr ""
+
+#: dwarf.c:3286
+msgid " (start > end)"
+msgstr ""
+
+#: dwarf.c:3296
+#, c-format
+msgid "There are %ld unused bytes at the end of section %s\n"
+msgstr ""
+
+#: dwarf.c:3430
+msgid "Only DWARF 2 and 3 aranges are currently supported.\n"
+msgstr "Endast DWARF 2 och 3 a-intervall hanteras för närvarande.\n"
+
+#: dwarf.c:3434
+#, c-format
+msgid "  Length:                   %ld\n"
+msgstr "  längd:                    %ld\n"
+
+#: dwarf.c:3435
+#, c-format
+msgid "  Version:                  %d\n"
+msgstr "  version:                  %d\n"
+
+#: dwarf.c:3436
+#, fuzzy, c-format
+msgid "  Offset into .debug_info:  0x%lx\n"
+msgstr "  offset i .debug_info:     %lx\n"
+
+#: dwarf.c:3437
+#, c-format
+msgid "  Pointer Size:             %d\n"
+msgstr "  pekarstorlek:             %d\n"
+
+#: dwarf.c:3438
+#, c-format
+msgid "  Segment Size:             %d\n"
+msgstr "  segmentstorlek:           %d\n"
+
+#: dwarf.c:3447
+msgid "Pointer size + Segment size is not a power of two.\n"
+msgstr ""
+
+#: dwarf.c:3452
+#, fuzzy, c-format
+msgid ""
+"\n"
+"    Address            Length\n"
+msgstr ""
+"\n"
+"    adresslängd\n"
+
+#: dwarf.c:3454
+#, fuzzy, c-format
+msgid ""
+"\n"
+"    Address    Length\n"
+msgstr ""
+"\n"
+"    adresslängd\n"
+
+#: dwarf.c:3544
+#, fuzzy
+msgid "No range lists in .debug_info section!\n"
+msgstr "  storl. på omr. i .debug_info-sekt.:  %ld\n"
+
+#: dwarf.c:3568
+#, c-format
+msgid "Range lists in %s section start at 0x%lx\n"
+msgstr ""
+
+# Expression är en maskinkodsinstruktion
+#: dwarf.c:3572
+#, fuzzy, c-format
+msgid "    Offset   Begin    End\n"
+msgstr ""
+"\n"
+"    Offset   Start    Slut     Instruktion\n"
+
+#: dwarf.c:3593
+#, c-format
+msgid "There is a hole [0x%lx - 0x%lx] in %s section.\n"
+msgstr ""
+
+#: dwarf.c:3597
+#, c-format
+msgid "There is an overlap [0x%lx - 0x%lx] in %s section.\n"
+msgstr ""
+
+#: dwarf.c:3640
+msgid "(start == end)"
+msgstr ""
+
+#: dwarf.c:3642
+msgid "(start > end)"
+msgstr ""
+
+#: dwarf.c:3879
+msgid "bad register: "
+msgstr ""
+
+#: dwarf.c:3881
+#, fuzzy, c-format
+msgid "Contents of the %s section:\n"
+msgstr ""
+"%s-sektionens innehåll:\n"
+"\n"
+
+#: dwarf.c:4646
+#, c-format
+msgid "  DW_CFA_??? (User defined call frame op: %#x)\n"
+msgstr ""
+
+#: dwarf.c:4648
+#, c-format
+msgid "unsupported or unknown Dwarf Call Frame Instruction number: %#x\n"
+msgstr ""
+
+#: dwarf.c:4672
+#, c-format
+msgid "Displaying the debug contents of section %s is not yet supported.\n"
+msgstr "Visa felsökningsinnehållet i sektion %s hanteras inte än.\n"
+
+#: dwarf.c:4714
+#, fuzzy, c-format
+msgid "%s: error: "
+msgstr "%s: Fel: "
+
+#: dwarf.c:4725 windmc.c:296 windres.c:415
+#, c-format
+msgid "%s: warning: "
+msgstr "%s: varning: "
+
+#: dwarf.c:4823 dwarf.c:4889
+#, c-format
+msgid "Unrecognized debug option '%s'\n"
+msgstr "Okänt felsökningsargument \"%s\"\n"
+
+#: emul_aix.c:43
+#, c-format
+msgid "  [-g]         - 32 bit small archive\n"
+msgstr "  [-g]         - 32-bitars litet arkiv\n"
+
+#: emul_aix.c:44
+#, c-format
+msgid "  [-X32]       - ignores 64 bit objects\n"
+msgstr "  [-X32]       - ignorerar 64-bitarsobjekt\n"
+
+#: emul_aix.c:45
+#, c-format
+msgid "  [-X64]       - ignores 32 bit objects\n"
+msgstr "  [-X64]       - ignorerar 32-bitarsobject\n"
+
+#: emul_aix.c:46
+#, c-format
+msgid "  [-X32_64]    - accepts 32 and 64 bit objects\n"
+msgstr "  [-X32_64]    - accepterar 32- och 64-bitarsobjekt\n"
+
+#: ieee.c:311
+msgid "unexpected end of debugging information"
+msgstr "oväntat slut på felsökningsinformationen"
+
+#: ieee.c:398
+msgid "invalid number"
+msgstr "ogiltigt tal"
+
+#: ieee.c:451
+msgid "invalid string length"
+msgstr "ogiltig stränglängd"
+
+#: ieee.c:506 ieee.c:547
+msgid "expression stack overflow"
+msgstr "överspill i uttrycksstacken"
+
+#: ieee.c:526
+msgid "unsupported IEEE expression operator"
+msgstr "IEEE-uttrycksoperator som inte hanteras"
+
+#: ieee.c:541
+msgid "unknown section"
+msgstr "okänd sektion"
+
+#: ieee.c:562
+msgid "expression stack underflow"
+msgstr "underspill i uttrycksstacken"
+
+#: ieee.c:576
+msgid "expression stack mismatch"
+msgstr "felbalanserad uttrycksstack"
+
+#: ieee.c:613
+msgid "unknown builtin type"
+msgstr "okänd inbyggd typ"
+
+#: ieee.c:758
+msgid "BCD float type not supported"
+msgstr "flyttalstypen BCD hanteras inte"
+
+#: ieee.c:895
+msgid "unexpected number"
+msgstr "oväntat tal"
+
+#: ieee.c:902
+msgid "unexpected record type"
+msgstr "oväntad posttyp"
+
+#: ieee.c:935
+msgid "blocks left on stack at end"
+msgstr "block kvar på stacken på slutet"
+
+#: ieee.c:1208
+msgid "unknown BB type"
+msgstr "okänd BB-typ"
+
+#: ieee.c:1217
+msgid "stack overflow"
+msgstr "överspill i stacken"
+
+#: ieee.c:1240
+msgid "stack underflow"
+msgstr "underspill i stacken"
+
+#: ieee.c:1352 ieee.c:1422 ieee.c:2120
+msgid "illegal variable index"
+msgstr "otillåtet variabelindex"
+
+#: ieee.c:1400
+msgid "illegal type index"
+msgstr "otillåtet typindex"
+
+#: ieee.c:1410 ieee.c:1447
+msgid "unknown TY code"
+msgstr "okänd TY-kod"
+
+#: ieee.c:1429
+msgid "undefined variable in TY"
+msgstr "odefinierad variabel i TY"
+
+#. Pascal file name.  FIXME.
+#: ieee.c:1841
+msgid "Pascal file name not supported"
+msgstr "Pascalfilnamn hanteras inte"
+
+#: ieee.c:1889
+msgid "unsupported qualifier"
+msgstr "bestämningen hanteras inte"
+
+#: ieee.c:2158
+msgid "undefined variable in ATN"
+msgstr "odefinierad variabel i ATN"
+
+#: ieee.c:2201
+msgid "unknown ATN type"
+msgstr "okänd ATN-typ"
+
+#. Reserved for FORTRAN common.
+#: ieee.c:2323
+msgid "unsupported ATN11"
+msgstr "ATN11 hanteras inte"
+
+#. We have no way to record this information.  FIXME.
+#: ieee.c:2350
+msgid "unsupported ATN12"
+msgstr "ATN12 hanteras inte"
+
+#: ieee.c:2410
+msgid "unexpected string in C++ misc"
+msgstr "oväntad sträng i C++-misc"
+
+#: ieee.c:2423
+msgid "bad misc record"
+msgstr "felaktig misc-post"
+
+#: ieee.c:2464
+msgid "unrecognized C++ misc record"
+msgstr "okänd C++-misc-post"
+
+#: ieee.c:2579
+msgid "undefined C++ object"
+msgstr "odefinierat C++-objekt"
+
+#: ieee.c:2613
+msgid "unrecognized C++ object spec"
+msgstr "okänd C++-objektspecifikation"
+
+#: ieee.c:2649
+msgid "unsupported C++ object type"
+msgstr "C++-objekttypen hanteras inte"
+
+#: ieee.c:2659
+msgid "C++ base class not defined"
+msgstr "odefinierad C++-basklass"
+
+#: ieee.c:2671 ieee.c:2776
+msgid "C++ object has no fields"
+msgstr "C++-objektet har inga fält"
+
+#: ieee.c:2690
+msgid "C++ base class not found in container"
+msgstr "Hittade inte C++-basklassen i behållaren"
+
+#: ieee.c:2797
+msgid "C++ data member not found in container"
+msgstr "Hittade inte C++-datamedlemmen i behållaren"
+
+#: ieee.c:2838 ieee.c:2988
+msgid "unknown C++ visibility"
+msgstr "okänd C++-synlighet"
+
+#: ieee.c:2872
+msgid "bad C++ field bit pos or size"
+msgstr "C++-fältets bit-position eller bit-storlek är felaktig"
+
+#: ieee.c:2964
+msgid "bad type for C++ method function"
+msgstr "felaktig typ på C++-metodfunktion"
+
+#: ieee.c:2974
+msgid "no type information for C++ method function"
+msgstr "ingen typinformation om C++-metodfunktion"
+
+#: ieee.c:3013
+msgid "C++ static virtual method"
+msgstr "statisk virtuell C++-metod"
+
+#: ieee.c:3108
+msgid "unrecognized C++ object overhead spec"
+msgstr "okänd C++-objektöversiktsspec"
+
+#: ieee.c:3147
+msgid "undefined C++ vtable"
+msgstr "odefinierad C++-v-tabell"
+
+#: ieee.c:3216
+msgid "C++ default values not in a function"
+msgstr "C++-standardvärden inte inom en funktion"
+
+#: ieee.c:3256
+msgid "unrecognized C++ default type"
+msgstr "okänd C++-standardtyp"
+
+#: ieee.c:3287
+msgid "reference parameter is not a pointer"
+msgstr "referensparametern är inte en pekare"
+
+#: ieee.c:3370
+msgid "unrecognized C++ reference type"
+msgstr "okänd C++-referenstyp"
+
+#: ieee.c:3452
+msgid "C++ reference not found"
+msgstr "hittade inte C++-referensen"
+
+#: ieee.c:3460
+msgid "C++ reference is not pointer"
+msgstr "C++-referensen är ingen pekare"
+
+#: ieee.c:3486 ieee.c:3494
+msgid "missing required ASN"
+msgstr "saknar nödvändig ASN"
+
+#: ieee.c:3521 ieee.c:3529
+msgid "missing required ATN65"
+msgstr "saknar nödvändig ATN65"
+
+#: ieee.c:3543
+msgid "bad ATN65 record"
+msgstr "felaktig ATN65-post"
+
+#: ieee.c:4171
+#, c-format
+msgid "IEEE numeric overflow: 0x"
+msgstr "IEEE numeriskt överspill: 0x"
+
+#: ieee.c:4215
+#, c-format
+msgid "IEEE string length overflow: %u\n"
+msgstr "IEEE överspill i stränglängden: %u\n"
+
+#: ieee.c:5212
+#, c-format
+msgid "IEEE unsupported integer type size %u\n"
+msgstr "IEEE klarar inte heltalstyper av storlek %u\n"
+
+#: ieee.c:5246
+#, c-format
+msgid "IEEE unsupported float type size %u\n"
+msgstr "IEEE klarar inte flyttalstyper av storlek %u\n"
+
+#: ieee.c:5280
+#, c-format
+msgid "IEEE unsupported complex type size %u\n"
+msgstr "IEEE klarar inte komplextyper av storlek %u\n"
+
+#: mclex.c:241
+msgid "Duplicate symbol entered into keyword list."
+msgstr ""
+
+#: nlmconv.c:273 srconv.c:1822
+msgid "input and output files must be different"
+msgstr "in- och ut- måste vara olika filer"
+
+#: nlmconv.c:320
+msgid "input file named both on command line and with INPUT"
+msgstr "infil är vald både på kommandoraden och via INPUT"
+
+#: nlmconv.c:329
+msgid "no input file"
+msgstr "ingen infil"
+
+#: nlmconv.c:359
+msgid "no name for output file"
+msgstr "inget namn på utfilen"
+
+#: nlmconv.c:373
+msgid "warning: input and output formats are not compatible"
+msgstr "varning: formaten för in- och utdata är inte kompatibla"
+
+#: nlmconv.c:403
+msgid "make .bss section"
+msgstr "skapa .bss-sektion"
+
+#: nlmconv.c:413
+msgid "make .nlmsections section"
+msgstr "skapa .nlmsections-sektion"
+
+#: nlmconv.c:441
+msgid "set .bss vma"
+msgstr "sätt vma i .bss"
+
+#: nlmconv.c:448
+msgid "set .data size"
+msgstr "sätt storlek på .data"
+
+#: nlmconv.c:628
+#, c-format
+msgid "warning: symbol %s imported but not in import list"
+msgstr "varning: symbolen %s importerades men finns inte med i importlistan"
+
+#: nlmconv.c:648
+msgid "set start address"
+msgstr "sätt startadress"
+
+#: nlmconv.c:697
+#, c-format
+msgid "warning: START procedure %s not defined"
+msgstr "varning: START-procedur %s är inte definierad"
+
+#: nlmconv.c:699
+#, c-format
+msgid "warning: EXIT procedure %s not defined"
+msgstr "varning: EXIT-procedur %s är inte definierad"
+
+#: nlmconv.c:701
+#, c-format
+msgid "warning: CHECK procedure %s not defined"
+msgstr "varning: CHECK-procedur %s är inte definierad"
+
+#: nlmconv.c:721 nlmconv.c:907
+msgid "custom section"
+msgstr "anpassningsbar sektion"
+
+#: nlmconv.c:741 nlmconv.c:936
+msgid "help section"
+msgstr "hjälpsektion"
+
+#: nlmconv.c:763 nlmconv.c:954
+msgid "message section"
+msgstr "meddelandesektion"
+
+#: nlmconv.c:778 nlmconv.c:987
+msgid "module section"
+msgstr "modulsektion"
+
+#: nlmconv.c:797 nlmconv.c:1003
+msgid "rpc section"
+msgstr "rpc-section"
+
+#. There is no place to record this information.
+#: nlmconv.c:833
+#, c-format
+msgid "%s: warning: shared libraries can not have uninitialized data"
+msgstr "%s: varning: delade bibliotek kan inte ha oinitierad data"
+
+#: nlmconv.c:854 nlmconv.c:1022
+msgid "shared section"
+msgstr "delad sektion"
+
+#: nlmconv.c:862
+msgid "warning: No version number given"
+msgstr "varning: Inget versionsnummer givet"
+
+#: nlmconv.c:902 nlmconv.c:931 nlmconv.c:949 nlmconv.c:998 nlmconv.c:1017
+#, c-format
+msgid "%s: read: %s"
+msgstr "%s: läsfel: %s"
+
+#: nlmconv.c:924
+#, fuzzy
+msgid "warning: FULLMAP is not supported; try ld -M"
+msgstr "varning: MAP och FULLMAP hanteras inte; prova med ld -M"
+
+#: nlmconv.c:1100
+#, c-format
+msgid "Usage: %s [option(s)] [in-file [out-file]]\n"
+msgstr "Användning: %s [flaggor] [infil [utfil]]\n"
+
+#: nlmconv.c:1101
+#, c-format
+msgid " Convert an object file into a NetWare Loadable Module\n"
+msgstr " Konvertera en objektfil till en laddbar NetWare-modul\n"
+
+#: nlmconv.c:1102
+#, fuzzy, c-format
+msgid ""
+" The options are:\n"
+"  -I --input-target=<bfdname>   Set the input binary file format\n"
+"  -O --output-target=<bfdname>  Set the output binary file format\n"
+"  -T --header-file=<file>       Read <file> for NLM header information\n"
+"  -l --linker=<linker>          Use <linker> for any linking\n"
+"  -d --debug                    Display on stderr the linker command line\n"
+"  @<file>                       Read options from <file>.\n"
+"  -h --help                     Display this information\n"
+"  -v --version                  Display the program's version\n"
+msgstr ""
+" Flaggorna är:\n"
+"  -I --input-target=<bfdnamn>   Sätt formatet på inbinärfilen\n"
+"  -O --output-target=<bfdnamn>  Sätt formatet på utbinärfilen\n"
+"  -T --header-file=<fil>        Läs NLM-huvuden från <fil>\n"
+"  -l --linker=<länkare>         Använd <länkare> för att länka\n"
+"  -d --debug                    Visa länkkommandot på standard error\n"
+"  -h --help                     Visa denna hjälp\n"
+"  -v --version                  Visa programmets versionsinformation\n"
+
+#: nlmconv.c:1143
+#, c-format
+msgid "support not compiled in for %s"
+msgstr "hantering av %s uteslöts vid kompileringen"
+
+#: nlmconv.c:1180
+msgid "make section"
+msgstr "skapa sektion"
+
+#: nlmconv.c:1194
+msgid "set section size"
+msgstr "sätt sektionsstorlek"
+
+#: nlmconv.c:1200
+msgid "set section alignment"
+msgstr "sätt sektionsjustering"
+
+#: nlmconv.c:1204
+msgid "set section flags"
+msgstr "sätt sektionsflaggor"
+
+#: nlmconv.c:1215
+msgid "set .nlmsections size"
+msgstr "sätt storlek på .nlmsections"
+
+#: nlmconv.c:1296 nlmconv.c:1304 nlmconv.c:1313 nlmconv.c:1318
+msgid "set .nlmsection contents"
+msgstr "sätt inehåll i .nlmsection"
+
+#: nlmconv.c:1795
+msgid "stub section sizes"
+msgstr "stubbsektionsstorlek"
+
+#: nlmconv.c:1842
+msgid "writing stub"
+msgstr "skriver stubbe"
+
+# FIXME
+#: nlmconv.c:1926
+#, c-format
+msgid "unresolved PC relative reloc against %s"
+msgstr "ouppklarad programräknarrelativ relokering mot %s"
+
+# FIXME
+#: nlmconv.c:1990
+#, c-format
+msgid "overflow when adjusting relocation against %s"
+msgstr "överspill vid justeringen av relokering mot %s"
+
+#: nlmconv.c:2117
+#, c-format
+msgid "%s: execution of %s failed: "
+msgstr "%s: lyckades inte köra %s: "
+
+#: nlmconv.c:2132
+#, c-format
+msgid "Execution of %s failed"
+msgstr "Lyckades inte köra %s"
+
+#: nm.c:220 size.c:78 strings.c:659
+#, c-format
+msgid "Usage: %s [option(s)] [file(s)]\n"
+msgstr "Användning: %s [flaggor] [fil(er)]\n"
+
+#: nm.c:221
+#, c-format
+msgid " List symbols in [file(s)] (a.out by default).\n"
+msgstr "Lista symboler i [fil(er)] (a.out som standard).\n"
+
+#: nm.c:222
+#, fuzzy, c-format
+msgid ""
+" The options are:\n"
+"  -a, --debug-syms       Display debugger-only symbols\n"
+"  -A, --print-file-name  Print name of the input file before every symbol\n"
+"  -B                     Same as --format=bsd\n"
+"  -C, --demangle[=STYLE] Decode low-level symbol names into user-level "
+"names\n"
+"                          The STYLE, if specified, can be `auto' (the "
+"default),\n"
+"                          `gnu', `lucid', `arm', `hp', `edg', `gnu-v3', "
+"`java'\n"
+"                          or `gnat'\n"
+"      --no-demangle      Do not demangle low-level symbol names\n"
+"  -D, --dynamic          Display dynamic symbols instead of normal symbols\n"
+"      --defined-only     Display only defined symbols\n"
+"  -e                     (ignored)\n"
+"  -f, --format=FORMAT    Use the output format FORMAT.  FORMAT can be "
+"`bsd',\n"
+"                           `sysv' or `posix'.  The default is `bsd'\n"
+"  -g, --extern-only      Display only external symbols\n"
+"  -l, --line-numbers     Use debugging information to find a filename and\n"
+"                           line number for each symbol\n"
+"  -n, --numeric-sort     Sort symbols numerically by address\n"
+"  -o                     Same as -A\n"
+"  -p, --no-sort          Do not sort the symbols\n"
+"  -P, --portability      Same as --format=posix\n"
+"  -r, --reverse-sort     Reverse the sense of the sort\n"
+msgstr ""
+" Flaggorna är:\n"
+"  -a, --debug-syms       Visa endast felsökningssymboler\n"
+"  -A, --print-file-name  Skriv infilens namn före varje symbol\n"
+"  -B                     Samma som --format=bsd\n"
+"  -C, --demangle[=STIL]  Omkoda manglade symbolnamn till användarform\n"
+"                          STIL kan vara \"auto\" (förval), \"gnu\", \"lucid"
+"\",\n"
+"                          \"arm\", \"hp\", \"edg\", \"gnu-v3\", \"java\",\n"
+"                         eller \"gnat\"\n"
+"      --no-demangle      Avkoda inte manglade symbolnamn\n"
+"  -D, --dynamic          Visa dynamiska symboler istället för vanliga "
+"symboler\n"
+"      --defined-only     Visa endast definierade symboler\n"
+"  -e                     (ignorerad)\n"
+"  -f, --format=FORMAT    Använd FORMAT som utdataformat.  FORMAT kan vara\n"
+"                           \"bsd\", \"sysv\" eller \"posix\".  Förvalet är "
+"\"bsd\"\n"
+"  -g, --extern-only      Visa endast externa symboler\n"
+"  -l, --line-numbers     Använd felsökningsinformationen för att slå upp\n"
+"                           filnamn och radnummer för varje symbol\n"
+"  -n, --numeric-sort     Sortera symboler numeriskt efter adress\n"
+"  -o                     Samma som -A\n"
+"  -p, --no-sort          Sortera inte symbolerna\n"
+"  -P, --portability      Samma som --format=posix\n"
+"  -r, --reverse-sort     Sortera baklänges\n"
+"  -S, --print-size       Skriv ut storleken på definierade symboler\n"
+"  -s, --print-armap      Ta med index för symboler i arkivmedlemmar\n"
+"      --size-sort        Sortera symboler efter storlek\n"
+"  -t, --radix=BAS        Skriv ut siffervärden i talbas BAS\n"
+"      --target=BFD-NAMN  Välj BFD-NAMN som målobjektets format\n"
+"  -u, --undefined-only   Visa endast odefinierade symboler\n"
+"  -X 32_64               (ignorerad)\n"
+"  -h, --help             Visa denna hjälptext\n"
+"  -V, --version          Visa programmets versionsinformation\n"
+"\n"
+
+#: nm.c:245
+#, c-format
+msgid "      --plugin NAME      Load the specified plugin\n"
+msgstr ""
+
+#: nm.c:248
+#, c-format
+msgid ""
+"  -S, --print-size       Print size of defined symbols\n"
+"\t\t  -s, --print-armap      Include index for symbols from archive members\n"
+"      --size-sort        Sort symbols by size\n"
+"      --special-syms     Include special symbols in the output\n"
+"      --synthetic        Display synthetic symbols as well\n"
+"  -t, --radix=RADIX      Use RADIX for printing symbol values\n"
+"      --target=BFDNAME   Specify the target object format as BFDNAME\n"
+"  -u, --undefined-only   Display only undefined symbols\n"
+"  -X 32_64               (ignored)\n"
+"  @FILE                  Read options from FILE\n"
+"  -h, --help             Display this information\n"
+"  -V, --version          Display this program's version number\n"
+"\n"
+msgstr ""
+
+#: nm.c:292
+#, c-format
+msgid "%s: invalid radix"
+msgstr "%s: ogiltig talbas"
+
+#: nm.c:316
+#, c-format
+msgid "%s: invalid output format"
+msgstr "%s: ogiltigt utdataformat"
+
+#: nm.c:337 readelf.c:7159 readelf.c:7204
+#, c-format
+msgid "<processor specific>: %d"
+msgstr "<processorspecifik>: %d"
+
+#: nm.c:339 readelf.c:7168 readelf.c:7222
+#, c-format
+msgid "<OS specific>: %d"
+msgstr "<OS-specifik>: %d"
+
+#: nm.c:341 readelf.c:7171 readelf.c:7225
+#, c-format
+msgid "<unknown>: %d"
+msgstr "<okänd>: %d"
+
+#: nm.c:381
+#, c-format
+msgid ""
+"\n"
+"Archive index:\n"
+msgstr ""
+"\n"
+"Arkivindex:\n"
+
+#: nm.c:1242
+#, c-format
+msgid ""
+"\n"
+"\n"
+"Undefined symbols from %s:\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"Odefinierade symboler från %s:\n"
+"\n"
+
+#: nm.c:1244
+#, c-format
+msgid ""
+"\n"
+"\n"
+"Symbols from %s:\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"Symboler från %s:\n"
+"\n"
+
+#: nm.c:1246 nm.c:1297
+#, c-format
+msgid ""
+"Name                  Value   Class        Type         Size     Line  "
+"Section\n"
+"\n"
+msgstr ""
+"Namn                  Värde   Klass        Typ          Storlek  Rad   "
+"Sektion\n"
+"\n"
+
+#: nm.c:1249 nm.c:1300
+#, c-format
+msgid ""
+"Name                  Value           Class        Type         "
+"Size             Line  Section\n"
+"\n"
+msgstr ""
+"Namn                  Värde           Klass        Typ          "
+"Storlek          Rad   Sektion\n"
+"\n"
+
+#: nm.c:1293
+#, c-format
+msgid ""
+"\n"
+"\n"
+"Undefined symbols from %s[%s]:\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"Odefinierade symboler från %s[%s]:\n"
+"\n"
+
+#: nm.c:1295
+#, c-format
+msgid ""
+"\n"
+"\n"
+"Symbols from %s[%s]:\n"
+"\n"
+msgstr ""
+"\n"
+"\n"
+"Symboler från %s[%s]:\n"
+"\n"
+
+#: nm.c:1387
+#, c-format
+msgid "Print width has not been initialized (%d)"
+msgstr ""
+
+#: nm.c:1615
+msgid "Only -X 32_64 is supported"
+msgstr "Endast -X 32_64 hanteras"
+
+#: nm.c:1643
+msgid "Using the --size-sort and --undefined-only options together"
+msgstr "Användning av --size-sort och --undifined-only samtidigt"
+
+#: nm.c:1644
+msgid "will produce no output, since undefined symbols have no size."
+msgstr ""
+"ger ingen utdata, eftersom odefinierade symboler inte har någon storlek"
+
+#: nm.c:1672
+#, c-format
+msgid "data size %ld"
+msgstr "datastorlek %ld"
+
+#: objcopy.c:463 srconv.c:1730
+#, c-format
+msgid "Usage: %s [option(s)] in-file [out-file]\n"
+msgstr "Användning: %s [flaggor] infil [utfil]\n"
+
+#: objcopy.c:464
+#, c-format
+msgid " Copies a binary file, possibly transforming it in the process\n"
+msgstr " Kopierar en binärfil, och formar möjligen om den\n"
+
+#: objcopy.c:465 objcopy.c:572
+#, c-format
+msgid " The options are:\n"
+msgstr " Flaggorna är:\n"
+
+#: objcopy.c:466
+#, c-format
+msgid ""
+"  -I --input-target <bfdname>      Assume input file is in format <bfdname>\n"
+"  -O --output-target <bfdname>     Create an output file in format "
+"<bfdname>\n"
+"  -B --binary-architecture <arch>  Set arch of output file, when input is "
+"binary\n"
+"  -F --target <bfdname>            Set both input and output format to "
+"<bfdname>\n"
+"     --debugging                   Convert debugging information, if "
+"possible\n"
+"  -p --preserve-dates              Copy modified/access timestamps to the "
+"output\n"
+"  -j --only-section <name>         Only copy section <name> into the output\n"
+"     --add-gnu-debuglink=<file>    Add section .gnu_debuglink linking to "
+"<file>\n"
+"  -R --remove-section <name>       Remove section <name> from the output\n"
+"  -S --strip-all                   Remove all symbol and relocation "
+"information\n"
+"  -g --strip-debug                 Remove all debugging symbols & sections\n"
+"     --strip-unneeded              Remove all symbols not needed by "
+"relocations\n"
+"  -N --strip-symbol <name>         Do not copy symbol <name>\n"
+"     --strip-unneeded-symbol <name>\n"
+"                                   Do not copy symbol <name> unless needed "
+"by\n"
+"                                     relocations\n"
+"     --only-keep-debug             Strip everything but the debug "
+"information\n"
+"     --extract-symbol              Remove section contents but keep symbols\n"
+"  -K --keep-symbol <name>          Do not strip symbol <name>\n"
+"     --keep-file-symbols           Do not strip file symbol(s)\n"
+"     --localize-hidden             Turn all ELF hidden symbols into locals\n"
+"  -L --localize-symbol <name>      Force symbol <name> to be marked as a "
+"local\n"
+"     --globalize-symbol <name>     Force symbol <name> to be marked as a "
+"global\n"
+"  -G --keep-global-symbol <name>   Localize all symbols except <name>\n"
+"  -W --weaken-symbol <name>        Force symbol <name> to be marked as a "
+"weak\n"
+"     --weaken                      Force all global symbols to be marked as "
+"weak\n"
+"  -w --wildcard                    Permit wildcard in symbol comparison\n"
+"  -x --discard-all                 Remove all non-global symbols\n"
+"  -X --discard-locals              Remove any compiler-generated symbols\n"
+"  -i --interleave <number>         Only copy one out of every <number> "
+"bytes\n"
+"  -b --byte <num>                  Select byte <num> in every interleaved "
+"block\n"
+"     --gap-fill <val>              Fill gaps between sections with <val>\n"
+"     --pad-to <addr>               Pad the last section up to address "
+"<addr>\n"
+"     --set-start <addr>            Set the start address to <addr>\n"
+"    {--change-start|--adjust-start} <incr>\n"
+"                                   Add <incr> to the start address\n"
+"    {--change-addresses|--adjust-vma} <incr>\n"
+"                                   Add <incr> to LMA, VMA and start "
+"addresses\n"
+"    {--change-section-address|--adjust-section-vma} <name>{=|+|-}<val>\n"
+"                                   Change LMA and VMA of section <name> by "
+"<val>\n"
+"     --change-section-lma <name>{=|+|-}<val>\n"
+"                                   Change the LMA of section <name> by "
+"<val>\n"
+"     --change-section-vma <name>{=|+|-}<val>\n"
+"                                   Change the VMA of section <name> by "
+"<val>\n"
+"    {--[no-]change-warnings|--[no-]adjust-warnings}\n"
+"                                   Warn if a named section does not exist\n"
+"     --set-section-flags <name>=<flags>\n"
+"                                   Set section <name>'s properties to "
+"<flags>\n"
+"     --add-section <name>=<file>   Add section <name> found in <file> to "
+"output\n"
+"     --rename-section <old>=<new>[,<flags>] Rename section <old> to <new>\n"
+"     --long-section-names {enable|disable|keep}\n"
+"                                   Handle long section names in Coff "
+"objects.\n"
+"     --change-leading-char         Force output format's leading character "
+"style\n"
+"     --remove-leading-char         Remove leading character from global "
+"symbols\n"
+"     --reverse-bytes=<num>         Reverse <num> bytes at a time, in output "
+"sections with content\n"
+"     --redefine-sym <old>=<new>    Redefine symbol name <old> to <new>\n"
+"     --redefine-syms <file>        --redefine-sym for all symbol pairs \n"
+"                                     listed in <file>\n"
+"     --srec-len <number>           Restrict the length of generated "
+"Srecords\n"
+"     --srec-forceS3                Restrict the type of generated Srecords "
+"to S3\n"
+"     --strip-symbols <file>        -N for all symbols listed in <file>\n"
+"     --strip-unneeded-symbols <file>\n"
+"                                   --strip-unneeded-symbol for all symbols "
+"listed\n"
+"                                     in <file>\n"
+"     --keep-symbols <file>         -K for all symbols listed in <file>\n"
+"     --localize-symbols <file>     -L for all symbols listed in <file>\n"
+"     --globalize-symbols <file>    --globalize-symbol for all in <file>\n"
+"     --keep-global-symbols <file>  -G for all symbols listed in <file>\n"
+"     --weaken-symbols <file>       -W for all symbols listed in <file>\n"
+"     --alt-machine-code <index>    Use the target's <index>'th alternative "
+"machine\n"
+"     --writable-text               Mark the output text as writable\n"
+"     --readonly-text               Make the output text write protected\n"
+"     --pure                        Mark the output file as demand paged\n"
+"     --impure                      Mark the output file as impure\n"
+"     --prefix-symbols <prefix>     Add <prefix> to start of every symbol "
+"name\n"
+"     --prefix-sections <prefix>    Add <prefix> to start of every section "
+"name\n"
+"     --prefix-alloc-sections <prefix>\n"
+"                                   Add <prefix> to start of every "
+"allocatable\n"
+"                                     section name\n"
+"     --file-alignment <num>        Set PE file alignment to <num>\n"
+"     --heap <reserve>[,<commit>]   Set PE reserve/commit heap to <reserve>/\n"
+"                                   <commit>\n"
+"     --image-base <address>        Set PE image base to <address>\n"
+"     --section-alignment <num>     Set PE section alignment to <num>\n"
+"     --stack <reserve>[,<commit>]  Set PE reserve/commit stack to "
+"<reserve>/\n"
+"                                   <commit>\n"
+"     --subsystem <name>[:<version>]\n"
+"                                   Set PE subsystem to <name> [& <version>]\n"
+"]  -v --verbose                     List all object files modified\n"
+"  @<file>                          Read options from <file>\n"
+"  -V --version                     Display this program's version number\n"
+"  -h --help                        Display this output\n"
+"     --info                        List object formats & architectures "
+"supported\n"
+msgstr ""
+
+#: objcopy.c:570
+#, c-format
+msgid "Usage: %s <option(s)> in-file(s)\n"
+msgstr "Användning: %s <flaggor> infil(er)\n"
+
+#: objcopy.c:571
+#, c-format
+msgid " Removes symbols and sections from files\n"
+msgstr " Tar bort symboler och sektioner från filer\n"
+
+#: objcopy.c:573
+#, fuzzy, c-format
+msgid ""
+"  -I --input-target=<bfdname>      Assume input file is in format <bfdname>\n"
+"  -O --output-target=<bfdname>     Create an output file in format "
+"<bfdname>\n"
+"  -F --target=<bfdname>            Set both input and output format to "
+"<bfdname>\n"
+"  -p --preserve-dates              Copy modified/access timestamps to the "
+"output\n"
+"  -R --remove-section=<name>       Remove section <name> from the output\n"
+"  -s --strip-all                   Remove all symbol and relocation "
+"information\n"
+"  -g -S -d --strip-debug           Remove all debugging symbols & sections\n"
+"     --strip-unneeded              Remove all symbols not needed by "
+"relocations\n"
+"     --only-keep-debug             Strip everything but the debug "
+"information\n"
+"  -N --strip-symbol=<name>         Do not copy symbol <name>\n"
+"  -K --keep-symbol=<name>          Do not strip symbol <name>\n"
+"     --keep-file-symbols           Do not strip file symbol(s)\n"
+"  -w --wildcard                    Permit wildcard in symbol comparison\n"
+"  -x --discard-all                 Remove all non-global symbols\n"
+"  -X --discard-locals              Remove any compiler-generated symbols\n"
+"  -v --verbose                     List all object files modified\n"
+"  -V --version                     Display this program's version number\n"
+"  -h --help                        Display this output\n"
+"     --info                        List object formats & architectures "
+"supported\n"
+"  -o <file>                        Place stripped output into <file>\n"
+msgstr ""
+"  -I --input-target=<bfd-namn>     Antag infilens format till <bfd-namn>\n"
+"  -O --output-target=<bfd-namn>    Skapa utfilen i format <bfd-namn>\n"
+"  -F --target=<bfd-namn>           Sätt både in- och utformatet till <bfd-"
+"namn>\n"
+"  -p --preserve-dates              Kopiera ändrings/åtkomsttider till "
+"utdatan\n"
+"  -R --remove-section=<namn>       Ta bort sektion <namn> från utdatan\n"
+"  -s --strip-all                   Rensa bort all symbol- och "
+"relokeringsinfo\n"
+"  -g -S -d --strip-debug           Rensa bort alla felsökssymboler & -"
+"sektioner\n"
+"     --strip-unneeded              Rensa bort alla symboler som inte är\n"
+"                                   nödvändiga för relokeringen\n"
+"  -N --strip-symbol=<namn>         Kopiera inte symbol <namn>\n"
+"  -K --keep-symbol=<namn>          Kopiera endast symbol <namn>\n"
+"  -x --discard-all                 Ta bort alla icke-globala symboler\n"
+"  -X --discard-locals              Ta bort alla kompilatorgenererade "
+"symboler\n"
+"  -v --verbose                     Lista alla förändrade objektfiler\n"
+"  -V --version                     Visa programmets versionsinformation\n"
+"  -h --help                        Visa denna hjälp\n"
+"     --info                        Lista objektformat & arkitekturer som "
+"stöds\n"
+"  -o <fil>                         Spara den rensade utdatan i <fil>\n"
+
+#: objcopy.c:646
+#, c-format
+msgid "unrecognized section flag `%s'"
+msgstr "okänd sektionsflagga \"%s\""
+
+#: objcopy.c:647
+#, c-format
+msgid "supported flags: %s"
+msgstr "flaggor som hanteras: %s"
+
+#: objcopy.c:748
+#, fuzzy, c-format
+msgid "cannot open '%s': %s"
+msgstr "kan inte öppna: %s: %s"
+
+#: objcopy.c:751 objcopy.c:3336
+#, c-format
+msgid "%s: fread failed"
+msgstr "%s: fread misslyckades"
+
+#: objcopy.c:824
+#, fuzzy, c-format
+msgid "%s:%d: Ignoring rubbish found on this line"
+msgstr "Ignorerar skräp hittat på rad %d i %s"
+
+#: objcopy.c:1121
+#, c-format
+msgid "not stripping symbol `%s' because it is named in a relocation"
+msgstr ""
+
+#: objcopy.c:1204
+#, c-format
+msgid "%s: Multiple redefinition of symbol \"%s\""
+msgstr "%s: Flera omdefinieringar av symbol \"%s\""
+
+#: objcopy.c:1208
+#, c-format
+msgid "%s: Symbol \"%s\" is target of more than one redefinition"
+msgstr "%s: Mer än en symbol omdefinieras till \"%s\""
+
+#: objcopy.c:1236
+#, c-format
+msgid "couldn't open symbol redefinition file %s (error: %s)"
+msgstr "kunde inte öppna fil \"%s\" med symbolomdefinieringar (fel: %s)"
+
+#: objcopy.c:1314
+#, fuzzy, c-format
+msgid "%s:%d: garbage found at end of line"
+msgstr "%s: skräp i slutet på rad %d"
+
+#: objcopy.c:1317
+#, fuzzy, c-format
+msgid "%s:%d: missing new symbol name"
+msgstr "%s: nytt symbolnamn saknas på rad %d"
+
+#: objcopy.c:1327
+#, fuzzy, c-format
+msgid "%s:%d: premature end of file"
+msgstr "%s: för tidigt filslut på rad %d"
+
+#: objcopy.c:1353
+#, fuzzy, c-format
+msgid "stat returns negative size for `%s'"
+msgstr "stat returnerar negativ storlek på %s"
+
+#: objcopy.c:1365
+#, c-format
+msgid "copy from `%s' [unknown] to `%s' [unknown]\n"
+msgstr ""
+
+#: objcopy.c:1420
+msgid "Unable to change endianness of input file(s)"
+msgstr "Kan inte ändra endian-typ på infilen(erna)"
+
+#: objcopy.c:1429
+#, fuzzy, c-format
+msgid "copy from `%s' [%s] to `%s' [%s]\n"
+msgstr "kopierar från %s(%s) till %s(%s)\n"
+
+#: objcopy.c:1474
+#, fuzzy, c-format
+msgid "Unable to recognise the format of the input file `%s'"
+msgstr "Kan inte ändra endian-typ på infilen(erna)"
+
+#: objcopy.c:1477
+#, fuzzy, c-format
+msgid "warning: Output file cannot represent architecture `%s'"
+msgstr "Varning: Utfilen kan inte representera arkitektur %s"
+
+#: objcopy.c:1540
+#, c-format
+msgid "warning: file alignment (0x%s) > section alignment (0x%s)"
+msgstr ""
+
+#: objcopy.c:1599
+#, fuzzy, c-format
+msgid "can't add section '%s'"
+msgstr "kan inte skapa sektion \"%s\": %s"
+
+#: objcopy.c:1608
+#, fuzzy, c-format
+msgid "can't create section `%s'"
+msgstr "kan inte skapa sektion \"%s\": %s"
+
+#: objcopy.c:1654
+#, fuzzy, c-format
+msgid "cannot create debug link section `%s'"
+msgstr "%s: kan inte skapa felsökningssektion: %s"
+
+#: objcopy.c:1747
+#, fuzzy
+msgid "Can't fill gap after section"
+msgstr "Kan inte fylla luckan efter %s: %s"
+
+#: objcopy.c:1771
+#, fuzzy
+msgid "can't add padding"
+msgstr "Kan inte fylla ut efter %s: %s"
+
+#: objcopy.c:1862
+#, fuzzy, c-format
+msgid "cannot fill debug link section `%s'"
+msgstr "%s: kan inte skapa felsökningssektion: %s"
+
+#: objcopy.c:1925
+#, fuzzy
+msgid "error copying private BFD data"
+msgstr "%s: fel vid kopiering av privat BFD-data: %s"
+
+#: objcopy.c:1936
+#, c-format
+msgid "this target does not support %lu alternative machine codes"
+msgstr ""
+
+#: objcopy.c:1940
+msgid "treating that number as an absolute e_machine value instead"
+msgstr ""
+
+#: objcopy.c:1944
+msgid "ignoring the alternative value"
+msgstr ""
+
+#: objcopy.c:1975 objcopy.c:2010
+#, fuzzy, c-format
+msgid "cannot create tempdir for archive copying (error: %s)"
+msgstr "kan inte skapa katalog %s för arkivkopiering (fel: %s)"
+
+#: objcopy.c:2071
+#, fuzzy
+msgid "Unable to recognise the format of file"
+msgstr "Kan inte uppsöka slutet av filen!"
+
+#: objcopy.c:2168
+#, c-format
+msgid "error: the input file '%s' is empty"
+msgstr ""
+
+#: objcopy.c:2300
+#, c-format
+msgid "Multiple renames of section %s"
+msgstr "Flera namnbyten på sektion %s"
+
+#: objcopy.c:2351
+#, fuzzy
+msgid "error in private header data"
+msgstr "%s: fel vid kopiering av privat BFD-data: %s"
+
+#: objcopy.c:2429
+msgid "failed to create output section"
+msgstr ""
+
+#: objcopy.c:2443
+#, fuzzy
+msgid "failed to set size"
+msgstr "sätt sektionsstorlek"
+
+#: objcopy.c:2457
+msgid "failed to set vma"
+msgstr ""
+
+#: objcopy.c:2482
+#, fuzzy
+msgid "failed to set alignment"
+msgstr "sätt sektionsjustering"
+
+#: objcopy.c:2516
+#, fuzzy
+msgid "failed to copy private data"
+msgstr "%s: fel vid kopiering av privat BFD-data: %s"
+
+#: objcopy.c:2598
+msgid "relocation count is negative"
+msgstr ""
+
+#. User must pad the section up in order to do this.
+#: objcopy.c:2659
+#, c-format
+msgid ""
+"cannot reverse bytes: length of section %s must be evenly divisible by %d"
+msgstr ""
+
+#: objcopy.c:2843
+#, fuzzy
+msgid "can't create debugging section"
+msgstr "%s: kan inte skapa felsökningssektion: %s"
+
+#: objcopy.c:2856
+#, fuzzy
+msgid "can't set debugging section contents"
+msgstr "%s: kan inte sätta innehållet i felsökningssektionen: %s"
+
+#: objcopy.c:2864
+#, fuzzy, c-format
+msgid "don't know how to write debugging information for %s"
+msgstr "%s: vet inte hur man skriver felsökningsinformation för %s"
+
+#: objcopy.c:3006
+msgid "could not create temporary file to hold stripped copy"
+msgstr ""
+
+#: objcopy.c:3078
+#, c-format
+msgid "%s: bad version in PE subsystem"
+msgstr ""
+
+#: objcopy.c:3108
+#, c-format
+msgid "unknown PE subsystem: %s"
+msgstr ""
+
+#: objcopy.c:3168
+msgid "byte number must be non-negative"
+msgstr "bytenummer får inte vara negativt"
+
+#: objcopy.c:3178
+msgid "interleave must be positive"
+msgstr "intervallstorleken måste vara positiv"
+
+#: objcopy.c:3198 objcopy.c:3206
+#, c-format
+msgid "%s both copied and removed"
+msgstr "%s både kopierad och borttagen"
+
+#: objcopy.c:3307 objcopy.c:3381 objcopy.c:3481 objcopy.c:3512 objcopy.c:3536
+#: objcopy.c:3540 objcopy.c:3560
+#, c-format
+msgid "bad format for %s"
+msgstr "felaktigt format på %s"
+
+#: objcopy.c:3331
+#, c-format
+msgid "cannot open: %s: %s"
+msgstr "kan inte öppna: %s: %s"
+
+#: objcopy.c:3450
+#, fuzzy, c-format
+msgid "warning: truncating gap-fill from 0x%s to 0x%x"
+msgstr "Varning: kortar av utfyllnadsvärdet från 0x%s till 0x%x"
+
+#: objcopy.c:3611
+#, c-format
+msgid "unknown long section names option '%s'"
+msgstr ""
+
+#: objcopy.c:3629
+#, fuzzy
+msgid "unable to parse alternative machine code"
+msgstr "okänd alternativ maskinkod, ignorerad"
+
+#: objcopy.c:3674
+#, fuzzy
+msgid "number of bytes to reverse must be positive and even"
+msgstr "intervallstorleken måste vara positiv"
+
+#: objcopy.c:3677
+#, c-format
+msgid "warning: ignoring previous --reverse-bytes value of %d"
+msgstr ""
+
+#: objcopy.c:3692
+#, c-format
+msgid "%s: invalid reserve value for --heap"
+msgstr ""
+
+#: objcopy.c:3698
+#, fuzzy, c-format
+msgid "%s: invalid commit value for --heap"
+msgstr "%s: ogiltigt utdataformat"
+
+#: objcopy.c:3723
+#, c-format
+msgid "%s: invalid reserve value for --stack"
+msgstr ""
+
+#: objcopy.c:3729
+#, fuzzy, c-format
+msgid "%s: invalid commit value for --stack"
+msgstr "%s: ogiltigt utdataformat"
+
+#: objcopy.c:3758
+msgid "byte number must be less than interleave"
+msgstr "bytenummer måste vara mindre än antalet byte i intervallet"
+
+#: objcopy.c:3785
+#, c-format
+msgid "unknown input EFI target: %s"
+msgstr ""
+
+#: objcopy.c:3816
+#, fuzzy, c-format
+msgid "unknown output EFI target: %s"
+msgstr "okänd formattyp \"%s\""
+
+#: objcopy.c:3841
+#, c-format
+msgid "architecture %s unknown"
+msgstr "arkitektur %s är okänd"
+
+#: objcopy.c:3845
+#, fuzzy
+msgid ""
+"warning: input target 'binary' required for binary architecture parameter."
+msgstr ""
+"Varning: indata måste ha formatet 'binary' för binärarkitektursparametrar."
+
+#: objcopy.c:3846
+#, c-format
+msgid " Argument %s ignored"
+msgstr " Argument %s ignorerat"
+
+#: objcopy.c:3852
+#, c-format
+msgid "warning: could not locate '%s'.  System error message: %s"
+msgstr ""
+
+#: objcopy.c:3863
+#, c-format
+msgid ""
+"warning: could not create temporary file whilst copying '%s', (error: %s)"
+msgstr ""
+
+#: objcopy.c:3891 objcopy.c:3905
+#, c-format
+msgid "%s %s%c0x%s never used"
+msgstr "%s %s%c0x%s användes aldrig"
+
+#: objdump.c:187
+#, c-format
+msgid "Usage: %s <option(s)> <file(s)>\n"
+msgstr "Användning: %s <flaggor> <fil(er)>\n"
+
+#: objdump.c:188
+#, c-format
+msgid " Display information from object <file(s)>.\n"
+msgstr "Visa information från objekt<fil(er)>.\n"
+
+#: objdump.c:189
+#, c-format
+msgid " At least one of the following switches must be given:\n"
+msgstr " Minst en av följande flaggor måste ges:\n"
+
+#: objdump.c:190
+#, fuzzy, c-format
+msgid ""
+"  -a, --archive-headers    Display archive header information\n"
+"  -f, --file-headers       Display the contents of the overall file header\n"
+"  -p, --private-headers    Display object format specific file header "
+"contents\n"
+"  -h, --[section-]headers  Display the contents of the section headers\n"
+"  -x, --all-headers        Display the contents of all headers\n"
+"  -d, --disassemble        Display assembler contents of executable "
+"sections\n"
+"  -D, --disassemble-all    Display assembler contents of all sections\n"
+"  -S, --source             Intermix source code with disassembly\n"
+"  -s, --full-contents      Display the full contents of all sections "
+"requested\n"
+"  -g, --debugging          Display debug information in object file\n"
+"  -e, --debugging-tags     Display debug information using ctags style\n"
+"  -G, --stabs              Display (in raw form) any STABS info in the file\n"
+"  -W[lLiaprmfFsoR] or\n"
+"  --dwarf[=rawline,=decodedline,=info,=abbrev,=pubnames,=aranges,=macro,"
+"=frames,=str,=loc,=Ranges]\n"
+"                           Display DWARF info in the file\n"
+"  -t, --syms               Display the contents of the symbol table(s)\n"
+"  -T, --dynamic-syms       Display the contents of the dynamic symbol table\n"
+"  -r, --reloc              Display the relocation entries in the file\n"
+"  -R, --dynamic-reloc      Display the dynamic relocation entries in the "
+"file\n"
+"  @<file>                  Read options from <file>\n"
+"  -v, --version            Display this program's version number\n"
+"  -i, --info               List object formats and architectures supported\n"
+"  -H, --help               Display this information\n"
+msgstr ""
+"  -a, --archive-headers    Visa information från arkivhuvuden\n"
+"  -f, --file-headers       Visa innehållet i det övergripande filhuvudet\n"
+"  -p, --private-headers    Visa innehållet i objektformatspecifika "
+"filhuvuden\n"
+"  -h, --[section-]headers  Visa innehållet i sektionshuvuden\n"
+"  -x, --all-headers        Visa innehållet i alla huvuden\n"
+"  -d, --disassemble        Visa disassemblering av exekverbara sektioner\n"
+"  -D, --disassemble-all    Visa disassemblering av alla sektioner\n"
+"  -S, --source             Varva källkod med disassemblering\n"
+"  -s, --full-contents      Visa hela innehållet i alla utvalda sektioner\n"
+"  -g, --debugging          Visa felsökningsinformation från objektfilen\n"
+"  -G, --stabs              Visa (oformaterat) eventuell STABS-info från "
+"filen\n"
+"  -t, --syms               Visa innehållet i symboltabellen(erna)\n"
+"  -T, --dynamic-syms       Visa innehållet i tabellen med dynamiska "
+"symboler\n"
+"  -r, --reloc              Visa relokeringsposterna i filen\n"
+"  -R, --dynamic-reloc      Visa de dynamiska relokeringsposterna i filen\n"
+"  -v, --version            Visa programmets versionsinformation\n"
+"  -i, --info               Lista de objektformat och arkitekturer som "
+"hanteras\n"
+"  -H, --help               Visa denna hjälp\n"
+
+#: objdump.c:217
+#, c-format
+msgid ""
+"\n"
+" The following switches are optional:\n"
+msgstr ""
+"\n"
+" Följande flaggor är frivilliga:\n"
+
+#: objdump.c:218
+#, fuzzy, c-format
+msgid ""
+"  -b, --target=BFDNAME           Specify the target object format as "
+"BFDNAME\n"
+"  -m, --architecture=MACHINE     Specify the target architecture as MACHINE\n"
+"  -j, --section=NAME             Only display information for section NAME\n"
+"  -M, --disassembler-options=OPT Pass text OPT on to the disassembler\n"
+"  -EB --endian=big               Assume big endian format when "
+"disassembling\n"
+"  -EL --endian=little            Assume little endian format when "
+"disassembling\n"
+"      --file-start-context       Include context from start of file (with -"
+"S)\n"
+"  -I, --include=DIR              Add DIR to search list for source files\n"
+"  -l, --line-numbers             Include line numbers and filenames in "
+"output\n"
+"  -F, --file-offsets             Include file offsets when displaying "
+"information\n"
+"  -C, --demangle[=STYLE]         Decode mangled/processed symbol names\n"
+"                                  The STYLE, if specified, can be `auto', "
+"`gnu',\n"
+"                                  `lucid', `arm', `hp', `edg', `gnu-v3', "
+"`java'\n"
+"                                  or `gnat'\n"
+"  -w, --wide                     Format output for more than 80 columns\n"
+"  -z, --disassemble-zeroes       Do not skip blocks of zeroes when "
+"disassembling\n"
+"      --start-address=ADDR       Only process data whose address is >= ADDR\n"
+"      --stop-address=ADDR        Only process data whose address is <= ADDR\n"
+"      --prefix-addresses         Print complete address alongside "
+"disassembly\n"
+"      --[no-]show-raw-insn       Display hex alongside symbolic disassembly\n"
+"      --insn-width=WIDTH         Display WIDTH bytes on a signle line for -"
+"d\n"
+"      --adjust-vma=OFFSET        Add OFFSET to all displayed section "
+"addresses\n"
+"      --special-syms             Include special symbols in symbol dumps\n"
+"      --prefix=PREFIX            Add PREFIX to absolute paths for -S\n"
+"      --prefix-strip=LEVEL       Strip initial directory names for -S\n"
+"\n"
+msgstr ""
+"  -b, --target=BFDNAMN           Välj BFDNAMN som målobjektets format\n"
+"  -m, --architecture=MASKIN      Välj målarkitektur MASKIN\n"
+"  -j, --section=NAMN             Visa endast information om sektion NAMN\n"
+"  -M, --disassembler-options=FLG Skicka vidare FLG till disassembleraren\n"
+"  -EB --endian=big               Antag big endian-format vid "
+"disassemblering\n"
+"  -EL --endian=little            Antag little endian-format vid "
+"disassemblering\n"
+"      --file-start-context       Ta med omgivningen i början av filen (med -"
+"S)\n"
+"  -l, --line-numbers             Ta med radnummer och filnamn i utdatan\n"
+"  -C, --demangle[=STIL]          Avkoda manglade symbolnamn\n"
+"                                  STIL, om givet, kan vara: \"auto\", \"gnu"
+"\",\n"
+"                                  \"lucid\", \"arm\", \"hp\", \"edg\", \"gnu-"
+"v3\"\n"
+"                                  \"java\" eller `gnat'\n"
+"  -w, --wide                     Formatera utdatan för mer än 80 kolumner\n"
+"  -z, --disassemble-zeroes       Hoppa inte över block av nollor vid\n"
+"                                 disassemblering\n"
+"      --start-address=ADR        Behandla endast data på adresser >= ADR\n"
+"      --stop-address=ADR         Behandla endast data på adresser <= ADR\n"
+"      --prefix-addresses         Visa fullständiga adresser jämte "
+"disassembler.\n"
+"      --[no-]show-raw-insn       Visa hex.-kod jämte disassemblering\n"
+"      --adjust-vma=OFFSET        Lägg till OFFSET till alla visade "
+"sektionsadresser\n"
+"\n"
+
+#: objdump.c:450
+#, c-format
+msgid "Sections:\n"
+msgstr "Sektioner:\n"
+
+#: objdump.c:453 objdump.c:457
+#, c-format
+msgid "Idx Name          Size      VMA       LMA       File off  Algn"
+msgstr "Idx Namn          Storlek   VMA       LMA       Filoffs   Just"
+
+#: objdump.c:459
+#, c-format
+msgid ""
+"Idx Name          Size      VMA               LMA               File off  "
+"Algn"
+msgstr ""
+"Idx Namn          Storlek   VMA               LMA               Filoffs   "
+"Just"
+
+#: objdump.c:463
+#, c-format
+msgid "  Flags"
+msgstr "  Flaggor"
+
+#: objdump.c:465
+#, c-format
+msgid "  Pg"
+msgstr " Sid"
+
+#: objdump.c:508
+#, c-format
+msgid "%s: not a dynamic object"
+msgstr "%s: inte ett dynamiskt objekt"
+
+#: objdump.c:933 objdump.c:957
+#, fuzzy, c-format
+msgid " (File Offset: 0x%lx)"
+msgstr "  Fil: %lx"
+
+#: objdump.c:1902
+#, fuzzy, c-format
+msgid ""
+"\n"
+"Disassembly of section %s:\n"
+msgstr "Disassemblering av sektion %s:\n"
+
+#: objdump.c:2078
+#, c-format
+msgid "Can't use supplied machine %s"
+msgstr "Kan inte använda den tillhandahållna maskinen %s"
+
+#: objdump.c:2097
+#, c-format
+msgid "Can't disassemble for architecture %s\n"
+msgstr "Kan inte disassemblera för arkitektur %s\n"
+
+#: objdump.c:2188
+#, fuzzy, c-format
+msgid ""
+"\n"
+"Can't get contents for section '%s'.\n"
+msgstr "Innehåll i %s-sektionen:\n"
+
+#: objdump.c:2199
+#, fuzzy, c-format
+msgid ""
+"\n"
+"Can't uncompress section '%s'.\n"
+msgstr "kan inte skapa sektion \"%s\": %s"
+
+#: objdump.c:2328
+#, c-format
+msgid ""
+"No %s section present\n"
+"\n"
+msgstr ""
+"Det finns ingen %s-sektion\n"
+"\n"
+
+#: objdump.c:2337
+#, c-format
+msgid "Reading %s section of %s failed: %s"
+msgstr "Lyckades inte läsa %s-sektionen i %s: %s"
+
+#: objdump.c:2381
+#, c-format
+msgid ""
+"Contents of %s section:\n"
+"\n"
+msgstr ""
+"Innehåll i %s-sektionen:\n"
+"\n"
+
+#: objdump.c:2512
+#, c-format
+msgid "architecture: %s, "
+msgstr "arkitektur: %s, "
+
+#: objdump.c:2515
+#, c-format
+msgid "flags 0x%08x:\n"
+msgstr "flaggor 0x%08x:\n"
+
+#: objdump.c:2529
+#, c-format
+msgid ""
+"\n"
+"start address 0x"
+msgstr ""
+"\n"
+"startadress 0x"
+
+#: objdump.c:2592
+#, fuzzy, c-format
+msgid "Contents of section %s:"
+msgstr "Innehåll i %s-sektionen:\n"
+
+#: objdump.c:2594
+#, fuzzy, c-format
+msgid "  (Starting at file offset: 0x%lx)"
+msgstr " (indirekt sträng, offset: 0x%lx): %s"
+
+#: objdump.c:2701
+#, c-format
+msgid "no symbols\n"
+msgstr "inga symboler\n"
+
+#: objdump.c:2708
+#, c-format
+msgid "no information for symbol number %ld\n"
+msgstr ""
+
+#: objdump.c:2711
+#, fuzzy, c-format
+msgid "could not determine the type of symbol number %ld\n"
+msgstr "Kan inte fastställa hur många symboler som ska läsas in\n"
+
+#: objdump.c:2991
+#, c-format
+msgid ""
+"\n"
+"%s:     file format %s\n"
+msgstr ""
+"\n"
+"%s:     filformat %s\n"
+
+#: objdump.c:3049
+#, c-format
+msgid "%s: printing debugging information failed"
+msgstr "%s: lyckades inte visa felsökningsinformationen"
+
+#: objdump.c:3149
+#, c-format
+msgid "In archive %s:\n"
+msgstr "I arkiv %s:\n"
+
+#: objdump.c:3265
+msgid "error: the start address should be before the end address"
+msgstr ""
+
+#: objdump.c:3270
+msgid "error: the stop address should be after the start address"
+msgstr ""
+
+#: objdump.c:3282
+#, fuzzy
+msgid "error: prefix strip must be non-negative"
+msgstr "bytenummer får inte vara negativt"
+
+#: objdump.c:3287
+#, fuzzy
+msgid "error: instruction width must be positive"
+msgstr "index för alternativ maskinkod måste vara positivt"
+
+#: objdump.c:3296
+msgid "unrecognized -E option"
+msgstr "okänd -E-flagga"
+
+#: objdump.c:3307
+#, c-format
+msgid "unrecognized --endian type `%s'"
+msgstr "okänd --endian-typ \"%s\""
+
+#: rclex.c:197
+msgid "invalid value specified for pragma code_page.\n"
+msgstr ""
+
+#: rdcoff.c:198
+#, c-format
+msgid "parse_coff_type: Bad type code 0x%x"
+msgstr "parse_coff_type: Felaktig typkod 0x%x"
+
+#: rdcoff.c:406 rdcoff.c:511 rdcoff.c:699
+#, c-format
+msgid "bfd_coff_get_syment failed: %s"
+msgstr "bfd_coff_get_syment misslyckades: %s"
+
+#: rdcoff.c:422 rdcoff.c:719
+#, c-format
+msgid "bfd_coff_get_auxent failed: %s"
+msgstr "bfd_coff_get_auxent misslyckades: %s"
+
+#: rdcoff.c:786
+#, c-format
+msgid "%ld: .bf without preceding function"
+msgstr "%ld: .bf saknar inledande funktion"
+
+#: rdcoff.c:836
+#, c-format
+msgid "%ld: unexpected .ef\n"
+msgstr "%ld: oväntad .ef\n"
+
+#: rddbg.c:88
+#, c-format
+msgid "%s: no recognized debugging information"
+msgstr "%s: ingen känd felsökningsinformation"
+
+#: rddbg.c:402
+#, c-format
+msgid "Last stabs entries before error:\n"
+msgstr "De sista stabs-posterna före felet:\n"
+
+#: readelf.c:303
+#, fuzzy, c-format
+msgid "Unable to seek to 0x%lx for %s\n"
+msgstr "Kan inte uppsöka %2$s på 0x%1$x\n"
+
+#: readelf.c:318
+#, fuzzy, c-format
+msgid "Out of memory allocating 0x%lx bytes for %s\n"
+msgstr "Slut på minne vid allokering av 0x%x byte för %s\n"
+
+#: readelf.c:328
+#, fuzzy, c-format
+msgid "Unable to read in 0x%lx bytes of %s\n"
+msgstr "Kan inte läsa in 0x%x byte %s\n"
+
+#: readelf.c:651
+msgid "Don't know about relocations on this machine architecture\n"
+msgstr "Vet inget om relokering på denna maskinarkitektur\n"
+
+#: readelf.c:672 readelf.c:702 readelf.c:770 readelf.c:799
+msgid "relocs"
+msgstr "relokeringar"
+
+#: readelf.c:684 readelf.c:714 readelf.c:781 readelf.c:810
+#, fuzzy
+msgid "out of memory parsing relocs\n"
+msgstr "slut på minne vid tolkning av relokeringar"
+
+#: readelf.c:915
+#, c-format
+msgid ""
+" Offset     Info    Type                Sym. Value  Symbol's Name + Addend\n"
+msgstr ""
+" Offset     Info    Typ                 Symbolvärde Symbolnamn + Tillägg\n"
+
+#: readelf.c:917
+#, c-format
+msgid " Offset     Info    Type            Sym.Value  Sym. Name + Addend\n"
+msgstr " Offset     Info    Typ             Sym.värde  Symbolnamn + Tillägg\n"
+
+#: readelf.c:922
+#, c-format
+msgid " Offset     Info    Type                Sym. Value  Symbol's Name\n"
+msgstr " Offset     Info    Typ                 Sym.värde   Symbolnamn\n"
+
+#: readelf.c:924
+#, c-format
+msgid " Offset     Info    Type            Sym.Value  Sym. Name\n"
+msgstr " Offset     Info    Typ             Sym.värde  Symbolnamn\n"
+
+#: readelf.c:932
+#, c-format
+msgid ""
+"    Offset             Info             Type               Symbol's Value  "
+"Symbol's Name + Addend\n"
+msgstr ""
+"    Offset             Info             Typ                Symbolvärde     "
+"Symbolnamn + Tillägg\n"
+
+#: readelf.c:934
+#, c-format
+msgid ""
+"  Offset          Info           Type           Sym. Value    Sym. Name + "
+"Addend\n"
+msgstr ""
+"  Offset          Info           Typ            Symbolvärde   Symbolnamn + "
+"Tillägg\n"
+
+#: readelf.c:939
+#, c-format
+msgid ""
+"    Offset             Info             Type               Symbol's Value  "
+"Symbol's Name\n"
+msgstr ""
+"    Offset             Info             Typ                Symbolvärde     "
+"Symbolnamn\n"
+
+#: readelf.c:941
+#, c-format
+msgid ""
+"  Offset          Info           Type           Sym. Value    Sym. Name\n"
+msgstr ""
+"  Offset          Info           Typ            Symbolvärde   Symbolnamn\n"
+
+#: readelf.c:1231 readelf.c:1390 readelf.c:1398
+#, c-format
+msgid "unrecognized: %-7lx"
+msgstr "okänd: %-7lx"
+
+#: readelf.c:1256
+#, fuzzy, c-format
+msgid "<unknown addend: %lx>"
+msgstr "<okänd: %x>"
+
+#: readelf.c:1348
+#, fuzzy, c-format
+msgid "<string table index: %3ld>"
+msgstr "<strängtabellsindex  %3ld>"
+
+#: readelf.c:1350
+#, fuzzy, c-format
+msgid "<corrupt string table index: %3ld>"
+msgstr "<strängtabellsindex  %3ld>"
+
+#: readelf.c:1725
+#, c-format
+msgid "Processor Specific: %lx"
+msgstr "processorspecifik: %lx"
+
+#: readelf.c:1749
+#, c-format
+msgid "Operating System specific: %lx"
+msgstr "operativsystemsspecifik: %lx"
+
+#: readelf.c:1753 readelf.c:2686
+#, c-format
+msgid "<unknown>: %lx"
+msgstr "<okänd>: %lx"
+
+#: readelf.c:1766
+msgid "NONE (None)"
+msgstr "NONE (ingen)"
+
+#: readelf.c:1767
+msgid "REL (Relocatable file)"
+msgstr "REL (relokeringsbar fil)"
+
+#: readelf.c:1768
+msgid "EXEC (Executable file)"
+msgstr "EXEC (exekverbar fil)"
+
+#: readelf.c:1769
+msgid "DYN (Shared object file)"
+msgstr "DYN (delad objektfil)"
+
+#: readelf.c:1770
+msgid "CORE (Core file)"
+msgstr "CORE (minnesfil)"
+
+#: readelf.c:1774
+#, c-format
+msgid "Processor Specific: (%x)"
+msgstr "processorspecifik: (%x)"
+
+#: readelf.c:1776
+#, c-format
+msgid "OS Specific: (%x)"
+msgstr "OS-specifik: (%x)"
+
+#: readelf.c:1778 readelf.c:2903
+#, c-format
+msgid "<unknown>: %x"
+msgstr "<okänd>: %x"
+
+#: readelf.c:1790
+msgid "None"
+msgstr "ingen"
+
+#: readelf.c:1902
+#, fuzzy, c-format
+msgid "<unknown>: 0x%x"
+msgstr "<okänd>: %x"
+
+#: readelf.c:2209
+#, fuzzy
+msgid "unknown"
+msgstr "<okänd>: %d"
+
+#: readelf.c:2210
+#, fuzzy
+msgid "unknown mac"
+msgstr "okänd sektion"
+
+#: readelf.c:2523
+msgid "Standalone App"
+msgstr "Självständigt program"
+
+#: readelf.c:2526 readelf.c:3234 readelf.c:3250
+#, c-format
+msgid "<unknown: %x>"
+msgstr "<okänd: %x>"
+
+#: readelf.c:2951
+#, c-format
+msgid "Usage: readelf <option(s)> elf-file(s)\n"
+msgstr "Användning: readelf <flaggor> elf-fil(er)\n"
+
+#: readelf.c:2952
+#, c-format
+msgid " Display information about the contents of ELF format files\n"
+msgstr " Visa information om innehållet i filer i ELF-format\n"
+
+#: readelf.c:2953
+#, fuzzy, c-format
+msgid ""
+" Options are:\n"
+"  -a --all               Equivalent to: -h -l -S -s -r -d -V -A -I\n"
+"  -h --file-header       Display the ELF file header\n"
+"  -l --program-headers   Display the program headers\n"
+"     --segments          An alias for --program-headers\n"
+"  -S --section-headers   Display the sections' header\n"
+"     --sections          An alias for --section-headers\n"
+"  -g --section-groups    Display the section groups\n"
+"  -t --section-details   Display the section details\n"
+"  -e --headers           Equivalent to: -h -l -S\n"
+"  -s --syms              Display the symbol table\n"
+"      --symbols          An alias for --syms\n"
+"  -n --notes             Display the core notes (if present)\n"
+"  -r --relocs            Display the relocations (if present)\n"
+"  -u --unwind            Display the unwind info (if present)\n"
+"  -d --dynamic           Display the dynamic section (if present)\n"
+"  -V --version-info      Display the version sections (if present)\n"
+"  -A --arch-specific     Display architecture specific information (if "
+"any).\n"
+"  -c --archive-index     Display the symbol/file index in an archive\n"
+"  -D --use-dynamic       Use the dynamic section info when displaying "
+"symbols\n"
+"  -x --hex-dump=<number|name>\n"
+"                         Dump the contents of section <number|name> as "
+"bytes\n"
+"  -p --string-dump=<number|name>\n"
+"                         Dump the contents of section <number|name> as "
+"strings\n"
+"  -R --relocated-dump=<number|name>\n"
+"                         Dump the contents of section <number|name> as "
+"relocated bytes\n"
+"  -w[lLiaprmfFsoR] or\n"
+"  --debug-dump[=rawline,=decodedline,=info,=abbrev,=pubnames,=aranges,=macro,"
+"=frames,=str,=loc,=Ranges]\n"
+"                         Display the contents of DWARF2 debug sections\n"
+msgstr ""
+" Flaggor är:\n"
+"  -a --all               Samma som: -h -l -S -s -r -d -V -A -I\n"
+"  -h --file-header       Visa ELF-filens huvud\n"
+"  -l --program-headers   Visa programhuvuden\n"
+"     --segments          Synonym för --program-headers\n"
+"  -S --section-headers   Visa sektionernas huvuden\n"
+"     --sections          Synonym för --section-headers\n"
+"  -e --headers           Samma som: -h -l -S\n"
+"  -s --syms              Visa symboltabellen\n"
+"      --symbols          Synonym för --syms\n"
+"  -n --notes             Visa kommentarer från minnesutskriften (om de "
+"finns)\n"
+"  -r --relocs            Visa relokeringsinformationen (om den finns)\n"
+"  -u --unwind            Visa tillbakarullningsinformationen (om den finns)\n"
+"  -d --dynamic           Visa det dynamiska segmentet (om det finns)\n"
+"  -V --version-info      Visa versionssektioner (om de finns)\n"
+"  -A --arch-specific     Visa arkitekturspecifik information (om den finns)\n"
+"  -D --use-dynamic       Använd den dynamiska sektionen för att visa "
+"symboler\n"
+"  -x --hex-dump=<nummer> Visa innehållet i sektion <nummer>\n"
+"  -w[liaprmfFso] eller\n"
+"  --debug-dump[=line,=info,=abbrev,=pubnames,=ranges,=macro,=frames,=str,"
+"=loc]\n"
+"                         Visa innehållet i DWARF2-felsökningssektioner\n"
+
+#: readelf.c:2983
+#, fuzzy, c-format
+msgid ""
+"  -i --instruction-dump=<number|name>\n"
+"                         Disassemble the contents of section <number|name>\n"
+msgstr ""
+"  -i --instruction-dump=<nummer>\n"
+"                         Disassemblera innehållet i sektion <nummer>\n"
+
+#: readelf.c:2987
+#, fuzzy, c-format
+msgid ""
+"  -I --histogram         Display histogram of bucket list lengths\n"
+"  -W --wide              Allow output width to exceed 80 characters\n"
+"  @<file>                Read options from <file>\n"
+"  -H --help              Display this information\n"
+"  -v --version           Display the version number of readelf\n"
+msgstr ""
+"  -I --histogram         Visa ett histogram över hinkarnas listlängder\n"
+"  -W --wide              Tillåt utskrift bredare än 80 tecken\n"
+"  -H --help              Visa denna hjälp\n"
+"  -v --version           Visa versionsinformation för readelf\n"
+
+#: readelf.c:3016 readelf.c:3045 readelf.c:3049 readelf.c:11799
+#, fuzzy
+msgid "Out of memory allocating dump request table.\n"
+msgstr "Slut på minne vid allokering av tabell för önskade utskrifter."
+
+#: readelf.c:3204
+#, c-format
+msgid "Invalid option '-%c'\n"
+msgstr "Ogiltig flagga \"-%c\"\n"
+
+#: readelf.c:3218
+msgid "Nothing to do.\n"
+msgstr "Inget att göra.\n"
+
+#: readelf.c:3230 readelf.c:3246 readelf.c:6679
+msgid "none"
+msgstr "ingen"
+
+#: readelf.c:3247
+msgid "2's complement, little endian"
+msgstr "2-komplement, little endian"
+
+#: readelf.c:3248
+msgid "2's complement, big endian"
+msgstr "2-komplement, big endian"
+
+#: readelf.c:3266
+msgid "Not an ELF file - it has the wrong magic bytes at the start\n"
+msgstr "Inte en ELF-fil - den har fel magiska byte i början\n"
+
+#: readelf.c:3276
+#, c-format
+msgid "ELF Header:\n"
+msgstr "ELF-huvud:\n"
+
+#: readelf.c:3277
+#, c-format
+msgid "  Magic:   "
+msgstr "  Magi:    "
+
+# 37 tecken i "vänstra" kolumnen
+#: readelf.c:3281
+#, c-format
+msgid "  Class:                             %s\n"
+msgstr "  Klass:                             %s\n"
+
+# 37 tecken i "vänstra" kolumnen
+#: readelf.c:3283
+#, c-format
+msgid "  Data:                              %s\n"
+msgstr "  Data:                              %s\n"
+
+# 37 tecken i "vänstra" kolumnen
+#: readelf.c:3285
+#, c-format
+msgid "  Version:                           %d %s\n"
+msgstr "  Version:                           %d %s\n"
+
+# 37 tecken i "vänstra" kolumnen
+#: readelf.c:3292
+#, c-format
+msgid "  OS/ABI:                            %s\n"
+msgstr "  OS/ABI:                            %s\n"
+
+# 37 tecken i "vänstra" kolumnen
+#: readelf.c:3294
+#, c-format
+msgid "  ABI Version:                       %d\n"
+msgstr "  ABI-version:                       %d\n"
+
+# 37 tecken i "vänstra" kolumnen
+#: readelf.c:3296
+#, c-format
+msgid "  Type:                              %s\n"
+msgstr "  Typ:                               %s\n"
+
+# 37 tecken i "vänstra" kolumnen
+#: readelf.c:3298
+#, c-format
+msgid "  Machine:                           %s\n"
+msgstr "  Maskin:                            %s\n"
+
+# 37 tecken i "vänstra" kolumnen
+#: readelf.c:3300
+#, c-format
+msgid "  Version:                           0x%lx\n"
+msgstr "  Version:                           0x%lx\n"
+
+# 37 tecken i "vänstra" kolumnen
+#: readelf.c:3303
+#, c-format
+msgid "  Entry point address:               "
+msgstr "  Ingångsadress:                     "
+
+# 37 tecken i "vänstra" kolumnen
+#: readelf.c:3305
+#, c-format
+msgid ""
+"\n"
+"  Start of program headers:          "
+msgstr ""
+"\n"
+"  Start för programhuvuden:          "
+
+# 37 tecken i "vänstra" kolumnen
+#: readelf.c:3307
+#, c-format
+msgid ""
+" (bytes into file)\n"
+"  Start of section headers:          "
+msgstr ""
+" (byte in i filen)\n"
+"  Start för sektionshuvuden:         "
+
+#: readelf.c:3309
+#, c-format
+msgid " (bytes into file)\n"
+msgstr " (byte in i filen)\n"
+
+# 37 tecken i "vänstra" kolumnen
+#: readelf.c:3311
+#, c-format
+msgid "  Flags:                             0x%lx%s\n"
+msgstr "  Flaggor:                           0x%lx%s\n"
+
+# 37 tecken i "vänstra" kolumnen
+#: readelf.c:3314
+#, c-format
+msgid "  Size of this header:               %ld (bytes)\n"
+msgstr "  Detta huvuds storlek:              %ld (byte)\n"
+
+# 37 tecken i "vänstra" kolumnen
+#: readelf.c:3316
+#, c-format
+msgid "  Size of program headers:           %ld (bytes)\n"
+msgstr "  Programhuvudenas storlek:          %ld (byte)\n"
+
+# 37 tecken i "vänstra" kolumnen
+#: readelf.c:3318
+#, c-format
+msgid "  Number of program headers:         %ld\n"
+msgstr "  Antal programhuvuden:              %ld\n"
+
+# 37 tecken i "vänstra" kolumnen
+#: readelf.c:3320
+#, c-format
+msgid "  Size of section headers:           %ld (bytes)\n"
+msgstr "  Sektionshuvudenas storlek:         %ld (byte)\n"
+
+# 37 tecken i "vänstra" kolumnen
+#: readelf.c:3322
+#, c-format
+msgid "  Number of section headers:         %ld"
+msgstr "  Antal sektionshuvuden:             %ld"
+
+# 37 tecken i "vänstra" kolumnen
+#: readelf.c:3327
+#, c-format
+msgid "  Section header string table index: %ld"
+msgstr "  Sektionshuvudets strängtabellndx:  %ld"
+
+#: readelf.c:3365 readelf.c:3399
+msgid "program headers"
+msgstr "programhuvuden"
+
+#: readelf.c:3438 readelf.c:3738 readelf.c:3781 readelf.c:3842 readelf.c:3909
+#: readelf.c:4718 readelf.c:4742 readelf.c:6006 readelf.c:6052 readelf.c:6253
+#: readelf.c:7345 readelf.c:7359 readelf.c:7870 readelf.c:7886 readelf.c:7929
+#: readelf.c:7954 readelf.c:9944 readelf.c:10136 readelf.c:10699
+#: readelf.c:11089 readelf.c:11103 readelf.c:11464
+msgid "Out of memory\n"
+msgstr "Slut på minne\n"
+
+#: readelf.c:3465
+#, c-format
+msgid ""
+"\n"
+"There are no program headers in this file.\n"
+msgstr ""
+"\n"
+"Det finns inga programhuvuden i denna fil.\n"
+
+#: readelf.c:3471
+#, c-format
+msgid ""
+"\n"
+"Elf file type is %s\n"
+msgstr ""
+"\n"
+"Elf-filtyp är %s\n"
+
+#: readelf.c:3472
+#, c-format
+msgid "Entry point "
+msgstr "Ingångspunkt "
+
+#: readelf.c:3474
+#, c-format
+msgid ""
+"\n"
+"There are %d program headers, starting at offset "
+msgstr ""
+"\n"
+"Det finns %d programhuvuden, med början på offset "
+
+#  BUGG: plural-s
+#: readelf.c:3486 readelf.c:3488
+#, c-format
+msgid ""
+"\n"
+"Program Headers:\n"
+msgstr ""
+"\n"
+"Programhuvuden:\n"
+
+#: readelf.c:3492
+#, c-format
+msgid ""
+"  Type           Offset   VirtAddr   PhysAddr   FileSiz MemSiz  Flg Align\n"
+msgstr ""
+"  Typ            Offset   VirtAdr    FysAdr     FilSt   MinneSt Flg Just\n"
+
+#: readelf.c:3495
+#, c-format
+msgid ""
+"  Type           Offset   VirtAddr           PhysAddr           FileSiz  "
+"MemSiz   Flg Align\n"
+msgstr ""
+"  Typ            Offset   VirtAdr            FysAdr             FilStrl  "
+"MinneSt  Flg Just\n"
+
+#: readelf.c:3499
+#, c-format
+msgid "  Type           Offset             VirtAddr           PhysAddr\n"
+msgstr "  Typ            Offset             VirtAdr            FysAdr\n"
+
+#: readelf.c:3501
+#, c-format
+msgid "                 FileSiz            MemSiz              Flags  Align\n"
+msgstr "                 FilStrl            MinneStrl           Flagg  Just\n"
+
+#: readelf.c:3594
+msgid "more than one dynamic segment\n"
+msgstr "mer än ett dynamiskt segment\n"
+
+#: readelf.c:3610
+#, fuzzy
+msgid "no .dynamic section in the dynamic segment\n"
+msgstr "mer än ett dynamiskt segment\n"
+
+#: readelf.c:3625
+msgid "the .dynamic section is not contained within the dynamic segment\n"
+msgstr ""
+
+#: readelf.c:3628
+msgid "the .dynamic section is not the first section in the dynamic segment.\n"
+msgstr ""
+
+#: readelf.c:3636
+msgid "Unable to find program interpreter name\n"
+msgstr "Kan inte hitta namnet på programtolken\n"
+
+#: readelf.c:3643
+msgid ""
+"Internal error: failed to create format string to display program "
+"interpreter\n"
+msgstr ""
+
+#: readelf.c:3647
+#, fuzzy
+msgid "Unable to read program interpreter name\n"
+msgstr "Kan inte hitta namnet på programtolken\n"
+
+#: readelf.c:3650
+#, c-format
+msgid ""
+"\n"
+"      [Requesting program interpreter: %s]"
+msgstr ""
+"\n"
+"      [Begär programtolkare: %s]"
+
+#: readelf.c:3662
+#, c-format
+msgid ""
+"\n"
+" Section to Segment mapping:\n"
+msgstr ""
+"\n"
+" Sektion till segment-avbildning:\n"
+
+#: readelf.c:3663
+#, c-format
+msgid "  Segment Sections...\n"
+msgstr "  Segmentsektioner...\n"
+
+#: readelf.c:3698
+msgid "Cannot interpret virtual addresses without program headers.\n"
+msgstr "Kan inte tolka virtuella adresser utan programhuvud.\n"
+
+#: readelf.c:3714
+#, c-format
+msgid "Virtual address 0x%lx not located in any PT_LOAD segment.\n"
+msgstr "Virtuell adress 0x%lx finns ej i något PT_LOAD-segment.\n"
+
+#: readelf.c:3729 readelf.c:3772
+msgid "section headers"
+msgstr "sektionshuvuden"
+
+#: readelf.c:3817 readelf.c:3884
+msgid "symbols"
+msgstr "symboler"
+
+#: readelf.c:3829 readelf.c:3896
+msgid "symtab shndx"
+msgstr "symtab shndx"
+
+#: readelf.c:4076 readelf.c:4157 readelf.c:4178 readelf.c:4200 readelf.c:4218
+#, fuzzy
+msgid "Internal buffer overflow\n"
+msgstr "numeriskt överspill"
+
+#: readelf.c:4246 readelf.c:4702
+#, c-format
+msgid ""
+"\n"
+"There are no sections in this file.\n"
+msgstr ""
+"\n"
+"Det finns inga sektioner i denna fil.\n"
+
+#: readelf.c:4252
+#, c-format
+msgid "There are %d section headers, starting at offset 0x%lx:\n"
+msgstr "Det finns %d sektionshuvuden, med början på offset 0x%lx:\n"
+
+#: readelf.c:4273 readelf.c:4819 readelf.c:5046 readelf.c:5346 readelf.c:5759
+#: readelf.c:7680
+msgid "string table"
+msgstr "strängtabell"
+
+#: readelf.c:4340
+#, c-format
+msgid "Section %d has invalid sh_entsize %lx (expected %lx)\n"
+msgstr ""
+
+#: readelf.c:4360
+msgid "File contains multiple dynamic symbol tables\n"
+msgstr "Filen innehåller flera tabeller med dynamiska symboler\n"
+
+#: readelf.c:4373
+msgid "File contains multiple dynamic string tables\n"
+msgstr "Filen innehåller flera dynamiska strängtabeller\n"
+
+#: readelf.c:4379
+msgid "dynamic strings"
+msgstr "dynamiska strängar"
+
+#: readelf.c:4386
+msgid "File contains multiple symtab shndx tables\n"
+msgstr "Filen innehåller flera symtab-shndx-tabeller\n"
+
+#: readelf.c:4437
+#, c-format
+msgid ""
+"\n"
+"Section Headers:\n"
+msgstr ""
+"\n"
+"Sektionshuvuden:\n"
+
+#: readelf.c:4439
+#, c-format
+msgid ""
+"\n"
+"Section Header:\n"
+msgstr ""
+"\n"
+"Sektionshuvud:\n"
+
+#: readelf.c:4445 readelf.c:4456 readelf.c:4467
+#, c-format
+msgid "  [Nr] Name\n"
+msgstr ""
+
+#: readelf.c:4446
+#, fuzzy, c-format
+msgid "       Type            Addr     Off    Size   ES   Lk Inf Al\n"
+msgstr ""
+"  [Nr] Namn              Typ             Adr      Off    Strl   PS Flg Lk "
+"Inf Ju\n"
+
+#: readelf.c:4450
+#, c-format
+msgid ""
+"  [Nr] Name              Type            Addr     Off    Size   ES Flg Lk "
+"Inf Al\n"
+msgstr ""
+"  [Nr] Namn              Typ             Adr      Off    Strl   PS Flg Lk "
+"Inf Ju\n"
+
+#: readelf.c:4457
+#, fuzzy, c-format
+msgid "       Type            Address          Off    Size   ES   Lk Inf Al\n"
+msgstr ""
+"  [Nr] Namn              Typ             Adress           Off    Strl   PS "
+"Flg Lk Inf Ju\n"
+
+#: readelf.c:4461
+#, c-format
+msgid ""
+"  [Nr] Name              Type            Address          Off    Size   ES "
+"Flg Lk Inf Al\n"
+msgstr ""
+"  [Nr] Namn              Typ             Adress           Off    Strl   PS "
+"Flg Lk Inf Ju\n"
+
+#: readelf.c:4468
+#, fuzzy, c-format
+msgid "       Type              Address          Offset            Link\n"
+msgstr "  [Nr] Namn              Typ              Adress            Offset\n"
+
+#: readelf.c:4469
+#, fuzzy, c-format
+msgid "       Size              EntSize          Info              Align\n"
+msgstr "       Storlek           Poststorlek      Flagg  Länk  Info  Just\n"
+
+#: readelf.c:4473
+#, c-format
+msgid "  [Nr] Name              Type             Address           Offset\n"
+msgstr "  [Nr] Namn              Typ              Adress            Offset\n"
+
+#: readelf.c:4474
+#, c-format
+msgid "       Size              EntSize          Flags  Link  Info  Align\n"
+msgstr "       Storlek           Poststorlek      Flagg  Länk  Info  Just\n"
+
+#: readelf.c:4479
+#, fuzzy, c-format
+msgid "       Flags\n"
+msgstr "  Flaggor"
+
+#: readelf.c:4554
+#, c-format
+msgid "section %u: sh_link value of %u is larger than the number of sections\n"
+msgstr ""
+
+#: readelf.c:4651
+#, fuzzy, c-format
+msgid ""
+"Key to Flags:\n"
+"  W (write), A (alloc), X (execute), V (VLE section), M (merge), S "
+"(strings)\n"
+"  I (info), L (link order), G (group), O (extra OS processing required) P "
+"(PCP section)\n"
+"  o (OS specific), p (processor specific) x (unknown)\n"
+"  s (small data), z (absolute data), # (core number)\n"
+msgstr ""
+"Nyckel till flaggorna:\n"
+"  W (skriv), A (allokera), X (exekvera), M (förena), S (strängar)\n"
+"  I (info), L (länkordning), G (grupp), x (okänd)\n"
+"  O (extra OS-bearbetning krävs) o (OS-specifik), p (processorspecifik)\n"
+
+#: readelf.c:4658
+#, c-format
+msgid ""
+"Key to Flags:\n"
+"  W (write), A (alloc), X (execute), M (merge), S (strings)\n"
+"  I (info), L (link order), G (group), x (unknown)\n"
+"  O (extra OS processing required) o (OS specific), p (processor specific)\n"
+msgstr ""
+"Nyckel till flaggorna:\n"
+"  W (skriv), A (allokera), X (exekvera), M (förena), S (strängar)\n"
+"  I (info), L (länkordning), G (grupp), x (okänd)\n"
+"  O (extra OS-bearbetning krävs) o (OS-specifik), p (processorspecifik)\n"
+
+#: readelf.c:4677
+#, fuzzy, c-format
+msgid "[<unknown>: 0x%x]"
+msgstr "<okänd>: %x"
+
+#: readelf.c:4709
+msgid "Section headers are not available!\n"
+msgstr ""
+
+#: readelf.c:4733
+#, fuzzy, c-format
+msgid ""
+"\n"
+"There are no section groups in this file.\n"
+msgstr ""
+"\n"
+"Det finns inga sektioner i denna fil.\n"
+
+#: readelf.c:4770
+#, c-format
+msgid "Bad sh_link in group section `%s'\n"
+msgstr ""
+
+#: readelf.c:4789
+#, c-format
+msgid "Bad sh_info in group section `%s'\n"
+msgstr ""
+
+#: readelf.c:4828
+msgid "section data"
+msgstr "sektionsdata"
+
+#: readelf.c:4840
+#, fuzzy, c-format
+msgid "   [Index]    Name\n"
+msgstr "  Num:    Index       Värde  Namn"
+
+#: readelf.c:4854
+#, c-format
+msgid "section [%5u] in group section [%5u] > maximum section [%5u]\n"
+msgstr ""
+
+#: readelf.c:4863
+#, c-format
+msgid "section [%5u] in group section [%5u] already in group section [%5u]\n"
+msgstr ""
+
+#: readelf.c:4876
+#, c-format
+msgid "section 0 in group section [%5u]\n"
+msgstr ""
+
+#: readelf.c:4971
+#, c-format
+msgid ""
+"\n"
+"'%s' relocation section at offset 0x%lx contains %ld bytes:\n"
+msgstr ""
+"\n"
+"\"%s\" relokeringssektion på offset 0x%lx innehåller %ld byte:\n"
+
+#: readelf.c:4983
+#, c-format
+msgid ""
+"\n"
+"There are no dynamic relocations in this file.\n"
+msgstr ""
+"\n"
+"Det finns inga dynamiska relokeringar i denna fil.\n"
+
+#: readelf.c:5007
+#, c-format
+msgid ""
+"\n"
+"Relocation section "
+msgstr ""
+"\n"
+"Omrelokeringssektion "
+
+#: readelf.c:5012 readelf.c:5422 readelf.c:5437 readelf.c:5774
+#, c-format
+msgid "'%s'"
+msgstr "\"%s\""
+
+#: readelf.c:5014 readelf.c:5439 readelf.c:5776
+#, c-format
+msgid " at offset 0x%lx contains %lu entries:\n"
+msgstr " på offset 0x%lx innehåller %lu poster:\n"
+
+#: readelf.c:5065
+#, c-format
+msgid ""
+"\n"
+"There are no relocations in this file.\n"
+msgstr ""
+"\n"
+"Det finns inga relokeringar i denna fil.\n"
+
+#: readelf.c:5250 readelf.c:5623
+msgid "unwind table"
+msgstr "tillbakarullningstabell"
+
+#: readelf.c:5292 readelf.c:5705
+#, c-format
+msgid "Skipping unexpected relocation type %s\n"
+msgstr "Hoppar över oväntad relokeringstyp %s\n"
+
+#: readelf.c:5354 readelf.c:5767 readelf.c:5820
+#, c-format
+msgid ""
+"\n"
+"There are no unwind sections in this file.\n"
+msgstr ""
+"\n"
+"Det finns inga tillbakarullningssektioner i denna fil.\n"
+
+#  BUGG: Fortsättningen är inte markerad för översättning i koden och innehåller '-citattecken.
+#: readelf.c:5417
+#, c-format
+msgid ""
+"\n"
+"Could not find unwind info section for "
+msgstr ""
+"\n"
+"Kunde inte hitta tillbakarullningssektion till "
+
+#: readelf.c:5430
+msgid "unwind info"
+msgstr "tillbakarullningsinfo"
+
+#: readelf.c:5432 readelf.c:5773
+#, c-format
+msgid ""
+"\n"
+"Unwind section "
+msgstr ""
+"\n"
+"Tillbakarullningssektion "
+
+#: readelf.c:5986 readelf.c:6032
+#, fuzzy
+msgid "dynamic section"
+msgstr "dynamiska strängar"
+
+#: readelf.c:6110
+#, fuzzy, c-format
+msgid ""
+"\n"
+"There is no dynamic section in this file.\n"
+msgstr ""
+"\n"
+"Det finns inget dynamiskt segment i denna fil.\n"
+
+#: readelf.c:6148
+#, fuzzy
+msgid "Unable to seek to end of file!\n"
+msgstr "Kan inte uppsöka slutet av filen!"
+
+#: readelf.c:6161
+msgid "Unable to determine the number of symbols to load\n"
+msgstr "Kan inte fastställa hur många symboler som ska läsas in\n"
+
+#: readelf.c:6196
+msgid "Unable to seek to end of file\n"
+msgstr "Kan inte uppsöka slutet av filen\n"
+
+#: readelf.c:6203
+msgid "Unable to determine the length of the dynamic string table\n"
+msgstr "Kan inte fastställa längden på den dynamiska strängtabellen\n"
+
+#: readelf.c:6209
+msgid "dynamic string table"
+msgstr "dynamisk strängtabell"
+
+#: readelf.c:6246
+msgid "symbol information"
+msgstr "symbolinformation"
+
+#: readelf.c:6271
+#, fuzzy, c-format
+msgid ""
+"\n"
+"Dynamic section at offset 0x%lx contains %u entries:\n"
+msgstr ""
+"\n"
+"Dynamiskt segment på offset 0x%lx innehåller %ld poster:\n"
+
+#: readelf.c:6274
+#, c-format
+msgid "  Tag        Type                         Name/Value\n"
+msgstr "  Tagg       Typ                          Namn/Värde\n"
+
+#: readelf.c:6310
+#, c-format
+msgid "Auxiliary library"
+msgstr "yttre bibliotek"
+
+#: readelf.c:6314
+#, c-format
+msgid "Filter library"
+msgstr "filterbibliotek"
+
+#: readelf.c:6318
+#, c-format
+msgid "Configuration file"
+msgstr "konfigurationsfil"
+
+#: readelf.c:6322
+#, c-format
+msgid "Dependency audit library"
+msgstr "beroendövervakningsbibliotek"
+
+#: readelf.c:6326
+#, c-format
+msgid "Audit library"
+msgstr "övervakningsbibliotek"
+
+#: readelf.c:6344 readelf.c:6372 readelf.c:6400
+#, c-format
+msgid "Flags:"
+msgstr "flaggor:"
+
+#: readelf.c:6347 readelf.c:6375 readelf.c:6402
+#, c-format
+msgid " None\n"
+msgstr " inga\n"
+
+#: readelf.c:6523
+#, c-format
+msgid "Shared library: [%s]"
+msgstr "delat bibliotek: [%s]"
+
+#: readelf.c:6526
+#, c-format
+msgid " program interpreter"
+msgstr " programtolk"
+
+#: readelf.c:6530
+#, c-format
+msgid "Library soname: [%s]"
+msgstr "biblioteks so-namn: [%s]"
+
+#: readelf.c:6534
+#, c-format
+msgid "Library rpath: [%s]"
+msgstr "bibliotekets rpath: [%s]"
+
+#: readelf.c:6538
+#, c-format
+msgid "Library runpath: [%s]"
+msgstr "bibliotekets runpath: [%s]"
+
+#: readelf.c:6601
+#, c-format
+msgid "Not needed object: [%s]\n"
+msgstr "onödigt objekt: [%s]\n"
+
+#: readelf.c:6726
+#, fuzzy, c-format
+msgid ""
+"\n"
+"Version definition section '%s' contains %u entries:\n"
+msgstr ""
+"\n"
+"Versiondefinitionssektion \"%s\" innehåller %ld poster:\n"
+
+#: readelf.c:6729
+#, c-format
+msgid "  Addr: 0x"
+msgstr "  Adr: 0x"
+
+#: readelf.c:6731 readelf.c:6833 readelf.c:6956
+#, fuzzy, c-format
+msgid "  Offset: %#08lx  Link: %u (%s)\n"
+msgstr "  Offset: %#08lx  Länk: %lx (%s)\n"
+
+#: readelf.c:6739
+msgid "version definition section"
+msgstr "versiondefinitionssektion"
+
+#: readelf.c:6768
+#, c-format
+msgid "  %#06x: Rev: %d  Flags: %s"
+msgstr "  %#06x: Rev: %d  Flaggor: %s"
+
+#: readelf.c:6771
+#, c-format
+msgid "  Index: %d  Cnt: %d  "
+msgstr "  Index: %d  Ant: %d  "
+
+#: readelf.c:6782
+#, c-format
+msgid "Name: %s\n"
+msgstr "Namn: %s\n"
+
+#: readelf.c:6784
+#, c-format
+msgid "Name index: %ld\n"
+msgstr "Namnindex: %ld\n"
+
+#: readelf.c:6801
+#, c-format
+msgid "  %#06x: Parent %d: %s\n"
+msgstr "  %#06x: Förälder %d: %s\n"
+
+#: readelf.c:6804
+#, c-format
+msgid "  %#06x: Parent %d, name index: %ld\n"
+msgstr "  %#06x: Förälder %d, namnindex: %ld\n"
+
+#: readelf.c:6808
+#, fuzzy, c-format
+msgid "  Version def aux past end of section\n"
+msgstr "versiondefinitionssektion"
+
+#: readelf.c:6813
+#, fuzzy, c-format
+msgid "  Version definition past end of section\n"
+msgstr "versiondefinitionssektion"
+
+#: readelf.c:6828
+#, fuzzy, c-format
+msgid ""
+"\n"
+"Version needs section '%s' contains %u entries:\n"
+msgstr ""
+"\n"
+"Versionbehovssektion \"%s\" innehåller %ld poster:\n"
+
+#: readelf.c:6831
+#, c-format
+msgid " Addr: 0x"
+msgstr " Adr: 0x"
+
+#: readelf.c:6842
+msgid "version need section"
+msgstr "versionsbehovssektion"
+
+#: readelf.c:6867
+#, c-format
+msgid "  %#06x: Version: %d"
+msgstr " %#06x: Version: %d"
+
+#: readelf.c:6870
+#, c-format
+msgid "  File: %s"
+msgstr "  Fil: %s"
+
+#: readelf.c:6872
+#, c-format
+msgid "  File: %lx"
+msgstr "  Fil: %lx"
+
+#: readelf.c:6874
+#, c-format
+msgid "  Cnt: %d\n"
+msgstr " Ant: %d\n"
+
+#: readelf.c:6894
+#, fuzzy, c-format
+msgid "  %#06x:   Name: %s"
+msgstr "  %#06x: Namn: %s"
+
+#: readelf.c:6897
+#, fuzzy, c-format
+msgid "  %#06x:   Name index: %lx"
+msgstr "  %#06x: Namnindex: %lx"
+
+#: readelf.c:6900
+#, c-format
+msgid "  Flags: %s  Version: %d\n"
+msgstr "  Flaggor: %s  Version: %d\n"
+
+#: readelf.c:6907
+#, fuzzy, c-format
+msgid "  Version need aux past end of section\n"
+msgstr "versionsbehovssektion"
+
+#: readelf.c:6912
+#, fuzzy, c-format
+msgid "  Version need past end of section\n"
+msgstr "versionsbehovssektion"
+
+#: readelf.c:6947
+msgid "version string table"
+msgstr "versionssträngtabell"
+
+#: readelf.c:6951
+#, c-format
+msgid ""
+"\n"
+"Version symbols section '%s' contains %d entries:\n"
+msgstr ""
+"\n"
+"Versionsymbolssektion \"%s\" innehåller %d poster:\n"
+
+#: readelf.c:6954
+#, c-format
+msgid " Addr: "
+msgstr " Adr: "
+
+#: readelf.c:6965
+msgid "version symbol data"
+msgstr "versionsymbolsdata"
+
+#: readelf.c:6992
+msgid "   0 (*local*)    "
+msgstr "   0 (*lokal*)    "
+
+#: readelf.c:6996
+msgid "   1 (*global*)   "
+msgstr "   1 (*global*)   "
+
+#: readelf.c:7033 readelf.c:7747
+msgid "version need"
+msgstr "versionsbehov"
+
+#: readelf.c:7043
+msgid "version need aux (2)"
+msgstr "yttre versionsbehov (2)"
+
+#: readelf.c:7058 readelf.c:7113
+#, fuzzy
+msgid "*invalid*"
+msgstr "ogiltigt tal"
+
+#: readelf.c:7088 readelf.c:7812
+msgid "version def"
+msgstr "versionsdef."
+
+#: readelf.c:7108 readelf.c:7827
+msgid "version def aux"
+msgstr "yttre versionsdef."
+
+#: readelf.c:7142
+#, c-format
+msgid ""
+"\n"
+"No version information found in this file.\n"
+msgstr ""
+"\n"
+"Det fanns ingen versionsinformation i denna fil.\n"
+
+#: readelf.c:7240
+#, c-format
+msgid "Illegal visibility attribute %d\n"
+msgstr ""
+
+#: readelf.c:7292
+#, c-format
+msgid "<other>: %x"
+msgstr ""
+
+#: readelf.c:7351
+msgid "Unable to read in dynamic data\n"
+msgstr "Kan inte läsa in den dynamiska datan\n"
+
+#: readelf.c:7442 readelf.c:7492 readelf.c:7516 readelf.c:7546 readelf.c:7570
+#, fuzzy
+msgid "Unable to seek to start of dynamic information\n"
+msgstr "Kan inte uppsöka början av den dynamiska informationen"
+
+#: readelf.c:7448 readelf.c:7498
+msgid "Failed to read in number of buckets\n"
+msgstr "Lyckades inte läsa antal hinkar\n"
+
+#: readelf.c:7454
+msgid "Failed to read in number of chains\n"
+msgstr "Lyckades inte läsa antal kedjor\n"
+
+#: readelf.c:7554
+#, fuzzy
+msgid "Failed to determine last chain length\n"
+msgstr "Lyckades inte läsa antal kedjor\n"
+
+#: readelf.c:7598
+#, c-format
+msgid ""
+"\n"
+"Symbol table for image:\n"
+msgstr ""
+"\n"
+"Symboltabell för avbilden:\n"
+
+#: readelf.c:7600 readelf.c:7618
+#, c-format
+msgid "  Num Buc:    Value  Size   Type   Bind Vis      Ndx Name\n"
+msgstr "  Nr  Hin:    Värde  Strl   Typ    Bind Synl     Idx Namn\n"
+
+#: readelf.c:7602 readelf.c:7620
+#, c-format
+msgid "  Num Buc:    Value          Size   Type   Bind Vis      Ndx Name\n"
+msgstr "  Nr  Hin:    Värde          Strl   Typ    Bind Synl     Idx Namn\n"
+
+#: readelf.c:7616
+#, fuzzy, c-format
+msgid ""
+"\n"
+"Symbol table of `.gnu.hash' for image:\n"
+msgstr ""
+"\n"
+"Symboltabell för avbilden:\n"
+
+#: readelf.c:7655
+#, c-format
+msgid ""
+"\n"
+"Symbol table '%s' contains %lu entries:\n"
+msgstr ""
+"\n"
+"Symboltabell \"%s\" innehåller %lu poster:\n"
+
+#: readelf.c:7659
+#, c-format
+msgid "   Num:    Value  Size Type    Bind   Vis      Ndx Name\n"
+msgstr "    Nr:    Värde  Strl Typ     Bind   Synl     Idx Namn\n"
+
+#: readelf.c:7661
+#, c-format
+msgid "   Num:    Value          Size Type    Bind   Vis      Ndx Name\n"
+msgstr "    Nr:    Värde          Strl Typ     Bind   Synl     Idx Namn\n"
+
+#: readelf.c:7718
+msgid "version data"
+msgstr "versionsdata"
+
+#: readelf.c:7760
+msgid "version need aux (3)"
+msgstr "yttre versionsbehov (3)"
+
+#: readelf.c:7787
+#, fuzzy
+msgid "bad dynamic symbol\n"
+msgstr "felaktig dynamisk symbol"
+
+#: readelf.c:7851
+#, c-format
+msgid ""
+"\n"
+"Dynamic symbol information is not available for displaying symbols.\n"
+msgstr ""
+"\n"
+"Informationen om dynamiska symboler är inte tillgänglig för att visa "
+"symboler.\n"
+
+#: readelf.c:7863
+#, fuzzy, c-format
+msgid ""
+"\n"
+"Histogram for bucket list length (total of %lu buckets):\n"
+msgstr ""
+"\n"
+"Histogram över hinkarnas listlängd (totalt %d hinkar):\n"
+
+#: readelf.c:7865 readelf.c:7935
+#, c-format
+msgid " Length  Number     %% of total  Coverage\n"
+msgstr " Längd   Nummer     %% av alla   Täckning\n"
+
+#: readelf.c:7933
+#, fuzzy, c-format
+msgid ""
+"\n"
+"Histogram for `.gnu.hash' bucket list length (total of %lu buckets):\n"
+msgstr ""
+"\n"
+"Histogram över hinkarnas listlängd (totalt %d hinkar):\n"
+
+#: readelf.c:7999
+#, c-format
+msgid ""
+"\n"
+"Dynamic info segment at offset 0x%lx contains %d entries:\n"
+msgstr ""
+"\n"
+"Dynamiskt info-segment på offset 0x%lx innehåller %d poster:\n"
+
+#: readelf.c:8002
+#, c-format
+msgid " Num: Name                           BoundTo     Flags\n"
+msgstr "  Nr: Namn                           Bind till   Flagg\n"
+
+#: readelf.c:8093
+msgid "Unhandled MN10300 reloc type found after SYM_DIFF reloc"
+msgstr ""
+
+#: readelf.c:8245
+#, c-format
+msgid ""
+"Missing knowledge of 32-bit reloc types used in DWARF sections of machine "
+"number %d\n"
+msgstr ""
+
+#: readelf.c:8538
+#, c-format
+msgid "unable to apply unsupported reloc type %d to section %s\n"
+msgstr ""
+
+#: readelf.c:8546
+#, c-format
+msgid "skipping invalid relocation offset 0x%lx in section %s\n"
+msgstr ""
+
+#: readelf.c:8570
+#, fuzzy, c-format
+msgid "skipping unexpected symbol type %s in %ld'th relocation in section %s\n"
+msgstr "Hoppar över oväntad relokeringstyp %s\n"
+
+#: readelf.c:8612
+#, c-format
+msgid ""
+"\n"
+"Assembly dump of section %s\n"
+msgstr ""
+"\n"
+"Disassembleringsutskrift av sektion %s\n"
+
+#: readelf.c:8633
+#, c-format
+msgid ""
+"\n"
+"Section '%s' has no data to dump.\n"
+msgstr ""
+"\n"
+"Sektion \"%s\" har ingen data att skriva ut.\n"
+
+#: readelf.c:8639
+#, fuzzy
+msgid "section contents"
+msgstr "sätt inehåll i .nlmsection"
+
+#: readelf.c:8659
+#, fuzzy, c-format
+msgid ""
+"\n"
+"String dump of section '%s':\n"
+msgstr ""
+"\n"
+"Hexadecimal utskrift av sektion \"%s\":\n"
+
+#: readelf.c:8677
+#, c-format
+msgid ""
+"  Note: This section has relocations against it, but these have NOT been "
+"applied to this dump.\n"
+msgstr ""
+
+#: readelf.c:8706
+#, fuzzy, c-format
+msgid "  No strings found in this section."
+msgstr ""
+"\n"
+"Det fanns ingen versionsinformation i denna fil.\n"
+
+#: readelf.c:8728
+#, c-format
+msgid ""
+"\n"
+"Hex dump of section '%s':\n"
+msgstr ""
+"\n"
+"Hexadecimal utskrift av sektion \"%s\":\n"
+
+#: readelf.c:8752
+#, c-format
+msgid ""
+" NOTE: This section has relocations against it, but these have NOT been "
+"applied to this dump.\n"
+msgstr ""
+
+#: readelf.c:8890
+#, fuzzy, c-format
+msgid "%s section data"
+msgstr "sektionsdata"
+
+#: readelf.c:8956
+#, c-format
+msgid ""
+"\n"
+"Section '%s' has no debugging data.\n"
+msgstr ""
+"\n"
+"Sektion \"%s\" innehåller ingen felsökningsdata.\n"
+
+#. There is no point in dumping the contents of a debugging section
+#. which has the NOBITS type - the bits in the file will be random.
+#. This can happen when a file containing a .eh_frame section is
+#. stripped with the --only-keep-debug command line option.
+#: readelf.c:8965
+#, c-format
+msgid "section '%s' has the NOBITS type - its contents are unreliable.\n"
+msgstr ""
+
+#: readelf.c:9001
+#, c-format
+msgid "Unrecognized debug section: %s\n"
+msgstr "Okänd felsökningssektion: %s\n"
+
+#: readelf.c:9029
+#, fuzzy, c-format
+msgid "Section '%s' was not dumped because it does not exist!\n"
+msgstr "Några sektioner skrevs inte ut eftersom de inte existerar!\n"
+
+#: readelf.c:9070
+#, fuzzy, c-format
+msgid "Section %d was not dumped because it does not exist!\n"
+msgstr "Några sektioner skrevs inte ut eftersom de inte existerar!\n"
+
+#: readelf.c:9306
+#, c-format
+msgid "Illegal tag %d for %s\n"
+msgstr ""
+
+#: readelf.c:9585
+msgid "attributes"
+msgstr ""
+
+#: readelf.c:9606
+#, c-format
+msgid "ERROR: Bad section length (%d > %d)\n"
+msgstr ""
+
+#: readelf.c:9637
+#, c-format
+msgid "ERROR: Bad subsection length (%d > %d)\n"
+msgstr ""
+
+#: readelf.c:9696
+#, fuzzy, c-format
+msgid "Unknown format '%c'\n"
+msgstr "okänd formattyp \"%s\""
+
+#: readelf.c:9850 readelf.c:10372
+msgid "liblist"
+msgstr "bibliotekslista"
+
+#: readelf.c:9937
+msgid "options"
+msgstr "flaggor"
+
+#: readelf.c:9968
+#, c-format
+msgid ""
+"\n"
+"Section '%s' contains %d entries:\n"
+msgstr ""
+"\n"
+"Sektion \"%s\" innehåller %d poster:\n"
+
+#: readelf.c:10129
+#, fuzzy
+msgid "conflict list found without a dynamic symbol table\n"
+msgstr "fann konfliktlista utan dynamisk symboltabell"
+
+#: readelf.c:10146 readelf.c:10161
+msgid "conflict"
+msgstr "konflikt"
+
+#: readelf.c:10171
+#, fuzzy, c-format
+msgid ""
+"\n"
+"Section '.conflict' contains %lu entries:\n"
+msgstr ""
+"\n"
+"Sektion \".conflict\" innehåller %ld poster:\n"
+
+#: readelf.c:10173
+msgid "  Num:    Index       Value  Name"
+msgstr "  Num:    Index       Värde  Namn"
+
+#: readelf.c:10206
+msgid "GOT"
+msgstr ""
+
+#: readelf.c:10207
+#, c-format
+msgid ""
+"\n"
+"Primary GOT:\n"
+msgstr ""
+
+#: readelf.c:10208
+#, c-format
+msgid " Canonical gp value: "
+msgstr ""
+
+#: readelf.c:10212 readelf.c:10304
+#, c-format
+msgid " Reserved entries:\n"
+msgstr ""
+
+#: readelf.c:10213
+#, c-format
+msgid "  %*s %10s %*s Purpose\n"
+msgstr ""
+
+#: readelf.c:10229
+#, c-format
+msgid " Local entries:\n"
+msgstr ""
+
+#: readelf.c:10230
+#, c-format
+msgid "  %*s %10s %*s\n"
+msgstr ""
+
+#: readelf.c:10245
+#, c-format
+msgid " Global entries:\n"
+msgstr ""
+
+#: readelf.c:10246
+#, c-format
+msgid "  %*s %10s %*s %*s %-7s %3s %s\n"
+msgstr ""
+
+#: readelf.c:10302
+msgid "PLT GOT"
+msgstr ""
+
+#: readelf.c:10303
+#, c-format
+msgid ""
+"\n"
+"PLT GOT:\n"
+"\n"
+msgstr ""
+
+#: readelf.c:10305
+#, c-format
+msgid "  %*s %*s Purpose\n"
+msgstr ""
+
+#: readelf.c:10313
+#, c-format
+msgid " Entries:\n"
+msgstr ""
+
+#: readelf.c:10314
+#, c-format
+msgid "  %*s %*s %*s %-7s %3s %s\n"
+msgstr ""
+
+#: readelf.c:10380
+msgid "liblist string table"
+msgstr "liblist-strängtabell"
+
+#: readelf.c:10390
+#, c-format
+msgid ""
+"\n"
+"Library list section '%s' contains %lu entries:\n"
+msgstr ""
+"\n"
+"Bibliotekslistsektion \"%s\" innehåller %lu poster:\n"
+
+#: readelf.c:10443
+msgid "NT_AUXV (auxiliary vector)"
+msgstr ""
+
+#: readelf.c:10445
+msgid "NT_PRSTATUS (prstatus structure)"
+msgstr "NT_PRSTATUS (prstatus-struktur)"
+
+#: readelf.c:10447
+msgid "NT_FPREGSET (floating point registers)"
+msgstr "NT_FPREGSET (flyttalsregister)"
+
+#: readelf.c:10449
+msgid "NT_PRPSINFO (prpsinfo structure)"
+msgstr "NT_PRPSINFO (prpsinfo-struktur)"
+
+#: readelf.c:10451
+msgid "NT_TASKSTRUCT (task structure)"
+msgstr "NT_TASKSTRUCT (task-struktur)"
+
+#: readelf.c:10453
+msgid "NT_PRXFPREG (user_xfpregs structure)"
+msgstr "NT_PRXFPREG (user_xfpregs-struktur)"
+
+#: readelf.c:10455
+msgid "NT_PPC_VMX (ppc Altivec registers)"
+msgstr ""
+
+#: readelf.c:10457
+msgid "NT_PPC_VSX (ppc VSX registers)"
+msgstr ""
+
+#: readelf.c:10459
+msgid "NT_PSTATUS (pstatus structure)"
+msgstr "NT_PSTATUS (pstatus-struktur)"
+
+#: readelf.c:10461
+msgid "NT_FPREGS (floating point registers)"
+msgstr "NT_FPREGS (flyttalsregister)"
+
+#: readelf.c:10463
+msgid "NT_PSINFO (psinfo structure)"
+msgstr "NT_PSINFO (psinfo-struktur)"
+
+#: readelf.c:10465
+msgid "NT_LWPSTATUS (lwpstatus_t structure)"
+msgstr "NT_LWPSTATUS (lwpstatus_t-struktur)"
+
+#: readelf.c:10467
+msgid "NT_LWPSINFO (lwpsinfo_t structure)"
+msgstr "NT_LWPSINFO (lwpsinfo_t-struktur)"
+
+#: readelf.c:10469
+msgid "NT_WIN32PSTATUS (win32_pstatus structure)"
+msgstr "NT_WIN32PSTATUS (win32_pstatus-struktur)"
+
+#: readelf.c:10477
+msgid "NT_VERSION (version)"
+msgstr ""
+
+#: readelf.c:10479
+#, fuzzy
+msgid "NT_ARCH (architecture)"
+msgstr "NT_TASKSTRUCT (task-struktur)"
+
+#: readelf.c:10484 readelf.c:10507 readelf.c:10529
+#, c-format
+msgid "Unknown note type: (0x%08x)"
+msgstr "Okänd kommentarstyp: (0x%08x)"
+
+#: readelf.c:10496
+msgid "NT_GNU_ABI_TAG (ABI version tag)"
+msgstr ""
+
+#: readelf.c:10498
+msgid "NT_GNU_HWCAP (DSO-supplied software HWCAP info)"
+msgstr ""
+
+#: readelf.c:10500
+msgid "NT_GNU_BUILD_ID (unique build ID bitstring)"
+msgstr ""
+
+#: readelf.c:10502
+msgid "NT_GNU_GOLD_VERSION (gold version)"
+msgstr ""
+
+#. NetBSD core "procinfo" structure.
+#: readelf.c:10519
+msgid "NetBSD procinfo structure"
+msgstr "NetBSD processinfo-struktur"
+
+#: readelf.c:10546 readelf.c:10560
+msgid "PT_GETREGS (reg structure)"
+msgstr "PT_GETREGS (reg-struktur)"
+
+#: readelf.c:10548 readelf.c:10562
+msgid "PT_GETFPREGS (fpreg structure)"
+msgstr "PT_GETFPREGS (fpreg-struktur)"
+
+#: readelf.c:10568
+#, c-format
+msgid "PT_FIRSTMACH+%d"
+msgstr "PT_FIRSTMACH+%d"
+
+#: readelf.c:10653
+msgid "notes"
+msgstr "kommentarer"
+
+#: readelf.c:10659
+#, c-format
+msgid ""
+"\n"
+"Notes at offset 0x%08lx with length 0x%08lx:\n"
+msgstr ""
+"\n"
+"Kommentarer på offset 0x%08lx av längd 0x%08lx:\n"
+
+#: readelf.c:10661
+#, c-format
+msgid "  Owner\t\tData size\tDescription\n"
+msgstr "  Ägare\t\tData-storlek\tBeskrivning\n"
+
+#: readelf.c:10680
+#, fuzzy, c-format
+msgid "corrupt note found at offset %lx into core notes\n"
+msgstr "fann trasig kommentar på offset %x i minnesutskriftskommentarerna\n"
+
+#: readelf.c:10682
+#, fuzzy, c-format
+msgid " type: %lx, namesize: %08lx, descsize: %08lx\n"
+msgstr " typ: %x, namnstorlek: %08lx, beskrivningsstorlek: %08lx\n"
+
+#: readelf.c:10796
+#, c-format
+msgid "No note segments present in the core file.\n"
+msgstr "Det finns inga kommentarer i minnesfilen.\n"
+
+#: readelf.c:10880
+msgid ""
+"This instance of readelf has been built without support for a\n"
+"64 bit data type and so it cannot read 64 bit ELF files.\n"
+msgstr ""
+"Den här binären av readelf har byggts utan hantering av 64-bitars\n"
+"datatyper och kan därför inte läsa 64-bitars ELF-filer.\n"
+
+#: readelf.c:10927
+#, c-format
+msgid "%s: Failed to read file header\n"
+msgstr "%s: Lyckades inte läsa filhuvudet\n"
+
+#: readelf.c:10940
+#, c-format
+msgid ""
+"\n"
+"File: %s\n"
+msgstr ""
+"\n"
+"Fil: %s\n"
+
+#: readelf.c:11155
+#, fuzzy, c-format
+msgid "%s: failed to seek to first archive header\n"
+msgstr "%s: Lyckades inte läsa filhuvudet\n"
+
+#: readelf.c:11164 readelf.c:11431 readelf.c:11601
+#, fuzzy, c-format
+msgid "%s: failed to read archive header\n"
+msgstr "%s: Lyckades inte läsa filhuvudet\n"
+
+#: readelf.c:11189
+#, c-format
+msgid "%s: the archive index is empty\n"
+msgstr ""
+
+#: readelf.c:11197 readelf.c:11221
+#, fuzzy, c-format
+msgid "%s: failed to read archive index\n"
+msgstr "%s: Lyckades inte läsa filhuvudet\n"
+
+#: readelf.c:11206
+#, c-format
+msgid ""
+"%s: the archive index is supposed to have %ld entries, but the size in the "
+"header is too small\n"
+msgstr ""
+
+#: readelf.c:11214
+msgid "Out of memory whilst trying to read archive symbol index\n"
+msgstr ""
+
+#: readelf.c:11232
+msgid "Out of memory whilst trying to convert the archive symbol index\n"
+msgstr ""
+
+#: readelf.c:11244
+#, c-format
+msgid "%s: the archive has an index but no symbols\n"
+msgstr ""
+
+#: readelf.c:11251
+msgid "Out of memory whilst trying to read archive index symbol table\n"
+msgstr ""
+
+#: readelf.c:11257
+#, fuzzy, c-format
+msgid "%s: failed to read archive index symbol table\n"
+msgstr "%s: Lyckades inte läsa filhuvudet\n"
+
+#: readelf.c:11265
+#, c-format
+msgid "%s: failed to skip archive symbol table\n"
+msgstr ""
+
+#: readelf.c:11276
+#, fuzzy, c-format
+msgid "%s: failed to read archive header following archive index\n"
+msgstr "%s: Lyckades inte läsa filhuvudet\n"
+
+#: readelf.c:11281
+#, fuzzy, c-format
+msgid "%s has no archive index\n"
+msgstr "%s är inte ett arkiv"
+
+#: readelf.c:11292
+msgid "Out of memory reading long symbol names in archive\n"
+msgstr ""
+
+#: readelf.c:11300
+#, fuzzy, c-format
+msgid "%s: failed to read long symbol name string table\n"
+msgstr "Kan inte fastställa längden på den dynamiska strängtabellen\n"
+
+#: readelf.c:11425
+#, fuzzy, c-format
+msgid "%s: failed to seek to next file name\n"
+msgstr "%s: Lyckades inte läsa filhuvudet\n"
+
+#: readelf.c:11436 readelf.c:11607
+#, fuzzy, c-format
+msgid "%s: did not find a valid archive header\n"
+msgstr "%s är inte ett giltigt arkiv"
+
+#: readelf.c:11517
+#, c-format
+msgid "%s: unable to dump the index as none was found\n"
+msgstr ""
+
+#: readelf.c:11523
+#, c-format
+msgid "Index of archive %s: (%ld entries, 0x%lx bytes in the symbol table)\n"
+msgstr ""
+
+#: readelf.c:11541
+#, fuzzy, c-format
+msgid "Binary %s contains:\n"
+msgstr "Sektion %s innehåller:\n"
+
+#: readelf.c:11549
+#, c-format
+msgid "%s: end of the symbol table reached before the end of the index\n"
+msgstr ""
+
+#: readelf.c:11560
+#, c-format
+msgid ""
+"%s: symbols remain in the index symbol table, but without corresponding "
+"entries in the index table\n"
+msgstr ""
+
+#: readelf.c:11565
+#, fuzzy, c-format
+msgid "%s: failed to seek back to start of object files in the archive\n"
+msgstr "  m[ab]        - flytta fil(er) i arkivet\n"
+
+#: readelf.c:11593
+#, fuzzy, c-format
+msgid "%s: failed to seek to next archive header\n"
+msgstr "%s: Lyckades inte läsa filhuvudet\n"
+
+#: readelf.c:11621 readelf.c:11630
+#, fuzzy, c-format
+msgid "%s: bad archive file name\n"
+msgstr "%s: Lyckades inte läsa filhuvudet\n"
+
+#: readelf.c:11649 readelf.c:11725
+#, fuzzy, c-format
+msgid "Input file '%s' is not readable.\n"
+msgstr "Infil %s finns inte.\n"
+
+#: readelf.c:11671
+#, fuzzy, c-format
+msgid "%s: failed to seek to archive member.\n"
+msgstr "%s: fil %s är inte ett arkiv\n"
+
+#: readelf.c:11709
+#, c-format
+msgid "'%s': No such file\n"
+msgstr ""
+
+#: readelf.c:11711
+#, c-format
+msgid "Could not locate '%s'.  System error message: %s\n"
+msgstr ""
+
+#: readelf.c:11718
+#, fuzzy, c-format
+msgid "'%s' is not an ordinary file\n"
+msgstr "%s är inte ett arkiv"
+
+#: readelf.c:11731
+#, fuzzy, c-format
+msgid "%s: Failed to read file's magic number\n"
+msgstr "%s: Lyckades inte läsa filhuvudet\n"
+
+#: readelf.c:11743
+#, c-format
+msgid "File %s is not an archive so its index cannot be displayed.\n"
+msgstr ""
+
+#: rename.c:124
+#, c-format
+msgid "%s: cannot set time: %s"
+msgstr "%s: kan inte sätta tiden: %s"
+
+#. We have to clean up here.
+#: rename.c:159 rename.c:197
+#, fuzzy, c-format
+msgid "unable to rename '%s'; reason: %s"
+msgstr "Kan inte läsa in 0x%x byte %s\n"
+
+#: rename.c:205
+#, fuzzy, c-format
+msgid "unable to copy file '%s'; reason: %s"
+msgstr "Kan inte öppna basfilen: %s"
+
+#: resbin.c:120
+#, c-format
+msgid "%s: not enough binary data"
+msgstr "%s: inte tillräckligt med rådata"
+
+#: resbin.c:136
+msgid "null terminated unicode string"
+msgstr "nollterminerad unicode-sträng"
+
+#: resbin.c:163 resbin.c:169
+msgid "resource ID"
+msgstr "resurs-ID"
+
+#: resbin.c:208
+msgid "cursor"
+msgstr "markör"
+
+#: resbin.c:239 resbin.c:246
+msgid "menu header"
+msgstr "menyhuvud"
+
+#: resbin.c:255
+msgid "menuex header"
+msgstr "meny-ext.-huvud"
+
+#: resbin.c:259
+msgid "menuex offset"
+msgstr "meny-ext.-offset"
+
+#: resbin.c:264
+#, c-format
+msgid "unsupported menu version %d"
+msgstr "menyversion %d hanteras inte"
+
+#: resbin.c:289 resbin.c:304 resbin.c:366
+msgid "menuitem header"
+msgstr "menyobjektshuvud"
+
+#: resbin.c:396
+msgid "menuitem"
+msgstr "menyobjekt"
+
+#: resbin.c:433 resbin.c:461
+msgid "dialog header"
+msgstr "dialoghuvud"
+
+#: resbin.c:451
+#, c-format
+msgid "unexpected DIALOGEX version %d"
+msgstr "oväntad DIALOGEX-versionstyp %d"
+
+#: resbin.c:496
+msgid "dialog font point size"
+msgstr "typsnittets punktstorlek i dialog"
+
+#: resbin.c:504
+msgid "dialogex font information"
+msgstr "dialog-ext.-typsnittsinformation"
+
+#: resbin.c:530 resbin.c:548
+msgid "dialog control"
+msgstr "dialogkontroll"
+
+#: resbin.c:540
+msgid "dialogex control"
+msgstr "dioalog-ext.kontroll"
+
+#: resbin.c:569
+msgid "dialog control end"
+msgstr "dialogkontrollsslut"
+
+#: resbin.c:581
+msgid "dialog control data"
+msgstr "dialogkontrollsdata"
+
+#: resbin.c:621
+msgid "stringtable string length"
+msgstr "längd på sträng i strängtabellen"
+
+#: resbin.c:631
+msgid "stringtable string"
+msgstr "sträng i strängtabellen"
+
+#: resbin.c:661
+msgid "fontdir header"
+msgstr "typsnittskatalogens huvud"
+
+#: resbin.c:675
+msgid "fontdir"
+msgstr "typsnittskatalog"
+
+#: resbin.c:692
+msgid "fontdir device name"
+msgstr "typsnittskatalogens enhetsnamn"
+
+#: resbin.c:698
+msgid "fontdir face name"
+msgstr "typsnittskatalogens formnamn"
+
+#: resbin.c:738
+msgid "accelerator"
+msgstr "accelererare"
+
+#: resbin.c:797
+msgid "group cursor header"
+msgstr "gruppmarkörshuvud"
+
+#: resbin.c:801 resrc.c:1355
+#, c-format
+msgid "unexpected group cursor type %d"
+msgstr "oväntad gruppmarkörstyp %d"
+
+#: resbin.c:816
+msgid "group cursor"
+msgstr "gruppmarkör"
+
+#: resbin.c:852
+msgid "group icon header"
+msgstr "gruppikonshuvud"
+
+#: resbin.c:856 resrc.c:1302
+#, c-format
+msgid "unexpected group icon type %d"
+msgstr "oväntad gruppikonstyp %d"
+
+#: resbin.c:871
+msgid "group icon"
+msgstr "gruppikon"
+
+#: resbin.c:935 resbin.c:1151
+msgid "unexpected version string"
+msgstr "oväntad versionssträng"
+
+#: resbin.c:966
+#, c-format
+msgid "version length %d does not match resource length %lu"
+msgstr "versionslängd %d överensstämmer inte med resurslängd %lu"
+
+#: resbin.c:970
+#, c-format
+msgid "unexpected version type %d"
+msgstr "oväntad versionstyp %d"
+
+#: resbin.c:982
+#, fuzzy, c-format
+msgid "unexpected fixed version information length %ld"
+msgstr "oväntad längd %d på fast versionsinformation"
+
+#: resbin.c:985
+msgid "fixed version info"
+msgstr "fast versionsinfo"
+
+#: resbin.c:989
+#, c-format
+msgid "unexpected fixed version signature %lu"
+msgstr "oväntad fast versionssignatur %lu"
+
+#: resbin.c:993
+#, c-format
+msgid "unexpected fixed version info version %lu"
+msgstr "oväntad version %lu av fast versionsinformation"
+
+#: resbin.c:1022
+msgid "version var info"
+msgstr "variabel versionsinfo"
+
+#: resbin.c:1039
+#, fuzzy, c-format
+msgid "unexpected stringfileinfo value length %ld"
+msgstr "oväntad längd %d på värde för strängfilsinfo"
+
+#: resbin.c:1049
+#, fuzzy, c-format
+msgid "unexpected version stringtable value length %ld"
+msgstr "oväntad längd %d på värde för versionssträngtabell"
+
+#: resbin.c:1083
+#, fuzzy, c-format
+msgid "unexpected version string length %ld != %ld + %ld"
+msgstr "oväntad längd %d != %d + %d på versionssträng"
+
+#: resbin.c:1094
+#, fuzzy, c-format
+msgid "unexpected version string length %ld < %ld"
+msgstr "oväntad längd %d < %d på versionssträng"
+
+#: resbin.c:1111
+#, fuzzy, c-format
+msgid "unexpected varfileinfo value length %ld"
+msgstr "oväntad längd %d på värde för var.filinfo"
+
+#: resbin.c:1130
+msgid "version varfileinfo"
+msgstr "versionsvar.filinfo"
+
+#: resbin.c:1145
+#, fuzzy, c-format
+msgid "unexpected version value length %ld"
+msgstr "oväntad längd %d på värde för version"
+
+#: rescoff.c:124
+msgid "filename required for COFF input"
+msgstr "filnamn krävs för COFF-indata"
+
+#: rescoff.c:141
+#, c-format
+msgid "%s: no resource section"
+msgstr "%s: ingen resurssektion"
+
+#: rescoff.c:173
+#, c-format
+msgid "%s: %s: address out of bounds"
+msgstr "%s: %s: adress utanför begränsningen"
+
+#: rescoff.c:190
+msgid "directory"
+msgstr "katalog"
+
+#: rescoff.c:218
+msgid "named directory entry"
+msgstr "namngiven katalogpost"
+
+#: rescoff.c:227
+msgid "directory entry name"
+msgstr "katalogpostnamn"
+
+#: rescoff.c:247
+msgid "named subdirectory"
+msgstr "namngiven underkatalog"
+
+#: rescoff.c:255
+msgid "named resource"
+msgstr "namngiven resurs"
+
+#: rescoff.c:270
+msgid "ID directory entry"
+msgstr "ID-katalogpost"
+
+#: rescoff.c:287
+msgid "ID subdirectory"
+msgstr "ID-underkatalog"
+
+#: rescoff.c:295
+msgid "ID resource"
+msgstr "ID-resurs"
+
+#: rescoff.c:320
+msgid "resource type unknown"
+msgstr "okänd resurstyp"
+
+#: rescoff.c:323
+msgid "data entry"
+msgstr "datapost"
+
+#: rescoff.c:331
+msgid "resource data"
+msgstr "resursdata"
+
+#: rescoff.c:336
+msgid "resource data size"
+msgstr "storlek på resursdata"
+
+#: rescoff.c:431
+msgid "filename required for COFF output"
+msgstr "filnamn krävs för COFF-utdata"
+
+#: rescoff.c:715
+msgid "can't get BFD_RELOC_RVA relocation type"
+msgstr "kan inte få fram BFD_RELOC_RVA-relokeringstyp"
+
+#: resrc.c:262 resrc.c:333
+#, c-format
+msgid "can't open temporary file `%s': %s"
+msgstr "kan inte öppna temporärfil \"%s\": %s"
+
+#: resrc.c:268
+#, c-format
+msgid "can't redirect stdout: `%s': %s"
+msgstr "kan inte omdirigera standard ut: \"%s\": %s"
+
+#: resrc.c:284
+#, c-format
+msgid "%s %s: %s"
+msgstr "%s %s: %s"
+
+#: resrc.c:329
+#, c-format
+msgid "can't execute `%s': %s"
+msgstr "kan inte exekvera \"%s\": %s"
+
+#: resrc.c:338
+#, c-format
+msgid "Using temporary file `%s' to read preprocessor output\n"
+msgstr "Läser utdata från förbehandlaren via temporärfil \"%s\"\n"
+
+#: resrc.c:345
+#, c-format
+msgid "can't popen `%s': %s"
+msgstr "kan inte anropa popen \"%s\": %s"
+
+#: resrc.c:347
+#, c-format
+msgid "Using popen to read preprocessor output\n"
+msgstr "Läser utdata från förbehandlaren via popen\n"
+
+#: resrc.c:413
+#, c-format
+msgid "Tried `%s'\n"
+msgstr "Provade \"%s\"\n"
+
+#: resrc.c:424
+#, c-format
+msgid "Using `%s'\n"
+msgstr "Använder \"%s\"\n"
+
+#: resrc.c:608
+#, fuzzy
+msgid "preprocessing failed."
+msgstr "Bearbetar def-fil: %s"
+
+#: resrc.c:631
+#, c-format
+msgid "%s:%d: %s\n"
+msgstr "%s:%d: %s\n"
+
+#: resrc.c:639
+#, c-format
+msgid "%s: unexpected EOF"
+msgstr "%s: oväntat filslut"
+
+#: resrc.c:688
+#, c-format
+msgid "%s: read of %lu returned %lu"
+msgstr "%s: läsning av %lu byte gav %lu"
+
+#: resrc.c:727 resrc.c:1502
+#, c-format
+msgid "stat failed on bitmap file `%s': %s"
+msgstr "stat misslyckades på bildfil \"%s\": %s"
+
+#: resrc.c:778
+#, c-format
+msgid "cursor file `%s' does not contain cursor data"
+msgstr "markörfil \"%s\" innehåller inte markördata"
+
+#: resrc.c:810 resrc.c:1210
+#, c-format
+msgid "%s: fseek to %lu failed: %s"
+msgstr "%s: fseek till %lu misslyckades: %s"
+
+#: resrc.c:936
+msgid "help ID requires DIALOGEX"
+msgstr "hjälp-ID kräver DIALOGEX"
+
+#: resrc.c:938
+msgid "control data requires DIALOGEX"
+msgstr "kontrolldata kräver DIALOGEX"
+
+#: resrc.c:966
+#, fuzzy, c-format
+msgid "stat failed on font file `%s': %s"
+msgstr "stat misslyckades på bildfil \"%s\": %s"
+
+#: resrc.c:1179
+#, c-format
+msgid "icon file `%s' does not contain icon data"
+msgstr "ikonfil \"%s\" innehåller inte ikondata"
+
+#: resrc.c:1724 resrc.c:1759
+#, fuzzy, c-format
+msgid "stat failed on file `%s': %s"
+msgstr "stat misslyckades på bildfil \"%s\": %s"
+
+#: resrc.c:1940
+#, c-format
+msgid "can't open `%s' for output: %s"
+msgstr "kan inte öppna \"%s\" för utmatning: %s"
+
+#: size.c:79
+#, c-format
+msgid " Displays the sizes of sections inside binary files\n"
+msgstr " Visa storleken på sektioner i binärfiler\n"
+
+#: size.c:80
+#, c-format
+msgid " If no input file(s) are specified, a.out is assumed\n"
+msgstr " Om ingen infil är vald används a.out\n"
+
+#: size.c:81
+#, fuzzy, c-format
+msgid ""
+" The options are:\n"
+"  -A|-B     --format={sysv|berkeley}  Select output style (default is %s)\n"
+"  -o|-d|-x  --radix={8|10|16}         Display numbers in octal, decimal or "
+"hex\n"
+"  -t        --totals                  Display the total sizes (Berkeley "
+"only)\n"
+"            --common                  Display total size for *COM* syms\n"
+"            --target=<bfdname>        Set the binary file format\n"
+"            @<file>                   Read options from <file>\n"
+"  -h        --help                    Display this information\n"
+"  -v        --version                 Display the program's version\n"
+"\n"
+msgstr ""
+" Flaggorna är:\n"
+"  -A|-B     --format={sysv|berkeley}  Välj utdatastil (standard är %s)\n"
+"  -o|-d|-x  --radix={8|10|16}         Visa tal oktalt, decimalt eller "
+"hexadecimalt\n"
+"  -t        --totals                  Visa samanlagd storlek (endast "
+"Berkeley)\n"
+"            --target=<bfdnamn>        Välj binärfilens format\n"
+"  -h        --help                    Visa denna hjälp\n"
+"  -v        --version                 Visa programmets versionsinformation\n"
+"\n"
+
+#: size.c:160
+#, c-format
+msgid "invalid argument to --format: %s"
+msgstr "ogiltigt argument till --format: %s"
+
+#: size.c:187
+#, c-format
+msgid "Invalid radix: %s\n"
+msgstr "Ogiltig talbas: %s\n"
+
+#: srconv.c:1731
+#, c-format
+msgid "Convert a COFF object file into a SYSROFF object file\n"
+msgstr "Konverterar en COFF-objektfil till en SYSROFF-objektfil\n"
+
+#: srconv.c:1732
+#, fuzzy, c-format
+msgid ""
+" The options are:\n"
+"  -q --quick       (Obsolete - ignored)\n"
+"  -n --noprescan   Do not perform a scan to convert commons into defs\n"
+"  -d --debug       Display information about what is being done\n"
+"  @<file>          Read options from <file>\n"
+"  -h --help        Display this information\n"
+"  -v --version     Print the program's version number\n"
+msgstr ""
+" Flaggorna är:\n"
+"  -q --quick       (Utgått - ignoreras)\n"
+"  -n --noprescan   Gör inte sök-och-ersätt från commons till defs\n"
+"  -d --debug       Visa information om vad som händer\n"
+"  -h --help        Visa denna hjälp\n"
+"  -v --version     Visa programets versionsinformation\n"
+
+#: srconv.c:1878
+#, c-format
+msgid "unable to open output file %s"
+msgstr "kan inte öppna utfil %s"
+
+#: stabs.c:328 stabs.c:1726
+msgid "numeric overflow"
+msgstr "numeriskt överspill"
+
+#: stabs.c:338
+#, c-format
+msgid "Bad stab: %s\n"
+msgstr "Felaktig stab: %s\n"
+
+#: stabs.c:346
+#, fuzzy, c-format
+msgid "warning: %s: %s\n"
+msgstr "Varning: %s: %s\n"
+
+#: stabs.c:456
+#, c-format
+msgid "N_LBRAC not within function\n"
+msgstr "N_LBRAC inte inuti funktion\n"
+
+#: stabs.c:495
+#, c-format
+msgid "Too many N_RBRACs\n"
+msgstr "För många N_RBRAC:s\n"
+
+#: stabs.c:736
+msgid "unknown C++ encoded name"
+msgstr "okänt C++-kodat namn"
+
+#. Complain and keep going, so compilers can invent new
+#. cross-reference types.
+#: stabs.c:1271
+msgid "unrecognized cross reference type"
+msgstr "okänd korsreferenstyp"
+
+#. Does this actually ever happen?  Is that why we are worrying
+#. about dealing with it rather than just calling error_type?
+#: stabs.c:1818
+msgid "missing index type"
+msgstr "utebliven indextyp"
+
+#: stabs.c:2133
+msgid "unknown virtual character for baseclass"
+msgstr "okänt virtuellt tecken för basklass"
+
+#: stabs.c:2151
+msgid "unknown visibility character for baseclass"
+msgstr "okänt synlighetstecken för basklass"
+
+#: stabs.c:2337
+msgid "unnamed $vb type"
+msgstr "$vb-typ utan namn"
+
+#: stabs.c:2343
+msgid "unrecognized C++ abbreviation"
+msgstr "okänd C++-förkortning"
+
+#: stabs.c:2419
+msgid "unknown visibility character for field"
+msgstr "okänt synlighetstecken för fält"
+
+#: stabs.c:2671
+msgid "const/volatile indicator missing"
+msgstr "const/volatile-indikator saknas"
+
+#: stabs.c:2907
+#, c-format
+msgid "No mangling for \"%s\"\n"
+msgstr "Ingen kodning av \"%s\"\n"
+
+#: stabs.c:3207
+msgid "Undefined N_EXCL"
+msgstr "Odefinierad N_EXCL"
+
+#: stabs.c:3287
+#, c-format
+msgid "Type file number %d out of range\n"
+msgstr "Typs filnummer %d utanför sitt intervall\n"
+
+#: stabs.c:3292
+#, c-format
+msgid "Type index number %d out of range\n"
+msgstr "Typs indexnummer %d utanför sitt intervall\n"
+
+#: stabs.c:3371
+#, c-format
+msgid "Unrecognized XCOFF type %d\n"
+msgstr "Okänd XCOFF-typ %d\n"
+
+#: stabs.c:3663
+#, c-format
+msgid "bad mangled name `%s'\n"
+msgstr "felaktigt manglat namn \"%s\"\n"
+
+#: stabs.c:3758
+#, c-format
+msgid "no argument types in mangled string\n"
+msgstr "inga argumenttyper i den manglade strängen\n"
+
+#: stabs.c:5112
+#, fuzzy, c-format
+msgid "Demangled name is not a function\n"
+msgstr "C++-standardvärden inte inom en funktion"
+
+#: stabs.c:5154
+#, c-format
+msgid "Unexpected type in v3 arglist demangling\n"
+msgstr ""
+
+#: stabs.c:5221
+#, fuzzy, c-format
+msgid "Unrecognized demangle component %d\n"
+msgstr "Okänt felsökningsargument \"%s\"\n"
+
+#: stabs.c:5273
+#, fuzzy, c-format
+msgid "Failed to print demangled template\n"
+msgstr "%s: Lyckades inte läsa filhuvudet\n"
+
+#: stabs.c:5353
+#, c-format
+msgid "Couldn't get demangled builtin type\n"
+msgstr ""
+
+#: stabs.c:5402
+#, c-format
+msgid "Unexpected demangled varargs\n"
+msgstr ""
+
+#: stabs.c:5409
+#, fuzzy, c-format
+msgid "Unrecognized demangled builtin type\n"
+msgstr "okänd C++-standardtyp"
+
+#: strings.c:201 strings.c:260
+#, c-format
+msgid "invalid integer argument %s"
+msgstr "ogiltigt heltalsargument %s"
+
+#: strings.c:263
+#, fuzzy, c-format
+msgid "invalid minimum string length %d"
+msgstr "ogiltig stränglängd"
+
+#: strings.c:660
+#, c-format
+msgid " Display printable strings in [file(s)] (stdin by default)\n"
+msgstr " Visa läsbara strängar i [fil(er)] (eller från standard in)\n"
+
+#: strings.c:661
+#, fuzzy, c-format
+msgid ""
+" The options are:\n"
+"  -a - --all                Scan the entire file, not just the data section\n"
+"  -f --print-file-name      Print the name of the file before each string\n"
+"  -n --bytes=[number]       Locate & print any NUL-terminated sequence of "
+"at\n"
+"  -<number>                   least [number] characters (default 4).\n"
+"  -t --radix={o,d,x}        Print the location of the string in base 8, 10 "
+"or 16\n"
+"  -o                        An alias for --radix=o\n"
+"  -T --target=<BFDNAME>     Specify the binary file format\n"
+"  -e --encoding={s,S,b,l,B,L} Select character size and endianness:\n"
+"                            s = 7-bit, S = 8-bit, {b,l} = 16-bit, {B,L} = 32-"
+"bit\n"
+"  @<file>                   Read options from <file>\n"
+"  -h --help                 Display this information\n"
+"  -v -V --version           Print the program's version number\n"
+msgstr ""
+" Flaggorna är:\n"
+"  -a - --all                Undersök hela filen, inte bara datasektionen\n"
+"  -f --print-file-name      Skriv filens namn före varje sträng\n"
+"  -n --bytes=[antal]        Hitta och skriv ut varje NUL-terminerad sekvens\n"
+"  -<antal>                  med minst [antal] tecken (standard 4).\n"
+"  -t --radix={o,d,x}        Skriv strängens position i talbas 8, 10 eller "
+"16\n"
+"  -o                        Synonym för --radix=o\n"
+"  -T --target=<BFDNAMN>     Välj binärfilens format\n"
+"  -e --encoding={s,S,b,l,B,L} Välj teckenstorlek och typ av endian:\n"
+"                            s=7-bit, S=8-bit, {b,l}=16-bit, {B,L}=32-bit\n"
+"  -h --help                 Visa denna hjälp\n"
+"  -v --version              Visa programmets versionsinformation\n"
+
+#: sysdump.c:647
+#, c-format
+msgid "Print a human readable interpretation of a SYSROFF object file\n"
+msgstr "Skriv en mänskligt läsbar tolkning av en SYSROFF-objektfil\n"
+
+#: sysdump.c:648
+#, c-format
+msgid ""
+" The options are:\n"
+"  -h --help        Display this information\n"
+"  -v --version     Print the program's version number\n"
+msgstr ""
+" Flaggorna är:\n"
+"  -h --help        Visa denna hjälp\n"
+"  -v --version     Visa programment versionsinformation\n"
+
+#: sysdump.c:715
+#, c-format
+msgid "cannot open input file %s"
+msgstr "kan inte öppna infil %s"
+
+#: version.c:36
+#, fuzzy, c-format
+msgid "Copyright 2007 Free Software Foundation, Inc.\n"
+msgstr "Copyright 2002 Free Software Foundation, Inc.\n"
+
+#: version.c:37
+#, fuzzy, c-format
+msgid ""
+"This program is free software; you may redistribute it under the terms of\n"
+"the GNU General Public License version 3 or (at your option) any later "
+"version.\n"
+"This program has absolutely no warranty.\n"
+msgstr ""
+"Detta program är fri programvara; du kan sprida det vidare under villkoren\n"
+"i GNU General Public License.  Detta program har inga som helst garantier.\n"
+
+#: version.c:83
+#, fuzzy, c-format
+msgid "GNU %s %s (%s)"
+msgstr "%s %s: %s"
+
+#: version.c:86
+#, fuzzy, c-format
+msgid " using BFD version %s\n"
+msgstr "BFD-huvudfil version %s\n"
+
+#: windmc.c:195
+#, fuzzy, c-format
+msgid "can't create %s file ,%s' for output.\n"
+msgstr "kan inte öppna \"%s\" för utmatning: %s"
+
+#: windmc.c:203
+#, fuzzy, c-format
+msgid "Usage: %s [option(s)] [input-file]\n"
+msgstr "Användning: %s [flaggor] infil\n"
+
+#: windmc.c:205
+#, c-format
+msgid ""
+" The options are:\n"
+"  -a --ascii_in                Read input file as ASCII file\n"
+"  -A --ascii_out               Write binary messages as ASCII\n"
+"  -b --binprefix               .bin filename is prefixed by .mc filename_ "
+"for uniqueness.\n"
+"  -c --customflag              Set custom flags for messages\n"
+"  -C --codepage_in=<val>       Set codepage when reading mc text file\n"
+"  -d --decimal_values          Print values to text files decimal\n"
+"  -e --extension=<extension>   Set header extension used on export header "
+"file\n"
+"  -F --target <target>         Specify output target for endianess.\n"
+"  -h --headerdir=<directory>   Set the export directory for headers\n"
+"  -u --unicode_in              Read input file as UTF16 file\n"
+"  -U --unicode_out             Write binary messages as UFT16\n"
+"  -m --maxlength=<val>         Set the maximal allowed message length\n"
+"  -n --nullterminate           Automatic add a zero termination to strings\n"
+"  -o --hresult_use             Use HRESULT definition instead of status code "
+"definition\n"
+"  -O --codepage_out=<val>      Set codepage used for writing text file\n"
+"  -r --rcdir=<directory>       Set the export directory for rc files\n"
+"  -x --xdbg=<directory>        Where to create the .dbg C include file\n"
+"                               that maps message ID's to their symbolic "
+"name.\n"
+msgstr ""
+
+#: windmc.c:225
+#, fuzzy, c-format
+msgid ""
+"  -H --help                    Print this help message\n"
+"  -v --verbose                 Verbose - tells you what it's doing\n"
+"  -V --version                 Print version information\n"
+msgstr ""
+" Flaggorna är:\n"
+"  --help                       Visa denna hjälp\n"
+"  --version                    Visa versionsinformation\n"
+
+#: windmc.c:297
+#, c-format
+msgid "A codepage was specified switch ,%s' and UTF16.\n"
+msgstr ""
+
+#: windmc.c:298
+#, c-format
+msgid "\tcodepage settings are ignored.\n"
+msgstr ""
+
+#: windmc.c:342
+msgid "try to add a ill language."
+msgstr ""
+
+#: windmc.c:1151
+#, fuzzy, c-format
+msgid "unable to open file ,%s' for input.\n"
+msgstr "kan inte öppna utfil %s"
+
+#: windmc.c:1159
+#, fuzzy, c-format
+msgid "unable to read contents of %s"
+msgstr "Kan inte läsa in 0x%x byte %s\n"
+
+#: windmc.c:1171
+msgid "input file does not seems to be UFT16.\n"
+msgstr ""
+
+#: windres.c:220
+#, c-format
+msgid "can't open %s `%s': %s"
+msgstr "kan inte öppna %s \"%s\": %s"
+
+#: windres.c:394
+#, c-format
+msgid ": expected to be a directory\n"
+msgstr ": förväntades vara en katalog\n"
+
+#: windres.c:406
+#, c-format
+msgid ": expected to be a leaf\n"
+msgstr ": förväntades vara ett löv\n"
+
+#: windres.c:417
+#, c-format
+msgid ": duplicate value\n"
+msgstr ": dublett av värdet\n"
+
+#: windres.c:567
+#, c-format
+msgid "unknown format type `%s'"
+msgstr "okänd formattyp \"%s\""
+
+#: windres.c:568
+#, c-format
+msgid "%s: supported formats:"
+msgstr "%s: format som hanteras:"
+
+#. Otherwise, we give up.
+#: windres.c:651
+#, fuzzy, c-format
+msgid "can not determine type of file `%s'; use the -J option"
+msgstr "kan inte fastställa filtyp på \"%s\"; använd flagga -I"
+
+#: windres.c:663
+#, c-format
+msgid "Usage: %s [option(s)] [input-file] [output-file]\n"
+msgstr "Användning: %s [flaggor] [infil] [utfil]\n"
+
+#: windres.c:665
+#, fuzzy, c-format
+msgid ""
+" The options are:\n"
+"  -i --input=<file>            Name input file\n"
+"  -o --output=<file>           Name output file\n"
+"  -J --input-format=<format>   Specify input format\n"
+"  -O --output-format=<format>  Specify output format\n"
+"  -F --target=<target>         Specify COFF target\n"
+"     --preprocessor=<program>  Program to use to preprocess rc file\n"
+"  -I --include-dir=<dir>       Include directory when preprocessing rc file\n"
+"  -D --define <sym>[=<val>]    Define SYM when preprocessing rc file\n"
+"  -U --undefine <sym>          Undefine SYM when preprocessing rc file\n"
+"  -v --verbose                 Verbose - tells you what it's doing\n"
+"  -c --codepage=<codepage>     Specify default codepage\n"
+"  -l --language=<val>          Set language when reading rc file\n"
+"     --use-temp-file           Use a temporary file instead of popen to "
+"read\n"
+"                               the preprocessor output\n"
+"     --no-use-temp-file        Use popen (default)\n"
+msgstr ""
+" Flaggorna är:\n"
+"  -i --input=<fil>             Välj infil\n"
+"  -o --output=<fil>            Välj utfil\n"
+"  -J --input-format=<format>   Välj indataformat\n"
+"  -O --output-format=<format>  Välj utdataformat\n"
+"  -F --target=<mål>            Välj COFF-mål\n"
+"     --preprocessor=<program>  Program att förbehandla rc-filen med\n"
+"  -I --include-dir=<katalog>   Inkludera ur katalog när rc-filen "
+"förbehandlas\n"
+"  -D --define <sym>[=<värde>]  Definiera SYM när rc-filen förbehandlas\n"
+"  -U --undefine <sym>          Odefiniera SYM när rc-filen förbehandlas\n"
+"  -v --verbose                 Utförlig - berättar vad den gör\n"
+"  -l --language=<värde>        Välj språk när rc-filen läses\n"
+"     --use-temp-file           Använd en tempfil istället för popen för att\n"
+"                               läsa utdata från förbehandlaren\n"
+"     --no-use-temp-file        Använd popen (standard)\n"
+
+#: windres.c:682
+#, c-format
+msgid "     --yydebug                 Turn on parser debugging\n"
+msgstr "     --yydebug                 Slå på tolkens felsökning\n"
+
+#: windres.c:685
+#, fuzzy, c-format
+msgid ""
+"  -r                           Ignored for compatibility with rc\n"
+"  @<file>                      Read options from <file>\n"
+"  -h --help                    Print this help message\n"
+"  -V --version                 Print version information\n"
+msgstr ""
+"  -r                           Ignorerad, för kompabilitet med rc\n"
+"  -h --help                    Visa denna hjälp\n"
+"  -V --version                 Visa versionsinformation\n"
+
+#: windres.c:690
+#, c-format
+msgid ""
+"FORMAT is one of rc, res, or coff, and is deduced from the file name\n"
+"extension if not specified.  A single file name is an input file.\n"
+"No input-file is stdin, default rc.  No output-file is stdout, default rc.\n"
+msgstr ""
+"FORMAT är ett av rc, res eller coff, och härleds från filändelsen\n"
+"om det inte anges.  Ett ensamt filnamn är en infil.  Ingen infil\n"
+"betyder standard in, med formatet rc.  Ingen utfil betyder standard ut,\n"
+"med formatet rc.\n"
+
+#: windres.c:848
+#, fuzzy
+msgid "invalid codepage specified.\n"
+msgstr "ingen kommandoflagga gavs"
+
+#: windres.c:863
+msgid "invalid option -f\n"
+msgstr "ogiltig flagga -f\n"
+
+#: windres.c:868
+msgid "No filename following the -fo option.\n"
+msgstr "Inget filnamn efter flaggan -fo.\n"
+
+#: windres.c:927
+#, c-format
+msgid ""
+"Option -I is deprecated for setting the input format, please use -J "
+"instead.\n"
+msgstr ""
+"Flagga -I för att välja informat har utgått, vänligen använd -J istället.\n"
+
+#: windres.c:1037
+msgid "no resources"
+msgstr "inga resurser"
+
+#: wrstabs.c:353 wrstabs.c:1916
+#, c-format
+msgid "string_hash_lookup failed: %s"
+msgstr "string_hash_lookup misslyckades: %s"
+
+#: wrstabs.c:636
+#, c-format
+msgid "stab_int_type: bad size %u"
+msgstr "stab_int_type: felaktig storlek %u"
+
+#: wrstabs.c:1394
+#, c-format
+msgid "%s: warning: unknown size for field `%s' in struct"
+msgstr "%s: varning: okänd storleken på fält \"%s\" i strukturen"
+
+#~ msgid "set .nlmsections flags"
+#~ msgstr "sätt flaggor i .nlmsections"
+
+#~ msgid ""
+#~ "  -I --input-target <bfdname>      Assume input file is in format "
+#~ "<bfdname>\n"
+#~ "  -O --output-target <bfdname>     Create an output file in format "
+#~ "<bfdname>\n"
+#~ "  -B --binary-architecture <arch>  Set arch of output file, when input is "
+#~ "binary\n"
+#~ "  -F --target <bfdname>            Set both input and output format to "
+#~ "<bfdname>\n"
+#~ "     --debugging                   Convert debugging information, if "
+#~ "possible\n"
+#~ "  -p --preserve-dates              Copy modified/access timestamps to the "
+#~ "output\n"
+#~ "  -j --only-section <name>         Only copy section <name> into the "
+#~ "output\n"
+#~ "     --add-gnu-debuglink=<file>    Add section .gnu_debuglink linking to "
+#~ "<file>\n"
+#~ "  -R --remove-section <name>       Remove section <name> from the output\n"
+#~ "  -S --strip-all                   Remove all symbol and relocation "
+#~ "information\n"
+#~ "  -g --strip-debug                 Remove all debugging symbols & "
+#~ "sections\n"
+#~ "     --strip-unneeded              Remove all symbols not needed by "
+#~ "relocations\n"
+#~ "  -N --strip-symbol <name>         Do not copy symbol <name>\n"
+#~ "  -K --keep-symbol <name>          Only copy symbol <name>\n"
+#~ "  -L --localize-symbol <name>      Force symbol <name> to be marked as a "
+#~ "local\n"
+#~ "  -G --keep-global-symbol <name>   Localize all symbols except <name>\n"
+#~ "  -W --weaken-symbol <name>        Force symbol <name> to be marked as a "
+#~ "weak\n"
+#~ "     --weaken                      Force all global symbols to be marked "
+#~ "as weak\n"
+#~ "  -x --discard-all                 Remove all non-global symbols\n"
+#~ "  -X --discard-locals              Remove any compiler-generated symbols\n"
+#~ "  -i --interleave <number>         Only copy one out of every <number> "
+#~ "bytes\n"
+#~ "  -b --byte <num>                  Select byte <num> in every interleaved "
+#~ "block\n"
+#~ "     --gap-fill <val>              Fill gaps between sections with <val>\n"
+#~ "     --pad-to <addr>               Pad the last section up to address "
+#~ "<addr>\n"
+#~ "     --set-start <addr>            Set the start address to <addr>\n"
+#~ "    {--change-start|--adjust-start} <incr>\n"
+#~ "                                   Add <incr> to the start address\n"
+#~ "    {--change-addresses|--adjust-vma} <incr>\n"
+#~ "                                   Add <incr> to LMA, VMA and start "
+#~ "addresses\n"
+#~ "    {--change-section-address|--adjust-section-vma} <name>{=|+|-}<val>\n"
+#~ "                                   Change LMA and VMA of section <name> "
+#~ "by <val>\n"
+#~ "     --change-section-lma <name>{=|+|-}<val>\n"
+#~ "                                   Change the LMA of section <name> by "
+#~ "<val>\n"
+#~ "     --change-section-vma <name>{=|+|-}<val>\n"
+#~ "                                   Change the VMA of section <name> by "
+#~ "<val>\n"
+#~ "    {--[no-]change-warnings|--[no-]adjust-warnings}\n"
+#~ "                                   Warn if a named section does not "
+#~ "exist\n"
+#~ "     --set-section-flags <name>=<flags>\n"
+#~ "                                   Set section <name>'s properties to "
+#~ "<flags>\n"
+#~ "     --add-section <name>=<file>   Add section <name> found in <file> to "
+#~ "output\n"
+#~ "     --rename-section <old>=<new>[,<flags>] Rename section <old> to "
+#~ "<new>\n"
+#~ "     --change-leading-char         Force output format's leading "
+#~ "character style\n"
+#~ "     --remove-leading-char         Remove leading character from global "
+#~ "symbols\n"
+#~ "     --redefine-sym <old>=<new>    Redefine symbol name <old> to <new>\n"
+#~ "     --redefine-syms <file>        --redefine-sym for all symbol pairs \n"
+#~ "                                     listed in <file>\n"
+#~ "     --srec-len <number>           Restrict the length of generated "
+#~ "Srecords\n"
+#~ "     --srec-forceS3                Restrict the type of generated "
+#~ "Srecords to S3\n"
+#~ "     --strip-symbols <file>        -N for all symbols listed in <file>\n"
+#~ "     --keep-symbols <file>         -K for all symbols listed in <file>\n"
+#~ "     --localize-symbols <file>     -L for all symbols listed in <file>\n"
+#~ "     --keep-global-symbols <file>  -G for all symbols listed in <file>\n"
+#~ "     --weaken-symbols <file>       -W for all symbols listed in <file>\n"
+#~ "     --alt-machine-code <index>    Use alternate machine code for output\n"
+#~ "     --prefix-symbols <prefix>     Add <prefix> to start of every symbol "
+#~ "name\n"
+#~ "     --prefix-sections <prefix>    Add <prefix> to start of every section "
+#~ "name\n"
+#~ "     --prefix-alloc-sections <prefix>\n"
+#~ "                                   Add <prefix> to start of every "
+#~ "allocatable\n"
+#~ "                                     section name\n"
+#~ "  -v --verbose                     List all object files modified\n"
+#~ "  -V --version                     Display this program's version number\n"
+#~ "  -h --help                        Display this output\n"
+#~ "     --info                        List object formats & architectures "
+#~ "supported\n"
+#~ msgstr ""
+#~ "  -I --input-target <bfd-namn>    Antag infilens format till <bfd-namn>\n"
+#~ "  -O --output-target <bfd-namn>   Skapa utfilen i format <bfd-namn>\n"
+#~ "  -B --binary-architecture <ark>  Välj arkitektur för utfil när indata är "
+#~ "binär\n"
+#~ "  -F --target <bfd-namn>          Sätt både in- och utformatet till <bfd-"
+#~ "namn>\n"
+#~ "     --debugging                  Konvertera felsökningsinfo, om möjligt\n"
+#~ "  -p --preserve-dates             Kopiera ändrings/åtkomsttider till "
+#~ "utdatan\n"
+#~ "  -j --only-section <namn>        Kopiera endast sektion <namn> till "
+#~ "utdatan\n"
+#~ "     --add-gnu-debuglink=<fil>    Lägg till .gnu_debuglink-sektion till "
+#~ "<fil>\n"
+#~ "  -R --remove-section <namn>      Ta bort sektion <namn> från utdatan\n"
+#~ "  -S --strip-all                  Rensa bort all symbol- och "
+#~ "relokeringsinfo\n"
+#~ "  -g --strip-debug                Rensa bort alla felsökssymboler och -"
+#~ "sektioner\n"
+#~ "     --strip-unneeded             Rensa bort alla symboler som inte "
+#~ "behövs för\n"
+#~ "                                  relokeringen\n"
+#~ "  -N --strip-symbol <namn>        Kopiera inte symbol <namn>\n"
+#~ "  -K --keep-symbol <namn>         Kopiera endast symbol <namn>\n"
+#~ "  -L --localize-symbol <namn>     Markera symbol <namn> som lokal\n"
+#~ "  -G --keep-global-symbol <namn>  Gör alla symboler lokala, förutom "
+#~ "<namn>\n"
+#~ "  -W --weaken-symbol <namn>       Markera symbol <namn> som vek\n"
+#~ "     --weaken                     Markera alla globala symboler som veka\n"
+#~ "  -x --discard-all                Ta bort alla icke-globala symboler\n"
+#~ "  -X --discard-locals             Ta bort alla kompilatorgenererade "
+#~ "symboler\n"
+#~ "  -i --interleave <antal>         Kopiera endast en av varje <antal> "
+#~ "byte\n"
+#~ "  -b --byte <nr>                  Välj ut <nr>:e byten i varje intervall\n"
+#~ "     --gap-fill <tal>             Fyll luckor mellan sektionerna med "
+#~ "<tal>\n"
+#~ "     --pad-to <adr>               Fyll ut efter sista sektionen fram till "
+#~ "<adr>\n"
+#~ "     --set-start <adr>            Sätt startadressen till <adr>\n"
+#~ "    {--change-start|--adjust-start} <ökn>\n"
+#~ "                                  Lägg till <ökn> till startadressen\n"
+#~ "    {--change-addresses|--adjust-vma} <ökn>\n"
+#~ "                                  Lägg till <ökn> till LMA, VMA och "
+#~ "startadr.\n"
+#~ "    {--change-section-address|--adjust-section-vma} <namn>{=|+|-}<tal>\n"
+#~ "                                  Ändra LMA och VMA på sektion <namn> med "
+#~ "<tal>\n"
+#~ "     --change-section-lma <namn>{=|+|-}<tal>\n"
+#~ "                                  Ändra LMA på sektion <namn> med <tal>\n"
+#~ "     --change-section-vma <namn>{=|+|-}<tal>\n"
+#~ "                                  Ändra VMA på sektion <namn> med <tal>\n"
+#~ "    {--[no-]change-warnings|--[no-]adjust-warnings}\n"
+#~ "                                  Varna (inte/[no-]) om en sektion inte "
+#~ "finns\n"
+#~ "     --set-section-flags <namn>=<flaggor>\n"
+#~ "                                  Sätt sektion <namn>s attribut till "
+#~ "<flaggor>\n"
+#~ "     --add-section <namn>=<fil>   Lägg till sektion <namn> i <fil> till "
+#~ "utdatan\n"
+#~ "     --rename-section <gam>=<ny>[,<flaggor>] Byt namn på sektion <gam> "
+#~ "till <ny>\n"
+#~ "     --change-leading-char        Framtvinga utformatets inledande "
+#~ "teckentyp\n"
+#~ "     --remove-leading-char        Ta bort inledningstecken från globala "
+#~ "symboler\n"
+#~ "     --redefine-sym <gam>=<ny>    Definiera om symbolnamn <gam> till "
+#~ "<ny>\n"
+#~ "     --redefine-syms <fil>        --redefine-sym för alla symbolpar i "
+#~ "<fil>\n"
+#~ "     --srec-len <nr>              Begränsa längden på genererade S-"
+#~ "poster\n"
+#~ "     --srec-forceS3               Begränsa typen av genererade S-poster "
+#~ "till S3\n"
+#~ "     --strip-symbols <fil>        -N för alla symboler som listas i "
+#~ "<fil>\n"
+#~ "     --keep-symbols <fil>         -K för alla symboler som listas i "
+#~ "<fil>\n"
+#~ "     --localize-symbols <fil>     -L för alla symboler som listas i "
+#~ "<fil>\n"
+#~ "     --keep-global-symbols <fil>  -G för alla symboler som listas i "
+#~ "<fil>\n"
+#~ "     --weaken-symbols <fil>       -W för alla symboler som listas i "
+#~ "<fil>\n"
+#~ "     --alt-machine-code <index>   Använd alternativ maskinkod för utdata\n"
+#~ "     --prefix-symbols <prefix>     Börja varje symbolnamn med <prefix>\n"
+#~ "     --prefix-sections <prefix>    Börja varje sektionsnamn med <prefix>\n"
+#~ "     --prefix-alloc-sections <prefix>\n"
+#~ "                                   Börja varje allokerbar sektions namn "
+#~ "med\n"
+#~ "                                      <prefix>\n"
+#~ "  -v --verbose                    Lista alla förändrade objektfiler\n"
+#~ "  -V --version                    Visa programmets versionsinformation\n"
+#~ "  -h --help                       Visa denna hjälp\n"
+#~ "     --info                        Lista objektformat & arkitekturer som "
+#~ "stöds\n"
+
+#~ msgid "cannot stat: %s: %s"
+#~ msgstr "kan inte ta status: %s: %s"
+
+#~ msgid "making"
+#~ msgstr "tillverkning"
+
+#~ msgid "size"
+#~ msgstr "storlek"
+
+#~ msgid "vma"
+#~ msgstr "vma"
+
+#~ msgid "alignment"
+#~ msgstr "justering"
+
+#~ msgid "flags"
+#~ msgstr "flaggor"
+
+#~ msgid "private data"
+#~ msgstr "privat data"
+
+#~ msgid "%s: section `%s': error in %s: %s"
+#~ msgstr "%s: sektion \"%s\": fel på %s: %s"
+
+#~ msgid "%s: cannot stat: %s"
+#~ msgstr "%s: kan inte ta status: %s"
+
+#~ msgid "Cannot stat: %s: %s"
+#~ msgstr "Kan inte ta status: %s: %s"
+
+#~ msgid "Out of virtual memory"
+#~ msgstr "Slut på virtuellt minne"
+
+#~ msgid "Reading %s section of %s failed: %s\n"
+#~ msgstr "Lyckades inte läsa %s-sektionen i %s: %s\n"
+
+#~ msgid "%s: Warning: "
+#~ msgstr "%s: Varning: "
+
+#~ msgid "Skipping unexpected symbol type %u\n"
+#~ msgstr "Hoppar över oväntad symboltyp %u\n"
+
+#~ msgid "dynamic segment"
+#~ msgstr "dynamiskt segment"
+
+#~ msgid "  Offset: %#08lx  Link to section: %ld (%s)\n"
+#~ msgstr "  Offset: %#08lx  Länk till sektion: %ld (%s)\n"
+
+#~ msgid "Out of memory"
+#~ msgstr "Slut på minne"
+
+#~ msgid "debug_loc section data"
+#~ msgstr "debug_loc-sektionsdata"
+
+#~ msgid ""
+#~ "\n"
+#~ "The .debug_loc section is empty.\n"
+#~ msgstr ""
+#~ "\n"
+#~ ".debug_loc-sektionen är tom.\n"
+
+#~ msgid "debug_str section data"
+#~ msgstr "debug_str sektionsdata"
+
+#~ msgid ""
+#~ "Contents of the .debug_str section:\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Innehåll i .debug_str-sektionen:\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "The section %s contains:\n"
+#~ "\n"
+#~ msgstr ""
+#~ "Sektion %s innehåller:\n"
+#~ "\n"
+
+#~ msgid ""
+#~ "Only version 2 and 3 DWARF debug information is currently supported.\n"
+#~ msgstr ""
+#~ "Endast DWARF 2 och 3 felsökningsinformation hanteras för närvarande.\n"
+
+#~ msgid "debug_abbrev section data"
+#~ msgstr "debug_abbrev sektionsdata"
+
+#~ msgid "Unable to locate entry %lu in the abbreviation table\n"
+#~ msgstr "Kan inte hitta post %lu i förkortningstabellen\n"
+
+#~ msgid "debug section data"
+#~ msgstr "felsökningssektionsdata"
+
+#~ msgid "Cannot stat input file %s.\n"
+#~ msgstr "Kan inte ta status på infil %s.\n"
+
+#~ msgid "%s: rename: %s"
+#~ msgstr "%s: kan inte byta namn: %s"
+
+#~ msgid "%s: simple_copy: %s"
+#~ msgstr "%s: kopieringsfel: %s"
+
+#~ msgid "can't read resource section"
+#~ msgstr "kan inte läsa resurssektionen"
+
+#~ msgid "invalid number %s"
+#~ msgstr "ogiltigt tal %s"

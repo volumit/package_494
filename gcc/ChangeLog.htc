@@ -1,0 +1,111 @@
+2016-07-11  Georg Lay
+
+	[admin]
+	* .gitignore: Add *.tar* and more rules for: isl, cloog, mpfr,
+	gmp, mpc.
+
+2016-05-24  Robert Agoston
+
+	[HDP-585]
+	* HDP-v4.9.0.0-tricore released.
+
+2016-04-07  Robert Agoston
+
+	[HDP-1235]
+	Removed unneded files came from tarball.
+	* LAST_UPDATED: Removed file.
+	* MD5SUMS: Ditto.
+	* NEWS: Ditto.
+
+2016-01-09  Robert Agoston
+
+	[admin]
+	* .gitignore: Add newlib, libgloss, dinkum, libhtcos, gmp, mpc,
+	mpfr and dejagnu to GIT ignore list.
+
+2014-11-20  Peter Gal
+
+	[HDP-380]
+	* config/mt-htc: Removed in favour of mh-htc.
+
+2014-10-09  Georg Lay
+
+	Add tricore configury.
+	Lift tricore backend from 4.6 to 4.9.
+
+	[HDP-556]
+	* config.sub (basic_machine): Handle tricore.
+	* configure.ac (noconfigdirs) [tricore]: Add target-libssp.
+	(target_configdirs) [tricore]: Prepend target-libhtcos.
+	(unsupported_languages) [tricore]: Add java, ada, fortran.
+	(htc_frag) [tricore]: Set to config/mh-htc.
+	(ospace_frag) [tricore, powerpc-ht-eabi, ppc-ht-eabi, arm-ht-*]:
+	Set to config/mt-osfsvi.
+	(AC_SUBST_FILE): Do htc_frag.
+	* Makefile.tpl (htc_frag): Substitute.
+	* Makefile.in: Regenerate.
+	* configure: Regenerate.
+
+	* libcpp/configure.ac (need_64bit_hwint) [tricore]: Set to yes.
+	* libcpp/configure: Regenerate.
+
+2014-09-11  Georg Lay
+
+	Copy-paste top-level config snippets from 2011-09-11
+	git master 998c0c684fa945fae633b426c73eb7f8b9ecbc71
+
+	[HDP-365]
+	[HDP-381]
+	* config/mh-htc: New host fragment.
+	* config/mt-osfsvi: New target fragment.
+
+2014-08-28  Peter Gal <peter.gal@hightec-rt.com>
+
+	[HDP-551]
+	* config/mt-ppcvle: New file.
+	* configure.ac: Added powerpc-ht-eabi.
+	* configure: Regenerated.
+	* config.gcc: Added powerpc-ht-eabi and --with-hightec option.
+	* config/htc-common.opt: New file.
+	* config/htc-stdint.h: New file.
+	* config/t-htc-common: New file.
+	* config/t-htc-dnk: New file.
+
+2014-08-21  Peter Gal <peter.gal@hightec-rt.com
+
+	[HDP-551]
+	* Makefile.def: Added dinkum and libhtcos.
+	* Makefile.in: Regenerated.
+	* config/mt-htc: Added.
+	* configure.ac (target_libraries): Added dinkum and libhtcos.
+	(htc_frag): Added for ppc-ht-eabi.
+	* configure: Regnerated.
+
+2014-07-02  Zoltán Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-405]
+	* configure.ac: Moved libgcj disable part of the v850 for right place.
+	* configure: Regenerate.
+
+2014-07-02  Zoltán Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-405]
+	* dinkum/include/c/stddef.h (max_align_t): New definition.
+	* libstdc++-v3/configure (enable_dlopen): Swithch to no from yes
+	* libstdc++-v3/configure.ac (enable_dlopen): Ditto
+	* libstdc++-v3/include/bits/unique_ptr.h (_UP): New definition. 
+
+2014-07-02  Zoltán Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-405]
+	* Makefile.def: Added dinkum + libhtcos modules
+	* Makefile.in: Added dinkum + libhtcos targets
+	* crossconfig.m4: Added target_libraries and target-dinkum
+	* configure.ac: Ditto
+	* configure: Regenerate
+	* libstdc++-v3/configure (v850*-*-*): New target
+	* libstdc++-v3/crossconfig.m4 (v850* | v850-*-* | v850-ht-elf): Ditto
+	* dinkum/include/c/math.h (sincos): New prototype define.
+	(sincosf): Ditto
+	* dinkum/source/sincos.c: New implementation of sincos function
+	* dinkum/source/sincosf.c: New implementation of sincosf function

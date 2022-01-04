@@ -1,0 +1,101 @@
+;; Common options supported by all HighTec toolchains.
+
+;;    Copyright (C) 2012 Free Software Foundation, Inc.
+;;
+;; This file is part of GCC.
+;;
+;; GCC is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation; either version 3, or (at your option)
+;; any later version.
+;;
+;; GCC is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+;;
+;; Under Section 7 of GPL version 3, you are granted additional
+;; permissions described in the GCC Runtime Library Exception, version
+;; 3.1, as published by the Free Software Foundation.
+;;
+;; You should have received a copy of the GNU General Public License and
+;; a copy of the GCC Runtime Library Exception along with this program;
+;; see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
+;; <http://www.gnu.org/licenses/>.
+
+mversion-info
+Target Report Var(htc_opt_version_info) Init(0) Save
+Generate .version_info section.
+
+mversion-string=
+Target RejectNegative Joined Var(htc_opt_version_string)
+Integrate user-defined strings in a separate section called .version.htc section.
+
+nocrt0
+Driver Report RejectNegative
+Do not link against default startup code.
+
+mpragma-data-sections
+Target Report UInteger Var(htc_opt_pragma_data_sections) Init(0)
+Apply -fdata-sections-like section name generation to data objects in a pragma section, i.e. the section name provided by the pragma will serve as a section name prefix and the suffix will be derived from the variable's name.
+
+mpragma-function-sections
+Target Report UInteger Var(htc_opt_pragma_function_sections) Init(0)
+Apply -ffunction-sections-like section name generation to functions in a pragma section, i.e. the section name provided by the pragma will serve as a section name prefix and the suffix will be derived from the function's name.
+
+masection-data-sections
+Target Report UInteger Var(htc_opt_asection_data_sections) Init(0)
+Apply -fdata-sections-like section name generation to data objects with an asection attribute, i.e. the section name provided by asection will serve as a section name prefix and the suffix will be derived from the variable's name.
+
+masection-function-sections
+Target Report UInteger Var(htc_opt_asection_function_sections) Init(0)
+Apply -ffunction-sections-like section name generation to functions with an asection attribute, i.e. the section name provided by asection will serve as a section name prefix and the suffix will be derived from the function's name.
+
+;; Joined + Separate so that -msection-asm-name won't override previous ones.
+msection-asm-name
+Target Report Joined Separate Args(1) MissingArgError(missing section transform rule and selector key after %qs)
+-msection-asm-name <key>=<map>	Specify a transform rule for objects' assembler names which are used to compose sections names of named sections.  The mapping <map> must contain one + (plus) which stands for the (mangled) name of the object (as would be used in vanilla named sections).  <key> is one of:  data-sections, function-sections, pragma-data-sections, pragma-function-sections, asection-data-sections, asection-function-sections.  The mapping will only be applied to named section as generated due to option:  -fdata-sections, -ffunction-sections, -mpragma-data-sections, -mpragma-function-sections, -masection-data-sections, -masection-function-sections, respectively.  If a mapping for <key> is specified, the attached command line option must also be turned on.
+
+ferror-numbers
+Common Report Var(htc_opt_error_numbers) Init(0) Save
+
+flicense-retries=
+Common RejectNegative Joined Undocumented UInteger Var(htc_opt_license_retries) Init(0)
+
+
+finline-is-always-inline
+Common Report Var(htc_opt_inline_is_always_inline) Init(0)
+Add attribute __always_inline__ to all inline functions.
+
+
+finline-is-externally-visible
+Common Report Var(htc_opt_inline_is_externally_visible) Init(0)
+Add attribute __externally_visible__ to all inline functions.
+
+Wnonzero-initialized-in-bss
+C C++ Var(htc_warn_nonzero_initialized_in_bss) Init(1) Warning
+Warn if a non-zero initialized data is used in a zero initialized section.
+
+Wreadonly-in-writable
+C C++ Var(htc_warn_readonly_in_writable) Init(0) Warning
+Warn if read-only data is used in a writable section.
+
+mlog=
+Target RejectNegative Joined Undocumented Var(htc_opt_log)
+Internal use only.
+
+Wsection-feature
+C C++ Var(htc_warn_section_feature) Init(1) Warning
+Warn if a variable or function uses more then one section feature, i.e. more than one of 'attribute section', 'attribute asection' or '#pragma section'.
+
+Wsection-multiple-data
+C C++ Var(htc_warn_section_mutiple_data) Init(1) Warning
+Warn if more than one variable or function is assigned to the same section.
+
+Waddressing-mode
+C C++ Var(htc_warn_addressing_mode) Init(1) Warning
+Warn if a variable is defined with different addressing modes, i.e from section and from attribute.
+
+Wdeprecated-pragma-section-name
+C C++ Var(htc_warn_deprecated_pragma_section_name) Init(1) Warning
+Warn if section name in pragma section is not a string.

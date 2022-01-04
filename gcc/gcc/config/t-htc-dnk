@@ -1,0 +1,25 @@
+# to use with the dinkumware library
+
+# Remove stdarg.h and stddef.h from USER_H.
+USER_H = $(srcdir)/ginclude/float.h \
+	 $(srcdir)/ginclude/iso646.h \
+	 $(srcdir)/ginclude/stdbool.h \
+	 $(srcdir)/ginclude/varargs.h \
+	 $(srcdir)/ginclude/stdfix.h \
+	 $(srcdir)/ginclude/stdnoreturn.h \
+	 $(srcdir)/ginclude/stdalign.h \
+	 $(srcdir)/ginclude/stdatomic.h \
+	 $(EXTRA_HEADERS)
+
+# Don't run fixinclude
+# clear fixinc_list to inibit generating limits.h
+STMP_FIXINC = stmp-htcfixinc
+stmp-htcfixinc: gsyslimits.h $(GCC_PASSES)
+	rm -rf include; mkdir include
+	chmod a+rx include
+	rm -f include/syslimits.h
+	cp $(srcdir)/gsyslimits.h include/syslimits.h
+	chmod a+r include/syslimits.h
+	echo "" > fixinc_list
+	$(STAMP) stmp-htcfixinc
+	$(STAMP) s-fixinc_list

@@ -1,0 +1,3 @@
+# Build libraries optimizing for space, with function sections and version info
+ CFLAGS_FOR_TARGET = -g -Os -ffunction-sections -mversion-info
+ CXXFLAGS_FOR_TARGET = -g -Os -ffunction-sections -mversion-info

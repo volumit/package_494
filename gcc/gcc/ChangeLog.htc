@@ -1,0 +1,617 @@
+2017-01-16  Georg Lay
+	    Robert Agoston
+
+	[HDP-1333]
+	* defaults.h (TARGET_HTC_IVOPT_IV_COST): Remove define.
+	(TARGET_HTC_LOOP_OPTIMIZE_WITH_PRE_INCREMENT): Remove define.
+	* target.def (TARGET_HTC) [ivopt_base_costs_p]: New hook.
+	[ivopt_use_addresses_p]: New hook.
+	[sched_may_change_address_p]: New hook.
+	* sched-deps.c (find_modifiable_mems): Early return if target does not
+	allow to change addresses.
+	* tree-ssa-loop-ivopts.c (find_interesting_uses_address)
+	[!targetm.htc.ivopt_use_addresses_p]: Fail.
+	(add_autoinc_candidates): Use target hook ivopt_base_costs_p () in
+	conditions as replacement of TARGET_HTC_LOOP_OPTIMIZE_WITH_PRE_INC.
+	Add condition also for post decrement case.
+	(adjust_setup_cost): Revert to stock.
+	(get_address_cost): Replace !TARGET_HTC_IVOPT_IV_COSTS with
+	ivopt_base_costs_p (). Trim cost to INFTY.
+
+	* common/config/tricore/tricore-common.c
+	(tric_segment_trap tric_segment_trap): Define object.
+	(tric_decode_msegment_trap): New function.
+	(tric_handle_option) [OPT_msegment_trap_]: Use it.
+
+	* doc/invoke.texi (TriCore Options) [-msegment-trap=]: Document.
+	* doc/tm.texi.in (HighTec Hooks): Sort ascii collating.
+	(TARGET_HTC_SCHED_MAY_CHANGE_ADDRESS_P): Add hook anchor.
+	(TARGET_HTC_IVOPT_USE_ADDRESSES_P): Add hook anchor.
+	* doc/tm.texi: Regenerate.
+
+2017-01-11  Gabor Palfi
+
+	[HDP-1516]
+	Backport PR71083
+
+		2016-08-11  Bernd Edlinger  <bernd.edlinger@hotmail.de>
+
+		PR tree-optimization/71083
+		* tree-predcom.c (ref_at_iteration): Correctly align the
+		reference type.
+
+2017-01-10  Georg Lay
+
+	Backport from gcc-5-branch r239754.
+
+	[HDP-1515]
+	PR middle-end/71700
+	* expr.c (store_constructor): Mask sign-extended bits when widening
+	sub-word constructor element at the start of a word.
+
+2016-09-26  Bence Gobolos
+
+	[HDP-1361]
+	* gcc/Makefile.in: Use PKGVERSION variable to mark new nr.po entries.
+
+2016-09-26  Georg Lay
+
+	[HDP-1367]
+	* doc/extend.texi (Target Builtins) [Tricore Built-in Functions]:
+	New node and section.
+
+2016-07-21  Robert Agoston
+
+	[HDP-563]
+	Unhookize TARGET_HTC_INSERT_HTC_SECTION.
+	* target.def (insert_htc_section): Removed.
+	* doc/tm.texi.in (TARGET_HTC_INSERT_HTC_SECTION): Removed.
+	* doc/tm.texi: Regenerated.
+
+2016-07-14  Georg Lay
+
+	[HDP-1355]
+	* config/htc-target-log.c: Don't document "%X".
+	(htc_dump_double_int_hex): Remove code in #if 0.  The very code is
+	actually tricore.c::tric_dump_double_int_hex via
+	targetm.htc.dump_valist.
+
+2016-05-24  Robert Agoston
+
+	[HDP-585]
+	* HDP-v4.9.0.0-tricore released.
+
+2016-04-29  Gabor Palfi
+
+	[HDP-1116] Quickfix
+	* gcc.c (htc_escape_temp_file): Closed escaped_filename with 0 char.
+
+2016-04-29  Robert Agoston
+
+	[HDP-1265]
+	* common/config/tricore/tricore-common.c (tric_option_init_struct):
+	  disabled -faggressive-loop-optimizations by default.
+
+2016-04-27  Gabor Palfi
+
+	[HDP-1280]
+	Forward port HDP-352 from 4.6 (#262 in hightec-development-platform).
+
+	2014-08-21  Gabor Palfi
+
+		[HDP-352]
+		* toplev.c (process_options): Emit error if both -gtoggle and
+		-fdwarf-control-flow is set.
+
+2016-04-26  Gabor Palfi
+
+	[HDP-918] Add control flow support
+	* common.opt (fdwarf-control-flow): New option.
+	* dwarf2out.c (debug_control_flow): New section.
+	(dwarf2out_begin_prologue, dwarf2out_end_epilogue): Call
+	dwarf2out_bb_debug when dwarf control flow is enabled.
+	(dwarf2_debug_hooks): Add debug hook for epilogue start.
+	(control_flow_entry, control_flow_entry_fn, control_flow_entry_list):
+	New structs.
+	(control_flow_entries, control_flow_entry_active,
+	control_flow_entry_fn_last): New variables.
+	(DEBUG_CONTROL_FLOW_SECTION, BASIC_BLOCK_BEGIN_LABEL,
+	BASIC_BLOCK_END_LABEL, DWARF_CONTROL_FLOW_LABEL,
+	DWARF_CONTROL_FLOW_ENTRY_LABEL): New defines.
+	(dw_val_equal_p, print_die, attr_checksum, attr_checksum_ordered,
+	same_dw_val_p, size_of_die, value_format, output_die): Add handling of
+	dw_val_class_secptr.
+	(gen_subprogram_die): Generate label for control_flow_entry_fn .
+	(dwarf2out_begin_function): Call record_control_flow_entries when
+	control flow is enbaled.
+	(dwarf2out_end_function): Call print_control_flow_end_function.
+	(dwarf2out_finish): Call print_debug_control_flow when control flow is
+	enabled.
+	(add_AT_secptr, AT_secptr_lbl, AT_secptr, dwarf2out_bb_debug,
+	find_control_flow_entry, find_control_flow_entry_fn,
+	alloc_control_flow_entry, alloc_control_flow_entry_bb,
+	alloc_control_flow_entry_fn, print_control_flow_entries,
+	print_control_flow_end_function, record_control_flow_entries,
+	print_debug_control_flow, init_debug_control_flow,
+	dwarf2out_begin_epilogue): New functions.
+	* dwarf2out.h (dw_val_class): Add dw_val_class_secptr.
+	(dw_val_node): Extend with dw_val_secptr_union.
+	(dwarf2out_bb_debug): New prototype.
+	* final.c (final_scan_insn): Call dwarf2_bb_debug when control flow is
+	enabled.
+	* opts.c (common_handle_option): Handle the new option.
+
+2016-04-11  Gabor Palfi
+
+	[HDP-1116]
+	* gcc.c (htc_escape_temp_file): New prototype and function.
+	(do_spec_1): Call htc_escape_temp_file under windows.
+
+2016-04-11  Robert Agoston
+
+	[HDP-1264]
+	Forward port HDP-234 from 4.6 (#156 in hightec-development-platform).
+
+	2014-04-03  Georg Lay
+
+		[HDP-234]
+		PR middle-end/59559
+		* expmed.c (expand_divmod): Unshare highpart RTX by manual copying.
+
+2016-04-08  Robert Agoston
+
+	[HDP-1261]
+	Remove support of -fcallee-promote-stack-args feature.
+	* function.c: (assign_parm_find_entry_rtl): Removed
+	  htc_opt_callee_promote_stack_args from condition.
+
+2016-04-07  Robert Agoston
+
+	[HDP-1235]
+	Add change related comments in front/middle end sources.
+	* attribs.c: (decl_attributes): Add comment for HDP-343 / HDP-859.
+	* c-family/c-pch.c: (c_common_read_pch): Add comment for
+	  HDP-886 / HDP-1028.
+	* collect2.c: (main): Add comment for GCC-158, GCC-216 / HDP-858.
+	* combine.c: (recog_for_combine): Add comment for HDP-231.
+	* common.opt: (fstrict-volatile-bitfields): Add comment for HDP-828.
+	  (gdwarf): Add comment for HDP-422.
+	* defaults.h: (TARGET_HTC_IVOPT_IV_COST): Add comment for HDP-1152 / HDP-1234.
+	* reload.c: (find_reloads): Add comment for HDP-928.
+	* reload1.c: (elimination_costs_in_insn): Ditto.
+	* rtlanal.c: (may_trap_p_1): Add comment for HDP-1061 / HDP-1097.
+	* tree-ssa-loop-ivopts.c: (adjust_setup_cost, get_address_cost):
+	  Add comments for HDP-1152 / HDP-1234.
+
+2016-04-01  Bence Gobolos
+
+	[HDP-1236]
+	Forward port HDP-148 from commit e1cb5901 and 7ae0fd2f
+	in repository hightec-development-platform
+
+	2013-10-30  Georg Lay
+
+		[HDP-148]
+		* defaults.h (TARGET_HTC_LOOP_OPTIMIZE_WITH_PRE_INCREMENT): New
+		target macro, defined to 1.
+		* tree-ssa-loop-ivopts.c (add_autoinc_candidates): Use it as
+		condition with PRE_INCREMENT optimizations.
+
+2016-03-22  Bence Gobolos
+
+	[HDP-1234]
+	Forward port HDP-1152 from commit c743d8782e9
+
+	2016-02-10  Horst Lehser, Robert Agoston
+
+		[HDP-1152]
+		* defaults.h (TARGET_HTC_IVOPT_IV_COST): New default tm
+		macro set as 1 by default. This will be overridden in TriCore back end.
+		* tree-ssa-loop-ivopts.c (adjust_setup_cost): Adjust cost like -Os when
+		TARGET_HTC_IVOPT_IV_COST is false.
+		(get_address_cost):  Increase the cost for candidates like
+		BASE + OFFSET + RATIO * STEP, where OFFSET > 0 and (RATIO * STEP) < 0.
+		This will move the offset calculation from the loop body into the loop setup.
+
+2016-02-22  Robert Agoston
+
+	[HDP-1097]
+	Forward port HDP-1061 from 4.6.x.
+
+	2015-09-28  Horst Lehser
+
+		[HDP-1061]
+		* rtlanal.c (may_trap_p_1): Conversion for UNSIGNED_FIX may also trap.
+
+2016-01-09  Georg Lay, Horst Lehser, Robert Agoston
+
+	[HDP-1028]
+	* attribs.c (decl_attributes): Removed WITH_HIGHTEC guard.
+	* collect2.c (main): Ditto.
+	* toplev.c: Ditto.
+	* reload.c (find_reloads): Ditto.
+	* config.gcc (tricore-*): Removed tricore-log.o from extra_obj.
+	(--with-hightec): Add extra_objs: htc-targhooks.o, htc-target-log.o.
+	Add config/htc-common.c and config/htc-common-sections.c to target_gtfiles.
+	Add htc-target-common.h, htc-targhooks.h and htc-target-log.h to tm_file.
+	* ipa-cp.c: Add include tm.h.
+	* target.h: Ditto.
+	* output.h: (default_htc_resolve_unique_section):
+	(default_htc_get_named_section):
+	(default_htc_bss_initializer_p):
+	Forward declare default implementations.
+	* target.def: Define htc hooks:
+	    section_flags_from_string,
+	    resolve_unique_section,
+	    asm_out_section,
+	    get_named_section,
+	    section_flags_to_string,
+	    post_pch_load,
+	    unnamed_section_callback,
+	    bss_initializer_p,
+	    insert_htc_section,
+	    guess_bss_p,
+	    dump_valist.
+	* timevar.def: Define time variables:
+	    TV_HTC_SECTION_LOOKUP,
+	    TV_HTC_SECTION_RESOLUTION,
+	    TV_HTC_SECSPEC_HATCH.
+	* varasm.c: Chained in htc target hooks: get_named_section,
+	resolve_unique_section and bss_initializer_p.
+	* c-family/c-pch.c (c_common_read_pch): Call of post_pch_load
+	htc target hook.
+	* common/config/rs6000/rs6000-common.c:
+	(rs6000_option_init_struct): Removed HTC_PPCVLE guard.
+	(rs6000_handle_option): Removed HTC_PPCVLE guard, handle
+	-msection-asm-name option.
+	* common/config/tricore/tricore-common.c (tric_handle_option):
+	handle -msection-asm-name option.
+	* doc/invoke.texi: Add documentation of -msection-asm-name option.
+	* doc/tm.texi: Add dummy documentation of HighTec target hooks.
+	* doc/tm.texi.in: Declare new TARGET_HTC_* hooks.
+
+2015-12-07  Peter Varga
+
+	[HDP-943]
+	* Makefile.in: Numbering support added.
+
+2015-11-10  Gabor Palfi
+
+	[HDP-1090]
+	* config.gcc: Add e200zx to known cpu list for ppc.
+
+2015-11-10  Robert Agoston
+
+	[HDP-422]
+	* doc/md.texi (PowerPC): Renamed community added constraints
+	"wr" to "WR", "wy" to "WY" and "wD" to "WD".
+
+2015-11-05  Robert Agoston
+
+	[HDP-1104]
+	* config/t-htc-licenser: Do pass -DBUILD_FREE_ENTRY_TOOLCHAIN to build of
+	htc-licenser.o when BUILD_FREE_ENTRY_TOOLCHAIN variable is set.
+	* config/rs6000/ppcvle.h (LICENSE_PRODUCT): use "ppc-free-gcc" if
+	BUILD_FREE_ENTRY_TOOLCHAIN is defined, "ppc-vle-gcc" otherwise.
+	* config/tricore/tricore.h (LICENSE_PRODUCT): use "tricore-free-gcc" if
+	BUILD_FREE_ENTRY_TOOLCHAIN is defined, "tricore-gcc" otherwise.
+
+2015-08-21  Georg Lay
+
+	Support -mtc162 and -mcpu=tc39xx.
+
+	[HDP-940]
+	* doc/invoke.texi (TriCore Options): Document -mtc162.
+
+2015-06-30  Georg Lay
+
+	Add new HighTec-specific hook TARGET_HTC_MAP_RELOADS.
+
+	[HDP-928]
+	* target.def (TARGET_HTC): Add and document map_reloads.
+	* reload.c (find_reloads) [WITH_HIGHTEC]: Call targetm.htc.map_reloads.
+	* reload1.c (elimination_costs_in_insn) [!insn_is_asm && icode < 0]:
+	Use fatal_insn instead of just gcc_assert.
+	* doc/tm.texi.in (HighTec Hooks): Add @hook for TARGET_HTC_MAP_RELOADS.
+	* doc/tm.texi: Regenerate.
+
+2015-05-12  Georg Lay
+
+	[HDP-858]
+	* gcc.c (main) [WITH_HIGHTEC]: Fix build warning.  Fix style.
+
+2015-05-02  Peter Gal
+
+	[HDP-870]
+	* config/htc-common.c (htc_print_checksum): New function...
+	(htc_asm_out_version_info): ... and use it here.
+
+2015-04-13  Lorant Gosztola
+
+	[HDP-828]
+	* common.opt: Set 0 to flag_strict_volatile_bitfields default value
+
+2015-04-13  Peter Gal
+
+	[HDP-120]
+	* config.gcc [with-hightec] (extra_objs): Added htc-common-sections.o
+	(tm_file): Added htc-common-sections.h
+	* config/htc-common-sections.c: New file.
+	* config/htc-common-sections.h: New file.
+	* config/t-htc-common (htc-common-sections.o): Added target.
+
+2015-05-02  Peter Gal
+
+	[HDP-858]
+	* intl.c (gcc_init_libintl): Use putenv instead of setenv.
+
+2015-03-19  Peter Gal
+
+	[HDP-858]
+	* Makefile.in (CFLAGS-intl.o): Added STANDARD_BINDIR_PREFIX.
+	* collect2.c (main): Init localization.
+	* gcc.c (asm_options): Pass error-numbers if ferror-numbers
+	is used.
+	(display_help): Help for -ferror-numbers.
+	(main): Detect ferror-numbers and pass it to the linker.
+	* gcov-dump.c (main): Init localization.
+	* gcov.c (main): Ditto.
+	* intl.c (init_locale_dir): New function.
+	(gcc_init_libintl): Add error numbering support.
+	* intl.h (init_locale_dir): Added.
+	(gcc_init_libintl): Add error numbering support.
+	* lto-wrapper.c (main): Init localization.
+	* toplev.c (general_init): Init localization.
+	(toplev_main): Set error numbers.
+
+2015-03-19  Peter Gal
+
+	[HDP-859]
+	* attribs.c (decl_attributes) <htc_opt_inline_is_always_inline>:
+	Add attribute always_inline to inline functions.
+	<htc_opt_inline_is_externally_visible>: Add attribute always_inline
+	to inline functions.
+
+2015-01-26  Peter Gal
+
+	[HDP-511]
+	Update gcc to 4.9.2.
+
+2015-01-19  Peter Gal
+
+	[HDP-801]
+	* common/config/rs6000/rs6000-common.c (rs6000_handle_option):
+	Handle -msmall-pid and {-msmall, -msmall-data, -msmall-const}
+	option pairs.
+	(rs6000_handle_option): Added -msmall-pid handling.
+	(rs6000_opt_combination_error): New function.
+
+2014-12-02  Georg Lay
+
+	[HDP-231]
+	* target.def (TARGET_HTC, htc): New hook prefix and vector.
+	(canonicalize_combined_rtx): New hook.
+	* doc/tm.texi.in (HighTec Hooks): New node.
+	(Hooks maintained by HighTec): New section.
+	(TARGET_HTC_CANONICALIZE_COMBINED_RTX): New hook.
+	* doc/tm.texi: Regenerate.
+
+2014-10-20  Georg Lay
+
+	[HDP-556]
+	* DEV-PHASE: Set to experimental.
+
+2014-10-20  Peter Gal
+
+	[HDP-379]
+	* config/htc-common.h (htc_cpu_cpp_builtins): Removed.
+
+2014-10-10  Peter Gal
+
+	[HDP-688]
+	Add mversion-info support from 4.6 GCC.
+	* config/htc-common.c (asm_output_ascii): New function.
+	(htc_print_to_version_section): Ditto.
+	(htc_print_version_info_section): Ditto.
+	(htc_asm_out_version_info): Ditto.
+	* gcc.c (set_htc_gcc_options): New Function.
+	(main): Use the set_htc_gcc_options function.
+	* toplev.c (compile_file): Invoke htc_asm_out_version_info.
+
+2014-10-09  Georg Lay
+
+	Add tricore configury.
+	Lift tricore backend from 4.6 to 4.9.
+
+	[HDP-556]
+	* configure.ac (insn) [cpu_type=tricore]: Set to nop.
+	* configure: Regenerate.
+	* config.gcc (cpu_type) [target=tricore]: Set to tricore.
+	(need_64bit_hwint) [target=tricore]: Set to yes.
+	(tm_defines): Add defines for LIBC_NEWLIB, LIBC_DINKUM.
+	[target=tricore]: Wire sources to tricore backend.
+	(extra_objs) [with_hightec]: Add htc-common.o.
+	(tmake_file) [with_hightec]: Add t-htc-common.
+	(tm_file) [with_hightec]: Add htc-common.h.
+	(extra_options) [with_hightec]: Add htc-common.opo.
+	* gcc.c (main): Call ...
+	(set_htc_gcc_options): ...this new static function.
+	(insert_tooldir_spec_function): New function.
+	* toplev.c (print_single_switch, print_switch_values) [WITH_HIGHTEC]:
+	New static functions.
+	(compile_file) [WITH_HIGHTEC]: Call htc_asm_out_version_info.
+	* function.c (assign_parm_find_entry_rtl) [WITH_HIGHTEC]: Handle
+	-fcallee-promote-stack-args.
+	* doc/invoke.texi (TriCore Options): New subsection and node.
+	* config/htc-stdint.h: New file.
+	* common/config/tricore/tricore-common.c: New file.
+
+2014-10-01	Peter Gal
+
+	[HDP-681]
+	* doc/invoke.texi (PowerPC Options): Added
+	-mvolatile-const-in-rodata option description.
+
+2014-10-01	Peter Gal
+
+	[HDP-682]
+	* doc/invoke.texi (PowerPC Options): Added -mcode-pic and
+	-mdynamic-address-calc-with-code-pic option description.
+
+2014-09-19	Peter Gal
+
+	[HDP-672]
+	* config.gcc {with-hightec} (extra_objs): Added htc-common.o.
+	(tm_file): Added htc-common.h
+    * config/htc-common.{c,h}: New file.
+
+2014-09-19	Peter Gal
+
+	[HDP-673]
+	* config/htc-common.opt (mpragma-function-sections)
+	(mpragma-data-sections): New options.
+
+2014-09-19	Peter Gal
+
+	[HDP-670]
+	common/config/rs6000/
+	* rs6000-common.c (rs6000_option_init_struct): Added
+	flag_no_common initalization.
+
+2014-09-19	Peter Gal
+
+	[HDP-667]
+	* config/htc-common.opt (-masection-function-sections)
+	(-masection-data-sections): New options.
+	* doc/invoke.texi (PowerPC Options): Document
+	-masection-function-sections and -masection-data-sections.
+
+2014-09-11  Georg Lay
+
+	Copy-paste htc-common files from v4.6.5.
+
+	[HDP-365]
+	[HDP-381]
+	* config/htc-common.c: New file.
+	* config/htc-common.h: New file.
+	* config/htc-common.opt: New file.
+	* config/t-htc-common: New file.
+
+2014-09-08	Peter Gal
+
+	[HDP-620]
+	common/config/rs6000/
+	* rs6000-common.c (rs6000_handle_option): Added handling of msmall*
+	options.
+
+2014-09-02	Peter Gal
+
+	[HDP-422]
+	https://gcc.gnu.org/bugzilla/show_bug.cgi?id=60945
+
+	* dwarf2.cfi.c (dwf_regno): Disable assert.
+
+2014-09-02	Peter Gal
+
+	[HDP-422]
+	* common.opt(dwarf_version): Use DWARF 3 (binutils 2.20).
+
+2014-09-01 Horst Lehser <Horst.Lehser@hightec-rt.com>
+
+	[HDP-460]
+	* invode.texi (V850): Delete documentation of -msoft-float, -mhard-float.
+	Add documentation of -mfloat-gprs=
+
+2014-07-25 Zoltan Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-405]
+	* config.gcc (tm_defines): Added DEFAULT_LIBC=DINKUM and
+	DEFAULT_LIBC=NEWLIB definition.
+
+2014-07-25 Zoltan Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-405]
+	* config.gcc (tm_defines): Added DEFAULT_LIBC=LIBC_DINKUM
+
+2014-07-22 Zoltan Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-502]
+	* config/t-htc-dnk (USER_H): Added stdnoreturn.h, stalign.h, stdatomic.h
+
+2014-07-16 Zoltan Ördög <zoltan.ordog@highter-rt.com>
+
+	[HDP-473]	
+	* config/htc-common-c.c (htc_cpu_cpp_builtins): Replaced static size
+	check with dynamical one in __HAVE_SHORT_DOUBLE__ builtin definition.
+
+2014-07-14 Zoltan Ördög <zoltan.ordog@highter-rt.com>
+
+	[HDP-473]
+	* config/htc-common-c.c (htc_cpu_cpp_builtins): Added 
+	__HAVE_SHORT_DOUBLE__ builtin define.
+
+2014-07-14 Zoltan Ördög <zoltan.ordog@highter-rt.com>
+
+	[HDP-475]
+	* config.gcc (extra_objs): Added htc-common-c.o
+	(tm_file): Changed to htc-common-c.h
+	* config/htc-common-c.c: New file
+	* config/htc-common-c.h: New file
+	* config/htc-common.c: Removed cpplib include
+	(htc_cpu_cpp_builtins): Outsourced into htc-common-c.c
+	* config/t-htc-common (htc-common.o): Removed $(CPPLIB_H)
+	(htc-common-c.o): New rule
+	* config/htc-common.h: Deleted.
+
+2014-07-09 Zoltan Ördög <zoltan.ordog@highter-rt.com>
+
+	[HDP-475]
+	* config.gcc: Test for -with-hightec option.
+	(extra_obj): Added htc-common.o
+	(tmake_file): Added t-htc-common
+	(tm_file): Added htc-common.h
+	(extra_options): Added htc-common.opt
+	(tm_defines): Added WITH_HIGHTEC
+	* config/htc-common.c: New file
+	* config/htc-common.h: Ditto
+	* config/htc-common.opt: Ditto
+	* config/t-htc-common: Ditto
+
+2014-07-02 Zoltan Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-405]
+	* config.gcc (tmake_file): Remove t-htc-dnk (duplicate)
+	(tm_file): Added v850-dinkum.h
+
+2014-07-02 Zoltan Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-405]
+	* config.gcc (tm_file): Moved to case branch.
+	(tmake_file): Ditto.
+
+2014-07-02 Zoltan Ördög <zoltan.ordog@hightec-rt.com>
+
+	[HDP-405]
+	* config.gcc: Added dinkumware support to v850 target
+	* config/htc-stdint.h: New file
+	* config/t-htc-dnk: Ditto
+
+2014-05-16 Peter Gal
+
+	[HDP-350]
+	* config.gcc: New --with-licenser option check.
+	(tm_defines) [with-licenser,license_product]: Add
+	LICENSER_PRG=htc-licenser.
+	(extra_objs) [with_licenser]: Add htc-licenser.o.
+	(tm_file) [with_licenser]: Add htc-licenser.h.
+	(tmake_file) [with_licenser]: Add t-htc-licenser.
+	* toplev.c (general_init): Call set_htc_licenser.
+	* config/htc-licenser.c: New file.
+	* config/htc-licenser.h: New file.
+	* config/t-htc-licenser: New file.
+	* config/v850/v850.c (v850_option_override): Use new license checker code.
+
+2014-07-01 Zoltán Ördög
+
+	[HDP-438]
+	* doc/invoke.texi (V850 Options): Document -mpragma-data-sections.
